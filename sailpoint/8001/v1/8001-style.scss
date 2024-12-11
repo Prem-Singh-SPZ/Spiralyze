@@ -1,11 +1,39 @@
-body.spz-8001{
-    #page-container{
-        .page-transition{
-            main{
-                #contact-us{
-                    position: fixed;
-                }
+body.spz-8001 {
+  #page-container {
+    .page-transition {
+      main {
+        #contact-us {
+        //   position: fixed;
+        //   top: 100px;
+        //   scroll-margin-top: 0;
+        //   clip-path: none;
+        //   padding: 0 !important;
+        //   left: 0;
+        //   right: 0;
+        //   background: #ffffff99;
+        //   backdrop-filter: blur(15px);
+
+          .row__inner {
+            display: flex;
+            > .column {
+              &:first-child {
+                display: none;
+              }
+
+              &:last-child {
+                width: 100%;
+                max-width: 640px;
+                // background: linear-gradient(0deg, #ffffff, #ffffff),
+                //   linear-gradient(
+                //     143.63deg,
+                //     rgba(84, 192, 232, 0.5) 12.96%,
+                //     rgba(84, 192, 232, 0.2) 77.09%
+                //   );
+              }
             }
+          }
         }
+      }
     }
+  }
 }

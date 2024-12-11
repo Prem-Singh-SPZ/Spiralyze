@@ -1,7 +1,14 @@
 function createTest() {
     document.body.classList.add('spz-8001');
     waitForElm('#contact-us .mktoForm input').then(function (elm) {
+        formModify();
     });
+}
+
+function formModify() {
+    if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner')  && !document.querySelector('.spz-form-title-wrapper')) {
+        document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">Keep exploring SailPoint's identity security platform</h6><p class="f-desc">Thank you for exploring your first 3 product tours. For unlimited access to all product tours, simply provide your information below.</p></div>`);
+    }
 }
 
 history.pushState = (function (f) {
