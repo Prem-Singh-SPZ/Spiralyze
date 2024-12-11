@@ -294,24 +294,24 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   .form-field.control-checkbox {
   margin: -7px 0 10.5px;
 }
-.spz-2003-v1-iframe.device-mobile
-  form#pardot-form
-  .form-field.control-checkbox
-  label::before {
-  top: 6px;
-}
-.spz-2003-v1-iframe.device-mobile
-  form#pardot-form
-  .form-field.control-checkbox
-  label::after {
-  top: 9px;
-}
+// .spz-2003-v1-iframe.device-mobile
+//   form#pardot-form
+//   .form-field.control-checkbox
+//   label::before {
+//   top: 6px;
+// }
+// .spz-2003-v1-iframe.device-mobile
+//   form#pardot-form
+//   .form-field.control-checkbox
+//   label::after {
+//   top: 9px;
+// }
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit input {
-  width: 137px;
-  font-size: 18px;
+  width: 194px;
+  // font-size: 18px;
 }
 body.spz-2003-v1-iframe.device-mobile form#pardot-form .submit {
-  margin-top: 3px;
+  margin-top: 14px;
 }
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit + p {
   max-width: unset;
@@ -391,7 +391,7 @@ body.spz-2003-v1 {
               max-width: 550px;
 
               @media (max-width: 767.98px) {
-                padding: 24px 24px 34px;
+                padding: 48px 20px 40px;
               }
 
               .form-heading {
@@ -404,11 +404,11 @@ body.spz-2003-v1 {
                 line-height: 32px;
                 margin-bottom: 30px;
 
-                @media screen and (max-width: 767.98px) {
-                  font-size: 32px;
-                  line-height: 1;
-                  margin-bottom: 10px;
-                }
+                // @media screen and (max-width: 767.98px) {
+                //   font-size: 32px;
+                //   line-height: 1;
+                //   margin-bottom: 10px;
+                // }
               }
             }
 
@@ -430,7 +430,7 @@ body.spz-2003-v1 {
               @media (max-width: 767.98px) {
                 background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_360.webp)
                   no-repeat bottom left/cover;
-                padding: 40px 20px;
+                padding: 40px 20px 45px;
               }
 
               .rs-inner {
@@ -493,6 +493,7 @@ body.spz-2003-v1 {
                     width: 80px;
                     height: 80px;
                     margin-right: 16px;
+                    flex: 0 0 80px;
                   }
 
                   .rs-p-details {
@@ -540,9 +541,10 @@ body.spz-2003-v1 {
 
                   @media (max-width: 767.98px) {
                     position: relative;
-                    right: initial;
                     bottom: initial;
                     margin-left: auto;
+                    bottom: -13px;
+                    right: 12px;
                   }
                 }
               }

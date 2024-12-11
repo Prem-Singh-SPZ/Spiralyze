@@ -311,21 +311,12 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   margin: -7px 0 10.5px;
 }
 
-.spz-2003-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::before {
-  top: 6px;
-}
-
-.spz-2003-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::after {
-  top: 9px;
-}
-
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit input {
-  width: 137px;
-  font-size: 18px;
+  width: 194px;
 }
 
 body.spz-2003-v1-iframe.device-mobile form#pardot-form .submit {
-  margin-top: 3px;
+  margin-top: 14px;
 }
 
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit + p {
@@ -422,7 +413,7 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-f
 }
 @media (max-width: 767.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap {
-    padding: 24px 24px 34px;
+    padding: 48px 20px 40px;
   }
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
@@ -434,13 +425,6 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-f
   font-weight: 500;
   line-height: 32px;
   margin-bottom: 30px;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
-    font-size: 32px;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section {
   max-width: 550px;
@@ -466,7 +450,7 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2
 @media (max-width: 767.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_360.webp) no-repeat bottom left/cover;
-    padding: 40px 20px;
+    padding: 40px 20px 45px;
   }
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner {
@@ -543,6 +527,9 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2
   width: 80px;
   height: 80px;
   margin-right: 16px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
 }
 @media (max-width: 1024.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner .rs-profile .rs-p-details {
@@ -589,8 +576,9 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2
 @media (max-width: 767.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner .rs-footer-icon {
     position: relative;
-    right: initial;
     bottom: initial;
     margin-left: auto;
+    bottom: -13px;
+    right: 12px;
   }
 }
