@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@font-face {
+  font-family: "Test Founders Grotesk";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot");
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577387/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff")
+      format("woff"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577392/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Test Founders Grotesk";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot");
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff")
+      format("woff"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577514/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Iframe CSS Start Here */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+.spz-2003-v2-iframe {
+  overflow-x: hidden;
+  padding-top: 0;
+}
+.spz-2003-v2-iframe .container {
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+.spz-2003-v2-iframe .form-heading {
+  color: #000;
+  text-align: center;
+  font-family: "Test Founders Grotesk";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 38px;
+}
+.spz-2003-v2-iframe form#pardot-form p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.spz-2003-v2-iframe .container .row {
+  padding: 0;
+  margin: 0;
+}
+.spz-2003-v2-iframe form#pardot-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0;
+  margin-top: 18px;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field {
+  width: calc(50% - 10px);
+  padding: 0;
+  margin: 0 0 20px;
+  position: relative;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.pd-hidden {
+  display: none;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.pd-select::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: 13px;
+  right: 14px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2001/Dropdown.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.control-checkbox {
+  width: 100%;
+  margin-top: 0;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field label.field-label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #858585;
+  font-family: Test Founders Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 6px;
+  margin: 0;
+  background: #fff;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.active.typing
+  label.field-label,
+.spz-2003-v2-iframe form#pardot-form .form-field.filled label.field-label {
+  font-size: 13px;
+  line-height: 20px;
+  top: -10px;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.active.typing
+  label.field-label {
+  color: #000;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.active.typing.error
+  label.field-label,
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.filled.error
+  label.field-label {
+  color: #e30004;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field label.field-label::after {
+  display: none;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field .text,
+.spz-2003-v2-iframe form#pardot-form .form-field .select {
+  margin: 0;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #c6ced2;
+  outline: none;
+  box-shadow: none;
+  padding: 11px 15px 14px;
+  color: #000;
+  font-family: Test Founders Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  appearance: none;
+  background: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field .select {
+  padding-right: 35px;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.active.typing .text,
+.spz-2003-v2-iframe form#pardot-form .form-field.active.typing .select {
+  border-color: #54626a;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.error .text,
+.spz-2003-v2-iframe form#pardot-form .form-field.error .select {
+  border-color: #e30004 !important;
+}
+.spz-2003-v2-iframe form#pardot-form .error-message {
+  margin: 0 0 10px;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.control-checkbox span {
+  display: inline-flex;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.control-checkbox label {
+  color: #858585;
+  font-family: "Test Founders Grotesk";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  position: relative;
+  padding-left: 28px;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.control-checkbox
+  label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: 1px solid #c6ced2;
+  margin: 0;
+  font-size: 0;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.control-checkbox
+  input:checked
+  + label::before {
+  background: #0042ff;
+  border-color: #0042ff;
+}
+.spz-2003-v2-iframe form#pardot-form .form-field.control-checkbox label::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1731583819/maxio/2001/checkmark.svg");
+  background-size: contain;
+  opacity: 0;
+}
+.spz-2003-v2-iframe
+  form#pardot-form
+  .form-field.control-checkbox
+  input:checked
+  + label::after {
+  opacity: 1;
+}
+body.spz-2003-v2-iframe form#pardot-form .submit {
+  max-width: unset;
+  justify-content: center;
+  margin-top: 4px;
+}
+.spz-2003-v2-iframe form#pardot-form .submit input {
+  width: 178px;
+  height: 56px;
+  border-radius: 3px;
+  background: #0042ff;
+  font-family: Test Founders Grotesk;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+}
+.spz-2003-v2-iframe form#pardot-form .submit input:hover {
+  background: #2d2d30;
+}
+.spz-2003-v2-iframe form#pardot-form .submit input:active {
+  background: #002eeb;
+}
+.spz-2003-v2-iframe form#pardot-form .submit ~ p {
+  display: none;
+}
+.spz-2003-v2-iframe form#pardot-form .submit + p {
+  display: block;
+  color: #858585 !important;
+  text-align: center;
+  font-family: "Test Founders Grotesk";
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 92%;
+  margin: 24px auto 0 !important;
+  padding: 0 !important;
+}
+.spz-2003-v2-iframe form#pardot-form .submit + p a {
+  color: #000 !important;
+  text-decoration: none;
+}
+/* Mobile CSS Start Here */
+.spz-2003-v2-iframe.device-mobile .form-heading {
+  font-size: 32px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.spz-2003-v2-iframe.device-mobile form#pardot-form .form-field {
+  width: 100%;
+}
+.spz-2003-v2-iframe.device-mobile
+  form#pardot-form
+  .form-field.control-checkbox {
+  margin: -7px 0 10.5px;
+}
+// .spz-2003-v2-iframe.device-mobile
+//   form#pardot-form
+//   .form-field.control-checkbox
+//   label::before {
+//   top: 6px;
+// }
+// .spz-2003-v2-iframe.device-mobile
+//   form#pardot-form
+//   .form-field.control-checkbox
+//   label::after {
+//   top: 9px;
+// }
+.spz-2003-v2-iframe.device-mobile form#pardot-form .submit input {
+  width: 194px;
+  // font-size: 18px;
+}
+body.spz-2003-v2-iframe.device-mobile form#pardot-form .submit {
+  margin-top: 14px;
+}
+.spz-2003-v2-iframe.device-mobile form#pardot-form .submit + p {
+  max-width: unset;
+}
+/* Iframe CSS End Here */
+
+body.spz-2003-v2 {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_1440.webp)
+    no-repeat top left/cover;
+
+  @media (max-width: 1024.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_768.webp)
+      no-repeat top left/cover;
+  }
+
+  @media (max-width: 767.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_360.webp)
+      no-repeat top left/cover;
+  }
+
+  @media (min-width: 1600.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_1920.webp)
+      no-repeat top left/cover;
+  }
+
+  @media (min-width: 2400.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_2560.webp)
+      no-repeat top left/cover;
+  }
+
+  #page {
+    header,
+    footer {
+      display: none !important;
+    }
+
+    .site-content {
+      .blocks-page {
+        > *:not(.hero-form) {
+          display: none !important;
+        }
+
+        .hero-form {
+          background: transparent;
+          min-height: 100vh;
+          display: grid;
+          place-items: center;
+
+          .container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+
+            @media (max-width: 1024.98px) {
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+            }
+
+            @media (max-width: 767.98px) {
+              padding: 0 20px;
+              margin: 24px 0;
+            }
+
+            > div:first-child {
+              display: none !important;
+            }
+
+            > .spz-form-wrap {
+              background: #fff;
+              box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+              display: flex;
+              padding: 48px 44px 40px;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+              max-width: 550px;
+
+              @media (max-width: 767.98px) {
+                padding: 48px 20px 40px;
+              }
+
+              .form-heading {
+                color: #000;
+                text-align: center;
+                font-family: "Test Founders Grotesk";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+                margin-bottom: 30px;
+
+                // @media screen and (max-width: 767.98px) {
+                //   font-size: 32px;
+                //   line-height: 1;
+                //   margin-bottom: 10px;
+                // }
+              }
+            }
+
+            > .spz-2003-v2-right-section {
+              max-width: 550px;
+              padding: 40px 48px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              position: relative;
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_1440.webp)
+                no-repeat bottom left/cover;
+
+              @media (max-width: 1024.98px) {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_768.webp)
+                  no-repeat bottom left/cover;
+              }
+
+              @media (max-width: 767.98px) {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_360.webp)
+                  no-repeat bottom left/cover;
+                padding: 40px 20px 45px;
+              }
+
+              .rs-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .rs-copy-container {
+                  display: flex;
+                  margin-bottom: 16px;
+
+                  @media (max-width: 767.98px) {
+                    flex-direction: column;
+                  }
+
+                  .rs-quote {
+                    min-width: 27px;
+                    margin-right: 12px;
+
+                    @media (max-width: 767.98px) {
+                      max-width: 27px;
+                      margin-bottom: 12px;
+                    }
+
+                    img {
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+
+                  .rs-copy {
+                    p {
+                      color: rgba(255, 255, 255, 0.8);
+                      font-family: "Test Founders Grotesk";
+                      font-size: 28px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 36px;
+                      margin-bottom: 16px;
+
+                      b {
+                        color: #fff;
+                        font-weight: 600;
+                      }
+
+                      @media (max-width: 767.98px) {
+                        font-size: 24px;
+                        line-height: 36px;
+                      }
+                    }
+                  }
+                }
+
+                .rs-profile {
+                  display: flex;
+                  align-items: center;
+
+                  .rs-p-img {
+                    width: 80px;
+                    height: 80px;
+                    margin-right: 16px;
+                    flex: 0 0 80px;
+                  }
+
+                  .rs-p-details {
+                    @media (max-width: 1024.98px) {
+                      max-width: 197px;
+                    }
+
+                    .p-name {
+                      color: #fff;
+                      font-family: "Test Founders Grotesk";
+                      font-size: 24px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 32px;
+
+                      @media (max-width: 767.98px) {
+                        font-size: 20px;
+                      }
+                    }
+
+                    .p-desg {
+                      color: rgba(255, 255, 255, 0.8);
+                      font-family: "Test Founders Grotesk";
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 32px;
+
+                      @media (max-width: 1024.98px) {
+                        line-height: 20px;
+                      }
+
+                      @media (max-width: 767.98px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                      }
+                    }
+                  }
+                }
+
+                .rs-footer-icon {
+                  position: absolute;
+                  right: 48px;
+                  bottom: 48px;
+
+                  @media (max-width: 767.98px) {
+                    position: relative;
+                    bottom: initial;
+                    margin-left: auto;
+                    bottom: -13px;
+                    right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
