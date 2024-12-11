@@ -77,9 +77,9 @@ select:-webkit-autofill:active {
   margin-top: 18px;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field {
-  width: calc(50% - 8px);
+  width: calc(50% - 10px);
   padding: 0;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   position: relative;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field.pd-hidden {
@@ -99,7 +99,7 @@ select:-webkit-autofill:active {
 }
 .spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox {
   width: 100%;
-  margin-top: 3px;
+  margin-top: 0;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field label.field-label {
   position: absolute;
@@ -117,20 +117,29 @@ select:-webkit-autofill:active {
   pointer-events: none;
   transition: all 0.4s ease-in-out;
 }
-.spz-2003-v1-iframe form#pardot-form .form-field.active.typing label.field-label,
+.spz-2003-v1-iframe
+  form#pardot-form
+  .form-field.active.typing
+  label.field-label,
 .spz-2003-v1-iframe form#pardot-form .form-field.filled label.field-label {
   font-size: 13px;
   line-height: 20px;
   top: -10px;
 }
-.spz-2003-v1-iframe form#pardot-form .form-field.active.typing label.field-label {
+.spz-2003-v1-iframe
+  form#pardot-form
+  .form-field.active.typing
+  label.field-label {
   color: #000;
 }
 .spz-2003-v1-iframe
   form#pardot-form
   .form-field.active.typing.error
   label.field-label,
-.spz-2003-v1-iframe form#pardot-form .form-field.filled.error label.field-label {
+.spz-2003-v1-iframe
+  form#pardot-form
+  .form-field.filled.error
+  label.field-label {
   color: #e30004;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field label.field-label::after {
@@ -140,7 +149,7 @@ select:-webkit-autofill:active {
 .spz-2003-v1-iframe form#pardot-form .form-field .select {
   margin: 0;
   width: 100%;
-  height: 50px;
+  height: 48px;
   border: 1px solid #c6ced2;
   outline: none;
   box-shadow: none;
@@ -177,14 +186,17 @@ select:-webkit-autofill:active {
 .spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label {
   color: #858585;
   font-family: "Test Founders Grotesk";
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 150%;
   position: relative;
   padding-left: 28px;
 }
-.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label::before {
+.spz-2003-v1-iframe
+  form#pardot-form
+  .form-field.control-checkbox
+  label::before {
   position: absolute;
   content: "";
   width: 20px;
@@ -225,16 +237,16 @@ select:-webkit-autofill:active {
 body.spz-2003-v1-iframe form#pardot-form .submit {
   max-width: unset;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .spz-2003-v1-iframe form#pardot-form .submit input {
-  width: 147px;
-  height: 50px;
+  width: 178px;
+  height: 56px;
   border-radius: 3px;
   background: #0042ff;
   font-family: Test Founders Grotesk;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   display: flex;
   flex-wrap: wrap;
@@ -261,7 +273,7 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   font-weight: 400;
   line-height: 20px;
   max-width: 92%;
-  margin: 14px auto 0 !important;
+  margin: 24px auto 0 !important;
   padding: 0 !important;
 }
 .spz-2003-v1-iframe form#pardot-form .submit + p a {
@@ -277,7 +289,9 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
 .spz-2003-v1-iframe.device-mobile form#pardot-form .form-field {
   width: 100%;
 }
-.spz-2003-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
+.spz-2003-v1-iframe.device-mobile
+  form#pardot-form
+  .form-field.control-checkbox {
   margin: -7px 0 10.5px;
 }
 .spz-2003-v1-iframe.device-mobile
@@ -349,7 +363,7 @@ body.spz-2003-v1 {
           .container {
             display: flex;
             justify-content: center;
-            margin: 50px 0;
+            margin: 30px 0;
 
             @media (max-width: 1024.98px) {
               flex-direction: column;
@@ -359,6 +373,7 @@ body.spz-2003-v1 {
 
             @media (max-width: 767.98px) {
               padding: 0 20px;
+              margin: 24px 0;
             }
 
             > div:first-child {
@@ -369,7 +384,7 @@ body.spz-2003-v1 {
               background: #fff;
               box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
               display: flex;
-              padding: 34px 48px 43px;
+              padding: 48px 44px 40px;
               flex-direction: column;
               align-items: center;
               width: 100%;
@@ -387,7 +402,7 @@ body.spz-2003-v1 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
 
                 @media screen and (max-width: 767.98px) {
                   font-size: 32px;
@@ -426,7 +441,7 @@ body.spz-2003-v1 {
 
                 .rs-copy-container {
                   display: flex;
-                  margin-bottom: 32px;
+                  margin-bottom: 16px;
 
                   @media (max-width: 767.98px) {
                     flex-direction: column;
@@ -450,11 +465,12 @@ body.spz-2003-v1 {
                   .rs-copy {
                     p {
                       color: rgba(255, 255, 255, 0.8);
-                      font-family: "Founders Grotesk";
+                      font-family: "Test Founders Grotesk";
                       font-size: 28px;
                       font-style: normal;
                       font-weight: 400;
                       line-height: 36px;
+                      margin-bottom: 16px;
 
                       b {
                         color: #fff;
@@ -486,7 +502,7 @@ body.spz-2003-v1 {
 
                     .p-name {
                       color: #fff;
-                      font-family: "Founders Grotesk";
+                      font-family: "Test Founders Grotesk";
                       font-size: 24px;
                       font-style: normal;
                       font-weight: 600;
@@ -499,7 +515,7 @@ body.spz-2003-v1 {
 
                     .p-desg {
                       color: rgba(255, 255, 255, 0.8);
-                      font-family: "Founders Grotesk";
+                      font-family: "Test Founders Grotesk";
                       font-size: 16px;
                       font-style: normal;
                       font-weight: 400;
