@@ -379,6 +379,20 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container {
           justify-content: center;
   margin: 50px 0;
 }
+@media (max-width: 1024.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 @media (max-width: 767.98px) {
   body.spz-2003 #page .site-content .blocks-page .hero-form .container {
     padding: 0 20px;
@@ -441,6 +455,17 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_1440.webp) no-repeat bottom left/cover;
+}
+@media (max-width: 1024.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_768.webp) no-repeat bottom left/cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_360.webp) no-repeat bottom left/cover;
+  }
 }
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner {
   display: -webkit-box;
@@ -495,6 +520,11 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
   width: 80px;
   height: 80px;
   margin-right: 16px;
+}
+@media (max-width: 1024.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details {
+    max-width: 197px;
+  }
 }
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details .p-name {
   color: #fff;

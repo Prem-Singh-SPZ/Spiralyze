@@ -159,7 +159,7 @@ function demoPage() {
                         <div class="rs-quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1731524871/maxio/2003/quotemark_3.svg" alt="quote"></div>
                         <div class="rs-copy">
                             <p>Since implementing Maxio, our ARR has <b>grown 237%.</b></p>
-                            <p>We’ve been able to automate billings and subscription renewals. Plus it provides us with SaaS-based metrics at a push of a button.</p>
+                            <p>We&#8217;ve been able to automate billings and subscription renewals. Plus it provides us with SaaS-based metrics at a push of a button.</p>
                         </div>
                     </div>
                     <div class="rs-profile">

@@ -351,6 +351,12 @@ body.spz-2003 {
             justify-content: center;
             margin: 50px 0;
 
+            @media (max-width: 1024.98px) {
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+            }
+
             @media (max-width: 767.98px) {
               padding: 0 20px;
             }
@@ -398,6 +404,18 @@ body.spz-2003 {
               flex-direction: column;
               justify-content: center;
               position: relative;
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_1440.webp)
+                no-repeat bottom left/cover;
+
+              @media (max-width: 1024.98px) {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_768.webp)
+                  no-repeat bottom left/cover;
+              }
+
+              @media (max-width: 767.98px) {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_360.webp)
+                  no-repeat bottom left/cover;
+              }
 
               .rs-inner {
                 display: flex;
@@ -447,6 +465,11 @@ body.spz-2003 {
                   }
 
                   .rs-p-details {
+
+                    @media (max-width: 1024.98px) {
+                      max-width: 197px;
+                    }
+                    
                     .p-name {
                       color: #fff;
                       font-family: "Founders Grotesk";
