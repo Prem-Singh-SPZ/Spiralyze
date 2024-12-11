@@ -417,7 +417,7 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-form
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 560px;
+  max-width: 550px;
 }
 @media (max-width: 767.98px) {
   body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap {
@@ -465,6 +465,7 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
 @media (max-width: 767.98px) {
   body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/testimonial_bg_v5_360.webp) no-repeat bottom left/cover;
+    padding: 40px 20px;
   }
 }
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner {
@@ -488,9 +489,23 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
   display: flex;
   margin-bottom: 32px;
 }
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container .rs-quote {
   min-width: 27px;
   margin-right: 12px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container .rs-quote {
+    max-width: 27px;
+    margin-bottom: 12px;
+  }
 }
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container .rs-quote img {
   width: 100%;
@@ -507,6 +522,12 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container .rs-copy p b {
   color: #fff;
   font-weight: 600;
+}
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-copy-container .rs-copy p {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile {
   display: -webkit-box;
@@ -534,6 +555,11 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
   font-weight: 600;
   line-height: 32px;
 }
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details .p-name {
+    font-size: 20px;
+  }
+}
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details .p-desg {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Founders Grotesk";
@@ -542,8 +568,27 @@ body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003
   font-weight: 400;
   line-height: 32px;
 }
+@media (max-width: 1024.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details .p-desg {
+    line-height: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-profile .rs-p-details .p-desg {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-footer-icon {
   position: absolute;
   right: 48px;
   bottom: 48px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2003 #page .site-content .blocks-page .hero-form .container > .spz-2003-right-section .rs-inner .rs-footer-icon {
+    position: relative;
+    right: initial;
+    bottom: initial;
+    margin-left: auto;
+  }
 }
