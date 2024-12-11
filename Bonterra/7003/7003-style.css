@@ -325,7 +325,7 @@ body.spz-7003 #HERO .container .lm-cta-wrapper {
           justify-content: center;
   margin-top: 28px;
 }
-@media (min-height: 936px) {
+@media (min-height: 836px) {
   body.spz-7003 #HERO .container .lm-cta-wrapper {
     margin-top: auto;
   }
@@ -509,7 +509,8 @@ body.spz-7003 #HERO form.mktoForm .mktoError {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoError .mktoErrorArrowWrap {
   display: none;
