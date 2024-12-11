@@ -456,7 +456,7 @@ body.spz-15001 {
         &:not(.hs-form-booleancheckbox-display) {
           &:not(.hs-error-msg) {
             position: absolute;
-            top: 12px;
+            top: 11px;
             left: 20px;
             pointer-events: none;
           }
@@ -464,12 +464,19 @@ body.spz-15001 {
         span {
           color: #4a4a4a;
           font-family: Titillium Web, sans-serif;
-          font-size: 16px;
-          font-style: normal;
+          font-size: 18px;
           font-weight: 400;
-          line-height: 24px;
+          line-height: 26px;
           letter-spacing: 0px;
           position: relative;
+        }
+      }
+
+      &:hover{
+        > label {
+          span {
+            color: #000;
+          }
         }
       }
     }
@@ -482,10 +489,9 @@ body.spz-15001 {
       padding: 11px 19px 12px !important;
       color: #000;
       font-family: Titillium Web, sans-serif;
-      font-size: 16px;
-      font-style: normal;
+      font-size: 18px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 26px;
       outline: none;
       letter-spacing: 0;
       background-clip: padding-box;
@@ -685,10 +691,9 @@ body.spz-15001 {
         z-index: 4;
         span {
           font-family: Titillium Web, sans-serif;
-          font-size: 10px;
-          font-weight: 500;
-          line-height: 12px;
-          letter-spacing: -0.16px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
           padding: 0 4px;
           color: #000;
           box-shadow: 0px -9px 0px 0px white inset;
@@ -704,10 +709,9 @@ body.spz-15001 {
         span {
           -webkit-font-smoothing: antialiased;
           font-family: Titillium Web, sans-serif;
-          font-size: 10px;
-          font-weight: 500;
-          line-height: 12px;
-          letter-spacing: -0.16px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
           padding: 0 4px;
           color: #7e7e7e;
           box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
@@ -739,10 +743,9 @@ body.spz-15001 {
       > label {
         span {
           font-family: Titillium Web, sans-serif;
-          font-size: 10px;
-          font-weight: 500;
-          line-height: 12px;
-          letter-spacing: -0.16px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
           padding: 0 4px;
           color: #dc0000;
           box-shadow: 0px -9px 0px 0px white inset;
@@ -751,11 +754,11 @@ body.spz-15001 {
       }
     }
     .hs-form-field.hasError {
-      > label {
-        span {
-          color: #dc0000;
-        }
-      }
+      // > label {
+      //   span {
+      //     color: #dc0000;
+      //   }
+      // }
     }
     .hs_message {
       textarea {
