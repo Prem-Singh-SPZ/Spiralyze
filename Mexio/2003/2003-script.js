@@ -13,10 +13,10 @@ function formPage() {
     var iframebodyInterval = setInterval(function () {
         var iframebodyEle = document.querySelector('body');
         if (iframebodyEle) {
-            if (!iframebodyEle.classList.contains('spz-2003-iframe')) {
+            if (!iframebodyEle.classList.contains('spz-2003-v1-iframe')) {
                 clearInterval(iframebodyInterval);
 
-                iframebodyEle.classList.add('spz-2003-iframe');
+                iframebodyEle.classList.add('spz-2003-v1-iframe');
 
                 function check_spzdevicewidth_fun() {
                     var check_spzdevicewidth = setInterval(() => {
@@ -45,23 +45,23 @@ function formPage() {
                     }
                 });
 
-                waitForElm('.spz-2003-iframe form#pardot-form .submit input').then(function () {
-                    document.querySelector(".spz-2003-iframe form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
+                waitForElm('.spz-2003-v1-iframe form#pardot-form .submit input').then(function () {
+                    document.querySelector(".spz-2003-v1-iframe form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
                     hiddenValue();
-                    var all_inputs = document.querySelectorAll('.spz-2003-iframe form#pardot-form input, .spz-2003-iframe form#pardot-form select');
+                    var all_inputs = document.querySelectorAll('.spz-2003-v1-iframe form#pardot-form input, .spz-2003-v1-iframe form#pardot-form select');
                     all_inputs.forEach(function (element) {
                         element.removeAttribute('placeholder');
                         if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.form-field') !== null) {
-                            element.closest('.spz-2003-iframe form#pardot-form .form-field').classList.add('filled');
+                            element.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.add('filled');
                         }
                         if (element.tagName !== 'SELECT' && element.value != '' && element.closest('.form-field') !== null) {
-                            element.closest('.spz-2003-iframe form#pardot-form .form-field').classList.add('filled');
+                            element.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.add('filled');
                         }
                     });
-                    var selector = '.spz-2003-iframe form#pardot-form .form-field input, .spz-2003-iframe form#pardot-form .form-field select';
+                    var selector = '.spz-2003-v1-iframe form#pardot-form .form-field input, .spz-2003-v1-iframe form#pardot-form .form-field select';
                     document.addEventListener('focus', function (event) {
                         if (event.target.matches && event.target.matches(selector)) {
-                            event.target.closest('.spz-2003-iframe form#pardot-form .form-field').classList.add('active', 'typing');
+                            event.target.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.add('active', 'typing');
                         }
                     }, true);
                     var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
@@ -69,20 +69,20 @@ function formPage() {
                         document.addEventListener(s_event, function (event) {
                             if (event.target.matches && event.target.matches(selector)) {
                                 if (event.target.value == null || event.target.value == '') {
-                                    event.target.closest('.spz-2003-iframe form#pardot-form .form-field').classList.remove('filled');
+                                    event.target.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.remove('filled');
                                 } else {
                                     if (event.target.tagName == 'SELECT' && event.target.selectedIndex !== 0) {
-                                        event.target.closest('.spz-2003-iframe form#pardot-form .form-field').classList.add('filled');
+                                        event.target.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.add('filled');
                                     }
                                     if (event.target.tagName !== 'SELECT') {
-                                        event.target.closest('.spz-2003-iframe form#pardot-form .form-field').classList.add('filled');
+                                        event.target.closest('.spz-2003-v1-iframe form#pardot-form .form-field').classList.add('filled');
                                     }
                                 }
                             }
                         });
                     }
                     document.addEventListener('focusout', function (event) {
-                        document.querySelectorAll('.spz-2003-iframe form#pardot-form .form-field.typing').forEach(function (elem) {
+                        document.querySelectorAll('.spz-2003-v1-iframe form#pardot-form .form-field.typing').forEach(function (elem) {
                             elem.classList.remove('active', 'typing');
                         })
                     }, true);
@@ -112,12 +112,12 @@ function formPage() {
                 function checkFormSubmit() {
                     var countNew = 1;
                     var chekFormSubmit = setInterval(function () {
-                        if (document.querySelector('.spz-2003-iframe form#pardot-form .submit input') == null) {
+                        if (document.querySelector('.spz-2003-v1-iframe form#pardot-form .submit input') == null) {
                             clearInterval(chekFormSubmit);
-                            document.querySelectorAll('.spz-2003-iframe form#pardot-form > p').forEach((PEle) => {
+                            document.querySelectorAll('.spz-2003-v1-iframe form#pardot-form > p').forEach((PEle) => {
                                 if (PEle.textContent == 'We look forward to speaking with you soon!') {
-                                    if (document.querySelector('.spz-2003-iframe .form-heading')) {
-                                        document.querySelector('.spz-2003-iframe .form-heading').style.display = "none";
+                                    if (document.querySelector('.spz-2003-v1-iframe .form-heading')) {
+                                        document.querySelector('.spz-2003-v1-iframe .form-heading').style.display = "none";
                                     }
                                 }
                             });
@@ -137,10 +137,10 @@ function formPage() {
 function demoPage() {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-2003')) {
+        if (!bodyEle.classList.contains('spz-2003-v1')) {
             clearInterval(bodyInterval);
             document.cookie = "spzdevicewidth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.maxio.com";
-            bodyEle.classList.add('spz-2003');
+            bodyEle.classList.add('spz-2003-v1');
 
             let mainPageBodyWidth = document.body.clientWidth;
             setIframeBodyClass(mainPageBodyWidth);
@@ -152,8 +152,8 @@ function demoPage() {
 
             cookieValue('#2003', '#2003_variant1');
 
-            if (!document.querySelector('body.spz-2003 #page .site-content .blocks-page .hero-form .container .spz-form-wrap')) {
-                document.querySelector('body.spz-2003 #page .site-content .blocks-page .hero-form .container').insertAdjacentHTML('beforeend', `<div class="spz-form-wrap"><div class="form-heading">Get a Demo</div></div><div class="spz-2003-right-section">
+            if (!document.querySelector('body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container .spz-form-wrap')) {
+                document.querySelector('body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container').insertAdjacentHTML('beforeend', `<div class="spz-form-wrap"><div class="form-heading">Get a Demo</div></div><div class="spz-2003-v1-right-section">
                 <div class="rs-inner">
                     <div class="rs-copy-container">
                         <div class="rs-quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1731524871/maxio/2003/quotemark_3.svg" alt="quote"></div>
@@ -195,7 +195,7 @@ function demoPage() {
                     if (formHeight) {
                         if (formHeight.includes('height: 40.3958px') || formHeight.includes('height: 62.7917px') || formHeight.includes('height: 22.3958px') || formHeight.includes('height: 44.7917px')) {
                             clearInterval(spz_2003_Interval);
-                            document.querySelector('.spz-2003 .spz-form-wrap .form-heading').style.display = "none";
+                            document.querySelector('.spz-2003-v1 .spz-form-wrap .form-heading').style.display = "none";
                         }
                     }
                 }
@@ -211,16 +211,7 @@ function demoPage() {
                     } else {
                         document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2003' + '&' + urlQuery;
                     }
-
-                    var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
-                    //check if url has query params
-                    if (iframeLazrSrc.includes('?')) {
-                        //replace question mark string with "?spz=2003&" in the url
-                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc.replace('?', '?spz=2003&'));
-                    } else {
-                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2003');
-                    }
-                }, 2000);
+                }, 500);
             });
 
             waitForElm('.theme-white style').then(function () {

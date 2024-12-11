@@ -189,16 +189,7 @@ function demoPage() {
                     } else {
                         document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2002' + '&' + urlQuery;
                     }
-
-                    var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
-                    //check if url has query params
-                    if (iframeLazrSrc.includes('?')) {
-                        //replace question mark string with "?spz=2002&" in the url
-                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc.replace('?', '?spz=2002&'));
-                    } else {
-                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2002');
-                    }
-                }, 2000);
+                }, 500);
             });
 
             waitForElm('.theme-white style').then(function () {

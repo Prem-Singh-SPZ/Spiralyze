@@ -41,16 +41,16 @@ select:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 50px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
-.spz-2003-iframe {
+.spz-2003-v1-iframe {
   overflow-x: hidden;
   padding-top: 0;
 }
-.spz-2003-iframe .container {
+.spz-2003-v1-iframe .container {
   max-width: unset;
   padding: 0;
   margin: 0;
 }
-.spz-2003-iframe .form-heading {
+.spz-2003-v1-iframe .form-heading {
   color: #000;
   text-align: center;
   font-family: "Test Founders Grotesk";
@@ -60,32 +60,32 @@ select:-webkit-autofill:active {
   line-height: 32px;
   margin-bottom: 38px;
 }
-.spz-2003-iframe form#pardot-form p {
+.spz-2003-v1-iframe form#pardot-form p {
   text-align: center;
   padding: 0;
   margin: 0;
 }
-.spz-2003-iframe .container .row {
+.spz-2003-v1-iframe .container .row {
   padding: 0;
   margin: 0;
 }
-.spz-2003-iframe form#pardot-form .row {
+.spz-2003-v1-iframe form#pardot-form .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0;
   margin-top: 18px;
 }
-.spz-2003-iframe form#pardot-form .form-field {
+.spz-2003-v1-iframe form#pardot-form .form-field {
   width: calc(50% - 8px);
   padding: 0;
   margin: 0 0 16px;
   position: relative;
 }
-.spz-2003-iframe form#pardot-form .form-field.pd-hidden {
+.spz-2003-v1-iframe form#pardot-form .form-field.pd-hidden {
   display: none;
 }
-.spz-2003-iframe form#pardot-form .form-field.pd-select::after {
+.spz-2003-v1-iframe form#pardot-form .form-field.pd-select::after {
   position: absolute;
   content: "";
   width: 24px;
@@ -97,11 +97,11 @@ select:-webkit-autofill:active {
   background-repeat: no-repeat;
   pointer-events: none;
 }
-.spz-2003-iframe form#pardot-form .form-field.control-checkbox {
+.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox {
   width: 100%;
   margin-top: 3px;
 }
-.spz-2003-iframe form#pardot-form .form-field label.field-label {
+.spz-2003-v1-iframe form#pardot-form .form-field label.field-label {
   position: absolute;
   top: 12px;
   left: 10px;
@@ -117,27 +117,27 @@ select:-webkit-autofill:active {
   pointer-events: none;
   transition: all 0.4s ease-in-out;
 }
-.spz-2003-iframe form#pardot-form .form-field.active.typing label.field-label,
-.spz-2003-iframe form#pardot-form .form-field.filled label.field-label {
+.spz-2003-v1-iframe form#pardot-form .form-field.active.typing label.field-label,
+.spz-2003-v1-iframe form#pardot-form .form-field.filled label.field-label {
   font-size: 13px;
   line-height: 20px;
   top: -10px;
 }
-.spz-2003-iframe form#pardot-form .form-field.active.typing label.field-label {
+.spz-2003-v1-iframe form#pardot-form .form-field.active.typing label.field-label {
   color: #000;
 }
-.spz-2003-iframe
+.spz-2003-v1-iframe
   form#pardot-form
   .form-field.active.typing.error
   label.field-label,
-.spz-2003-iframe form#pardot-form .form-field.filled.error label.field-label {
+.spz-2003-v1-iframe form#pardot-form .form-field.filled.error label.field-label {
   color: #e30004;
 }
-.spz-2003-iframe form#pardot-form .form-field label.field-label::after {
+.spz-2003-v1-iframe form#pardot-form .form-field label.field-label::after {
   display: none;
 }
-.spz-2003-iframe form#pardot-form .form-field .text,
-.spz-2003-iframe form#pardot-form .form-field .select {
+.spz-2003-v1-iframe form#pardot-form .form-field .text,
+.spz-2003-v1-iframe form#pardot-form .form-field .select {
   margin: 0;
   width: 100%;
   height: 50px;
@@ -157,24 +157,24 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden;
 }
-.spz-2003-iframe form#pardot-form .form-field .select {
+.spz-2003-v1-iframe form#pardot-form .form-field .select {
   padding-right: 35px;
 }
-.spz-2003-iframe form#pardot-form .form-field.active.typing .text,
-.spz-2003-iframe form#pardot-form .form-field.active.typing .select {
+.spz-2003-v1-iframe form#pardot-form .form-field.active.typing .text,
+.spz-2003-v1-iframe form#pardot-form .form-field.active.typing .select {
   border-color: #54626a;
 }
-.spz-2003-iframe form#pardot-form .form-field.error .text,
-.spz-2003-iframe form#pardot-form .form-field.error .select {
+.spz-2003-v1-iframe form#pardot-form .form-field.error .text,
+.spz-2003-v1-iframe form#pardot-form .form-field.error .select {
   border-color: #e30004 !important;
 }
-.spz-2003-iframe form#pardot-form .error-message {
+.spz-2003-v1-iframe form#pardot-form .error-message {
   margin: 0 0 10px;
 }
-.spz-2003-iframe form#pardot-form .form-field.control-checkbox span {
+.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox span {
   display: inline-flex;
 }
-.spz-2003-iframe form#pardot-form .form-field.control-checkbox label {
+.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label {
   color: #858585;
   font-family: "Test Founders Grotesk";
   font-size: 14px;
@@ -184,7 +184,7 @@ select:-webkit-autofill:active {
   position: relative;
   padding-left: 28px;
 }
-.spz-2003-iframe form#pardot-form .form-field.control-checkbox label::before {
+.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label::before {
   position: absolute;
   content: "";
   width: 20px;
@@ -196,7 +196,7 @@ select:-webkit-autofill:active {
   margin: 0;
   font-size: 0;
 }
-.spz-2003-iframe
+.spz-2003-v1-iframe
   form#pardot-form
   .form-field.control-checkbox
   input:checked
@@ -204,7 +204,7 @@ select:-webkit-autofill:active {
   background: #0042ff;
   border-color: #0042ff;
 }
-.spz-2003-iframe form#pardot-form .form-field.control-checkbox label::after {
+.spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label::after {
   position: absolute;
   content: "";
   top: 3px;
@@ -215,19 +215,19 @@ select:-webkit-autofill:active {
   background-size: contain;
   opacity: 0;
 }
-.spz-2003-iframe
+.spz-2003-v1-iframe
   form#pardot-form
   .form-field.control-checkbox
   input:checked
   + label::after {
   opacity: 1;
 }
-body.spz-2003-iframe form#pardot-form .submit {
+body.spz-2003-v1-iframe form#pardot-form .submit {
   max-width: unset;
   justify-content: center;
   margin-top: 8px;
 }
-.spz-2003-iframe form#pardot-form .submit input {
+.spz-2003-v1-iframe form#pardot-form .submit input {
   width: 147px;
   height: 50px;
   border-radius: 3px;
@@ -242,16 +242,16 @@ body.spz-2003-iframe form#pardot-form .submit {
   justify-content: center;
   transition: all 0.4s ease-in-out;
 }
-.spz-2003-iframe form#pardot-form .submit input:hover {
+.spz-2003-v1-iframe form#pardot-form .submit input:hover {
   background: #2d2d30;
 }
-.spz-2003-iframe form#pardot-form .submit input:active {
+.spz-2003-v1-iframe form#pardot-form .submit input:active {
   background: #002eeb;
 }
-.spz-2003-iframe form#pardot-form .submit ~ p {
+.spz-2003-v1-iframe form#pardot-form .submit ~ p {
   display: none;
 }
-.spz-2003-iframe form#pardot-form .submit + p {
+.spz-2003-v1-iframe form#pardot-form .submit + p {
   display: block;
   color: #858585 !important;
   text-align: center;
@@ -264,47 +264,47 @@ body.spz-2003-iframe form#pardot-form .submit {
   margin: 14px auto 0 !important;
   padding: 0 !important;
 }
-.spz-2003-iframe form#pardot-form .submit + p a {
+.spz-2003-v1-iframe form#pardot-form .submit + p a {
   color: #000 !important;
   text-decoration: none;
 }
 /* Mobile CSS Start Here */
-.spz-2003-iframe.device-mobile .form-heading {
+.spz-2003-v1-iframe.device-mobile .form-heading {
   font-size: 32px;
   line-height: 24px;
   margin-bottom: 32px;
 }
-.spz-2003-iframe.device-mobile form#pardot-form .form-field {
+.spz-2003-v1-iframe.device-mobile form#pardot-form .form-field {
   width: 100%;
 }
-.spz-2003-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
+.spz-2003-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
   margin: -7px 0 10.5px;
 }
-.spz-2003-iframe.device-mobile
+.spz-2003-v1-iframe.device-mobile
   form#pardot-form
   .form-field.control-checkbox
   label::before {
   top: 6px;
 }
-.spz-2003-iframe.device-mobile
+.spz-2003-v1-iframe.device-mobile
   form#pardot-form
   .form-field.control-checkbox
   label::after {
   top: 9px;
 }
-.spz-2003-iframe.device-mobile form#pardot-form .submit input {
+.spz-2003-v1-iframe.device-mobile form#pardot-form .submit input {
   width: 137px;
   font-size: 18px;
 }
-body.spz-2003-iframe.device-mobile form#pardot-form .submit {
+body.spz-2003-v1-iframe.device-mobile form#pardot-form .submit {
   margin-top: 3px;
 }
-.spz-2003-iframe.device-mobile form#pardot-form .submit + p {
+.spz-2003-v1-iframe.device-mobile form#pardot-form .submit + p {
   max-width: unset;
 }
 /* Iframe CSS End Here */
 
-body.spz-2003 {
+body.spz-2003-v1 {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2003/bg_1440.webp)
     no-repeat top left/cover;
 
@@ -397,7 +397,7 @@ body.spz-2003 {
               }
             }
 
-            > .spz-2003-right-section {
+            > .spz-2003-v1-right-section {
               max-width: 550px;
               padding: 40px 48px;
               display: flex;
