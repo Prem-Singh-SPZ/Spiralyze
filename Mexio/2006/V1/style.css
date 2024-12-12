@@ -273,7 +273,8 @@
 	object-fit: contain;
 }
 
-.spz-2006-v1 .spz-hero .social-proof-logos .social-proof-logo.repeat-image {
+.spz-2006-v1 .spz-hero .social-proof-logos .social-proof-logo.repeat-image,
+.spz-2006-v1 #blocks-page .maxio-section-padding-single.theme-grey-100 {
 	display: none;
 }
 
@@ -431,7 +432,7 @@
 		margin: 40px auto 27px;
 	}
 
-	.spz-2006-v1 .spz-form-wrap .feature-item img{
+	.spz-2006-v1 .spz-form-wrap .feature-item img {
 		margin-top: 0;
 	}
 
@@ -481,7 +482,7 @@
 		font-size: 16px;
 	}
 
-	.spz-2006-v1 .spz-form-wrap .trust-badge{
+	.spz-2006-v1 .spz-form-wrap .trust-badge {
 		margin-bottom: 10px;
 	}
 }
@@ -584,12 +585,12 @@ select:-webkit-autofill:active {
 	position: absolute;
 	top: 12px;
 	left: 10px;
-	color: #858585;
+	color: #808080;
 	font-family: Test Founders Grotesk;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 1.28;
 	padding: 0 6px;
 	margin: 0;
 	background: #FFF;
@@ -600,8 +601,8 @@ select:-webkit-autofill:active {
 .spz-2006-v1-iframe form#pardot-form .form-field.active.typing label.field-label,
 .spz-2006-v1-iframe form#pardot-form .form-field.filled label.field-label {
 	font-size: 13px;
-	line-height: 20px;
-	top: -10px;
+	line-height: 1.28;
+	top: -8px;
 }
 
 .spz-2006-v1-iframe form#pardot-form .form-field.active.typing label.field-label {
@@ -610,7 +611,7 @@ select:-webkit-autofill:active {
 
 .spz-2006-v1-iframe form#pardot-form .form-field.active.typing.error label.field-label,
 .spz-2006-v1-iframe form#pardot-form .form-field.filled.error label.field-label {
-	color: #E30004;
+	color: #f02e4a;
 }
 
 .spz-2006-v1-iframe form#pardot-form .form-field label.field-label::after {
@@ -631,7 +632,7 @@ select:-webkit-autofill:active {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 1.28;
 	appearance: none;
 	background: none;
 	text-overflow: ellipsis;
@@ -645,12 +646,12 @@ select:-webkit-autofill:active {
 
 .spz-2006-v1-iframe form#pardot-form .form-field.active.typing .text,
 .spz-2006-v1-iframe form#pardot-form .form-field.active.typing .select {
-	border-color: #54626A;
+	border-color: #2D2D30;
 }
 
 .spz-2006-v1-iframe form#pardot-form .form-field.error .text,
 .spz-2006-v1-iframe form#pardot-form .form-field.error .select {
-	border-color: #E30004 !important;
+	border-color: #f02e4a !important;
 }
 
 .spz-2006-v1-iframe form#pardot-form .error-message {
@@ -662,12 +663,12 @@ select:-webkit-autofill:active {
 }
 
 .spz-2006-v1-iframe form#pardot-form .form-field.control-checkbox label {
-	color: #858585;
+	color: #808080;
 	font-family: "Test Founders Grotesk";
-	font-size: 14px;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 20px;
+	line-height: 128%;
 	position: relative;
 	padding-left: 28px;
 }
@@ -742,7 +743,7 @@ body.spz-2006-v1-iframe form#pardot-form .submit {
 
 .spz-2006-v1-iframe form#pardot-form .submit+p {
 	display: block;
-	color: #858585 !important;
+	color: #808080 !important;
 	text-align: center;
 	font-family: 'Test Founders Grotesk';
 	font-size: 13px !important;
@@ -776,11 +777,11 @@ body.spz-2006-v1-iframe form#pardot-form .submit {
 }
 
 .spz-2006-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::before {
-	top: 6px;
+	top: 4px;
 }
 
 .spz-2006-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::after {
-	top: 9px;
+	top: 7px;
 }
 
 body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit {
@@ -788,7 +789,7 @@ body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit {
 	width: 100%;
 }
 
-body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit input{
+body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit input {
 	width: 100%;
 	max-width: 100%;
 }
@@ -796,7 +797,7 @@ body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit input{
 .spz-2006-v1-iframe.device-mobile form#pardot-form .submit+p {
 	max-width: 94%;
 	font-size: 14px !important;
-    margin: 16px auto 0 !important;
+	margin: 16px auto 0 !important;
 }
 
 /* Iframe CSS End Here */
