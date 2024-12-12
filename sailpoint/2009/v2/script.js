@@ -30,11 +30,11 @@ window.addEventListener("locationchange", function () {
 
 function urlCheck(url) {
     var allblogsurlstring = "https://www.sailpoint.com/";
-    if (window.location.pathname == '/' || window.location.pathname == '/demo') {
+    if (window.location.pathname == '/') {
         allblogsurlstring = window.location.href;
     }
+    initTest2009();
     if (isSameUrl(url, allblogsurlstring, true)) {
-        initTest2009();
     } else {
         if (document.querySelector('body').classList.contains('spz_2009')) {
             document.querySelector('body').classList.remove('spz_2009');
@@ -64,7 +64,6 @@ function initTest2009() {
         const body = document.querySelector('body');
         if (body) {
             clearInterval(bodyLoaded);
-
             if (window.location.pathname == '/') {
                 if (!body.classList.contains('spz_2009')) {
                     body.classList.add('spz_2009');
@@ -107,18 +106,10 @@ function initTest2009() {
                     }
                 }
             }
-
-            if (window.location.pathname == '/demo') {
-                if (!body.classList.contains('spz_2009')) {
-                    body.classList.add('spz_2009');
-                    hiddenValue('spz_2009', 'SPZ_2009_variant2');
-                } else {
-                    if (body.classList.contains('spz_2009')) {
-                        hiddenValue('spz_2009', 'SPZ_2009_variant2');
-                    }
-                }
+            else {
+                document.body.classList.add('spz_2009_HF');
+                hiddenValue('spz_2009', 'SPZ_2009_variant2');
             }
-
         }
     });
 

@@ -105,14 +105,18 @@ select:-webkit-autofill:active {
   position: absolute;
   top: 12px;
   left: 10px;
-  color: #858585;
+  color: #808080;
   font-family: Test Founders Grotesk;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 128%;
   padding: 0 6px;
   margin: 0;
+  max-width: 73%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   background: #fff;
   pointer-events: none;
   transition: all 0.4s ease-in-out;
@@ -123,8 +127,8 @@ select:-webkit-autofill:active {
   label.field-label,
 .spz-2003-v2-iframe form#pardot-form .form-field.filled label.field-label {
   font-size: 13px;
-  line-height: 20px;
-  top: -10px;
+  line-height: 1.28;
+  top: -8px;
 }
 .spz-2003-v2-iframe
   form#pardot-form
@@ -140,7 +144,7 @@ select:-webkit-autofill:active {
   form#pardot-form
   .form-field.filled.error
   label.field-label {
-  color: #e30004;
+  color: #F02E4A;
 }
 .spz-2003-v2-iframe form#pardot-form .form-field label.field-label::after {
   display: none;
@@ -159,7 +163,7 @@ select:-webkit-autofill:active {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 128%;
   appearance: none;
   background: none;
   text-overflow: ellipsis;
@@ -171,11 +175,11 @@ select:-webkit-autofill:active {
 }
 .spz-2003-v2-iframe form#pardot-form .form-field.active.typing .text,
 .spz-2003-v2-iframe form#pardot-form .form-field.active.typing .select {
-  border-color: #54626a;
+  border-color: #2D2D30;
 }
 .spz-2003-v2-iframe form#pardot-form .form-field.error .text,
 .spz-2003-v2-iframe form#pardot-form .form-field.error .select {
-  border-color: #e30004 !important;
+  border-color: #F02E4A !important;
 }
 .spz-2003-v2-iframe form#pardot-form .error-message {
   margin: 0 0 10px;
@@ -185,12 +189,12 @@ select:-webkit-autofill:active {
   display: inline-flex;
 }
 .spz-2003-v2-iframe form#pardot-form .form-field.control-checkbox label {
-  color: #858585;
+  color: #808080;
   font-family: "Test Founders Grotesk";
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 128%;
   position: relative;
   padding-left: 28px;
 }
@@ -266,13 +270,13 @@ body.spz-2003-v2-iframe form#pardot-form .submit {
 }
 .spz-2003-v2-iframe form#pardot-form .submit + p {
   display: block;
-  color: #858585 !important;
+  color: #808080 !important;
   text-align: center;
   font-family: "Test Founders Grotesk";
-  font-size: 13px !important;
+  font-size: 14px !important;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.28;
   max-width: 92%;
   margin: 24px auto 0 !important;
   padding: 0 !important;
@@ -507,7 +511,7 @@ body.spz-2003-v2 {
                       font-family: "Test Founders Grotesk";
                       font-size: 24px;
                       font-style: normal;
-                      font-weight: 600;
+                      font-weight: 500;
                       line-height: 32px;
 
                       @media (max-width: 767.98px) {
