@@ -2,18 +2,15 @@
     function createTest() {
         waitForElm('body').then(() => {
             if (!document.body.classList.contains('SPZ_7001')) {
+                removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
+                document.body.classList.add('SPZ_7001');
+                hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
 
-                let checkForm = setInterval(() => {
-                    if (!document.body.classList.contains('.spz-mkto-ready')) {
-                        removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
-                        document.body.classList.add('SPZ_7001');
-                        hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
-
-                        waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm input').then(() => {
-                            formModify();
-                        });
-                    }
-                }, 100);
+                waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                    setTimeout(() => {
+                        formModify();
+                    }, 2000);
+                });
 
             } else {
                 if (document.body.classList.contains('SPZ_7001')) {
@@ -25,7 +22,6 @@
     }
 
     function formModify() {
-        console.log('form modify');
         // Add class in mktoFormRow using count
         var form_fields = document.querySelectorAll('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
@@ -194,7 +190,9 @@
                 document.body.classList.add('form-submit');
             });
 
-            document.body.classList.add('spz-mkto-ready');
+            if (document.body.classList.contains('spz-form-loaded')) {
+                document.body.classList.remove('spz-form-loaded');
+            }
         });
     }
 
@@ -325,7 +323,6 @@
     urlCheck(url);
 
     function urlCheck(url) {
-        console.log(url);
         if (urls.includes(url)) {
             createTest();
         } else {
