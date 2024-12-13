@@ -352,6 +352,7 @@ function demoPage() {
             clearInterval(spz_2001_Interval);
             document.querySelector('.spz-2006-v1 .spz-form-wrap .form-heading').style.display = "none";
             document.querySelector('.spz-2006-v1 .spz-form-wrap .trust-badge').style.display = "none";
+            document.querySelector('.spz-2006-v1 .spz-form-wrap .middle-arrow-image-desk').style.display = "none";
           }
         }
       }, 200);
