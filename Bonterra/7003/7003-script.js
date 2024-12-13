@@ -50,7 +50,7 @@ function updateContent() {
 
 document.addEventListener('click', function (event) {
     if (event.target.getAttribute('href') == '#form') {
-        event.preventDefault();
+        // event.preventDefault();
         document.querySelector('.spz-7003 #HERO #HERO-Block3-Form').scrollIntoView({
             behavior: 'smooth'
         });
