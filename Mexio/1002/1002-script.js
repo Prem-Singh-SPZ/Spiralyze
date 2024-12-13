@@ -31,6 +31,7 @@ const template_heroContent = {
   </defs>
 </svg>`,
 				tileHeading: `Billing`,
+				tileValue: `billing`,
 				tileDescription: ``,
 			},
 			{
@@ -40,6 +41,7 @@ const template_heroContent = {
   </g>
 </svg>`,
 				tileHeading: `Subscription <br>management`,
+				tileValue: `subscription`,
 				tileDescription: ``,
 			},
 			{
@@ -50,6 +52,7 @@ const template_heroContent = {
 </svg>`,
 				imageAlt: `Financial reporting`,
 				tileHeading: `Financial <br>reporting`,
+				tileValue: `reporting`,
 				tileDescription: ``,
 			},
 			{
@@ -57,6 +60,7 @@ const template_heroContent = {
   <path opacity="0.7" d="M2.12676 20C1.53245 20 1.02941 19.7941 0.617647 19.3824C0.205882 18.9706 0 18.4676 0 17.8732V2.12676C0 1.53245 0.205882 1.02941 0.617647 0.617647C1.02941 0.205882 1.53245 0 2.12676 0H17.8732C18.4676 0 18.9706 0.205882 19.3824 0.617647C19.7941 1.02941 20 1.53245 20 2.12676V17.8732C20 18.4676 19.7941 18.9706 19.3824 19.3824C18.9706 19.7941 18.4676 20 17.8732 20H2.12676ZM9.11765 13.1788H1.76471V17.8732C1.76471 17.9789 1.79863 18.0657 1.86647 18.1335C1.93431 18.2014 2.02108 18.2353 2.12676 18.2353H9.11765V13.1788ZM10.8824 13.1788V18.2353H17.8732C17.9789 18.2353 18.0657 18.2014 18.1335 18.1335C18.2014 18.0657 18.2353 17.9789 18.2353 17.8732V13.1788H10.8824ZM9.11765 11.4141V6.33471H1.76471V11.4141H9.11765ZM10.8824 11.4141H18.2353V6.33471H10.8824V11.4141ZM1.76471 4.57029H18.2353V2.12676C18.2353 2.02108 18.2014 1.93431 18.1335 1.86647C18.0657 1.79863 17.9789 1.76471 17.8732 1.76471H2.12676C2.02108 1.76471 1.93431 1.79863 1.86647 1.86647C1.79863 1.93431 1.76471 2.02108 1.76471 2.12676V4.57029Z" fill="white"/>
 </svg>`,
 				tileHeading: `Revenue <br>recognition`,
+				tileValue: `revrec`,
 				tileDescription: ``,
 			},
 			{
@@ -66,6 +70,7 @@ const template_heroContent = {
   </g>
 </svg>`,
 				tileHeading: `Collections`,
+				tileValue: `collections`,
 				tileDescription: ``,
 			},
 			{
@@ -75,6 +80,7 @@ const template_heroContent = {
   </g>
 </svg>`,
 				tileHeading: `Pricing <br>strategy`,
+				tileValue: `pricing`,
 				tileDescription: ``,
 			},
 		],
@@ -82,7 +88,7 @@ const template_heroContent = {
 	//[6] Hero CTA
 	heroCTA: {
 		CTAText: "Get a Demo",
-		CTAHref: "/demo?_vis_test_id=21&_vis_opt_random=0.5022273652440998&_vis_hash=f679ac138f4c4f1ab8f66143c78c5736&_vis_opt_preview_combination=3",
+		CTAHref: "/demo",
 	},
 };
 const template_additionalSection = {
@@ -169,7 +175,7 @@ function addHero(formData, whereToPut, template_heroSelector, template_additiona
 										${item.tileImageURL}
 										</div>
 	            						<div class="wrap-tile-info">
-		            						<div class="tile-heading">${item.tileHeading}</div>
+		            						<div class="tile-heading" value="${item.tileValue}">${item.tileHeading}</div>
 		            						<div class="tile-description">${item.tileDescription}</div>
 		            					</div>
 	            					</div>`;
@@ -268,16 +274,6 @@ let checkBody = setInterval(function () {
 	}
 });
 
-//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
-var urlParams = new URLSearchParams(window.location.search);
-var vis_test_id = urlParams.get('_vis_test_id');
-if (vis_test_id) {
-	var vis_opt_random = urlParams.get('_vis_opt_random');
-	var vis_hash = urlParams.get('_vis_hash');
-	var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
-	var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
-}
-
 function load_1002() {
 	var bodyEle = document.querySelector('body');
 	if (bodyEle) {
@@ -313,7 +309,7 @@ function load_1002() {
 					var activeTiles = document.querySelectorAll('.tiles-items .tile-item.active .tile-heading');
 					var activeTilesValue = [];
 					activeTiles.forEach(function (item) {
-						activeTilesValue.push(item.textContent);
+						activeTilesValue.push(item.getAttribute('value'));
 					});
 					setCookie('activeTilesValue', activeTilesValue.join(','), 1);
 				});
@@ -330,11 +326,16 @@ function load_1002() {
 
 				//if there is + sign in the email value, replace it all with %2B
 				emailValue = emailValue.replace(/\+/g, '%2B');
-				
+
 				//check if email value is not null
 				if (emailValue) {
 					var iframeSrc = document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
-					document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue + "&" + urlQuery;
+					//if there is already a query param in the src, then append email query param to it
+					if (iframeSrc.includes('?')) {
+						document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '&email=' + emailValue;
+					} else {
+						document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue;
+					}
 				}
 			});
 		}
