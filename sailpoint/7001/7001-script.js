@@ -1,33 +1,31 @@
 (function () {
     function createTest() {
-        let bodyLoaded = setInterval(function () {
-            const body = document.querySelector('body');
-            if (body) {
-                clearInterval(bodyLoaded);
+        waitForElm('body').then(() => {
+            if (!document.body.classList.contains('SPZ_7001')) {
 
-                if (!body.classList.contains('SPZ_7001')) {
-                    removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
-                    body.classList.add('SPZ_7001');
-                    hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
-
-                    let formLoaded = setInterval(() => {
-                        if ((document.querySelector('#mktoForm_1017.mktoForm') && document.querySelectorAll(`#mktoForm_1017.mktoForm input`).length > 0) || (document.querySelector('#get-started .mktoForm') && document.querySelectorAll(`#get-started .mktoForm input`).length > 0)) {
-                            clearInterval(formLoaded)
-                            formModify();
-                        }
-                    });
-                } else {
-                    if (body.classList.contains('SPZ_7001')) {
+                let checkForm = setInterval(() => {
+                    if (!document.body.classList.contains('.spz-mkto-ready')) {
                         removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
-                        clearInterval(bodyLoaded);
+                        document.body.classList.add('SPZ_7001');
                         hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
+
+                        waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm input').then(() => {
+                            formModify();
+                        });
                     }
+                }, 100);
+
+            } else {
+                if (document.body.classList.contains('SPZ_7001')) {
+                    removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
+                    hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
                 }
             }
         });
     }
 
     function formModify() {
+        console.log('form modify');
         // Add class in mktoFormRow using count
         var form_fields = document.querySelectorAll('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
@@ -195,6 +193,8 @@
             form.onSuccess(function (values, followUpUrl) {
                 document.body.classList.add('form-submit');
             });
+
+            document.body.classList.add('spz-mkto-ready');
         });
     }
 
@@ -314,14 +314,18 @@
     ];
 
 
-    var url = location.href;
-    urlCheck(url);
     window.addEventListener("locationchange", function () {
         url = location.href;
         urlCheck(url);
+        if (document.querySelector('.SPZ_7001')) {
+            document.body.classList.remove("SPZ_7001");
+        }
     });
+    var url = location.href;
+    urlCheck(url);
 
     function urlCheck(url) {
+        console.log(url);
         if (urls.includes(url)) {
             createTest();
         } else {
