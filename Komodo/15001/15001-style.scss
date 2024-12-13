@@ -647,6 +647,12 @@ body.spz-15001 {
     .hs_buying_timeline {
       display: none;
     }
+    .hasValue {
+      .hs-input {
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        background-color: #f8f7f7 !important;
+      }
+    }
     .focus {
       .hs-input {
         &:-webkit-autofill {
@@ -674,15 +680,28 @@ body.spz-15001 {
         background-color: #fff !important;
       }
     }
-    .hasValue {
-      .hs-input {
-        border: 1px solid rgba(0, 0, 0, 0.1) !important;
-        background-color: #f8f7f7 !important;
-      }
-    }
     .hasError {
       .hs-input {
         border: 1px solid #dc0000 !important;
+      }
+    }
+
+    .hs-form-field.hasValue {
+      > label {
+        top: -11px !important;
+        left: 16px !important;
+        z-index: 4;
+        span {
+          -webkit-font-smoothing: antialiased;
+          font-family: Titillium Web, sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          padding: 0 4px;
+          color: #7e7e7e;
+          box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+          -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+        }
       }
     }
     .hs-form-field.focus {
@@ -699,24 +718,6 @@ body.spz-15001 {
           color: #000;
           box-shadow: 0px -9px 0px 0px white inset;
           -webkit-box-shadow: 0px -9px 0px 0px white inset;
-        }
-      }
-    }
-    .hs-form-field.hasValue {
-      > label {
-        top: -11px !important;
-        left: 16px !important;
-        z-index: 4;
-        span {
-          -webkit-font-smoothing: antialiased;
-          font-family: Titillium Web, sans-serif;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 20px;
-          padding: 0 4px;
-          color: #7e7e7e;
-          box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
-          -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
         }
       }
     }
@@ -740,7 +741,7 @@ body.spz-15001 {
         display: none;
       }
     }
-    .hs-form-field.hasError.focus {
+    .hs-form-field.hasError.focus,  .hs-form-field.hasError.hasValue {
       > label {
         span {
           font-family: Titillium Web, sans-serif;

@@ -658,6 +658,10 @@ body.spz-15001 #demo_Form_15001_wrapper .hs_consent_to_communicate_non_us .hs-fo
 body.spz-15001 #demo_Form_15001_wrapper .hs_buying_timeline {
   display: none;
 }
+body.spz-15001 #demo_Form_15001_wrapper .hasValue .hs-input {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: #f8f7f7 !important;
+}
 body.spz-15001 #demo_Form_15001_wrapper .focus .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.4) !important;
   background-color: #fff !important;
@@ -686,27 +690,8 @@ body.spz-15001 #demo_Form_15001_wrapper .focus .hs-input:-webkit-autofill:focus 
   z-index: 2;
   position: relative;
 }
-body.spz-15001 #demo_Form_15001_wrapper .hasValue .hs-input {
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  background-color: #f8f7f7 !important;
-}
 body.spz-15001 #demo_Form_15001_wrapper .hasError .hs-input {
   border: 1px solid #dc0000 !important;
-}
-body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus > label {
-  top: -11px !important;
-  left: 16px !important;
-  z-index: 4;
-}
-body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus > label span {
-  font-family: Titillium Web, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  padding: 0 4px;
-  color: #000;
-  box-shadow: 0px -9px 0px 0px white inset;
-  -webkit-box-shadow: 0px -9px 0px 0px white inset;
 }
 body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasValue > label {
   top: -11px !important;
@@ -724,6 +709,21 @@ body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasValue > label span {
   box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
   -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
 }
+body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus > label {
+  top: -11px !important;
+  left: 16px !important;
+  z-index: 4;
+}
+body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus > label span {
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 4px;
+  color: #000;
+  box-shadow: 0px -9px 0px 0px white inset;
+  -webkit-box-shadow: 0px -9px 0px 0px white inset;
+}
 body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus.hs_how_did_you_hear_about_us_ > label {
   display: none;
 }
@@ -736,7 +736,7 @@ body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.focus.hs_message > label 
 body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasValue.hs_message > label {
   display: none;
 }
-body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasError.focus > label span {
+body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasError.focus > label span, body.spz-15001 #demo_Form_15001_wrapper .hs-form-field.hasError.hasValue > label span {
   font-family: Titillium Web, sans-serif;
   font-size: 12px;
   font-weight: 400;
