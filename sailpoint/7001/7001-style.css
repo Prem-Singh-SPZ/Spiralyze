@@ -107,17 +107,24 @@ select:-webkit-autofill:active {
     font-weight: 600;
 }
 
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel#LblcontactFormComments,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel#LblcontactFormComments {
+    padding-top: 7px;
+    top: 0.5px;
+    padding-right: 2px;
+}
+
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel .mktoAsterix,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel .mktoAsterix {
     color: #0071CE !important;
 }
 
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel .mktoAsterix {
     color: #E6241E !important;
-}
+} */
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField:not([type=checkbox]) {
     width: 100% !important;
@@ -144,7 +151,8 @@ select:-webkit-autofill:active {
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
     height: 112px !important;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
+    white-space: normal !important;
 }
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
@@ -167,9 +175,9 @@ select:-webkit-autofill:active {
     border-color: #FFF;
 }
 
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
     border-color: #E6241E !important;
-}
+} */
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
     position: relative;
@@ -397,13 +405,13 @@ select:-webkit-autofill:active {
         width: 100% !important;
     }
 
-    .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:before {
+    /* .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:before {
         top: 14px;
     }
 
     .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:after {
         top: 17px;
-    }
+    } */
 
     .SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label::before {
         top: 5px;
