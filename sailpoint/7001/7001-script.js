@@ -305,7 +305,6 @@
         "https://www.sailpoint.com/solutions/industries/government",
         "https://www.sailpoint.com/solutions/industries/healthcare",
         "https://www.sailpoint.com/solutions/industries/manufacturing",
-        "https://www.sailpoint.com/services/professional",
         "https://www.sailpoint.com/why-us",
         "https://www.sailpoint.com/why-us/diversity-inclusion-belonging",
         "https://www.sailpoint.com/why-us/leadership"
