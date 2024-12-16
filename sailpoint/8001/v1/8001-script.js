@@ -6,9 +6,18 @@ function createTest() {
 }
 
 function formModify() {
-    if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner')  && !document.querySelector('.spz-form-title-wrapper')) {
+    if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
         document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">Keep exploring SailPoint's identity security platform</h6><p class="f-desc">Thank you for exploring your first 3 product tours. For unlimited access to all product tours, simply provide your information below.</p></div>`);
     }
+
+    document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow').forEach(function (elm) {
+        if (elm.querySelector('.mktoField[name]:not([type="hidden"]):not([type="checkbox"])')) {
+            elm.classList.add('row_' + elm.querySelector('.mktoField').getAttribute('name'));
+        }
+    });
+
+    document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
+    document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
 }
 
 history.pushState = (function (f) {
