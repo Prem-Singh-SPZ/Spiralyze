@@ -1,3 +1,5 @@
+let anchorCount = 0;
+
 function createTest() {
     document.body.classList.add('spz-8001');
     waitForElm('#contact-us .mktoForm input').then(function (elm) {
@@ -19,6 +21,18 @@ function formModify() {
     document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
     document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
 }
+
+window.addEventListener('click', function (e) {
+    console.log(e.target);
+    //check if .demo-list__card or its child element is clicked
+    if (e.target.classList.contains('demo-list__card') || e.target.closest('.demo-list__card')) {
+
+        anchorCount++;
+        if (anchorCount >= 4) {
+            document.querySelector('.mktoForm').style.display = 'block';
+        }
+    }
+});
 
 history.pushState = (function (f) {
     return function pushState() {

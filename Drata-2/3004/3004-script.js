@@ -41,6 +41,7 @@
 					pageLeaveEvent,
 					timesToAppear
 				);
+				createCookie('spz-3004-loaded', 'true', 1);
 			}
 		})
 
@@ -141,8 +142,30 @@
 
 	//Passing test details to hidden fields
 	function submitTestDetails() {
-		if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
-			document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant_3004');
+		if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input') && isCookieExist('spz-3004-loaded')) {
+			//check if the fields are already filled, then append our value with comma separated and make sure our value is not already present
+			let hiddenField = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+			let hiddenFieldValue = hiddenField.value;
+			let hiddenFieldArray = hiddenFieldValue.split(',');
+			let testValue = 'Variant_3004';
+
+
+			//check if our value is injected using setinterval
+			let checkValue = setInterval(function () {
+				if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').value.indexOf('Variant_3004') > -1) {
+					if (hiddenFieldArray.indexOf(testValue) === -1) {
+						hiddenField.value = hiddenFieldValue + ',' + testValue;
+					}
+					else {
+						hiddenField.value = hiddenFieldValue;
+					}
+				}
+			}, 500);
+
+			setTimeout(function () {
+				clearInterval(checkValue);
+				deleteCookie('spz-3004-loaded');
+			}, 11000);
 		}
 	}
 
@@ -229,5 +252,33 @@
 			});
 			observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
 		});
+	}
+
+	// Create cookie
+	function createCookie(name, value, days) {
+		var expires = "";
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + value + expires + "; path=/";
+	}
+
+	// Check if cookie exists
+	function isCookieExist(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	}
+
+	// Delete cookie
+	function deleteCookie(name) {
+		document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
 })();
