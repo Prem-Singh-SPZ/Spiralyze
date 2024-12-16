@@ -172,7 +172,7 @@ function demoPage() {
                         </div>
                     </div>
                     <div class="rs-footer-icon">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/v1731524874/maxio/2003/extensiv_logo_1444.svg" alt="Extensive">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/v1731524874/maxio/2003/extensiv_logo_1444.svg" alt="Extensiv">
                     </div>
                 </div>
             </div>`);

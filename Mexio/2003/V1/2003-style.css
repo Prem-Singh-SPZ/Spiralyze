@@ -73,9 +73,9 @@ select:-webkit-autofill:active {
 }
 
 .spz-2003-v1-iframe form#pardot-form .form-field {
-  width: calc(50% - 10px);
+  width: calc(50% - 8px);
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   position: relative;
 }
 
@@ -98,20 +98,20 @@ select:-webkit-autofill:active {
 
 .spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox {
   width: 100%;
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 .spz-2003-v1-iframe form#pardot-form .form-field label.field-label {
   position: absolute;
   top: 12px;
-  left: 10px;
+  left: 8px;
   color: #808080;
   font-family: Test Founders Grotesk;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 128%;
-  padding: 0 6px;
+  padding: 0 8px;
   margin: 0;
   max-width: 73%;
   white-space: nowrap;
@@ -127,7 +127,7 @@ select:-webkit-autofill:active {
 .spz-2003-v1-iframe form#pardot-form .form-field.filled label.field-label {
   font-size: 13px;
   line-height: 1.28;
-  top: -8px;
+  top: -9px;
 }
 
 .spz-2003-v1-iframe form#pardot-form .form-field.active.typing label.field-label {
@@ -201,7 +201,7 @@ select:-webkit-autofill:active {
   font-weight: 400;
   line-height: 128%;
   position: relative;
-  padding-left: 28px;
+  padding-left: 32px;
 }
 
 .spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox label::before {
@@ -243,12 +243,12 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 4px;
+  margin-top: 8.5px;
 }
 
 .spz-2003-v1-iframe form#pardot-form .submit input {
   width: 178px;
-  height: 56px;
+  height: 48px;
   border-radius: 3px;
   background: #0042ff;
   font-family: Test Founders Grotesk;
@@ -291,8 +291,7 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   font-style: normal;
   font-weight: 400;
   line-height: 128%;
-  max-width: 92%;
-  margin: 24px auto 0 !important;
+  margin: 16.5px auto 0 !important;
   padding: 0 !important;
 }
 
@@ -317,7 +316,8 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
 }
 
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit input {
-  width: 194px;
+  width: 100%;
+  max-width: 100%;
 }
 
 body.spz-2003-v1-iframe.device-mobile form#pardot-form .submit {
@@ -373,7 +373,7 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px 0;
+  margin: 58px 0;
 }
 @media (max-width: 1024.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container {
@@ -405,7 +405,7 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-f
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 48px 44px 40px;
+  padding: 36px 48px 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -414,11 +414,11 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-f
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 550px;
+  max-width: 560px;
 }
 @media (max-width: 767.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap {
-    padding: 48px 20px 40px;
+    padding: 41px 20px 40px;
   }
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
@@ -429,10 +429,17 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-f
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section {
-  max-width: 550px;
+  max-width: 560px;
   padding: 40px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,7 +553,7 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2
   font-family: "Test Founders Grotesk";
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 32px;
 }
 @media (max-width: 767.98px) {
@@ -575,8 +582,13 @@ body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2
 }
 body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner .rs-footer-icon {
   position: absolute;
-  right: 48px;
-  bottom: 48px;
+  right: 58px;
+  bottom: 32px;
+}
+@media (max-width: 1024.98px) {
+  body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner .rs-footer-icon {
+    bottom: 48px;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-2003-v1 #page .site-content .blocks-page .hero-form .container > .spz-2003-v1-right-section .rs-inner .rs-footer-icon {

@@ -77,9 +77,9 @@ select:-webkit-autofill:active {
   margin-top: 18px;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field {
-  width: calc(50% - 10px);
+  width: calc(50% - 8px);
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   position: relative;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field.pd-hidden {
@@ -99,19 +99,19 @@ select:-webkit-autofill:active {
 }
 .spz-2003-v1-iframe form#pardot-form .form-field.control-checkbox {
   width: 100%;
-  margin-top: 0;
+  margin-top: 2px;
 }
 .spz-2003-v1-iframe form#pardot-form .form-field label.field-label {
   position: absolute;
   top: 12px;
-  left: 10px;
+  left: 8px;
   color: #808080;
   font-family: Test Founders Grotesk;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 128%;
-  padding: 0 6px;
+  padding: 0 8px;
   margin: 0;
   max-width: 73%;
   white-space: nowrap;
@@ -128,7 +128,7 @@ select:-webkit-autofill:active {
 .spz-2003-v1-iframe form#pardot-form .form-field.filled label.field-label {
   font-size: 13px;
   line-height: 1.28;
-  top: -8px;
+  top: -9px;
 }
 .spz-2003-v1-iframe
   form#pardot-form
@@ -196,7 +196,7 @@ select:-webkit-autofill:active {
   font-weight: 400;
   line-height: 128%;
   position: relative;
-  padding-left: 28px;
+  padding-left: 32px;
 }
 .spz-2003-v1-iframe
   form#pardot-form
@@ -242,11 +242,11 @@ select:-webkit-autofill:active {
 body.spz-2003-v1-iframe form#pardot-form .submit {
   max-width: unset;
   justify-content: center;
-  margin-top: 4px;
+  margin-top: 8.5px;
 }
 .spz-2003-v1-iframe form#pardot-form .submit input {
   width: 178px;
-  height: 56px;
+  height: 48px;
   border-radius: 3px;
   background: #0042ff;
   font-family: Test Founders Grotesk;
@@ -277,8 +277,8 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
   font-style: normal;
   font-weight: 400;
   line-height: 128%;
-  max-width: 92%;
-  margin: 24px auto 0 !important;
+  // max-width: 92%;
+  margin: 16.5px auto 0 !important;
   padding: 0 !important;
 }
 .spz-2003-v1-iframe form#pardot-form .submit + p a {
@@ -312,7 +312,8 @@ body.spz-2003-v1-iframe form#pardot-form .submit {
 //   top: 9px;
 // }
 .spz-2003-v1-iframe.device-mobile form#pardot-form .submit input {
-  width: 194px;
+  width: 100%;
+  max-width: 100%;
   // font-size: 18px;
 }
 body.spz-2003-v1-iframe.device-mobile form#pardot-form .submit {
@@ -368,7 +369,7 @@ body.spz-2003-v1 {
           .container {
             display: flex;
             justify-content: center;
-            margin: 30px 0;
+            margin: 58px 0;
 
             @media (max-width: 1024.98px) {
               flex-direction: column;
@@ -389,14 +390,14 @@ body.spz-2003-v1 {
               background: #fff;
               box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
               display: flex;
-              padding: 48px 44px 40px;
+              padding: 36px 48px 40px;
               flex-direction: column;
               align-items: center;
               width: 100%;
-              max-width: 550px;
+              max-width: 560px;
 
               @media (max-width: 767.98px) {
-                padding: 48px 20px 40px;
+                padding: 41px 20px 40px;
               }
 
               .form-heading {
@@ -407,18 +408,18 @@ body.spz-2003-v1 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
-                margin-bottom: 30px;
+                margin-bottom: 14px;
 
-                // @media screen and (max-width: 767.98px) {
-                //   font-size: 32px;
-                //   line-height: 1;
-                //   margin-bottom: 10px;
-                // }
+                @media screen and (max-width: 767.98px) {
+                  font-size: 32px;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                }
               }
             }
 
             > .spz-2003-v1-right-section {
-              max-width: 550px;
+              max-width: 560px;
               padding: 40px 48px;
               display: flex;
               flex-direction: column;
@@ -541,8 +542,12 @@ body.spz-2003-v1 {
 
                 .rs-footer-icon {
                   position: absolute;
-                  right: 48px;
-                  bottom: 48px;
+                  right: 58px;
+                  bottom: 32px;
+
+                  @media (max-width: 1024.98px) {
+                    bottom: 48px;
+                  }
 
                   @media (max-width: 767.98px) {
                     position: relative;
