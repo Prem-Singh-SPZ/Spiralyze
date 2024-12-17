@@ -137,15 +137,18 @@
               if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend',document.querySelector('.mkto-wrap + .disclaimer'));
                 formModify();
               }
             });
           }
 
+
+
           //the .spz-hero gets added to the page and removed after some time, so keep checking for it to add the form
           let spzHeroInterval = setInterval(() => {
-            if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname.indexOf("/demo") !== -1) {
+            if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
               addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
               hiddenValue('SPZ_1001', 'SPZ_1001_Variant');
               setHiddenFieldValue();
@@ -341,6 +344,18 @@
             MktoForms2.whenReady(function (form) {
               form.onSuccess(function (values, followUpUrl) {
                 document.body.classList.add('form-submit');
+
+                //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
+                var checkboxInterval = setInterval(() => {
+                  var checkbox = document.querySelector('.spz_1001 form.mktoForm #mktoCheckbox_27268_0');
+                  if (checkbox) {
+                    checkbox.checked = true;
+                  }
+                }, 100);
+
+                setTimeout(() => {
+                  clearInterval(checkboxInterval);
+                }, 5000);
               });
             });
 
@@ -442,7 +457,7 @@
 
   function urlCheck(url) {
     let testURL = "";
-    if (window.location.pathname.indexOf("/demo") !== -1) {
+    if (window.location.pathname === '/demo') {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {

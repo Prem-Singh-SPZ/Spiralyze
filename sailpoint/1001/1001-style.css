@@ -630,8 +630,10 @@ select:-webkit-autofill:active {
     background-repeat: no-repeat;
 }
 
-.spz_1001 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper,
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList {
+.spz_1001 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper
+
+/* ,.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList */
+    {
     margin: 0 !important;
 }
 
@@ -653,19 +655,19 @@ select:-webkit-autofill:active {
     display: none;
 }
 
-.spz_1001 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap,
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox] {
+.spz_1001 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap
+/* ,.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox]  */
+{
     display: none !important;
 }
 
-.spz_1001 .mktoForm input[type=checkbox] {
-    width: 16px !important;
-    height: 16px !important;
-    margin: 0 !important;
-    top: 3px !important;
-}
+/* .spz_1001 .mktoForm input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}  */
 
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList~input[type=checkbox] {
+/* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList~input[type=checkbox] {
     width: 16px !important;
     height: 16px !important;
     margin: 0 !important;
@@ -673,15 +675,15 @@ select:-webkit-autofill:active {
     position: absolute;
     top: 0px;
     left: 0px;
-}
+} */
 
-@media (max-width: 767.98px) {
-    .spz_1001 .mktoCheckboxList input[type=checkbox] {
+ @media (max-width: 767.98px) {
+    /* .spz_1001 .mktoCheckboxList input[type=checkbox] {
         width: 20px;
         height: 20px;
-    }
+    } */
 
-    .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList~input[type=checkbox] {
+    /* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList~input[type=checkbox] {
         width: 20px !important;
         height: 20px !important;
         margin: 0 !important;
@@ -689,8 +691,8 @@ select:-webkit-autofill:active {
         position: absolute;
         top: 0px;
         left: 0px;
-    }
-}
+    } */
+} 
 
 .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label {
     position: relative;
@@ -699,14 +701,14 @@ select:-webkit-autofill:active {
     font-style: normal;
     font-weight: 400;
     line-height: 1.6;
-    padding-left: 28px;
+    padding-left: 8px;
     padding-right: 0;
     cursor: pointer;
     display: inline-flex;
     width: auto;
 }
 
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
+/* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
     position: absolute;
     content: "";
     width: 16px;
@@ -731,9 +733,9 @@ select:-webkit-autofill:active {
 
 .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input:checked+label:hover:before {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes-hover.png");
-}
+} */
 
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label::after {
+/* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label::after {
     position: absolute;
     content: "";
     width: 32px;
@@ -759,12 +761,12 @@ select:-webkit-autofill:active {
 .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input:checked+label:active::after {
     background: #0071CE;
     opacity: 0.1;
-}
+} */
 
-.spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input:checked+label:focus::after {
+/* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList input:checked+label:focus::after {
     background: #0071CE;
     opacity: 0.3;
-}
+} */
 
 .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow {
     width: 100%;
@@ -863,7 +865,7 @@ select:-webkit-autofill:active {
         width: 100% !important;
     }
 
-    .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label:before {
+    /* .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label:before {
         width: 20px;
         height: 20px;
         top: 0px;
@@ -879,7 +881,7 @@ select:-webkit-autofill:active {
         left: -6px;
         width: 20px;
         height: 20px;
-    }
+    } */
 
     .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow {
         margin-top: 11px;
