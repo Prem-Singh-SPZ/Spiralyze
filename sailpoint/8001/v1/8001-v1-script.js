@@ -22,7 +22,6 @@ function formModify() {
     document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
 
     // document.querySelector('#contact-us').style.top = document.querySelector('nav.navigation').offsetHeight + 'px';
-
 }
 
 //on window scroll, check the height of nav.navigation and assign it as top value to the #contact-us
@@ -91,7 +90,6 @@ function urlCheck(url) {
         removeTest();
     }
 }
-
 
 //Generic code
 function removeTest() {
