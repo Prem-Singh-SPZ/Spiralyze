@@ -98,7 +98,7 @@ body.spz-7003 {
       }
 
       .block-wrapper {
-        align-items: center;
+        // align-items: center;
         margin-bottom: 48px;
 
         @media screen and (max-width: 1199.98px) {
@@ -139,9 +139,9 @@ body.spz-7003 {
                 margin-bottom: 20.5px !important;
               }
 
-              @media screen and (max-width: 767.98px) {
-                margin-bottom: 22px !important;
-              }
+              // @media screen and (max-width: 767.98px) {
+              //   margin-bottom: 22px !important;
+              // }
 
               > p {
                 margin: 0 0 18.5px;
@@ -201,10 +201,24 @@ body.spz-7003 {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
+                position: relative;
 
                 @media (max-width: 767.98px) {
                   font-size: 16px;
                   line-height: 22px;
+                }
+
+                &::before {
+                  content: url("//res.cloudinary.com/spiralyze/image/upload/v1734511583/bonterra/7003/arrow.svg");
+                  position: absolute;
+                  height: 19.588px;
+                  width: 108px;
+                  right: 0px;
+                  bottom: -34px;
+
+                  @media (max-width: 1199.98px) {
+                    display: none;
+                  }
                 }
               }
 
@@ -283,11 +297,12 @@ body.spz-7003 {
               margin-left: auto;
               margin-right: auto;
               max-width: 704px;
-              margin-bottom: 14px;
+              margin-bottom: 22px;
             }
 
             @media screen and (max-width: 767.98px) {
-              padding: 17px 6px 32px;
+              padding: 17px 8px 32px;
+              margin-bottom: 14px;
               // box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
               // max-width: calc(100% - 2px);
             }
@@ -322,8 +337,12 @@ body.spz-7003 {
       }
 
       .spz-social-proof {
-        margin: 18.5px 0 36.5px;
+        margin: 10.5px 0 36.5px;
         background: #fff;
+
+        @media screen and (max-width: 1199.98px) {
+          margin-bottom: 64px;
+        }
 
         @media screen and (max-width: 767.98px) {
           margin: 0.5px 2px 20px 0;
@@ -656,8 +675,8 @@ body.spz-7003 {
             line-height: 24px !important;
 
             @media screen and (max-width: 767.98px) {
-              max-width: calc(100% - 20px);
-              margin: 12.5px auto 0 !important;
+              max-width: calc(100% - 16px);
+              margin: 12px auto 0 !important;
             }
 
             &:hover {
