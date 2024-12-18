@@ -34,6 +34,15 @@ function updateContent() {
         //social proof
         document.querySelector('body.spz-7003 #HERO .container').insertAdjacentHTML('beforeend', '<div class="spz-social-proof"><div class="sp-container"><div class="sp-title">Over <span>400,000 Customers</span> from Small Business to Enterprise</div><div class="sp-content"><picture><source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_1440.webp" type="image/webp"><source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_768.webp" type="image/webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logo_360.webp" alt="Social Proof"></picture></div></div></div>');
 
+        //get the string inside .lead break it as per "." in it and wrap it in span
+        let leadText = document.querySelector('body.spz-7003 #HERO .container .lead').textContent;
+        let leadTextArr = leadText.split('.');
+        let newLeadText = '';
+        leadTextArr.forEach(function (el) {
+            newLeadText += `<p>${el}.</p>`;
+        });
+        document.querySelector('body.spz-7003 #HERO .container .lead').outerHTML = `<div class="lead">${newLeadText}</div>`;
+
         // check if session storage has value then show all the sections
         if (!sessionStorage.getItem('spz-learn-more')) {
             document.querySelector('body.spz-7003 #HERO .container').insertAdjacentHTML('beforeend', `<div class="lm-cta-wrapper"><a href="javascript:;" class="spz_learn_more">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
