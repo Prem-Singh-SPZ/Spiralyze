@@ -1,23 +1,25 @@
+html.spz-modal-open {
+  overflow: hidden;
+}
+
 body.spz-8001 {
   #page-container {
     .page-transition {
       main {
         #contact-us {
-          //   position: fixed;
-          //   top: 100px;
-          //   scroll-margin-top: 0;
-          //   clip-path: none;
-          //   padding: 0 !important;
-          //   left: 0;
-          //   right: 0;
-          //   background: #ffffff99;
-          //   backdrop-filter: blur(15px);
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          overflow: auto;
           background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/8001/bg_image_1.webp")
             no-repeat top left;
           background-size: cover;
           clip-path: none !important;
           padding: 0 !important;
           scroll-margin-top: 0;
+          display: none;
 
           .row__inner {
             display: flex;
@@ -50,6 +52,21 @@ body.spz-8001 {
 
                   .spz-form-title-wrapper {
                     margin: 0 0 28px;
+                    position: relative;
+
+                    .close-modal{
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      cursor: pointer;
+
+                      img{
+                        width: 24px;
+                        height: 24px;
+                        pointer-events: none;
+                      }
+                    }
+                    
                     .f-title {
                       color: #0033a1;
                       text-align: center;
@@ -78,6 +95,7 @@ body.spz-8001 {
                       display: flex;
                       flex-wrap: wrap;
                       justify-content: space-between;
+                      width: 100% !important;
 
                       .mktoFormRow {
                         width: 100%;
@@ -139,6 +157,7 @@ body.spz-8001 {
                             font-style: normal;
                             font-weight: 400;
                             line-height: 160%;
+                            width: 100% !important;
 
                             &:hover {
                               border-color: #415364;
@@ -170,12 +189,16 @@ body.spz-8001 {
                             }
                           }
                         }
-
                       }
                       .mktoCheckboxList label,
                       .mktoCaptchaDisclaimer {
                         color: #415364 !important;
-                        font-family: (var(--font-poppins), Helvetica, Arial, sans-serif);
+                        font-family: (
+                          var(--font-poppins),
+                          Helvetica,
+                          Arial,
+                          sans-serif
+                        );
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 400;
@@ -195,7 +218,7 @@ body.spz-8001 {
                           text-decoration-thickness: auto;
                           text-underline-offset: auto;
                           text-underline-position: from-font;
-                          
+
                           &:hover {
                             text-decoration: none;
                           }
@@ -270,6 +293,14 @@ body.spz-8001 {
           }
         }
       }
+    }
+  }
+
+  &.spz-modal-open {
+    overflow: hidden;
+
+    #page-container .page-transition main #contact-us {
+      display: block;
     }
   }
 }
