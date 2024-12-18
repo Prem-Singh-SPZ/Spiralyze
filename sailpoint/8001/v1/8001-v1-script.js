@@ -87,16 +87,6 @@ function urlCheck(url) {
     }
     if (isSameUrl(url, targetTestURL, true)) {
         createTest();
-
-        // Form breaks on window resized to larger size from smaller size window, wait for 500ms before reload
-        let smallWindow = window.innerWidth;
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > smallWindow) {
-                setTimeout(function () {
-                    window.location.reload();
-                }, 500);
-            }
-        });
     } else {
         removeTest();
     }
