@@ -33,17 +33,18 @@ function formModify() {
 // });
 
 window.addEventListener('click', function (e) {
-    // console.log(e.target);
     //check if .demo-list__card or its child element is clicked
     if (e.target.classList.contains('demo-list__card') || e.target.closest('.demo-list__card')) {
-
-        anchorCount++;
-        if (anchorCount >= 4) {
+        if (anchorCount >= 3) {
             e.preventDefault();
             document.body.classList.add('spz-modal-open');
             document.querySelector('html').classList.add('spz-modal-open');
             // document.querySelector('#contact-us').style.top = document.querySelector('nav.navigation').offsetHeight + 'px';
+            waitForElm('#lightbox .lightbox__button--exit').then(function (elm) {
+                document.querySelector('#lightbox .lightbox__button--exit').click();
+            });
         }
+        anchorCount++;
     }
 
     //check if .close-modal is clicked

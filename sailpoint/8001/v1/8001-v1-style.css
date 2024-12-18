@@ -49,13 +49,19 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .spz-form-title-wrapper .close-modal {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -16px;
+  right: -24px;
   cursor: pointer;
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .spz-form-title-wrapper .close-modal {
+    top: -24px;
+    right: 0;
+  }
+}
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .spz-form-title-wrapper .close-modal img {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: auto;
   pointer-events: none;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .spz-form-title-wrapper .f-title {
@@ -240,6 +246,9 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
 }
 body.spz-8001.spz-modal-open {
   overflow: hidden;
+}
+body.spz-8001.spz-modal-open #lightbox {
+  display: none !important;
 }
 body.spz-8001.spz-modal-open #page-container .page-transition main #contact-us {
   display: block;

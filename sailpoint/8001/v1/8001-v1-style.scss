@@ -56,13 +56,18 @@ body.spz-8001 {
 
                     .close-modal{
                       position: absolute;
-                      top: 0;
-                      right: 0;
+                      top: -16px;
+                      right: -24px;
                       cursor: pointer;
 
+                      @media screen and (max-width: 767.98px) {
+                        top: -24px;
+                        right: 0;
+                      }
+
                       img{
-                        width: 24px;
-                        height: 24px;
+                        width: 15px;
+                        height: auto;
                         pointer-events: none;
                       }
                     }
@@ -299,6 +304,10 @@ body.spz-8001 {
   &.spz-modal-open {
     overflow: hidden;
 
+    #lightbox{
+      display: none !important;
+    }
+    
     #page-container .page-transition main #contact-us {
       display: block;
     }
