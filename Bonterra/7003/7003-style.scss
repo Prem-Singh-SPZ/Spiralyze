@@ -136,7 +136,7 @@ body.spz-7003 {
               margin-bottom: 0 !important;
 
               @media screen and (max-width: 1199.98px) {
-                margin-bottom: 20.5px !important;
+                margin-bottom: 24.5px !important;
               }
 
               // @media screen and (max-width: 767.98px) {
@@ -178,7 +178,7 @@ body.spz-7003 {
                 font-weight: 600;
                 line-height: 110%;
                 letter-spacing: -1.16px;
-                margin: 0 0 20.5px;
+                margin: 0 0 20px;
 
                 @media (max-width: 1199.98px) {
                   // font-size: 48px;
@@ -195,17 +195,38 @@ body.spz-7003 {
               }
 
               .lead {
-                font-family: $elza;
-                color: #381360;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
                 position: relative;
+                p{
+                  font-family: $elza;
+                  color: #381360;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%;
+                  position: relative;
+                  padding-left: 32px;
+                  margin-bottom: 8px;
+  
+                  @media (max-width: 767.98px) {
+                    font-size: 16px;
+                    line-height: 22px;
+                    padding-left: 30px;
+                    margin-bottom: 6px;
+                  }
 
-                @media (max-width: 767.98px) {
-                  font-size: 16px;
-                  line-height: 22px;
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    height: 24px;
+                    width: 24px;
+                    left: 0px;
+                    top: 0px;
+                    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 9L10.125 16L7 12.8182" stroke="%237583FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                  }
+
+                  &:last-child {
+                    display: none;
+                  }
                 }
 
                 &::before {
@@ -214,7 +235,7 @@ body.spz-7003 {
                   height: 19.588px;
                   width: 108px;
                   right: 0px;
-                  bottom: -34px;
+                  bottom: -22px;
 
                   @media (max-width: 1199.98px) {
                     display: none;
@@ -297,11 +318,11 @@ body.spz-7003 {
               margin-left: auto;
               margin-right: auto;
               max-width: 704px;
-              margin-bottom: 22px;
+              margin-bottom: 10px;
             }
 
             @media screen and (max-width: 767.98px) {
-              padding: 24px 8px 32px;
+              padding: 26px 8px 32px;
               margin-bottom: 14px;
             }
 
@@ -335,12 +356,12 @@ body.spz-7003 {
       }
 
       .spz-social-proof {
-        margin: 10.5px 0 36.5px;
+        margin: 22px 0 36px;
         background: #fff;
 
-        @media screen and (max-width: 1199.98px) {
-          margin-bottom: 64px;
-        }
+        // @media screen and (max-width: 1199.98px) {
+        //   margin-bottom: 36px;
+        // }
 
         @media screen and (max-width: 767.98px) {
           margin: 0 0 21px 0;
