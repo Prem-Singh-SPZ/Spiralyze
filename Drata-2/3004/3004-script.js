@@ -142,9 +142,9 @@
 
 	//Passing test details to hidden fields
 	function submitTestDetails() {
-		if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input') && isCookieExist('spz-3004-loaded')) {
+		if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input') && isCookieExist('spz-3004-loaded')) {
 			//check if the fields are already filled, then append our value with comma separated and make sure our value is not already present
-			let hiddenField = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+			let hiddenField = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
 			let hiddenFieldValue = hiddenField.value;
 			let hiddenFieldArray = hiddenFieldValue.split(',');
 			let testValue = 'Variant_3004';
@@ -152,7 +152,7 @@
 
 			//check if our value is injected using setinterval
 			let checkValue = setInterval(function () {
-				if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').value.indexOf('Variant_3004') > -1) {
+				if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').value.indexOf('Variant_3004') > -1) {
 					if (hiddenFieldArray.indexOf(testValue) === -1) {
 						hiddenField.value = hiddenFieldValue + ',' + testValue;
 					}
