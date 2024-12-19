@@ -430,11 +430,11 @@
 
 
     function createTest() {
-        waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
+        waitForElm('div[class*="Page-heroContainer"] > div[class*="HeroSubpage-root"] > div[class*="HeroSubpage-container"] h1').then(function () {
             document.querySelector("body").classList.add("spz-14018");
 
             // let updatePage = setInterval(() => {
-            waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+            waitForElm('[variant="contentAccordionTabbedContentSectionWrapper"]').then(function () {
                 //check which variant is stored in session storage 
                 if (sessionStorage.getItem('variant') === 'variant_1') {
                     variant_1();

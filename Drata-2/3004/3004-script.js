@@ -1,7 +1,4 @@
 (function () {
-	//DEV 1/6. Put your asana task URL here
-	const asana_URL = `https://app.asana.com/0/1202434538289854/1208390841183380/f`
-
 	//DEV 2/6. Modal content
 	const modalData = {
 		leftImage: '',
@@ -146,18 +143,17 @@
 			//check if the fields are already filled, then append our value with comma separated and make sure our value is not already present
 			let hiddenField = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
 			let hiddenFieldValue = hiddenField.value;
-			let hiddenFieldArray = hiddenFieldValue.split(',');
 			let testValue = 'Variant_3004';
 
 
 			//check if our value is injected using setinterval
 			let checkValue = setInterval(function () {
-				if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').value.indexOf('Variant_3004') > -1) {
-					if (hiddenFieldArray.indexOf(testValue) === -1) {
-						hiddenField.value = hiddenFieldValue + ',' + testValue;
+				if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').value.indexOf(testValue) == -1) {
+					if (hiddenFieldValue == '') {
+						hiddenField.value = testValue;
 					}
 					else {
-						hiddenField.value = hiddenFieldValue;
+						hiddenField.value = hiddenFieldValue + ',' + testValue;
 					}
 				}
 			}, 500);

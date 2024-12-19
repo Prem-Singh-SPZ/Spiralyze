@@ -169,7 +169,9 @@ body.spz-14018 header.hide-header {
   pointer-events: none;
 }
 body.spz-14018 main > section:not(:last-child),
-body.spz-14018 div[class*=HeroSubpage-root] {
+body.spz-14018 div[class*=HeroSubpage-root],
+body.spz-14018 main[class*=Page-main],
+body.spz-14018 div[class*=Page-heroContainer] {
   display: none !important;
 }
 body.spz-14018:has(.choose-variant-modal:not(.spz-hidden)) {
@@ -4393,7 +4395,7 @@ body.spz-14018.variant_2 .compliance-sec .compliance-container .c-content .c-lef
 }
 body.spz-14018.variant_2 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content .accordion-list li span {
   font-weight: 700;
-  color: #1D252E;
+  color: #1d252e;
 }
 body.spz-14018.variant_2 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content .accordion-list li::before {
   content: "";

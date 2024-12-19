@@ -156,7 +156,9 @@ body.spz-14018 {
   }
 
   main > section:not(:last-child),
-  div[class*="HeroSubpage-root"] {
+  div[class*="HeroSubpage-root"],
+  main[class*="Page-main"],
+  div[class*="Page-heroContainer"] {
     display: none !important;
   }
 
@@ -2073,7 +2075,7 @@ body.spz-14018 {
                       background-size: cover;
                       background-repeat: no-repeat;
                     }
-  
+
                     &:hover::after {
                       background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
                         no-repeat;
@@ -4321,7 +4323,7 @@ body.spz-14018 {
               svg {
                 margin-left: 26px;
                 margin-right: -4px;
-              pointer-events: none;
+                pointer-events: none;
               }
             }
           }
@@ -4369,7 +4371,7 @@ body.spz-14018 {
 
                         span {
                           font-weight: 700;
-                          color: #1D252E;
+                          color: #1d252e;
                         }
 
                         &::before {
