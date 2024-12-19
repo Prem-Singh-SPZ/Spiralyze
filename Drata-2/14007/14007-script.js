@@ -90,7 +90,7 @@
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
 
-        waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root').then(function () {
+        waitForElm('div[class*="Page-heroContainer"] > div[class*="HeroSubpage-root"] > div[class*="HeroSubpage-container"] h1').then(function () {
             document.querySelector("body").classList.add("spz-14007");
 
             if (document.querySelector('body .hero-section-14007')) {
@@ -98,18 +98,18 @@
             }
 
 
-            waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+            waitForElm('[variant="contentAccordionTabbedContentSectionWrapper"]').then(function () {
                 heroContent();
                 simpleSteps();
             });
 
-            waitForElm('[variant="collectionContentGridSectionWrapper"] [class$=MuiTypography-root-Text-title]').then(whatsIncludedSec);
+            waitForElm('[variant="globalCta"] [class$=MuiTypography-root-Block-title]').then(whatsIncludedSec);
 
-            waitForElm('.loaded-test [variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').then(function () {
-                setTimeout(() => {
-                    faqSection();
-                }, 1000);
-            });
+            // waitForElm('.loaded-test [variant="globalCta"] [class$=MuiTypography-root-Block-title]').then(function () {
+            //     setTimeout(() => {
+            //         faqSection();
+            //     }, 1000);
+            // });
             submitTestDetails('Control_14018');
         });
 
@@ -293,7 +293,7 @@
                     <li class="list-item"><strong>Compliance Experts.</strong> Never get stuck. Our compliance experts can walk you through the entire process.</li>
                     </ul>
                     </div>
-                    <a href="/demo" id="hero-copy-url" class="hero-btn redirect-to-demo"><span>Get Started</span> <img src="${astUrl}/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>
+                    <a href="javascript:;" id="hero-copy-url" class="hero-btn redirect-to-demo"><span>Get Started</span> <img src="${astUrl}/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>
                     </div>
                     <div class="hero-right-section">
                         <picture style="display: none">
@@ -343,8 +343,8 @@
             // On click of any '.redirect-to-demo' link, trigger click on header button
             window.addEventListener('click', function (e) {
                 if (e.target.matches('.redirect-to-demo')) {
-                    // document.querySelector('header a[href="/demo"]').click();
-                    window.location.href = "/demo";
+                    document.querySelector('header a[href="/demo"]').click();
+                    // window.location.href = "/demo";
                 }
             });
         }
@@ -476,7 +476,7 @@
         const bsInt = setInterval(() => {
             if (document.querySelectorAll('.ac-header').length > 0) {
                 if (!document.querySelector('.ac-header').textContent.includes('Audit Ready')) {
-                    document.querySelector('main .spz-benefits').remove();
+                    document.querySelector('.spz-benefits').remove();
                     benefitsSection();
                     clearInterval(bsInt);
                 }
@@ -485,7 +485,7 @@
 
 
         setTimeout(() => {
-            if (document.querySelectorAll('main .spz-benefits').length == 0 &&
+            if (document.querySelectorAll('.spz-benefits').length == 0 &&
                 document.querySelectorAll('.loaded-test .MuiBox-root .MuiContainer-root .MuiBox-root h2').length > 0) {
                 clearInterval(bsInt);
 
@@ -562,7 +562,7 @@
 
 
 
-                document.querySelector('body main').insertAdjacentHTML('afterbegin',
+                document.querySelector('body .case-studies-section').insertAdjacentHTML('afterend',
                     `<section class="spz-benefits">
                     <div class="spz-container">
                         <h2 class="ac-heading">SOC 2 Automation Has Its Benefits</h2>
@@ -575,7 +575,7 @@
                             </div>
                         </div>
                         <div class="btn-block">
-                            <a href="/demo" class="ac-btn redirect-to-demo">Get Started<img src="${astUrl}/fl_sanitize/drata/14004/Arrow-Icon.svg" alt="Right Arrow" title="Right Arrow"></a>
+                            <a href="javascript:;" class="ac-btn redirect-to-demo">Get Started<img src="${astUrl}/fl_sanitize/drata/14004/Arrow-Icon.svg" alt="Right Arrow" title="Right Arrow"></a>
                         </div>
                     </div>
                 </section>`);
@@ -591,10 +591,10 @@
         document.body.classList.add("loaded-test");
 
         setTimeout(() => {
-            document.querySelector('[variant="collectionContentGridSectionWrapper"]').classList.add('whats-included-sec');
-            document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=MuiTypography-root-Text-title]').textContent = 'Everything You Need to Get SOC 2 Compliant with Drata';
+            document.querySelector('[variant="globalCta"]').classList.add('whats-included-sec');
+            document.querySelector('[variant="globalCta"] [class$=MuiTypography-root-Block-title]').textContent = 'Everything You Need to Get SOC 2 Compliant with Drata';
             if (document.querySelector('.whats-included-sec .blue-cta-btn') == null) {
-                document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=Text-root-Collection-introText]').insertAdjacentHTML('beforeend', `<a href="https://drata.com/platform" class="blue-cta-btn"><span>Explore the Platform</span> <img src="${astUrl}/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>`);
+                document.querySelector('[variant="globalCta"] [class$=MuiTypography-root-Block-title]').insertAdjacentHTML('beforeend', `<a href="https://drata.com/platform" class="blue-cta-btn"><span>Explore the Platform</span> <img src="${astUrl}/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>`);
             }
 
             simpleSteps();
@@ -604,7 +604,7 @@
     function simpleSteps() {
         if (document.querySelector('.simple-steps-sec') || !document.querySelector('.whats-included-sec')) return;
 
-        document.querySelector('.whats-included-sec').insertAdjacentHTML('afterend', `
+        document.querySelector('.spz-benefits').insertAdjacentHTML('afterend', `
             <section class="simple-steps-sec">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
@@ -874,10 +874,10 @@
     }
 
     function faqSection() {
-        document.querySelector('[variant="collectionAccordionSectionWrapper"]').classList.add('spz-faq-sec');
+        document.querySelector('[variant="contentAccordionTabbedContentSectionWrapper"]').classList.add('spz-faq-sec');
         waitForElm('body.spz-14007 .spz-faq-sec [class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary] .MuiAccordionSummary-content [class$=CollectionAccordion-title]').then(function () {
             let updateFaq = setInterval(() => {
-                document.querySelector('[variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQ</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
+                document.querySelector('[variant="contentAccordionTabbedContentSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQ</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
 
                 
                 const faqContainer = document.querySelector('[class$="CollectionAccordion-itemsContainer"]');

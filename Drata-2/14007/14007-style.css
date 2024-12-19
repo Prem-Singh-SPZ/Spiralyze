@@ -52,7 +52,8 @@ body.spz-14007 header + div > .MuiContainer-root > :not(section) {
 body.spz-14007 section[variant=collectionCustomerLogosSectionWrapper],
 body.spz-14007 section[variant=globalCta]:not(:last-child),
 body.spz-14007 section[variant=collectionContentSectionWrapper],
-body.spz-14007 .case-studies-section + [class$=HeroSubpage-root] {
+body.spz-14007 .case-studies-section + [class$=HeroSubpage-root], body.spz-14007 main[class*=Page-main],
+body.spz-14007 div[class*=Page-heroContainer] {
   display: none;
 }
 body.spz-14007 .dis-flex {
@@ -159,6 +160,7 @@ body.spz-14007 .hero-section-14007 .hero-btn {
 }
 body.spz-14007 .hero-section-14007 .hero-btn > span {
   padding: 0 15px 0 12px;
+  pointer-events: none;
 }
 body.spz-14007 .hero-section-14007 .hero-btn .button_arrow {
   margin-left: 8px;

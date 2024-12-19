@@ -61,7 +61,8 @@ body.spz-14007 {
   section[variant="collectionCustomerLogosSectionWrapper"],
   section[variant="globalCta"]:not(:last-child),
   section[variant="collectionContentSectionWrapper"],
-  .case-studies-section + [class$="HeroSubpage-root"] {
+  .case-studies-section + [class$="HeroSubpage-root"],   main[class*="Page-main"],
+  div[class*="Page-heroContainer"]  {
     display: none;
   }
   .dis-flex {
@@ -173,6 +174,7 @@ body.spz-14007 {
 
       > span {
         padding: 0 15px 0 12px;
+        pointer-events: none;
       }
 
       .button_arrow {
