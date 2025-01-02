@@ -2,17 +2,71 @@ body.spz-8001 {
   #page-container {
     .page-transition {
       main {
+        > .hero {
+          background: linear-gradient(
+              91deg,
+              rgba(84, 192, 232, 0.2) 45.76%,
+              rgba(84, 192, 232, 0.5) 78.55%
+            ),
+            #fff;
 
-        > .hero{
-          background: linear-gradient(91deg, rgba(84, 192, 232, 0.20) 45.76%, rgba(84, 192, 232, 0.50) 78.55%), #FFF;
+          .hero__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            gap: 16px;
+
+            .hero__content-wrap {
+              flex-grow: 1;
+              padding: 0;
+              margin: 0;
+
+              .hero__eyebrow {
+                color: #415364;
+                // font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 14px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              }
+
+              .hero__heading {
+                color: #0033a1;
+                // font-family: Poppins;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 60px;
+                // margin-bottom: 20px;
+              }
+
+              .hero__content {
+                color: #415364;
+                // font-family: Poppins;
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 16px;
+              }
+            }
+
+            .hero__image-wrapper {
+              max-width: 374px;
+            }
+          }
         }
 
-        > #product-features{
-display: none !important;
+        > #product-features {
+          display: none !important;
 
-& + .filter-element{
-  display: none;
-}
+          & + .filter-element {
+            display: none;
+          }
         }
 
         #contact-us {
@@ -42,7 +96,7 @@ display: none !important;
               &:last-child {
                 width: 100%;
                 max-width: 640px;
-                margin: 56px auto;
+                margin: 80px auto;
 
                 .column__inner {
                   max-width: 640px;
@@ -60,9 +114,9 @@ display: none !important;
                   }
 
                   .spz-form-title-wrapper {
-                    margin: 0 0 28px;
+                    margin: 0 0 13px;
                     position: relative;
-                    
+
                     .f-title {
                       color: #0033a1;
                       text-align: center;
@@ -87,6 +141,7 @@ display: none !important;
                   }
 
                   .mkto-wrap {
+                    min-height: auto;
                     .mktoForm {
                       display: flex;
                       flex-wrap: wrap;
@@ -99,12 +154,20 @@ display: none !important;
                         &.row_FirstName,
                         &.row_LastName,
                         &.row_Company,
-                        &.row_Title {
+                        &.row_Title,
+                        &.row_Phone,
+                        &.row_Number_of_Employees__c,
+                        &.row_Country,
+                        &.row_Country + .mktoFormRow {
                           width: calc(50% - 12px);
 
                           @media screen and (max-width: 768px) {
                             width: 100%;
                           }
+                        }
+
+                        .mktoFieldDescriptor.mktoFormCol {
+                          margin-bottom: 0 !important;
                         }
 
                         .mktoFieldWrap {
@@ -145,7 +208,7 @@ display: none !important;
                             margin-bottom: 13px !important;
                             outline: none;
                             box-shadow: none;
-                            padding: 16px;
+                            padding: 14px 16px;
                             color: #415364;
                             font-family: var(--font-poppins), Helvetica, Arial,
                               sans-serif;
@@ -164,11 +227,18 @@ display: none !important;
                             }
                           }
 
+                          textarea {
+                            overflow: auto;
+                            // height: auto !important;
+                            // resize: none;
+                          }
+
                           .mktoError {
-                            margin-top: -16px;
+                            // margin-top: -16px;
+                            bottom: -4px !important;
 
                             .mktoErrorMsg {
-                              color: #e6241e;
+                              color: #e6241e !important;
                               font-family: var(--font-poppins), Helvetica, Arial,
                                 sans-serif;
                               font-size: 12px;
@@ -186,8 +256,7 @@ display: none !important;
                           }
                         }
                       }
-                      .mktoCheckboxList label,
-                      .mktoCaptchaDisclaimer {
+                      .mktoCheckboxList label{
                         color: #415364 !important;
                         font-family: (
                           var(--font-poppins),
@@ -254,7 +323,7 @@ display: none !important;
                     }
                   }
 
-                  .disclaimer {
+                  .disclaimer, .mktoCaptchaDisclaimer {
                     color: #415364;
                     font-family: var(--font-poppins), Helvetica, Arial,
                       sans-serif;
@@ -283,6 +352,15 @@ display: none !important;
                       }
                     }
                   }
+
+                  .disclaimer{
+                    margin-bottom: 12px;
+                    margin-top: 23.5px;
+                  }
+
+                  .mktoCaptchaDisclaimer{
+                    max-width: 70%;
+                  }
                 }
               }
             }
@@ -291,7 +369,7 @@ display: none !important;
       }
     }
 
-    footer.bg-lightestgray{
+    footer.bg-lightestgray {
       display: none !important;
     }
   }
