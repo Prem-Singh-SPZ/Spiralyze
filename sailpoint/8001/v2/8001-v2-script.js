@@ -20,8 +20,22 @@ function formModify() {
 
     document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
     document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
-    document.querySelector(' .page-transition main #contact-us .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentElement('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer'));
 
+    waitForElm('#contact-us .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
+        document.querySelector('.page-transition main #contact-us .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
+
+        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
+        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
+        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
+    });
+
+    checkStateField();
+}
+
+function checkStateField() {
+    waitForElm('.mktoForm #LblState').then(function (elm) {
+        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
+    });
 }
 
 history.pushState = (function (f) {

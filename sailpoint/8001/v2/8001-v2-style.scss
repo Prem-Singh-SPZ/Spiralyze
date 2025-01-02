@@ -18,6 +18,10 @@ body.spz-8001 {
             padding-bottom: 20px;
             gap: 16px;
 
+            @media (max-width: 767.98px) {
+              flex-direction: column;
+            }
+
             .hero__content-wrap {
               flex-grow: 1;
               padding: 0;
@@ -161,7 +165,7 @@ body.spz-8001 {
                         &.row_Country + .mktoFormRow {
                           width: calc(50% - 12px);
 
-                          @media screen and (max-width: 768px) {
+                          @media screen and (max-width: 767.98px) {
                             width: 100%;
                           }
                         }
@@ -256,38 +260,55 @@ body.spz-8001 {
                           }
                         }
                       }
-                      .mktoCheckboxList label{
-                        color: #415364 !important;
-                        font-family: (
-                          var(--font-poppins),
-                          Helvetica,
-                          Arial,
-                          sans-serif
-                        );
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 160%;
+                      .mktoCheckboxList {
+                        margin-top: -3px;
+                        margin-bottom: 23px;
 
-                        a {
-                          color: #415364;
-                          font-family: var(--font-poppins), Helvetica, Arial,
-                            sans-serif;
-                          font-size: 14px;
+                        input.mktoField {
+                          width: 17px;
+                          height: 16px;
+                          outline: none;
+                          border-radius: 0;
+                          margin-top: 1px;
+                        }
+
+                        label {
+                          color: #415364 !important;
+                          font-family: (
+                            var(--font-poppins),
+                            Helvetica,
+                            Arial,
+                            sans-serif
+                          );
+                          font-size: 12px;
                           font-style: normal;
                           font-weight: 400;
                           line-height: 160%;
-                          text-decoration-line: underline;
-                          text-decoration-style: solid;
-                          text-decoration-skip-ink: none;
-                          text-decoration-thickness: auto;
-                          text-underline-offset: auto;
-                          text-underline-position: from-font;
+                          padding-left: 12px;
 
-                          &:hover {
-                            text-decoration: none;
+                          a {
+                            color: #415364;
+                            font-family: var(--font-poppins), Helvetica, Arial,
+                              sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 160%;
+                            text-decoration-line: underline;
+                            text-decoration-style: solid;
+                            text-decoration-skip-ink: none;
+                            text-decoration-thickness: auto;
+                            text-underline-offset: auto;
+                            text-underline-position: from-font;
+
+                            &:hover {
+                              text-decoration: none;
+                            }
                           }
                         }
+                      }
+                      .mktoCaptchaDisclaimer {
+                        display: none !important;
                       }
 
                       .mktoButtonRow {
@@ -323,7 +344,8 @@ body.spz-8001 {
                     }
                   }
 
-                  .disclaimer, .mktoCaptchaDisclaimer {
+                  .disclaimer,
+                  .mktoCaptchaDisclaimer {
                     color: #415364;
                     font-family: var(--font-poppins), Helvetica, Arial,
                       sans-serif;
@@ -353,12 +375,12 @@ body.spz-8001 {
                     }
                   }
 
-                  .disclaimer{
+                  .disclaimer {
                     margin-bottom: 12px;
                     margin-top: 23.5px;
                   }
 
-                  .mktoCaptchaDisclaimer{
+                  .mktoCaptchaDisclaimer {
                     max-width: 70%;
                   }
                 }
@@ -367,10 +389,6 @@ body.spz-8001 {
           }
         }
       }
-    }
-
-    footer.bg-lightestgray {
-      display: none !important;
     }
   }
 }
