@@ -327,16 +327,18 @@ function load_1002() {
 				//if there is + sign in the email value, replace it all with %2B
 				emailValue = emailValue.replace(/\+/g, '%2B');
 
-				//check if email value is not null
-				if (emailValue) {
-					var iframeSrc = document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
-					//if there is already a query param in the src, then append email query param to it
-					if (iframeSrc.includes('?')) {
-						document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '&email=' + emailValue;
-					} else {
-						document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue;
+				setTimeout(() => {
+					//check if email value is not null
+					if (emailValue) {
+						var iframeSrc = document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
+						//if there is already a query param in the src, then append email query param to it
+						if (iframeSrc.includes('?')) {
+							document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '&email=' + emailValue;
+						} else {
+							document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue;
+						}
 					}
-				}
+				}, 550);
 			});
 		}
 	}
