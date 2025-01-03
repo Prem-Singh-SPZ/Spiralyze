@@ -188,12 +188,14 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   font-weight: 400;
   line-height: 160%;
   width: 100% !important;
+  -webkit-transition: border-width 0.2s ease-in-out;
+  transition: border-width 0.2s ease-in-out;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoField:not([type=checkbox]):hover {
   border-color: #415364;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoField:not([type=checkbox]):focus {
-  border-color: #0071ce;
+  border: 2px solid #0071ce;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap textarea {
   overflow: auto;
@@ -211,7 +213,7 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   margin-top: 2px;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap:has(.mktoError:not([style*="display: none"])) .mktoField:not([type=checkbox]) {
-  border-color: #e6241e;
+  border: 1px solid #e6241e;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoCheckboxList {
   margin-top: -3px;
@@ -319,6 +321,17 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mktoCaptchaDisclaimer {
     max-width: 100%;
   }
+}
+body.spz-8001 input:-webkit-autofill,
+body.spz-8001 input:-webkit-autofill:hover,
+body.spz-8001 input:-webkit-autofill:focus,
+body.spz-8001 input:-webkit-autofill:active,
+body.spz-8001 select:-webkit-autofill,
+body.spz-8001 select:-webkit-autofill:hover,
+body.spz-8001 select:-webkit-autofill:focus,
+body.spz-8001 select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #415364 !important;
 }`;
     var style = document.createElement('style');
     style.type = 'text/css';
@@ -375,12 +388,6 @@ function checkStateField() {
         let stateLabel = setInterval(() => {
             if (document.querySelector('.mktoForm #LblState')) {
                 document.querySelector('.mktoForm #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
-                if (document.querySelector('.mkto-wrap .mktoForm .mktoFormRow.full-width')) {
-                    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').closest('.mktoFormRow').classList.remove('full-width');
-                }
-            }
-            else {
-                document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').closest('.mktoFormRow').classList.add('full-width');
             }
         }, 100);
 

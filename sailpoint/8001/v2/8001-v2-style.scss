@@ -221,13 +221,14 @@ body.spz-8001 {
                             font-weight: 400;
                             line-height: 160%;
                             width: 100% !important;
+                            transition: border-width 0.2s ease-in-out;
 
                             &:hover {
                               border-color: #415364;
                             }
 
                             &:focus {
-                              border-color: #0071ce;
+                              border: 2px solid #0071ce;
                             }
                           }
 
@@ -255,7 +256,7 @@ body.spz-8001 {
 
                           &:has(.mktoError:not([style*="display: none"])) {
                             .mktoField:not([type="checkbox"]) {
-                              border-color: #e6241e;
+                              border: 1px solid #e6241e;
                             }
                           }
                         }
@@ -382,7 +383,7 @@ body.spz-8001 {
 
                   .mktoCaptchaDisclaimer {
                     max-width: 70%;
-                    
+
                     @media (max-width: 600.98px) {
                       max-width: 100%;
                     }
@@ -394,5 +395,17 @@ body.spz-8001 {
         }
       }
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px white inset !important;
+    -webkit-text-fill-color: #415364 !important;
   }
 }
