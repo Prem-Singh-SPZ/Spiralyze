@@ -171,7 +171,7 @@ body.spz-8001 {
                         }
 
                         .mktoFieldDescriptor.mktoFormCol {
-                          margin-bottom: 0 !important;
+                          margin-bottom: 13px !important;
                         }
 
                         .mktoFieldWrap {
@@ -209,7 +209,7 @@ body.spz-8001 {
                             border: 1px solid #dae1e9;
                             background: #fff;
                             height: 56px;
-                            margin-bottom: 13px !important;
+                            margin-bottom: 0 !important;
                             outline: none;
                             box-shadow: none;
                             padding: 14px 16px;
@@ -240,7 +240,8 @@ body.spz-8001 {
 
                           .mktoError {
                             // margin-top: -16px;
-                            bottom: -4px !important;
+                            bottom: 0 !important;
+                            position: relative;
 
                             .mktoErrorMsg {
                               color: #e6241e !important;
@@ -250,7 +251,11 @@ body.spz-8001 {
                               font-style: normal;
                               font-weight: 500;
                               line-height: 160%;
-                              margin-top: 2px;
+                              // margin-top: 2px;
+
+                              &#ValidMsgcontactFormComments{
+                                margin-top: -6px;
+                              }
                             }
                           }
 

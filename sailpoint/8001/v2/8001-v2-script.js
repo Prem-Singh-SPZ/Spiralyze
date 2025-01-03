@@ -149,7 +149,7 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   }
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol {
-  margin-bottom: 0 !important;
+  margin-bottom: 13px !important;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap > .mktoLabel {
   color: #415364 !important;
@@ -176,7 +176,7 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   border: 1px solid #dae1e9;
   background: #fff;
   height: 56px;
-  margin-bottom: 13px !important;
+  margin-bottom: 0 !important;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -201,7 +201,8 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   overflow: auto;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoError {
-  bottom: -4px !important;
+  bottom: 0 !important;
+  position: relative;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg {
   color: #e6241e !important;
@@ -210,7 +211,9 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
-  margin-top: 2px;
+}
+body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg#ValidMsgcontactFormComments {
+  margin-top: -6px;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap:has(.mktoError:not([style*="display: none"])) .mktoField:not([type=checkbox]) {
   border: 1px solid #e6241e;
