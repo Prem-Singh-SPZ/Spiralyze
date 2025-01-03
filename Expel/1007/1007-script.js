@@ -115,4 +115,4 @@ function hiddenValue(currentExperimentName, currentExperimentValue) {
 // Do not touch below hidden field code for any Experiment over
 
 // Use this and change value according to the experiment
-hiddenValue('#1007 | Expel | Homepage | Hero Tiles', 'Variant_#1007');
+hiddenValue('#1007 | Expel | Homepage | Integrations', 'variant_#1007');

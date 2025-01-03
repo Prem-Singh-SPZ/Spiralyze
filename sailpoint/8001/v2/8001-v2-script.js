@@ -1,7 +1,7 @@
 //inject css code for the test with id 'spz-8001' and not to repeat every time
 if (!document.getElementById('spz-8001')) {
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var css = `body.spz-8001 #page-container .page-transition main > .hero {
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var css = `body.spz-8001 #page-container .page-transition main > .hero {
   background: linear-gradient(91deg, rgba(84, 192, 232, 0.2) 45.76%, rgba(84, 192, 232, 0.5) 78.55%), #fff;
 }
 body.spz-8001 #page-container .page-transition main > .hero .hero__container {
@@ -336,147 +336,206 @@ body.spz-8001 select:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 50px white inset !important;
   -webkit-text-fill-color: #415364 !important;
 }`;
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.id = 'spz-8001';
-    if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-    } else {
-        style.appendChild(document.createTextNode(css));
-    }
-    head.appendChild(style);
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  style.id = 'spz-8001';
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  head.appendChild(style);
 }
 
 function createTest() {
-    document.body.classList.add('spz-8001');
-    waitForElm('#contact-us .mktoForm input').then(function (elm) {
-        formModify();
-    });
+  document.body.classList.add('spz-8001');
+  waitForElm('#contact-us .mktoForm input').then(function (elm) {
+    formModify();
+
+    hiddenValue('SPZ_8001', 'SPZ_8001_variant');
+  });
 }
 
 function formModify() {
-    if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
-        document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
+  if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
+    document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
+  }
+
+  document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow').forEach(function (elm) {
+    if (elm.querySelector('.mktoField[name]:not([type="hidden"]):not([type="checkbox"])')) {
+      elm.classList.add('row_' + elm.querySelector('.mktoField').getAttribute('name'));
+    }
+  });
+
+  document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
+  document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
+
+  waitForElm('#contact-us .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
+    if (document.querySelectorAll('.page-transition main #contact-us .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
+      document.querySelector('.page-transition main #contact-us .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
     }
 
-    document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow').forEach(function (elm) {
-        if (elm.querySelector('.mktoField[name]:not([type="hidden"]):not([type="checkbox"])')) {
-            elm.classList.add('row_' + elm.querySelector('.mktoField').getAttribute('name'));
-        }
-    });
+    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
+    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
+    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
+  });
 
-    document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
-    document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
+  checkStateField();
 
-    waitForElm('#contact-us .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
-        if (document.querySelectorAll('.page-transition main #contact-us .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
-            document.querySelector('.page-transition main #contact-us .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
-        }
-
-        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
-        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
-        document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
-    });
-
+  //on change of country field change state field to select
+  document.querySelector('.mktoForm #Country').addEventListener('change', function () {
     checkStateField();
-
-    //on change of country field change state field to select
-    document.querySelector('.mktoForm #Country').addEventListener('change', function () {
-        checkStateField();
-    });
+  });
 }
 
 function checkStateField() {
-    waitForElm('.mktoForm #LblState').then(function (elm) {
-        let stateLabel = setInterval(() => {
-            if (document.querySelector('.mktoForm #LblState')) {
-                document.querySelector('.mktoForm #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
-            }
-        }, 100);
+  waitForElm('.mktoForm #LblState').then(function (elm) {
+    let stateLabel = setInterval(() => {
+      if (document.querySelector('.mktoForm #LblState')) {
+        document.querySelector('.mktoForm #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
+      }
+    }, 100);
 
-        setTimeout(() => {
-            clearInterval(stateLabel);
-        }, 5000);
-    });
+    setTimeout(() => {
+      clearInterval(stateLabel);
+    }, 5000);
+  });
 }
 
 history.pushState = (function (f) {
-    return function pushState() {
-        var ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event("pushstate"));
-        window.dispatchEvent(new Event("locationchange"));
-        return ret;
-    };
+  return function pushState() {
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event("pushstate"));
+    window.dispatchEvent(new Event("locationchange"));
+    return ret;
+  };
 })(history.pushState);
 history.replaceState = (function (f) {
-    return function replaceState() {
-        var ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event("replacestate"));
-        window.dispatchEvent(new Event("locationchange"));
-        return ret;
-    };
+  return function replaceState() {
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event("replacestate"));
+    window.dispatchEvent(new Event("locationchange"));
+    return ret;
+  };
 })(history.replaceState);
 window.addEventListener("popstate", function () {
-    window.dispatchEvent(new Event("locationchange"));
+  window.dispatchEvent(new Event("locationchange"));
 });
 var url = location.href;
 urlCheck(url);
 window.addEventListener("locationchange", function () {
-    url = location.href;
-    urlCheck(url);
+  url = location.href;
+  urlCheck(url);
 });
 
 function urlCheck(url) {
-    var targetTestURL = '';
-    if (window.location.pathname === "/demo/interactive") {
-        targetTestURL = window.location.href;
-    }
-    if (isSameUrl(url, targetTestURL, true)) {
-        createTest();
-    } else {
-        removeTest();
-    }
+  var targetTestURL = '';
+  if (window.location.pathname === "/demo/interactive") {
+    targetTestURL = window.location.href;
+  }
+  if (isSameUrl(url, targetTestURL, true)) {
+    createTest();
+  } else {
+    removeTest();
+  }
 }
 
 //Generic code
 function removeTest() {
-    if (document.body.classList.contains('spz-8001')) {
-        document.body.classList.remove('spz-8001');
-    }
+  if (document.body.classList.contains('spz-8001')) {
+    document.body.classList.remove('spz-8001');
+  }
 }
 
 function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    currentUrl = currentUrl.includes("#")
-        ? currentUrl.slice(0, currentUrl.indexOf("#"))
-        : currentUrl;
-    specifiedUrl = specifiedUrl.includes("#")
-        ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
-        : specifiedUrl;
-    if (!includeQueryParams)
-        currentUrl = currentUrl.includes("?")
-            ? currentUrl.slice(0, currentUrl.indexOf("?"))
-            : currentUrl;
-    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-        return true;
-    return false;
+  currentUrl = currentUrl.includes("#")
+    ? currentUrl.slice(0, currentUrl.indexOf("#"))
+    : currentUrl;
+  specifiedUrl = specifiedUrl.includes("#")
+    ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
+    : specifiedUrl;
+  if (!includeQueryParams)
+    currentUrl = currentUrl.includes("?")
+      ? currentUrl.slice(0, currentUrl.indexOf("?"))
+      : currentUrl;
+  if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+    return true;
+  return false;
 }
 
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, {
-            attributes: true,
-            childList: true,
-            subtree: true,
-            characterData: true,
-        });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+  });
 }
+
+// Do not touch below hidden field code for any Experiment Start
+function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
+  var ExistingHiddenFieldName = getCookie('HiddenFieldNameContact');
+  var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+
+  if (!ExistingHiddenFieldName) {
+    setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
+    setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+  } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
+    setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+    setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+  }
+
+  setHiddenFieldValue();
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=sailpoint.com;";
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function setHiddenFieldValue() {
+  var spz_cro_Interval = setInterval(function () {
+    var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
+    if (intellimize1) {
+      clearInterval(spz_cro_Interval);
+      var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+      //check if hidden field value is empty then only set the value else set the value with , seperated
+      if (intellimize1.value == '') {
+        intellimize1.value = ExistingHiddenFieldValue;
+      }
+      else {
+        if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+          intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+        }
+      }
+    }
+  });
+}
+// Do not touch below hidden field code for any Experiment over
