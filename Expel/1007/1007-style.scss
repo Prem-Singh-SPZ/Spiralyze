@@ -1,0 +1,100 @@
+$dark_blue: #031263;
+$white: #fff;
+$blue: #1762e6;
+$hover: #0E4C8A;
+$proxima: "proxima-nova", Arial, sans-serif;
+$arrowHov: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/1002/icon_right-hover.svg");
+
+.spz-1007 {
+  .spz-int {
+    background-color: $white;
+    padding: 100px 0;
+
+    .spz-int-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1170px;
+      margin: 0 auto;
+
+      .int-info {
+        width: 100%;
+        max-width: 510px;
+        margin-right: 24px;
+
+        .int-buttons {
+          display: flex;
+          gap: 20px;
+          
+          .demo-cta {
+            display: flex;
+            height: 48px;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            width: 179px;
+            border-radius: 72px;
+            background: $blue;
+            color: $white;
+            text-align: center;
+            font-family: $proxima;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+
+            &:hover {
+              background: $hover;
+            }
+
+            svg {
+              margin-left: 8px;
+            }
+          }
+
+          .contact-cta{
+            display: flex;
+            height: 48px;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            width: 158px;
+            border-radius: 72px;
+            background: $white;
+            color: $blue;
+            text-align: center;
+            font-family: $proxima;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid $blue;
+            white-space: nowrap;
+
+            &:hover {
+              background: $hover;
+              color: $white;
+
+              svg {
+                path{
+                  stroke: $white;
+                }
+              }
+            }
+
+            svg {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+
+      .int-image {
+        max-width: 596px;
+      }
+    }
+  }
+}
