@@ -41,7 +41,7 @@ function intSection() {
           </div>
         </div>
         <div class="int-image">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/1007/image.webp" alt="Expel MDR" />
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/1007/image.webp" alt="Expel Integrations" />
         </div>
       </div>
     </section>
