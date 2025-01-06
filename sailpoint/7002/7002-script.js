@@ -33,9 +33,11 @@
             document.querySelector('.spz_7002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Contact Us</div></div></div></div>`);
 
             document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 #contact-us .mkto-wrap.w-full').parentElement);
+            document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
         }
         else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
             document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 #contact-us .mkto-wrap.w-full').parentElement);
+            document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
         }
 
 
