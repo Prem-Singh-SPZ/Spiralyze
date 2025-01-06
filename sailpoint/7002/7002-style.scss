@@ -1,0 +1,624 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #415364 !important;
+}
+
+.spz-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background: linear-gradient(
+    134deg,
+    rgba(0, 51, 161, 0.5) 38.16%,
+    rgba(0, 79, 181, 0.5) 64.91%,
+    rgba(0, 113, 206, 0.5) 100.05%
+  );
+  backdrop-filter: blur(4.199999809265137px);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+  .spz-form-inner {
+    .spz-form-content {
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+      max-width: 600px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 40px;
+
+      .spz-form-title {
+        color: #415364;
+        // font-family:  Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      .column__inner {
+        .mkto-wrap {
+          min-height: unset;
+        }
+      }
+    }
+  }
+}
+
+.spz_7002.spz-show-modal {
+  overflow: hidden;
+  .spz-form-container {
+    //create an animation of sliding in from the right
+    animation: slideInRight 0.5s forwards;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//create another animation of sliding out to the top
+@keyframes slideOutTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.spz_7002 #contact-us {
+  display: none !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100% !important;
+  max-width: 520px;
+  margin: 21px auto 0;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+  width: 100%;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Email,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_FirstName,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_LastName,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Title,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Company,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Country,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_State,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry {
+  width: calc(50% - 8px);
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+  width: 100%;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm > div:not([class]):not([id]) {
+  display: none;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFormCol {
+  margin: 0 !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel {
+  color: #415364 !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2px 4px;
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  background: #fff;
+  width: auto !important;
+  height: auto;
+  pointer-events: none;
+  transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
+    font-size 0.3s ease-in-out;
+  z-index: 9;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+  display: none !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .field-12 .mktoFieldWrap label.mktoLabel {
+  top: 14px;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap:hover label.mktoLabel,
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap:hover
+  label.mktoLabel
+  .mktoAsterix {
+  color: #415364 !important;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.filled:not(.active):not(.error)
+  label.mktoLabel,
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.filled:not(.active):not(.error)
+  label.mktoLabel
+  .mktoAsterix {
+  color: #415364 !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel {
+  width: auto !important;
+  top: -11px;
+  background: #fff;
+  color: #0071ce !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.active.typing
+  label.mktoLabel
+  .mktoAsterix,
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.active.typing
+  label.mktoLabel
+  .mktoAsterix {
+  color: #0071ce !important;
+}
+
+/* .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel .mktoAsterix {
+    color: #E6241E !important;
+} */
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  .mktoField:not([type="checkbox"]) {
+  width: 100% !important;
+  height: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 14px 16px;
+  margin: 0 !important;
+  border: 1px solid #dae1e9;
+  border-radius: 4px;
+  outline: none;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease-in-out;
+  color: #415364 !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  textarea.mktoField:not([type="checkbox"]) {
+  height: 88px !important;
+  overflow-y: auto !important;
+  white-space: normal !important;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap:not(.active):not(.typing):not(.filled)
+  select.mktoField {
+  color: transparent !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap select.mktoField {
+  padding-right: 37px !important;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  select.mktoField
+  option:first-child {
+  display: none !important;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap:hover
+  .mktoField:not([type="checkbox"]) {
+  border-color: #415364;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.active.typing
+  .mktoField:not([type="checkbox"]) {
+  border-color: #0071ce;
+  outline: 1px solid #0071ce;
+}
+
+/* .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
+    border-color: #E6241E !important;
+} */
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
+  position: relative;
+  top: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+  right: unset !important;
+  margin: 0 0 !important;
+}
+
+// .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+//   /* color: #FFF; */
+//   font-size: 12px;
+//   font-style: normal;
+//   font-weight: 500;
+//   line-height: 1.6;
+//   position: relative;
+//   padding-left: 16px;
+// }
+
+// .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+//     position: absolute;
+//     content: "";
+//     width: 12px;
+//     height: 12px;
+//     top: 4px;
+//     left: 0;
+//     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#E6241E"><g clip-path="url(%23clip0_24110_1049)"><path d="M6 0C2.6934 0 0 2.6934 0 6C0 9.3066 2.6934 12 6 12C9.3066 12 12 9.3066 12 6C12 2.6934 9.3066 0 6 0ZM6 1.2C8.65808 1.2 10.8 3.34191 10.8 6C10.8 8.65808 8.65808 10.8 6 10.8C3.34191 10.8 1.2 8.65808 1.2 6C1.2 3.34191 3.34191 1.2 6 1.2ZM6 2.4C5.6676 2.4 5.4 2.6676 5.4 3V7.2C5.4 7.5324 5.6676 7.8 6 7.8C6.3324 7.8 6.6 7.5324 6.6 7.2V3C6.6 2.6676 6.3324 2.4 6 2.4ZM6 8.4C5.6676 8.4 5.4 8.6676 5.4 9C5.4 9.3324 5.6676 9.6 6 9.6C6.3324 9.6 6.6 9.3324 6.6 9C6.6 8.6676 6.3324 8.4 6 8.4Z" fill="white"/></g><defs><clipPath id="clip0_24110_1049"><rect width="12" height="12" fill="#E6241E"/></clipPath></defs></svg>');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper {
+  margin: 0 !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList {
+  margin: 8px 0 0 !important;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper::after {
+  position: absolute;
+  content: "";
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1730978539/sailpoint/1001/icons__system.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 10px;
+  top: 23px;
+  right: 16px;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  .select-wrapper
+  .select-dropdown {
+  display: none;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  .mktoError
+  .mktoErrorArrowWrap {
+  display: none !important;
+}
+
+.spz_7002
+  #mktoForm_1017.mktoForm
+  .row_FirstName0
+  .mktoFieldWrap
+  label.mktoLabel {
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  background: transparent;
+  color: #fff !important;
+  top: unset;
+  left: unset;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label {
+  position: relative;
+  color: #415364 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-left: 12px;
+  padding-right: 0;
+  cursor: pointer;
+  display: inline-flex;
+  width: auto;
+}
+
+// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label::before {
+//   position: absolute;
+//   content: "";
+//   width: 16px;
+//   height: 16px;
+//   top: 3px;
+//   left: 0;
+//   border-radius: 2px;
+//   border: 1.5px solid #fff;
+//   z-index: 2;
+// }
+
+// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:hover::before {
+//   border-color: rgba(255, 255, 255, 0.8);
+// }
+
+// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label::after {
+//   position: absolute;
+//   content: "";
+//   width: 12px;
+//   height: 10px;
+//   top: 6px;
+//   left: 2px;
+//   background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/7001/Check_Vector.png);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   z-index: 9;
+//   opacity: 0;
+// }
+
+// .spz_7002
+//   #mktoForm_1017.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:before {
+//   background-color: #fff;
+// }
+
+// .spz_7002
+//   #mktoForm_1017.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:after {
+//   opacity: 1;
+// }
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: #0071ce;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: all 0.5s ease-in-out;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton:hover {
+  background: #005daa;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer,
+.spz_7002 .disclaimer {
+  margin: 8px auto 0;
+  padding: 0;
+  color: #415364;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 75%;
+}
+
+.spz_7002 .disclaimer {
+  max-width: 520px;
+  margin-top: 31px;
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
+.spz_7002 .disclaimer a {
+  color: #0071ce;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration-line: underline;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    font-weight: 600;
+  }
+
+  &:active {
+    border-radius: 4px;
+    border: 1px solid #0071ce;
+    background: rgba(0, 113, 206, 0.05);
+    padding: 1px;
+  }
+}
+
+.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:hover,
+.spz_7002 .disclaimer a:hover,
+.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:active,
+.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
+.spz_7002 .disclaimer a:active,
+.spz_7002 .disclaimer a:focus-visible {
+  text-decoration: none;
+}
+
+@media (max-width: 1023.98px) {
+  .spz_7002 {
+    padding-bottom: 39px;
+  }
+
+  .spz_7002 .row__inner.container {
+    gap: 64px;
+  }
+
+  .spz_7002 .row__inner.container > .column:first-child {
+    padding-top: 4px;
+  }
+
+  .spz_7002 .row__inner.container > .column:nth-child(02) {
+    width: 362px;
+  }
+
+  .spz_7002 .row__inner.container > .column:nth-child(03) {
+    display: none;
+  }
+
+  .spz_7002 #mktoForm_1017.mktoForm {
+    margin: 2px auto 0;
+  }
+
+  /* .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:before {
+        top: 14px;
+    }
+
+    .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:after {
+        top: 17px;
+    } */
+
+  .spz_7002
+    #mktoForm_1017.mktoForm
+    .mktoFormRow.row_FirstName1
+    .mktoCheckboxList
+    label::before {
+    top: 3px;
+  }
+
+  .spz_7002
+    #mktoForm_1017.mktoForm
+    .mktoFormRow.row_FirstName1
+    .mktoCheckboxList
+    label::after {
+    top: 6px;
+  }
+
+  .spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+    max-width: unset;
+    padding: 0 5px;
+  }
+
+  .spz_7002 .disclaimer {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 481px) {
+  .spz_7002
+    #mktoForm_1017.mktoForm
+    .row_FirstName2
+    .mktoCheckboxList
+    label:before {
+    top: 3px;
+  }
+
+  .spz_7002
+    #mktoForm_1017.mktoForm
+    .row_FirstName2
+    .mktoCheckboxList
+    label:after {
+    top: 6px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .spz_7002 {
+    padding-bottom: 63px;
+  }
+
+  .spz_7002 .row__inner.container {
+    gap: 46px;
+    padding: 0 20px;
+  }
+
+  .spz_7002 .row__inner.container > .column:first-child {
+    padding-top: 0;
+  }
+
+  .spz_7002 .row__inner.container > .column:nth-child(02) {
+    width: 100%;
+  }
+
+  .spz_7002 #mktoForm_1017.mktoForm .mktoFormRow {
+    width: 100% !important;
+  }
+
+  .spz_7002 #mktoForm_1017.mktoForm {
+    margin: 0 auto;
+    max-width: unset;
+  }
+
+  .spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow {
+    margin-top: 23px;
+  }
+}
