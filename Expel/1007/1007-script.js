@@ -24,14 +24,14 @@ function intSection() {
           <h2 class="section-heading">Your entire environment: covered</h2>
           <p class="section-subhead">Detect risks across your tech stack, including endpoints, cloud, Kubernetes, SaaS, SIEM, and networks.</p>
           <div class="int-buttons">
-            <a href="/on-demand-mdr-demo/" class="cta-spz demo-cta" target="_self">
+            <a href="/on-demand-mdr-demo/" class="cta_spz_tracking_1007 demo-cta" target="_self">
               Watch a demo
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
                 <path d="M0.5 7H18.9615" stroke="#ffffff" stroke-width="1.3"/>
                 <path d="M12.8081 0.846191L18.962 7.00004L12.8081 13.1539" stroke="#ffffff" stroke-width="1.3"/>
               </svg>  
             </a>
-            <a href="/integrations/" class="cta-spz contact-cta" target="_self">
+            <a href="/integrations/" class="cta_spz_tracking_1007 contact-cta" target="_self">
               Learn more
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
                   <path d="M0.5 7H18.9615" stroke="#1762E6" stroke-width="1.3"/>
