@@ -192,7 +192,8 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   border-color: #415364;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoField:not([type=checkbox]):focus {
-  border: 2px solid #0071ce;
+  border: 1px solid #0071ce;
+  outline: 1px solid #0071ce;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap textarea {
   overflow: auto;
@@ -208,12 +209,27 @@ body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .c
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
+  position: relative;
+  padding-left: 16px;
+  text-align: left;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg#ValidMsgcontactFormComments {
   margin-top: -6px;
 }
+body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  left: 0;
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/error-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldWrap:has(.mktoError:not([style*="display: none"])) .mktoField:not([type=checkbox]) {
   border: 1px solid #e6241e;
+  outline: none;
 }
 body.spz-8001 #page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoCheckboxList {
   margin-top: -3px;
