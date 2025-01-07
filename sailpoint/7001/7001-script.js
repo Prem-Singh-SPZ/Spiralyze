@@ -1,29 +1,518 @@
 (function () {
+
+    if (!document.getElementById('spz-7001')) {
+        var head = document.head || document.getElementsByTagName('head')[0];
+        var css = `input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px white inset !important;
+    -webkit-text-fill-color: #415364 !important;
+}
+
+.SPZ_7001 #contact-us {
+    padding-bottom: 96px;
+    background-position: -50px 710px;
+}
+
+.SPZ_7001 #contact-us .mkto-wrap,
+.SPZ_7001 #get-started .mkto-wrap {
+    min-height: unset;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100% !important;
+    max-width: 520px;
+    margin: 21px auto 0;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+    width: 100%;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-2,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-3,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-4,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-6,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-7,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-9,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-10,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-11 {
+    width: calc(50% - 8px);
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+    width: 100%;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm>div:not([class]):not([id]) {
+    display: none;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormCol {
+    margin: 0 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel {
+    color: #415364 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background: #FFF;
+    width: auto !important;
+    height: auto;
+    pointer-events: none;
+    transition: color .3s ease-in-out, top .3s ease-in-out, font-size .3s ease-in-out;
+    z-index: 9;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+    display: none !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .field-12 .mktoFieldWrap label.mktoLabel {
+    top: 14px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap:hover label.mktoLabel,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap:hover label.mktoLabel .mktoAsterix {
+    color: #415364 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel .mktoAsterix {
+    color: #415364 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel {
+    width: auto !important;
+    top: 7px;
+    color: #0071CE !important;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel#LblcontactFormComments,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel#LblcontactFormComments {
+    padding-top: 7px;
+    top: 0.5px;
+    padding-right: 2px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel .mktoAsterix,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel .mktoAsterix {
+    color: #0071CE !important;
+}
+
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix {
+    color: #E6241E !important;
+} */
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField:not([type=checkbox]) {
+    width: 100% !important;
+    height: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 23px 16px 8px;
+    margin: 0 !important;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    outline: none;
+    background: #FFF;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    transition: all .3s ease-in-out;
+    color: #415364 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
+    height: 112px !important;
+    overflow-y: auto !important;
+    white-space: normal !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
+    color: transparent !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap select.mktoField {
+    padding-right: 37px !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap select.mktoField option:first-child {
+    display: none !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap:hover .mktoField:not([type="checkbox"]) {
+    border-color: #0071CE;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing .mktoField:not([type="checkbox"]) {
+    border-color: #FFF;
+}
+
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
+    border-color: #E6241E;
+} */
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
+    position: relative;
+    top: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    right: unset !important;
+    margin: 10px 0 0 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+    /* color: #FFF; */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    position: relative;
+    /* padding-left: 16px; */
+}
+
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#E6241E"><g clip-path="url(%23clip0_24110_1049)"><path d="M6 0C2.6934 0 0 2.6934 0 6C0 9.3066 2.6934 12 6 12C9.3066 12 12 9.3066 12 6C12 2.6934 9.3066 0 6 0ZM6 1.2C8.65808 1.2 10.8 3.34191 10.8 6C10.8 8.65808 8.65808 10.8 6 10.8C3.34191 10.8 1.2 8.65808 1.2 6C1.2 3.34191 3.34191 1.2 6 1.2ZM6 2.4C5.6676 2.4 5.4 2.6676 5.4 3V7.2C5.4 7.5324 5.6676 7.8 6 7.8C6.3324 7.8 6.6 7.5324 6.6 7.2V3C6.6 2.6676 6.3324 2.4 6 2.4ZM6 8.4C5.6676 8.4 5.4 8.6676 5.4 9C5.4 9.3324 5.6676 9.6 6 9.6C6.3324 9.6 6.6 9.3324 6.6 9C6.6 8.6676 6.3324 8.4 6 8.4Z" fill="white"/></g><defs><clipPath id="clip0_24110_1049"><rect width="12" height="12" fill="#E6241E"/></clipPath></defs></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper {
+    margin: 0 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList {
+    margin: 8px 0 0 !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper::after {
+    position: absolute;
+    content: "";
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1730978539/sailpoint/1001/icons__system.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 10px;
+    top: 23px;
+    right: 16px;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper .select-dropdown {
+    display: none;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+    display: none !important;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .field-30 .mktoFieldWrap label.mktoLabel {
+    position: relative;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    background: transparent;
+    color: #fff !important;
+    top: unset;
+    left: unset;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label {
+    position: relative;
+    color: #FFF !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-right: 0;
+    cursor: pointer;
+    display: inline-flex;
+    width: auto;
+}
+
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: 0;
+    border-radius: 2px;
+    border: 1.5px solid #FFF;
+    z-index: 2;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:hover::before {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 10px;
+    top: 6px;
+    left: 2px;
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/7001/Check_Vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9;
+    opacity: 0;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList input:checked+label:before {
+    background-color: #FFF;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList input:checked+label:after {
+    opacity: 1;
+} */
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.00);
+    background: #FFF;
+    color: #0071CE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6;
+    transition: all 0.5s ease-in-out;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton:hover {
+    border-color: #005DAA;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton:active {
+    border-color: #FFF;
+    outline: 1.5px solid #0071CE;
+    outline-offset: 2.5px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer,
+.SPZ_7001 #contact-us .disclaimer,
+.SPZ_7001 #get-started .disclaimer {
+    margin: 8px auto 0;
+    padding: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 65%;
+}
+
+.SPZ_7001 #contact-us .disclaimer,
+.SPZ_7001 #get-started .disclaimer {
+    max-width: 520px;
+    margin-top: 31px;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
+.SPZ_7001 #contact-us .disclaimer a,
+.SPZ_7001 #get-started .disclaimer a {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    text-decoration-line: underline;
+    transition: all 0.1s ease-in-out;
+}
+
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:hover,
+.SPZ_7001 #contact-us .disclaimer a:hover,
+.SPZ_7001 #get-started .disclaimer a:hover,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:active,
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
+.SPZ_7001 #contact-us .disclaimer a:active,
+.SPZ_7001 #contact-us .disclaimer a:focus-visible,
+.SPZ_7001 #get-started .disclaimer a:active,
+.SPZ_7001 #get-started .disclaimer a:focus-visible {
+    text-decoration: none;
+}
+
+@media(max-width: 1023.98px) {
+    .SPZ_7001 #contact-us {
+        padding-bottom: 39px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container {
+        gap: 64px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container>.column:first-child {
+        padding-top: 4px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container>.column:nth-child(02) {
+        width: 362px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container>.column:nth-child(03) {
+        display: none;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm {
+        margin: 2px auto 0;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow {
+        width: 100% !important;
+    }
+
+    /* .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:before {
+        top: 14px;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label:after {
+        top: 17px;
+    } */
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label::before {
+        top: 3px;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label::after {
+        top: 6px;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+        max-width: unset;
+        padding: 0 5px;
+    }
+
+    .SPZ_7001 #contact-us .disclaimer,
+    .SPZ_7001 #get-started .disclaimer {
+        max-width: unset;
+    }
+}
+
+@media(max-width: 767.98px) and (min-width: 481px) {
+    .SPZ_7001 #mktoForm_1017.mktoForm .field-32 .mktoCheckboxList label:before {
+        top: 3px;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .field-32 .mktoCheckboxList label:after {
+        top: 6px;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .SPZ_7001 #contact-us {
+        padding-bottom: 63px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container {
+        gap: 46px;
+        padding: 0 20px;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container>.column:first-child {
+        padding-top: 0;
+    }
+
+    .SPZ_7001 #contact-us .row__inner.container>.column:nth-child(02) {
+        width: 100%;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm {
+        margin: 0 auto;
+        max-width: unset;
+    }
+
+    .SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow {
+        margin-top: 23px;
+    }
+}`;
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.id = 'spz-7001';
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(style);
+    }
+
     function createTest() {
-        waitForElm('body').then(() => {
-            if (!document.body.classList.contains('SPZ_7001')) {
-                removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
-                document.body.classList.add('SPZ_7001');
-                hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
-
-                waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
-                    setTimeout(() => {
-                        formModify();
-                    }, 2000);
-                    let spzFormInterval = setInterval(() => {
-                        if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.field-1').length == 0) {
-                            formModify();
-                        }
-                    }, 1000);
-                    setTimeout(function () {
-                        clearInterval(spzFormInterval);
-                    }, 15000);
-                });
-
-            } else {
-                if (document.body.classList.contains('SPZ_7001')) {
-                    removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_true_control');
+        let bodyLoaded = setInterval(function () {
+            const body = document.querySelector('body');
+            if (body) {
+                clearInterval(bodyLoaded);
+                if (!document.body.classList.contains('SPZ_7001')) {
+                    removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_truecontrol');
+                    document.body.classList.add('SPZ_7001');
                     hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
+                    waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                        let spzFormInterval = setInterval(() => {
+                            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.field-1').length == 0) {
+                                formModify();
+                                setHiddenFieldValue();
+                            }
+                        }, 100);
+                        setTimeout(function () {
+                            clearInterval(spzFormInterval);
+                        }, 15000);
+                    });
+                } else {
+                    if (document.body.classList.contains('SPZ_7001')) {
+                        removeSpecificCookieValue('SPZ_7001', 'SPZ_7001_truecontrol');
+                        hiddenValue('SPZ_7001', 'SPZ_7001_Variant');
+                        setHiddenFieldValue();
+                    }
                 }
             }
         });
@@ -45,9 +534,9 @@
             });
         });
 
-        waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label').then(label => {
-            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-        });
+        // waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label').then(label => {
+        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        // });
 
         // Change Field Position
         var compnay_field = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .field-7');
@@ -190,7 +679,7 @@
             const countryRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-9');
 
             document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
-            document.querySelector('label#LblmktoCheckbox_26287_0') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden')) : optOutRow.classList.add('hidden');
+            //document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
         });
 
         MktoForms2.whenReady(function (form) {

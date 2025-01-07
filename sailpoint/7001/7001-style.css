@@ -15,7 +15,8 @@ select:-webkit-autofill:active {
     background-position: -50px 710px;
 }
 
-.SPZ_7001 #contact-us .mkto-wrap {
+.SPZ_7001 #contact-us .mkto-wrap,
+.SPZ_7001 #get-started .mkto-wrap {
     min-height: unset;
 }
 
@@ -120,9 +121,7 @@ select:-webkit-autofill:active {
 }
 
 /* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix,
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel .mktoAsterix {
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix {
     color: #E6241E !important;
 } */
 
@@ -176,7 +175,7 @@ select:-webkit-autofill:active {
 }
 
 /* .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
-    border-color: #E6241E !important;
+    border-color: #E6241E;
 } */
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
@@ -236,8 +235,7 @@ select:-webkit-autofill:active {
     display: none;
 }
 
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap,
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList input[type=checkbox] {
+.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
     display: none !important;
 }
 
@@ -256,18 +254,17 @@ select:-webkit-autofill:active {
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label {
     position: relative;
     color: #FFF !important;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.6;
-    padding-left: 28px;
     padding-right: 0;
     cursor: pointer;
     display: inline-flex;
     width: auto;
 }
 
-.SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label::before {
+/* .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList label::before {
     position: absolute;
     content: "";
     width: 16px;
@@ -303,7 +300,7 @@ select:-webkit-autofill:active {
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCheckboxList input:checked+label:after {
     opacity: 1;
-}
+} */
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow {
     width: 100%;
@@ -339,27 +336,30 @@ select:-webkit-autofill:active {
 }
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer,
-.SPZ_7001 #contact-us .disclaimer {
+.SPZ_7001 #contact-us .disclaimer,
+.SPZ_7001 #get-started .disclaimer {
     margin: 8px auto 0;
     padding: 0;
     color: #FFF;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.6;
-    max-width: 75%;
+    max-width: 65%;
 }
 
-.SPZ_7001 #contact-us .disclaimer {
+.SPZ_7001 #contact-us .disclaimer,
+.SPZ_7001 #get-started .disclaimer {
     max-width: 520px;
     margin-top: 31px;
 }
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
-.SPZ_7001 #contact-us .disclaimer a {
+.SPZ_7001 #contact-us .disclaimer a,
+.SPZ_7001 #get-started .disclaimer a {
     color: #FFF;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.6;
@@ -369,10 +369,13 @@ select:-webkit-autofill:active {
 
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:hover,
 .SPZ_7001 #contact-us .disclaimer a:hover,
+.SPZ_7001 #get-started .disclaimer a:hover,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:active,
 .SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
 .SPZ_7001 #contact-us .disclaimer a:active,
-.SPZ_7001 #contact-us .disclaimer a:focus-visible {
+.SPZ_7001 #contact-us .disclaimer a:focus-visible,
+.SPZ_7001 #get-started .disclaimer a:active,
+.SPZ_7001 #get-started .disclaimer a:focus-visible {
     text-decoration: none;
 }
 
@@ -426,7 +429,8 @@ select:-webkit-autofill:active {
         padding: 0 5px;
     }
 
-    .SPZ_7001 #contact-us .disclaimer {
+    .SPZ_7001 #contact-us .disclaimer,
+    .SPZ_7001 #get-started .disclaimer {
         max-width: unset;
     }
 }
