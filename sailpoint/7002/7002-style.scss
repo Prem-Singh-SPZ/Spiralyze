@@ -59,15 +59,15 @@ select:-webkit-autofill:active {
         text-align: center;
       }
 
-      .spz-close-modal{
+      .spz-close-modal {
         position: absolute;
         top: 16px;
         right: 16px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
-        &:hover{
-          svg path{
+        &:hover {
+          svg path {
             stroke: rgba(0, 113, 206, 1);
           }
         }
@@ -650,15 +650,71 @@ select:-webkit-autofill:active {
   }
 }
 
-html.spz-no-scroll{
+html.spz-no-scroll {
   overflow: hidden;
 }
 .spz_7002 {
-  #page-container{
-    nav.navigation{
-      div.relative{
-        .hidden.shrink-0{
-          display: none !important;
+  #page-container {
+    nav.navigation {
+      .desktop {
+        div.relative {
+          .hidden.shrink-0 {
+            display: none !important;
+          }
+
+          .btn.btn--hotpink.shrink-0 {
+            height: 48px;
+            white-space: nowrap;
+          }
+
+          .spz-btn-desk {
+            height: 48px;
+            width: 122px;
+            line-height: 160%;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .mobile {
+        .elevate {
+          @media screen and (max-width: 499.98px) {
+            height: unset;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px 4px;
+          }
+
+          .shrink-0 {
+            @media screen and (max-width: 499.98px) {
+              order: 0;
+            }
+          }
+
+          > button {
+            @media screen and (max-width: 499.98px) {
+              order: 1;
+              margin-left: 33%;
+            }
+          }
+
+          .btn.btn--hotpink {
+            width: 158px;
+            height: 38px;
+            text-align: center;
+            @media screen and (max-width: 499.98px) {
+              order: 2;
+            }
+          }
+
+          .spz-btn-mob {
+            width: 158px;
+            height: 38px;
+            text-align: center;
+            @media screen and (max-width: 499.98px) {
+              order: 3;
+            }
+          }
         }
       }
     }
