@@ -47,7 +47,7 @@ body.spz-7003 {
       position: relative;
 
       &:has(.lm-cta-wrapper:not(.spz-hidden)) {
-        min-height: 100vh;
+        min-height: 100dvh;
       }
 
       @media (max-width: 1199.98px) {
@@ -99,7 +99,7 @@ body.spz-7003 {
 
       .block-wrapper {
         // align-items: center;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
 
         @media screen and (max-width: 1199.98px) {
           flex-direction: column;
@@ -166,7 +166,7 @@ body.spz-7003 {
 
                   @media (max-width: 767.98px) {
                     font-size: 10px;
-                    letter-spacing: 2px;
+                    // letter-spacing: 2px;
                   }
                 }
               }
@@ -196,7 +196,12 @@ body.spz-7003 {
 
               .lead {
                 position: relative;
-                p{
+
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  max-width: 89%;
+                }
+
+                p {
                   font-family: $elza;
                   color: #381360;
                   font-size: 18px;
@@ -206,7 +211,7 @@ body.spz-7003 {
                   position: relative;
                   padding-left: 32px;
                   margin-bottom: 8px;
-  
+
                   @media (max-width: 767.98px) {
                     font-size: 16px;
                     line-height: 22px;
@@ -215,7 +220,7 @@ body.spz-7003 {
                   }
 
                   &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     height: 24px;
                     width: 24px;
@@ -235,7 +240,7 @@ body.spz-7003 {
                   height: 19.588px;
                   width: 108px;
                   right: 0px;
-                  bottom: -22px;
+                  bottom: -6px;
 
                   @media (max-width: 1199.98px) {
                     display: none;
@@ -402,10 +407,20 @@ body.spz-7003 {
       .lm-cta-wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 28px;
+        @media (min-width: 1199.98px) {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+        }
 
-        @media (min-height: 790px) {
-          margin-top: auto;
+        @media (max-width: 1199.98px) {
+          margin-top: 28px;
+
+          @media (min-height: 790px) {
+            margin-top: auto;
+          }
         }
 
         .spz_learn_more {
@@ -421,6 +436,8 @@ body.spz-7003 {
           line-height: 24px;
           border-radius: 16px 16px 0px 0px;
           background: #85eaa0;
+          box-shadow: 12px -4px 40px 0px rgba(26, 70, 37, 0.1),
+            -12px -4px 40px 0px rgba(26, 70, 37, 0.1);
           text-decoration: none;
           width: 172px;
           height: 48px;
