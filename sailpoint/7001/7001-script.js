@@ -542,12 +542,20 @@ select:-webkit-autofill:active {
         var compnay_field = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .field-7');
         var last_name_field = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .field-4');
         var inquiry_field = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .field-11');
-        compnay_field.after(inquiry_field);
-        last_name_field.after(compnay_field);
+
+        if (compnay_field && inquiry_field) {
+            compnay_field.after(inquiry_field);
+        }
+        if (last_name_field && inquiry_field) {
+            last_name_field.after(inquiry_field);
+        }
 
         var disclaimer_field = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
         var button = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoButtonRow');
-        button.after(disclaimer_field);
+
+        if (disclaimer_field && button) {
+            button.after(disclaimer_field);
+        }
 
         waitForElm(`.SPZ_7001 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {
@@ -564,35 +572,37 @@ select:-webkit-autofill:active {
             // Attach events using event delegation
             const form = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm');
 
-            form.addEventListener('focus', function (event) {
-                const el = event.target;
-                if (el.classList.contains('mktoField')) {
-                    el.closest('.mktoFieldWrap').classList.add('active', 'typing');
-                    checkAllFields();
-                }
-            }, true);
+            if (form) {
+                form.addEventListener('focus', function (event) {
+                    const el = event.target;
+                    if (el.classList.contains('mktoField')) {
+                        el.closest('.mktoFieldWrap').classList.add('active', 'typing');
+                        checkAllFields();
+                    }
+                }, true);
 
-            form.addEventListener('blur', function (event) {
-                const el = event.target;
-                if (el.classList.contains('mktoField')) {
-                    el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
-                    checkAllFields();
-                }
-            }, true);
+                form.addEventListener('blur', function (event) {
+                    const el = event.target;
+                    if (el.classList.contains('mktoField')) {
+                        el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
+                        checkAllFields();
+                    }
+                }, true);
 
-            form.addEventListener('input', function (event) {
-                const el = event.target;
-                if (el.classList.contains('mktoField')) {
-                    checkAllFields();
-                }
-            });
+                form.addEventListener('input', function (event) {
+                    const el = event.target;
+                    if (el.classList.contains('mktoField')) {
+                        checkAllFields();
+                    }
+                });
 
-            form.addEventListener('change', function (event) {
-                const el = event.target;
-                if (el.classList.contains('mktoField')) {
-                    checkAllFields();
-                }
-            });
+                form.addEventListener('change', function (event) {
+                    const el = event.target;
+                    if (el.classList.contains('mktoField')) {
+                        checkAllFields();
+                    }
+                });
+            }
 
             // Function to reapply functionality for dynamic fields
             function reapplyStateFieldListeners() {
@@ -673,14 +683,16 @@ select:-webkit-autofill:active {
             }, 1000);
         }
 
-        document.querySelector('select#Country').addEventListener('change', () => {
-            const stateRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-10');
-            const optOutRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32');
-            const countryRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-9');
+        if (document.querySelector('select#Country')) {
+            document.querySelector('select#Country').addEventListener('change', () => {
+                const stateRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-10');
+                const optOutRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32');
+                const countryRow = document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-9');
 
-            document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
-            //document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
-        });
+                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
+                //document.querySelector('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
+            });
+        }
 
         MktoForms2.whenReady(function (form) {
             form.onSuccess(function (values, followUpUrl) {
