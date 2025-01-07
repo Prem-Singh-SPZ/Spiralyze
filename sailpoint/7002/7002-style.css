@@ -53,11 +53,15 @@ select:-webkit-autofill:active {
   overflow: hidden;
 }
 .spz_7002.spz-show-modal .spz-form-container {
-  -webkit-animation: slideInRight 0.5s forwards;
-          animation: slideInRight 0.5s forwards;
+  -webkit-animation: slideInRight 0.5s;
+          animation: slideInRight 0.5s;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+.spz_7002.spz-show-modal .spz-form-container.closing-modal {
+  -webkit-animation: slideOutTop 0.5s;
+          animation: slideOutTop 0.5s;
 }
 
 @-webkit-keyframes slideInRight {
@@ -393,7 +397,7 @@ select:-webkit-autofill:active {
 
 .spz_7002 .disclaimer {
   max-width: 520px;
-  margin-top: 31px;
+  margin-top: 8px;
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,

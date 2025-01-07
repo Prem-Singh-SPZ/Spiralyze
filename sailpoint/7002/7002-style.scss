@@ -63,10 +63,14 @@ select:-webkit-autofill:active {
   overflow: hidden;
   .spz-form-container {
     //create an animation of sliding in from the right
-    animation: slideInRight 0.5s forwards;
+    animation: slideInRight 0.5s;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+
+    &.closing-modal {
+      animation: slideOutTop 0.5s;
+    }
   }
 }
 

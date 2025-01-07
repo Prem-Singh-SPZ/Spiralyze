@@ -9,6 +9,7 @@
                 waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                     let spzFormInterval = setInterval(() => {
                         if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.field-1').length == 0) {
+                            addCta();
                             formModify();
                             hiddenValue('spz_7002', 'spz_7002_Variant');
                         }
@@ -27,10 +28,18 @@
         });
     }
 
-    function formModify() {
+    function addCta() {
+        if (document.querySelectorAll('.spz_7002 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0) {
+            document.querySelector('.spz_7002 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
+            document.querySelector('.spz_7002 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
+        }
+    }
 
+    function formModify() {
         if (document.querySelectorAll('.spz-form-container').length == 0) {
-            document.querySelector('.spz_7002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Contact Us</div></div></div></div>`);
+            document.querySelector('.spz_7002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Contact Us</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
+            </svg></a></div></div></div>`);
 
             document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 #contact-us .mkto-wrap.w-full').parentElement);
             document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
@@ -223,6 +232,20 @@
             }
         });
     }
+
+    //click event listener
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.spz-contact-us')) {
+            document.body.classList.add('spz-show-modal');
+        }
+        if (e.target.closest('.spz-close-modal')) {
+            document.querySelector('.spz-form-container').classList.add('closing-modal');
+            setTimeout(() => {
+                document.body.classList.remove('spz-show-modal');
+                document.querySelector('.spz-form-container').classList.remove('closing-modal');
+            }, 500);
+        }
+    });
 
     function removeTest() {
         setTimeout(() => {
