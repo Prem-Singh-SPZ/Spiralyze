@@ -39,6 +39,15 @@ select:-webkit-autofill:active {
       width: 100%;
       margin: 40px auto;
       padding: 40px;
+      position: relative;
+
+      @media screen and (max-width: 767.98px) {
+        border-radius: 16px;
+        box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+        width: calc(100% - 42px);
+        max-width: 500px;
+        padding: 16px;
+      }
 
       .spz-form-title {
         color: #415364;
@@ -48,6 +57,20 @@ select:-webkit-autofill:active {
         font-weight: 600;
         line-height: 120%;
         text-align: center;
+      }
+
+      .spz-close-modal{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          svg path{
+            stroke: rgba(0, 113, 206, 1);
+          }
+        }
       }
 
       .column__inner {
@@ -627,6 +650,9 @@ select:-webkit-autofill:active {
   }
 }
 
+html.spz-no-scroll{
+  overflow: hidden;
+}
 .spz_7002 {
   #page-container{
     nav.navigation{

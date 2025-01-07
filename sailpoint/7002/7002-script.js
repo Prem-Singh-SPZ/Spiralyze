@@ -237,12 +237,14 @@
     document.addEventListener('click', function (e) {
         if (e.target.closest('.spz-contact-us')) {
             document.body.classList.add('spz-show-modal');
+            document.querySelector('html').classList.add('spz-no-scroll');
         }
         if (e.target.closest('.spz-close-modal')) {
             document.querySelector('.spz-form-container').classList.add('closing-modal');
             setTimeout(() => {
                 document.body.classList.remove('spz-show-modal');
                 document.querySelector('.spz-form-container').classList.remove('closing-modal');
+                document.querySelector('html').classList.remove('spz-no-scroll');
             }, 500);
         }
     });
