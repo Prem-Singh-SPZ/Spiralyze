@@ -86,31 +86,31 @@ function formModify() {
 
 
     document.querySelector('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').textContent = "Submit";
-    const hero_form = document.querySelector('.spz-7003 #HERO form.mktoForm');
-    const hero_formbutton = hero_form.querySelector('button[type="submit"]');
-    const changeButtonText = (text) => {
-        if (hero_formbutton) {
-            hero_formbutton.textContent = text;
-        }
-    };
-    changeButtonText("Submit");
-    hero_form.addEventListener("submit", function (e) {
-        changeButtonText("Please wait...");
-    });
-    hero_form.addEventListener("input", function () {
-        if (hero_form.checkValidity()) {
-            changeButtonText("Submit");
-        } else {
-            changeButtonText("Submit");
-        }
-    });
-    const observer = new MutationObserver(() => {
-        changeButtonText("Submit");
-    });
+    // const hero_form = document.querySelector('.spz-7003 #HERO form.mktoForm');
+    // const hero_formbutton = hero_form.querySelector('button[type="submit"]');
+    // const changeButtonText = (text) => {
+    //     if (hero_formbutton) {
+    //         hero_formbutton.textContent = text;
+    //     }
+    // };
+    // changeButtonText("Submit");
+    // hero_form.addEventListener("submit", function (e) {
+    //     changeButtonText("Please wait...");
+    // });
+    // hero_form.addEventListener("input", function () {
+    //     if (hero_form.checkValidity()) {
+    //         changeButtonText("Submit");
+    //     } else {
+    //         changeButtonText("Submit");
+    //     }
+    // });
+    // const observer = new MutationObserver(() => {
+    //     changeButtonText("Submit");
+    // });
 
-    observer.observe(hero_formbutton, {
-        childList: true,
-    });
+    // observer.observe(hero_formbutton, {
+    //     childList: true,
+    // });
 
     addUniqueClass();
 
@@ -149,6 +149,8 @@ function formModify() {
                 } else {
                     elem.closest('.mktoFieldWrap').classList.remove('filled');
                 }
+
+                document.querySelector('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').textContent = "Submit";
             }, 100);
 
             setTimeout(() => {
