@@ -16,7 +16,6 @@ select:-webkit-autofill:active {
 
 .SPZ_7001 #contact-us {
     padding-bottom: 96px;
-    background-position: -50px 710px;
 }
 
 .SPZ_7001 #contact-us .mkto-wrap,
