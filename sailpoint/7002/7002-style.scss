@@ -16,19 +16,15 @@ select:-webkit-autofill:active {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999999;
-  background: linear-gradient(
-    134deg,
-    rgba(0, 51, 161, 0.5) 38.16%,
-    rgba(0, 79, 181, 0.5) 64.91%,
-    rgba(0, 113, 206, 0.5) 100.05%
-  );
-  backdrop-filter: blur(4.199999809265137px);
+  z-index: 9999;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
+  animation: slideOutTop 0.25s;
+  display: grid;
+  align-items: center;
 
   .spz-form-inner {
     .spz-form-content {
@@ -37,7 +33,7 @@ select:-webkit-autofill:active {
       box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
       max-width: 600px;
       width: 100%;
-      margin: 40px auto;
+      margin: 64px auto;
       padding: 40px;
       position: relative;
 
@@ -46,7 +42,7 @@ select:-webkit-autofill:active {
         box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
         width: calc(100% - 42px);
         max-width: 500px;
-        padding: 16px;
+        padding: 24px 16px;
       }
 
       .spz-form-title {
@@ -57,6 +53,11 @@ select:-webkit-autofill:active {
         font-weight: 600;
         line-height: 120%;
         text-align: center;
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 26px;
+          line-height: 1.2;
+        }
       }
 
       .spz-close-modal {
@@ -65,6 +66,12 @@ select:-webkit-autofill:active {
         right: 16px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 767.98px) {
+          top: 12px;
+          right: 12px;
+          
+        }
 
         &:hover {
           svg path {
@@ -84,6 +91,25 @@ select:-webkit-autofill:active {
 
 .spz_7002.spz-show-modal {
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      134deg,
+      rgba(0, 51, 161, 0.5) 38.16%,
+      rgba(0, 79, 181, 0.5) 64.91%,
+      rgba(0, 113, 206, 0.5) 100.05%
+    );
+    backdrop-filter: blur(4.199999809265137px);
+    z-index: 999;
+  }
+
   .spz-form-container {
     //create an animation of sliding in from the right
     animation: slideInRight 0.5s;
@@ -91,9 +117,9 @@ select:-webkit-autofill:active {
     visibility: visible;
     pointer-events: auto;
 
-    &.closing-modal {
-      animation: slideOutTop 0.5s;
-    }
+    // &.closing-modal {
+    //   animation: slideOutTop 0.5s;
+    // }
   }
 }
 
@@ -126,7 +152,11 @@ select:-webkit-autofill:active {
   justify-content: space-between;
   width: 100% !important;
   max-width: 520px;
-  margin: 21px auto 0;
+  margin: 23px auto 0;
+
+  @media screen and (max-width: 767.98px) {
+    margin: 16px auto 0;
+  }
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoFormRow,
@@ -160,6 +190,10 @@ select:-webkit-autofill:active {
 .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap {
   position: relative;
   margin-bottom: 16px;
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 12px;
+  }
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel {
@@ -171,7 +205,7 @@ select:-webkit-autofill:active {
   margin: 0;
   padding: 2px 4px;
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 12px;
   background: #fff;
   width: auto !important;
@@ -214,7 +248,7 @@ select:-webkit-autofill:active {
 .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
 .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel {
   width: auto !important;
-  top: -11px;
+  top: -12px;
   background: #fff;
   color: #0071ce !important;
   font-size: 12px;
@@ -246,7 +280,7 @@ select:-webkit-autofill:active {
   .mktoFieldWrap
   .mktoField:not([type="checkbox"]) {
   width: 100% !important;
-  height: 56px;
+  height: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -271,9 +305,13 @@ select:-webkit-autofill:active {
   #mktoForm_1017.mktoForm
   .mktoFieldWrap
   textarea.mktoField:not([type="checkbox"]) {
-  height: 88px !important;
+  min-height: 88px;
   overflow-y: auto !important;
   white-space: normal !important;
+
+  @media screen and (max-width: 767.98px) {
+    min-height: 80px;
+  }
 }
 
 .spz_7002
@@ -350,7 +388,11 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList {
-  margin: 8px 0 0 !important;
+  margin: 2px 0 0 !important;
+
+  @media screen and (max-width: 767.98px) {
+    margin: 8px 0 0 !important;
+  }
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper::after {
@@ -361,7 +403,7 @@ select:-webkit-autofill:active {
   background-repeat: no-repeat;
   width: 18px;
   height: 10px;
-  top: 23px;
+  top: 20px;
   right: 16px;
   pointer-events: none;
   z-index: 9;
@@ -400,9 +442,13 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
   border-radius: 4px;
+  outline: none;
+  // margin-top: 1px;
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label {
@@ -419,55 +465,9 @@ select:-webkit-autofill:active {
   width: auto;
 }
 
-// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label::before {
-//   position: absolute;
-//   content: "";
-//   width: 16px;
-//   height: 16px;
-//   top: 3px;
-//   left: 0;
-//   border-radius: 2px;
-//   border: 1.5px solid #fff;
-//   z-index: 2;
-// }
-
-// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:hover::before {
-//   border-color: rgba(255, 255, 255, 0.8);
-// }
-
-// .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label::after {
-//   position: absolute;
-//   content: "";
-//   width: 12px;
-//   height: 10px;
-//   top: 6px;
-//   left: 2px;
-//   background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/7001/Check_Vector.png);
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   z-index: 9;
-//   opacity: 0;
-// }
-
-// .spz_7002
-//   #mktoForm_1017.mktoForm
-//   .mktoCheckboxList
-//   input:checked
-//   + label:before {
-//   background-color: #fff;
-// }
-
-// .spz_7002
-//   #mktoForm_1017.mktoForm
-//   .mktoCheckboxList
-//   input:checked
-//   + label:after {
-//   opacity: 1;
-// }
-
 .spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
@@ -486,6 +486,7 @@ select:-webkit-autofill:active {
   font-weight: 600;
   line-height: 1.6;
   transition: all 0.5s ease-in-out;
+  box-shadow: none;
 }
 
 .spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton:hover {
@@ -498,11 +499,15 @@ select:-webkit-autofill:active {
   padding: 0;
   color: #415364;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  max-width: 75%;
+  max-width: 60%;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 100%;
+  }
 }
 
 .spz_7002 .disclaimer {
@@ -513,7 +518,7 @@ select:-webkit-autofill:active {
 .spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
 .spz_7002 .disclaimer a {
   color: #0071ce;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -562,59 +567,17 @@ select:-webkit-autofill:active {
     display: none;
   }
 
-  .spz_7002 #mktoForm_1017.mktoForm {
-    margin: 2px auto 0;
-  }
+  // .spz_7002 #mktoForm_1017.mktoForm {
+  //   margin: 2px auto 0;
+  // }
 
-  /* .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:before {
-        top: 14px;
-    }
-
-    .spz_7002 #mktoForm_1017.mktoForm .mktoCheckboxList label:after {
-        top: 17px;
-    } */
-
-  .spz_7002
-    #mktoForm_1017.mktoForm
-    .mktoFormRow.row_FirstName1
-    .mktoCheckboxList
-    label::before {
-    top: 3px;
-  }
-
-  .spz_7002
-    #mktoForm_1017.mktoForm
-    .mktoFormRow.row_FirstName1
-    .mktoCheckboxList
-    label::after {
-    top: 6px;
-  }
-
-  .spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
-    max-width: unset;
-    padding: 0 5px;
-  }
+  // .spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+  //   max-width: unset;
+  //   padding: 0 5px;
+  // }
 
   .spz_7002 .disclaimer {
     max-width: unset;
-  }
-}
-
-@media (max-width: 767.98px) and (min-width: 481px) {
-  .spz_7002
-    #mktoForm_1017.mktoForm
-    .row_FirstName2
-    .mktoCheckboxList
-    label:before {
-    top: 3px;
-  }
-
-  .spz_7002
-    #mktoForm_1017.mktoForm
-    .row_FirstName2
-    .mktoCheckboxList
-    label:after {
-    top: 6px;
   }
 }
 
@@ -640,13 +603,8 @@ select:-webkit-autofill:active {
     width: 100% !important;
   }
 
-  .spz_7002 #mktoForm_1017.mktoForm {
-    margin: 0 auto;
-    max-width: unset;
-  }
-
   .spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow {
-    margin-top: 23px;
+    margin-top: 0;
   }
 }
 
@@ -699,19 +657,37 @@ html.spz-no-scroll {
           }
 
           .btn.btn--hotpink {
-            width: 158px;
-            height: 38px;
-            text-align: center;
+            @media (min-width: 767.98px) {
+              width: 122px;
+              height: 48px;
+              padding: 11px 16px;
+              font-size: 16px;
+              white-space: nowrap;
+              line-height: 160%;
+            }
             @media screen and (max-width: 499.98px) {
+              width: 158px;
+              height: 38px;
+              text-align: center;
               order: 2;
             }
           }
 
           .spz-btn-mob {
-            width: 158px;
-            height: 38px;
-            text-align: center;
+            @media (min-width: 767.98px) {
+              width: 122px;
+              height: 48px;
+              padding: 11px 16px;
+              font-size: 16px;
+              white-space: nowrap;
+              line-height: 160%;
+              margin-left: 4px;
+            }
+
             @media screen and (max-width: 499.98px) {
+              width: 158px;
+              height: 38px;
+              text-align: center;
               order: 3;
             }
           }
