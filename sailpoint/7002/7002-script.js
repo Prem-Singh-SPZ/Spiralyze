@@ -8,7 +8,7 @@
 
                 waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                     let spzFormInterval = setInterval(() => {
-                        if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.field-1').length == 0) {
+                        if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
                             addCta();
                             formModify();
                             hiddenValue('spz_7002', 'spz_7002_Variant');
@@ -29,24 +29,28 @@
     }
 
     function addCta() {
-        if (document.querySelectorAll('.spz_7002 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0) {
+        if (document.querySelectorAll('.spz_7002 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0 && document.querySelector('.spz_7002 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
             document.querySelector('.spz_7002 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
             document.querySelector('.spz_7002 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
         }
     }
 
     function formModify() {
-        if (document.querySelectorAll('.spz-form-container').length == 0) {
+        if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_7002 #page-container .flex.min-h-screen')) {
             document.querySelector('.spz_7002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Contact us</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
             </svg></a></div></div></div>`);
 
-            document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 #contact-us .mkto-wrap.w-full').parentElement);
-            document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
+            document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .mkto-wrap.w-full').parentElement);
+            if (document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002 .disclaimer')) {
+                document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
+            }
         }
         else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
-            document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 #contact-us .mkto-wrap.w-full').parentElement);
-            document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
+            document.querySelector('.spz_7002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .mkto-wrap.w-full').parentElement);
+            if (document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002 .disclaimer')) {
+                document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002 .disclaimer'));
+            }
         }
 
 
@@ -58,7 +62,12 @@
                 form_fields[i].classList.add('row_' + dynamicClass);
             }
             else {
-                form_fields[i].classList.add('hidden');
+                if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
+                    form_fields[i].classList.add('hidden');
+                }
+                else {
+                    form_fields[i].classList.add('row_Global_Opt_in__c');
+                }
             }
         }
 
@@ -68,10 +77,6 @@
             waitForElm(`.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
             });
-        });
-
-        waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.field-32 .mktoCheckboxList label').then(label => {
-            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         });
 
         // Change Field Position
@@ -84,10 +89,12 @@
         const disclaimer_field = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
         const button = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-        last_name_field.insertAdjacentElement('afterend', email_field);
-        country_field.insertAdjacentElement('beforebegin', inquiry_field);
-        company_field.after(title_field);
-        button.after(disclaimer_field);
+        if (company_field && title_field && disclaimer_field && button) {
+            last_name_field.insertAdjacentElement('afterend', email_field);
+            country_field.insertAdjacentElement('beforebegin', inquiry_field);
+            company_field.after(title_field);
+            button.after(disclaimer_field);
+        }
 
         waitForElm(`.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {
@@ -99,10 +106,15 @@
             }, 1000);
         });
 
+        waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        });
+
         // On input focus add class on closest parent field class
         function focusFields() {
             // Attach events using event delegation
             const form = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm');
+            if (!form) return;
 
             form.addEventListener('focus', function (event) {
                 const el = event.target;
@@ -194,33 +206,26 @@
                 clearInterval(timeBuffer);
             }, 1000);
         }
-        function checkError(elem) {
-            let timeBuffer = setInterval(() => {
-                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
-                    elem.closest('.mktoFieldWrap').classList.add('error');
-                } else {
-                    elem.closest('.mktoFieldWrap').classList.remove('error');
-                }
-                if (elem && elem.value && (elem.value != '')) {
-                    elem.closest('.mktoFieldWrap').classList.add('filled');
-                } else {
-                    elem.closest('.mktoFieldWrap').classList.remove('filled');
-                }
-            }, 100);
 
-            setTimeout(() => {
-                clearInterval(timeBuffer);
-            }, 1000);
+        if (document.querySelector('.spz_7002 #mktoForm_1017.mktoForm select#Country')) {
+            document.querySelector('select#Country').addEventListener('change', () => {
+                const stateRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
+                const optOutRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
+                const countryRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
+
+                waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                    label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+                });
+
+                // waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow [name="Global_Opt_in__c"]').then(label => {
+                //     document.querySelector('.spz_7002 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.remove('hidden');
+                //     document.querySelector('.spz_7002 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.add('row_Global_Opt_out__c');
+                // });
+
+                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
+                // document.querySelector('input[name="Global_Opt_out__c"]') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden')) : optOutRow.classList.add('hidden');
+            });
         }
-
-        document.querySelector('select#Country').addEventListener('change', () => {
-            const stateRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.field-10');
-            const optOutRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.field-32');
-            const countryRow = document.querySelector('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow.field-9');
-
-            document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
-            document.querySelector('label#LblmktoCheckbox_26287_0') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden')) : optOutRow.classList.add('hidden');
-        });
 
         MktoForms2.whenReady(function (form) {
             form.onSuccess(function (values, followUpUrl) {
@@ -242,9 +247,9 @@
         if (e.target.closest('.spz-close-modal')) {
             // document.querySelector('.spz-form-container').classList.add('closing-modal');
             // setTimeout(() => {
-                document.body.classList.remove('spz-show-modal');
-                // document.querySelector('.spz-form-container').classList.remove('closing-modal');
-                document.querySelector('html').classList.remove('spz-no-scroll');
+            document.body.classList.remove('spz-show-modal');
+            // document.querySelector('.spz-form-container').classList.remove('closing-modal');
+            document.querySelector('html').classList.remove('spz-no-scroll');
             // }, 600);
         }
     });
