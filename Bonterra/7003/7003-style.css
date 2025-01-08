@@ -353,13 +353,21 @@ body.spz-7003 #HERO .container .lm-cta-wrapper {
           justify-content: center;
 }
 @media (min-width: 1199.98px) {
-  body.spz-7003 #HERO .container .lm-cta-wrapper {
+  body.spz-7003 #HERO .container .lm-cta-wrapper:not(.push-cta-down) {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
     pointer-events: none;
+  }
+}
+body.spz-7003 #HERO .container .lm-cta-wrapper.push-cta-down {
+  margin-top: 28px;
+}
+@media (min-height: 790px) {
+  body.spz-7003 #HERO .container .lm-cta-wrapper.push-cta-down {
+    margin-top: auto;
   }
 }
 @media (max-width: 1199.98px) {

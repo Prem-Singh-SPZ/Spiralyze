@@ -407,13 +407,24 @@ body.spz-7003 {
       .lm-cta-wrapper {
         display: flex;
         justify-content: center;
-        @media (min-width: 1199.98px) {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 1;
-          pointer-events: none;
+
+        &:not(.push-cta-down){
+          @media (min-width: 1199.98px) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+          }
+        }
+
+        &.push-cta-down {
+          margin-top: 28px;
+
+          @media (min-height: 790px) {
+            margin-top: auto;
+          }
         }
 
         @media (max-width: 1199.98px) {
