@@ -5,7 +5,7 @@ if (vis_test_id) {
     var vis_opt_random = urlParams.get('_vis_opt_random');
     var vis_hash = urlParams.get('_vis_hash');
     var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
-    var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
+    var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}` || '';
 }
 
 // iFrame Code
