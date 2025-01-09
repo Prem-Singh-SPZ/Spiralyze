@@ -231,6 +231,14 @@ body.spz-8001 {
                               border: 1px solid #0071ce;
                               outline: 1px solid #0071ce;
                             }
+
+                          }
+                          
+                          select{
+                            padding-right: 40px !important;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
                           }
 
                           textarea {
@@ -282,6 +290,21 @@ body.spz-8001 {
                           }
                         }
                       }
+
+                      .mktoHtmlText.mktoHasWidth {
+                        color: #415364 !important;
+                        font-family: (
+                          var(--font-poppins),
+                          Helvetica,
+                          Arial,
+                          sans-serif
+                        );
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 160%;
+                      }
+                      
                       .mktoCheckboxList {
                         margin-top: -3px;
                         margin-bottom: 23px;

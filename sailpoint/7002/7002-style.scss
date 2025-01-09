@@ -196,7 +196,7 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel {
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -236,17 +236,17 @@ select:-webkit-autofill:active {
 .spz_7002
   #mktoForm_1017.mktoForm
   .mktoFieldWrap.filled:not(.active):not(.error)
-  label.mktoLabel,
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
 .spz_7002
   #mktoForm_1017.mktoForm
   .mktoFieldWrap.filled:not(.active):not(.error)
-  label.mktoLabel
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
   .mktoAsterix {
   color: #415364 !important;
 }
 
-.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
-.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel {
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_7002 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   width: auto !important;
   top: -12px;
   background: #fff;

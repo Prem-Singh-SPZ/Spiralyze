@@ -4,14 +4,14 @@
             if (!document.body.classList.contains('spz_7002')) {
                 removeSpecificCookieValue('spz_7002', 'spz_7002_true_control');
                 document.body.classList.add('spz_7002');
-                hiddenValue('spz_7002', 'spz_7002_Variant');
+                hiddenValue('SPZ_7002', 'SPZ_7002_variant');
 
                 waitForElm('.spz_7002 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                     let spzFormInterval = setInterval(() => {
                         if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
                             addCta();
                             formModify();
-                            hiddenValue('spz_7002', 'spz_7002_Variant');
+                            hiddenValue('SPZ_7002', 'SPZ_7002_variant');
                         }
                     }, 500);
                     setTimeout(function () {
@@ -21,8 +21,8 @@
 
             } else {
                 if (document.body.classList.contains('spz_7002')) {
-                    removeSpecificCookieValue('spz_7002', 'spz_7002_true_control');
-                    hiddenValue('spz_7002', 'spz_7002_Variant');
+                    removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
+                    hiddenValue('SPZ_7002', 'SPZ_7002_variant');
                 }
             }
         });
@@ -63,7 +63,9 @@
             }
             else {
                 if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
-                    form_fields[i].classList.add('hidden');
+                    if (i <= 12) {
+                        form_fields[i].classList.add('hidden');
+                    }
                 }
                 else {
                     form_fields[i].classList.add('row_Global_Opt_in__c');
