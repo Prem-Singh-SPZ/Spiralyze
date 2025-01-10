@@ -27,7 +27,12 @@ let bodyLoaded = setInterval(function () {
 
 //update rest of page content
 function updateContent() {
+
+    if (document.querySelectorAll('body.spz-7003 #site-main .spz-logo-wrapper').length == 0) {
+        document.querySelector('body.spz-7003 #site-main .form-content .container').insertAdjacentHTML('afterbegin', '<div class="spz-logo-wrapper"><a href="https://www.bonterratech.com/" target="_blank"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1732288364/bonterra/7003/logo_bonterra.svg" alt="Bonterra logo" constrain="true" imagepreview="false"> </a></div>');
+    }
     //logo change
+
     if (document.querySelectorAll('body.spz-7003 #site-wrapper .form-content .spz-social-proof').length == 0) {
         //social proof
         document.querySelector('body.spz-7003 #site-wrapper .form-content .container').insertAdjacentHTML('beforeend', '<div class="spz-social-proof"><div class="sp-container"><div class="sp-title">Over <span>400,000 Customers</span> from Small Business to Enterprise</div><div class="sp-content"><picture><source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_1440.webp" type="image/webp"><source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_768.webp" type="image/webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logo_360.webp" alt="Social Proof"></picture></div></div></div>');
@@ -65,10 +70,9 @@ document.addEventListener('click', function (event) {
         document.querySelector('body.spz-7003 #site-footer').classList.remove('spz-hidden');
 
         event.target.parentElement.classList.add('spz-hidden');
-        document.querySelector('.spz-7003 #SEC2').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        //calculate the height of .form-content and scroll to that position
+        let formContentHeight = document.querySelector('body.spz-7003 #site-wrapper .form-content').offsetHeight;
+        window.scrollTo({ top: formContentHeight, behavior: 'smooth' });
 
         //store value in session storage so that it will be available on page refresh
         sessionStorage.setItem('spz-learn-more', 'true');
