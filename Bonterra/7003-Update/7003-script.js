@@ -49,25 +49,21 @@ function updateContent() {
             </svg></a></div>`);
 
             //hide all the sections except HERO
-            document.querySelectorAll('body.spz-7003 > .on:not(#HEAD):not(#site-wrapper .form-content)').forEach(function (el) {
+            document.querySelectorAll('body.spz-7003 #site-wrapper #site-main > section:not(.form-content)').forEach(function (el) {
                 el.classList.add('spz-hidden');
             });
+            document.querySelector('body.spz-7003 #site-footer').classList.add('spz-hidden');
         }
     }
 }
 
 document.addEventListener('click', function (event) {
-    if (event.target.getAttribute('href') == '#form') {
-        // event.preventDefault();
-        document.querySelector('.spz-7003 #site-wrapper .form-content #site-wrapper .form-content-Block3-Form').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
     if (event.target.classList.contains('spz_learn_more')) {
-        document.querySelectorAll('body.spz-7003 > .on.spz-hidden').forEach(function (el) {
+        document.querySelectorAll('body.spz-7003 #site-wrapper #site-main > section:not(.form-content)').forEach(function (el) {
             el.classList.remove('spz-hidden');
         });
+        document.querySelector('body.spz-7003 #site-footer').classList.remove('spz-hidden');
+
         event.target.parentElement.classList.add('spz-hidden');
         document.querySelector('.spz-7003 #SEC2').scrollIntoView({
             behavior: 'smooth',
