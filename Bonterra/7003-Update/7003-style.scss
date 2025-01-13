@@ -217,6 +217,10 @@ body.spz-7003 {
             margin-top: 23px !important;
           }
 
+          @media screen and (max-width: 991.98px) {
+            margin-top: 25px !important;
+          }
+
           .bg-primary.text-white {
             background-color: transparent !important;
             background: linear-gradient(
@@ -227,10 +231,19 @@ body.spz-7003 {
             border-radius: 12px !important;
             box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.1);
             padding: 32px 24px 40px !important;
+            position: relative;
 
             @media screen and (max-width: 991.98px) {
              padding-top: 31px !important;
             }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 24px 8px 32px !important;
+
+              .mktoForm{
+                padding: 0;
+              }
+             }
 
             #HeroForm-Title {
               .spz-form-title {
@@ -255,7 +268,7 @@ body.spz-7003 {
                   // line-height: 48px;
                   letter-spacing: -0.32px;
                   // text-transform: uppercase;
-                  margin-bottom: 38px;
+                  margin-bottom: 40px;
                 }
               }
             }
@@ -345,7 +358,7 @@ body.spz-7003 {
         }
 
         @media screen and (max-width: 767.98px) {
-          margin: 0 0 49px 0;
+          margin: 32px 0 20px 0;
         }
 
         .sp-container {
@@ -704,7 +717,6 @@ body.spz-7003 {
             line-height: 24px !important;
 
             @media screen and (max-width: 767.98px) {
-              max-width: calc(100% - 16px);
               margin: 12px auto 0 !important;
             }
 
