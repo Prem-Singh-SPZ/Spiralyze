@@ -1,17 +1,17 @@
 (function () {
     function createTest() {
         waitForElm('body').then(() => {
-            if (!document.body.classList.contains('spz_7002_v1')) {
+            if (!document.body.classList.contains('spz_7002_v2')) {
                 removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
-                document.body.classList.add('spz_7002_v1');
-                hiddenValue('SPZ_7002', 'SPZ_7002_variant1');
+                document.body.classList.add('spz_7002_v2');
+                hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
 
-                waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                     let spzFormInterval = setInterval(() => {
                         if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
                             addCta();
                             formModify();
-                            hiddenValue('SPZ_7002', 'SPZ_7002_variant1');
+                            hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
                         }
                     }, 500);
                     setTimeout(function () {
@@ -20,42 +20,42 @@
                 });
 
             } else {
-                if (document.body.classList.contains('spz_7002_v1')) {
+                if (document.body.classList.contains('spz_7002_v2')) {
                     removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
-                    hiddenValue('SPZ_7002', 'SPZ_7002_variant1');
+                    hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
                 }
             }
         });
     }
 
     function addCta() {
-        if (document.querySelectorAll('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0 && document.querySelector('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
-            document.querySelector('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
-            document.querySelector('.spz_7002_v1 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
+        if (document.querySelectorAll('.spz_7002_v2 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0 && document.querySelector('.spz_7002_v2 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
+            document.querySelector('.spz_7002_v2 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Talk to expert</a>`);
+            document.querySelector('.spz_7002_v2 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Talk to expert</a>`);
         }
     }
 
     function formModify() {
-        if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen')) {
-            document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Contact us</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen')) {
+            document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Talk to expert</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
             </svg></a></div></div></div>`);
 
-            document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').parentElement);
-            if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v1 .disclaimer')) {
-                document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .disclaimer'));
+            document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
+            if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v2 .disclaimer')) {
+                document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .disclaimer'));
             }
         }
         else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
-            document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').parentElement);
-            if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v1 .disclaimer')) {
-                document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .disclaimer'));
+            document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
+            if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v2 .disclaimer')) {
+                document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .disclaimer'));
             }
         }
 
 
         // Add class in mktoField using the name attribute
-        var form_fields = document.querySelectorAll('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow');
+        var form_fields = document.querySelectorAll('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
             if (form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])')) {
                 var dynamicClass = form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])').getAttribute('name');
@@ -76,20 +76,20 @@
         // Change Label Text
         ['#LblCountry:Country', '#LblState:State', '#LblreasonforInquiry:Reason for inquiry'].forEach(item => {
             const [id, text] = item.split(':');
-            waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
+            waitForElm(`.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
             });
         });
 
         // Change Field Position
-        const email_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Email');
-        const last_name_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_LastName');
-        const inquiry_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_reasonforInquiry');
-        const country_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Country');
-        const company_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Company');
-        const title_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Title');
-        const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
-        const button = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow');
+        const email_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_Email');
+        const last_name_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_LastName');
+        const inquiry_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_reasonforInquiry');
+        const country_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_Country');
+        const company_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_Company');
+        const title_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .row_Title');
+        const disclaimer_field = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
+        const button = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow');
 
         if (company_field && title_field && disclaimer_field && button) {
             last_name_field.insertAdjacentElement('afterend', email_field);
@@ -98,9 +98,9 @@
             button.after(disclaimer_field);
         }
 
-        waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
+        waitForElm(`.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {
-                document.querySelectorAll(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+                document.querySelectorAll(`.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
                     if (el && el.value && (el.value != '')) {
                         el.closest('.mktoFieldWrap').classList.add('filled');
                     }
@@ -108,14 +108,14 @@
             }, 1000);
         });
 
-        waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+        waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
             label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         });
 
         // On input focus add class on closest parent field class
         function focusFields() {
             // Attach events using event delegation
-            const form = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm');
+            const form = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm');
             if (!form) return;
 
             form.addEventListener('focus', function (event) {
@@ -150,7 +150,7 @@
 
             // Function to reapply functionality for dynamic fields
             function reapplyStateFieldListeners() {
-                const stateField = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField#State');
+                const stateField = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField#State');
                 if (stateField) {
                     stateField.addEventListener('focus', function () {
                         stateField.closest('.mktoFieldWrap').classList.add('active', 'typing');
@@ -174,14 +174,14 @@
                 reapplyStateFieldListeners();
             });
 
-            const container = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm');
+            const container = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm');
             if (container) {
                 observer.observe(container, { childList: true, subtree: true });
             }
         }
         focusFields();
         function checkAllFields() {
-            const fields = document.querySelectorAll('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoField');
+            const fields = document.querySelectorAll('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoField');
             const timeBuffer = setInterval(() => {
                 fields.forEach(field => {
                     const fieldWrap = field.closest('.mktoFieldWrap');
@@ -209,19 +209,19 @@
             }, 1000);
         }
 
-        if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm select#Country')) {
+        if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm select#Country')) {
             document.querySelector('select#Country').addEventListener('change', () => {
-                const stateRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
-                const optOutRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
-                const countryRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
+                const stateRow = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
+                const optOutRow = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
+                const countryRow = document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-                waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
                     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
                 });
 
-                // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow [name="Global_Opt_in__c"]').then(label => {
-                //     document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.remove('hidden');
-                //     document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.add('row_Global_Opt_out__c');
+                // waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow [name="Global_Opt_in__c"]').then(label => {
+                //     document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.remove('hidden');
+                //     document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.add('row_Global_Opt_out__c');
                 // });
 
                 document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
@@ -258,8 +258,8 @@
 
     function removeTest() {
         setTimeout(() => {
-            if (document.querySelector('.spz_7002_v1')) {
-                document.body.classList.remove("spz_7002_v1");
+            if (document.querySelector('.spz_7002_v2')) {
+                document.body.classList.remove("spz_7002_v2");
             }
         }, 2000);
     }
@@ -382,8 +382,8 @@
     window.addEventListener("locationchange", function () {
         url = location.href;
         urlCheck(url);
-        if (document.querySelector('.spz_7002_v1')) {
-            document.body.classList.remove("spz_7002_v1");
+        if (document.querySelector('.spz_7002_v2')) {
+            document.body.classList.remove("spz_7002_v2");
         }
     });
     var url = location.href;
