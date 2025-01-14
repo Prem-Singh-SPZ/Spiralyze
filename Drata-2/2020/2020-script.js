@@ -89,6 +89,11 @@
         if (window.location.pathname.indexOf("/demo") > -1) {
             // ADDED ONLY FOR DEMO PAGE TO ADD 2020_Variant IN HIDDEN FIELD
             demoChecked();
+            waitForElm('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').then(function () {
+                if (document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video')) {
+                    document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').setAttribute('playsinline', '');
+                }
+            });
         }
     }
 
