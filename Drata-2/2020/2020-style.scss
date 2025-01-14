@@ -11,7 +11,6 @@ body.spz-2020 {
         }
         @media (max-width: 767.98px) {
           padding-bottom: 18px;
-
         }
         div[class*="BlockText-content"] {
           a[class*="BlockText-link"] {
@@ -22,6 +21,7 @@ body.spz-2020 {
 
       div[class*="ContentAccordion-contentOuterWrapper"] {
         padding: 16px 72px;
+        display: contents;
         @media (max-width: 1199.98px) {
           padding: 16px;
         }
@@ -33,6 +33,11 @@ body.spz-2020 {
         }
       }
     }
+  }
+
+  [class*="Page-individualContentContainer"]
+    section[variant="collectionCheckboxesSectionWrapper"] {
+    min-height: auto;
   }
 }
 
@@ -231,7 +236,7 @@ body.spz-2020 {
           }
 
           .gtct-desc {
-            color: #0C131A;
+            color: #0c131a;
             font-family: $ff-inter;
             font-size: 18px;
             font-style: normal;
