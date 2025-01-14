@@ -23,13 +23,13 @@
     .spz_1001 .spz-hero::before {
       position: absolute;
       content: "";
-      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/image_2.webp");
+      background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/illustrator.webp");
       background-size: contain;
       background-repeat: no-repeat;
-      width: 804px;
-      height: 575px;
-      top: 4px;
-      right: -146px;
+      width: 672px;
+      height: 480px;
+      top: 22px;
+      right: -161px;
     }
 
     .spz_1001 .spz-hero::after {
@@ -46,7 +46,7 @@
 
     .spz_1001 .spz-hero .spz-wrapper {
         width: 100%;
-        max-width: 1288px;
+        max-width: 1330px;
         padding: 0 20px;
         margin: 0 auto;
         z-index: 99;
@@ -64,9 +64,12 @@
         align-items: center;
     }
 
-    .spz_1001 .spz-hero .spz-form-wrap .content-section,
+    .spz_1001 .spz-hero .spz-form-wrap .content-section {
+      width: 49.77%;      
+      max-width: 642px;
+    }
     .spz_1001 .spz-hero .spz-form-wrap .spz-form-section {
-        width: 48.08%;
+        width: 46.52%;
         max-width: 600px;
     }
 
@@ -112,7 +115,7 @@
     .spz_1001 .spz-form-wrap .spz-features-wrap .feature-item {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 25px;
+        margin-bottom: 29px;
         padding-left: 34px;
         position: relative;
     }
@@ -123,10 +126,10 @@
 
     .spz_1001 .spz-form-wrap .spz-features-wrap img {
       position: absolute;
-      width: 18px;
-      height: 18px;
-      top: 3px;
-      left: 4px;
+      width: 24px;
+      height: 24px;
+      top: -1px;
+      left: 0px;
     }
 
     .spz_1001 .spz-form-wrap .spz-features-wrap span {
@@ -138,13 +141,13 @@
     }
 
     .spz_1001 .spz-form-wrap .spz-features-wrap span b {
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .spz_1001 .spz-form-wrap .form-arrow {
-      margin: -31px -10px 0 auto;
-      width: 191px;
-      height: 124px;
+      margin: 44px 42px 0 auto;
+      width: 176.83px;
+      height: 116px;
       object-fit: contain;
     }
 
@@ -172,9 +175,9 @@
     .spz_1001 .spz-hero .social-proof-logos {
         margin-top: 57px;
         width: 100%;
-        max-width: 1288px;
+        max-width: 1330px;
         padding: 0 20px;
-        margin: 64px auto 0;
+        margin: 63px auto 0;
     }
 
     .spz_1001 .spz-hero .social-proof-logos .social-proof-heading {
@@ -216,7 +219,7 @@
     .spz_1001 footer .container.flex {
         border: none;
         width: 100%;
-        max-width: 1288px;
+        max-width: 1330px;
         padding: 0 20px;
     }
 
@@ -265,17 +268,15 @@
         }
 
         .spz_1001 .spz-hero:before {
-          width: 602.7px;
-          height: 430.5px;
-          top: 572px;
-          right: -105.25px;
+          top: 537px;
+          right: -138px;
         }
 
         .spz_1001 .spz-hero:after {
             width: 388.24px;
             height: 100px;
             left: -228px;
-            bottom: 236px;
+            bottom: 199px;
         }
 
         .spz_1001 .spz-hero .spz-wrapper {
@@ -703,7 +704,7 @@
     } 
 
     .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList {
-      margin-bottom: 23px;
+      margin-bottom: 0;
     }
 
     .spz_1001 .spz-form-section form.mktoForm .mktoCheckboxList label {
@@ -713,7 +714,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 1.6;
-        padding-left: 8px;
+        padding-left: 12px;
         padding-right: 0;
         cursor: pointer;
         display: inline-flex;
@@ -782,7 +783,7 @@
 
     .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow {
         width: 100%;
-        margin-top: 8px;
+        margin-top: 7px;
     }
 
     .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton {
@@ -809,25 +810,30 @@
 
     .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer,
     .spz_1001 .spz-form-section .disclaimer {
-        margin: 8px auto 0;
+        margin: 0;
         padding: 0;
         color: #415364;
-        text-align: center;
+        text-align: left;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.6;
-        max-width: 60%;
+        max-width: 100%;
     }
 
     .spz_1001 .spz-form-section .disclaimer {
         max-width: unset;
+        font-size: 14px;
+        margin-top: 8px;
     }
 
-    .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a,
+    .spz_1001.form-submit .spz-form-section .disclaimer {
+      display: none;
+    }
+
     .spz_1001 .spz-form-section .disclaimer a {
         color: #0071CE;
-        font-size: 12px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.6;
@@ -835,14 +841,11 @@
         transition: all 0.1s ease-in-out;
     }
 
-    .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:hover,
     .spz_1001 .spz-form-section .disclaimer a:hover {
         text-decoration: none;
         font-weight: 600;
     }
 
-    .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:active,
-    .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
     .spz_1001 .spz-form-section .disclaimer a:active,
     .spz_1001 .spz-form-section .disclaimer a:focus-visible {
         text-decoration: none;
@@ -863,13 +866,7 @@
             top: 21px;
             right: 11px;
         }
-    }
-
-    @media(max-width: 1023.98px) {
-        .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow {
-            margin-top: 15px;
-        }
-    }
+    } 
 
     @media(max-width: 767.98px) {
         .spz_1001 .spz-form-section form.mktoForm .mktoFormRow {
@@ -893,10 +890,6 @@
             width: 20px;
             height: 20px;
         } */
-
-        .spz_1001 .spz-form-section form.mktoForm .mktoButtonRow {
-            margin-top: 11px;
-        }
 
         .spz_1001 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer {
             max-width: unset;
@@ -933,23 +926,23 @@
           const heroContent = {
             siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo__colored.svg",
             siteLogoAlt: "SailPoint",
-            contentSuperHeading: "Identity security platform",
-            contentHeading: "Discover, manage, and secure all identities and access",
+            contentSuperHeading: "Unified identity security",
+            contentHeading: "Discover, manage, and secure all identities",
             features: [
               {
                 checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
-                featureItemContent: "<b>Access Management.</b> Monitor user access. Auto-implement roles. Automatically approve or remove access. Reports.",
+                featureItemContent: "<b>Access management.</b> Monitor user access. Auto-implement roles. Streamline access approval or removal.",
               },
               {
                 checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
-                featureItemContent: "<b>Complete Coverage.</b> Manage non-employee access, entitlements across clouds, passwords, risk, etc. Detect threats.",
+                featureItemContent: "<b>Complete coverage.</b> Manage non-employee or privileged access, machine identities, entitlements across clouds, passwords, risk, etc. Detect threats.",
               },
               {
                 checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
-                featureItemContent: "<b>Compliance.</b> Demonstrate compliance with audit trails. GDPR, HIPAA, CCPA, FISMA, PCPD, PDPA, and more.",
+                featureItemContent: "<b>Compliance.</b> Demonstrate compliance with audit trails. GDPR, HIPAA, PCI, CCPA, FISMA, PCPD, PDPA, and more.",
               },
             ],
-            formArrow: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/frame_1171275834.svg",
+            formArrow: "//res.cloudinary.com/spiralyze/image/upload/v1730978717/sailpoint/1001/arrow.svg",
             formHeading: "Get live demo",
           };
           const additionalSection = {
@@ -1226,6 +1219,27 @@
               }, 1000);
             }
 
+
+            // Function to add .field-error class on closest parent .field class if .error is exist on input
+            function checkError(elem) {
+              let timeBuffer = setInterval(() => {
+                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
+                  elem.closest('.mktoFieldWrap').classList.add('error');
+                } else {
+                  elem.closest('.mktoFieldWrap').classList.remove('error');
+                }
+                if (elem && elem.value && (elem.value != '')) {
+                  elem.closest('.mktoFieldWrap').classList.add('filled');
+                } else {
+                  elem.closest('.mktoFieldWrap').classList.remove('filled');
+                }
+              }, 100);
+
+              setTimeout(() => {
+                clearInterval(timeBuffer);
+              }, 1000);
+            }
+
             document.querySelector('select#Country').addEventListener('change', () => {
               const stateRow = document.querySelector('.spz_1001 .spz-form-section form.mktoForm .mktoFormRow.field-10');
               const optOutRow = document.querySelector('.spz_1001 .spz-form-section form.mktoForm .mktoFormRow.field-31');
@@ -1262,7 +1276,13 @@
         } else {
           if (body.classList.contains('spz_1001')) {
             hiddenValue('SPZ_1001', 'SPZ_1001_Variant');
-            setHiddenFieldValue();
+            let callMultipleTimes = setInterval(() => {
+              setHiddenFieldValue();
+            }, 500);
+
+            setTimeout(() => {
+              clearInterval(callMultipleTimes);
+            }, 10000);
           }
         }
       }
@@ -1317,6 +1337,7 @@
     var spz_cro_Interval = setInterval(function () {
       var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
       if (intellimize1) {
+        clearInterval(spz_cro_Interval);
         var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
         //check if hidden field value is empty then only set the value else set the value with , seperated
         if (intellimize1.value == '') {
@@ -1327,12 +1348,12 @@
             intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
           }
         }
-
-        setTimeout(() => {
-          clearInterval(spz_cro_Interval);
-        }, 5000);
       }
     });
+
+    setTimeout(function () {
+      clearInterval(spz_cro_Interval);
+    }, 15000);
   }
   // Do not touch below hidden field code for any Experiment over
 
