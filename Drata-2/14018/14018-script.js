@@ -705,7 +705,7 @@
                 document.querySelector('.nav-links').scrollLeft = anchorToAdd.offsetLeft - 100;
             }
         });
-        
+
         // });
 
         if (document.querySelector('header ~ .hero-section-14018')) {
@@ -1962,7 +1962,22 @@
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-14018");
+        if (document.body.classList.contains("spz-14018")) {
+            document.body.classList.remove("spz-14018");
+        }
+
+        if (document.body.classList.contains("variant_1")) {
+            document.body.classList.remove("variant_1");
+        }
+
+        if (document.body.classList.contains("variant_2")) {
+            document.body.classList.remove("variant_2");
+        }
+
+        if (document.querySelector('.choose-variant-modal')) {
+            document.querySelector('.choose-variant-modal').remove();
+        }
+
         let removePage = setInterval(() => {
             if (document.querySelector('.spz-sec')) {
                 document.querySelectorAll('.spz-sec').forEach(function (sec) {
