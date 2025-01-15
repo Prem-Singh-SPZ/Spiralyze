@@ -30,9 +30,13 @@ function updateContent() {
 
     if (document.querySelectorAll('body.spz-7003 #site-main .spz-logo-wrapper').length == 0) {
         document.querySelector('body.spz-7003 #site-main .form-content .container').insertAdjacentHTML('afterbegin', '<div class="spz-logo-wrapper"><a href="https://www.bonterratech.com/" target="_blank"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1732288364/bonterra/7003/logo_bonterra.svg" alt="Bonterra logo" constrain="true" imagepreview="false"> </a></div>');
-    }
-    //logo change
 
+        if (document.querySelector('body.spz-7003 #site-footer .text-primary-light.fs-small p')) {
+            document.querySelector('body.spz-7003 #site-footer .text-primary-light.fs-small p').textContent = "Copyright © 2025 Bonterra. All rights reserved.";
+        }
+    }
+
+    //logo change
     if (document.querySelectorAll('body.spz-7003 #site-wrapper .form-content .spz-social-proof').length == 0) {
         //social proof
         document.querySelector('body.spz-7003 #site-wrapper .form-content .container').insertAdjacentHTML('beforeend', '<div class="spz-social-proof"><div class="sp-container"><div class="sp-title">Over <span>400,000 Customers</span> from Small Business to Enterprise</div><div class="sp-content"><picture><source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_1440.webp" type="image/webp"><source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logos_768.webp" type="image/webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7003/logo_360.webp" alt="Social Proof"></picture></div></div></div>');
