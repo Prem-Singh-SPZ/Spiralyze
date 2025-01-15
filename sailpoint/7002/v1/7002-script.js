@@ -221,13 +221,7 @@
                     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
                 });
 
-                // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow [name="Global_Opt_in__c"]').then(label => {
-                //     document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.remove('hidden');
-                //     document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm [name="Global_Opt_in__c"]').closest('.mktoFormRow').classList.add('row_Global_Opt_out__c');
-                // });
-
                 document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
-                // document.querySelector('input[name="Global_Opt_out__c"]') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden')) : optOutRow.classList.add('hidden');
             });
         }
 
@@ -249,12 +243,8 @@
             document.querySelector('html').classList.add('spz-no-scroll');
         }
         if (e.target.closest('.spz-close-modal')) {
-            // document.querySelector('.spz-form-container').classList.add('closing-modal');
-            // setTimeout(() => {
             document.body.classList.remove('spz-show-modal');
-            // document.querySelector('.spz-form-container').classList.remove('closing-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
-            // }, 600);
         }
     });
 
