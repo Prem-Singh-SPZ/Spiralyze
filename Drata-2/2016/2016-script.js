@@ -9,6 +9,9 @@
 	max-width: 1248px;
 	margin: 11px auto 41px;
 }
+.spz-2016 [class*="Page-individualContentContainer"] section[variant="collectionCheckboxesSectionWrapper"]{
+    min-height: auto;
+}
 .spz-2016 .spz-tiles .tiles-items {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -178,20 +181,25 @@
         },
     };
     function addHeroTiles(tilesData, whereToPut, heroSelector) {
+        // Remove spz-tiles if already present
+        if (document.querySelector('.spz-tiles')) {
+            document.querySelector('.spz-tiles').remove();
+        }
+
         const formTemplate = `<div class="spz-tiles">
-      ${tilesData.tiles.length !== 0 ? `<div class="tiles-items">
-				${tilesData.tiles.tilesItems.map((item) => {
+            ${tilesData.tiles.length !== 0 ? `<div class="tiles-items">
+                        ${tilesData.tiles.tilesItems.map((item) => {
             return `<div class="tile-item">
-						<img src="${item.tileImageURL}" class="tile-image" alt="${item.imageAlt}"/>
-						<div class="wrap-tile-info">
-							<div class="tile-heading">${item.tileHeading}</div>
-							<div class="tile-description">${item.tileDescription}</div>
-						</div>
-					</div>`;
+                                <img src="${item.tileImageURL}" class="tile-image" alt="${item.imageAlt}"/>
+                                <div class="wrap-tile-info">
+                                    <div class="tile-heading">${item.tileHeading}</div>
+                                    <div class="tile-description">${item.tileDescription}</div>
+                                </div>
+                            </div>`;
         }).join("")}
-			</div>`
+                    </div>`
                 : ``}
-    </div>`;
+            </div>`;
 
         document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
         document.querySelectorAll(".tiles-items .tile-item").forEach((item) => {
@@ -219,15 +227,17 @@
                     body.classList.add('spz-2016');
                     waitForElm(`.spz-2016 main section[variant="collectionCheckboxesSectionWrapper"] div[class*="CollectionCheckboxes-accordionContainer"]`).then(function () {
                         // if (!document.querySelector('.spz-tiles')) {
-                        // console.log('spz tiles section added');
+
                         addHeroTiles(heroContent, position, heroSelector);
                         // }
+
+                        createCookie('spz-2016-loaded', 'true', 1);
+
                     });
                 }
                 // else {
                 //     if (!document.querySelector('.spz-2016 .spz-tiles')) {
                 //         waitForElm(`.spz-2016 main section[variant="collectionCheckboxesSectionWrapper"] div[class*="CollectionCheckboxes-accordionContainer"]`).then(function () {
-                //             console.log('111111111111111');
                 //             addHeroTiles(heroContent, position, heroSelector);
                 //         });
                 //     }
@@ -238,17 +248,43 @@
 
     function loadfilled2016() {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-drata-prefill-2016')) {
-            bodyEle.classList.add('spz-drata-prefill-2016');
+        if (!bodyEle.classList.contains('spz-prefill-2016')) {
+            bodyEle.classList.add('spz-prefill-2016');
+            demoChecked();
         }
-        waitForElm('form.hs-form-private .hs_cro_test_2 .input .hs-input').then(function () {
-            let setValue = setInterval(() => {
-                if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').getAttribute('value') == 'Variant_2016') {
-                    clearInterval(setValue);
-                }
-                document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant_2016');
-            }, 100);
-        });
+        // waitForElm('form.hs-form-private .hs_cro_test_2 .input .hs-input').then(function () {
+        //     let setValue = setInterval(() => {
+        //         if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').getAttribute('value') == '2020_Control') {
+        //             clearInterval(setValue);
+        //         }
+        //         document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', '2020_Control');
+        //     }, 100);
+        // });
+    }
+
+    //Passing test details to hidden fields
+    function submitTestDetails(cro_test) {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test);
+        }
+    }
+
+    function demoChecked() {
+        const sInt = setInterval(() => {
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+
+            // Check if spz-2016-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != "") && isCookieExist('spz-2016-loaded')) {
+                clearInterval(sInt);
+                submitTestDetails('2020_Control');
+
+                // deleteCookie('spz-2016-loaded');
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(sInt);
+        }, 10000);
     }
 
     function removeTest() {
@@ -258,8 +294,8 @@
         if (document.querySelector('.spz-tiles')) {
             document.body.classList.remove("spz-tiles");
         }
-        if (document.querySelector('.spz-drata-prefill-2016')) {
-            document.body.classList.remove("spz-drata-prefill-2016");
+        if (document.querySelector('.spz-prefill-2016')) {
+            document.body.classList.remove("spz-prefill-2016");
         }
     }
 
@@ -290,34 +326,36 @@
     });
 
     function urlCheck(url) {
-        var targetTestURL = 'https://drata.com/';
+        // var targetTestURL = 'https://drata.com/';
         if (window.location.pathname === "/") {
-            // console.log('homepage');
             createTest();
         } else if (window.location.pathname.indexOf("/demo") > -1) {
-            // console.log('demo page');
-
             loadfilled2016();
+            waitForElm('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').then(function () {
+                if (document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video')) {
+                    document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').setAttribute('playsinline', '');
+                }
+            });
         } else {
             removeTest();
         }
     }
 
-    function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-        currentUrl = currentUrl.includes("#")
-            ? currentUrl.slice(0, currentUrl.indexOf("#"))
-            : currentUrl;
-        specifiedUrl = specifiedUrl.includes("#")
-            ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
-            : specifiedUrl;
-        if (includeQueryParams)
-            currentUrl = currentUrl.includes("?")
-                ? currentUrl.slice(0, currentUrl.indexOf("?"))
-                : currentUrl;
-        if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-            return true;
-        return false;
-    }
+    // function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+    //     currentUrl = currentUrl.includes("#")
+    //         ? currentUrl.slice(0, currentUrl.indexOf("#"))
+    //         : currentUrl;
+    //     specifiedUrl = specifiedUrl.includes("#")
+    //         ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
+    //         : specifiedUrl;
+    //     if (includeQueryParams)
+    //         currentUrl = currentUrl.includes("?")
+    //             ? currentUrl.slice(0, currentUrl.indexOf("?"))
+    //             : currentUrl;
+    //     if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+    //         return true;
+    //     return false;
+    // }
 
     function waitForElm(selector) {
         return new Promise(function (resolve) {
@@ -337,5 +375,33 @@
                 characterData: true,
             });
         });
+    }
+
+    // Create cookie
+    function createCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    // Check if cookie exists
+    function isCookieExist(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Delete cookie
+    function deleteCookie(name) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 })();

@@ -49,6 +49,11 @@
         },
     };
     function addHeroTiles(tilesData, whereToPut, heroSelector) {
+        // Remove spz-tiles if already present
+        if (document.querySelector('.spz-tiles')) {
+            return;
+        }
+
         const formTemplate = `<div class="spz-tiles">
                                       ${tilesData.tiles.length !== 0 ? `<div class="tiles-items">
                                                 ${tilesData.tiles.tilesItems.map((item) => {
