@@ -70,7 +70,6 @@ select:-webkit-autofill:active {
         @media screen and (max-width: 767.98px) {
           top: 12px;
           right: 12px;
-          
         }
 
         &:hover {
@@ -142,7 +141,9 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002_v1 #contact-us, .spz_7002_v1 #footer-cta, .spz_7002_v1 #get-started {
+.spz_7002_v1 #contact-us,
+.spz_7002_v1 #footer-cta,
+.spz_7002_v1 #get-started {
   display: none !important;
 }
 
@@ -173,8 +174,7 @@ select:-webkit-autofill:active {
 .spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country,
 .spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_State,
 .spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry,
-.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Number_of_Employees__c
- {
+.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Number_of_Employees__c {
   width: calc(50% - 8px);
 }
 
@@ -199,7 +199,10 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_7002_v1
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -219,7 +222,11 @@ select:-webkit-autofill:active {
   z-index: 9;
 }
 
-.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+.spz_7002_v1
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel
+  .mktoAsterix {
   display: none !important;
 }
 
@@ -248,10 +255,16 @@ select:-webkit-autofill:active {
   color: #415364 !important;
 }
 
-.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_7002_v1
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.active.typing
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_7002_v1
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.filled
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   width: auto !important;
-  top: -12px;
+  top: -11px;
   background: #fff;
   color: #0071ce !important;
   font-size: 12px;
@@ -700,5 +713,14 @@ html.spz-no-scroll {
         }
       }
     }
+  }
+
+  .mktoForm input[type="checkbox"] {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    border-radius: 4px;
+    outline: none;
   }
 }

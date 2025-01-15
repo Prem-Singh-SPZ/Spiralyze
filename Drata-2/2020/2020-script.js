@@ -4,6 +4,83 @@
                                     <path d="M1 1.5L5 5.5L1 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                                     </svg>`;
 
+    const heroSelector = `div[class*="CollectionCheckboxes-accordionContainer"]`;
+    const position = "beforebegin";
+    const heroContent = {
+        tiles: {
+            tilesItems: [
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729583645/drata/2016/SOC_2.svg`,
+                    imageAlt: `SOC 2`,
+                    tileHeading: `SOC 2`,
+                    tileDescription: `Automates the SOC 2 process so you can close deals faster.`,
+                },
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729747613/drata/2016/ISO-27001.png`,
+                    imageAlt: `ISO 27001`,
+                    tileHeading: `ISO 27001`,
+                    tileDescription: `The complete ISO 27001 playbook for seamless audits.`,
+                },
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729583645/drata/2016/PCI_DSS.svg`,
+                    imageAlt: `PCI DSS`,
+                    tileHeading: `PCI DSS`,
+                    tileDescription: `Manage PCI controls and requirements from a single dashboard.`,
+                },
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729583644/drata/2016/HIPAA.svg`,
+                    imageAlt: `HIPAA`,
+                    tileHeading: `HIPAA`,
+                    tileDescription: `Save time managing health information with premapped controls.`,
+                },
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729583644/drata/2016/GDPR.svg`,
+                    imageAlt: `GDPR`,
+                    tileHeading: `GDPR`,
+                    tileDescription: `Collect and process data for organizations in the EU.`,
+                },
+                {
+                    tileImageURL: `//res.cloudinary.com/spiralyze/image/upload/v1729583645/drata/2016/Custom_Frameworks.svg`,
+                    imageAlt: `Custom Frameworks`,
+                    tileHeading: `Other`,
+                    tileDescription: `Build custom frameworks that align with your goals.`,
+                },
+            ],
+        },
+    };
+    function addHeroTiles(tilesData, whereToPut, heroSelector) {
+        const formTemplate = `<div class="spz-tiles">
+                                      ${tilesData.tiles.length !== 0 ? `<div class="tiles-items">
+                                                ${tilesData.tiles.tilesItems.map((item) => {
+            return `<div class="tile-item">
+                                                        <img src="${item.tileImageURL}" class="tile-image" alt="${item.imageAlt}"/>
+                                                        <div class="wrap-tile-info">
+                                                            <div class="tile-heading">${item.tileHeading}</div>
+                                                            <div class="tile-description">${item.tileDescription}</div>
+                                                        </div>
+                                                    </div>`;
+        }).join("")}
+                                            </div>`
+                : ``}
+                                    </div>`;
+
+        document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
+        document.querySelectorAll(".tiles-items .tile-item").forEach((item) => {
+            item.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (e.target.classList.contains("tile-item")) {
+                    e.target.classList.toggle("active");
+                } else {
+                    if (e.target.parentElement.classList.contains("tile-item")) {
+                        e.target.parentElement.classList.toggle("active");
+                    } else {
+                        e.target.parentElement.parentElement.classList.toggle("active");
+                    }
+                }
+            });
+        });
+    }
+
     function createTest() {
         document.body.classList.add("spz-2020");
 
@@ -11,6 +88,10 @@
             createTabSection();
 
             submitTestDetails('2020_Variant');
+        });
+
+        waitForElm(`.spz-2020 main section[variant="collectionCheckboxesSectionWrapper"] div[class*="CollectionCheckboxes-accordionContainer"]`).then(function () {
+            addHeroTiles(heroContent, position, heroSelector);
         });
 
         createCookie('spz-2020-loaded', 'true', 1);

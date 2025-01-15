@@ -398,22 +398,6 @@
         }
     }
 
-    // function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    //     currentUrl = currentUrl.includes("#")
-    //         ? currentUrl.slice(0, currentUrl.indexOf("#"))
-    //         : currentUrl;
-    //     specifiedUrl = specifiedUrl.includes("#")
-    //         ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
-    //         : specifiedUrl;
-    //     if (!includeQueryParams)
-    //         currentUrl = currentUrl.includes("?")
-    //             ? currentUrl.slice(0, currentUrl.indexOf("?"))
-    //             : currentUrl;
-    //     if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-    //         return true;
-    //     return false;
-    // }
-
     // Generic Code
     function waitForElm(selector) {
         return new Promise(function (resolve) {
