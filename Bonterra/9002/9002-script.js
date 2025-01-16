@@ -136,6 +136,10 @@ let bodyLoaded = setInterval(function () {
                         document.querySelector(".spz-modal-form .spz-modal-form-container .the-form").appendChild(document.querySelector(formSelector));
                     }
                     formModify();
+
+                    if (document.querySelector('body.spz_9002 #site-footer .text-primary-light.fs-small p')) {
+                        document.querySelector('body.spz_9002 #site-footer .text-primary-light.fs-small p').textContent = "Copyright © 2025 Bonterra. All rights reserved.";
+                    }
                 }
             });
 
