@@ -1,7 +1,13 @@
 function createTest() {
   document.body.classList.add('spz-8001');
   waitForElm('.resource-form-row .mktoForm#mktoForm_1016 input').then(function (elm) {
-    formModify();
+
+    //check if form is already submitted then hide the form and show the content
+    if (getCookie('spz_8001_form_submit') === 'true') {
+      document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
+    } else {
+      formModify();
+    }
 
     hiddenValue('SPZ_8001', 'SPZ_8001_variant');
   });
@@ -49,6 +55,9 @@ function formModify() {
       elm.classList.remove('spz-sec-hide');
     });
     document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.add('spz-sec-hide');
+
+    //on form submit set the cookie  for a year
+    setCookie('spz_8001_form_submit', 'true', 365);
   });
 }
 
@@ -160,7 +169,13 @@ function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
     setCookie('HiddenFieldValue1016', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
   }
 
-  setHiddenFieldValue();
+  let callHF = setInterval(() => {
+    setHiddenFieldValue();
+  }, 100);
+
+  setTimeout(() => {
+    clearInterval(callHF);
+  }, 10000);
 }
 
 function setCookie(name, value, days) {
@@ -199,6 +214,17 @@ function setHiddenFieldValue() {
           intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
         }
       }
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('#mktoForm_1016 .mktoButton')) {
+      //inject current time and date in EST timezone into .intellimize2 hidden field
+      var d = new Date();
+      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      if (int2)
+        int2.value = n;
     }
   });
 }
