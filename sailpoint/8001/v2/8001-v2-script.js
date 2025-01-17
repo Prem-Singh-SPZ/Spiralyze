@@ -1,6 +1,6 @@
 function createTest() {
   document.body.classList.add('spz-8001');
-  waitForElm('.resource-form-row .mktoForm input').then(function (elm) {
+  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 input').then(function (elm) {
     formModify();
 
     hiddenValue('SPZ_8001', 'SPZ_8001_variant');
@@ -8,46 +8,55 @@ function createTest() {
 }
 
 function formModify() {
+  // hide section on initial load
+  document.querySelector('.spz-8001 .page-transition #product-features').classList.add('spz-sec-hide');
+  document.querySelector('.spz-8001 .page-transition main > .filter-element').classList.add('spz-sec-hide');
+  document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
+  document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.remove('hidden');
+
   if (document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
     document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
   }
 
-  document.querySelectorAll('#mktoForm_1016.mktoForm .mktoFormRow').forEach(function (elm) {
+  document.querySelectorAll('.mktoForm#mktoForm_1016 .mktoFormRow').forEach(function (elm) {
     if (elm.querySelector('.mktoField[name]:not([type="hidden"]):not([type="checkbox"])')) {
       elm.classList.add('row_' + elm.querySelector('.mktoField').getAttribute('name'));
     }
   });
 
   document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
-  document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
+  document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
 
-  waitForElm('.resource-form-row .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
+  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 .mktoCaptchaDisclaimer').then(function (elm) {
     if (document.querySelectorAll('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
-      document.querySelector('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
+      document.querySelector('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoCaptchaDisclaimer').outerHTML);
     }
 
-    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
-    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
-    document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
+    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
+    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
+    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
   });
 
   checkStateField();
 
   //on change of country field change state field to select
-  document.querySelector('.mktoForm #Country').addEventListener('change', function () {
+  document.querySelector('.mktoForm#mktoForm_1016 #Country').addEventListener('change', function () {
     checkStateField();
   });
 
-  waitForElm('.spz-8001 #contact_us_submit').then(() => {
-    console.log('form submit');
+  waitForElm('.spz-8001 .resource-form-row .mkto-wrap.w-full #contact_us_submit').then(() => {
+    document.querySelectorAll('.spz-8001 .page-transition main > .spz-sec-hide').forEach(function (elm) {
+      elm.classList.remove('spz-sec-hide');
+    });
+    document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.add('spz-sec-hide');
   });
 }
 
 function checkStateField() {
-  waitForElm('.mktoForm #LblState').then(function (elm) {
+  waitForElm('.mktoForm#mktoForm_1016 #LblState').then(function (elm) {
     let stateLabel = setInterval(() => {
-      if (document.querySelector('.mktoForm #LblState')) {
-        document.querySelector('.mktoForm #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
+      if (document.querySelector('.mktoForm#mktoForm_1016 #LblState')) {
+        document.querySelector('.mktoForm#mktoForm_1016 #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
       }
     }, 100);
 
@@ -140,15 +149,15 @@ function waitForElm(selector) {
 
 // Do not touch below hidden field code for any Experiment Start
 function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-  var ExistingHiddenFieldName = getCookie('HiddenFieldNameContact');
-  var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+  var ExistingHiddenFieldName = getCookie('HiddenFieldName1016');
+  var ExistingHiddenFieldValue = getCookie('HiddenFieldValue1016');
 
   if (!ExistingHiddenFieldName) {
-    setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
-    setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+    setCookie('HiddenFieldName1016', currentHiddenFieldName, 1);
+    setCookie('HiddenFieldValue1016', currentHiddenFieldValue, 1);
   } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-    setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-    setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+    setCookie('HiddenFieldName1016', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+    setCookie('HiddenFieldValue1016', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
   }
 
   setHiddenFieldValue();
@@ -180,7 +189,7 @@ function setHiddenFieldValue() {
     var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1016 input[name="intellimize1"]');
     if (intellimize1) {
       clearInterval(spz_cro_Interval);
-      var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+      var ExistingHiddenFieldValue = getCookie('HiddenFieldValue1016');
       //check if hidden field value is empty then only set the value else set the value with , seperated
       if (intellimize1.value == '') {
         intellimize1.value = ExistingHiddenFieldValue;

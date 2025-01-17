@@ -152,6 +152,7 @@ let bodyLoaded = setInterval(function () {
                         email.closest('.mktoFieldWrap').classList.remove('filled');
                     } else {
                         email.closest('.mktoFieldWrap').classList.add('filled');
+                        email.focus();
                     }
                 }
                 if (e.target.classList.contains('hero-close-form') || e.target.classList.contains('spz-modal-form-wrapper')) {
@@ -274,25 +275,7 @@ let bodyLoaded = setInterval(function () {
                         }, 1000);
                     });
                 });
-                // Function to add .field-error class on closest parent .field class if .error is exist on input
-                function checkError(elem) {
-                    let timeBuffer = setInterval(() => {
-                        if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none' && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
-                            elem.closest('.mktoFieldWrap').classList.add('error');
-                        } else {
-                            elem.closest('.mktoFieldWrap').classList.remove('error');
-                        }
-                        if (elem && elem.value && (elem.value != '')) {
-                            elem.closest('.mktoFieldWrap').classList.add('filled');
-                        } else {
-                            elem.closest('.mktoFieldWrap').classList.remove('filled');
-                        }
-                    }, 100);
 
-                    setTimeout(() => {
-                        clearInterval(timeBuffer);
-                    }, 1000);
-                }
 
                 document.querySelector('#mktoForm_1053 .mktoButton').addEventListener('click', function () {
                     setTimeout(() => {
@@ -307,5 +290,24 @@ let bodyLoaded = setInterval(function () {
 
             }
         }
+    }
+    // Function to add .field-error class on closest parent .field class if .error is exist on input
+    function checkError(elem) {
+        let timeBuffer = setInterval(() => {
+            if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none' && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
+                elem.closest('.mktoFieldWrap').classList.add('error');
+            } else {
+                elem.closest('.mktoFieldWrap').classList.remove('error');
+            }
+            if (elem && elem.value && (elem.value != '')) {
+                elem.closest('.mktoFieldWrap').classList.add('filled');
+            } else {
+                elem.closest('.mktoFieldWrap').classList.remove('filled');
+            }
+        }, 100);
+    
+        setTimeout(() => {
+            clearInterval(timeBuffer);
+        }, 1000);
     }
 });
