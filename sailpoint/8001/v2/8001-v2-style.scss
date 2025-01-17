@@ -151,16 +151,15 @@ body.spz-8001 {
                       .mktoFormRow {
                         width: 100%;
 
-                        &.row_FirstName,
-                        &.row_LastName,
-                        &.row_Company,
-                        &.row_Title,
-                        &.row_Phone,
-                        &.row_Number_of_Employees__c,
-                        &.row_Country,
-                        &.row_Country + .mktoFormRow {
+                        // &.row_FirstName,
+                        // &.row_LastName,
+                        // &.row_Company,
+                        // &.row_Title,
+                        // &.row_Phone,
+                        // &.row_Number_of_Employees__c,
+                        // &.row_Country,
+                        &[class*="row_"],  &.row_Country + .mktoFormRow {
                           width: calc(50% - 12px);
-
                           @media screen and (max-width: 767.98px) {
                             width: 100%;
                           }

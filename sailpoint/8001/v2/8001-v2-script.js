@@ -30,17 +30,13 @@ function formModify() {
     }
   });
 
-  document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
-  document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
-
-  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 .mktoCaptchaDisclaimer').then(function (elm) {
-    if (document.querySelectorAll('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
-      document.querySelector('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoCaptchaDisclaimer').outerHTML);
-    }
-
-    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
+  
+  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 .mktoCheckboxList').then(function (elm) {
+    // document.querySelector('.mktoForm#mktoForm_1016 .mktoCheckboxList').closest('.mktoFormRow').classList.add('row_mktoCheckboxList');
+    // document.querySelector('.mktoForm#mktoForm_1016 .mktoPlaceholderGlobal_Opt_in__c').closest('.mktoFormRow').classList.add('row_mktoPlaceholderGlobal_Opt_in__c');
+    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
+    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblTitle').innerHTML = '<div class="mktoAsterix">*</div>Job title';
     document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblCountry').innerHTML = '<div class="mktoAsterix">*</div>Country';
-    document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoFormRow #LblcontactFormComments').innerHTML = `<div class="mktoAsterix">*</div>I'd like to discuss`;
   });
 
   checkStateField();
