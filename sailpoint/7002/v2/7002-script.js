@@ -55,6 +55,8 @@
         }
 
 
+
+
         // Add class in mktoField using the name attribute
         var form_fields = document.querySelectorAll('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
@@ -244,6 +246,13 @@
         if (e.target.closest('.spz-close-modal')) {
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
+        }
+        if (e.target.closest('.mktoButton')) {
+            //inject current time and date in EST timezone into .intellimize2 hidden field
+            var d = new Date();
+            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+            if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm input[name="intellimize2"]'))
+                document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm input[name="intellimize2"]').value = n;
         }
     });
 
