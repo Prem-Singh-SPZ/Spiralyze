@@ -1,0 +1,230 @@
+<!-- <p><span>A <strong>pop-up</strong> will appear to confirm your meeting details. </span></p> -->
+<p><span style="font-family: Founders Grotesk,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    Founders Grotesk,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color font-family: emoji;
+    font-weight: 400;">Upon completion, please select your preferred meeting time. </span></p>
+
+<!-- progressive form styling -->
+<style id="progressive-style">
+  .p-field-hidden {
+    display: none !important;
+  }
+</style>
+
+<p>
+  <script>
+    // Form ID and tenant info
+    var formID = "#pardot-form"; // Padrot form ID, almost always is #pardot-form
+    var tenantDomain = "maxio"; // REPLACE and remove square brackets
+    var tenantRouter = "mx_demo"; // REPLACE and remove square brackets
+
+    // Debugging and retry
+    var debugMessages = true; // Do you want to see what data is being submitted to Chili Piper?
+    var retryFormSearch = true; // Should we retry if the form is not found by id on script load
+    //
+    // No changes should be necessary from this point
+    //
+    // Get form
+    var form = document.querySelector(formID);
+    addFormListener();
+    // Retry adding the form event listener
+    var count = 1;
+    function addFormListener() {
+      count++;
+      if (form) {
+        form.addEventListener("submit", submitHandler);
+        return;
+      } else if ((typeof retryFormSearch !== "undefined" ? retryFormSearch : true) && count < 10) {
+        setTimeout(() => {
+          form = document.querySelector(formID);
+          addFormListener();
+        }, 1000);
+      } else {
+        console.log("no form found on this page, id used - " + formID);
+        return;
+      }
+    }
+    // Submit button click handler
+    function submitHandler(event) {
+      // Post DOM message
+      window.parent.postMessage(
+        {
+          message: "PARDOT_DATA_READY",
+          data: getLeadObject(tenantDomain, tenantRouter, form),
+        },
+        "*"
+      );
+    }
+    // Get Lead object from form fields
+    function getLeadObject(tenantDomain, tenantRouter, form) {
+      // Loop through all form elements and map
+      var data = {
+        CPTenantDomain: tenantDomain,
+        CPTenantRouter: tenantRouter,
+      };
+      // Save label names
+      var labelsDict = {};
+      form.querySelectorAll("label").forEach((label) => {
+        labelsDict[label.htmlFor] = stripText(label.textContent);
+      });
+      // Fill lead object
+      for (var i = 0, elem; (elem = form.elements[i++]);) {
+        var field_name; // Reset field name - this was not being reset for some reason
+        if (elem.type.includes("submit") || elem.type.includes("fieldset")) {
+          continue;
+        } else if (elem.type.includes("select")) {
+          // Get the field name from label or element text
+          var field_name = parseClassNames(elem.parentElement.className) || elem.options[0].value || stripText(elem.options[0].text) || labelsDict[elem.name];
+          if (!field_name) {
+            if (typeof debugMessages !== "undefined" ? debugMessages : true) {
+              console.log("failed to find a valid field name for " + elem.name);
+            }
+            continue;
+          }
+          // Save to lead obj
+          if (elem.selectedIndex === 0) {
+            data[field_name] = "[not provided]";
+          } else {
+            data[field_name] = elem.options[elem.selectedIndex].text;
+          }
+        } else if (elem.type === "hidden" || elem.parentElement.className.includes("hidden")) {
+          // Get the field name from class name
+          var field_name = parseClassNames(elem.parentElement.className) || elem.name;
+          if (!field_name) {
+            if (typeof debugMessages !== "undefined" ? debugMessages : true) {
+              console.log("failed to find a valid field name for " + elem.name);
+            }
+            continue;
+          }
+          // Save to lead obj
+          data[field_name] = (v = elem.value) ? v : "[not provided]";
+        } else {
+          // Get the field name from label or element placeholder
+          var field_name = parseClassNames(elem.parentElement.className) || stripText(elem.placeholder) || labelsDict[elem.name] || labelsDict[elem.id];
+          if (!field_name) {
+            if (typeof debugMessages !== "undefined" ? debugMessages : true) {
+              console.log("failed to find a valid field name for " + elem.name);
+            }
+            continue;
+          }
+          // Save to lead obj
+          if (["radio", "checkbox"].includes(elem.type)) {
+            data[field_name] = typeof elem.checked !== "undefined" ? elem.checked : "[not provided]";
+          } else {
+            data[field_name] = elem.value || "[not provided]";
+          }
+        }
+      }
+      if (typeof debugMessages !== "undefined" ? debugMessages : true) {
+        // Log data and labels for debugging
+        console.log(labelsDict);
+        console.log(data);
+      }
+      return data;
+    }
+    // Strip characters and spaces
+    function stripText(text) {
+      return camelText(text).replace(/[^\w]/gi, "");
+    }
+    // Make text more readable
+    function camelText(str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return "";
+        return match.toUpperCase();
+      });
+    }
+    // Get field name from parent class
+    function parseClassNames(className) {
+      var field_classes = className.split(" ").filter((value) => !["", "form-field", "pd-hidden", "hidden"].includes(value));
+      for (var i in field_classes) {
+        if (field_classes[i].includes("CP_")) {
+          return field_classes[i];
+        }
+      }
+      return undefined;
+    }
+
+    //progressive form code starts
+    waitForElm('form#pardot-form .country.pd-select').then(function (elm) {
+      //hiding last fields and checkbox
+      document.querySelector('form#pardot-form .country.pd-select').classList.add('p-field-hidden');
+      document.querySelector('form#pardot-form .Employee_Count').classList.add('p-field-hidden');
+      document.querySelector('form#pardot-form .pd-checkbox').classList.add('p-field-hidden');
+
+      //applying classes if fields are filled
+      var all_inputs = document.querySelectorAll('form#pardot-form input, form#pardot-form select');
+      all_inputs.forEach(function (element) {
+        if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.form-field') !== null) {
+          element.closest('form#pardot-form .form-field').classList.add('filled');
+        }
+        if (element.tagName !== 'SELECT' && element.value != '' && element.closest('.form-field') !== null) {
+          element.closest('form#pardot-form .form-field').classList.add('filled');
+        }
+      });
+      var selector = 'form#pardot-form .form-field input, form#pardot-form .form-field select';
+      document.addEventListener('focus', function (event) {
+        if (event.target.matches && event.target.matches(selector)) {
+          event.target.closest('form#pardot-form .form-field').classList.add('typing');
+        }
+      }, true);
+      checkFilledVisibility();
+
+      //applying classes on focus, blur, keyup, change events
+      var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
+      for (let s_event of eventList) {
+        document.addEventListener(s_event, function (event) {
+          checkFilledVisibility();
+          if (event.target.matches && event.target.matches(selector)) {
+            if (event.target.value == null || event.target.value == '') {
+              event.target.closest('form#pardot-form .form-field').classList.remove('filled');
+            } else {
+              if (event.target.tagName == 'SELECT' && event.target.selectedIndex !== 0) {
+                event.target.closest('form#pardot-form .form-field').classList.add('filled');
+              }
+              if (event.target.tagName !== 'SELECT') {
+                event.target.closest('form#pardot-form .form-field').classList.add('filled');
+              }
+            }
+          }
+        });
+      }
+      document.addEventListener('focusout', function (event) {
+        document.querySelectorAll('form#pardot-form .form-field.typing').forEach(function (elem) {
+          elem.classList.remove('typing');
+          checkFilledVisibility();
+        })
+      }, true);
+
+      function checkFilledVisibility() {
+        if (document.querySelector('form#pardot-form .form-field.first_name').classList.contains('filled') && document.querySelector('form#pardot-form .form-field.last_name').classList.contains('filled') && document.querySelector('form#pardot-form .form-field.email').classList.contains('filled') && document.querySelector('form#pardot-form .form-field.company').classList.contains('filled')) {
+          document.querySelectorAll('.form-field.p-field-hidden').forEach(function (elem) {
+            elem.classList.remove('p-field-hidden');
+          })
+
+          document.querySelector('form#pardot-form ').classList.add('p-full-form');
+        }
+      }
+    });
+
+    function waitForElm(selector) {
+      return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+          return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+          if (document.querySelector(selector)) {
+            resolve(document.querySelector(selector));
+            observer.disconnect();
+          }
+        });
+        observer.observe(document, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+          characterData: true,
+        });
+      });
+    }
+    //progressive form code ends
+
+  </script>
+</p>
