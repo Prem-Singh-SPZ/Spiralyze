@@ -43,6 +43,9 @@ function urlCheck(url) {
         if (document.querySelector('body').classList.contains('spz_2009')) {
             document.querySelector('body').classList.remove('spz_2009');
         }
+        if (document.querySelector('body').classList.contains('spz_2009_HF')) {
+			document.querySelector('body').classList.remove('spz_2009_HF');
+		}
     }
 }
 
@@ -63,7 +66,6 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
 }
 
 function initTest2009() {
-
     let bodyLoaded = setInterval(function () {
         const body = document.querySelector('body');
         if (body) {
