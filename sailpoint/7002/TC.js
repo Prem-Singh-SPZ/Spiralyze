@@ -33,8 +33,9 @@
                         //inject current time and date in EST timezone into .intellimize2 hidden field
                         var d = new Date();
                         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-                        if (document.querySelector('.spz_7002-tc #mktoForm_1017.mktoForm input[name="intellimize2"]'))
-                            document.querySelector('.spz_7002-tc #mktoForm_1017.mktoForm input[name="intellimize2"]').value = n;
+                        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                        if (int2)
+                            int2.value = n;
                     }
                 });
             }

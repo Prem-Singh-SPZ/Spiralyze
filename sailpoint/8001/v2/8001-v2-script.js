@@ -1,6 +1,6 @@
 function createTest() {
   document.body.classList.add('spz-8001');
-  waitForElm('#contact-us .mktoForm input').then(function (elm) {
+  waitForElm('.resource-form-row .mktoForm input').then(function (elm) {
     formModify();
 
     hiddenValue('SPZ_8001', 'SPZ_8001_variant');
@@ -8,11 +8,11 @@ function createTest() {
 }
 
 function formModify() {
-  if (document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
-    document.querySelector('#page-container .page-transition main #contact-us .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
+  if (document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
+    document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
   }
 
-  document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow').forEach(function (elm) {
+  document.querySelectorAll('#mktoForm_1016.mktoForm .mktoFormRow').forEach(function (elm) {
     if (elm.querySelector('.mktoField[name]:not([type="hidden"]):not([type="checkbox"])')) {
       elm.classList.add('row_' + elm.querySelector('.mktoField').getAttribute('name'));
     }
@@ -21,9 +21,9 @@ function formModify() {
   document.querySelector('.row_FirstName').insertAdjacentElement('beforebegin', document.querySelector('.row_Email'));
   document.querySelector('.mkto-wrap .mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
 
-  waitForElm('#contact-us .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
-    if (document.querySelectorAll('.page-transition main #contact-us .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
-      document.querySelector('.page-transition main #contact-us .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
+  waitForElm('.resource-form-row .mktoForm .mktoCaptchaDisclaimer').then(function (elm) {
+    if (document.querySelectorAll('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner > .mktoCaptchaDisclaimer').length === 0) {
+      document.querySelector('.page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .disclaimer').insertAdjacentHTML('afterend', document.querySelector('.mkto-wrap .mktoForm .mktoCaptchaDisclaimer').outerHTML);
     }
 
     document.querySelector('.mkto-wrap .mktoForm .mktoFormRow #LblNumber_of_Employees__c').innerHTML = '<div class="mktoAsterix">*</div>Number of employees';
@@ -36,6 +36,10 @@ function formModify() {
   //on change of country field change state field to select
   document.querySelector('.mktoForm #Country').addEventListener('change', function () {
     checkStateField();
+  });
+
+  waitForElm('.spz-8001 #contact_us_submit').then(() => {
+    console.log('form submit');
   });
 }
 
@@ -173,7 +177,7 @@ function getCookie(name) {
 
 function setHiddenFieldValue() {
   var spz_cro_Interval = setInterval(function () {
-    var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
+    var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1016 input[name="intellimize1"]');
     if (intellimize1) {
       clearInterval(spz_cro_Interval);
       var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');

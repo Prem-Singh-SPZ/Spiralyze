@@ -65,7 +65,7 @@ body.spz-8001 {
           }
         }
 
-        > #product-features {
+        > #product-features, #contact-us {
           display: none !important;
 
           & + .filter-element {
@@ -73,7 +73,8 @@ body.spz-8001 {
           }
         }
 
-        #contact-us {
+        .resource-form-row {
+          display: block !important;
           // position: fixed;
           // top: 0;
           // left: 0;
@@ -93,9 +94,9 @@ body.spz-8001 {
             justify-content: center;
 
             > .column {
-              &:first-child {
-                display: none;
-              }
+              // &:first-child {
+              //   display: none;
+              // }
 
               &:last-child {
                 width: 100%;
