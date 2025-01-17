@@ -74,33 +74,38 @@ function initTest2009() {
 			if (window.location.pathname === "/") {
 				if (!body.classList.contains('spz_2009')) {
 					body.classList.add('spz_2009');
+					if (document.querySelector('body').classList.contains('spz_2009_HF')) {
+						document.querySelector('body').classList.remove('spz_2009_HF');
+					}
 
-					document.querySelector('main section.hero a.btn.btn--hotpink').innerHTML = 'Get a demo';
-					document.querySelector('main section.hero a.btn.btn--hotpink').classList.add('spz_2009_v1');
-					document.querySelector('main section.hero a.btn.btn--hotpink').setAttribute('href', 'https://www.sailpoint.com/demo');
-					document.querySelector('main section.hero a.btn.btn--hotpink').addEventListener('click', (event) => {
-						event.preventDefault(); // Prevent the default link behavior
-						document.querySelector('[data-sentry-component="MainLargeNavigation"] a[href="/demo"]').click()
+					waitForElm('main section.hero a.btn.btn--hotpink').then((elm) => {
+						document.querySelector('main section.hero a.btn.btn--hotpink').innerHTML = 'Get a demo';
+						document.querySelector('main section.hero a.btn.btn--hotpink').classList.add('spz_2009_v1');
+						document.querySelector('main section.hero a.btn.btn--hotpink').setAttribute('href', 'https://www.sailpoint.com/demo');
+						document.querySelector('main section.hero a.btn.btn--hotpink').addEventListener('click', (event) => {
+							event.preventDefault(); // Prevent the default link behavior
+							document.querySelector('a[href="/demo"]').click()
 
-						setTimeout(function () {
-							hiddenValue('spz_2009', 'SPZ_2009_variant1');
-							document.querySelector('body').classList.remove('spz_2009');
-						}, 2000)
+							setTimeout(function () {
+								hiddenValue('spz_2009', 'SPZ_2009_variant1');
+								document.querySelector('body').classList.remove('spz_2009');
+							}, 200)
 
-					});
+						});
 
-					document.querySelector('main section.hero a.btn.btn--arrow').innerHTML = 'Take a tour <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 11" class="aspect-[16/11] w-4" data-sentry-element="svg" data-sentry-component="Arrow" data-sentry-source-file="arrow.tsx"><path fill="currentColor" d="M15.759 4.726 11.49.252a.787.787 0 0 0-1.155 0 .893.893 0 0 0 0 1.216l2.865 3.003H.81a.862.862 0 0 0 0 1.72h12.393L10.343 9.2a.893.893 0 0 0 0 1.216.789.789 0 0 0 1.154 0l4.268-4.474a.894.894 0 0 0-.006-1.215Z" data-sentry-element="path" data-sentry-source-file="arrow.tsx"></path></svg>';
-					document.querySelector('main section.hero a.btn.btn--arrow').classList.add('spz_2009_v1');
-					document.querySelector('main section.hero a.btn.btn--arrow').setAttribute('href', '/demo/interactive');
-					document.querySelector('main section.hero a.btn.btn--arrow').addEventListener('click', (event) => {
-						event.preventDefault(); // Prevent the default link behavior
-						document.querySelector('a[href="/demo/interactive"]').click()
+						document.querySelector('main section.hero a.btn.btn--arrow').innerHTML = 'Take a tour <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 11" class="aspect-[16/11] w-4" data-sentry-element="svg" data-sentry-component="Arrow" data-sentry-source-file="arrow.tsx"><path fill="currentColor" d="M15.759 4.726 11.49.252a.787.787 0 0 0-1.155 0 .893.893 0 0 0 0 1.216l2.865 3.003H.81a.862.862 0 0 0 0 1.72h12.393L10.343 9.2a.893.893 0 0 0 0 1.216.789.789 0 0 0 1.154 0l4.268-4.474a.894.894 0 0 0-.006-1.215Z" data-sentry-element="path" data-sentry-source-file="arrow.tsx"></path></svg>';
+						document.querySelector('main section.hero a.btn.btn--arrow').classList.add('spz_2009_v1');
+						document.querySelector('main section.hero a.btn.btn--arrow').setAttribute('href', '/demo/interactive');
+						document.querySelector('main section.hero a.btn.btn--arrow').addEventListener('click', (event) => {
+							event.preventDefault(); // Prevent the default link behavior
+							document.querySelector('a[href="/demo/interactive"]').click()
 
-						setTimeout(function () {
-							hiddenValue('spz_2009', 'SPZ_2009_variant1');
-							document.querySelector('body').classList.remove('spz_2009');
-						}, 2000)
+							setTimeout(function () {
+								hiddenValue('spz_2009', 'SPZ_2009_variant1');
+								document.querySelector('body').classList.remove('spz_2009');
+							}, 200)
 
+						});
 					});
 
 					// const button = document.querySelector('main section.hero a.btn.btn--arrow');
