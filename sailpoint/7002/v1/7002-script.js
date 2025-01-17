@@ -246,15 +246,6 @@
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
         }
-
-        if (e.target.closest('.mktoButton')) {
-            //inject current time and date in EST timezone into .intellimize2 hidden field
-            var d = new Date();
-            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-            if (int2)
-                int2.value = n;
-        }
     });
 
     function removeTest() {
@@ -326,6 +317,18 @@
                 }
             }
         });
+
+        //click event listener
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+                //inject current time and date in EST timezone into .intellimize2 hidden field
+                var d = new Date();
+                var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                if (int2)
+                    int2.value = n;
+            }
+        });
     }
     // Do not touch below hidden field code for any Experiment over
 
@@ -391,7 +394,7 @@
     urlCheck(url);
 
     function urlCheck(url) {
-        if (urls.includes(url)) {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
             createTest();
         } else {
             removeTest();

@@ -26,18 +26,6 @@
                 setTimeout(() => {
                     clearInterval(callHF);
                 }, 10000);
-
-
-                document.addEventListener('click', function (e) {
-                    if (e.target.closest('.mktoButton')) {
-                        //inject current time and date in EST timezone into .intellimize2 hidden field
-                        var d = new Date();
-                        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-                        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-                        if (int2)
-                            int2.value = n;
-                    }
-                });
             }
         });
     }
@@ -108,31 +96,17 @@
         }
     });
     var url = location.href;
+    //take current url without query param
+
     urlCheck(url);
 
     function urlCheck(url) {
-        if (urls.includes(url)) {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
             createTest();
         } else {
             removeTest();
         }
     }
-
-    // function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    //   currentUrl = currentUrl.includes("#")
-    //     ? currentUrl.slice(0, currentUrl.indexOf("#"))
-    //     : currentUrl;
-    //   specifiedUrl = specifiedUrl.includes("#")
-    //     ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
-    //     : specifiedUrl;
-    //   if (!includeQueryParams)
-    //     currentUrl = currentUrl.includes("?")
-    //       ? currentUrl.slice(0, currentUrl.indexOf("?"))
-    //       : currentUrl;
-    //   if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-    //     return true;
-    //   return false;
-    // }
 
     // Generic Code
     function waitForElm(selector) {
@@ -209,6 +183,17 @@
                         intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
                     }
                 }
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+                //inject current time and date in EST timezone into .intellimize2 hidden field
+                var d = new Date();
+                var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                if (int2)
+                    int2.value = n;
             }
         });
     }
