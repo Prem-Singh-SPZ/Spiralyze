@@ -1,3 +1,11 @@
+// List of URLs
+const urls = [
+    "https://www.sailpoint.com/",
+    "https://www.sailpoint.com/demo",
+    "https://www.sailpoint.com/demo/interactive"
+];
+
+
 var url = location.href;
 urlCheck(url);
 
@@ -29,12 +37,8 @@ window.addEventListener("locationchange", function () {
 });
 
 function urlCheck(url) {
-    var allblogsurlstring = "https://www.sailpoint.com/";
-    if (window.location.pathname == '/') {
-        allblogsurlstring = window.location.href;
-    }
-    initTest2009();
-    if (isSameUrl(url, allblogsurlstring, true)) {
+    if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+        initTest2009();
     } else {
         if (document.querySelector('body').classList.contains('spz_2009')) {
             document.querySelector('body').classList.remove('spz_2009');
@@ -155,35 +159,42 @@ function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
         setCookie('HiddenFieldValue', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
-    function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
+    let callHF = setInterval(() => {
+        setHiddenFieldValue();
+    }, 100);
+
+    setTimeout(() => {
+        clearInterval(callHF);
+    }, 10000);
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=sailpoint.com;";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+function setHiddenFieldValue() {
+    var spz_cro_Interval = setInterval(function () {
+        var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+        if (intellimize1) {
+            clearInterval(spz_cro_Interval);
+            var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
+            intellimize1.value = ExistingHiddenFieldValue;
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=sailpoint.com;";
-    }
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-    function setHiddenFieldValue() {
-        var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
-            if (intellimize1) {
-                clearInterval(spz_cro_Interval);
-                var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-                intellimize1.value = ExistingHiddenFieldValue;
-            }
-        });
-    }
-    setHiddenFieldValue();
+    });
 }
 // Do not touch below hidden field code for any Experiment over
