@@ -1,6 +1,6 @@
 function createTest() {
   document.body.classList.add('spz-8001');
-  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 input').then(function (elm) {
+  waitForElm('.resource-form-row .mktoForm#mktoForm_1016 input').then((elm) => {
 
     //check if form is already submitted then hide the form and show the content
     if (getCookie('spz_8001_form_submit') === 'true') {
