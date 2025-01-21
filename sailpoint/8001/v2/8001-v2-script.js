@@ -30,7 +30,7 @@ function formModify() {
     }
   });
 
-  
+
   waitForElm('.resource-form-row .mktoForm#mktoForm_1016 .mktoCheckboxList').then(function (elm) {
     // document.querySelector('.mktoForm#mktoForm_1016 .mktoCheckboxList').closest('.mktoFormRow').classList.add('row_mktoCheckboxList');
     // document.querySelector('.mktoForm#mktoForm_1016 .mktoPlaceholderGlobal_Opt_in__c').closest('.mktoFormRow').classList.add('row_mktoPlaceholderGlobal_Opt_in__c');
@@ -58,17 +58,23 @@ function formModify() {
 }
 
 function checkStateField() {
-  waitForElm('.mktoForm#mktoForm_1016 #LblState').then(function (elm) {
-    let stateLabel = setInterval(() => {
-      if (document.querySelector('.mktoForm#mktoForm_1016 #LblState')) {
-        document.querySelector('.mktoForm#mktoForm_1016 #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
+  // waitForElm('.mktoForm#mktoForm_1016 #LblState').then(function (elm) {
+  let stateLabel = setInterval(() => {
+    if (document.querySelector('.mktoForm#mktoForm_1016 #LblState')) {
+      document.querySelector('.mktoForm#mktoForm_1016 #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
+      document.querySelector('.mktoForm#mktoForm_1016 #State').closest('.mktoFormRow').classList.add('row_mktoState');
+    }
+    else {
+      if (document.querySelector('.mktoFormRow.row_mktoState')) {
+        document.querySelector('.mktoFormRow.row_mktoState').classList.remove('row_mktoState')
       }
-    }, 100);
+    }
+  },);
 
-    setTimeout(() => {
-      clearInterval(stateLabel);
-    }, 5000);
-  });
+  setTimeout(() => {
+    clearInterval(stateLabel);
+  }, 1000);
+  // });
 }
 
 history.pushState = (function (f) {
