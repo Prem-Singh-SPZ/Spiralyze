@@ -32,6 +32,10 @@
         if (document.querySelectorAll('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0 && document.querySelector('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
             document.querySelector('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
             document.querySelector('.spz_7002_v1 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
+
+            document.querySelectorAll('.spz_7002_v1 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el){
+                el.classList.add('spz-hero-cta');
+            })
         }
     }
 

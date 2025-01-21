@@ -196,6 +196,12 @@
                     int2.value = n;
             }
         });
+
+        if (document.querySelector('.spz_7002-tc #page-container .hero--homepage .hero__buttons .btn')) {
+            document.querySelectorAll('#page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
+                el.classList.add('spz-hero-cta');
+            })
+        }
     }
 })();
 // Do not touch below hidden field code for any Experiment over
