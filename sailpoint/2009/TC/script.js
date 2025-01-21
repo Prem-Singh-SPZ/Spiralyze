@@ -2,7 +2,7 @@
 const urls = [
 	"https://www.sailpoint.com/",
 	"https://www.sailpoint.com/demo",
-	"https://www.sailpoint.com/demo/interactive"
+	"https://www.sailpoint.com/demo/interactive",
 ];
 
 var url = location.href;
@@ -37,10 +37,10 @@ window.addEventListener("locationchange", function () {
 
 function urlCheck(url) {
 	if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
-		initTest2009();
+		initTC();
 	} else {
-		if (document.querySelector('body').classList.contains('spz_2009')) {
-			document.querySelector('body').classList.remove('spz_2009');
+		if (document.querySelector('body').classList.contains('SPZ_2009_tc')) {
+			document.querySelector('body').classList.remove('SPZ_2009_tc');
 		}
 		if (document.querySelector('body').classList.contains('spz_2009_tc_HF')) {
 			document.querySelector('body').classList.remove('spz_2009_tc_HF');
@@ -56,23 +56,23 @@ function initTC() {
 			if (!body.classList.contains('SPZ_2009_tc')) {
 				body.classList.add('SPZ_2009_tc');
 				hiddenValue('SPZ_2009', 'SPZ_2009_TrueControl');
-				removeSpecificCookieValue('SPZ_2009', 'SPZ_2009_Variant');
 			}
 		}
 		else {
 			clearInterval(bodyLoaded);
 			document.body.classList.add('spz_2009_tc_HF');
-			hiddenValue('spz_2009', 'SPZ_2009_variant2');
+			// hiddenValue('spz_2009', 'SPZ_2009_variant2');
+			let callHF = setInterval(() => {
+				setHiddenFieldValue();
+			}, 100);
+
+			setTimeout(() => {
+				clearInterval(callHF);
+			}, 10000);
 		}
 	});
 }
 
-function removeSpecificCookieValue(targetName, targetValue) {
-	['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
-		var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
-		setCookie(key, values || '', 1);
-	});
-}
 // Generic Code
 function waitForElm(selector) {
 	return new Promise(function (resolve) {
@@ -131,11 +131,31 @@ function getCookie(name) {
 }
 function setHiddenFieldValue() {
 	var spz_cro_Interval = setInterval(function () {
-		var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
-		if (intellimize1) {
-			clearInterval(spz_cro_Interval);
-			var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-			intellimize1.value = ExistingHiddenFieldValue;
+        var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+        if (intellimize1) {
+            clearInterval(spz_cro_Interval);
+            var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
+            //check if hidden field value is empty then only set the value else set the value with , seperated
+            if (intellimize1.value == '') {
+                intellimize1.value = ExistingHiddenFieldValue;
+            }
+            else {
+                if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+                    intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+                }
+            }
+        }
+    });
+
+	//click event listener
+	document.addEventListener('click', function (e) {
+		if (e.target.closest('.mktoForm .mktoButton')) {
+			//inject current time and date in EST timezone into .intellimize2 hidden field
+			var d = new Date();
+			var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+			var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+			if (int2)
+				int2.value = n;
 		}
 	});
 }

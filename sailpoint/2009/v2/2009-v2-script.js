@@ -2,7 +2,7 @@
 const urls = [
     "https://www.sailpoint.com/",
     "https://www.sailpoint.com/demo",
-    "https://www.sailpoint.com/demo/interactive"
+    "https://www.sailpoint.com/demo/interactive",
 ];
 
 
@@ -96,11 +96,13 @@ function initTest2009() {
                         button.classList.add('spz_2009_v2');
                         button.innerHTML = 'Talk to an expert <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 11" class="aspect-[16/11] w-4" data-sentry-element="svg" data-sentry-component="Arrow" data-sentry-source-file="arrow.tsx"><path fill="currentColor" d="M15.759 4.726 11.49.252a.787.787 0 0 0-1.155 0 .893.893 0 0 0 0 1.216l2.865 3.003H.81a.862.862 0 0 0 0 1.72h12.393L10.343 9.2a.893.893 0 0 0 0 1.216.789.789 0 0 0 1.154 0l4.268-4.474a.894.894 0 0 0-.006-1.215Z" data-sentry-element="path" data-sentry-source-file="arrow.tsx"></path></svg>';
                         if (button) {
-                            button.setAttribute('href', 'https://www.sailpoint.com/demo?expert');
+                            button.setAttribute('href', 'javascript:void(0)');
                             button.addEventListener('click', (event) => {
                                 event.preventDefault(); // Prevent the default link behavior
                                 // document.querySelector('[data-sentry-component="MainLargeNavigation"] a[href="/demo"]').click()
-                                window.location.href = 'https://www.sailpoint.com/demo?expert';
+                                // window.location.href = 'https://www.sailpoint.com/demo?expert';
+                                //scroll page smoothly to the form #mktoForm_1017
+                                document.querySelector('#mktoForm_1017').scrollIntoView({ behavior: 'smooth' });
 
                                 setTimeout(function () {
                                     hiddenValue('spz_2009', 'SPZ_2009_variant2');
@@ -120,16 +122,13 @@ function initTest2009() {
             }
             else {
                 document.body.classList.add('spz_2009_HF');
-                hiddenValue('spz_2009', 'SPZ_2009_variant2');
-                waitForElm('#mktoForm_1018 input[name="demoType"]').then(function (elm) {
-                    // Select the hidden input element
-                    const inputElement = document.querySelector('input[name="demoType"]');
+                let callHF = setInterval(() => {
+                    setHiddenFieldValue();
+                }, 100);
 
-                    // Change the value to "Talk to an expert"
-                    if (inputElement) {
-                        inputElement.value = "Talk to an expert";
-                    }
-                });
+                setTimeout(() => {
+                    clearInterval(callHF);
+                }, 10000);
             }
         }
     });
@@ -200,7 +199,27 @@ function setHiddenFieldValue() {
         if (intellimize1) {
             clearInterval(spz_cro_Interval);
             var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-            intellimize1.value = ExistingHiddenFieldValue;
+            //check if hidden field value is empty then only set the value else set the value with , seperated
+            if (intellimize1.value == '') {
+                intellimize1.value = ExistingHiddenFieldValue;
+            }
+            else {
+                if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+                    intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+                }
+            }
+        }
+    });
+
+    //click event listener
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.mktoForm .mktoButton')) {
+            //inject current time and date in EST timezone into .intellimize2 hidden field
+            var d = new Date();
+            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+            if (int2)
+                int2.value = n;
         }
     });
 }
