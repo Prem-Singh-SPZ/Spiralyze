@@ -341,6 +341,10 @@ body.spz-2002 {
           display: grid;
           place-items: center;
 
+          @media (min-width: 1600.98px) {
+            backdrop-filter: blur(4px);
+          }
+
           .container {
             @media (max-width: 767.98px) {
               padding: 0 20px;

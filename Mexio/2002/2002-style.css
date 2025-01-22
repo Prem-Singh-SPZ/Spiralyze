@@ -354,6 +354,12 @@ body.spz-2002 #page .site-content .blocks-page .hero-form {
   display: grid;
   place-items: center;
 }
+@media (min-width: 1600.98px) {
+  body.spz-2002 #page .site-content .blocks-page .hero-form {
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+}
 @media (max-width: 767.98px) {
   body.spz-2002 #page .site-content .blocks-page .hero-form .container {
     padding: 0 20px;
