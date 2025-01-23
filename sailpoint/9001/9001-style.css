@@ -5,17 +5,12 @@
   display: none;
 }
 
-.spz_9001 #__next .font-sans > .flex-col {
-  position: relative;
-}
-
 .spz_9001 .hero + .row {
   position: relative;
   padding: 64px 0 81px;
   margin-bottom: 82px;
   overflow: hidden;
 }
-
 .spz_9001 .hero + .row::before {
   position: absolute;
   content: "";
@@ -27,7 +22,6 @@
   top: 22px;
   right: -161px;
 }
-
 .spz_9001 .hero + .row::after {
   position: absolute;
   content: "";
@@ -39,14 +33,35 @@
   left: -328px;
   bottom: 209px;
 }
-
-.spz_9001 .hero + .row .spz-wrapper {
+.spz_9001 .hero + .row > .row__inner {
   width: 100%;
   max-width: 1330px;
   padding: 0 20px;
   margin: 0 auto;
   z-index: 99;
   position: relative;
+}
+.spz_9001 .hero + .row > .row__inner .bg-gradient {
+  border-radius: 24px;
+  background: #fff;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+          box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+  padding: 41px 40px 39px;
+  max-width: 600px;
+}
+.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3 {
+  color: #415364;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 7px 0 13px;
+}
+.spz_9001 .hero + .row > .row__inner .bg-gradient p.mx-auto:not(.text-h3) {
+  display: none;
+}
+.spz_9001 .hero + .row > .row__inner .bg-gradient .mkto-wrap {
+  min-height: unset;
 }
 
 .spz_9001 .hero + .row .spz-form-wrap {
@@ -95,31 +110,12 @@
   height: auto;
 }
 
-.spz_9001 .spz-form-wrap .content-superheading {
-  color: #415364;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 57px 0 13px;
-}
-
 .spz_9001 .spz-form-wrap .content-heading {
   color: #0033a1;
   font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
-}
-
-.spz_9001 .hero + .row .spz-form-wrap .page-transition .inner-row__inner {
-  border-radius: 24px;
-  background: #fff;
-  -webkit-box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-          box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-  padding: 41px 40px 39px;
 }
 
 .spz_9001 .page-transition .inner-row__inner .form-heading {
@@ -180,9 +176,6 @@
 }
 
 .spz_9001 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   padding: 15px 0;
   margin-top: 0;
