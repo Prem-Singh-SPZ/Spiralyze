@@ -5,246 +5,280 @@
 
 <!-- progressive form styling -->
 <style id="progressive-style">
-  .p-field-hidden {
+ .p-field-hidden {
     display: none !important;
-  }
-   form#pardot-form .form-field.pd-select::after {
-	position: absolute;
-	content: "";
-	width: 24px;
-	height: 24px;
-	top: 13px;
-	right: 14px;
-	background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2001/Dropdown.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	pointer-events: none;
 }
 
- form#pardot-form .form-field.control-checkbox {
-	width: 100%;
-	margin-top: 3px;
+.container .row {
+    padding: 0;
+    margin: 0;
 }
 
- form#pardot-form .form-field label.field-label {
-	position: absolute;
-	top: 12px;
-	left: 10px;
-	color: #808080;
-	font-family: Test Founders Grotesk;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.28;
-	padding: 0 6px;
-	margin: 0;
-	background: #FFF;
-	pointer-events: none;
-	transition: all 0.4s ease-in-out;
+body form#pardot-form p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
- form#pardot-form .form-field.active.typing label.field-label,
- form#pardot-form .form-field.filled label.field-label {
-	font-size: 13px;
-	line-height: 1.28;
-	top: -8px;
+body form#pardot-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 18px;
 }
 
- form#pardot-form .form-field.active.typing label.field-label {
-	color: #000;
+body form#pardot-form .form-field {
+    width: calc(50% - 8px);
+    padding: 0;
+    margin: 0 0 16px;
+    position: relative;
 }
 
- form#pardot-form .form-field.active.typing.error label.field-label,
- form#pardot-form .form-field.filled.error label.field-label {
-	color: #f02e4a;
+body form#pardot-form .form-field.pd-select::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: 13px;
+    right: 14px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2001/Dropdown.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 
- form#pardot-form .form-field label.field-label::after {
-	display: none;
+body form#pardot-form .form-field.control-checkbox {
+    width: 100%;
+    margin-top: 3px;
 }
 
- form#pardot-form .form-field .text,
- form#pardot-form .form-field .select {
-	margin: 0;
-	width: 100%;
-	height: 48px;
-	border: 1px solid #C6CED2;
-	outline: none;
-	box-shadow: none;
-	padding: 11px 15px 14px;
-	color: #000;
-	font-family: Test Founders Grotesk;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.28;
-	appearance: none;
-	background: none;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+body form#pardot-form .form-field label.field-label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #808080;
+    font-family: Test Founders Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    padding: 0 6px;
+    margin: 0;
+    background: #FFF;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
 }
 
- form#pardot-form .form-field .select {
-	padding-right: 35px;
+body form#pardot-form .form-field.typing label.field-label,
+body form#pardot-form .form-field.filled label.field-label {
+    font-size: 13px;
+    line-height: 1.28;
+    top: -8px;
 }
 
- form#pardot-form .form-field.active.typing .text,
- form#pardot-form .form-field.active.typing .select {
-	border-color: #2D2D30;
+body form#pardot-form .form-field.typing label.field-label {
+    color: #000;
 }
 
- form#pardot-form .form-field.error .text,
- form#pardot-form .form-field.error .select {
-	border-color: #f02e4a !important;
+body form#pardot-form .form-field.typing.error label.field-label,
+body form#pardot-form .form-field.filled.error label.field-label {
+    color: #f02e4a;
 }
 
- form#pardot-form .error-message {
-	margin: 0 0 10px;
+body form#pardot-form .form-field label.field-label::after {
+    display: none;
 }
 
- form#pardot-form .form-field.control-checkbox span {
-	display: inline-flex;
+body form#pardot-form .form-field .text,
+body form#pardot-form .form-field .select {
+    margin: 0;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C6CED2;
+    outline: none;
+    box-shadow: none;
+    padding: 11px 15px 14px;
+    color: #000;
+    font-family: Test Founders Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    appearance: none;
+    background: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
- form#pardot-form .form-field.control-checkbox label {
-	color: #808080;
-	font-family: "Test Founders Grotesk";
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 128%;
-	position: relative;
-	padding-left: 28px;
+body form#pardot-form .form-field .select {
+    padding-right: 35px;
 }
 
- form#pardot-form .form-field.control-checkbox label::before {
-	position: absolute;
-	content: "";
-	width: 20px;
-	height: 20px;
-	top: 0;
-	left: 0;
-	background: #FFF;
-	border: 1px solid #C6CED2;
-	margin: 0;
-	font-size: 0;
+body form#pardot-form .form-field.typing .text,
+body form#pardot-form .form-field.typing .select {
+    border-color: #2D2D30;
 }
 
- form#pardot-form .form-field.control-checkbox input:checked+label::before {
-	background: #0042FF;
-	border-color: #0042FF;
+body form#pardot-form .form-field.error .text,
+body form#pardot-form .form-field.error .select {
+    border-color: #f02e4a !important;
 }
 
- form#pardot-form .form-field.control-checkbox label::after {
-	position: absolute;
-	content: "";
-	top: 3px;
-	left: 3px;
-	width: 14px;
-	height: 14px;
-	background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1731583819/maxio/2001/checkmark.svg");
-	background-size: contain;
-	opacity: 0;
+body form#pardot-form .error-message {
+    margin: 0 0 10px;
 }
 
- form#pardot-form .form-field.control-checkbox input:checked+label::after {
-	opacity: 1;
+body form#pardot-form .form-field.control-checkbox span {
+    display: inline-flex;
 }
 
-body form#pardot-form .submit {
-	max-width: unset;
-	justify-content: center;
-	margin-top: 6px;
+body form#pardot-form .form-field.control-checkbox label {
+    color: #808080;
+    font-family: "Test Founders Grotesk";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%;
+    position: relative;
+    padding-left: 28px;
 }
 
- form#pardot-form .submit input {
-	width: 178px;
-	height: 48px;
-	border-radius: 3px;
-	background: #0042FF;
-	font-family: Test Founders Grotesk;
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 1.4;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.4s ease-in-out;
+body form#pardot-form .form-field.control-checkbox label::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    border: 1px solid #C6CED2;
+    margin: 0;
+    font-size: 0;
 }
 
- form#pardot-form .submit input:hover {
-	background: #2D2D30;
+body form#pardot-form .form-field.control-checkbox input:checked+label::before {
+    background: #0042FF;
+    border-color: #0042FF;
 }
 
- form#pardot-form .submit input:active {
-	background: #002EEB;
+body form#pardot-form .form-field.control-checkbox label::after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1731583819/maxio/2001/checkmark.svg");
+    background-size: contain;
+    opacity: 0;
 }
 
- form#pardot-form .submit~p {
-	display: none;
+body form#pardot-form .form-field.control-checkbox input:checked+label::after {
+    opacity: 1;
 }
 
- form#pardot-form .submit+p {
-	display: block;
-	color: #808080 !important;
-	text-align: center;
-	font-family: 'Test Founders Grotesk';
-	font-size: 13px !important;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.28;
-	max-width: 432px;
-	margin: 14px auto 0 !important;
-	padding: 0 !important;
+body body form#pardot-form .submit, body #pardot-form.form div.submit {
+    max-width: unset;
+    justify-content: center;
+    margin-top: 6px;
 }
 
- form#pardot-form .submit+p a {
-	color: #000 !important;
-	text-decoration: none;
+body form#pardot-form .submit input, #pardot-form.form div.submit input {
+    width: 178px;
+    height: 48px;
+    border-radius: 3px;
+    background: #0042FF;
+    font-family: Test Founders Grotesk;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+}
+
+body form#pardot-form .submit input:hover {
+    background: #2D2D30;
+}
+
+body form#pardot-form .submit input:active {
+    background: #002EEB;
+}
+
+body form#pardot-form .submit~p {
+    display: none;
+}
+
+body form#pardot-form .submit+p {
+    display: block;
+    color: #808080 !important;
+    text-align: center;
+    font-family: 'Test Founders Grotesk';
+    font-size: 13px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    max-width: 432px;
+    margin: 14px auto 0 !important;
+    padding: 0 !important;
+}
+
+body form#pardot-form .submit+p a {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+body form#pardot-form input:-webkit-autofill,
+body form#pardot-form input:-webkit-autofill:hover,
+body form#pardot-form input:-webkit-autofill:focus,
+body form#pardot-form input:-webkit-autofill:active,
+body form#pardot-form select:-webkit-autofill,
+body form#pardot-form select:-webkit-autofill:hover,
+body form#pardot-form select:-webkit-autofill:focus,
+body form#pardot-form select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 48px white inset !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 /* Mobile CSS Start Here */
-.device-mobile .form-heading {
-	font-size: 32px;
-	line-height: 24px;
-	margin-bottom: 32px;
-}
+@media (max-width: 450px) {
+    body form#pardot-form .form-field {
+        width: 100%;
+        /* margin: 0 0 14px; */
+    }
 
-.device-mobile form#pardot-form .form-field {
-	width: 100%;
-	/* margin: 0 0 14px; */
-}
+    body form#pardot-form .form-field.control-checkbox {
+        margin-top: -3px;
+    }
 
-.device-mobile form#pardot-form .form-field.control-checkbox {
-	margin-top: -3px;
-}
+    body form#pardot-form .form-field.control-checkbox label::before {
+        top: 4px;
+    }
 
-.device-mobile form#pardot-form .form-field.control-checkbox label::before {
-	top: 4px;
-}
+    body form#pardot-form .form-field.control-checkbox label::after {
+        top: 7px;
+    }
 
-.device-mobile form#pardot-form .form-field.control-checkbox label::after {
-	top: 7px;
-}
+    body form#pardot-form .submit {
+        margin-top: 4.5px;
+        width: 100%;
+    }
 
-body.device-mobile form#pardot-form .submit {
-	margin-top: 4.5px;
-	width: 100%;
-}
+    body form#pardot-form .submit input {
+        width: 100%;
+        max-width: 100%;
+    }
 
-body.device-mobile form#pardot-form .submit input {
-	width: 100%;
-	max-width: 100%;
+    body form#pardot-form .submit+p {
+        max-width: 94%;
+        font-size: 14px !important;
+        margin: 16px auto 0 !important;
+    }
 }
-
-.device-mobile form#pardot-form .submit+p {
-	max-width: 94%;
-	font-size: 14px !important;
-	margin: 16px auto 0 !important;
-}
-
 </style>
 
 <p>
@@ -390,6 +424,7 @@ body.device-mobile form#pardot-form .submit input {
       //applying classes if fields are filled
       var all_inputs = document.querySelectorAll('form#pardot-form input, form#pardot-form select');
       all_inputs.forEach(function (element) {
+        element.removeAttribute('placeholder');
         if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.form-field') !== null) {
           element.closest('form#pardot-form .form-field').classList.add('filled');
         }
