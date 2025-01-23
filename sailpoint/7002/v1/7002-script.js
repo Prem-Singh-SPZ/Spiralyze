@@ -101,7 +101,7 @@
             last_name_field.insertAdjacentElement('afterend', email_field);
             country_field.insertAdjacentElement('beforebegin', inquiry_field);
             company_field.after(title_field);
-            button.after(disclaimer_field);
+            // button.after(disclaimer_field);
         }
 
         waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
@@ -114,9 +114,9 @@
             }, 1000);
         });
 
-        waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-        });
+        // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+        //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
+        // });
 
         // On input focus add class on closest parent field class
         function focusFields() {
@@ -221,9 +221,9 @@
                 const optOutRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
                 const countryRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-                waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-                    label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-                });
+                // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
+                // });
 
                 document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
             });
