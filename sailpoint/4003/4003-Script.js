@@ -331,7 +331,7 @@
         display: none !important;
       }
       .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList {
-        margin: 8px 0 24px;
+        margin: 0;
       }
       .SPZ_4003_V1 .mktoForm input[type=checkbox] {
         width: 16px !important;
@@ -360,6 +360,7 @@
         cursor: pointer;
         display: inline-flex;
         width: auto;
+        margin-bottom: 0;
       }
       .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
         position: absolute;
