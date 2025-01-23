@@ -470,7 +470,7 @@ select:-webkit-autofill:active {
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 6px;
 }
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
@@ -496,17 +496,17 @@ select:-webkit-autofill:active {
   background: #005daa;
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer,
-.spz_7002_v2 .disclaimer {
-  margin: 8px auto 0;
+.spz_7002_v2 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+  // margin: 8px auto 0;
   padding: 0;
   color: #415364;
-  text-align: center;
+  // text-align: center;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  max-width: 60%;
+  // max-width: 60%;
+  letter-spacing: -0.05px;
 
   @media screen and (max-width: 767.98px) {
     max-width: 100%;
@@ -514,14 +514,30 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v2 .disclaimer {
-  max-width: 520px;
-  margin-top: 8px;
+  margin: 8px auto 0;
+  padding: 0;
+  color: #415364;
+  // text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  // max-width: 60%;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 100%;
+  }
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
+// .spz_7002_v2 .disclaimer {
+//   max-width: 520px;
+//   margin-top: 8px;
+// }
+
+// .spz_7002_v2 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a,
 .spz_7002_v2 .disclaimer a {
   color: #0071ce;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
