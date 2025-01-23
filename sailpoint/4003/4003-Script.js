@@ -1,493 +1,4 @@
 (function () {
-
-    if (!document.getElementById('spz-4003')) {
-        var head = document.head || document.getElementsByTagName('head')[0];
-        var css = `.SPZ_4003_V1 .hero,
-      .SPZ_4003_V1 .hero + .gated__body, .SPZ_4003_V1 .hero ~ .row.article.mt-md.mb-xxl {
-        display: none;
-      }
-      .SPZ_4003_V1 .spz-hero {
-        background: linear-gradient(84deg, rgba(84, 192, 232, 0.50) 39.41%, rgba(84, 192, 232, 0.20) 88.11%), #FFF;
-        padding: 65px 0 62px;
-      }
-      .SPZ_4003_V1 .spz-hero .spz-form-wrap {
-        width: 100%;
-        max-width: 1290px;
-        padding: 0 21px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
-      .SPZ_4003_V1 .spz-hero .content-section {
-        width: 50.50%;
-        max-width: 630px;
-      }
-      .SPZ_4003_V1 .spz-hero .content-superheading {
-        color: #415364;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 20px;
-        letter-spacing: 1.4px;
-        text-transform: uppercase;
-      }
-      .SPZ_4003_V1 .spz-hero .content-heading {
-        color: #0033A1;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.2;
-        margin: 17px 0 24px;
-      }
-      .SPZ_4003_V1 .spz-hero .content-text p {
-        color: #415364;
-        font-size: 20px !important;
-        font-style: normal;
-        font-weight: 400 !important;
-        line-height: 1.75 !important;
-        margin-bottom: 24px !important;
-      }
-      .SPZ_4003_V1 .spz-hero .content-text ul {
-        margin-bottom: 24px;
-      }
-      .SPZ_4003_V1 .spz-hero .content-text ul li {
-        margin-bottom: 25px !important;
-        padding-left: 40px;
-        color: #415364;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.6;
-      }
-      .SPZ_4003_V1 .spz-hero .content-text ul li::before {
-        position: absolute;
-        content: "";
-        width: 24px;
-        height: 24px;
-        top: 4px;
-        left: 0;
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1734511184/sailpoint/4003/check.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      .SPZ_4003_V1 .spz-hero .spz-form-section {
-        width: 47.52%;
-        max-width: 593px;
-        border-radius: 24px;
-        background: linear-gradient(134deg, #0033A1 38.16%, #004FB5 64.91%, #0071CE 100.05%);
-        box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-        padding: 41px 40px 23px;
-      }
-      .SPZ_4003_V1.form-submit .spz-hero .spz-form-section {
-        padding: 40px;
-      }
-      .SPZ_4003_V1 .social-proof-logos {
-        width: 100%;
-        max-width: 1290px;
-        padding: 0 21px;
-        margin: 80px auto 100px;
-      }
-      .SPZ_4003_V1 .social-proof-logos .social-proof-heading {
-        color: #415364;
-        text-align: center;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.4;
-        margin-bottom: 48px;
-      }
-      .SPZ_4003_V1 .social-proof-logos .social-proof-images {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .SPZ_4003_V1 .social-proof-logos .social-proof-images img {
-        width: auto;
-        height: 60px;
-        object-fit: contain;
-      }
-      @media(max-width: 1023.98px) {
-        .SPZ_4003_V1 .spz-hero {
-          padding: 80px 0;
-        }
-        .SPZ_4003_V1 .spz-hero .content-section,
-        .SPZ_4003_V1 .spz-hero .spz-form-section {
-          width: 100%;
-          max-width: unset;
-        }
-        .SPZ_4003_V1 .spz-hero .content-text ul {
-          margin-bottom: 38px;
-        }
-        .SPZ_4003_V1 .spz-hero .spz-form-section {
-          padding: 41px 40px 24px;
-        }
-        .SPZ_4003_V1 .social-proof-logos {
-          margin: 42px auto 100px;
-        }
-      }
-      @media(max-width: 767.98px) {
-        .SPZ_4003_V1 .spz-hero .content-heading {
-          font-size: 34px;
-          margin: 17px 0 26px;
-        }
-        .SPZ_4003_V1 .spz-hero .content-text p {
-          font-size: 18px!important;
-          line-height: 1.6 !important;
-        }
-        .SPZ_4003_V1 .spz-hero .content-text ul {
-          margin-bottom: 40px;
-        }
-        .SPZ_4003_V1 .spz-hero .content-text ul li {
-          margin-bottom: 27px !important;
-          font-size: 16px;
-        }
-        .SPZ_4003_V1 .spz-hero .spz-form-section {
-          padding: 41px 24px 22px;
-        }
-      }
-      /* Form Styling CSS Start */
-      input:-webkit-autofill,
-      input:-webkit-autofill:hover,
-      input:-webkit-autofill:focus,
-      input:-webkit-autofill:active,
-      select:-webkit-autofill,
-      select:-webkit-autofill:hover,
-      select:-webkit-autofill:focus,
-      select:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 56px white inset !important;
-        -webkit-text-fill-color: #415364 !important;
-      }
-      .SPZ_4003_V1 .spz-hero .form-heading {
-        color: #FFF;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 23px;
-      }
-      .SPZ_4003_V1.form-submit .spz-hero .form-heading,
-      .SPZ_4003_V1.form-submit .spz-hero .form-footer,
-      .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset > *:empty {
-        display: none !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100% !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow {
-        width: 100%;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-2,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-3,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm.phone-exists .mktoFormRow.field-4,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-5,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-6,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-7:not(.spz-full),
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-8,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-9,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-10 {
-        width: calc(50% - 8px);
-      }
-      .SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm:not(.phone-exists) .mktoFormRow.field-4 ~ .mktoFormRow,
-      .SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm.phone-exists .mktoFormRow.field-5 ~ .mktoFormRow,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm>div:not([class]):not([id]) {
-        display: none;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormCol {
-        margin: 0 !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap {
-        position: relative;
-        margin-bottom: 16px;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
-        color: #415364;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 17px;
-        left: 17px;
-        background: #FFF;
-        width: auto !important;
-        height: auto;
-        pointer-events: none;
-        transition: color .3s ease-in-out, top .3s ease-in-out, font-size .3s ease-in-out;
-        z-index: 9;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
-        display: none !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel {
-        font-weight: 600 ;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.filled label.mktoLabel {
-        width: auto !important;
-        top: 7px;
-        color: #0071CE;
-        font-size: 12px;
-        font-weight: 600;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoField:not([type=checkbox]) {
-        width: 100% !important;
-        height: 56px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 23px 16px 9px;
-        margin: 0 !important;
-        border: 1px solid #FFF;
-        border-radius: 4px;
-        outline: none;
-        box-shadow: none;
-        background: #FFF;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: all .3s ease-in-out;
-        color: #415364 !important;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.6;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
-        color: transparent !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap select.mktoField {
-        padding-right: 37px !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap:hover .mktoField:not([type="checkbox"]) {
-        border-color: #0071CE;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoField:not([type="checkbox"]) {
-        border-color: #FFF;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
-        border-color: #E6241E;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
-        position: relative;
-        top: unset !important;
-        bottom: unset !important;
-        left: unset !important;
-        right: unset !important;
-        margin: 10px 0 0 !important;
-      }
-      .SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError:not(.customError),
-      .SPZ_4003_V1.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError.customError,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError.customError {
-        display: none !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
-        color: #FFCB27;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.6;
-        position: relative;
-        padding-left: 16px;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
-        position: absolute;
-        content: "";
-        width: 12px;
-        height: 12px;
-        top: 4px;
-        left: 0;
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1736156039/sailpoint/4003/error-icon.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper {
-        margin: 0 !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper::after {
-        position: absolute;
-        content: "";
-        background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1730978539/sailpoint/1001/icons__system.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 18px;
-        height: 10px;
-        top: 23px;
-        right: 16px;
-        pointer-events: none;
-        z-index: 9;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper .select-dropdown,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap,
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox] {
-        display: none !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList {
-        margin: 0;
-      }
-      .SPZ_4003_V1 .mktoForm input[type=checkbox] {
-        width: 16px !important;
-        height: 16px !important;
-        margin: 0 !important;
-        top: 3px !important;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList ~ input[type=checkbox] {
-        width: 16px!important;
-        height: 16px!important;
-        margin: 0!important;
-        top: 3px!important;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList label {
-        position: relative;
-        color: #FFF;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.6;
-        padding-left: 28px;
-        padding-right: 0;
-        cursor: pointer;
-        display: inline-flex;
-        width: auto;
-        margin-bottom: 0;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
-        position: absolute;
-        content: "";
-        width: 16px;
-        height: 16px;
-        top: 3px;
-        left: 0;
-        border-radius: 2px;
-        border: 1.5px solid #FFFFFF;
-        z-index: 2;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList label:hover::before {
-        opacity: 0.8;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input:checked+label:before {
-        border: none;
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1734511888/sailpoint/4003/form__checkboxes.svg");
-        background-size: 16px;
-        background-repeat: no-repeat;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow {
-        width: 100%;
-        margin-top: 8px;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton,
-      .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset .btn {
-        width: 100%;
-        height: 48px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 10px 9px;
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0);
-        background: #FFF;
-        color: #0071CE;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.6;
-        transition: all 0.5s ease-in-out;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton:hover,
-      .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset .btn:hover {
-        color: #005DAA;
-        border-color: #005DAA;
-      }
-      .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton:focus {
-        outline: 1.5px solid #0071CE;
-        outline-offset: 4px;
-      }
-      .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset {
-        min-height: unset !important;
-      }
-      .SPZ_4003_V1 .spz-hero .spz-form-section h3.text-white {
-        color: #FFF;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.2;
-        text-align: center;
-      }
-      .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset .btn {
-        width: auto;
-      }
-      .SPZ_4003_V1 .spz-hero .disclaimer,
-      .SPZ_4003_V1 .spz-hero .form-footer {
-        color: #FFF;
-        text-align: center;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.6;
-        width: 65%;
-        margin: 8px auto 0;
-      }
-      .SPZ_4003_V1 .spz-hero .disclaimer {
-        width: 100%;
-      }
-      .SPZ_4003_V1 .spz-hero .disclaimer a,
-      .SPZ_4003_V1 .spz-hero .form-footer a {
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-skip-ink: auto;
-        text-decoration-thickness: auto;
-        text-underline-offset: auto;
-        text-underline-position: from-font;
-      }
-      .SPZ_4003_V1 .spz-hero .disclaimer a:hover,
-      .SPZ_4003_V1 .spz-hero .form-footer a:hover {
-        text-decoration: none;
-      }
-      @media(max-width: 1023.98px) {
-        .SPZ_4003_V1 .spz-hero .disclaimer,
-        .SPZ_4003_V1 .spz-hero .form-footer {
-          width: 100%;
-        }
-        .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton,
-        .SPZ_4003_V1 .spz-hero .spz-form-section #gated-asset .btn {
-          padding: 10px 10px 8px;
-        }
-      }
-      @media(max-width: 767.98px) {
-        .SPZ_4003_V1 .spz-hero .form-heading {
-          font-size: 26px;
-        }
-        .SPZ_4003_V1 .spz-hero .spz-form-section {
-          padding: 41px 24px 24px;
-        }
-        .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow {
-          width: 100% !important;
-        }
-      }
-      /* Form Styling CSS End */`;
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        style.id = 'spz-4003';
-        if (style.styleSheet) {
-            style.styleSheet.cssText = css;
-        } else {
-            style.appendChild(document.createTextNode(css));
-        }
-        head.appendChild(style);
-    }
-
     function createTest() {
         let bodyLoaded = setInterval(function () {
             const body = document.querySelector('body');
@@ -501,7 +12,9 @@
                         const template_heroSelector = `section.hero`;
                         const template_position = "beforebegin"
                         const template_formSelector = `form#mktoForm_1016`;
-                        const contentSuperHeading = document.querySelector('.SPZ_4003_V1 .hero .hero__eyebrow')?.textContent.trim() || "";
+
+                        let contentSuperHeading = document.querySelector('.SPZ_4003_V1 .hero .hero__eyebrow')?.textContent.trim() || "";
+                        let contentHeading = document.querySelector('.SPZ_4003_V1 .hero .hero__heading')?.textContent.trim();
                         const contentInnerHTML = document.querySelector('.SPZ_4003_V1 .hero + .gated__body .column:first-child .column__inner')?.innerHTML.trim() || document.querySelector('.SPZ_4003_V1 .hero ~ .article .content .content__body .block')?.innerHTML.trim() || "";
                         const template_formContent = {
                             customHTMLBefore: `Get the report`,
@@ -552,13 +65,12 @@
                   <div class="spz-form-wrap">
                     <div class="content-section">
                       ${contentSuperHeading ? `<div class="content-superheading">${contentSuperHeading}</div>` : ""}
-                      <div class="content-heading">2024 Gartner® Market Guide for Identity Governance and Administration</div>
+                      ${contentHeading ? `<div class="content-heading">${contentHeading}</div>` : ""}
                       ${contentInnerHTML ? `<div class="content-text">${contentInnerHTML}</div>` : ""}
                     </div>
                     <div class="spz-form-section">
                       <div class="form-heading">${formData.customHTMLBefore.replace(/\s/g, "").length !== 0 ? formData.customHTMLBefore : ""}</div>
                       <div class="the-form"></div>
-                      <div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>
                     </div>
                   </div>
                 </section>
@@ -578,6 +90,7 @@
                                     clearInterval(formLoaded)
                                     document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
                                     document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                                    document.querySelector(".spz-form-wrap .the-form .mktoForm .mktoButtonRow").insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                                     formModify();
                                 }
                             })
@@ -818,7 +331,13 @@
                     if (document.body.classList.contains('SPZ_4003_V1')) {
                         removeSpecificCookieValue('SPZ_4003_V1', 'SPZ_4003_V1_truecontrol');
                         hiddenValue('SPZ_4003_V1', 'SPZ_4003_variant');
-                        setHiddenFieldValue();
+                        let callHF = setInterval(() => {
+                            setHiddenFieldValue();
+                        }, 100);
+
+                        setTimeout(() => {
+                            clearInterval(callHF);
+                        }, 10000);
                     }
                 }
             }
@@ -834,7 +353,7 @@
     }
 
     function removeSpecificCookieValue(targetName, targetValue) {
-        ['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
+        ['HiddenFieldName1016', 'HiddenFieldValue1016'].forEach((key, i) => {
             var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
             setCookie(key, values || '', 1);
         });
@@ -842,18 +361,24 @@
 
     // Do not touch below hidden field code for any Experiment Start
     function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-        var ExistingHiddenFieldName = getCookie('HiddenFieldName');
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
+        var ExistingHiddenFieldName = getCookie('HiddenFieldName1016');
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValue1016');
 
         if (!ExistingHiddenFieldName) {
-            setCookie('HiddenFieldName', currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValue', currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldName1016', currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValue1016', currentHiddenFieldValue, 1);
         } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-            setCookie('HiddenFieldName', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValue', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldName1016', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValue1016', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
         }
 
-        setHiddenFieldValue();
+        let callHF = setInterval(() => {
+            setHiddenFieldValue();
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(callHF);
+        }, 10000);
     }
 
     function setCookie(name, value, days) {
@@ -882,7 +407,7 @@
             var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1016 input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
-                var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
+                var ExistingHiddenFieldValue = getCookie('HiddenFieldValue1016');
                 //check if hidden field value is empty then only set the value else set the value with , seperated
                 if (intellimize1.value == '') {
                     intellimize1.value = ExistingHiddenFieldValue;
@@ -892,6 +417,17 @@
                         intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
                     }
                 }
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('#mktoForm_1016 .mktoButton')) {
+                //inject current time and date in EST timezone into .intellimize2 hidden field
+                var d = new Date();
+                var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                if (int2)
+                    int2.value = n;
             }
         });
     }
