@@ -16,7 +16,7 @@ select:-webkit-autofill:active {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 99999999999;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
@@ -88,11 +88,20 @@ select:-webkit-autofill:active {
   }
 }
 
+.spz_7002_v1 {
+  #drift-frame-controller {
+    z-index: 2147483645 !important;
+  }
+  #drift-frame-chat {
+    z-index: 2147483645 !important;
+  }
+}
+
 .spz_7002_v1.spz-show-modal {
   overflow: hidden;
   position: relative;
-  max-width: 100dvw;
-  max-height: 100dvh;
+  // max-width: 100dvw;
+  // max-height: 100dvh;
 
   &::before {
     content: "";
@@ -108,7 +117,7 @@ select:-webkit-autofill:active {
       rgba(0, 113, 206, 0.5) 100.05%
     );
     backdrop-filter: blur(4.199999809265137px);
-    z-index: 999;
+    z-index: 9999999999;
   }
 
   .spz-form-container {
@@ -216,7 +225,7 @@ select:-webkit-autofill:active {
   top: 12px;
   left: 12px;
   background: #fff;
-  width: calc(100% - 60px)!important;
+  width: calc(100% - 60px) !important;
   height: auto;
   pointer-events: none;
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out,

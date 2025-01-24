@@ -16,7 +16,7 @@ select:-webkit-autofill:active {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 99999999999;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
@@ -87,11 +87,16 @@ select:-webkit-autofill:active {
   min-height: unset;
 }
 
+.spz_7002_v1 #drift-frame-controller {
+  z-index: 2147483645 !important;
+}
+.spz_7002_v1 #drift-frame-chat {
+  z-index: 2147483645 !important;
+}
+
 .spz_7002_v1.spz-show-modal {
   overflow: hidden;
   position: relative;
-  max-width: 100dvw;
-  max-height: 100dvh;
 }
 .spz_7002_v1.spz-show-modal::before {
   content: "";
@@ -103,7 +108,7 @@ select:-webkit-autofill:active {
   background: linear-gradient(134deg, rgba(0, 51, 161, 0.5) 38.16%, rgba(0, 79, 181, 0.5) 64.91%, rgba(0, 113, 206, 0.5) 100.05%);
   -webkit-backdrop-filter: blur(4.1999998093px);
           backdrop-filter: blur(4.1999998093px);
-  z-index: 999;
+  z-index: 9999999999;
 }
 .spz_7002_v1.spz-show-modal .spz-form-container {
   -webkit-animation: slideInRight 0.5s;
