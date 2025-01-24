@@ -108,30 +108,30 @@
                 <h2 class="box-title">Request support</h2>
                 <p>For customer support, please visit the <a href="https://community.sailpoint.com/t5/Contact-Support/ct-p/Contact-Support" target="_blank" class="link">Contact Support</a> page.</p>
                 <p>For sales or any other questions, please call us or send an email.</p>
-                <h3 class="box-title">Phone</h3>
-                <p>1-888-472-4578 (U.S. Toll-free)</p>
+                <h3 class="box-title sp-mt-32">Phone</h3>
+                <p class="sp-mb-0">1-888-472-4578 (U.S. Toll-free)</p>
             </div>
             <div class="sp-email">
                 <h2 class="box-title">Email us</h2>
                   <div class="sp-email-list">
                     <div class="sp-email-tupple">
-                      <p class="list-title">Sales:</p>
+                      <p class="list-title">Sales</p>
                       <p class="list-value link"><a href="mailto:sales@sailpoint.com">sales@sailpoint.com</a></p>
                     </div>
                     <div class="sp-email-tupple">
-                      <p class="list-title">Federal Government Sales:</p>
+                      <p class="list-title">Federal Government Sales</p>
                       <p class="list-value link"><a href="mailto:federal@sailpoint.com">federal@sailpoint.com</a></p>
                     </div>
                     <div class="sp-email-tupple">
-                      <p class="list-title">Customer Support:</p>
+                      <p class="list-title">Customer Support</p>
                       <p class="list-value link"><a href="mailto:info@sailpoint.com">info@sailpoint.com</a></p>
                     </div>
                     <div class="sp-email-tupple">
-                      <p class="list-title">Careers:</p>
+                      <p class="list-title">Careers</p>
                       <p class="list-value link"><a href="mailto:jobs@sailpoint.com">jobs@sailpoint.com</a></p>
                     </div>
                     <div class="sp-email-tupple">
-                      <p class="list-title">Media Requests:</p>
+                      <p class="list-title">Media Requests</p>
                       <p class="list-value link"><a href="mailto:pr@sailpoint.com">pr@sailpoint.com</a></p>
                     </div>
                   </div>
