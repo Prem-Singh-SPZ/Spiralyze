@@ -5,36 +5,36 @@
       socialProofHeading: "Used by 48% of the Fortune 500",
       socialProofImages: [
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_01.svg",
           imgAlt: "GM",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_02.svg",
           imgAlt: "Hershey",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_03.svg",
           imgAlt: "Paccar",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_04.svg",
           imgAlt: "Philips",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_05.svg",
           imgAlt: "RWE",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104229/sailpoint/9001/logo_06.svg",
           imgAlt: "T Mobile",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_07.svg",
           imgAlt: "The Home Depot",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_08.svg",
-          imgAlt: "Toyota",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1737360173/sailpoint/9001/logo_9.svg",
+          imgAlt: "The Salvation Army",
         },
       ]
     },
@@ -86,17 +86,9 @@
   function pageModify() {
     document.querySelector('.spz_9001 .hero + .row > .row__inner').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a class="logo-anchor" href="javascript:;"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737104112/sailpoint/9001/logo__colored.svg" alt="SailPoint" class=""></a>`);
 
-    let checkTitle = setInterval(() => {
-      if (document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').textContent !== "Contact us") {
-        document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').textContent = "Contact us";
-      }
-    }, 100);
+    document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us</div>`);
 
-    setTimeout(() => {
-      clearInterval(checkTitle);
-    }, 5000);
-
-    document.querySelector('.spz_9001 .hero + .row').insertAdjacentHTML('afterend', `     ${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
+    document.querySelector('.spz_9001 .hero + .row').insertAdjacentHTML('afterend', `${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
                 <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
                 <div class="social-proof-images">
                   ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
@@ -109,18 +101,68 @@
         : ""}
                 </div>
               </div>`
-      : ``}`);
+      : ``} 
+      <div class="sp-container">
+        <div class="sp-contact-info">
+            <div class="sp-support">
+                <h2 class="box-title">Request support</h2>
+                <p>For customer support, please visit the <a href="https://community.sailpoint.com/t5/Contact-Support/ct-p/Contact-Support" target="_blank" class="link">Contact Support</a> page.</p>
+                <p>For sales or any other questions, please call us or send an email.</p>
+                <h3 class="box-title">Phone</h3>
+                <p>1-888-472-4578 (U.S. Toll-free)</p>
+            </div>
+            <div class="sp-email">
+                <h2 class="box-title">Email us</h2>
+                  <div class="sp-email-list">
+                    <div class="sp-email-tupple">
+                      <p class="list-title">Sales:</p>
+                      <p class="list-value link"><a href="mailto:sales@sailpoint.com">sales@sailpoint.com</a></p>
+                    </div>
+                    <div class="sp-email-tupple">
+                      <p class="list-title">Federal Government Sales:</p>
+                      <p class="list-value link"><a href="mailto:federal@sailpoint.com">federal@sailpoint.com</a></p>
+                    </div>
+                    <div class="sp-email-tupple">
+                      <p class="list-title">Customer Support:</p>
+                      <p class="list-value link"><a href="mailto:info@sailpoint.com">info@sailpoint.com</a></p>
+                    </div>
+                    <div class="sp-email-tupple">
+                      <p class="list-title">Careers:</p>
+                      <p class="list-value link"><a href="mailto:jobs@sailpoint.com">jobs@sailpoint.com</a></p>
+                    </div>
+                    <div class="sp-email-tupple">
+                      <p class="list-title">Media Requests:</p>
+                      <p class="list-value link"><a href="mailto:pr@sailpoint.com">pr@sailpoint.com</a></p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="sp-hq-info">
+            <div class="sp-hq-details">
+                <h2 class="box-headline">Corporate headquarters</h2>
+                <h3 class="box-title">United States</h3>
+                <p>11120 Four Points Drive, Suite 100</p>
+                <p>Austin, TX 78726</p>
+                <p><a href="tel:15123462000" class="link">1-512-346-2000</a> Phone</p>
+                <p>1-512-346-2033 Fax</p>
+                <a href="#">See international locations <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+  <path d="M15.7586 5.62571L11.4908 1.1517C11.4171 1.07228 11.3278 1.00892 11.2285 0.965593C11.1291 0.922266 11.0219 0.899902 10.9136 0.899902C10.8052 0.899902 10.698 0.922266 10.5987 0.965593C10.4994 1.00892 10.4101 1.07228 10.3364 1.1517C10.1827 1.31691 10.0973 1.53415 10.0973 1.75976C10.0973 1.98536 10.1827 2.20261 10.3364 2.36781L13.2011 5.37076H0.809587C0.590443 5.38413 0.384657 5.48059 0.234212 5.64047C0.0837674 5.80034 0 6.01159 0 6.2311C0 6.45062 0.0837674 6.66186 0.234212 6.82174C0.384657 6.98161 0.590443 7.07808 0.809587 7.09145H13.2032L10.3428 10.0987C10.1891 10.2639 10.1037 10.4811 10.1037 10.7067C10.1037 10.9323 10.1891 11.1496 10.3428 11.3148C10.4165 11.3942 10.5058 11.4576 10.6051 11.5009C10.7044 11.5442 10.8116 11.5666 10.92 11.5666C11.0283 11.5666 11.1355 11.5442 11.2349 11.5009C11.3342 11.4576 11.4235 11.3942 11.4972 11.3148L15.765 6.84076C15.9172 6.67469 16.0012 6.45726 16 6.23198C15.9988 6.0067 15.9126 5.79017 15.7586 5.62571Z" fill="#0071CE"/>
+</svg></a>
+            </div>
+            <div class="sp-map">
+                <picture>
+                    <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image.webp">
+                    <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_2.webp">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_1.webp" alt="SailPoint location map">
+                </picture>
+            </div>
+        </div>
+    </div>`);
 
   }
 
   function formModify() {
-    // Add class in mktoFormRow using count
-    // var form_fields = document.querySelectorAll('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow');
-    // for (var i = 0; i < form_fields.length; i++) {
-    //   var dynamicClass = 'field-' + (i + 1);
-    //   form_fields[i].classList.add(dynamicClass);
-    // }
-
     // Add class in mktoField using the name attribute
     var form_fields = document.querySelectorAll('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow');
     for (var i = 0; i < form_fields.length; i++) {
@@ -148,9 +190,9 @@
       });
     });
 
-    // waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
-    //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-    // });
+    waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField label').then(label => {
+      label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+    });
 
     // Change Field Position
     const email_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Email');
@@ -164,7 +206,7 @@
 
     if (company_field && title_field && disclaimer_field && button) {
       last_name_field.insertAdjacentElement('afterend', email_field);
-      country_field.insertAdjacentElement('beforebegin', inquiry_field);
+      // country_field.insertAdjacentElement('beforebegin', inquiry_field);
       company_field.after(title_field);
       // button.after(disclaimer_field);
     }
@@ -288,9 +330,9 @@
         const optOutRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
         const countryRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-        // waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-        // });
+        waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField label').then(label => {
+            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        });
 
         document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
       });
