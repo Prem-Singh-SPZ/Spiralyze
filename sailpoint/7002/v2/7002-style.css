@@ -87,16 +87,15 @@ select:-webkit-autofill:active {
   min-height: unset;
 }
 
-.spz_7002_v2 #drift-frame-controller {
-  z-index: 2147483645 !important;
-}
-.spz_7002_v2 #drift-frame-chat {
-  z-index: 2147483645 !important;
-}
-
 .spz_7002_v2.spz-show-modal {
   overflow: hidden;
   position: relative;
+}
+.spz_7002_v2.spz-show-modal #drift-frame-controller {
+  z-index: 2147483645 !important;
+}
+.spz_7002_v2.spz-show-modal #drift-frame-chat {
+  z-index: 2147483645 !important;
 }
 .spz_7002_v2.spz-show-modal::before {
   content: "";

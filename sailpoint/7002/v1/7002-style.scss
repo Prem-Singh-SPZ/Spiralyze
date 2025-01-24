@@ -88,20 +88,18 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002_v1 {
+.spz_7002_v1.spz-show-modal {
+  overflow: hidden;
+  position: relative;
+  // max-width: 100dvw;
+  // max-height: 100dvh;
+
   #drift-frame-controller {
     z-index: 2147483645 !important;
   }
   #drift-frame-chat {
     z-index: 2147483645 !important;
   }
-}
-
-.spz_7002_v1.spz-show-modal {
-  overflow: hidden;
-  position: relative;
-  // max-width: 100dvw;
-  // max-height: 100dvh;
 
   &::before {
     content: "";
