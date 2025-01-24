@@ -90,6 +90,8 @@ select:-webkit-autofill:active {
 .spz_7002_v1.spz-show-modal {
   overflow: hidden;
   position: relative;
+  max-width: 100dvw;
+  max-height: 100dvh;
 }
 .spz_7002_v1.spz-show-modal::before {
   content: "";
@@ -229,7 +231,7 @@ select:-webkit-autofill:active {
   top: 12px;
   left: 12px;
   background: #fff;
-  width: auto !important;
+  width: calc(100% - 60px) !important;
   height: auto;
   pointer-events: none;
   -webkit-transition: color 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out;
@@ -412,6 +414,7 @@ select:-webkit-autofill:active {
   max-height: 16px;
   border-radius: 4px;
   outline: none;
+  padding: 0;
 }
 
 .spz_7002_v1 #mktoForm_1017.mktoForm .mktoCheckboxList label {

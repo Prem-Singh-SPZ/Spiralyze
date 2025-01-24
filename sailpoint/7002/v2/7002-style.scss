@@ -70,7 +70,6 @@ select:-webkit-autofill:active {
         @media screen and (max-width: 767.98px) {
           top: 12px;
           right: 12px;
-          
         }
 
         &:hover {
@@ -92,6 +91,8 @@ select:-webkit-autofill:active {
 .spz_7002_v2.spz-show-modal {
   overflow: hidden;
   position: relative;
+  max-width: 100dvw;
+  max-height: 100dvh;
 
   &::before {
     content: "";
@@ -142,7 +143,9 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002_v2 #contact-us, .spz_7002_v2 #footer-cta, .spz_7002_v2 #get-started {
+.spz_7002_v2 #contact-us,
+.spz_7002_v2 #footer-cta,
+.spz_7002_v2 #get-started {
   display: none !important;
 }
 
@@ -173,8 +176,7 @@ select:-webkit-autofill:active {
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Country,
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_State,
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry,
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Number_of_Employees__c
- {
+.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Number_of_Employees__c {
   width: calc(50% - 8px);
 }
 
@@ -199,7 +201,10 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -211,15 +216,19 @@ select:-webkit-autofill:active {
   top: 12px;
   left: 12px;
   background: #fff;
-  width: auto !important;
+  width: calc(100% - 60px) !important;
   height: auto;
   pointer-events: none;
-  transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
+  transition: color 0.3s ease-in-out, top 0.3s ease-in,
     font-size 0.3s ease-in-out;
   z-index: 9;
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel
+  .mktoAsterix {
   display: none !important;
 }
 
@@ -248,8 +257,14 @@ select:-webkit-autofill:active {
   color: #415364 !important;
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap.filled label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.active.typing
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.filled
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
   width: auto !important;
   top: -11px;
   background: #fff;
@@ -451,6 +466,7 @@ select:-webkit-autofill:active {
   max-height: 16px;
   border-radius: 4px;
   outline: none;
+  padding: 0;
   // margin-top: 1px;
 }
 
@@ -649,7 +665,7 @@ html.spz-no-scroll {
 
           .spz-btn-desk {
             height: 48px;
-            width: 142px;
+            width: 168px;
             line-height: 160%;
             white-space: nowrap;
           }
@@ -697,7 +713,7 @@ html.spz-no-scroll {
 
           .spz-btn-mob {
             @media (min-width: 767.98px) {
-              width: 142px;
+              width: 168px;
               height: 48px;
               padding: 11px 16px;
               font-size: 16px;
@@ -718,7 +734,7 @@ html.spz-no-scroll {
     }
   }
 
-  .mktoForm input[type=checkbox]{
+  .mktoForm input[type="checkbox"] {
     min-width: 16px;
     max-width: 16px;
     min-height: 16px;
