@@ -5,66 +5,120 @@
   display: none;
 }
 
-.spz_9001 .hero + .row {
-  position: relative;
-  padding: 64px 0 81px;
-  margin-bottom: 82px;
-  overflow: hidden;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/illustrator.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 672px;
-    height: 480px;
-    top: 22px;
-    right: -161px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/frame_1171275822_webp.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 528px;
-    height: 136px;
-    left: -328px;
-    bottom: 209px;
-  }
-
-  > .row__inner {
-    width: 100%;
-    max-width: 1330px;
-    padding: 0 20px;
-    margin: 0 auto;
-    z-index: 99;
+.spz_9001 {
+  .hero + .row {
     position: relative;
+    padding: 64px 0 81px;
+    margin-bottom: 82px;
+    overflow: hidden;
 
-    .bg-gradient {
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-      padding: 41px 40px 39px;
-      max-width: 600px;
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/illustrator.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 672px;
+      height: 480px;
+      top: 22px;
+      right: -161px;
+    }
 
-      p.text-h3 {
-        color: #415364;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.2;
-        margin: 7px 0 13px;
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/frame_1171275822_webp.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 528px;
+      height: 136px;
+      left: -328px;
+      bottom: 209px;
+    }
+
+    > .row__inner {
+      width: 100%;
+      max-width: 1330px;
+      padding: 0 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      position: relative;
+
+      .spz-logo {
+        .logo-anchor {
+          display: inline-block;
+          img {
+            pointer-events: none;
+          }
+        }
       }
 
-      p.mx-auto:not(.text-h3) {
+      > .column.relative {
         display: none;
       }
 
-      .mkto-wrap{
-        min-height: unset;
+      .bg-gradient {
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+        padding: 41px 40px 39px;
+        max-width: 600px;
+        margin: auto;
+
+        p.text-h3 {
+          color: #415364;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.2;
+          margin: 7px auto 13px;
+          text-align: center;
+        }
+
+        p.mx-auto:not(.text-h3) {
+          display: none;
+        }
+
+        .mkto-wrap {
+          min-height: unset;
+        }
+      }
+    }
+  }
+
+  .social-proof-logos {
+    margin-top: 57px;
+    width: 100%;
+    max-width: 1330px;
+    padding: 0 20px;
+    margin: 63px auto 0;
+
+    .social-proof-heading {
+      color: #415364;
+      text-align: center;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 25px;
+    }
+
+    .social-proof-images {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: auto;
+        height: 58px;
+        object-fit: contain;
+
+        &.repeat-img {
+          display: none;
+        }
       }
     }
   }
@@ -125,41 +179,6 @@
   display: none;
 }
 
-.spz_9001 .hero + .row .social-proof-logos {
-  margin-top: 57px;
-  width: 100%;
-  max-width: 1330px;
-  padding: 0 20px;
-  margin: 63px auto 0;
-}
-
-.spz_9001 .hero + .row .social-proof-logos .social-proof-heading {
-  color: #415364;
-  text-align: center;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 25px;
-}
-
-.spz_9001 .hero + .row .social-proof-logos .social-proof-images {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.spz_9001 .social-proof-logos .social-proof-images img {
-  width: auto;
-  height: 58px;
-  object-fit: contain;
-}
-
-.spz_9001 .social-proof-logos .social-proof-images img.repeat-img {
-  display: none;
-}
-
 .spz_9001 footer {
   // position: absolute;
   // bottom: 0;
@@ -197,7 +216,7 @@
         width: 125px;
         height: 82px;
       } */
-  .spz_9001 .hero + .row .social-proof-logos {
+  .spz_9001 .social-proof-logos {
     margin: 64px auto 0;
   }
 }
@@ -265,15 +284,15 @@
     margin-bottom: 22px;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos {
+  .spz_9001 .social-proof-logos {
     max-width: unset;
     padding: 0;
     margin: 64px auto 0;
     position: relative;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos::before,
-  .spz_9001 .hero + .row .social-proof-logos::after {
+  .spz_9001 .social-proof-logos::before,
+  .spz_9001 .social-proof-logos::after {
     position: absolute;
     content: "";
     width: 122px;
@@ -285,13 +304,13 @@
     z-index: 9;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos::after {
+  .spz_9001 .social-proof-logos::after {
     left: unset;
     right: 0;
     transform: none;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos .social-proof-images {
+  .spz_9001 .social-proof-logos .social-proof-images {
     display: flex;
     flex-wrap: unset;
     align-items: unset;
@@ -363,22 +382,22 @@
     margin-bottom: 24px;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos {
+  .spz_9001 .social-proof-logos {
     margin: 63px auto 0;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos .social-proof-heading {
+  .spz_9001 .social-proof-logos .social-proof-heading {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 23px;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos:before,
-  .spz_9001 .hero + .row .social-proof-logos:after {
+  .spz_9001 .social-proof-logos:before,
+  .spz_9001 .social-proof-logos:after {
     height: 48px;
   }
 
-  .spz_9001 .hero + .row .social-proof-logos .social-proof-images {
+  .spz_9001 .social-proof-logos .social-proof-images {
     gap: 0 16px;
   }
 
@@ -428,28 +447,38 @@ select:-webkit-autofill:active {
   width: 100% !important;
 }
 
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
-  width: 100%;
-}
-
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-2,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-3,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-4,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-5,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-6,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-7,
 .spz_9001
   .page-transition
   .inner-row__inner
   form.mktoForm
-  .mktoFormRow.field-8.spz-half,
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-9,
-.spz_9001
-  .page-transition
-  .inner-row__inner
-  form.mktoForm
-  .mktoFormRow.field-10 {
+  .mktoFormRow[class*="row_"] {
+  &.row_Country + .mktoFormRow {
+    width: calc(50% - 8px);
+  }
   width: calc(50% - 8px);
+}
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
+  &.row_contactFormComments,
+  &.row_Global_Opt_in__c, &.spz-full-width {
+    width: 100%;
+  }
+
+  &.row_contactFormComments{
+    .mktoFieldWrap .mktoField:not([type=checkbox]){
+      height: 88px;
+    }
+  }
+
+  .mktoHtmlText.mktoHasWidth,
+  .mktoHtmlText.mktoHasWidth * {
+    position: relative;
+    color: #415364 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    cursor: pointer;
+  }
 }
 
 .spz_9001
@@ -491,7 +520,7 @@ select:-webkit-autofill:active {
   top: 12px;
   left: 12px;
   background: #fff;
-  width: auto !important;
+  width: calc(100% - 50px) !important;
   height: auto;
   pointer-events: none;
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
@@ -778,7 +807,7 @@ select:-webkit-autofill:active {
   .mktoCheckboxList
   label {
   position: relative;
-  color: #415364;
+  color: #415364 !important;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

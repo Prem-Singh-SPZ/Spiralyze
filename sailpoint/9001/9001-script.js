@@ -1,4 +1,45 @@
 (function () {
+
+  const additionalSection = {
+    socialProofLogos: {
+      socialProofHeading: "Used by 48% of the Fortune 500",
+      socialProofImages: [
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg",
+          imgAlt: "GM",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg",
+          imgAlt: "Hershey",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg",
+          imgAlt: "Paccar",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg",
+          imgAlt: "Philips",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg",
+          imgAlt: "RWE",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg",
+          imgAlt: "T Mobile",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg",
+          imgAlt: "The Home Depot",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_08.svg",
+          imgAlt: "Toyota",
+        },
+      ]
+    },
+  }
+
   function createTest() {
     let bodyLoaded = setInterval(function () {
       const body = document.querySelector('body');
@@ -7,103 +48,9 @@
         if (!body.classList.contains('spz_9001')) {
           body.classList.add('spz_9001');
 
-          // const heroSelector = `.page-transition`;
-          // const position = "beforebegin";
-          // const formSelector = `#mktoForm_1017`;
-          // const heroContent = {
-          //   siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo__colored.svg",
-          //   siteLogoAlt: "SailPoint",
-          //   formHeading: "Get live demo",
-          // };
-          // const additionalSection = {
-          //   socialProofLogos: {
-          //     socialProofHeading: "Used by 48% of the Fortune 500",
-          //     socialProofImages: [
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg",
-          //         imgAlt: "GM",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg",
-          //         imgAlt: "Hershey",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg",
-          //         imgAlt: "Paccar",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg",
-          //         imgAlt: "Philips",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg",
-          //         imgAlt: "RWE",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg",
-          //         imgAlt: "T Mobile",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg",
-          //         imgAlt: "The Home Depot",
-          //       },
-          //       {
-          //         url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_08.svg",
-          //         imgAlt: "Toyota",
-          //       },
-          //     ]
-          //   },
-          // }
-
-          // function addBaseline(formData, whereToPut, formSelector, heroSelector, additionalSection) {
-          //   const formTemplate = `<section class="spz-hero">
-          //     <div class="spz-wrapper">
-          //         <div class="content-section">
-          //           ${formData.siteLogo.length !== 0
-          //       ? `<a class="site-logo" data-sentry-element="NextLink" data-sentry-source-file="MainLargeNavigation.tsx" href="/">
-          //               <img src="${formData.siteLogo}" alt="${formData.siteLogoAlt}" />
-          //             </a>`
-          //       : ""
-          //     }
-          //         </div>
-          //       <div class="spz-form-wrap">
-          //         <div class="spz-form-section">
-          //           ${formData.formHeading.replace(/\s/g, "").length !== 0
-          //       ? `<div class="form-heading">${formData.formHeading}</div>`
-          //       : ""
-          //     }
-          //           <div class="the-form"></div>
-          //         </div>
-          //       </div>
-          //     </div>
-          //     ${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
-          //       <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
-          //       <div class="social-proof-images">
-          //         ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
-          //       return `<img src="${item.url}" alt="${item.imgAlt}">`;
-          //     })
-          //         .join("") + additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
-          //           return `<img src="${item.url}" class="repeat-img" alt="${item.imgAlt}">`;
-          //         })
-          //           .join("")
-          //         : ""}
-          //       </div>
-          //     </div>`
-          //       : ``}
-          //   </section>`;
-          //   waitForElm(heroSelector).then(() => {
-          //     document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
-          //   });
-          //   let formLoaded = setInterval(() => {
-          //     if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
-          //       clearInterval(formLoaded)
-          //       document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-          //       // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
-          //       document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
-          //       formModify();
-          //     }
-          //   });
-          // }
+          waitForElm('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').then(() => {
+            pageModify();
+          });
 
           waitForElm('.spz_9001 #page-container .page-transition .inner-row__inner #mktoForm_1017 input').then(() => {
             formModify();
@@ -136,16 +83,65 @@
     });
   }
 
+  function pageModify() {
+    document.querySelector('.spz_9001 .hero + .row > .row__inner').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a class="logo-anchor" href="javascript:;"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737104112/sailpoint/9001/logo__colored.svg" alt="SailPoint" class=""></a>`);
+
+    let checkTitle = setInterval(() => {
+      if (document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').textContent !== "Contact us") {
+        document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').textContent = "Contact us";
+      }
+    }, 100);
+
+    setTimeout(() => {
+      clearInterval(checkTitle);
+    }, 5000);
+
+    document.querySelector('.spz_9001 .hero + .row').insertAdjacentHTML('afterend', `     ${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
+                <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
+                <div class="social-proof-images">
+                  ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
+      return `<img src="${item.url}" alt="${item.imgAlt}">`;
+    })
+        .join("") + additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
+          return `<img src="${item.url}" class="repeat-img" alt="${item.imgAlt}">`;
+        })
+          .join("")
+        : ""}
+                </div>
+              </div>`
+      : ``}`);
+
+  }
+
   function formModify() {
     // Add class in mktoFormRow using count
-    var form_fields = document.querySelectorAll('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow');
+    // var form_fields = document.querySelectorAll('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow');
+    // for (var i = 0; i < form_fields.length; i++) {
+    //   var dynamicClass = 'field-' + (i + 1);
+    //   form_fields[i].classList.add(dynamicClass);
+    // }
+
+    // Add class in mktoField using the name attribute
+    var form_fields = document.querySelectorAll('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow');
     for (var i = 0; i < form_fields.length; i++) {
-      var dynamicClass = 'field-' + (i + 1);
-      form_fields[i].classList.add(dynamicClass);
+      if (form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])')) {
+        var dynamicClass = form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])').getAttribute('name');
+        form_fields[i].classList.add('row_' + dynamicClass);
+      }
+      else {
+        if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
+          if (i >= 12) {
+            // form_fields[i].classList.add('hidden');
+          }
+        }
+        else {
+          form_fields[i].classList.add('row_Global_Opt_in__c');
+        }
+      }
     }
 
     // Change Label Text
-    ['#LblCountry:Country', '#LblState:State', '#LblNumber_of_Employees__c:Number of employees'].forEach(item => {
+    ['#LblCountry:Country', '#LblState:State', '#LblNumber_of_Employees__c:Number of employees', '#LblreasonforInquiry:Reason for inquiry'].forEach(item => {
       const [id, text] = item.split(':');
       waitForElm(`.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
         label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
@@ -157,15 +153,23 @@
     // });
 
     // Change Field Position
-    var employees_field = document.querySelector('.spz_9001 form.mktoForm .field-8');
-    var state_field = document.querySelector('.spz_9001 form.mktoForm .field-10');
-    state_field.after(employees_field);
+    const email_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Email');
+    const last_name_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_LastName');
+    const inquiry_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_reasonforInquiry');
+    const country_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Country');
+    const company_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Company');
+    const title_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Title');
+    const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
+    const button = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-    // var disclaimer_field = document.querySelector('.spz_9001 form.mktoForm .mktoCaptchaDisclaimer');
-    // var button = document.querySelector('.spz_9001 form.mktoForm .mktoButtonRow');
-    // button.after(disclaimer_field);
+    if (company_field && title_field && disclaimer_field && button) {
+      last_name_field.insertAdjacentElement('afterend', email_field);
+      country_field.insertAdjacentElement('beforebegin', inquiry_field);
+      company_field.after(title_field);
+      // button.after(disclaimer_field);
+    }
 
-    document.querySelector('.spz_9001 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
+    // document.querySelector('.spz_9001 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
     waitForElm(`.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
       setTimeout(() => {
@@ -181,6 +185,8 @@
     function focusFields() {
       // Attach events using event delegation
       const form = document.querySelector('.spz_9001 form.mktoForm');
+      if (!form) return;
+
 
       form.addEventListener('focus', function (event) {
         const el = event.target;
@@ -276,40 +282,19 @@
       }, 1000);
     }
 
+    if (document.querySelector('.spz_9001 #mktoForm_1017.mktoForm select#Country')) {
+      document.querySelector('select#Country').addEventListener('change', () => {
+        const stateRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
+        const optOutRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
+        const countryRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-    // Function to add .field-error class on closest parent .field class if .error is exist on input
-    function checkError(elem) {
-      let timeBuffer = setInterval(() => {
-        if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
-          elem.closest('.mktoFieldWrap').classList.add('error');
-        } else {
-          elem.closest('.mktoFieldWrap').classList.remove('error');
-        }
-        if (elem && elem.value && (elem.value != '')) {
-          elem.closest('.mktoFieldWrap').classList.add('filled');
-        } else {
-          elem.closest('.mktoFieldWrap').classList.remove('filled');
-        }
-      }, 100);
+        // waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        // });
 
-      setTimeout(() => {
-        clearInterval(timeBuffer);
-      }, 1000);
+        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
+      });
     }
-
-    document.querySelector('select#Country').addEventListener('change', () => {
-      const stateRow = document.querySelector('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-10');
-      const optOutRow = document.querySelector('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-31');
-      const employeeNumberRow = document.querySelector('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-8');
-
-      const stateExists = document.querySelector('select#State');
-      stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half'))
-        : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
-
-      // document.querySelector('label#LblGlobal_Opt_out__c')
-      //   ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))
-      //   : optOutRow.classList.add('hidden');
-    });
 
     MktoForms2.whenReady(function (form) {
       form.onSuccess(function (values, followUpUrl) {
@@ -330,6 +315,12 @@
     });
 
   }
+
+  window.addEventListener('click', function (e) {
+    if (e.target.classList.contains('logo-anchor')) {
+      this.document.querySelector('a[href="/"]').click();
+    }
+  });
 
   function removeTest() {
     setTimeout(() => {
