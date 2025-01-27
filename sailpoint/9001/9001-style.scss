@@ -1101,7 +1101,9 @@ select:-webkit-autofill:active {
     margin: 0 auto;
 
     @media screen and (max-width: 1199.98px) {
-      padding: 0 21px;
+      padding: 0;
+      max-width: 726px;
+      margin: auto;
     }
   }
 
@@ -1288,6 +1290,10 @@ select:-webkit-autofill:active {
             white-space: nowrap;
             padding-right: 5px;
           }
+        }
+
+        @media (max-width: 767.98px) {
+          display: block;
         }
       }
 
