@@ -150,8 +150,10 @@
             <div class="sp-hq-details">
                 <h2 class="box-headline">Corporate headquarters</h2>
                 <h3 class="box-title">United States</h3>
-                <p>11120 Four Points Drive, Suite 100</p>
-                <p>Austin, TX 78726</p>
+                <div class="sp-address">
+                  <p>11120 Four Points Drive, Suite 100</p>
+                  <p>Austin, TX 78726</p>
+                </div>
                 <p class="phone-num"><a href="tel:15123462000" class="link">1-512-346-2000</a> Phone</p>
                 <p>1-512-346-2033 Fax</p>
                 <div class="modal-cta-container"><a href="javascript:;" class="spz-trigger-modal">See international locations <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">

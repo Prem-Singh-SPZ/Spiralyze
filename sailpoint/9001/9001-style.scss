@@ -1233,6 +1233,12 @@ select:-webkit-autofill:active {
     border-radius: 24px;
     background: #f0f3f6;
 
+    @media (max-width: 1199.98px) {
+      margin-top: 33.5px;
+      flex-direction: column;
+      padding: 32px;
+    }
+
     .sp-hq-details {
       flex: 0 0 35%;
       max-width: 374px;
@@ -1244,6 +1250,10 @@ select:-webkit-autofill:active {
         font-weight: 600;
         line-height: 120%;
         margin-bottom: 32px;
+
+        @media (max-width: 1199.98px) {
+          margin-bottom: 23px;
+        }
       }
 
       .box-title {
@@ -1260,20 +1270,39 @@ select:-webkit-autofill:active {
         &.phone-num {
           margin-top: 25px;
 
+          @media (max-width: 1199.98px) {
+            margin-top: 5px;
+          }
+
           .link {
             text-underline-offset: 1px;
           }
         }
       }
 
+      .sp-address {
+        @media (max-width: 1199.98px) {
+          display: flex;
+
+          p {
+            white-space: nowrap;
+            padding-right: 5px;
+          }
+        }
+      }
+
       .modal-cta-container {
         margin-top: 48.5px;
+
+        @media screen and (max-width: 1199.98px) {
+          margin-top: 28.5px;
+        }
+
         .spz-trigger-modal {
           color: #0071ce;
           font-size: 16px;
           font-weight: 600;
           line-height: 160%;
-
           display: flex;
           align-items: center;
 
@@ -1287,6 +1316,11 @@ select:-webkit-autofill:active {
     .sp-map {
       width: 100%;
       margin-left: 64px;
+
+      @media (max-width: 1199.98px) {
+        margin-left: 0;
+        margin-top: 40px;
+      }
 
       img {
         max-width: 100%;
