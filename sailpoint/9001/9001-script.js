@@ -162,9 +162,9 @@
             </div>
             <div class="sp-map">
                 <picture>
-                    <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image.webp">
-                    <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_2.webp">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_1.webp" alt="SailPoint location map">
+                    <source media="(min-width: 1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_5.webp">
+                    <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_4.webp">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/image_3.webp" alt="SailPoint location map">
                 </picture>
             </div>
         </div>
