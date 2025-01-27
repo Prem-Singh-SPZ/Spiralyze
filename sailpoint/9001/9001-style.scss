@@ -58,6 +58,7 @@ html.spz-no-scroll {
 
         @media (max-width: 1199.98px) {
           padding: 0;
+          margin-bottom: 58px;
         }
 
         .logo-anchor {
@@ -84,6 +85,11 @@ html.spz-no-scroll {
           max-width: 726px;
         }
 
+        @media (max-width: 767.98px) {
+          padding: 32px 20px 40px;
+          
+        }
+
         .spz-form-title {
           color: #415364;
           font-size: 30px;
@@ -92,6 +98,10 @@ html.spz-no-scroll {
           line-height: 1.2;
           margin: 1px auto 23px;
           text-align: center;
+
+          @media (max-width: 767.98px) {
+            font-size: 28px;
+          }
         }
 
         p.mx-auto,
@@ -458,15 +468,14 @@ html.spz-no-scroll {
 
 @media (max-width: 767.98px) {
   .spz_9001 .hero + .row {
-    padding: 16px 0 64px;
+    // padding: 16px 0 64px;
     margin-bottom: 0;
   }
 
   .spz_9001 .hero + .row:before {
-    width: 336px;
-    height: 240px;
-    top: 620px;
-    right: -70px;
+    right: -204px;
+    bottom: -413px;
+    top: 28px;
   }
 
   .spz_9001 .hero + .row:after {
