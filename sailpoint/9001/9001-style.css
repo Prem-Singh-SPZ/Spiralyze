@@ -183,6 +183,13 @@ html.spz-no-scroll {
   position: relative;
   width: 100%;
   padding: 64px;
+  width: calc(100% - 42px);
+}
+@media (max-width: 1199.98px) {
+  .spz_9001 .spz-modal .spz-modal-content {
+    max-width: 726px;
+    padding: 32px;
+  }
 }
 .spz_9001 .spz-modal .spz-modal-content .spz-close-modal {
   position: absolute;
@@ -209,12 +216,33 @@ html.spz-no-scroll {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1199.98px) {
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 49.5%;
           flex: 0 0 49.5%;
   max-width: 541px;
+}
+@media (max-width: 1199.98px) {
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations,
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row {
@@ -237,10 +265,13 @@ html.spz-no-scroll {
   font-weight: 600;
   line-height: 120%;
   margin-bottom: 32px;
+  letter-spacing: 0.4px;
 }
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group {
-  padding: 24px;
+  padding: 23.15px 24px;
+  border-radius: 8px;
+  border: 1px solid #dae1e9;
 }
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__heading,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__heading {
@@ -265,7 +296,8 @@ html.spz-no-scroll {
   top: 5px;
   right: 4px;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h6, .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h5,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h6,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h5,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > h6,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > h5 {
   color: #415364;
@@ -290,6 +322,15 @@ html.spz-no-scroll {
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p:empty,
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p:empty {
   margin: 0;
+}
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p:last-child,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 1199.98px) {
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations {
+    margin-bottom: 32px;
+  }
 }
 .spz_9001.spz-show-modal {
   overflow: hidden;

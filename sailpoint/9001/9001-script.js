@@ -177,6 +177,10 @@
     waitForElm('.spz-modal-content .int-locations').then((elm) => {
       moveElement('.page-transition #corporate-location + .row', '.spz-modal-content .int-locations');
       moveElement('.page-transition #corporate-location + .row', '.spz-modal-content .int-sales-locations');
+
+      if(document.querySelector('.spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2')){
+        document.querySelector('.spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2').textContent = 'International locations';
+      }
     });
   }
 
