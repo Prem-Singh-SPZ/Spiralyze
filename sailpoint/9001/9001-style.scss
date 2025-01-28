@@ -186,6 +186,10 @@ html.spz-no-scroll {
         padding: 32px;
       }
 
+      @media screen and (max-width: 767.98px) {
+        padding: 32px 20px;
+      }
+
       .spz-close-modal {
         position: absolute;
         top: 20px;
@@ -193,10 +197,10 @@ html.spz-no-scroll {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
-        @media screen and (max-width: 767.98px) {
-          top: 12px;
-          right: 12px;
-        }
+        // @media screen and (max-width: 767.98px) {
+        //   top: 12px;
+        //   right: 12px;
+        // }
 
         &:hover {
           svg path {
@@ -246,6 +250,11 @@ html.spz-no-scroll {
                 line-height: 120%;
                 margin-bottom: 32px;
                 letter-spacing: 0.4px;
+
+                @media (max-width: 767.98px) {
+                  font-size: 28px;
+                  margin-bottom: 25px;
+                }
               }
 
               .group {
@@ -278,6 +287,9 @@ html.spz-no-scroll {
 
                 .group__content {
                   // margin-top: 20px;
+                  @media (max-width: 767.98px) {
+                   padding-right: 0;
+                  }
 
                   > h6,
                   > h5 {
