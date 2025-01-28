@@ -11,6 +11,12 @@ html.spz-no-scroll {
 }
 
 .spz_9001 {
+  .desk-only {
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+
   .hero + .row {
     position: relative;
     padding: 64px 0 56px;
@@ -1291,6 +1297,11 @@ select:-webkit-autofill:active {
       padding: 32px;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 24px;
+      margin-bottom: 46px;
+    }
+
     .sp-hq-details {
       flex: 0 0 35%;
       max-width: 374px;
@@ -1306,6 +1317,10 @@ select:-webkit-autofill:active {
         @media (max-width: 1199.98px) {
           margin-bottom: 23px;
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 28px;
+        }
       }
 
       .box-title {
@@ -1318,12 +1333,20 @@ select:-webkit-autofill:active {
 
       p {
         margin-bottom: 12px;
+        color: #415364;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 160%;
 
         &.phone-num {
           margin-top: 25px;
 
           @media (max-width: 1199.98px) {
             margin-top: 5px;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            margin-top: 18px;
           }
 
           .link {
@@ -1339,6 +1362,16 @@ select:-webkit-autofill:active {
           p {
             white-space: nowrap;
             padding-right: 5px;
+            color: #415364;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 160%;
+
+            @media (max-width: 767.98px) {
+              padding: 0;
+              white-space: normal;
+              margin-bottom: 4px;
+            }
           }
         }
 

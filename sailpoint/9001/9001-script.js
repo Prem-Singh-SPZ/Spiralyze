@@ -151,8 +151,7 @@
                 <h2 class="box-headline">Corporate headquarters</h2>
                 <h3 class="box-title">United States</h3>
                 <div class="sp-address">
-                  <p>11120 Four Points Drive, Suite 100</p>
-                  <p>Austin, TX 78726</p>
+                  <p>11120 Four Points Drive, Suite 100 <br class="desk-only">Austin, TX 78726</p>
                 </div>
                 <p class="phone-num"><a href="tel:15123462000" class="link">1-512-346-2000</a> Phone</p>
                 <p>1-512-346-2033 Fax</p>
