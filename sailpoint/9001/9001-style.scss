@@ -161,7 +161,7 @@ html.spz-no-scroll {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999999999;
+    z-index: 99;
     overflow: auto;
     opacity: 0;
     visibility: hidden;
@@ -182,8 +182,8 @@ html.spz-no-scroll {
 
       .spz-close-modal {
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 20px;
+        right: 20px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
@@ -204,7 +204,9 @@ html.spz-no-scroll {
         justify-content: space-between;
         .int-locations,
         .int-sales-locations {
-          flex: 0 0 49%;
+          flex: 0 0 49.5%;
+          max-width: 541px;
+
           .row {
             padding: 0;
             margin: 0;
@@ -213,11 +215,45 @@ html.spz-no-scroll {
               padding: 0;
               margin: 0;
 
+              .bg-white {
+                .eyebrow {
+                  display: none;
+                }
+              }
+
               p.text-h2 {
                 color: #415364;
                 font-size: 30px;
                 font-weight: 600;
                 line-height: 120%;
+                margin-bottom: 32px;
+              }
+
+              .group {
+                padding: 24px;
+
+                .group__heading {
+                  color: #415364;
+                  font-size: 21px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%;
+                  position: relative;
+
+                  span:not(.transition) {
+                    color: #415364;
+                    font-size: 21px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                  }
+
+                  .transition {
+                    position: absolute;
+                    top: 5px;
+                    right: 4px;
+                  }
+                }
               }
             }
           }
@@ -252,7 +288,7 @@ html.spz-no-scroll {
         rgba(10, 8, 59, 0.9) 100%
       );
       backdrop-filter: blur(1.5px);
-      z-index: 9999999999;
+      z-index: 99;
     }
 
     .spz-modal {

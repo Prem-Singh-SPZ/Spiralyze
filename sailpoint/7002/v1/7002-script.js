@@ -33,7 +33,7 @@
             document.querySelector('.spz_7002_v1 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
             document.querySelector('.spz_7002_v1 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
 
-            document.querySelectorAll('.spz_7002_v1 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el){
+            document.querySelectorAll('.spz_7002_v1 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
                 el.classList.add('spz-hero-cta');
             })
         }
@@ -241,15 +241,15 @@
     }
 
     //click event listener
-    document.addEventListener('click', function (e) {
+    document.body.addEventListener('click', function (e) {
         if (e.target.closest('.spz-contact-us')) {
             document.body.classList.add('spz-show-modal');
-            document.querySelector('html').classList.add('spz-no-scroll');
+            document.body.querySelector('html').classList.add('spz-no-scroll');
         }
         if (e.target.closest('.spz-close-modal')) {
             e.stopPropagation();
             document.body.classList.remove('spz-show-modal');
-            document.querySelector('html').classList.remove('spz-no-scroll');
+            document.body.querySelector('html').classList.remove('spz-no-scroll');
         }
     });
 
