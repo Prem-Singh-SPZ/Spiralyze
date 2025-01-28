@@ -58,7 +58,7 @@ html.spz-no-scroll {
 
         @media (max-width: 1199.98px) {
           padding: 0;
-          margin-bottom: 57px;
+          margin-bottom: 58px;
         }
 
         .logo-anchor {
@@ -87,7 +87,6 @@ html.spz-no-scroll {
 
         @media (max-width: 767.98px) {
           padding: 32px 20px 40px;
-          
         }
 
         .spz-form-title {
@@ -510,7 +509,7 @@ html.spz-no-scroll {
   }
 
   .spz_9001 .social-proof-logos {
-    margin: 63px auto 0;
+    margin: 0 auto;
   }
 
   .spz_9001 .social-proof-logos .social-proof-heading {
@@ -936,6 +935,14 @@ select:-webkit-autofill:active {
     padding: 0;
     outline: none;
     margin-top: 3px;
+
+    @media screen and (max-width: 767.98px) {
+      min-width: 20px;
+      max-width: 20px;
+      min-height: 20px;
+      max-height: 20px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -956,6 +963,10 @@ select:-webkit-autofill:active {
   cursor: pointer;
   display: inline-flex;
   width: auto;
+
+  @media screen and (max-width: 767.98px) {
+    padding-left: 8px;
+  }
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
@@ -1088,6 +1099,12 @@ select:-webkit-autofill:active {
     form.mktoForm
     .mktoCaptchaDisclaimer {
     max-width: unset;
+    text-align: center;
+    margin-top: 11px;
+  }
+
+  .spz_9001 .page-transition .inner-row__inner .disclaimer {
+    text-align: center;
   }
 
   .spz_9001
@@ -1114,6 +1131,11 @@ select:-webkit-autofill:active {
       max-width: 726px;
       margin: auto;
     }
+
+    @media screen and (max-width: 767.98px) {
+      margin-top: 64px;
+      padding: 0 20px;
+    }
   }
 
   .sp-contact-info {
@@ -1138,6 +1160,12 @@ select:-webkit-autofill:active {
         padding: 32px;
       }
 
+      @media screen and (max-width: 767.98px) {
+        width: 100%;
+        max-width: 318px;
+        padding: 24px;
+      }
+
       .box-title {
         color: #415364;
         text-align: center;
@@ -1148,6 +1176,10 @@ select:-webkit-autofill:active {
 
         &.sp-mt-32 {
           margin-top: 32px;
+
+          @media screen and (max-width: 767.98px) {
+            margin-top: 16px;
+          }
         }
       }
 
@@ -1160,12 +1192,21 @@ select:-webkit-autofill:active {
 
         &.sp-mb-0 {
           margin-bottom: 0;
+
+          @media screen and (max-width: 767.98px) {
+            white-space: nowrap;
+          }
         }
       }
     }
 
     .sp-support {
       margin-right: 24px;
+
+      @media screen and (max-width: 767.98px) {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
 
       p {
         max-width: 69%;
