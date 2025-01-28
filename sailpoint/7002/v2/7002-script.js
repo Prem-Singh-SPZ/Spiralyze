@@ -1,28 +1,32 @@
 (function () {
     function createTest() {
-        waitForElm('body').then(() => {
-            if (!document.body.classList.contains('spz_7002_v2')) {
-                removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
-                document.body.classList.add('spz_7002_v2');
-                hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
-
-                waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
-                    let spzFormInterval = setInterval(() => {
-                        if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
-                            addCta();
-                            formModify();
-                            hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
-                        }
-                    }, 500);
-                    setTimeout(function () {
-                        clearInterval(spzFormInterval);
-                    }, 15000);
-                });
-
-            } else {
-                if (document.body.classList.contains('spz_7002_v2')) {
+        let bodyLoaded = setInterval(function () {
+            const body = document.querySelector('body');
+            if (body) {
+                clearInterval(bodyLoaded);
+                if (!document.body.classList.contains('spz_7002_v2')) {
                     removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
+                    document.body.classList.add('spz_7002_v2');
                     hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
+
+                    waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                        let spzFormInterval = setInterval(() => {
+                            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
+                                addCta();
+                                formModify();
+                                hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
+                            }
+                        }, 100);
+                        setTimeout(function () {
+                            clearInterval(spzFormInterval);
+                        }, 15000);
+                    });
+
+                } else {
+                    if (document.body.classList.contains('spz_7002_v2')) {
+                        removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
+                        hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
+                    }
                 }
             }
         });
@@ -33,7 +37,7 @@
             document.querySelector('.spz_7002_v2 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Talk to an expert</a>`);
             document.querySelector('.spz_7002_v2 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Talk to an expert</a>`);
 
-            document.querySelectorAll('.spz_7002_v2 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el){
+            document.querySelectorAll('.spz_7002_v2 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
                 el.classList.add('spz-hero-cta');
             })
         }
@@ -230,15 +234,18 @@
             });
         }
 
-        MktoForms2.whenReady(function (form) {
-            form.onSuccess(function (values, followUpUrl) {
-                document.body.classList.add('form-submit');
-            });
+        //check mktoforms2 library is loaded or not
+        if (typeof MktoForms2 !== 'undefined') {
+            MktoForms2.whenReady(function (form) {
+                form.onSuccess(function (values, followUpUrl) {
+                    document.body.classList.add('form-submit');
+                });
 
-            if (document.body.classList.contains('spz-form-loaded')) {
-                document.body.classList.remove('spz-form-loaded');
-            }
-        });
+                if (document.body.classList.contains('spz-form-loaded')) {
+                    document.body.classList.remove('spz-form-loaded');
+                }
+            });
+        }
     }
 
     //click event listener
@@ -252,7 +259,7 @@
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
         }
-    });  
+    });
 
     function removeTest() {
         setTimeout(() => {
@@ -362,7 +369,6 @@
     // List of URLs
     const urls = [
         "https://www.sailpoint.com/",
-        "https://www.sailpoint.com/products/identity-security-cloud",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/suites",
         "https://www.sailpoint.com/products/identity-security-software/identity-iq",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/cloud-infrastructure-entitlement-management",

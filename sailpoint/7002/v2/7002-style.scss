@@ -191,11 +191,24 @@ select:-webkit-autofill:active {
   width: calc(50% - 8px);
 }
 
+.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Country + .mktoFormRow {
+  display: block;
+  width: calc(50% - 8px);
+}
+
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
 }
 
-.spz_7002_v2 #mktoForm_1017.mktoForm > div:not([class]):not([id]) {
+.spz_7002_v2 #mktoForm_1017.mktoForm > div:not([class]):not([id]),
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFormRow.row_Phone:has(.mktoPlaceholderPhone),
+.spz_7002_v2
+  #mktoForm_1017.mktoForm
+  .mktoFormRow.row_Number_of_Employees__c:has(
+    .mktoPlaceholderNumber_of_Employees__c
+  ) {
   display: none;
 }
 
