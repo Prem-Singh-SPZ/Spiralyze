@@ -245,12 +245,12 @@
     document.body.addEventListener('click', function (e) {
         if (e.target.closest('.spz-contact-us')) {
             document.body.classList.add('spz-show-modal');
-            document.body.querySelector('html').classList.add('spz-no-scroll');
+            document.querySelector('html').classList.add('spz-no-scroll');
         }
         if (e.target.closest('.spz-close-modal')) {
             e.stopPropagation();
             document.body.classList.remove('spz-show-modal');
-            document.body.querySelector('html').classList.remove('spz-no-scroll');
+            document.querySelector('html').classList.remove('spz-no-scroll');
         }
     });  
 
