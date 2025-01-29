@@ -176,6 +176,10 @@ select:-webkit-autofill:active {
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow,
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
+
+  &:not([class*="row_"]) {
+    display: none;
+  }
 }
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow.row_Email,
