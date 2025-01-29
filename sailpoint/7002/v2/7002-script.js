@@ -11,15 +11,15 @@
 
                     waitForElm('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                         let spzFormInterval = setInterval(() => {
-                            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0) {
+                            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
                                 addCta();
                                 formModify();
                                 hiddenValue('SPZ_7002', 'SPZ_7002_variant2');
                             }
-                        }, 100);
+                        }, 500);
                         setTimeout(function () {
                             clearInterval(spzFormInterval);
-                        }, 15000);
+                        }, 50000);
                     });
 
                 } else {
@@ -49,17 +49,20 @@
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
             </svg></a></div></div></div>`);
 
-            waitForElm('.spz_7002_v2 .spz-form-container').then(() => {
-                document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Talk to an expert</div>`);
+            waitForElm('.spz_7002_v2 .mkto-wrap.w-full').then(() => {
+                if (document.querySelectorAll('.spz-form-title').length == 0)
+                    document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Talk to an expert</div>`);
+                document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
             });
 
-            document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
             if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v2 .disclaimer')) {
                 document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .disclaimer'));
             }
         }
-        else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0 && document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement) {
-            document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
+        else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
+            waitForElm('.spz_7002_v2 .mkto-wrap.w-full').then(() => {
+                document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
+            });
             if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v2 .disclaimer')) {
                 document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .disclaimer'));
             }

@@ -105,6 +105,10 @@ select:-webkit-autofill:active {
     z-index: 99 !important;
   }
 
+  #sp-050-modal {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -218,11 +222,18 @@ select:-webkit-autofill:active {
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFormCol {
   margin: 0 !important;
+  width: 100% !important;
+
+  .mktoOffset,
+  .mktoGutter {
+    display: none;
+  }
 }
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap {
   position: relative;
   margin-bottom: 16px;
+  width: 100% !important;
 
   @media screen and (max-width: 767.98px) {
     margin-bottom: 12px;
@@ -415,6 +426,11 @@ select:-webkit-autofill:active {
   line-height: 1.6;
   position: relative;
   // padding-left: 16px;
+  background: transparent;
+  text-shadow: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 // .spz_7002_v2 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
@@ -510,6 +526,7 @@ select:-webkit-autofill:active {
   cursor: pointer;
   display: inline-flex;
   width: auto;
+  margin: 0;
 }
 
 .spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow {
