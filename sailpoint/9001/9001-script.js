@@ -64,9 +64,6 @@
           setTimeout(function () {
             clearInterval(spzHeroInterval);
           }, 10000);
-
-
-
         } else {
           if (body.classList.contains('spz_9001')) {
             hiddenValue('spz_9001', 'spz_9001_Variant');
@@ -178,7 +175,7 @@
       moveElement('.page-transition #corporate-location + .row', '.spz-modal-content .int-locations');
       moveElement('.page-transition #corporate-location + .row', '.spz-modal-content .int-sales-locations');
 
-      if(document.querySelector('.spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2')){
+      if (document.querySelector('.spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2')) {
         document.querySelector('.spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2').textContent = 'International locations';
       }
     });
@@ -360,24 +357,26 @@
       });
     }
 
-    MktoForms2.whenReady(function (form) {
-      form.onSuccess(function (values, followUpUrl) {
-        document.body.classList.add('form-submit');
+    //check if the MktoForms2 is loaded
+    if (typeof MktoForms2 !== 'undefined') {
+      MktoForms2.whenReady(function (form) {
+        form.onSuccess(function (values, followUpUrl) {
+          document.body.classList.add('form-submit');
 
-        //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
-        var checkboxInterval = setInterval(() => {
-          var checkbox = document.querySelector('.spz_9001 form.mktoForm #mktoCheckbox_27268_0');
-          if (checkbox) {
-            checkbox.checked = true;
-          }
-        }, 100);
+          //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
+          var checkboxInterval = setInterval(() => {
+            var checkbox = document.querySelector('.spz_9001 form.mktoForm #mktoCheckbox_27268_0');
+            if (checkbox) {
+              checkbox.checked = true;
+            }
+          }, 100);
 
-        setTimeout(() => {
-          clearInterval(checkboxInterval);
-        }, 5000);
+          setTimeout(() => {
+            clearInterval(checkboxInterval);
+          }, 5000);
+        });
       });
-    });
-
+    }
   }
 
   window.addEventListener('click', function (e) {
@@ -405,15 +404,15 @@
 
   // Do not touch below hidden field code for any Experiment Start
   function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-    var ExistingHiddenFieldName = getCookie('HiddenFieldNameDemo');
-    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
+    var ExistingHiddenFieldName = getCookie('HiddenFieldNameContactUs');
+    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
 
     if (!ExistingHiddenFieldName) {
-      setCookie('HiddenFieldNameDemo', currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueDemo', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContactUs', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContactUs', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-      setCookie('HiddenFieldNameDemo', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueDemo', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContactUs', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContactUs', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -444,7 +443,7 @@
       var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
       if (intellimize1) {
         clearInterval(spz_cro_Interval);
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
         //check if hidden field value is empty then only set the value else set the value with , seperated
         if (intellimize1.value == '') {
           intellimize1.value = ExistingHiddenFieldValue;
@@ -457,9 +456,17 @@
       }
     });
 
-    setTimeout(function () {
-      clearInterval(spz_cro_Interval);
-    }, 15000);
+    //click event listener
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
+      }
+    });
   }
   // Do not touch below hidden field code for any Experiment over
 
@@ -487,6 +494,9 @@
   window.addEventListener("locationchange", function () {
     url = location.href;
     urlCheck(url);
+    if (document.querySelector('.spz_9001')) {
+      document.body.classList.remove("spz_9001");
+    }
   });
 
   function urlCheck(url) {

@@ -117,6 +117,10 @@ html.spz-no-scroll {
 .spz_9001 .hero + .row > .row__inner .bg-gradient .mkto-wrap {
   min-height: unset;
 }
+.spz_9001 .hero + .row > .row__inner .bg-gradient .mkto-wrap #contact_us_submit h3,
+.spz_9001 .hero + .row > .row__inner .bg-gradient .mkto-wrap #contact_us_submit h4 {
+  color: #415364 !important;
+}
 .spz_9001 .social-proof-logos {
   width: 100%;
   max-width: 1288px;
@@ -916,10 +920,12 @@ select:-webkit-autofill:active {
   display: none !important;
 }
 
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList,
+.spz_9001 .mktoForm input[type=checkbox] {
   margin-bottom: 0;
 }
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList input {
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList input,
+.spz_9001 .mktoForm input[type=checkbox] input {
   min-width: 16px;
   max-width: 16px;
   min-height: 16px;
@@ -929,7 +935,8 @@ select:-webkit-autofill:active {
   margin-top: 3px;
 }
 @media screen and (max-width: 767.98px) {
-  .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList input {
+  .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList input,
+  .spz_9001 .mktoForm input[type=checkbox] input {
     min-width: 20px;
     max-width: 20px;
     min-height: 20px;
@@ -1048,16 +1055,6 @@ select:-webkit-autofill:active {
   padding: 0 4px;
 }
 
-@media (max-width: 1119.98px) and (min-width: 1024px) {
-  .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap label.mktoLabel {
-    font-size: 12px;
-  }
-  .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .select-wrapper:after {
-    width: 12px;
-    top: 21px;
-    right: 11px;
-  }
-}
 @media (max-width: 767.98px) {
   .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
     width: 100% !important;
@@ -1286,7 +1283,8 @@ select:-webkit-autofill:active {
 @media screen and (max-width: 767.98px) {
   .spz_9001 .sp-hq-info {
     padding: 24px;
-    margin-bottom: 46px;
+    margin: 33.5px auto 46px;
+    max-width: 400px;
   }
 }
 .spz_9001 .sp-hq-info .sp-hq-details {
@@ -1415,6 +1413,9 @@ select:-webkit-autofill:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .spz_9001 .sp-contact-info > div {
     width: 100%;

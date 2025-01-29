@@ -116,6 +116,13 @@ html.spz-no-scroll {
 
         .mkto-wrap {
           min-height: unset;
+
+          #contact_us_submit {
+            h3,
+            h4 {
+              color: #415364 !important;
+            }
+          }
         }
       }
     }
@@ -288,7 +295,7 @@ html.spz-no-scroll {
                 .group__content {
                   // margin-top: 20px;
                   @media (max-width: 767.98px) {
-                   padding-right: 0;
+                    padding-right: 0;
                   }
 
                   > h6,
@@ -326,7 +333,7 @@ html.spz-no-scroll {
           }
         }
 
-        .int-locations{
+        .int-locations {
           @media (max-width: 1199.98px) {
             margin-bottom: 32px;
           }
@@ -1039,7 +1046,8 @@ select:-webkit-autofill:active {
   display: none !important;
 }
 
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList,
+.spz_9001 .mktoForm input[type="checkbox"] {
   margin-bottom: 0;
 
   input {
@@ -1181,27 +1189,27 @@ select:-webkit-autofill:active {
   padding: 0 4px;
 }
 
-@media (max-width: 1119.98px) and (min-width: 1024px) {
-  .spz_9001
-    .page-transition
-    .inner-row__inner
-    form.mktoForm
-    .mktoFieldWrap
-    label.mktoLabel {
-    font-size: 12px;
-  }
+// @media (max-width: 1119.98px) and (min-width: 1024px) {
+//   .spz_9001
+//     .page-transition
+//     .inner-row__inner
+//     form.mktoForm
+//     .mktoFieldWrap
+//     label.mktoLabel {
+//     font-size: 12px;
+//   }
 
-  .spz_9001
-    .page-transition
-    .inner-row__inner
-    form.mktoForm
-    .mktoFieldWrap
-    .select-wrapper:after {
-    width: 12px;
-    top: 21px;
-    right: 11px;
-  }
-}
+//   .spz_9001
+//     .page-transition
+//     .inner-row__inner
+//     form.mktoForm
+//     .mktoFieldWrap
+//     .select-wrapper:after {
+//     width: 12px;
+//     top: 21px;
+//     right: 11px;
+//   }
+// }
 
 @media (max-width: 767.98px) {
   .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
@@ -1408,7 +1416,8 @@ select:-webkit-autofill:active {
 
     @media screen and (max-width: 767.98px) {
       padding: 24px;
-      margin-bottom: 46px;
+      margin: 33.5px auto 46px;
+      max-width: 400px;
     }
 
     .sp-hq-details {
@@ -1536,6 +1545,7 @@ select:-webkit-autofill:active {
   @media (max-width: 767.98px) {
     .sp-contact-info {
       flex-direction: column; // Stack sections vertically
+      align-items: center;
 
       > div {
         width: 100%; // Make sections full width
