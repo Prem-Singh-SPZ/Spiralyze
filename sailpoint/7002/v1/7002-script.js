@@ -47,15 +47,17 @@
             document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
             </svg></a></div></div></div>`);
-            document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us</div>`);
 
+            waitForElm('.spz_7002_v1 .mkto-wrap.w-full').then(() => {
+                document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us</div>`);
+            });
 
             document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').parentElement);
             if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v1 .disclaimer')) {
                 document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .disclaimer'));
             }
         }
-        else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
+        else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0 && document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').parentElement) {
             document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').parentElement);
             if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v1 .disclaimer')) {
                 document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v1 .disclaimer'));
