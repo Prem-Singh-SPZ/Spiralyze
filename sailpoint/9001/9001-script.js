@@ -346,14 +346,14 @@
     if (document.querySelector('.spz_9001 #mktoForm_1017.mktoForm select#Country')) {
       document.querySelector('select#Country').addEventListener('change', () => {
         const stateRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
-        const optOutRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
+        const reasonForInq = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
         const countryRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
         waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField label').then(label => {
           label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         });
 
-        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
+        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", reasonForInq.classList.remove('spz-full-width')) : (reasonForInq.classList.add('spz-full-width'));
       });
     }
 
