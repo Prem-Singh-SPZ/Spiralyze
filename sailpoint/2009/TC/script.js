@@ -62,7 +62,6 @@
 			else {
 				clearInterval(bodyLoaded);
 				document.body.classList.add('spz_2009_tc_HF');
-				hiddenValue('SPZ_2009', 'SPZ_2009_TrueControl');
 				let callHF = setInterval(() => {
 					setHiddenFieldValue();
 				}, 100);

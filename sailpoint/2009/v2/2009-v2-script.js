@@ -68,7 +68,7 @@
     function initTest2009() {
         const body = document.querySelector('body');
         waitForElm('body').then(() => {
-            // if (window.location.pathname == '/') {
+            if (window.location.pathname == '/') {
             if (!body.classList.contains('spz_2009')) {
                 body.classList.add('spz_2009');
                 if (document.querySelector('body').classList.contains('spz_2009_HF')) {
@@ -117,18 +117,17 @@
                     hiddenValue('spz_2009', 'SPZ_2009_variant2');
                 }
             }
-            // }
-            // else {
-            //     document.body.classList.add('spz_2009_HF');
-            //     hiddenValue('spz_2009', 'SPZ_2009_variant2');
-            //     let callHF = setInterval(() => {
-            //         setHiddenFieldValue();
-            //     }, 100);
+            }
+            else {
+                document.body.classList.add('spz_2009_HF');
+                let callHF = setInterval(() => {
+                    setHiddenFieldValue();
+                }, 100);
 
-            //     setTimeout(() => {
-            //         clearInterval(callHF);
-            //     }, 10000);
-            // }
+                setTimeout(() => {
+                    clearInterval(callHF);
+                }, 10000);
+            }
         });
 
     }

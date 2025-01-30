@@ -115,7 +115,6 @@
 				}
 				else {
 					document.body.classList.add('spz_2009_HF');
-					hiddenValue('spz_2009', 'SPZ_2009_variant1');
 					let callHF = setInterval(() => {
 						setHiddenFieldValue();
 					}, 100);
