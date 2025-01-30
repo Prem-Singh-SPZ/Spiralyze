@@ -4,14 +4,14 @@
       const body = document.querySelector('body');
       if (body) {
         clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz_1001_tc')) {
-          body.classList.add('spz_1001_tc');
-          hiddenValue('SPZ_#1001', 'SPZ_1001_Truecontrol');
+        if (!body.classList.contains('spz_9001_tc')) {
+          body.classList.add('spz_9001_tc');
+          hiddenValue('SPZ_#9001', 'spz_9001_Truecontrol');
           setHiddenFieldValue();
         }
         else {
-          if (body.classList.contains('spz_1001_tc')) {
-            hiddenValue('SPZ_#1001', 'SPZ_1001_Truecontrol');
+          if (body.classList.contains('spz_9001_tc')) {
+            hiddenValue('SPZ_#9001', 'spz_9001_Truecontrol');
             setHiddenFieldValue();
           }
         }
@@ -21,8 +21,8 @@
 
   function removeTest() {
     setTimeout(() => {
-      if (document.querySelector('.spz_1001_tc')) {
-        document.body.classList.remove("spz_1001_tc");
+      if (document.querySelector('.spz_9001_tc')) {
+        document.body.classList.remove("spz_9001_tc");
       }
     }, 2000);
   }
@@ -52,11 +52,14 @@
   window.addEventListener("locationchange", function () {
     url = location.href;
     urlCheck(url);
+    if (document.querySelector('.spz_9001_tc')) {
+      document.body.classList.remove("spz_9001_tc");
+    }
   });
 
   function urlCheck(url) {
     let testURL = "";
-    if (window.location.pathname.indexOf("/demo") !== -1) {
+    if (window.location.pathname === '/contact-us') {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
@@ -100,15 +103,15 @@
 
   // Do not touch below hidden field code for any Experiment Start
   function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-    var ExistingHiddenFieldName = getCookie('HiddenFieldNameDemo');
-    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
+    var ExistingHiddenFieldName = getCookie('HiddenFieldNameContactUs');
+    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
 
     if (!ExistingHiddenFieldName) {
-      setCookie('HiddenFieldNameDemo', currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueDemo', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContactUs', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContactUs', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-      setCookie('HiddenFieldNameDemo', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueDemo', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContactUs', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContactUs', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -134,9 +137,10 @@
   }
   function setHiddenFieldValue() {
     var spz_cro_Interval = setInterval(function () {
-      var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
+      var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
       if (intellimize1) {
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
+        clearInterval(spz_cro_Interval);
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
         //check if hidden field value is empty then only set the value else set the value with , seperated
         if (intellimize1.value == '') {
           intellimize1.value = ExistingHiddenFieldValue;
@@ -146,10 +150,18 @@
             intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
           }
         }
+      }
+    });
 
-        setTimeout(() => {
-          clearInterval(spz_cro_Interval);
-        }, 15000);
+    //click event listener
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
       }
     });
   }
