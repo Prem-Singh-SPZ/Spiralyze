@@ -63,8 +63,8 @@
                 coverflowEffect: {
                     rotate: 0,
                     stretch: 0,
-                    depth: 200,
-                    modifier: 4.5
+                    depth: 900,
+                    modifier: 1
                 },
                 keyboard: {
                     enabled: false
