@@ -40,7 +40,9 @@
           <div class="swiper-wrapper">
             ${InterfaceData.slides.slideItems.map((slideItem) => {
             return `<div class="spz-hero-interface__slide swiper-slide">
-                <img src="${slideItem.slideImageURL}" alt="${slideItem.imageAlt}">
+                    <div class="swiper-slide-img">
+                     <img src="${slideItem.slideImageURL}" alt="${slideItem.imageAlt}">
+                    </div>
                 </div>`;
         }).join('')}
             </div>
@@ -62,8 +64,8 @@
                 centeredSlides: true,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 0,
-                    depth: 900,
+                    stretch: 350,
+                    depth: 350,
                     modifier: 1
                 },
                 keyboard: {
@@ -72,7 +74,7 @@
                 mousewheel: {
                     enabled: false
                 },
-                spaceBetween: 30,
+                // spaceBetween: 30,
                 loop: false,
                 breakpoints: {
                     640: {
