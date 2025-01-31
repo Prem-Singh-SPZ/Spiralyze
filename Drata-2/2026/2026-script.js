@@ -47,8 +47,8 @@
         }).join('')}
             </div>
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-btn-prev"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737630931/drata/2026/icon.svg" alt="Arrow"></div>
+                <div class="swiper-btn-next"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737630931/drata/2026/icon.svg" alt="Arrow"></div>
         </div>
       </div>`;
         document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, InterfaceTemplate);
@@ -64,8 +64,8 @@
                 centeredSlides: true,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 350,
-                    depth: 350,
+                    stretch: 340,
+                    depth: 340,
                     modifier: 1
                 },
                 keyboard: {
@@ -77,11 +77,14 @@
                 // spaceBetween: 30,
                 loop: false,
                 breakpoints: {
-                    640: {
-                        slidesPerView: 2
+                    320: {
+                        slidesPerView: 1.2
                     },
-                    1024: {
-                        slidesPerView: 1.6
+                    768: {
+                        slidesPerView: 1.4
+                    },
+                    1199: {
+                        slidesPerView: 1.62
                     }
                 },
                 pagination: {
@@ -112,6 +115,8 @@
                         addHeroInterface(heroInterfaceContent, position, heroSelector);
                         // document.querySelector('.spz-2026 .hero-section form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Control_6022');
 
+                        if (document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]'))
+                            document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').style.display = 'none';
                         // If swiper is initialized, run initSlider_28001 function
                         // waitForElm('.spz-hero-interface').then(function () {
                         //     if (typeof Swiper !== 'undefined') {
