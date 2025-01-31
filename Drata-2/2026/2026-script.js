@@ -67,8 +67,8 @@
                 centeredSlides: true,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 340,
-                    depth: 340,
+                    stretch: 342,
+                    depth: 342,
                     modifier: 1
                 },
                 keyboard: {
