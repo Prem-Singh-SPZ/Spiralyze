@@ -12,8 +12,36 @@ body.spz-2026 {
 
     .spz-hero-interface__slides {
       width: 100%;
-      max-width: 1212px;
+      max-width: 1260px;
       margin: 0 auto;
+      padding: 0 24px;
+
+      .spz-hero-interface__slide {
+        .swiper-slide-img {
+          // border-radius: 6px;
+          box-shadow: 0px 29.787px 35.745px -5.957px rgba(16, 24, 40, 0.08),
+            0px 11.915px 11.915px -5.957px rgba(16, 24, 40, 0.03);
+          height: 100%;
+          img {
+            border-radius: 6px;
+            box-shadow: 0px 29.787px 35.745px -5.957px rgba(16, 24, 40, 0.08),
+              0px 11.915px 11.915px -5.957px rgba(16, 24, 40, 0.03);
+          }
+        }
+
+        &.swiper-slide-fully-visible,
+        &.swiper-slide-active {
+          .swiper-slide-img {
+            // border-radius: 8px;
+            box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
+
+            img {
+              border-radius: 8px;
+              box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
+            }
+          }
+        }
+      }
     }
 
     // img {

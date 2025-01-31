@@ -30,6 +30,9 @@
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `SOC 2` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `SOC 2` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `SOC 2` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `SOC 2` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `SOC 2` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `SOC 2` },
             ],
         },
     }
@@ -75,7 +78,7 @@
                     enabled: false
                 },
                 // spaceBetween: 30,
-                loop: false,
+                loop: true,
                 breakpoints: {
                     320: {
                         slidesPerView: 1.2
@@ -99,7 +102,9 @@
                 },
             });
 
-            swiper.slideTo(1, false, false);
+            // setTimeout(() => {
+                swiper.slideTo(3, false, false);
+            // }, 200);
         });
 
     }
@@ -116,7 +121,7 @@
                         // document.querySelector('.spz-2026 .hero-section form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Control_6022');
 
                         if (document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]'))
-                            document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').style.display = 'none';
+                            document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').parentElement.style.display = 'none';
                         // If swiper is initialized, run initSlider_28001 function
                         // waitForElm('.spz-hero-interface').then(function () {
                         //     if (typeof Swiper !== 'undefined') {
