@@ -5,7 +5,7 @@
 
       //check if form is already submitted then hide the form and show the content
       if (getCookie('spz_8001_form_submit') === 'true') {
-        document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
+        // document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
       } else {
         formModify();
       }
@@ -18,7 +18,7 @@
     // hide section on initial load
     document.querySelector('.spz-8001 .page-transition #product-features').classList.add('spz-sec-hide');
     document.querySelector('.spz-8001 .page-transition main > .filter-element').classList.add('spz-sec-hide');
-    document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
+    document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('spz-sec-hide');
     document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.remove('hidden');
 
     if (document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
@@ -63,18 +63,19 @@
     let stateLabel = setInterval(() => {
       if (document.querySelector('.mktoForm#mktoForm_1016 #LblState')) {
         document.querySelector('.mktoForm#mktoForm_1016 #LblState').innerHTML = '<div class="mktoAsterix">*</div>State';
-        document.querySelector('.mktoForm#mktoForm_1016 #State').closest('.mktoFormRow').classList.add('row_mktoState');
+        document.querySelector('.mktoForm#mktoForm_1016 #State').closest('.mktoFormRow').classList.add('row_State');
+        // document.querySelector('.mktoForm#mktoForm_1016 .mktoFormRow.row_Phone').classList.add('spz-full-width');
       }
       else {
-        if (document.querySelector('.mktoFormRow.row_mktoState')) {
-          document.querySelector('.mktoFormRow.row_mktoState').classList.remove('row_mktoState')
+        if (document.querySelector('.mktoFormRow.row_State')) {
+          document.querySelector('.mktoFormRow.row_State').classList.remove('row_State')
         }
       }
     },);
 
     setTimeout(() => {
       clearInterval(stateLabel);
-    }, 1000);
+    }, 2000);
     // });
   }
 
