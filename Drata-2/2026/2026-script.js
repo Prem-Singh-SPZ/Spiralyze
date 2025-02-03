@@ -27,12 +27,12 @@
     const heroInterfaceContent = {
         slides: {
             slideItems: [
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `SOC 2` },
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `SOC 2` },
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `SOC 2` },
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `SOC 2` },
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `SOC 2` },
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `SOC 2` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `Controls` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `Dashboard` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `Vendor Directory` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `Controls` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `Dashboard` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `Vendor Directory` },
             ],
         },
     }
@@ -81,7 +81,11 @@
                 loop: true,
                 breakpoints: {
                     320: {
-                        slidesPerView: 1.2
+                        slidesPerView: 1.2,
+                        coverflowEffect: {
+                            stretch: 160,
+                            depth: 160,
+                        },
                     },
                     768: {
                         slidesPerView: 1.369,
