@@ -4,16 +4,24 @@ body.spz-2026 section[variant=collectionImageCollageSectionWrapper] {
 body.spz-2026 section[variant=collectionCheckboxesSectionWrapper] {
   min-height: auto;
 }
+body.spz-2026 section[variant=collectionCheckboxesSectionWrapper] div[class*=CollectionCheckboxes-root] {
+  padding-bottom: 0;
+}
 body.spz-2026 .spz-hero-interface {
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 68px 24px 36px;
+  padding: 100px 24px 36px;
 }
 @media (max-width: 1024.98px) {
   body.spz-2026 .spz-hero-interface {
-    padding: 36px 0 36px;
+    padding: 80px 0 29px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2026 .spz-hero-interface {
+    padding: 64px 0 49px;
   }
 }
 body.spz-2026 .spz-hero-interface .spz-hero-interface__slides {
@@ -43,6 +51,13 @@ body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interfac
             box-shadow: 0px 26.809px 53.617px -13.404px rgba(16, 24, 40, 0.18);
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interface__slide.swiper-slide-fully-visible .swiper-slide-img, body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interface__slide.swiper-slide-active .swiper-slide-img {
+    border-radius: 3.2px;
+    -webkit-box-shadow: 0px 14.298px 28.596px -7.149px rgba(16, 24, 40, 0.18);
+            box-shadow: 0px 14.298px 28.596px -7.149px rgba(16, 24, 40, 0.18);
+  }
+}
 body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interface__slide.swiper-slide-fully-visible .swiper-slide-img img, body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interface__slide.swiper-slide-active .swiper-slide-img img {
   border-radius: 8px;
 }
@@ -54,6 +69,11 @@ body.spz-2026 .spz-hero-interface .spz-hero-interface__slides .spz-hero-interfac
 body.spz-2026 .swiper {
   position: relative;
   padding-bottom: 104px;
+}
+@media screen and (max-width: 1024.98px) {
+  body.spz-2026 .swiper {
+    padding-bottom: 80px;
+  }
 }
 body.spz-2026 .swiper .swiper-wrapper .spz-hero-interface__slide {
   width: 100%;

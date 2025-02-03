@@ -5,6 +5,10 @@ body.spz-2026 {
 
   section[variant="collectionCheckboxesSectionWrapper"] {
     min-height: auto;
+
+    div[class*="CollectionCheckboxes-root"] {
+      padding-bottom: 0;
+    }
   }
 
   .spz-hero-interface {
@@ -12,10 +16,14 @@ body.spz-2026 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 68px 24px 36px;
+    padding: 100px 24px 36px;
 
     @media (max-width: 1024.98px) {
-      padding: 36px 0 36px;
+      padding: 80px 0 29px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 64px 0 49px;
     }
 
     .spz-hero-interface__slides {
@@ -53,6 +61,11 @@ body.spz-2026 {
               box-shadow: 0px 26.809px 53.617px -13.404px rgba(16, 24, 40, 0.18);
             }
 
+            @media screen and (max-width: 767.98px) {
+              border-radius: 3.2px;
+              box-shadow: 0px 14.298px 28.596px -7.149px rgba(16, 24, 40, 0.18);
+            }
+
             img {
               border-radius: 8px;
               // box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
@@ -74,6 +87,11 @@ body.spz-2026 {
   .swiper {
     position: relative;
     padding-bottom: 104px;
+
+    @media screen and (max-width: 1024.98px) {
+      padding-bottom: 80px;
+      
+    }
 
     .swiper-wrapper {
       .spz-hero-interface__slide {
