@@ -50,8 +50,14 @@
         }).join('')}
             </div>
                 <div class="swiper-pagination"></div>
-                <div class="swiper-btn-prev"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737630931/drata/2026/icon.svg" alt="Arrow"></div>
-                <div class="swiper-btn-next"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737630931/drata/2026/icon.svg" alt="Arrow"></div>
+                <div class="swiper-btn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="19.9999" cy="19.9999" r="19.9999" fill="#EEF2F6"/>
+                    <path d="M27.3737 20.707C27.7642 20.3165 27.7642 19.6833 27.3737 19.2928L21.0098 12.9288C20.6192 12.5383 19.9861 12.5383 19.5955 12.9288C19.205 13.3193 19.205 13.9525 19.5955 14.343L25.2524 19.9999L19.5955 25.6567C19.205 26.0473 19.205 26.6804 19.5955 27.0709C19.9861 27.4615 20.6192 27.4615 21.0098 27.0709L27.3737 20.707ZM12.5 20.9999H26.6666V18.9999H12.5V20.9999Z" fill="#293642"/>
+                    </svg></div>
+                                    <div class="swiper-btn-next"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="19.9999" cy="19.9999" r="19.9999" fill="#EEF2F6"/>
+                    <path d="M27.3737 20.707C27.7642 20.3165 27.7642 19.6833 27.3737 19.2928L21.0098 12.9288C20.6192 12.5383 19.9861 12.5383 19.5955 12.9288C19.205 13.3193 19.205 13.9525 19.5955 14.343L25.2524 19.9999L19.5955 25.6567C19.205 26.0473 19.205 26.6804 19.5955 27.0709C19.9861 27.4615 20.6192 27.4615 21.0098 27.0709L27.3737 20.707ZM12.5 20.9999H26.6666V18.9999H12.5V20.9999Z" fill="#293642"/>
+                    </svg></div>
         </div>
       </div>`;
         document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, InterfaceTemplate);
@@ -71,12 +77,6 @@
                     depth: 342,
                     modifier: 1
                 },
-                keyboard: {
-                    enabled: false
-                },
-                mousewheel: {
-                    enabled: false
-                },
                 // spaceBetween: 30,
                 loop: true,
                 breakpoints: {
@@ -84,9 +84,23 @@
                         slidesPerView: 1.2
                     },
                     768: {
-                        slidesPerView: 1.4
+                        slidesPerView: 1.369,
+                        coverflowEffect: {
+                            stretch: 272,
+                            depth: 272,
+                        },
+                    },
+                    992: {
+                        slidesPerView: 1.5,
+                        coverflowEffect: {
+                            stretch: 342,
+                            depth: 342,
+                        },
                     },
                     1199: {
+                        slidesPerView: 1.595
+                    },
+                    1279: {
                         slidesPerView: 1.62
                     }
                 },
@@ -98,16 +112,30 @@
                 // If we need navigation
                 navigation: {
                     nextEl: ".swiper-btn-next",
-                    prevEl: ".swiper-btn-prev"
+                    prevEl: ".swiper-btn-prev",
+                    clickable: true
                 },
             });
 
             // setTimeout(() => {
-                swiper.slideTo(3, false, false);
+            swiper.slideTo(3, 1000);
             // }, 200);
+            //take the height of the image of active slide and set the height of the slider
+            swiper.on('slideChange', function () {
+                let activeSlide = document.querySelector('.spz-hero-interface__slide.swiper-slide-active img');
+                let slider = document.querySelector('.spz-hero-interface__slides .swiper-wrapper');
+                if (activeSlide && slider) {
+                    slider.style.height = activeSlide.offsetHeight + 'px';
+                }
+            });
         });
 
     }
+
+    window.addEventListener("click", function (e) {
+        console.log("Clicked element:", e.target);
+    });
+
 
     function createTest() {
         let bodyLoaded = setInterval(function () {
