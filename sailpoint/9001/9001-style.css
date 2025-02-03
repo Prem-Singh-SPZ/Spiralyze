@@ -285,7 +285,7 @@ html.spz-no-scroll {
   font-weight: 600;
   line-height: 120%;
   margin-bottom: 32px;
-  letter-spacing: 0.4px;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
 @media (max-width: 767.98px) {
   .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner p.text-h2,
@@ -294,75 +294,83 @@ html.spz-no-scroll {
     margin-bottom: 25px;
   }
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group {
-  padding: 23.15px 24px;
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 {
+  gap: 15px;
+}
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group {
+  padding: 24px;
   border-radius: 8px;
   border: 1px solid #dae1e9;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__heading,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__heading {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading {
   color: #415364;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
   position: relative;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__heading span:not(.transition),
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__heading span:not(.transition) {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading span:not(.transition),
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading span:not(.transition) {
   color: #415364;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__heading .transition,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__heading .transition {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading .transition,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__heading .transition {
   position: absolute;
   top: 5px;
   right: 4px;
 }
 @media (max-width: 767.98px) {
-  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content,
-  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content {
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content,
+  .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content {
     padding-right: 0;
   }
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h6,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > h5,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > h6,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > h5 {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > h6,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > h5,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > h6,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > h5 {
   color: #415364;
   font-size: 18px;
   font-weight: 600;
   line-height: 160%;
   margin-bottom: 12px;
   margin-top: 20px;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p {
   color: #415364;
   font-size: 18px;
   font-weight: 400;
   line-height: 160%;
   margin-bottom: 12px;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p br,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p br {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p br,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p br {
   margin: 0;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p:empty,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p:empty {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p:empty,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p:empty {
   margin: 0;
 }
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .group .group__content > p:last-child,
-.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .group .group__content > p:last-child {
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p:last-child,
+.spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-sales-locations .row .row__inner .flex.flex-col.gap-4 .group .group__content > p:last-child {
   margin-bottom: 0;
 }
 @media (max-width: 1199.98px) {
   .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .int-locations {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 .spz_9001.spz-show-modal {
