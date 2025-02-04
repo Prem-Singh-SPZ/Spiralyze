@@ -1,0 +1,277 @@
+:root {
+  --container-width: 1248px;
+  --section-bg-color: #fff;
+  --content-section-width: 1200px;
+  --cta-primary-font-color: #fff;
+  --cta-primary-bg-color: #3620ff;
+  --cta-primary-border-color: #3620ff;
+  --cta-primary-hover-font-color: #fff;
+  --cta-primary-hover-bg-color: #1300c1;
+  --cta-primary-hover-border-color: #1300c1;
+  --cta-secondary-font-color: #3620ff;
+  --cta-secondary-bg-color: transparent;
+  --cta-secondary-border-color: #3620ff;
+  --cta-secondary-hover-font-color: #1300c1;
+  --cta-secondary-hover-bg-color: transparent;
+  --cta-secondary-hover-border-color: #1300c1;
+}
+
+.spz-bg-wrap {
+  background: var(--section-bg-color);
+  padding: 80px 96px;
+}
+@media (max-width: 991px) {
+  .spz-bg-wrap {
+    padding: 80px 0 80px 60px;
+  }
+}
+@media (max-width: 767px) {
+  .spz-bg-wrap {
+    padding: 32px 0 32px 20px;
+  }
+}
+.spz-bg-wrap .features-heading {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: #415364;
+  margin-bottom: 20px;
+  max-width: 990px;
+}
+.spz-bg-wrap .features-subheading {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  color: #415364;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+@media (max-width: 991px) {
+  .spz-bg-wrap .features-heading,
+  .spz-bg-wrap .features-subheading {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .spz-bg-wrap .features-heading {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .spz-bg-wrap .features-subheading {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  .spz-bg-wrap .features-heading,
+  .spz-bg-wrap .features-subheading {
+    padding-right: 20px;
+  }
+}
+.spz-bg-wrap .spz-ctas-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 10px;
+}
+.spz-bg-wrap .spz-ctas-wrap.separate-block {
+  margin-top: 64px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 575px) {
+  .spz-bg-wrap .spz-ctas-wrap {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px 0;
+  }
+}
+
+.spz-solution-accordion__wrapper {
+  position: relative;
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+/*** Solution Navigation ***/
+.spz-solution-accordion__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 64px;
+  padding: 0;
+}
+
+.spz-solution-accordion__item {
+  padding: 8px 16px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  border-radius: 64px;
+  border: 1px solid #0071ce;
+  background: #fff;
+  margin-right: 12px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.spz-solution-accordion__item span {
+  color: #0071ce;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.spz-solution-accordion__item:hover {
+  background: #f0f3f6;
+}
+.spz-solution-accordion__item.active {
+  background: #0071ce;
+}
+.spz-solution-accordion__item.active span {
+  color: #fff;
+}
+
+.spz-solution-accordion__mobile {
+  display: none;
+}
+
+/*** Solution Container ***/
+.spz-solution-accordion__contents > .content {
+  max-height: 0px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.spz-solution-accordion__contents > .content.active {
+  max-height: 100%;
+}
+@media (max-width: 991px) {
+  .spz-solution-accordion__contents > .content {
+    gap: 0;
+  }
+}
+
+/*** Solution Image Column ***/
+.solution__image {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: calc(100% - 500px);
+  width: 100%;
+}
+.solution__image img {
+  max-width: 100%;
+  width: 100%;
+}
+
+/*** Solution Content Column ***/
+.solution__content {
+  max-width: 440px;
+  width: 100%;
+}
+.solution__content h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: #000;
+  margin-bottom: 20px;
+}
+.solution__content h1 > span {
+  color: #7d5fff;
+}
+.solution__content p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.solution__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .mobile-scroll {
+    overflow: auto;
+  }
+  .spz-solution-accordion__nav {
+    width: 883px;
+    padding-right: 60px;
+  }
+  .spz-bg-wrap .spz-ctas-wrap.separate-block {
+    padding-right: 60px;
+    margin-top: 30px;
+  }
+  .spz-solution-accordion__contents > .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 60px;
+  }
+  .spz-solution-accordion__contents > .content:not(.active) {
+    max-height: 0px;
+  }
+  .solution__image,
+  .solution__content {
+    width: 100%;
+    max-width: 648px;
+  }
+  .solution__image {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 32px;
+  }
+  .solution__image img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .solution__content h1,
+  .solution__content p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .spz-bg-wrap .spz-ctas-wrap.separate-block {
+    padding-right: 20px;
+  }
+  .solution__image img {
+    max-width: 320px;
+  }
+  .spz-solution-accordion__nav {
+    width: 843px;
+    padding-right: 20px;
+  }
+  .spz-solution-accordion__contents > .content {
+    padding-right: 20px;
+  }
+  .solution__content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
