@@ -136,11 +136,6 @@
 
     }
 
-    window.addEventListener("click", function (e) {
-        console.log("Clicked element:", e.target);
-    });
-
-
     function createTest() {
         let bodyLoaded = setInterval(function () {
             const body = document.querySelector('body');
@@ -150,7 +145,9 @@
                     body.classList.add('spz-2026');
                     waitForElm('.spz-2026 main section[variant="collectionCheckboxesSectionWrapper"]').then(function () {
                         addHeroInterface(heroInterfaceContent, position, heroSelector);
-                        // document.querySelector('.spz-2026 .hero-section form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Control_6022');
+                        createCookie('spz-2026-loaded', 'true', 1);
+                        submitTestDetails('variant_#2026');
+
 
                         if (document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]'))
                             document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').parentElement.style.display = 'none';
@@ -172,6 +169,32 @@
                 document.body.classList.remove("spz-2026");
             }
         }, 2000);
+    }
+
+
+    // Passing test details to hidden fields
+    function submitTestDetails(cro_test) {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test);
+        }
+    }
+
+    function demoChecked() {
+        const sInt = setInterval(() => {
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+
+            // Check if spz-2020-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != '') && isCookieExist('spz-2026-loaded')) {
+                clearInterval(sInt);
+                submitTestDetails('variant_#2026');
+
+                deleteCookie('spz-2026-loaded');
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(sInt);
+        }, 10000);
     }
 
     history.pushState = (function (f) {
@@ -202,12 +225,19 @@
 
     function urlCheck(url) {
         let testURL = "";
-        if (window.location.pathname.indexOf("/") !== -1) {
-            testURL = window.location.href;
-        }
-        if (isSameUrl(url, testURL, true)) {
+        if (window.location.pathname === "/") {
             createTest();
-        } else {
+        }
+        else if (window.location.pathname.indexOf("/demo") > -1) {
+            console.log('demo page');
+            demoChecked();
+            waitForElm('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').then(function () {
+                if (document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video')) {
+                    document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').setAttribute('playsinline', '');
+                }
+            });
+        }
+        else {
             removeTest();
         }
     }
@@ -246,5 +276,33 @@
                 characterData: true,
             });
         });
+    }
+
+    // Create cookie
+    function createCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    // Check if cookie exists
+    function isCookieExist(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Delete cookie
+    function deleteCookie(name) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 })();
