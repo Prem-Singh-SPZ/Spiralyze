@@ -38,8 +38,8 @@
 				CTABlock: [
 					{
 						CTAText: "Get a demo",
-						CTAHref: "/demo",
-						className: `spz-primary inner-accordion btn btn--hotpink`
+						CTAHref: "javascript:;",
+						className: `spz-primary spz-go-to-demo btn btn--hotpink`
 					},
 				]
 
@@ -342,6 +342,13 @@
 
 	}
 
+	window.addEventListener('click', function (e) {
+		if (e.target.closest('.spz-go-to-demo')) {
+			e.preventDefault();
+			document.querySelector('a[href="/demo"]').click()
+		}
+	});
+
 	// List of URLs
 	const urls = [
 		"https://www.sailpoint.com/",
@@ -392,21 +399,21 @@
 		}
 	}
 
-	  // Generic Code
-	  function waitForElm(selector) {
-        return new Promise(function (resolve) {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-            }
-            const observer = new MutationObserver(function (mutations) {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector));
-                    observer.disconnect();
-                }
-            });
-            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-        });
-    }
+	// Generic Code
+	function waitForElm(selector) {
+		return new Promise(function (resolve) {
+			if (document.querySelector(selector)) {
+				return resolve(document.querySelector(selector));
+			}
+			const observer = new MutationObserver(function (mutations) {
+				if (document.querySelector(selector)) {
+					resolve(document.querySelector(selector));
+					observer.disconnect();
+				}
+			});
+			observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+		});
+	}
 
 	// Do not touch below hidden field code for any Experiment Start
 	function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
