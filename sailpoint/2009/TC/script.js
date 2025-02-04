@@ -46,6 +46,7 @@
 			if (document.querySelector('body').classList.contains('spz_2009_tc_HF')) {
 				document.querySelector('body').classList.remove('spz_2009_tc_HF');
 			}
+			removeSpecificCookieValue('SPZ_2009', 'SPZ_2009_TrueControl');
 		}
 	}
 
@@ -128,6 +129,12 @@
 			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
 		}
 		return null;
+	}
+	function removeSpecificCookieValue(targetName, targetValue) {
+		['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
+			var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+			setCookie(key, values || '', 1);
+		});
 	}
 	function setHiddenFieldValue() {
 		var spz_cro_Interval = setInterval(function () {

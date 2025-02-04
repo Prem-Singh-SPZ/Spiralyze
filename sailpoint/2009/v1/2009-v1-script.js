@@ -46,6 +46,7 @@
 			if (document.querySelector('body').classList.contains('spz_2009_HF')) {
 				document.querySelector('body').classList.remove('spz_2009_HF');
 			}
+			removeSpecificCookieValue('spz_2009', 'SPZ_2009_variant1');
 		}
 	}
 
@@ -187,6 +188,14 @@
 		}
 		return null;
 	}
+
+	function removeSpecificCookieValue(targetName, targetValue) {
+		['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
+			var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+			setCookie(key, values || '', 1);
+		});
+	}
+
 	function setHiddenFieldValue() {
 		var spz_cro_Interval = setInterval(function () {
 			var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');

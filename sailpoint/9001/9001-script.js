@@ -209,7 +209,7 @@
       });
     });
 
-    waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField label').then(label => {
+    waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
       label.textContent = "Uncheck to stop receiving SailPoint email communications.";
     });
 
@@ -349,7 +349,7 @@
         const reasonForInq = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
         const countryRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-        waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField label').then(label => {
+        waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
           label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         });
 
