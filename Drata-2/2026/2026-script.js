@@ -19,7 +19,7 @@
     }
 
     appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
-        initSlider_2026();
+        // initSlider_2026();
     });
 
     const heroSelector = `section[variant="collectionCheckboxesSectionWrapper"]`;
@@ -65,74 +65,75 @@
 
     // Initialize slider
     function initSlider_2026() {
-        waitForElm('.spz-hero-interface__slides').then(function () {
-            const swiper = new Swiper(".spz-hero-interface__slides", {
-                // Optional parameters
-                effect: "coverflow",
-                grabCursor: false,
-                centeredSlides: true,
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 342,
-                    depth: 342,
-                    modifier: 1
-                },
-                // spaceBetween: 30,
-                loop: true,
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.2,
-                        coverflowEffect: {
-                            stretch: 160,
-                            depth: 160,
-                        },
+        console.log('initSlider_2026');
+        // waitForElm('.spz-hero-interface__slides').then(function () {
+        const swiper = new Swiper(".spz-hero-interface__slides", {
+            // Optional parameters
+            effect: "coverflow",
+            grabCursor: false,
+            centeredSlides: true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 342,
+                depth: 342,
+                modifier: 1
+            },
+            // spaceBetween: 30,
+            loop: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    coverflowEffect: {
+                        stretch: 160,
+                        depth: 160,
                     },
-                    768: {
-                        slidesPerView: 1.369,
-                        coverflowEffect: {
-                            stretch: 272,
-                            depth: 272,
-                        },
-                    },
-                    992: {
-                        slidesPerView: 1.5,
-                        coverflowEffect: {
-                            stretch: 342,
-                            depth: 342,
-                        },
-                    },
-                    1199: {
-                        slidesPerView: 1.595
-                    },
-                    1279: {
-                        slidesPerView: 1.62
-                    }
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true
+                768: {
+                    slidesPerView: 1.369,
+                    coverflowEffect: {
+                        stretch: 272,
+                        depth: 272,
+                    },
                 },
-
-                // If we need navigation
-                navigation: {
-                    nextEl: ".swiper-btn-next",
-                    prevEl: ".swiper-btn-prev",
-                    clickable: true
+                992: {
+                    slidesPerView: 1.5,
+                    coverflowEffect: {
+                        stretch: 342,
+                        depth: 342,
+                    },
                 },
-            });
-
-            // setTimeout(() => {
-            // swiper.slideTo(3, 1000);
-            // }, 200);
-            //take the height of the image of active slide and set the height of the slider
-            swiper.on('slideChange', function () {
-                let activeSlide = document.querySelector('.spz-hero-interface__slide.swiper-slide-active img');
-                let slider = document.querySelector('.spz-hero-interface__slides .swiper-wrapper');
-                if (activeSlide && slider) {
-                    slider.style.height = activeSlide.offsetHeight + 'px';
+                1199: {
+                    slidesPerView: 1.595
+                },
+                1279: {
+                    slidesPerView: 1.62
                 }
-            });
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+
+            // If we need navigation
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev",
+                clickable: true
+            },
         });
+
+        // setTimeout(() => {
+        // swiper.slideTo(3, 1000);
+        // }, 200);
+        //take the height of the image of active slide and set the height of the slider
+        swiper.on('slideChange', function () {
+            let activeSlide = document.querySelector('.spz-hero-interface__slide.swiper-slide-active img');
+            let slider = document.querySelector('.spz-hero-interface__slides .swiper-wrapper');
+            if (activeSlide && slider) {
+                slider.style.height = activeSlide.offsetHeight + 'px';
+            }
+        });
+        // });
 
     }
 
@@ -141,24 +142,31 @@
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-                if (!body.classList.contains('spz-2026')) {
-                    body.classList.add('spz-2026');
-                    waitForElm('.spz-2026 main section[variant="collectionCheckboxesSectionWrapper"]').then(function () {
+                // if (!body.classList.contains('spz-2026')) {
+                body.classList.add('spz-2026');
+                waitForElm('.spz-2026 main section[variant="collectionCheckboxesSectionWrapper"]').then(function () {
+                    if (document.querySelectorAll('.spz-2026 .spz-hero-interface').length == 0) {
                         addHeroInterface(heroInterfaceContent, position, heroSelector);
                         createCookie('spz-2026-loaded', 'true', 1);
                         submitTestDetails('variant_#2026');
 
+                        let swiperInterval = setInterval(() => {
+                            if (document.querySelector('.spz-hero-interface__slides.swiper-initialized')) {
+                                clearInterval(swiperInterval);
+                            }
+                            if (typeof Swiper !== 'undefined' && document.querySelector('.spz-2026 .spz-hero-interface .spz-hero-interface__slide') && !document.querySelector('.spz-hero-interface__slides.swiper-initialized')) {
+                                initSlider_2026();
+                            }
+                        }, 400);
+                    }
 
-                        if (document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]'))
-                            document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').parentElement.style.display = 'none';
-                        // If swiper is initialized, run initSlider_28001 function
-                        // waitForElm('.spz-hero-interface').then(function () {
-                        //     if (typeof Swiper !== 'undefined') {
-                        //         initSlider_2026();
-                        //     }
-                        // });
-                    });
-                }
+
+                    if (document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]'))
+                        document.querySelector('body.spz-2026 section[variant=collectionImageCollageSectionWrapper]').parentElement.style.display = 'none';
+                    // If swiper is initialized, run initSlider_28001 function
+
+                });
+                // }
             }
         });
     }
@@ -168,7 +176,11 @@
             if (document.querySelector('.spz-2026')) {
                 document.body.classList.remove("spz-2026");
             }
-        }, 2000);
+
+            if (document.querySelector('.spz-2026 .spz-hero-interface')) {
+                document.querySelector('.spz-2026 .spz-hero-interface').remove();
+            }
+        }, 200);
     }
 
 
@@ -229,7 +241,6 @@
             createTest();
         }
         else if (window.location.pathname.indexOf("/demo") > -1) {
-            console.log('demo page');
             demoChecked();
             waitForElm('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').then(function () {
                 if (document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video')) {
