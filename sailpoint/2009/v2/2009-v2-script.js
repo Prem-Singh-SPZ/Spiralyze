@@ -70,54 +70,54 @@
         const body = document.querySelector('body');
         waitForElm('body').then(() => {
             if (window.location.pathname == '/') {
-            if (!body.classList.contains('spz_2009')) {
-                body.classList.add('spz_2009');
-                if (document.querySelector('body').classList.contains('spz_2009_HF')) {
-                    document.querySelector('body').classList.remove('spz_2009_HF');
-                }
+                if (!body.classList.contains('spz_2009')) {
+                    body.classList.add('spz_2009');
+                    if (document.querySelector('body').classList.contains('spz_2009_HF')) {
+                        document.querySelector('body').classList.remove('spz_2009_HF');
+                    }
 
-                waitForElm('main section.hero a.btn.btn--hotpink').then(function (elm) {
-                    document.querySelector('main section.hero a.btn.btn--hotpink').innerHTML = 'Get a demo';
-                    document.querySelector('main section.hero a.btn.btn--hotpink').classList.add('spz_2009_v2');
-                    document.querySelector('main section.hero a.btn.btn--hotpink').setAttribute('href', 'https://www.sailpoint.com/demo');
-                    hiddenValue('spz_2009', 'SPZ_2009_variant2');
-                    document.querySelector('main section.hero a.btn.btn--hotpink').addEventListener('click', (event) => {
-                        event.preventDefault(); // Prevent the default link behavior
-                        document.querySelector('a[href="/demo"]').click()
+                    waitForElm('main section.hero a.btn.btn--hotpink').then(function (elm) {
+                        document.querySelector('main section.hero a.btn.btn--hotpink').innerHTML = 'Get a demo';
+                        document.querySelector('main section.hero a.btn.btn--hotpink').classList.add('spz_2009_v2');
+                        document.querySelector('main section.hero a.btn.btn--hotpink').setAttribute('href', 'https://www.sailpoint.com/demo');
+                        hiddenValue('spz_2009', 'SPZ_2009_variant2');
+                        document.querySelector('main section.hero a.btn.btn--hotpink').addEventListener('click', (event) => {
+                            event.preventDefault(); // Prevent the default link behavior
+                            document.querySelector('a[href="/demo"]').click()
 
-                        setTimeout(function () {
-                            document.querySelector('body').classList.remove('spz_2009');
-                        }, 200)
+                            setTimeout(function () {
+                                document.querySelector('body').classList.remove('spz_2009');
+                            }, 200)
+                        });
+
+
+                        const button = document.querySelector('main section.hero a.btn.btn--arrow');
+                        button.classList.add('spz_2009_v2');
+                        button.innerHTML = 'Talk to an expert <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 11" class="aspect-[16/11] w-4" data-sentry-element="svg" data-sentry-component="Arrow" data-sentry-source-file="arrow.tsx"><path fill="currentColor" d="M15.759 4.726 11.49.252a.787.787 0 0 0-1.155 0 .893.893 0 0 0 0 1.216l2.865 3.003H.81a.862.862 0 0 0 0 1.72h12.393L10.343 9.2a.893.893 0 0 0 0 1.216.789.789 0 0 0 1.154 0l4.268-4.474a.894.894 0 0 0-.006-1.215Z" data-sentry-element="path" data-sentry-source-file="arrow.tsx"></path></svg>';
+                        if (button) {
+                            button.setAttribute('href', 'javascript:void(0)');
+                            hiddenValue('spz_2009', 'SPZ_2009_variant2');
+                            button.addEventListener('click', (event) => {
+                                event.preventDefault(); // Prevent the default link behavior
+                                // document.querySelector('[data-sentry-component="MainLargeNavigation"] a[href="/demo"]').click()
+                                // window.location.href = 'https://www.sailpoint.com/demo?expert';
+                                //scroll page smoothly to the form #mktoForm_1017
+                                document.querySelector('#mktoForm_1017').scrollIntoView({ behavior: 'smooth' });
+
+                                // setTimeout(function () {
+                                //     document.querySelector('body').classList.remove('spz_2009');
+                                // }, 200)
+
+                            });
+                        }
                     });
 
-
-                    const button = document.querySelector('main section.hero a.btn.btn--arrow');
-                    button.classList.add('spz_2009_v2');
-                    button.innerHTML = 'Talk to an expert <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 11" class="aspect-[16/11] w-4" data-sentry-element="svg" data-sentry-component="Arrow" data-sentry-source-file="arrow.tsx"><path fill="currentColor" d="M15.759 4.726 11.49.252a.787.787 0 0 0-1.155 0 .893.893 0 0 0 0 1.216l2.865 3.003H.81a.862.862 0 0 0 0 1.72h12.393L10.343 9.2a.893.893 0 0 0 0 1.216.789.789 0 0 0 1.154 0l4.268-4.474a.894.894 0 0 0-.006-1.215Z" data-sentry-element="path" data-sentry-source-file="arrow.tsx"></path></svg>';
-                    if (button) {
-                        button.setAttribute('href', 'javascript:void(0)');
-                        hiddenValue('spz_2009', 'SPZ_2009_variant2');
-                        button.addEventListener('click', (event) => {
-                            event.preventDefault(); // Prevent the default link behavior
-                            // document.querySelector('[data-sentry-component="MainLargeNavigation"] a[href="/demo"]').click()
-                            // window.location.href = 'https://www.sailpoint.com/demo?expert';
-                            //scroll page smoothly to the form #mktoForm_1017
-                            document.querySelector('#mktoForm_1017').scrollIntoView({ behavior: 'smooth' });
-
-                            // setTimeout(function () {
-                            //     document.querySelector('body').classList.remove('spz_2009');
-                            // }, 200)
-
-                        });
-                    }
-                });
-
-                hiddenValue('spz_2009', 'SPZ_2009_variant2');
-            } else {
-                if (body.classList.contains('spz_2009')) {
                     hiddenValue('spz_2009', 'SPZ_2009_variant2');
+                } else {
+                    if (body.classList.contains('spz_2009')) {
+                        hiddenValue('spz_2009', 'SPZ_2009_variant2');
+                    }
                 }
-            }
             }
             else {
                 document.body.classList.add('spz_2009_HF');
@@ -192,11 +192,11 @@
         return null;
     }
     function removeSpecificCookieValue(targetName, targetValue) {
-		['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
-			var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
-			setCookie(key, values || '', 1);
-		});
-	}
+        ['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
+            var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+            setCookie(key, values || '', 1);
+        });
+    }
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
@@ -205,11 +205,11 @@
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
                 //check if hidden field value is empty then only set the value else set the value with , seperated
-                if (intellimize1.value == '') {
+                if (ExistingHiddenFieldValue && intellimize1.value == '') {
                     intellimize1.value = ExistingHiddenFieldValue;
                 }
                 else {
-                    if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+                    if (ExistingHiddenFieldValue && !intellimize1.value.includes(ExistingHiddenFieldValue)) {
                         intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
                     }
                 }
