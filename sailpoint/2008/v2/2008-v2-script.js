@@ -46,109 +46,110 @@
 			},
 			{
 				title: 'Compliance',
-				headline: 'Accordion Headline 2',
-				content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+				headline: 'Compliance',
+				content: 'Ensure seamless compliance with automated monitoring, risk assessment, and real-time reporting.',
 				image: [
 					{
 						breakPoint: 992,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 				],
 				CTABlock: [
 					{
 						CTAText: "Get a demo",
-						CTAHref: "/demo",
-						className: `spz-primary inner-accordion btn btn--hotpink`
+						CTAHref: "javascript:;",
+						className: `spz-primary spz-go-to-demo btn btn--hotpink`
 					},
 				]
 
 			},
 			{
 				title: 'Access Modeling',
-				headline: 'Accordion Headline 3',
-				content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+				headline: 'Access Modeling',
+				content: 'Design and optimize access controls with data-driven models, ensuring the right permissions for the right users.',
 				image: [
 					{
 						breakPoint: 992,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 				],
 				CTABlock: [
 					{
 						CTAText: "Get a demo",
-						CTAHref: "/demo",
-						className: `spz-primary inner-accordion btn btn--hotpink`
+						CTAHref: "javascript:;",
+						className: `spz-primary spz-go-to-demo btn btn--hotpink`
 					},
 				]
 
 			},
 			{
 				title: 'Analytics',
-				headline: 'Accordion Headline 4',
-				content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+				headline: 'Analytics',
+				content: 'Unlock actionable insights with advanced analytics to monitor, assess, and enhance security decisions',
 				image: [
 					{
 						breakPoint: 992,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 				],
 				CTABlock: [
 					{
-						CTAText: "Primary CTA",
-						CTAHref: "spiralyze.com",
-						className: "spz-primary inner-accordion"
+						CTAText: "Get a demo",
+						CTAHref: "javascript:;",
+						className: `spz-primary spz-go-to-demo btn btn--hotpink`
 					},
-					{
-						CTAText: "Secondary CTA",
-						CTAHref: "spiralyze.com",
-						className: "spz-secondary inner-accordion"
-					}
 				]
 
 			},
 			{
 				title: 'AI and Machine Learning',
-				headline: 'Accordion Headline 5',
-				content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+				headline: 'AI and Machine Learning',
+				content: 'Leverage AI and machine learning to predict risks, automate tasks, and continuously improve security.',
 				image: [
 					{
 						breakPoint: 992,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
 					},
 				],
-				CTABlock: []
+				CTABlock: [
+					{
+						CTAText: "Get a demo",
+						CTAHref: "javascript:;",
+						className: `spz-primary spz-go-to-demo btn btn--hotpink`
+					},
+				]
 
 			},
 		],
