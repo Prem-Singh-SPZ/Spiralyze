@@ -24,15 +24,15 @@
 				image: [
 					{
 						breakPoint: 992,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 				],
 				CTABlock: [
@@ -51,15 +51,15 @@
 				image: [
 					{
 						breakPoint: 992,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 				],
 				CTABlock: [
@@ -78,15 +78,15 @@
 				image: [
 					{
 						breakPoint: 992,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 				],
 				CTABlock: [
@@ -105,15 +105,15 @@
 				image: [
 					{
 						breakPoint: 992,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 				],
 				CTABlock: [
@@ -132,15 +132,15 @@
 				image: [
 					{
 						breakPoint: 992,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 768,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 					{
 						breakPoint: 320,
-						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img.webp",
+						url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2008/hero-img_1.webp",
 					},
 				],
 				CTABlock: [
