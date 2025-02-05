@@ -156,7 +156,7 @@
                             if (typeof Swiper !== 'undefined' && document.querySelector('.spz-2026 .spz-hero-interface .spz-hero-interface__slide') && !document.querySelector('.spz-hero-interface__slides.swiper-initialized')) {
                                 initSlider_2026();
                             }
-                        }, 400);
+                        }, 100);
                     }
 
 
