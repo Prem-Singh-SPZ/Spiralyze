@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 :root {
   --container-width: 560px;
   --container-border-radius: 0;
@@ -10,61 +9,86 @@
   --input-border-hover: 1px solid #c6ced2;
   --input-border-focus: 1px solid rgba(0, 0, 0, 1);
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @font-face {
   font-family: "Test Founders Grotesk";
   src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot");
-  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577387/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff") format("woff"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577392/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.ttf") format("truetype");
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577387/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff")
+      format("woff"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577392/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.ttf")
+      format("truetype");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Test Founders Grotesk";
   src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot");
-  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff") format("woff"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577514/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.ttf") format("truetype");
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff")
+      format("woff"),
+    url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577514/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.ttf")
+      format("truetype");
   font-weight: 500;
   font-style: normal;
 }
+
 /*Background */
 body#signups-new {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp) no-repeat top left/cover;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp)
+    no-repeat top left/cover;
   height: 100dvh;
   position: relative;
-}
-@media (max-width: 767.98px) {
-  body#signups-new {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/bg_mobile.webp) no-repeat top left/cover;
+
+  @media (max-width: 767.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/bg_mobile.webp)
+      no-repeat top left/cover;
   }
-}
-body#signups-new::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(22, 22, 22, 0.8) 100%);
-  -webkit-backdrop-filter: blur(2.5px);
-          backdrop-filter: blur(2.5px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(22, 22, 22, 0.8) 100%
+    );
+    backdrop-filter: blur(2.5px);
+  }
 }
 
 /*Background end */
+
 /*Style form wrapping div like shadows wrapper background border-radius etc...*/
 .spz-form-wrap {
   max-width: var(--container-width);
   /*Set form container width*/
   width: 100%;
   background: #fff;
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 50%;
+  //   transform: translate(-50%, -50%);
   padding: 12px 32px 32px;
   text-align: center;
   border-radius: var(--container-border-radius);
-  -webkit-box-shadow: var(--container-box-shadow);
-          box-shadow: var(--container-box-shadow);
+  box-shadow: var(--container-box-shadow);
   z-index: 1000000;
-}
-.spz-form-wrap .maxio-text-field__items {
-  border: none;
+
+  .maxio-text-field__items {
+    border: none;
+  }
 }
 
 @media (max-width: 575px) {
@@ -73,34 +97,38 @@ body#signups-new::before {
     padding: 12px 24px 24px;
   }
 }
+
 /*Style form wrapping div end*/
 /*Form layout styling*/
-.spz-form-wrap form .form__section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.spz-form-wrap form .form__section .sandbox__fields:first-child {
-  display: none;
-}
-.spz-form-wrap form .form__section .sandbox__fields:nth-child(2), .spz-form-wrap form .form__section .sandbox__fields:nth-child(3), .spz-form-wrap form .form__section .sandbox__fields:nth-child(4), .spz-form-wrap form .form__section .sandbox__fields:nth-child(5) {
-  width: calc(50% - 8px);
-  margin-top: 0;
-}
-.spz-form-wrap form .form__section .form__fields {
-  margin: 0;
-}
-.spz-form-wrap form .form__section .sandbox_checkbox__field {
-  margin-top: 0;
+.spz-form-wrap form {
+  .form__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .sandbox__fields {
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        width: calc(50% - 8px);
+        margin-top: 0;
+      }
+    }
+
+    .form__fields {
+      margin: 0;
+    }
+
+    .sandbox_checkbox__field {
+      margin-top: 0;
+    }
+  }
 }
 
 .spz-form-wrap .mktoFormRow {
-  max-width: calc(50% - var(--input-horizontal-gap) / 2);
+  max-width: calc(50% - (var(--input-horizontal-gap) / 2));
   width: 100%;
 }
 
@@ -109,6 +137,7 @@ body#signups-new::before {
     max-width: 100%;
   }
 }
+
 /*Form layout styling end*/
 /*Input styling*/
 .spz-form-wrap input,
@@ -182,11 +211,10 @@ body#signups-new::before {
   margin-bottom: 20px !important;
 }
 
-.spz-input-wrap label[class*=maxio-text-field__label] {
+.spz-input-wrap label[class*="maxio-text-field__label"] {
   position: absolute;
   left: 12px;
   top: 12px;
-  -webkit-transition: top 0.25s linear;
   transition: top 0.25s linear;
   padding: 0;
   color: #858585;
@@ -202,40 +230,36 @@ body#signups-new::before {
   text-align: left;
 }
 
-.spz-input-wrap.focused label[class*=maxio-text-field__label],
-.spz-input-wrap.has-value label[class*=maxio-text-field__label] {
-  top: calc(-1 * var(--inputHeight) / 4);
+.spz-input-wrap.focused label[class*="maxio-text-field__label"],
+.spz-input-wrap.has-value label[class*="maxio-text-field__label"] {
+  top: calc(-1 * (var(--inputHeight) / 4));
   /*need to work on it to make it calculated automatically*/
   background: #fff;
   line-height: normal;
-  -webkit-transition: top 0.15s linear;
   transition: top 0.15s linear;
   padding: 0 3px;
 }
 
-.spz-input-wrap.focused label[class*=maxio-text-field__label] {
+.spz-input-wrap.focused label[class*="maxio-text-field__label"] {
   color: #3620ff;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
-.spz-input-wrap.has-value label[class*=maxio-text-field__label] {
+.spz-input-wrap.has-value label[class*="maxio-text-field__label"] {
   color: #000;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
 /* Styling for label animation end*/
+
 .spz-input-wrap .mktoError {
   bottom: unset;
   top: var(--inputHeight);
