@@ -65,7 +65,6 @@
 
     // Initialize slider
     function initSlider_2026() {
-        console.log('initSlider_2026');
         // waitForElm('.spz-hero-interface__slides').then(function () {
         const swiper = new Swiper(".spz-hero-interface__slides", {
             // Optional parameters
