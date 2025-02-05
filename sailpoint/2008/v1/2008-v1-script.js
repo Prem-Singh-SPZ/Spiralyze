@@ -315,17 +315,17 @@
 		const body = document.querySelector('body');
 		waitForElm('body').then(() => {
 			if (window.location.pathname == '/') {
-				if (!body.classList.contains('spz-2008-v2')) {
-					body.classList.add('spz-2008-v2');
+				if (!body.classList.contains('spz-2008-v1')) {
+					body.classList.add('spz-2008-v1');
 					addHorizontalAccordion(
 						template_sectionContent, //object with the data
 						template_position, //any value you pass using insertAdjacentHTML
 						template_sectionSelector
 					);
-					hiddenValue('spz-2008', 'SPZ_2008_variant_2');
+					hiddenValue('spz-2008', 'SPZ_2008_variant_1');
 				} else {
-					if (body.classList.contains('spz-2008-v2')) {
-						hiddenValue('spz-2008', 'SPZ_2008_variant_2');
+					if (body.classList.contains('spz-2008-v1')) {
+						hiddenValue('spz-2008', 'SPZ_2008_variant_1');
 					}
 				}
 			}
@@ -390,8 +390,8 @@
 		if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
 			initTest2008();
 		} else {
-			if (document.querySelector('body').classList.contains('spz-2008-v2')) {
-				document.querySelector('body').classList.remove('spz-2008-v2');
+			if (document.querySelector('body').classList.contains('spz-2008-v1')) {
+				document.querySelector('body').classList.remove('spz-2008-v1');
 			}
 			if (document.querySelector('body').classList.contains('spz_2008_HF')) {
 				document.querySelector('body').classList.remove('spz_2008_HF');

@@ -396,7 +396,7 @@
 			if (document.querySelector('body').classList.contains('spz_2008_HF')) {
 				document.querySelector('body').classList.remove('spz_2008_HF');
 			}
-			removeSpecificCookieValue('spz-2008', 'SPZ_2008_variant_1');
+			removeSpecificCookieValue('spz-2008', 'SPZ_2008_variant_2');
 		}
 	}
 
