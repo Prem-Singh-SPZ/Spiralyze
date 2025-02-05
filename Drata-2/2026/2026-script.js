@@ -27,12 +27,12 @@
     const heroInterfaceContent = {
         slides: {
             slideItems: [
-                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `Controls` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `Dashboard` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `Vendor Directory` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `Controls` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/central_default_image.webp`, imageAlt: `Dashboard` },
                 { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/right_image.webp`, imageAlt: `Vendor Directory` },
+                { slideImageURL: `//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2026/left_image.webp`, imageAlt: `Controls` },
             ],
         },
     }
@@ -122,7 +122,7 @@
             });
 
             // setTimeout(() => {
-            swiper.slideTo(3, 1000);
+            // swiper.slideTo(3, 1000);
             // }, 200);
             //take the height of the image of active slide and set the height of the slider
             swiper.on('slideChange', function () {
