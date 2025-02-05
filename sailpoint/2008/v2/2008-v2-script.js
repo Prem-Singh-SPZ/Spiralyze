@@ -47,7 +47,7 @@
 			{
 				title: 'Compliance',
 				headline: 'Compliance',
-				content: 'Ensure seamless compliance with automated monitoring, risk assessment, and real-time reporting.',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
 				image: [
 					{
 						breakPoint: 992,
@@ -74,7 +74,7 @@
 			{
 				title: 'Access Modeling',
 				headline: 'Access Modeling',
-				content: 'Design and optimize access controls with data-driven models, ensuring the right permissions for the right users.',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
 				image: [
 					{
 						breakPoint: 992,
@@ -101,7 +101,7 @@
 			{
 				title: 'Analytics',
 				headline: 'Analytics',
-				content: 'Unlock actionable insights with advanced analytics to monitor, assess, and enhance security decisions',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
 				image: [
 					{
 						breakPoint: 992,
@@ -128,7 +128,7 @@
 			{
 				title: 'AI and Machine Learning',
 				headline: 'AI and Machine Learning',
-				content: 'Leverage AI and machine learning to predict risks, automate tasks, and continuously improve security.',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
 				image: [
 					{
 						breakPoint: 992,
