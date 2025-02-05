@@ -240,10 +240,25 @@ body.spz-2008-v2 {
 
     &.active {
       max-height: 100%;
+
+      .solution__image {
+        animation: showSlide 0.5s ease-in-out;
+      }
+      // transition: all 0.3s ease;
     }
 
     @media (max-width: 1199.99px) {
       gap: 0;
+    }
+  }
+
+  //opacity transition for solution content
+  @keyframes showSlide {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -297,6 +312,10 @@ body.spz-2008-v2 {
 
       @media (max-width: 1024.99px) {
         margin-bottom: 24px;
+
+        @media (min-width: 767.98px) {
+          padding-right: 42px;
+        }
       }
     }
   }

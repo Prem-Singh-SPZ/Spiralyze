@@ -244,10 +244,24 @@ body.spz-2008-v2 {
 
     &.active {
       max-height: 100%;
+
+      .solution__image{
+        animation: showSlide 0.5s ease-in-out;
+      }
     }
 
     @media (max-width: 1199.99px) {
       gap: 0;
+    }
+  }
+
+   //opacity transition for solution content
+   @keyframes showSlide {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
