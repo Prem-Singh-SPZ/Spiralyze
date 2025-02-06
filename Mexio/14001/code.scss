@@ -34,6 +34,7 @@ body.spz_14001 {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp)
     no-repeat top left/cover;
   position: relative;
+  overflow-x: hidden;
 
   @media (max-width: 767.98px) {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/bg_mobile.webp)
@@ -59,13 +60,15 @@ body.spz_14001 {
   .sandbox-app {
     position: relative;
     z-index: 1;
-
+    .sandbox-login-card {
+      height: 100%;
+    }
     .chargify-login-card#app_content {
       border: none;
       background: #fff;
       box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
       max-width: 560px;
-      padding: 40px 48px;
+      padding: 35px 48px 40px;
       width: 100%;
 
       #main {
@@ -87,6 +90,7 @@ body.spz_14001 {
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
+            margin-bottom: 39px;
           }
 
           #signup-form {
@@ -103,6 +107,11 @@ body.spz_14001 {
                 margin-top: 0;
                 width: calc(50% - 8px);
                 position: relative;
+                margin-bottom: 16px;
+
+                @media screen and (max-width: 767.98px) {
+                  width: 100%;
+                }
 
                 .maxio-text-field__items {
                   border: 0;
@@ -211,11 +220,8 @@ body.spz_14001 {
                 }
               }
 
-              .form__fields {
-                margin: 0;
-              }
-
               .sandbox__fields.sandbox_checkbox__field {
+                margin: -4px 0 13px;
                 label {
                   color: #858585;
                   font-family: "Test Founders Grotesk";
@@ -224,6 +230,14 @@ body.spz_14001 {
                   font-weight: 400;
                   line-height: 20px;
                   position: relative;
+
+                  .maxio-label-xs{
+                    color: #858585;
+                    font-family: "Test Founders Grotesk";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                  }
 
                   .maxio-checkbox__control {
                     width: 20px;
@@ -234,7 +248,7 @@ body.spz_14001 {
                       content: "";
                       width: 20px;
                       height: 20px;
-                      top: -4px;
+                      top: -1px;
                       left: 0;
                       background: #fff;
                       border: 1.125px solid #0042ff;
@@ -245,7 +259,7 @@ body.spz_14001 {
                     &::after {
                       position: absolute;
                       content: "";
-                      top: -1px;
+                      top: 2px;
                       left: 3px;
                       width: 14px;
                       height: 14px;
@@ -267,6 +281,7 @@ body.spz_14001 {
               }
 
               .form__fields--submit-form {
+                margin: 8px 0 0;
                 .maxio-button {
                   text-align: center;
                   height: 50px;
@@ -331,7 +346,7 @@ body.spz_14001 {
     -webkit-text-fill-color: #000 !important;
   }
 
-  .spz-hidden{
+  .spz-hidden {
     display: none !important;
   }
 }
