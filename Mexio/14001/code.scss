@@ -89,24 +89,173 @@ body.spz_14001 {
             line-height: 32px;
           }
 
-          #signup-form{
-            .form__section{
+          #signup-form {
+            .form__section {
               display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
 
-            >  .sandbox__fields:not(.sandbox_checkbox__field){
-                &:first-child{
+              .sandbox__fields:not(.sandbox_checkbox__field) {
+                &:first-child:not(.maxio-text-field) {
                   display: none;
                 }
 
                 margin-top: 0;
                 width: calc(50% - 8px);
+                position: relative;
+
+                .maxio-text-field__items {
+                  border: 0;
+                }
+
+                &.maxio-text-field {
+                  width: 100%;
+                }
+
+                .maxio-text-field__input {
+                  border: 1px solid #c6ced2;
+                  background: #fff;
+                  height: 50px;
+                  padding: 15px 38px 11px 16px;
+                  color: #000;
+                  font-family: "Test Founders Grotesk", sans-serif;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px;
+                  outline: none;
+                }
+
+                .maxio-text-field__label {
+                  position: absolute;
+                  top: 14px;
+                  left: 10px;
+                  color: #858585;
+                  font-family: Test Founders Grotesk;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 1.28;
+                  padding: 0 6px;
+                  margin: 0;
+                  background: #fff;
+                  pointer-events: none;
+                  transition: all 0.4s ease-in-out;
+                  z-index: 1;
+                  width: calc(100% - 40px);
+                }
+
+                &.filled {
+                  .maxio-text-field__label {
+                    color: #000;
+                    font-size: 13px;
+                    line-height: 1.28;
+                    top: -10px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    width: auto;
+                  }
+                }
+
+                &.active {
+                  .maxio-text-field__label {
+                    font-size: 13px;
+                    line-height: 1.28;
+                    top: -10px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    width: auto;
+                  }
+
+                  .maxio-text-field__input {
+                    border-color: #54626a;
+                  }
+                }
+
+                .has-error {
+                  .maxio-text-field__input {
+                    border-color: #e30004;
+                  }
+                }
+
+                .error-message {
+                  color: #e30004;
+                  font-family: Test Founders Grotesk;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 1.28;
+                }
+              }
+
+              .form__fields {
+                margin: 0;
+              }
+
+              .sandbox__fields.sandbox_checkbox__field {
+                label {
+                  color: #808080;
+                  font-family: "Test Founders Grotesk";
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 1.28;
+                  position: relative;
+                  padding-left: 28px;
+
+                  &::before {
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                    left: 0;
+                    background: #fff;
+                    border: 1px solid #c6ced2;
+                    margin: 0;
+                    font-size: 0;
+                  }
+
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    top: 3px;
+                    left: 3px;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1731583819/maxio/2001/checkmark.svg");
+                    background-size: contain;
+                    opacity: 0;
+                  }
+                }
+
+                input:checked + label::before {
+                  background: #0042ff;
+                  border-color: #0042ff;
+                }
+
+                input:checked + label::after {
+                  opacity: 1;
+                }
               }
             }
           }
         }
       }
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px white inset !important;
+    -webkit-text-fill-color: #000 !important;
   }
 }
