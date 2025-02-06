@@ -233,7 +233,7 @@ body {
     line-height: 100%;
     text-decoration: none;
     text-align: center;
-    outline: none !important;
+    outline: 1px solid transparent !important;
     letter-spacing: -0.14px;
     cursor: pointer;
     transition-duration: 0.25s;
@@ -244,8 +244,8 @@ body {
 
     &:active {
       background: #f3f5f7;
-      border: none;
-      outline: 2px solid #d7dee5 !important;
+      // border: none;
+      outline: 1px solid #d7dee5 !important;
     }
   }
 
@@ -2303,7 +2303,8 @@ body.safari {
           height: 28px;
           transition-duration: 0.25s;
 
-          svg rect, svg path {
+          svg rect,
+          svg path {
             transition-duration: 0.25s;
           }
 
@@ -2319,7 +2320,8 @@ body.safari {
             }
           }
 
-          img,svg {
+          img,
+          svg {
             width: 28px;
             height: auto;
           }
@@ -2413,16 +2415,15 @@ body.safari {
 }
 // Footer Ends
 
-
 // Animation Starts
-[data-inviewport="fade-in"] { 
+[data-inviewport="fade-in"] {
   transition-duration: 1.5s;
   transform: translateY(150px);
   opacity: 0;
   transform-style: preserve-3d;
   transition-delay: 100ms;
 }
-[data-inviewport="fade-in"].is-inViewport { 
+[data-inviewport="fade-in"].is-inViewport {
   transform: translateY(0px);
   opacity: 1;
 }
