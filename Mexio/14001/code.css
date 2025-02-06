@@ -1,16 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-:root {
-  --container-width: 560px;
-  --container-border-radius: 0;
-  --container-box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
-  --inputHeight: 50px;
-  --input-horizontal-gap: 20px;
-  --input-border-radius: 0;
-  --input-border: 1px solid #c6ced2;
-  --input-border-hover: 1px solid #c6ced2;
-  --input-border-focus: 1px solid rgba(0, 0, 0, 1);
-}
-
 @font-face {
   font-family: "Test Founders Grotesk";
   src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot");
@@ -26,56 +14,61 @@
   font-style: normal;
 }
 /*Background */
-body#signups-new {
+body.spz_14001 {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp) no-repeat top left/cover;
-  height: 100dvh;
   position: relative;
 }
 @media (max-width: 767.98px) {
-  body#signups-new {
+  body.spz_14001 {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/bg_mobile.webp) no-repeat top left/cover;
   }
 }
-body#signups-new::before {
+body.spz_14001::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
+  min-height: 100dvh;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(22, 22, 22, 0.8)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(22, 22, 22, 0.8) 100%);
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
 }
-
-/*Background end */
-/*Style form wrapping div like shadows wrapper background border-radius etc...*/
-.spz-form-wrap {
-  max-width: var(--container-width);
-  /*Set form container width*/
-  width: 100%;
-  background: #fff;
-  padding: 12px 32px 32px;
-  text-align: center;
-  border-radius: var(--container-border-radius);
-  -webkit-box-shadow: var(--container-box-shadow);
-          box-shadow: var(--container-box-shadow);
-  z-index: 1000000;
+body.spz_14001 .sandbox-app {
+  position: relative;
+  z-index: 1;
 }
-.spz-form-wrap .maxio-text-field__items {
+body.spz_14001 .sandbox-app .chargify-login-card#app_content {
   border: none;
+  background: #fff;
+  -webkit-box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+  max-width: 560px;
+  padding: 40px 48px;
+  width: 100%;
 }
-
-@media (max-width: 575px) {
-  .spz-form-wrap {
-    width: calc(100% - 40px);
-    padding: 12px 24px 24px;
-  }
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main {
+  padding: 0;
 }
-/*Style form wrapping div end*/
-/*Form layout styling*/
-.spz-form-wrap form .form__section {
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section {
+  padding: 0;
+}
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section .welcome-maxio-logo,
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section .welcome-container.maxio-display-sm {
+  display: none;
+}
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section .spz_form_title {
+  color: #000;
+  text-align: center;
+  font-family: "Test Founders Grotesk", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,174 +78,10 @@ body#signups-new::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.spz-form-wrap form .form__section .sandbox__fields:first-child {
-  display: none;
-}
-.spz-form-wrap form .form__section .sandbox__fields:nth-child(2), .spz-form-wrap form .form__section .sandbox__fields:nth-child(3), .spz-form-wrap form .form__section .sandbox__fields:nth-child(4), .spz-form-wrap form .form__section .sandbox__fields:nth-child(5) {
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields:not(.sandbox_checkbox__field) {
+  margin-top: 0;
   width: calc(50% - 8px);
-  margin-top: 0;
 }
-.spz-form-wrap form .form__section .form__fields {
-  margin: 0;
-}
-.spz-form-wrap form .form__section .sandbox_checkbox__field {
-  margin-top: 0;
-}
-
-.spz-form-wrap .mktoFormRow {
-  max-width: calc(50% - var(--input-horizontal-gap) / 2);
-  width: 100%;
-}
-
-@media (max-width: 575px) {
-  .spz-form-wrap .mktoFormRow {
-    max-width: 100%;
-  }
-}
-/*Form layout styling end*/
-/*Input styling*/
-.spz-form-wrap input,
-.spz-form-wrap select {
-  height: var(--inputHeight) !important;
-  border: var(--input-border);
-  border-radius: var(--input-border-radius) !important;
-  outline: none;
-  color: var(--grays-primary-headline, #000);
-  font-family: "Founders Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-}
-
-.spz-form-wrap input:hover,
-.spz-form-wrap select:hover {
-  border: var(--input-border-hover);
-  outline: none;
-}
-
-.spz-form-wrap input:focus,
-.spz-form-wrap select:focus {
-  border: var(--input-border-focus);
-  outline: none;
-}
-
-/*Input styling end*/
-/*Styling other elements*/
-.spz-company-logo {
-  margin-bottom: 24px;
-}
-
-.spz-superheading {
-  color: #3620ff;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 3.36px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.spz-form-heading {
-  color: #000;
-  text-align: center;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 8px;
-}
-
-.spz-subheading {
-  color: #000;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  margin-bottom: 24px;
-}
-
-/*Styling other elements end*/
-/* Styling for label animation*/
-.spz-input-wrap {
-  position: relative;
-  margin-bottom: 20px !important;
-}
-
-.spz-input-wrap label[class*=maxio-text-field__label] {
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  -webkit-transition: top 0.25s linear;
-  transition: top 0.25s linear;
-  padding: 0;
-  color: #858585;
-  font-family: "Founders Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  font-weight: 400;
-  z-index: 1;
-  margin: 0;
-  background: #fff;
-  width: calc(100% - 44px);
-  text-align: left;
-}
-
-.spz-input-wrap.focused label[class*=maxio-text-field__label],
-.spz-input-wrap.has-value label[class*=maxio-text-field__label] {
-  top: calc(-1 * var(--inputHeight) / 4);
-  /*need to work on it to make it calculated automatically*/
-  background: #fff;
-  line-height: normal;
-  -webkit-transition: top 0.15s linear;
-  transition: top 0.15s linear;
-  padding: 0 3px;
-}
-
-.spz-input-wrap.focused label[class*=maxio-text-field__label] {
-  color: #3620ff;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.spz-input-wrap.has-value label[class*=maxio-text-field__label] {
-  color: #000;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-/* Styling for label animation end*/
-.spz-input-wrap .mktoError {
-  bottom: unset;
-  top: var(--inputHeight);
-}
-
-/*put selectors you need to hide .spz-form-wrap will be rendered before closing body tag. In some cases, you'll have to find a single selector to hide all inner content. For example, see below selector*/
-#app,
-.signup-spacer {
-  display: none !important;
-}
-
-header,
-#fl-main-content,
-.fl-builder-content {
-  display: none !important;
-}
-
-.mktoFieldDescriptor.mktoFormCol {
-  margin-bottom: 0 !important;
+body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields:not(.sandbox_checkbox__field):first-child {
+  display: none;
 }
