@@ -10,17 +10,84 @@ function createTest() {
       mainbodyEle.classList.add('spz_14001');
 
       waitForElm('.spz_14001 form#signup-form input#signup_cro_primary').then(function (cro_primary) {
-        if (document.querySelectorAll('.spz_14001 .spz_form_title').length == 0) {
-          document.querySelector('.spz_14001 form#signup-form').insertAdjacentHTML('beforebegin', '<div class="spz_form_title">Maxio Billing Sandbox</div>');
-        }
+        modifyForm();
       });
     }
   });
 }
 
+function modifyForm() {
+  if (document.querySelectorAll('.spz_14001 .spz_form_title').length == 0) {
+    document.querySelector('.spz_14001 form#signup-form').insertAdjacentHTML('beforebegin', '<div class="spz_form_title">Maxio Billing Sandbox</div>');
+  }
+  hiddenValue();
+
+  // document.querySelector('.spz_14001 form#signup-form .country').classList.add('spz-hidden');
+  // document.querySelector('.spz_14001 form#signup-form .Employee_Count').classList.add('spz-hidden');
+  // document.querySelector('.spz_14001 form#signup-form .pd-checkbox').classList.add('spz-hidden');
+
+  document.querySelector('.spz_14001 form#signup-form .form__fields .maxio-text-field').classList.add('sandbox__fields');
+
+  var all_inputs = document.querySelectorAll('.spz_14001 form#signup-form input, .spz_14001 form#signup-form select');
+  all_inputs.forEach(function (element) {
+    element.removeAttribute('placeholder');
+    if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.maxio-text-field') !== null) {
+      element.closest('.spz_14001 form#signup-form .sandbox__fields').classList.add('filled');
+    }
+    if (element.tagName !== 'SELECT' && element.value != '' && element.closest('.sandbox__fields') !== null) {
+      element.closest('.spz_14001 form#signup-form .sandbox__fields').classList.add('filled');
+    }
+  });
+  var selector = '.spz_14001 form#signup-form .sandbox__fields input, .spz_14001 form#signup-form .maxio-text-field select';
+  document.addEventListener('focus', function (event) {
+    if (event.target.matches && event.target.matches(selector)) {
+      event.target.closest('.spz_14001 form#signup-form .sandbox__fields').classList.add('active', 'typing');
+    }
+  }, true);
+
+  // checkFilledVisibility();
+
+  var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
+  for (let s_event of eventList) {
+    document.addEventListener(s_event, function (event) {
+      // checkFilledVisibility();
+
+      if (event.target.matches && event.target.matches(selector)) {
+        if (event.target.value == null || event.target.value == '') {
+          event.target.closest('.spz_14001 form#signup-form .sandbox__fields').classList.remove('filled');
+        } else {
+          if (event.target.tagName == 'SELECT' && event.target.selectedIndex !== 0) {
+            event.target.closest('.spz_14001 form#signup-form .maxio-text-field').classList.add('filled');
+          }
+          if (event.target.tagName !== 'SELECT') {
+            event.target.closest('.spz_14001 form#signup-form .sandbox__fields').classList.add('filled');
+          }
+        }
+      }
+    });
+  }
+  document.addEventListener('focusout', function (event) {
+    document.querySelectorAll('.spz_14001 form#signup-form .sandbox__fields.typing').forEach(function (elem) {
+      elem.classList.remove('active', 'typing');
+      // checkFilledVisibility();
+    })
+  }, true);
+}
+
+function checkFilledVisibility() {
+  if (document.querySelector('.spz-2002-iframe form#pardot-form .form-field.first_name').classList.contains('filled') && document.querySelector('.spz-2002-iframe form#pardot-form .form-field.last_name').classList.contains('filled') && document.querySelector('.spz-2002-iframe form#pardot-form .form-field.email').classList.contains('filled') && document.querySelector('.spz-2002-iframe form#pardot-form .form-field.company').classList.contains('filled')) {
+
+      document.querySelectorAll('.form-field.spz-hidden').forEach(function (elem) {
+          elem.classList.remove('spz-hidden');
+      })
+
+      document.querySelector('.spz-2002-iframe form#pardot-form ').classList.add('spz-full-form');
+  }
+}
+
 function hiddenValue() {
   var spz_cro_Interval = setInterval(function () {
-    var cro_primary = document.querySelector('form#pardot-form .form-field.cro_primary input');
+    var cro_primary = document.querySelector('form#pardot-form .sandbox__fields.cro_primary input');
     if (cro_primary) {
       clearInterval(spz_cro_Interval);
       var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
