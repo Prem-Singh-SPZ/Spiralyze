@@ -60,9 +60,17 @@ body.spz_14001 {
   .sandbox-app {
     position: relative;
     z-index: 1;
+
     .sandbox-login-card {
       height: 100%;
+      margin: 24px 0;
+      padding: 0;
+
+      @media (min-width: 767.98px) and (max-height: 550px) {
+        align-items: flex-start;
+      }
     }
+
     .chargify-login-card#app_content {
       border: none;
       background: #fff;
@@ -70,6 +78,7 @@ body.spz_14001 {
       max-width: 560px;
       padding: 35px 48px 40px;
       width: 100%;
+      margin: 0;
 
       #main {
         padding: 0;
@@ -231,7 +240,7 @@ body.spz_14001 {
                   line-height: 20px;
                   position: relative;
 
-                  .maxio-label-xs{
+                  .maxio-label-xs {
                     color: #858585;
                     font-family: "Test Founders Grotesk";
                     font-size: 14px;
