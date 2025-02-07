@@ -268,11 +268,11 @@ style.appendChild(document.createTextNode(css));
           clearInterval(spz_cro_Interval);
           var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
           //check if hidden field value is empty then only set the value else set the value with , seperated
-          if (intellimize1.value == '') {
+          if (ExistingHiddenFieldValue && intellimize1.value == '') {
             intellimize1.value = ExistingHiddenFieldValue;
           }
           else {
-            if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+            if (ExistingHiddenFieldValue && !intellimize1.value.includes(ExistingHiddenFieldValue)) {
               intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
             }
           }

@@ -3,6 +3,7 @@
   --container-border-radius: 24px;
   --container-box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
 }
+$poppins: var(--font-poppins, "Poppins"), Helvetica, Arial, sans-serif;
 
 .spz-1002 .announcement-banner,
 .spz-1002 nav.navigation,
@@ -347,9 +348,20 @@ select:-webkit-autofill:active {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100% !important;
+
+  * {
+    font-family: $poppins;
+    padding: 0;
+  }
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoFormRow {
   width: 100%;
+
+  .mktoOffset,
+  .mktoClear,
+  .mktoGutter {
+    display: none;
+  }
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoFormRow.field-2,
 .spz-1002 .spz-form-section form.mktoForm .mktoFormRow.field-3,
@@ -368,10 +380,13 @@ select:-webkit-autofill:active {
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoFormCol {
   margin: 0 !important;
+  width: 100% !important;
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap {
   position: relative;
   margin-bottom: 16px;
+  width: 100% !important;
+  display: inline-block;
 
   @media (max-width: 767.98px) {
     margin-bottom: 12px;
@@ -390,7 +405,7 @@ select:-webkit-autofill:active {
     left: 12px;
     background: #fff;
     border-radius: 4px;
-    width: auto !important;
+    width: calc(100% - 50px) !important;
     height: auto;
     pointer-events: none;
     transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
@@ -401,6 +416,19 @@ select:-webkit-autofill:active {
     //   padding: 1px 3px;
     //   line-height: 1.2;
     // }
+
+    &#LblmandatoryCollectionandUseofPersonalInfo,
+    &#LbloptionalCollectionandUseofInformation {
+      position: relative;
+      top: unset;
+      left: unset;
+    }
+  }
+
+  > #LblGlobal_Opt_out__c,
+  > #LblGlobal_Opt_in__c,
+  #LbltransferofPersonalInformation {
+    display: none;
   }
 }
 .spz-1002
@@ -513,6 +541,7 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
+  -webkit-appearance: none;
 }
 .spz-1002
   .spz-form-section
@@ -556,6 +585,9 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 4px 0 0 !important;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
 }
 .spz-1002
   .spz-form-section
@@ -571,6 +603,13 @@ select:-webkit-autofill:active {
   position: relative;
   padding-left: 16px;
   text-align: left;
+  display: block;
+  margin: 0;
+  background: none !important;
+  border: none !important;
+  box-shadow: none;
+  text-shadow: none;
+  width: 100%;
 }
 .spz-1002
   .spz-form-section
@@ -625,16 +664,26 @@ select:-webkit-autofill:active {
   .mktoErrorArrowWrap {
   display: none !important;
 }
-// .spz-1002
-//   .spz-form-section
-//   form.mktoForm
-//   .mktoCheckboxList
-//   input[type="checkbox"] {
-//   opacity: 0 !important;
-//   position: absolute;
-//   z-index: -1;
-//   width: 0;
-// }
+.spz-1002
+  .spz-form-section
+  form.mktoForm
+  .mktoCheckboxList
+  input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  min-width: 16px;
+}
+.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
+  width: 100% !important;
+  display: flex;
+  // align-items: center;
+
+  align-items: flex-start;
+  @media (max-width: 767.98px) {
+  }
+}
+
 .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label {
   position: relative;
   color: #415364;
@@ -647,6 +696,7 @@ select:-webkit-autofill:active {
   cursor: pointer;
   display: inline-flex;
   width: auto;
+  margin: 0;
 }
 // .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
 //   position: absolute;
@@ -800,15 +850,15 @@ select:-webkit-autofill:active {
   padding: 0 4px;
 }
 @media (max-width: 1119.98px) and (min-width: 1024px) {
-  .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
-    font-size: 12px;
-  }
+  // .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
+  //   font-size: 12px;
+  // }
   .spz-1002
     .spz-form-section
     form.mktoForm
     .mktoFieldWrap
     .select-wrapper:after {
-    width: 12px;
+    // width: 12px;
     top: 21px;
     right: 11px;
   }
