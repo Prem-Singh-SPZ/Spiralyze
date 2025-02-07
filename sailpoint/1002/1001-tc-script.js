@@ -472,8 +472,19 @@ select:-webkit-autofill:active {
     width: 100% !important;
 }
 
+.spz_1002_tc .spz-form-section form.mktoForm * {
+  font-family: var(--font-poppins, "Poppins"), Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow {
     width: 100%;
+}
+
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow .mktoOffset,
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow .mktoClear,
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow .mktoGutter {
+  display: none;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow.field-2,
@@ -495,11 +506,14 @@ select:-webkit-autofill:active {
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFormCol {
     margin: 0 !important;
+    width: 100% !important;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap {
     position: relative;
     margin-bottom: 16px;
+    width: 100% !important;
+     display: inline-block;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
@@ -514,18 +528,27 @@ select:-webkit-autofill:active {
     top: 12px;
     left: 12px;
     background: #FFF;
-    width: auto !important;
+    width: calc(100% - 50px) !important;
     height: auto;
     pointer-events: none;
     transition: color .3s ease-in-out, top .3s ease-in-out, font-size .3s ease-in-out;
     z-index: 9;
 }
 
-.spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation {
-    position: relative;
-    top: unset;
-    left: unset;
-    padding: 0;
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation, .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo, .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel#LbloptionalCollectionandUseofInformation {
+  position: relative;
+  top: unset;
+  left: unset;
+  color: #415364;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap > #LblGlobal_Opt_out__c,
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap > #LblGlobal_Opt_in__c,
+.spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap #LbltransferofPersonalInformation {
+  display: none;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
@@ -581,6 +604,7 @@ select:-webkit-autofill:active {
     font-style: normal;
     font-weight: 400;
     line-height: 1.6;
+  -webkit-appearance: none;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
@@ -607,11 +631,14 @@ select:-webkit-autofill:active {
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
     position: relative;
-    top: unset !important;
-    bottom: unset !important;
-    left: unset !important;
-    right: unset !important;
-    margin: 4px 0 0 !important;
+  top: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+  right: unset !important;
+  margin: 4px 0 0 !important;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
@@ -622,6 +649,15 @@ select:-webkit-autofill:active {
     line-height: 1.6;
     position: relative;
     padding-left: 16px;
+     text-align: left;
+  display: block;
+  margin: 0;
+  background: none !important;
+  border: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  width: 100%;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
@@ -641,6 +677,23 @@ select:-webkit-autofill:active {
 /* ,.spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList */
     {
     margin: 0 !important;
+}
+
+.spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  min-width: 16px;
+}
+
+.spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList {
+  width: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper::after {
@@ -718,6 +771,7 @@ select:-webkit-autofill:active {
     cursor: pointer;
     display: inline-flex;
     width: auto;
+  margin: 0;
 }
 
 /* .spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList label::before {
@@ -819,7 +873,6 @@ select:-webkit-autofill:active {
     max-width: 100%;
 }
 
-.spz_1002_tc .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a,
 .spz_1002_tc .spz-form-section .disclaimer a {
     color: #0071CE;
     font-size: 12px;
@@ -837,14 +890,11 @@ select:-webkit-autofill:active {
     margin-top: 10px;
 }
 
-.spz_1002_tc .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:hover,
 .spz_1002_tc .spz-form-section .disclaimer a:hover {
     text-decoration: none;
     font-weight: 600;
 }
 
-.spz_1002_tc .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:active,
-.spz_1002_tc .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
 .spz_1002_tc .spz-form-section .disclaimer a:active,
 .spz_1002_tc .spz-form-section .disclaimer a:focus-visible {
     text-decoration: none;
@@ -856,12 +906,12 @@ select:-webkit-autofill:active {
 }
 
 @media(max-width: 1119.98px) and (min-width: 1024px) {
-    .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
-        font-size: 12px;
-    }
+    // .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
+    //     font-size: 12px;
+    // }
 
     .spz_1002_tc .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper:after {
-        width: 12px;
+        // width: 12px;
         top: 21px;
         right: 11px;
     }
@@ -910,25 +960,25 @@ style.appendChild(document.createTextNode(css));
           const position = "beforebegin";
           const formSelector = `#mktoForm_1018`;
           const heroContent = {
-            siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo__colored.svg",
+            siteLogo: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo__colored.svg",
             siteLogoAlt: "SailPoint",
             contentSuperHeading: "Unified identity security",
             contentHeading: "Discover, manage, and secure all identities",
             features: [
               {
-                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/check.svg",
                 featureItemContent: "<b>Access management.</b> Monitor user access. Auto-implement roles. Streamline access approval or removal.",
               },
               {
-                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/check.svg",
                 featureItemContent: "<b>Complete coverage.</b> Manage non-employee or privileged access, machine identities, entitlements across clouds, passwords, risk, etc. Detect threats.",
               },
               {
-                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/check.svg",
                 featureItemContent: "<b>Compliance.</b> Demonstrate compliance with audit trails. GDPR, HIPAA, PCI, CCPA, FISMA, PCPD, PDPA, and more.",
               },
             ],
-            formArrow: "//res.cloudinary.com/spiralyze/image/upload/v1730978717/sailpoint/1001/arrow.svg",
+            formArrow: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/arrow.svg",
             formHeading: "Get live demo",
           };
           const additionalSection = {
@@ -936,36 +986,36 @@ style.appendChild(document.createTextNode(css));
               socialProofHeading: "Used by 48% of the Fortune 500",
               socialProofImages: [
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_01.svg",
                   imgAlt: "GM",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_02.svg",
                   imgAlt: "Hershey",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_03.svg",
                   imgAlt: "Paccar",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_04.svg",
                   imgAlt: "Philips",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_05.svg",
                   imgAlt: "RWE",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_06.svg",
                   imgAlt: "T Mobile",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1001/logo_07.svg",
                   imgAlt: "The Home Depot",
                 },
                 {
-                  url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_08.svg",
-                  imgAlt: "Toyota",
+                  url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1002/frame_1171275788.svg",
+                  imgAlt: "The Salvation Army",
                 },
               ]
             },
@@ -1036,8 +1086,8 @@ style.appendChild(document.createTextNode(css));
               if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
-                document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                // document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
                 formModify();
               }
             });
@@ -1190,7 +1240,7 @@ style.appendChild(document.createTextNode(css));
                     }
 
                     // Check if the field is filled
-                    if (field.value && field.value.trim() !== '') {
+                    if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
                       fieldWrap.classList.add('filled');
                     } else {
                       fieldWrap.classList.remove('filled');
@@ -1207,24 +1257,25 @@ style.appendChild(document.createTextNode(css));
 
 
             // Function to add .field-error class on closest parent .field class if .error is exist on input
-            function checkError(elem) {
-              let timeBuffer = setInterval(() => {
-                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
-                  elem.closest('.mktoFieldWrap').classList.add('error');
-                } else {
-                  elem.closest('.mktoFieldWrap').classList.remove('error');
-                }
-                if (elem && elem.value && (elem.value != '')) {
-                  elem.closest('.mktoFieldWrap').classList.add('filled');
-                } else {
-                  elem.closest('.mktoFieldWrap').classList.remove('filled');
-                }
-              }, 100);
+            // function checkError(elem) {
+            //   let timeBuffer = setInterval(() => {
+            //     if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
+            //       elem.closest('.mktoFieldWrap').classList.add('error');
+            //     } else {
+            //       elem.closest('.mktoFieldWrap').classList.remove('error');
+            //     }
+            //     console.log(elem.type, elem.id);
+            //     if (elem && elem.value && (elem.value != '') && elem.type !== 'checkbox') {
+            //       elem.closest('.mktoFieldWrap').classList.add('filled');
+            //     } else {
+            //       elem.closest('.mktoFieldWrap').classList.remove('filled');
+            //     }
+            //   }, 100);
 
-              setTimeout(() => {
-                clearInterval(timeBuffer);
-              }, 1000);
-            }
+            //   setTimeout(() => {
+            //     clearInterval(timeBuffer);
+            //   }, 1000);
+            // }
 
             document.querySelector('select#Country').addEventListener('change', () => {
               const stateRow = document.querySelector('.spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow.field-10');
@@ -1340,6 +1391,18 @@ style.appendChild(document.createTextNode(css));
     setTimeout(function () {
       clearInterval(spz_cro_Interval);
     }, 15000);
+
+    window.addEventListener('click', function (e) {
+      if (e.target.closest('#mktoForm_1018 .mktoButton')) {
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+
+        if (int2)
+          int2.value = n;
+      }
+    });
   }
   // Do not touch below hidden field code for any Experiment over
 
