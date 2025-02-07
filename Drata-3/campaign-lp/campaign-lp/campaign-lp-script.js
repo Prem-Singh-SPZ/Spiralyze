@@ -34,7 +34,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.user
 // Animation on scroll Starts
 const inViewport = (entries, observer) => {
     entries.forEach(entry => {
-        console.log(entry.target);
+        // console.log(entry.target);
         if (!entry.target.classList.contains("is-inViewport")) {
             entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
         }
