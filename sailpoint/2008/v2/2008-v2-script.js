@@ -218,9 +218,15 @@
 				: ""
 			}
 		</div>`;
-		document
-			.querySelector(template_sectionSelector)
-			.insertAdjacentHTML(whereToPut, formTemplate);
+
+		waitForElm(template_sectionSelector).then(() => {
+			document
+				.querySelector(template_sectionSelector)
+				.insertAdjacentHTML(whereToPut, formTemplate);
+
+		});
+
+		waitForElm('.spz-solution-accordion__nav .spz-solution-accordion__item').then(() => {
 		// Start of Accordion Logic
 		const DURATION = 7000; // 7 seconds
 		const accordionNav = document.querySelector('.spz-solution-accordion__nav');
@@ -230,85 +236,86 @@
 		let currentSlideProgress = 0;
 		let autoSlide = false;
 
-		// Initialize Accordion active item 
-		accordionNav.children[currentActive].classList.add('active');
-		accordionContents.children[currentActive].classList.add('active');
+			// Initialize Accordion active item 
+			accordionNav.children[currentActive].classList.add('active');
+			accordionContents.children[currentActive].classList.add('active');
 
-		// Add event listeners to accordion navigation items for hover functionality
-		Array.from(accordionNav.children).forEach((item, index) => {
-			item.addEventListener('click', (e) => {
-				e.preventDefault();
-				if (currentActive !== index) {
-					changeAccordionActiveItem(index);
-				}
+			// Add event listeners to accordion navigation items for hover functionality
+			Array.from(accordionNav.children).forEach((item, index) => {
+				item.addEventListener('click', (e) => {
+					e.preventDefault();
+					if (currentActive !== index) {
+						changeAccordionActiveItem(index);
+					}
+				});
+				// item.addEventListener('mouseenter', (e) => {
+				//     e.preventDefault();
+				//     if(currentActive === index){
+				//         autoSlide = false;
+				//     }
+				// });
+				// item.addEventListener('mouseleave', (e) => {
+				//     e.preventDefault();
+				//     if(currentActive === index){
+				//         autoSlide = true;
+				//     }
+				// });
 			});
-			// item.addEventListener('mouseenter', (e) => {
-			//     e.preventDefault();
-			//     if(currentActive === index){
-			//         autoSlide = false;
-			//     }
-			// });
-			// item.addEventListener('mouseleave', (e) => {
-			//     e.preventDefault();
-			//     if(currentActive === index){
-			//         autoSlide = true;
-			//     }
-			// });
-		});
 
-		// Add event listeners to accordion content items for hover functionality
-		Array.from(accordionContents.children).forEach((item, index) => {
-			item.querySelector('.spz-solution-accordion__mobile').addEventListener('click', (e) => {
-				e.preventDefault();
-				if (currentActive !== index) {
-					changeAccordionActiveItem(index);
-				}
+			// Add event listeners to accordion content items for hover functionality
+			Array.from(accordionContents.children).forEach((item, index) => {
+				item.querySelector('.spz-solution-accordion__mobile').addEventListener('click', (e) => {
+					e.preventDefault();
+					if (currentActive !== index) {
+						changeAccordionActiveItem(index);
+					}
+				});
+				// item.addEventListener('mouseenter', (e) => {
+				//     e.preventDefault();
+				//     if(currentActive === index){
+				//         autoSlide = false;
+				//     }
+				// });
+				// item.addEventListener('mouseleave', (e) => {
+				//     e.preventDefault();
+				//     if(currentActive === index){
+				//         autoSlide = true;
+				//     }
+				// });
 			});
-			// item.addEventListener('mouseenter', (e) => {
-			//     e.preventDefault();
-			//     if(currentActive === index){
-			//         autoSlide = false;
-			//     }
-			// });
-			// item.addEventListener('mouseleave', (e) => {
-			//     e.preventDefault();
-			//     if(currentActive === index){
-			//         autoSlide = true;
-			//     }
-			// });
+
+			// Running Interval
+			const autoSlideInterval = setInterval(function () {
+				if (!autoSlide) return;
+				if (currentSlideProgress >= 100) {
+					currentActive = (currentActive + 1 >= NoOfAccordion) ? 0 : (currentActive + 1);
+					changeAccordionActiveItem(currentActive);
+				} else {
+					currentSlideProgress = currentSlideProgress + (100 * 200 / DURATION);
+					progressBarWidthAnimation(currentActive, currentSlideProgress);
+				}
+			}, 200);
+
+			// Methods
+			function progressBarWidthAnimation(active, width) {
+				accordionNav.children[active].querySelector('.progress_bar').style.width = `${width}%`;
+				accordionContents.children[active].querySelector('.progress_bar').style.width = `${width}%`;
+			}
+			function changeAccordionActiveItem(current) {
+				currentSlideProgress = 0;
+				currentActive = current;
+				// Remove all active classes
+				for (let i = 0; i < NoOfAccordion; i++) {
+					accordionNav.children[i].classList.remove("active");
+					accordionContents.children[i].classList.remove("active");
+					progressBarWidthAnimation(i, currentSlideProgress);
+				}
+				// Add active class to current item
+				accordionNav.children[current].classList.add('active');
+				accordionContents.children[current].classList.add("active");
+
+			}
 		});
-
-		// Running Interval
-		const autoSlideInterval = setInterval(function () {
-			if (!autoSlide) return;
-			if (currentSlideProgress >= 100) {
-				currentActive = (currentActive + 1 >= NoOfAccordion) ? 0 : (currentActive + 1);
-				changeAccordionActiveItem(currentActive);
-			} else {
-				currentSlideProgress = currentSlideProgress + (100 * 200 / DURATION);
-				progressBarWidthAnimation(currentActive, currentSlideProgress);
-			}
-		}, 200);
-
-		// Methods
-		function progressBarWidthAnimation(active, width) {
-			accordionNav.children[active].querySelector('.progress_bar').style.width = `${width}%`;
-			accordionContents.children[active].querySelector('.progress_bar').style.width = `${width}%`;
-		}
-		function changeAccordionActiveItem(current) {
-			currentSlideProgress = 0;
-			currentActive = current;
-			// Remove all active classes
-			for (let i = 0; i < NoOfAccordion; i++) {
-				accordionNav.children[i].classList.remove("active");
-				accordionContents.children[i].classList.remove("active");
-				progressBarWidthAnimation(i, currentSlideProgress);
-			}
-			// Add active class to current item
-			accordionNav.children[current].classList.add('active');
-			accordionContents.children[current].classList.add("active");
-
-		}
 	}
 
 	function initTest2008() {
@@ -387,7 +394,7 @@
 	});
 
 	function urlCheck(url) {
-		if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+		if (urls.indexOf(window.location.href.split('?')[0]) >= 0 && window.location.pathname.indexOf("/interactive") == -1) {
 			initTest2008();
 		} else {
 			if (document.querySelector('body').classList.contains('spz-2008-v2')) {

@@ -36,7 +36,7 @@
 	});
 
 	function urlCheck(url) {
-		if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+		if (urls.indexOf(window.location.href.split('?')[0]) >= 0 && window.location.pathname.indexOf("/interactive") == -1) {
 			initTC();
 		} else {
 			if (document.querySelector('body').classList.contains('SPZ_2008_tc')) {
