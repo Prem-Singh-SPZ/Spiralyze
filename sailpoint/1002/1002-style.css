@@ -13,15 +13,18 @@
 
 body.spz-1002 {
   background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/desktop-bg-1440.webp") no-repeat top left/cover;
+  background-attachment: fixed;
 }
 @media (max-width: 1023.98px) {
   body.spz-1002 {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/tablet-bg-768.webp") no-repeat top left/cover;
+    background-attachment: fixed;
   }
 }
 @media screen and (max-width: 767.98px) {
   body.spz-1002 {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/mobile-bg-360.webp") no-repeat top left/cover;
+    background-attachment: fixed;
   }
 }
 body.spz-1002 #__next {
@@ -49,23 +52,28 @@ body.spz-1002 #drift-frame-controller {
 .spz-1002 .spz-form-wrap {
   position: relative;
   overflow: hidden;
-  margin: 105px auto 88px auto;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  border-radius: 24px;
 }
-@media (max-height: 850px) {
+@media (min-width: 768px) {
   .spz-1002 .spz-form-wrap {
-    margin: 60px auto 100px;
-  }
-}
-@media (max-height: 700px) {
-  .spz-1002 .spz-form-wrap {
-    margin: 40px auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    margin: 30px auto 70px;
   }
 }
 @media (max-width: 1023.98px) {
   .spz-1002 .spz-form-wrap {
-    margin: 8.5rem auto 100px;
+    min-height: calc(100vh - 226px);
+    margin: 62px auto 160px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1002 .spz-form-wrap {
+    min-height: calc(100vh - 245px);
+    margin: 62px auto 0;
   }
 }
 .spz-1002 .spz-form-wrap .spz-form-section {
@@ -74,8 +82,7 @@ body.spz-1002 #drift-frame-controller {
   background: #fff;
   padding: 40px;
   border-radius: var(--container-border-radius);
-  -webkit-box-shadow: var(--container-box-shadow);
-          box-shadow: var(--container-box-shadow);
+  box-shadow: var(--container-box-shadow);
   z-index: 1000000;
 }
 @media (max-width: 1023.98px) {
@@ -114,7 +121,33 @@ body.spz-1002 #drift-frame-controller {
   padding: 17px 73px 11px 80px;
   margin-top: 0;
 }
+.spz-1002 footer::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 0;
+}
 @media (max-width: 1023.98px) {
+  .spz-1002 footer::after {
+    height: 76px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1002 footer::after {
+    height: 200px;
+  }
+}
+@media (max-height: 850px) and (max-width: 1024px) {
+  .spz-1002 footer {
+    position: relative;
+  }
+}
+@media (max-width: 1366px) {
   .spz-1002 footer {
     padding: 20px 20px 15px;
   }
@@ -122,25 +155,37 @@ body.spz-1002 #drift-frame-controller {
 @media (max-width: 767.98px) {
   .spz-1002 footer {
     padding: 25px 11px 19px;
+    position: relative;
   }
 }
 
 .spz-1002 footer .container.flex {
+  position: relative;
   border: none;
   width: 100%;
+  max-width: initial;
   padding: 0;
+  z-index: 1;
+}
+.spz-1002 footer .container.flex > p {
+  color: #fff;
+}
+@media (min-width: 767.98px) and (max-width: 1200px) {
+  .spz-1002 footer .container.flex > p {
+    max-width: 220px;
+  }
 }
 @media (max-width: 767.98px) {
   .spz-1002 footer .container.flex > p {
     margin: 0 20px;
   }
   .spz-1002 footer .container.flex > .text-left {
-    padding: 8px 6px 0;
+    padding: 7px 8px 0;
   }
 }
 .spz-1002 footer .container.flex .flex-wrap a {
-  margin-left: 28px;
-  color: #dae1e9;
+  margin-left: 28.25px;
+  color: #fff;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -156,7 +201,6 @@ body.spz-1002 #drift-frame-controller {
   text-decoration-thickness: 0.5px;
   text-underline-offset: auto;
   text-underline-position: from-font;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 @media (max-width: 1023.98px) {
@@ -178,8 +222,8 @@ body.spz-1002 #drift-frame-controller {
 
 @media (max-width: 767.98px) {
   .spz-1002 .spz-form-wrap {
-    margin: 20px auto 175px;
-    padding-bottom: 27.5px;
+    padding-bottom: 0;
+    margin-top: 20px;
   }
   .spz-1002 .spz-form-wrap .spz-form-section {
     margin: 0 auto;
@@ -192,23 +236,11 @@ body.spz-1002 #drift-frame-controller {
     margin-bottom: 16px;
   }
 }
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1184px);
-    transform: translateX(-1184px);
-  }
-}
 @keyframes scroll {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-1184px);
     transform: translateX(-1184px);
   }
 }
@@ -226,14 +258,9 @@ select:-webkit-autofill:active {
 }
 
 .spz-1002 .spz-form-section form.mktoForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100% !important;
 }
 
@@ -287,7 +314,6 @@ select:-webkit-autofill:active {
   width: auto !important;
   height: auto;
   pointer-events: none;
-  -webkit-transition: color 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out;
   z-index: 9;
 }
@@ -337,20 +363,15 @@ select:-webkit-autofill:active {
 
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap.error label.mktoLabel,
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix {
-  color: #e6241e !important;
+  color: #e6241e;
 }
 
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoField:not([type=checkbox]) {
   width: 100% !important;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 13px 15px;
   margin: 0 !important;
   border: 1px solid #dae1e9;
@@ -360,7 +381,6 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #415364 !important;
   font-size: 14px;
@@ -387,8 +407,8 @@ select:-webkit-autofill:active {
 }
 
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap.error .mktoField:not([type=checkbox]) {
-  border-color: #e6241e !important;
-  outline: none !important;
+  border-color: #e6241e;
+  outline: none;
 }
 
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
@@ -423,8 +443,7 @@ select:-webkit-autofill:active {
   background-repeat: no-repeat;
 }
 
-.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper,
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
+.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper {
   margin: 0 !important;
 }
 
@@ -446,8 +465,7 @@ select:-webkit-autofill:active {
   display: none;
 }
 
-.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap,
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox] {
+.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
   display: none !important;
 }
 
@@ -457,79 +475,12 @@ select:-webkit-autofill:active {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6;
-  padding-left: 28px;
+  line-height: 1.75;
+  padding-left: 8px;
   padding-right: 0;
   cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: auto;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  top: 2px;
-  left: 0;
-  border-radius: 2px;
-  border: 1.5px solid #415364;
-  z-index: 2;
-}
-@media (max-width: 1023.98px) {
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
-    top: 1px;
-  }
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:hover::before {
-  border-color: #0071ce;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input:checked + label:before {
-  border: none;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes.png");
-  background-size: 16px;
-  background-repeat: no-repeat;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input:checked + label:hover:before {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes-hover.png");
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::after {
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 32px;
-  top: -5px;
-  left: -8px;
-  border-radius: 50px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:active::after {
-  background: #415364;
-  opacity: 0.1;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:focus::after {
-  background: #415364;
-  opacity: 0.3;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input:checked + label:active::after {
-  background: #0071ce;
-  opacity: 0.1;
-}
-
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input:checked + label:focus::after {
-  background: #0071ce;
-  opacity: 0.3;
 }
 
 .spz-1002 .spz-form-section form.mktoForm .mktoButtonRow {
@@ -540,17 +491,10 @@ select:-webkit-autofill:active {
 .spz-1002 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton {
   width: 100%;
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   border: none;
   background: #0071ce;
@@ -559,7 +503,6 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 600;
   line-height: 1.6;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -586,7 +529,6 @@ select:-webkit-autofill:active {
   font-weight: 400;
   line-height: 1.6;
   text-decoration-line: underline;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 
@@ -634,20 +576,8 @@ select:-webkit-autofill:active {
   .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
     margin-top: 4px !important;
   }
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:before {
-    width: 16px;
-    height: 16px;
-    top: 4px;
-    left: -0.5px;
-  }
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList input:checked + label:before {
-    background-size: 16px;
-  }
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:after {
-    height: 16px;
-    width: 16px;
-    top: 4px;
-    left: -0.5px;
+  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label {
+    line-height: 1.6;
   }
   .spz-1002 .spz-form-section form.mktoForm .mktoButtonRow {
     margin-top: 3.5px;
@@ -655,7 +585,7 @@ select:-webkit-autofill:active {
   .spz-1002 .spz-form-section .the-form .mktoCaptchaDisclaimer {
     max-width: unset;
     padding: 0;
-    margin: 7px auto 2px;
+    margin: 2px auto 2px;
   }
   .spz-1002 .spz-form-section .the-form .mktoCaptchaDisclaimer a {
     display: inline-block;

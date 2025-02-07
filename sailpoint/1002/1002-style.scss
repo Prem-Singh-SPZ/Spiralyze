@@ -14,15 +14,18 @@
 body.spz-1002 {
   background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/desktop-bg-1440.webp")
     no-repeat top left / cover;
+  background-attachment: fixed;
 
   @media (max-width: 1023.98px) {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/tablet-bg-768.webp")
       no-repeat top left / cover;
+    background-attachment: fixed;
   }
 
   @media screen and (max-width: 767.98px) {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1002/mobile-bg-360.webp")
       no-repeat top left / cover;
+    background-attachment: fixed;
   }
 
   #__next {
@@ -49,20 +52,41 @@ body.spz-1002 {
 .spz-1002 .spz-form-wrap {
   position: relative;
   overflow: hidden;
-  margin: 105px auto 88px auto;
+  // margin: 105px auto 88px auto;
   transition-duration: 0.5s;
+  border-radius: 24px;
 
-  @media (max-height: 850px) {
-    margin: 60px auto 100px;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: calc(100vh - 40px);
+    min-height: calc(100vh - 100px);
+    margin: 30px auto 70px;
   }
 
-  @media (max-height: 700px) {
-    margin: 40px auto 80px;
-  }
+  // @media (max-width: 1023.98px) {
+  //   min-height: 900px;
+  // }
 
   @media (max-width: 1023.98px) {
-    margin: 8.5rem auto 100px;
+    min-height: calc(100vh - 226px);
+    margin: 62px auto 160px;
   }
+
+  @media (max-width: 767.98px) {
+    // height: calc(100vh - 245px);
+    min-height: calc(100vh - 245px);
+    margin: 62px auto 0;
+  }
+
+  // @media (max-height: 850px) {
+  //   margin: 60px auto 100px;
+  // }
+
+  // @media (max-height: 700px) {
+  //   margin: 40px auto 80px;
+  // }
 
   .spz-form-section {
     max-width: var(--container-width);
@@ -109,19 +133,62 @@ body.spz-1002 {
   padding: 17px 73px 11px 80px;
   margin-top: 0;
 
-  @media (max-width: 1023.98px) {
+  &::after {
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 0;
+
+    @media (max-width: 1023.98px) {
+      height: 76px;
+    }
+
+    @media (max-width: 767.98px) {
+      height: 200px;
+    }
+  }
+
+  // @media (max-height: 700px) {
+  //   position: relative;
+  // }
+
+  @media (max-height: 850px) and (max-width: 1024px) {
+    position: relative;
+  }
+
+  @media (max-width: 1366px) {
     padding: 20px 20px 15px;
   }
 
   @media (max-width: 767.98px) {
     padding: 25px 11px 19px;
+    position: relative;
   }
 }
 .spz-1002 footer .container.flex {
+  position: relative;
   border: none;
   width: 100%;
-  // max-width: 1288px;
+  max-width: initial;
   padding: 0;
+  z-index: 1;
+
+  > p {
+    color: #fff;
+
+    @media (min-width: 767.98px) and (max-width: 1200px) {
+      max-width: 220px;
+    }
+  }
 
   @media (max-width: 767.98px) {
     > p {
@@ -129,14 +196,14 @@ body.spz-1002 {
     }
 
     > .text-left {
-      padding: 8px 6px 0;
+      padding: 7px 8px 0;
     }
   }
 
   .flex-wrap {
     a {
-      margin-left: 28px;
-      color: #dae1e9;
+      margin-left: 28.25px;
+      color: #fff;
       text-align: center;
       font-size: 14px;
       font-style: normal;
@@ -154,9 +221,8 @@ body.spz-1002 {
       transition: all 0.1s ease-in-out;
 
       @media (max-width: 1023.98px) {
-        margin-left: 12px;        
+        margin-left: 12px;
       }
-
 
       &:hover {
         text-decoration: none;
@@ -211,8 +277,9 @@ body.spz-1002 {
 // }
 @media (max-width: 767.98px) {
   .spz-1002 .spz-form-wrap {
-    margin: 20px auto 175px;
-    padding-bottom: 27.5px;
+    // margin: 20px auto 175px;
+    padding-bottom: 0;
+    margin-top: 20px;
 
     .spz-form-section {
       margin: 0 auto;
@@ -419,7 +486,7 @@ select:-webkit-autofill:active {
   .mktoFieldWrap.error
   label.mktoLabel
   .mktoAsterix {
-  color: #e6241e !important;
+  color: #e6241e;
 }
 .spz-1002
   .spz-form-section
@@ -478,9 +545,9 @@ select:-webkit-autofill:active {
   form.mktoForm
   .mktoFieldWrap.error
   .mktoField:not([type="checkbox"]) {
-  border-color: #e6241e !important;
+  border-color: #e6241e;
   // box-shadow: none !important;
-  outline: none !important;
+  outline: none;
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
   position: relative;
@@ -521,8 +588,8 @@ select:-webkit-autofill:active {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper,
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
+// .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList,
+.spz-1002 .spz-form-section form.mktoForm .mktoFieldWrap .select-wrapper {
   margin: 0 !important;
 }
 .spz-1002
@@ -555,110 +622,115 @@ select:-webkit-autofill:active {
   form.mktoForm
   .mktoFieldWrap
   .mktoError
-  .mktoErrorArrowWrap,
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input[type="checkbox"] {
+  .mktoErrorArrowWrap {
   display: none !important;
 }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   input[type="checkbox"] {
+//   opacity: 0 !important;
+//   position: absolute;
+//   z-index: -1;
+//   width: 0;
+// }
 .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label {
   position: relative;
   color: #415364;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6;
-  padding-left: 28px;
+  line-height: 1.75;
+  padding-left: 8px;
   padding-right: 0;
   cursor: pointer;
   display: inline-flex;
   width: auto;
 }
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  top: 2px;
-  left: 0;
-  border-radius: 2px;
-  border: 1.5px solid #415364;
-  z-index: 2;
+// .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::before {
+//   position: absolute;
+//   content: "";
+//   width: 16px;
+//   height: 16px;
+//   top: 2px;
+//   left: 0;
+//   border-radius: 2px;
+//   border: 1.5px solid #415364;
+//   z-index: 2;
 
-  @media (max-width: 1023.98px) {
-    top: 1px;
-  }
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  label:hover::before {
-  border-color: #0071ce;
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input:checked
-  + label:before {
-  border: none;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes.png");
-  background-size: 16px;
-  background-repeat: no-repeat;
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input:checked
-  + label:hover:before {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes-hover.png");
-}
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::after {
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 32px;
-  top: -5px;
-  left: -8px;
-  border-radius: 50px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  label:active::after {
-  background: #415364;
-  opacity: 0.1;
-}
-.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:focus::after {
-  background: #415364;
-  opacity: 0.3;
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input:checked
-  + label:active::after {
-  background: #0071ce;
-  opacity: 0.1;
-}
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input:checked
-  + label:focus::after {
-  background: #0071ce;
-  opacity: 0.3;
-}
+//   @media (max-width: 1023.98px) {
+//     top: 1px;
+//   }
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   label:hover::before {
+//   border-color: #0071ce;
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:before {
+//   border: none;
+//   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes.png");
+//   background-size: 16px;
+//   background-repeat: no-repeat;
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:hover:before {
+//   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/checkboxes-hover.png");
+// }
+// .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label::after {
+//   position: absolute;
+//   content: "";
+//   width: 32px;
+//   height: 32px;
+//   top: -5px;
+//   left: -8px;
+//   border-radius: 50px;
+//   pointer-events: none;
+//   z-index: 1;
+//   opacity: 0;
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   label:active::after {
+//   background: #415364;
+//   opacity: 0.1;
+// }
+// .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:focus::after {
+//   background: #415364;
+//   opacity: 0.3;
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:active::after {
+//   background: #0071ce;
+//   opacity: 0.1;
+// }
+// .spz-1002
+//   .spz-form-section
+//   form.mktoForm
+//   .mktoCheckboxList
+//   input:checked
+//   + label:focus::after {
+//   background: #0071ce;
+//   opacity: 0.3;
+// }
 .spz-1002 .spz-form-section form.mktoForm .mktoButtonRow {
   width: 100%;
   margin-top: 7.5px;
@@ -753,33 +825,36 @@ select:-webkit-autofill:active {
   .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
     margin-top: 4px !important;
   }
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:before {
-    width: 16px;
-    height: 16px;
-    top: 4px;
-    left: -0.5px;
+  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label {
+    line-height: 1.6;
   }
-  .spz-1002
-    .spz-form-section
-    form.mktoForm
-    .mktoCheckboxList
-    input:checked
-    + label:before {
-    background-size: 16px;
-  }
-  .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:after {
-    height: 16px;
-    width: 16px;
-    top: 4px;
-    left: -0.5px;
-  }
+  // .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:before {
+  //   width: 16px;
+  //   height: 16px;
+  //   top: 4px;
+  //   left: -0.5px;
+  // }
+  // .spz-1002
+  //   .spz-form-section
+  //   form.mktoForm
+  //   .mktoCheckboxList
+  //   input:checked
+  //   + label:before {
+  //   background-size: 16px;
+  // }
+  // .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList label:after {
+  //   height: 16px;
+  //   width: 16px;
+  //   top: 4px;
+  //   left: -0.5px;
+  // }
   .spz-1002 .spz-form-section form.mktoForm .mktoButtonRow {
     margin-top: 3.5px;
   }
   .spz-1002 .spz-form-section .the-form .mktoCaptchaDisclaimer {
     max-width: unset;
     padding: 0;
-    margin: 7px auto 2px;
+    margin: 2px auto 2px;
   }
   .spz-1002 .spz-form-section .the-form .mktoCaptchaDisclaimer a {
     display: inline-block;
