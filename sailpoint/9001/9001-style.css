@@ -730,6 +730,10 @@ select:-webkit-autofill:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100% !important;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
+}
+.spz_9001 .page-transition .inner-row__inner form.mktoForm * {
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow[class*=row_] {
@@ -758,6 +762,11 @@ select:-webkit-autofill:active {
   font-weight: 400;
   line-height: 1.6;
   cursor: pointer;
+}
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoOffset,
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoClear,
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoGutter {
+  display: none;
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-11,
@@ -917,8 +926,10 @@ select:-webkit-autofill:active {
   background-repeat: no-repeat;
 }
 
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .select-wrapper {
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .select-wrapper,
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
   margin: 0 !important;
+  padding: 0;
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .select-wrapper::after {
@@ -995,7 +1006,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow .mktoButton {
-  width: 100%;
+  width: 100% !important;
   height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1036,9 +1047,13 @@ select:-webkit-autofill:active {
   line-height: 1.6;
   max-width: 100%;
 }
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCaptchaDisclaimer a,
+.spz_9001 .page-transition .inner-row__inner .disclaimer a {
+  padding: 0;
+}
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoCaptchaDisclaimer {
-  margin-top: 16px;
+  margin-top: 28px;
 }
 
 .spz_9001 .page-transition .inner-row__inner .disclaimer {
