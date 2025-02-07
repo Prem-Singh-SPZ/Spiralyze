@@ -1226,6 +1226,12 @@ body.safari {
       flex-direction: column;
     }
 
+    @media (max-width: 767.98px) {
+      max-width: 328px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &:hover {
       border-color: #276fff;
     }
@@ -1482,8 +1488,9 @@ body.safari {
 
     @media (max-width: 767.98px) {
       grid-template-columns: repeat(1, minmax(100%, 1fr));
-      margin: 20px 0;
+      margin: 20px auto;
       gap: 20px;
+      max-width: 328px;
     }
 
     .tt-item {
@@ -1651,8 +1658,11 @@ body.safari {
   }
 
   .solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
 
     @media (max-width: 1280px) {
@@ -1666,6 +1676,7 @@ body.safari {
     .sol {
       border-radius: 5px;
       min-height: 387px;
+      flex: 0 0 302px;
 
       @media (max-width: 1280px) {
         min-height: 363px;

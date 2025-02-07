@@ -1187,6 +1187,13 @@ body.safari .hero-section .hero-container .hero-content .list-grp-wrapper {
             flex-direction: column;
   }
 }
+@media (max-width: 767.98px) {
+  .testimonial-sec .testimonial-content {
+    max-width: 328px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .testimonial-sec .testimonial-content:hover {
   border-color: #276fff;
 }
@@ -1468,8 +1475,9 @@ body.safari .hero-section .hero-container .hero-content .list-grp-wrapper {
   .testimonial-sec .testimonial-grid {
     -ms-grid-columns: minmax(100%, 1fr);
     grid-template-columns: repeat(1, minmax(100%, 1fr));
-    margin: 20px 0;
+    margin: 20px auto;
     gap: 20px;
+    max-width: 328px;
   }
 }
 .testimonial-sec .testimonial-grid .tt-item {
@@ -1637,9 +1645,14 @@ body.safari .testimonial-sec .testimonial-grid .tt-item .tt-info .testimonial-de
   }
 }
 .solutions-section .solutions-grid {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 24px;
 }
 @media (max-width: 1280px) {
@@ -1655,6 +1668,9 @@ body.safari .testimonial-sec .testimonial-grid .tt-item .tt-info .testimonial-de
 .solutions-section .solutions-grid .sol {
   border-radius: 5px;
   min-height: 387px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 302px;
+          flex: 0 0 302px;
 }
 @media (max-width: 1280px) {
   .solutions-section .solutions-grid .sol {
@@ -2364,7 +2380,8 @@ body.safari .testimonial-sec .testimonial-grid .tt-item .tt-info .testimonial-de
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-.modernize-grc .footer .container .social a svg rect, .modernize-grc .footer .container .social a svg path {
+.modernize-grc .footer .container .social a svg rect,
+.modernize-grc .footer .container .social a svg path {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
@@ -2375,7 +2392,8 @@ body.safari .testimonial-sec .testimonial-grid .tt-item .tt-info .testimonial-de
 .modernize-grc .footer .container .social a:hover svg .yt-mid {
   fill: #276fff;
 }
-.modernize-grc .footer .container .social a img, .modernize-grc .footer .container .social a svg {
+.modernize-grc .footer .container .social a img,
+.modernize-grc .footer .container .social a svg {
   width: 28px;
   height: auto;
 }
