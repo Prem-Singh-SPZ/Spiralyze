@@ -23,15 +23,18 @@ style.appendChild(document.createTextNode(css));
             formHeading: "Get live demo",
           };
 
-          document.querySelector('#__next footer').insertAdjacentHTML('beforebegin', `<div class="spz-form-wrap">
-              <div class="spz-form-section">
-                    ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                    <div class="the-form"></div>
-                  </div>
-            </div>`);
 
           let formLoaded = setInterval(() => {
-            if (document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
+            if (document.querySelectorAll('.spz-form-wrap').length == 0) {
+              document.querySelector('#__next footer').insertAdjacentHTML('beforebegin', `<div class="spz-form-wrap">
+                  <div class="spz-form-section">
+                        ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
+                        <div class="the-form"></div>
+                      </div>
+                </div>`);
+            }
+
+            if (document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector(".spz-form-wrap .the-form")) {
               clearInterval(formLoaded)
               document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
               document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
@@ -183,12 +186,12 @@ style.appendChild(document.createTextNode(css));
                     }
                   }
                 });
-              }, 100);
+              }, 500);
 
 
               setTimeout(() => {
                 clearInterval(timeBuffer);
-              }, 1000);
+              }, 2000);
             }
 
             document.querySelector('select#Country').addEventListener('change', () => {

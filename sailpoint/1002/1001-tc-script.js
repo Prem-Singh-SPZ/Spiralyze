@@ -1415,12 +1415,12 @@ style.appendChild(document.createTextNode(css));
               }
             }
           });
-        }, 100);
+        }, 500);
 
 
         setTimeout(() => {
           clearInterval(timeBuffer);
-        }, 5000);
+        }, 2000);
 
 
         //inject current time and date in EST timezone into .intellimize2 hidden field
