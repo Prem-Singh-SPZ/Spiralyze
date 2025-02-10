@@ -18,6 +18,12 @@ body.spz_14001 {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp) no-repeat top left/cover;
   position: relative;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 767.98px) {
   body.spz_14001 {
@@ -42,15 +48,16 @@ body.spz_14001 .sandbox-app {
   z-index: 1;
 }
 body.spz_14001 .sandbox-app .sandbox-login-card {
-  height: 100%;
   margin: 24px 0;
-  padding: 0;
 }
-@media (min-width: 767.98px) and (max-height: 550px) {
+@media (min-width: 767.98px) and (min-height: 550px) {
   body.spz_14001 .sandbox-app .sandbox-login-card {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    height: -webkit-fill-available;
+  }
+}
+@media (max-width: 767.98px) and (min-height: 750px) {
+  body.spz_14001 .sandbox-app .sandbox-login-card {
+    height: -webkit-fill-available;
   }
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content {
@@ -62,6 +69,12 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content {
   padding: 35px 48px 40px;
   width: 100%;
   margin: 0;
+}
+@media (max-width: 767.98px) {
+  body.spz_14001 .sandbox-app .chargify-login-card#app_content {
+    padding: 24px 24px 34px;
+    width: calc(100% - 40px);
+  }
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main {
   padding: 0;
@@ -82,6 +95,13 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   font-weight: 500;
   line-height: 32px;
   margin-bottom: 39px;
+}
+@media (max-width: 767.98px) {
+  body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section .spz_form_title {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section {
   display: -webkit-box;
@@ -217,6 +237,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   line-height: 20px;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields.sandbox_checkbox__field label .maxio-checkbox__control {
+  min-width: 20px;
   width: 20px;
   height: 20px;
 }
@@ -264,7 +285,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   font-family: "Test Founders Grotesk";
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 100%;
   display: block;
   margin: auto;
