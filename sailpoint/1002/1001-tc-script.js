@@ -679,7 +679,7 @@ select:-webkit-autofill:active {
     margin: 0 !important;
 }
 
-.spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox] {
+.spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList input[type=checkbox], .spz_1002_tc .spz-form-section form.mktoForm .mktoCheckboxList ~ input[type=checkbox] {
   width: 16px;
   height: 16px;
   line-height: 1;
@@ -1394,6 +1394,35 @@ style.appendChild(document.createTextNode(css));
 
     window.addEventListener('click', function (e) {
       if (e.target.closest('#mktoForm_1018 .mktoButton')) {
+        const fields = document.querySelectorAll('.spz_1002_tc form.mktoForm .mktoField');
+        const timeBuffer = setInterval(() => {
+          fields.forEach(field => {
+            const fieldWrap = field.closest('.mktoFieldWrap');
+            if (fieldWrap) {
+              // Check for error
+              const errorElement = fieldWrap.querySelector('.mktoError');
+              if (errorElement && errorElement.style.display !== 'none') {
+                fieldWrap.classList.add('error');
+              } else {
+                fieldWrap.classList.remove('error');
+              }
+
+              // Check if the field is filled
+              if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                fieldWrap.classList.add('filled');
+              } else {
+                fieldWrap.classList.remove('filled');
+              }
+            }
+          });
+        }, 100);
+
+
+        setTimeout(() => {
+          clearInterval(timeBuffer);
+        }, 5000);
+
+
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

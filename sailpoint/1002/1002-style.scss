@@ -669,15 +669,14 @@ select:-webkit-autofill:active {
   .mktoErrorArrowWrap {
   display: none !important;
 }
-.spz-1002
-  .spz-form-section
-  form.mktoForm
-  .mktoCheckboxList
-  input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  line-height: 1;
-  min-width: 16px;
+.spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
+  input[type="checkbox"],
+  & ~ input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    min-width: 16px;
+  }
 }
 .spz-1002 .spz-form-section form.mktoForm .mktoCheckboxList {
   width: 100% !important;
