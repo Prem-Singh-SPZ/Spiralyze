@@ -117,7 +117,8 @@ body.spz-8001 #page-container .page-transition main .resource-form-row .row__inn
 body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap {
   min-height: auto;
 }
-body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoMobileShow .mktoForm, body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm * {
+body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoMobileShow .mktoForm,
+body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm * {
   padding: 0;
 }
 body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm {
@@ -141,6 +142,9 @@ body.spz-8001 #page-container .page-transition main .resource-form-row .row__inn
   body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow[class*=row_] {
     width: 100%;
   }
+}
+body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow.row_Country + .placeholder-row:not(.row_State) {
+  display: none;
 }
 body.spz-8001 #page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner .mkto-wrap .mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol {
   margin-bottom: 13px !important;

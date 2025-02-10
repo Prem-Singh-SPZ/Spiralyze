@@ -330,7 +330,7 @@ style.appendChild(document.createTextNode(css));
 
   function urlCheck(url) {
     let testURL = "";
-    if (window.location.pathname.indexOf("/demo") !== -1) {
+    if (window.location.pathname.indexOf("/demo") !== -1 && window.location.pathname.indexOf("/interactive") == -1) {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {

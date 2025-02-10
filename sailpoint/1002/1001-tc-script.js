@@ -1434,7 +1434,7 @@ style.appendChild(document.createTextNode(css));
 
   function urlCheck(url) {
     let testURL = "";
-    if (window.location.pathname === '/demo') {
+    if (window.location.pathname === '/demo' && window.location.pathname.indexOf("/interactive") == -1) {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {

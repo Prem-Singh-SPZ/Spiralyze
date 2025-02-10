@@ -32,7 +32,7 @@
     });
 
 
-    waitForElm('.resource-form-row .mktoForm#mktoForm_1016 .mktoCheckboxList').then(function (elm) {
+    waitForElm('.resource-form-row .mktoForm#mktoForm_1016 #LblCountry').then(function (elm) {
       // document.querySelector('.mktoForm#mktoForm_1016 .mktoCheckboxList').closest('.mktoFormRow').classList.add('row_mktoCheckboxList');
       // document.querySelector('.mktoForm#mktoForm_1016 .mktoPlaceholderGlobal_Opt_in__c').closest('.mktoFormRow').classList.add('row_mktoPlaceholderGlobal_Opt_in__c');
       document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';

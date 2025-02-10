@@ -143,7 +143,8 @@ body.spz-8001 {
                   .mkto-wrap {
                     min-height: auto;
 
-                    .mktoMobileShow .mktoForm, .mktoForm *{
+                    .mktoMobileShow .mktoForm,
+                    .mktoForm * {
                       padding: 0;
                     }
 
@@ -168,6 +169,10 @@ body.spz-8001 {
                           @media screen and (max-width: 767.98px) {
                             width: 100%;
                           }
+                        }
+
+                        &.row_Country + .placeholder-row:not(.row_State) {
+                          display: none;
                         }
 
                         .mktoFieldDescriptor.mktoFormCol {

@@ -380,7 +380,6 @@
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/data-access-security",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/password-management",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/access-risk-management",
-        "https://www.sailpoint.com/demo/interactive",
         "https://www.sailpoint.com/products/connectivity/application-onboarding",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas",
         "https://www.sailpoint.com/solutions/mitigate-cyber-risk",
