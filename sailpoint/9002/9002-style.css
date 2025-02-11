@@ -20,6 +20,11 @@ html.spz-no-scroll {
   padding: 32px 0 56px;
   overflow: hidden;
 }
+@media (min-width: 1599.98px) {
+  .spz_9002 .hero + .row {
+    padding: 64px 0 56px;
+  }
+}
 .spz_9002 .hero + .row::before {
   position: absolute;
   content: "";
@@ -31,6 +36,12 @@ html.spz-no-scroll {
   right: -161px;
   top: 86px;
 }
+@media (min-width: 1599.98px) {
+  .spz_9002 .hero + .row::before {
+    right: 0;
+    top: 0;
+  }
+}
 .spz_9002 .hero + .row::after {
   position: absolute;
   content: "";
@@ -41,6 +52,14 @@ html.spz-no-scroll {
   height: 136px;
   left: -320px;
   top: 528px;
+}
+@media (min-width: 1599.98px) {
+  .spz_9002 .hero + .row::after {
+    width: 682px;
+    height: 231px;
+    left: -273px;
+    top: 667px;
+  }
 }
 .spz_9002 .hero + .row > .row__inner {
   width: 100%;
@@ -57,6 +76,11 @@ html.spz-no-scroll {
   position: relative;
   gap: 0;
   z-index: 1;
+}
+@media (min-width: 1599.98px) {
+  .spz_9002 .hero + .row > .row__inner {
+    max-width: 1330px;
+  }
 }
 .spz_9002 .hero + .row > .row__inner .spz-logo {
   padding: 0 20px;
@@ -129,7 +153,13 @@ html.spz-no-scroll {
   width: 100%;
   max-width: 1330px;
   padding: 0 20px;
-  margin: 8px auto 84px;
+  margin: 8px auto 82px;
+}
+@media (min-width: 1599.98px) {
+  .spz_9002 .social-proof-logos {
+    max-width: 1288px;
+    margin: 8px auto 80px;
+  }
 }
 .spz_9002 .social-proof-logos .social-proof-heading {
   color: #415364;
@@ -233,13 +263,8 @@ html.spz-no-scroll {
 
 .spz_9002 footer {
   width: 100%;
-  padding: 15px 0;
+  padding: 16.5px 0;
   margin-top: 0;
-}
-@media (min-width: 1599.98px) {
-  .spz_9002 footer {
-    padding: 10px 0;
-  }
 }
 .spz_9002 footer .container.flex {
   border: none;
@@ -247,10 +272,8 @@ html.spz-no-scroll {
   max-width: 1330px;
   padding: 0 20px;
 }
-@media (min-width: 1599.98px) {
-  .spz_9002 footer .container.flex {
-    max-width: 1330px;
-  }
+.spz_9002 footer .container.flex .text-left .flex.flex-wrap a.block.w-fit {
+  margin-left: 17px;
 }
 
 @media (max-width: 1199.98px) {
@@ -873,6 +896,8 @@ select:-webkit-autofill:active {
 }
 .spz_9002 .spz-tab-content {
   padding: 40px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .spz_9002 .spz-tab-content:not(.active) {
   display: none;

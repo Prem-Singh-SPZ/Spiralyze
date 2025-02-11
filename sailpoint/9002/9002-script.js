@@ -241,6 +241,7 @@
       company_field.after(title_field);
       title_field.after(phone_field);
       num_emp_field.before(inquiry_field);
+      company_field.before(email_field);
       // button.after(disclaimer_field);
     }
 
