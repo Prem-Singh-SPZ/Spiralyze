@@ -22,7 +22,7 @@ html.spz-no-scroll {
 
   .hero + .row {
     position: relative;
-    padding: 64px 0 56px;
+    padding: 32px 0 56px;
     overflow: hidden;
 
     &::before {
@@ -33,8 +33,8 @@ html.spz-no-scroll {
       background-repeat: no-repeat;
       width: 672px;
       height: 480px;
-      top: 0;
-      right: 0;
+      right: -161px;
+      top: 86px;
     }
 
     &::after {
@@ -43,15 +43,15 @@ html.spz-no-scroll {
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/9001/frame_1171275822.webp");
       background-size: contain;
       background-repeat: no-repeat;
-      width: 687px;
-      height: 180px;
-      left: -277px;
-      bottom: 174px;
+      width: 528px;
+      height: 136px;
+      left: -320px;
+      top: 528px;
     }
 
     > .row__inner {
       width: 100%;
-      max-width: 1330px;
+      max-width: 1370px;
       padding: 0 20px;
       margin: 0 auto;
       display: flex;
@@ -63,7 +63,7 @@ html.spz-no-scroll {
 
       .spz-logo {
         padding: 0 20px;
-        margin-bottom: 56px;
+        margin-bottom: 57px;
 
         @media (max-width: 1199.98px) {
           padding: 0;
@@ -105,7 +105,7 @@ html.spz-no-scroll {
           font-style: normal;
           font-weight: 600;
           line-height: 1.2;
-          margin: 1px auto 23px;
+          margin: 0 auto 22px;
           text-align: center;
 
           @media (max-width: 767.98px) {
@@ -138,9 +138,9 @@ html.spz-no-scroll {
 
   .social-proof-logos {
     width: 100%;
-    max-width: 1288px;
+    max-width: 1330px;
     padding: 0 20px;
-    margin: 8px auto 64px;
+    margin: 8px auto 84px;
 
     .social-proof-heading {
       color: #415364;
@@ -238,7 +238,7 @@ html.spz-no-scroll {
   .container.flex {
     border: none;
     width: 100%;
-    max-width: 1288px;
+    max-width: 1330px;
     padding: 0 20px;
 
     @media (min-width: 1599.98px) {
@@ -845,7 +845,7 @@ select:-webkit-autofill:active {
     max-height: 16px;
     padding: 0;
     outline: none;
-    margin-top: 3px;
+    margin-top: 2px;
 
     @media screen and (max-width: 767.98px) {
       min-width: 20px;
@@ -857,32 +857,30 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_9002
-  .page-transition
-  .inner-row__inner
-  form.mktoForm
-  .mktoCheckboxList
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
+  margin-top: 10px !important;
   label {
-  position: relative;
-  color: #415364 !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.6;
-  padding-left: 12px;
-  padding-right: 0;
-  cursor: pointer;
-  display: inline-flex;
-  width: auto;
+    position: relative;
+    color: #415364 !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-left: 12px;
+    padding-right: 0;
+    cursor: pointer;
+    display: inline-flex;
+    width: auto;
 
-  @media screen and (max-width: 767.98px) {
-    padding-left: 8px;
+    @media screen and (max-width: 767.98px) {
+      padding-left: 8px;
+    }
   }
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 19px;
+  margin-top: 7px;
 }
 
 .spz_9002
@@ -928,7 +926,7 @@ select:-webkit-autofill:active {
   padding: 0;
   color: #415364;
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -943,13 +941,13 @@ select:-webkit-autofill:active {
   .inner-row__inner
   form.mktoForm
   .mktoCaptchaDisclaimer {
-  margin-top: 28px;
+  margin-top: 10.5px;
 }
 
 .spz_9002 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .spz_9002.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -1039,7 +1037,8 @@ select:-webkit-autofill:active {
     .spz-tab-buttons {
       display: flex;
       align-items: center;
-      margin: 0 32px;
+      padding: 0 32px;
+      border-bottom: 1px solid #dae1e9;
 
       .spz-tab-button {
         color: #415364;
@@ -1048,11 +1047,11 @@ select:-webkit-autofill:active {
         font-style: normal;
         font-weight: 500;
         line-height: 160%;
-        border-bottom: 1px solid #dae1e9;
         flex: 0 0 33.33%;
         opacity: 0.8;
         height: 57px;
         transition: all 0.3s ease-in-out;
+        border-bottom: 4px solid transparent;
 
         &.active {
           color: #0071ce;
@@ -1114,10 +1113,11 @@ select:-webkit-autofill:active {
             font-size: 21px;
             font-weight: 600;
             line-height: 140%;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
 
             &.sp-mt-24 {
               margin-top: 24px;
+              margin-bottom: 16px;
 
               @media screen and (max-width: 767.98px) {
                 margin-top: 16px;
@@ -1159,7 +1159,7 @@ select:-webkit-autofill:active {
         .sp-email {
           margin-top: 24px;
           .box-title {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
           }
 
           .sp-email-list {
@@ -1205,7 +1205,7 @@ select:-webkit-autofill:active {
       }
 
       .sp-hq-info {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
 
         .link {
           text-underline-offset: 1px;
@@ -1268,7 +1268,7 @@ select:-webkit-autofill:active {
             font-style: normal;
             font-weight: 600;
             line-height: 120%;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
 
             @media (max-width: 1199.98px) {
               margin-bottom: 23px;
@@ -1284,7 +1284,7 @@ select:-webkit-autofill:active {
             font-size: 21px;
             font-weight: 600;
             line-height: 140%;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
           }
 
           .sp-address-container {
@@ -1293,7 +1293,7 @@ select:-webkit-autofill:active {
             align-items: end;
 
             p {
-              margin-bottom: 12px;
+              margin-bottom: 0;
               color: #415364;
               font-size: 16px;
               font-weight: 400;
@@ -1304,6 +1304,7 @@ select:-webkit-autofill:active {
               }
 
               &.phone-num {
+                margin-bottom: 5px;
                 font-size: 14px;
                 font-style: italic;
               }
@@ -1326,7 +1327,8 @@ select:-webkit-autofill:active {
         }
       }
 
-      .int-locations, .int-sales-locations {
+      .int-locations,
+      .int-sales-locations {
         > .row {
           padding: 0;
           margin: 0;
@@ -1351,10 +1353,108 @@ select:-webkit-autofill:active {
                   border: 0;
                   padding: 24px 0;
                   margin: 0;
+
+                  .group__heading {
+                    color: #415364;
+                    font-size: 21px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    position: relative;
+                    font-family: $poppins;
+
+                    span:not(.transition) {
+                      color: #415364;
+                      font-size: 21px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 140%;
+                      font-family: $poppins;
+                    }
+
+                    .transition {
+                      position: absolute;
+                      top: 5px;
+                      right: 4px;
+                    }
+                  }
+
+                  .group__content {
+                    // margin-top: 20px;
+                    @media (max-width: 767.98px) {
+                      padding-right: 0;
+                    }
+
+                    > h6,
+                    > h5 {
+                      color: #415364;
+                      font-size: 18px;
+                      font-weight: 600;
+                      line-height: 160%;
+                      margin-bottom: 8px;
+                      margin-top: 24px;
+                      font-family: $poppins;
+                    }
+
+                    > p {
+                      color: #415364;
+                      font-size: 18px;
+                      font-weight: 400;
+                      line-height: 160%;
+                      margin-bottom: 12px;
+                      font-family: $poppins;
+
+                      br {
+                        margin: 0;
+                      }
+
+                      &:empty {
+                        margin: 0;
+                      }
+
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
+                    }
+
+                    .link {
+                      color: #0071ce;
+                      text-underline-offset: 1px;
+                      text-decoration-skip-ink: none;
+                      white-space: nowrap;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 160%;
+
+                      &:hover {
+                        text-decoration: none;
+                        font-weight: 600;
+                      }
+
+                      &:active,
+                      &:focus-visible {
+                        text-decoration: none;
+                        font-weight: 600;
+                        border-radius: 4px;
+                        border: 1.5px solid #0071ce;
+                        background: rgba(0, 113, 206, 0.05);
+                        padding: 0 4px;
+                      }
+                    }
+                  }
                 }
               }
             }
           }
+        }
+      }
+
+      .int-sales-locations {
+        margin-top: 24px;
+
+        > .row .row__inner .bg-white .flex.flex-col {
+          gap: 15px;
         }
       }
     }
