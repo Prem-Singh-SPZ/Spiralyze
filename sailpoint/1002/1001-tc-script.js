@@ -1247,35 +1247,13 @@ style.appendChild(document.createTextNode(css));
                     }
                   }
                 });
-              }, 100);
+              }, 200);
 
 
               setTimeout(() => {
                 clearInterval(timeBuffer);
               }, 1000);
             }
-
-
-            // Function to add .field-error class on closest parent .field class if .error is exist on input
-            // function checkError(elem) {
-            //   let timeBuffer = setInterval(() => {
-            //     if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
-            //       elem.closest('.mktoFieldWrap').classList.add('error');
-            //     } else {
-            //       elem.closest('.mktoFieldWrap').classList.remove('error');
-            //     }
-            //     console.log(elem.type, elem.id);
-            //     if (elem && elem.value && (elem.value != '') && elem.type !== 'checkbox') {
-            //       elem.closest('.mktoFieldWrap').classList.add('filled');
-            //     } else {
-            //       elem.closest('.mktoFieldWrap').classList.remove('filled');
-            //     }
-            //   }, 100);
-
-            //   setTimeout(() => {
-            //     clearInterval(timeBuffer);
-            //   }, 1000);
-            // }
 
             document.querySelector('select#Country').addEventListener('change', () => {
               const stateRow = document.querySelector('.spz_1002_tc .spz-form-section form.mktoForm .mktoFormRow.field-10');
@@ -1289,24 +1267,6 @@ style.appendChild(document.createTextNode(css));
               document.querySelector('label#LblGlobal_Opt_out__c')
                 ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.", optOutRow.classList.remove('hidden'))
                 : optOutRow.classList.add('hidden');
-            });
-
-            MktoForms2.whenReady(function (form) {
-              form.onSuccess(function (values, followUpUrl) {
-                document.body.classList.add('form-submit');
-
-                //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
-                var checkboxInterval = setInterval(() => {
-                  var checkbox = document.querySelector('.spz_1002_tc form.mktoForm #mktoCheckbox_27268_0');
-                  if (checkbox) {
-                    checkbox.checked = true;
-                  }
-                }, 100);
-
-                setTimeout(() => {
-                  clearInterval(checkboxInterval);
-                }, 5000);
-              });
             });
 
           }

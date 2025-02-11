@@ -691,15 +691,18 @@ select:-webkit-autofill:active {
             });
         }
 
-        MktoForms2.whenReady(function (form) {
-            form.onSuccess(function (values, followUpUrl) {
-                document.body.classList.add('form-submit');
-            });
+        //check mktoforms2 library is loaded or not
+        if (typeof MktoForms2 !== 'undefined') {
+            MktoForms2.whenReady(function (form) {
+                form.onSuccess(function (values, followUpUrl) {
+                    document.body.classList.add('form-submit');
+                });
 
-            if (document.body.classList.contains('spz-form-loaded')) {
-                document.body.classList.remove('spz-form-loaded');
-            }
-        });
+                if (document.body.classList.contains('spz-form-loaded')) {
+                    document.body.classList.remove('spz-form-loaded');
+                }
+            });
+        }
     }
 
     function removeTest() {

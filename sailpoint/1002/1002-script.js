@@ -305,7 +305,7 @@ style.appendChild(document.createTextNode(css));
                 }
               }
             });
-          }, 100);
+          }, 200);
 
 
           setTimeout(() => {

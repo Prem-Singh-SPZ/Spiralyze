@@ -86,7 +86,9 @@
 							hiddenValue('spz_2009', 'SPZ_2009_variant1');
 							document.querySelector('main section.hero a.btn.btn--hotpink').addEventListener('click', (event) => {
 								event.preventDefault(); // Prevent the default link behavior
-								document.querySelector('a[href="/demo"]').click()
+								if(document.querySelector('a[href="/demo"]')){
+									document.querySelector('a[href="/demo"]').click()
+								}
 
 								setTimeout(function () {
 									document.querySelector('body').classList.remove('spz_2009');
