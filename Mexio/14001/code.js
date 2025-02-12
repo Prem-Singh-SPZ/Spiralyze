@@ -11,6 +11,7 @@ function createTest() {
 
       waitForElm('.spz_14001 form#signup-form input#signup_cro_primary').then(function (cro_primary) {
         modifyForm();
+        hiddenValue();
       });
     }
   });
@@ -89,49 +90,9 @@ function hiddenValue() {
     var cro_primary = document.querySelector('.spz_14001 form#signup-form input#signup_cro_primary');
     if (cro_primary) {
       clearInterval(spz_cro_Interval);
-      var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-      cro_primary.value = ExistingHiddenFieldValue;
+      cro_primary.value = "#14001_variant1";
     }
   });
-}
-
-function cookieValue(currentHiddenFieldName, currentHiddenFieldValue) {
-  var ExistingHiddenFieldName = getCookie('HiddenFieldName');
-  var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-
-  if (!ExistingHiddenFieldName) {
-    setCookie('HiddenFieldName', currentHiddenFieldName, 1);
-    setCookie('HiddenFieldValue', currentHiddenFieldValue, 1);
-  } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-    setCookie('HiddenFieldName', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-    setCookie('HiddenFieldValue', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
-  }
-}
-
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=maxio.com;";
-}
-
-function getCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
-}
-
-// Delete cookie
-function deleteCookie(name) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/; domain=maxio.com;';
 }
 
 // Generic Code
