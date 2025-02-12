@@ -49,7 +49,7 @@
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
             </svg></a></div></div></div>`);
 
-            waitForElm('.spz_7002_v2 .mkto-wrap.w-full').then(() => {
+            waitForElm('.spz_7002_v2 .mkto-wrap.w-full .mktoFormRow input').then(() => {
                 if (document.querySelectorAll('.spz-form-title').length == 0)
                     document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Talk to an expert</div>`);
                 document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
@@ -60,7 +60,7 @@
             }
         }
         else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
-            waitForElm('.spz_7002_v2 .mkto-wrap.w-full').then(() => {
+            waitForElm('.spz_7002_v2 .mkto-wrap.w-full .mktoFormRow input').then(() => {
                 document.querySelector('.spz_7002_v2 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_7002_v2 .mkto-wrap.w-full').parentElement);
             });
             if (document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_7002_v2 .disclaimer')) {
