@@ -163,7 +163,7 @@
                 <div class="sp-address-container">
                   <div class="sp-address">
                     <h3 class="box-title">United States</h3>
-                    <p>11120 Four Points Drive, Suite 100 <br class="desk-only">Austin, TX 78726</p>
+                    <p>11120 Four Points Drive, Suite 100 <br>Austin, TX 78726</p>
                   </div>
                   <div class="sp-contact">
                     <p class="phone-num">Phone</p>
