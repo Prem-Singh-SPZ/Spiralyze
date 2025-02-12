@@ -81,6 +81,10 @@ html.spz-no-scroll {
         max-width: 1330px;
       }
 
+      // @media (max-width: 767.98px) {
+      //   padding: 0 12.5px;
+      // }
+
       .spz-logo {
         padding: 0 20px;
         margin-bottom: 57px;
@@ -88,6 +92,10 @@ html.spz-no-scroll {
         @media (max-width: 1199.98px) {
           padding: 0;
           // margin-bottom: 58px;
+        }
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 42px;
         }
 
         .logo-anchor {
@@ -116,7 +124,7 @@ html.spz-no-scroll {
         }
 
         @media (max-width: 767.98px) {
-          padding: 32px 20px 40px;
+          padding: 0px;
         }
 
         .spz-form-title {
@@ -129,7 +137,9 @@ html.spz-no-scroll {
           text-align: center;
 
           @media (max-width: 767.98px) {
-            font-size: 28px;
+            font-size: 21px;
+            line-height: 140%;
+            margin: 0 auto 12px;
           }
         }
 
@@ -151,6 +161,10 @@ html.spz-no-scroll {
 
         > .inner-row__inner {
           padding: 41px 40px 39px;
+
+          @media (max-width: 767.98px) {
+            padding: 24px 6px 38px;
+          }
         }
       }
     }
@@ -268,12 +282,31 @@ html.spz-no-scroll {
       @media (max-width: 1024.98px) {
         padding-right: 48px;
       }
+
+      @media (max-width: 767.98px) {
+        padding: 0 42px;
+        margin-top: 17px;
+        text-align: center;
+        line-height: 23px;
+      }
     }
 
     .text-left {
       .flex.flex-wrap {
+        @media (max-width: 767.98px) {
+          justify-content: center;
+        }
         a.block.w-fit {
           margin-left: 17px;
+
+          @media (max-width: 767.98px) {
+            margin-left: 12px;
+            padding: 9px 00;
+
+            &:first-child {
+              margin-left: 7px;
+            }
+          }
         }
       }
     }
@@ -386,18 +419,18 @@ html.spz-no-scroll {
 
 @media (max-width: 767.98px) {
   .spz_9002 .hero + .row {
-    // padding: 16px 0 64px;
-    margin-bottom: 0;
+    padding: 48px 0;
   }
 
   .spz_9002 .hero + .row:before {
     right: -204px;
     bottom: -413px;
-    top: 28px;
+    top: 13px;
   }
 
   .spz_9002 .hero + .row:after {
     bottom: 299px;
+    display: none;
   }
 
   .spz_9002 .hero + .row .spz-wrapper {
@@ -428,7 +461,7 @@ html.spz-no-scroll {
   }
 
   .spz_9002 .social-proof-logos {
-    margin: 0 auto;
+    margin: 0 auto 48px;
   }
 
   .spz_9002 .social-proof-logos .social-proof-heading {
@@ -456,7 +489,7 @@ html.spz-no-scroll {
   }
 
   .spz_9002 footer .container.flex {
-    padding: 10px 20px;
+    padding: 0px 20px;
   }
 }
 
@@ -878,10 +911,6 @@ select:-webkit-autofill:active {
     margin-top: 2px;
 
     @media screen and (max-width: 767.98px) {
-      min-width: 20px;
-      max-width: 20px;
-      min-height: 20px;
-      max-height: 20px;
       margin-top: 0;
     }
   }
@@ -889,6 +918,12 @@ select:-webkit-autofill:active {
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
   margin-top: 10px !important;
+
+  @media screen and (max-width: 767.98px) {
+    margin-top: 3px !important;
+    align-items: center;
+  }
+
   label {
     position: relative;
     color: #415364 !important;
@@ -903,7 +938,7 @@ select:-webkit-autofill:active {
     width: auto;
 
     @media screen and (max-width: 767.98px) {
-      padding-left: 8px;
+      // padding-left: 8px;
     }
   }
 }
@@ -911,6 +946,10 @@ select:-webkit-autofill:active {
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
   margin-top: 7px;
+
+  @media screen and (max-width: 767.98px) {
+    margin: 20px 4px 0;
+  }
 }
 
 .spz_9002
@@ -977,7 +1016,7 @@ select:-webkit-autofill:active {
 .spz_9002 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin-top: 8px;
+  margin: 10px 14px 0;
 }
 
 .spz_9002.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -1045,7 +1084,8 @@ select:-webkit-autofill:active {
     .mktoCaptchaDisclaimer {
     max-width: unset;
     text-align: center;
-    margin-top: 11px;
+    margin-top: 2px;
+    font-size: 14px;
   }
 
   .spz_9002 .page-transition .inner-row__inner .disclaimer {
@@ -1070,6 +1110,10 @@ select:-webkit-autofill:active {
       padding: 0 32px;
       border-bottom: 1px solid #dae1e9;
 
+      @media screen and (max-width: 767.98px) {
+        padding: 0 16px;
+      }
+
       .spz-tab-button {
         color: #415364;
         font-family: $poppins;
@@ -1088,6 +1132,12 @@ select:-webkit-autofill:active {
           border-bottom: 4px solid #0071ce;
           opacity: 1;
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 16px;
+          font-weight: 400;
+          height: 54px;
+        }
       }
     }
   }
@@ -1100,6 +1150,14 @@ select:-webkit-autofill:active {
       display: none;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 24px;
+
+      &[data-content="locations"] {
+        padding: 24px 16px;
+      }
+    }
+
     .sp-container {
       max-width: 100%;
       margin: 0 auto;
@@ -1110,10 +1168,9 @@ select:-webkit-autofill:active {
         margin: auto;
       }
 
-      @media screen and (max-width: 767.98px) {
-        margin-top: 64px;
-        padding: 0 20px;
-      }
+      // @media screen and (max-width: 767.98px) {
+      //   padding: 0 20px;
+      // }
 
       .sp-contact-info {
         .link {
@@ -1152,8 +1209,12 @@ select:-webkit-autofill:active {
               margin-bottom: 16px;
 
               @media screen and (max-width: 767.98px) {
-                margin-top: 16px;
+                margin-bottom: 8px;
               }
+            }
+
+            @media screen and (max-width: 767.98px) {
+              margin-bottom: 6px;
             }
           }
 
@@ -1171,13 +1232,19 @@ select:-webkit-autofill:active {
                 white-space: nowrap;
               }
             }
+
+            @media screen and (max-width: 767.98px) {
+              &.mob-14 {
+                font-size: 14px;
+              }
+            }
           }
         }
 
         .sp-support {
           @media screen and (max-width: 767.98px) {
             margin-right: 0;
-            margin-bottom: 32px;
+            // margin-bottom: 32px;
           }
 
           p {
@@ -1239,6 +1306,11 @@ select:-webkit-autofill:active {
       .sp-hq-info {
         margin-bottom: 25px;
 
+        @media screen and (max-width: 767.98px) {
+          margin-bottom: 8px;
+          
+        }
+
         .link {
           text-underline-offset: 1px;
           text-decoration-skip-ink: none;
@@ -1265,11 +1337,11 @@ select:-webkit-autofill:active {
           // padding: 32px;
         }
 
-        @media screen and (max-width: 767.98px) {
-          padding: 24px;
-          margin: 33.5px auto 46px;
-          max-width: 400px;
-        }
+        // @media screen and (max-width: 767.98px) {
+        //   padding: 24px;
+        //   margin: 33.5px auto 46px;
+        //   max-width: 400px;
+        // }
 
         .sp-hq-details {
           .link {
@@ -1307,7 +1379,9 @@ select:-webkit-autofill:active {
             }
 
             @media screen and (max-width: 767.98px) {
-              font-size: 28px;
+              font-size: 21px;
+              line-height: 140%;
+              margin-bottom: 15px;
             }
           }
 
@@ -1317,12 +1391,25 @@ select:-webkit-autofill:active {
             font-weight: 600;
             line-height: 140%;
             margin-bottom: 16px;
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 18px;
+              line-height: 160%;
+              margin-bottom: 9px;
+            }
           }
 
           .sp-address-container {
             display: flex;
             // justify-content: space-between;
             align-items: end;
+
+            @media (max-width: 767.98px) {
+              // flex-direction: column;
+              // gap: 24px;
+              align-items: start;
+              flex-wrap: wrap;
+            }
 
             p {
               margin-bottom: 0;
@@ -1353,6 +1440,15 @@ select:-webkit-autofill:active {
 
               &:last-child {
                 margin-left: auto;
+                @media (max-width: 767.98px) {
+                  margin-left: unset;
+                }
+              }
+
+              @media (max-width: 767.98px) {
+                max-width: 151.5px;
+                width: 100%;
+                margin-top: 8px;
               }
             }
           }
@@ -1377,6 +1473,12 @@ select:-webkit-autofill:active {
                 font-weight: 600;
                 line-height: 120%;
                 margin-bottom: 24px;
+
+                @media screen and (max-width: 767.98px) {
+                  font-size: 21px;
+                  line-height: 140%;
+                  margin-bottom: 16px;
+                }
               }
 
               .flex.flex-col {

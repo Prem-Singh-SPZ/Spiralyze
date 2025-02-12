@@ -122,8 +122,8 @@
         <div class="sp-contact-info">
             <div class="sp-support">
                 <h2 class="box-title">Request support</h2>
-                <p>For customer support, please visit the <a href="https://community.sailpoint.com/t5/Contact-Support/ct-p/Contact-Support" target="_blank" class="link">Contact Support</a> page.</p>
-                <p>For sales or any other questions, please call us or send an email.</p>
+                <p class="mob-14">For customer support, please visit the <a href="https://community.sailpoint.com/t5/Contact-Support/ct-p/Contact-Support" target="_blank" class="link">Contact Support</a> page.</p>
+                <p class="mob-14">For sales or any other questions, please call us or send an email.</p>
                 <h3 class="box-title sp-mt-24">Phone</h3>
                 <p class="sp-mb-0">1-888-472-4578 (U.S. Toll-free)</p>
             </div>
