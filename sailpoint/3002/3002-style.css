@@ -604,14 +604,64 @@ html.spz-no-scroll {
   overflow: hidden;
 }
 
+.spz_3002 #page-container .page-transition .hero {
+  background: linear-gradient(124deg, rgba(84, 192, 232, 0.5) -18.44%, rgba(84, 192, 232, 0.18) 47.83%, rgba(84, 192, 232, 0) 84.18%), #fff;
+}
 .spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__content,
 .spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__buttons {
   display: none;
 }
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__eyebrow {
+  color: #415364;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__heading {
+  color: #0033A1;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px;
+}
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__short-desc {
+  color: #415364;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0 0 14px;
+}
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__list {
+  padding: 0;
+}
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__list li {
+  padding-left: 36px;
+  position: relative;
+  color: #415364;
+  font-family: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial, "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0 0 14px;
+}
+.spz_3002 #page-container .page-transition .hero .hero__container .hero__content-wrap .hero__list li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Crect width='24' height='24' rx='12' fill='%230033A1'/%3E%3Cpath d='M17.7465 8.25303C17.667 8.17285 17.5724 8.10922 17.4682 8.06579C17.3639 8.02236 17.2521 8 17.1392 8C17.0263 8 16.9144 8.02236 16.8102 8.06579C16.706 8.10922 16.6114 8.17285 16.5318 8.25303L10.159 14.6344L7.48152 11.9484C7.39895 11.8687 7.30148 11.806 7.19468 11.7639C7.08788 11.7218 6.97383 11.7011 6.85905 11.7031C6.74427 11.7051 6.631 11.7297 6.52572 11.7754C6.42044 11.8212 6.3252 11.8873 6.24544 11.9698C6.16568 12.0524 6.10297 12.1499 6.06088 12.2567C6.01879 12.3635 5.99814 12.4775 6.00013 12.5923C6.00212 12.7071 6.02669 12.8203 6.07245 12.9256C6.11821 13.0309 6.18426 13.1261 6.26682 13.2059L9.55163 16.4907C9.63115 16.5709 9.72576 16.6345 9.83 16.6779C9.93424 16.7214 10.046 16.7437 10.159 16.7437C10.2719 16.7437 10.3837 16.7214 10.4879 16.6779C10.5922 16.6345 10.6868 16.5709 10.7663 16.4907L17.7465 9.51049C17.8334 9.43039 17.9026 9.33317 17.95 9.22496C17.9974 9.11675 18.0219 8.9999 18.0219 8.88176C18.0219 8.76363 17.9974 8.64677 17.95 8.53856C17.9026 8.43035 17.8334 8.33313 17.7465 8.25303Z' fill='white'/%3E%3C/svg%3E");
+  background-size: contain;
+}
 .spz_3002 .spz-email {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 511px;
 }
 .spz_3002 .spz-email .form-group-wrapper {
   display: -webkit-box;
@@ -624,14 +674,14 @@ html.spz-no-scroll {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  max-width: 516px;
-  margin: auto;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  max-width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+          box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
 }
 .spz_3002 .spz-email .form-group-wrapper .form-group-spz {
   position: relative;
-  width: calc(100% - 147px);
+  width: calc(100% - 195px);
 }
 .spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-label-spz {
   position: absolute;
@@ -753,37 +803,6 @@ html.spz-no-scroll {
   font-weight: 400;
   line-height: 20px;
 }
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz:-webkit-autofill:hover {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz input:-webkit-autofill {
-  background-color: #fff;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz input:-webkit-autofill:hover {
-  background-color: #fff;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-.spz_3002 .spz-email .form-group-wrapper .form-group-spz input:-webkit-autofill:focus {
-  background-color: #fff;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
 .spz_3002 .spz-email .form-group-wrapper .hero-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -796,7 +815,7 @@ html.spz-no-scroll {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 147px;
+  width: 195px;
   height: 56px;
   border-radius: 0 3px 3px 0;
   background: #0042ff;
