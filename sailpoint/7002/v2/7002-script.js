@@ -19,7 +19,7 @@
                         }, 500);
                         setTimeout(function () {
                             clearInterval(spzFormInterval);
-                        }, 50000);
+                        }, 10000);
                     });
 
                 } else {
@@ -272,7 +272,15 @@
             if (document.querySelector('.spz_7002_v2')) {
                 document.body.classList.remove("spz_7002_v2");
             }
-        }, 2000);
+            if (document.querySelector('.spz-form-container')) {
+                document.querySelector('.spz-form-container').remove();
+            }
+            if (document.querySelector('.spz-contact-us')) {
+                document.querySelectorAll('.spz-contact-us').forEach(function (el) {
+                    el.remove();
+                });
+            }
+        }, 200);
     }
 
     function removeSpecificCookieValue(targetName, targetValue) {

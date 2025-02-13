@@ -6,12 +6,12 @@
         clearInterval(bodyLoaded);
         if (!body.classList.contains('spz_9001_tc')) {
           body.classList.add('spz_9001_tc');
-          hiddenValue('SPZ_#9001', 'SPZ_9001_truecontrol');
+          hiddenValue('spz_9001', 'SPZ_9001_truecontrol');
           setHiddenFieldValue();
         }
         else {
           if (body.classList.contains('spz_9001_tc')) {
-            hiddenValue('SPZ_#9001', 'SPZ_9001_truecontrol');
+            hiddenValue('spz_9001', 'SPZ_9001_truecontrol');
             setHiddenFieldValue();
           }
         }

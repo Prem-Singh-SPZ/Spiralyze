@@ -4,14 +4,14 @@
       const body = document.querySelector('body');
       if (body) {
         clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz_9001_tc')) {
-          body.classList.add('spz_9001_tc');
-          hiddenValue('SPZ_#9001', 'SPZ_9001_truecontrol');
+        if (!body.classList.contains('spz_9002_tc')) {
+          body.classList.add('spz_9002_tc');
+          hiddenValue('spz_9002', 'SPZ_9002_truecontrol');
           setHiddenFieldValue();
         }
         else {
-          if (body.classList.contains('spz_9001_tc')) {
-            hiddenValue('SPZ_#9001', 'SPZ_9001_truecontrol');
+          if (body.classList.contains('spz_9002_tc')) {
+            hiddenValue('spz_9002', 'SPZ_9002_truecontrol');
             setHiddenFieldValue();
           }
         }
@@ -21,8 +21,8 @@
 
   function removeTest() {
     setTimeout(() => {
-      if (document.querySelector('.spz_9001_tc')) {
-        document.body.classList.remove("spz_9001_tc");
+      if (document.querySelector('.spz_9002_tc')) {
+        document.body.classList.remove("spz_9002_tc");
       }
     }, 2000);
   }
@@ -52,8 +52,8 @@
   window.addEventListener("locationchange", function () {
     url = location.href;
     urlCheck(url);
-    if (document.querySelector('.spz_9001_tc')) {
-      document.body.classList.remove("spz_9001_tc");
+    if (document.querySelector('.spz_9002_tc')) {
+      document.body.classList.remove("spz_9002_tc");
     }
   });
 
