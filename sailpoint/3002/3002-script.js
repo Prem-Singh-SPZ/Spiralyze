@@ -1,4 +1,44 @@
 (function () {
+    const additionalSection = {
+        socialProofLogos: {
+            socialProofHeading: "Used by 48% of the Fortune 500",
+            socialProofImages: [
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_01.svg",
+                    imgAlt: "GM",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_02.svg",
+                    imgAlt: "Hershey",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_03.svg",
+                    imgAlt: "Paccar",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_04.svg",
+                    imgAlt: "Philips",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_05.svg",
+                    imgAlt: "RWE",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104229/sailpoint/9001/logo_06.svg",
+                    imgAlt: "T Mobile",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_07.svg",
+                    imgAlt: "The Home Depot",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737360173/sailpoint/9001/logo_9.svg",
+                    imgAlt: "The Salvation Army",
+                },
+            ]
+        },
+    }
+
     function createTest() {
         let bodyLoaded = setInterval(function () {
             const body = document.querySelector('body');
@@ -32,13 +72,119 @@
     }
 
     function heroUpdate() {
-        if (document.querySelectorAll('.spz_3002 #page-container nav.navigation .desktop div.relative a.spz-contact-us').length == 0 && document.querySelector('.spz_3002 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
-            document.querySelector('.spz_3002 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-contact-us spz-btn-desk" href="javascript:;">Contact us</a>`);
-            document.querySelector('.spz_3002 #page-container nav.navigation .mobile a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline p-2 text-sm spz-contact-us spz-btn-mob" href="javascript:;">Contact us</a>`);
+        if (document.querySelectorAll('.spz_3002 #page-container  a.spz-contact-us').length == 0) {
+            document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap').insertAdjacentHTML('beforeend', `<ul class="hero__list"><li>Reduced staff onboarding from 10 days to 4 hours</li><li>Cut manually provisioned support tickets by 40%</li><li>Slashed time to provision new hires from 14 hours to 2.5 minutes</li></ul><div class="spz-email">
+					 <div class="form-group-wrapper">
+							<div class="form-group-spz">
+								<input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
+								<label class="form-label-spz">Email</label>
+							</div>
+							<a href="javascript:;" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_3002 spz-contact-us">
+								<span>Get a Demo</span> 
+							</a>
+					</div>
+				</div>`);
 
-            document.querySelectorAll('.spz_3002 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
-                el.classList.add('spz-hero-cta');
-            })
+            if (document.querySelectorAll('.social-proof-logos').length == 0)
+                document.querySelector('.spz_3002 .hero').insertAdjacentHTML('beforeend', `${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
+                              <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
+                              <div class="social-proof-images">
+                                ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
+                    return `<img src="${item.url}" alt="${item.imgAlt}">`;
+                })
+                        .join("") + additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
+                            return `<img src="${item.url}" class="repeat-img" alt="${item.imgAlt}">`;
+                        })
+                            .join("")
+                        : ""}
+                              </div>
+                            </div>`
+                    : ``} `);
+
+            document.querySelector('.spz_3002 .hero .hero__container .hero__image-wrapper').innerHTML = `<picture><source media="(max-width:767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/image_mobile.webp"> <img alt="Identity Security Cloud Hero"  class="hero__image h-auto object-cover w-full" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/image_desktop.webp"></picture>`;
+
+            waitForElm('.spz_3002 .social-proof-logos img').then(() => {
+                const marqueeContainer = document.querySelector('.social-proof-images');
+
+                // Check if marqueeContainer exists (only below 1200px)
+                if (marqueeContainer) {
+
+                    const scrollSpeed = 2; // Adjust scrolling speed (pixels per interval)
+                    const scrollInterval = 30; // Adjust scrolling interval (milliseconds)
+                  
+                    let currentPosition = 0;
+                    let autoScrollEnabled = true; // Flag for auto-scrolling
+                  
+                    setInterval(() => {
+                      if (autoScrollEnabled) { // Only scroll automatically if enabled
+                        currentPosition += scrollSpeed;
+                        marqueeContainer.scrollLeft = currentPosition;
+                  
+                        // Reset scroll position when it reaches the end
+                        if (currentPosition >= marqueeContainer.scrollWidth - marqueeContainer.offsetWidth) {
+                          currentPosition = 0;
+                        }
+                      }
+                    }, scrollInterval);
+                  
+                    let startX;
+                    let scrollLeft;
+                    let isDragging = false; // Flag for dragging state
+                  
+                    marqueeContainer.addEventListener('mousedown', (e) => {
+                      startX = e.clientX;
+                      scrollLeft = marqueeContainer.scrollLeft;
+                      isDragging = true;
+                      autoScrollEnabled = false; // Disable auto-scroll while dragging
+                      marqueeContainer.style.cursor = 'grabbing'; // Visual feedback
+                    });
+                  
+                    marqueeContainer.addEventListener('mousemove', (e) => {
+                      if (isDragging) {
+                        const currentX = e.clientX;
+                        const deltaX = currentX - startX;
+                        marqueeContainer.scrollLeft = scrollLeft - deltaX;
+                        currentPosition = marqueeContainer.scrollLeft; // Keep sync with auto scroll
+                      }
+                    });
+                  
+                    marqueeContainer.addEventListener('mouseup', () => {
+                      isDragging = false;
+                      autoScrollEnabled = true; // Re-enable auto-scroll after dragging
+                      marqueeContainer.style.cursor = 'grab'; // Reset cursor
+                    });
+                  
+                    marqueeContainer.addEventListener('mouseleave', () => {
+                      isDragging = false;
+                      autoScrollEnabled = true; // Re-enable auto-scroll if mouse leaves
+                      marqueeContainer.style.cursor = 'grab'; // Reset cursor
+                    });
+                  
+                    // Touch Events (similar logic as mouse events)
+                    marqueeContainer.addEventListener('touchstart', (e) => {
+                      startX = e.touches[0].clientX;
+                      scrollLeft = marqueeContainer.scrollLeft;
+                      isDragging = true;
+                      autoScrollEnabled = false;
+                    });
+                  
+                    marqueeContainer.addEventListener('touchmove', (e) => {
+                      if (isDragging) {
+                        const currentX = e.touches[0].clientX;
+                        const deltaX = currentX - startX;
+                        marqueeContainer.scrollLeft = scrollLeft - deltaX;
+                        currentPosition = marqueeContainer.scrollLeft;
+                        e.preventDefault(); // Prevent default touch behavior
+                      }
+                    });
+                  
+                    marqueeContainer.addEventListener('touchend', () => {
+                      isDragging = false;
+                      autoScrollEnabled = true;
+                    });
+                  
+                  }
+            });
         }
     }
 
