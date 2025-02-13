@@ -828,21 +828,22 @@ html.spz-no-scroll {
         }
         .form-field-spz {
           width: 100%;
-          height: 56px;
+          height: 58px;
           padding: 0px 12px 0px 24px;
           background: #fff;
           border: none;
           overflow: hidden;
-          color: #000;
+          color: #415364;
           text-overflow: ellipsis;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 100%;
+          font-family: $poppins;
+          font-size: 16px;
+          font-weight:  400;
+          line-height: 160%;
           outline: none;
           transition-duration: 150ms;
-          border-radius: 3px 0px 0px 3px;
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-          outline: none;
+          // border-radius: 3px 0px 0px 3px;
+          // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+
           &:not(.is-placeholder) {
             &:not(:focus) {
               &:not(:-moz-placeholder-shown) {
@@ -953,7 +954,7 @@ html.spz-no-scroll {
 
         justify-content: center;
         width: 195px;
-        height: 56px;
+        height: 58px;
         border-radius: 0 3px 3px 0;
         background: #0042ff;
         font-size: 20px;
