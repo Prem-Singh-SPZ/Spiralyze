@@ -3394,3 +3394,113 @@ body .actions .hs-button-spz:before {
     margin-right: 14px;
   }
 }
+.hbspt-form .submitted-message {
+  font-size: 23px;
+}
+
+body {
+  position: relative;
+}
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .nav-logo {
+  height: 28px;
+}
+
+body.header-fixed {
+  padding-top: 108px;
+}
+
+body .header-nav {
+  padding: 28px 0 28px;
+}
+
+@media (min-width: 1360px) {
+  body .header-nav .nav-section {
+    padding: 0 24px;
+  }
+}
+body.header-fixed .header-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5.957px 11.915px -2.979px rgba(16, 24, 40, 0.1), 0px 2.979px 5.957px -2.979px rgba(16, 24, 40, 0.06);
+          box-shadow: 0px 5.957px 11.915px -2.979px rgba(16, 24, 40, 0.1), 0px 2.979px 5.957px -2.979px rgba(16, 24, 40, 0.06);
+  -webkit-animation: slideDown 0.3s ease-in-out;
+          animation: slideDown 0.3s ease-in-out;
+  z-index: 99999;
+}
+
+.nav-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.get-demo-spz {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 12px;
+  background: #0580e8;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.get-demo-spz:hover {
+  border-radius: 12px;
+  background: #0068c9;
+}
+
+.get-demo-spz:active {
+  border-radius: 12px;
+  outline: 2px solid #b2e0ff !important;
+  outline-color: #0068c9;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@media (max-width: 767px) {
+  body .nav-logo {
+    height: 25px;
+  }
+  body .nav-logo img {
+    height: 25px;
+  }
+}
