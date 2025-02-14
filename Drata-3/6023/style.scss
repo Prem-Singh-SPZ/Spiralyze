@@ -213,7 +213,7 @@ body
 
 .hero-section .hero-content {
   max-width: 636px;
-  padding: 45px 0;
+  padding: 61px 0;
 }
 
 .hero-section .hero-content .hc-title {
@@ -344,7 +344,7 @@ body
   line-height: 24px;
   display: inline;
   margin-bottom: 9px;
-  letter-spacing: -0.1px;
+//   letter-spacing: -0.1px;
 }
 
 .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
@@ -384,8 +384,8 @@ body
 
 .hero-right-section {
   position: relative;
-  width: 604px;
-  margin-top: 24.5px;
+  width: 572px;
+  margin-top: 40.5px;
   margin-bottom: 83px;
 }
 
@@ -566,7 +566,7 @@ img {
     letter-spacing: -0.02em;
     text-align: left;
     margin: 0 0 22.5px;
-    padding-top: 2.5px;
+    padding-top: 50.5px;
   }
   .hero-section .hero-content .hc-title:before {
     height: 97.75%;
@@ -619,6 +619,7 @@ img {
     font-weight: 900;
     line-height: 48px;
     margin-bottom: 24px;
+    padding-top: 26.5px;
   }
   .hero-section .hero-content .hc-title .break-desk {
     display: block;
@@ -670,8 +671,8 @@ img {
     margin-bottom: 7px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item:before {
     top: 1px;
@@ -725,9 +726,16 @@ img {
     width: 32px;
     height: 32px;
     position: absolute;
-    top: 32px;
+    top: 48px;
     left: 40px;
     cursor: pointer;
+
+    @media (max-width: 767.98px) {
+        width: 24px;
+        height: 24px;
+        top: 32px;
+        left: 18px;
+    }
 
     svg {
       pointer-events: none;
@@ -768,8 +776,8 @@ img {
 
 .form-wrapper-spz .hbspt-form form fieldset .field {
   position: relative;
-  width: 256px;
-  max-width: 256px;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,8 +799,8 @@ img {
   position: relative;
   margin-bottom: 2px;
   border-radius: 8px;
-  width: 256px;
-  max-width: 256px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz {
@@ -843,7 +851,7 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1px 12px 0 0;
+  padding: 12px 12px 0 0;
   height: 64px;
   width: 100%;
   background: #fff;
@@ -1154,7 +1162,7 @@ img {
   appearance: none;
   -webkit-appearance: none;
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg")
-    #fff no-repeat right 11px center !important;
+    #fff no-repeat right 0px center !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1345,7 +1353,7 @@ img {
   .field.field-focus:not(.hs-fieldtype-checkbox).hs-fieldtype-select
   select {
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg")
-    #fff no-repeat right 11px center !important;
+    #fff no-repeat right 0px center !important;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox {
@@ -1762,11 +1770,11 @@ img {
     align-items: center;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field {
-    width: 288px !important;
+    width: 292px !important;
     margin-bottom: 10px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field .input {
-    width: 288px;
+    width: 292px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox {
     margin-top: 21px;
@@ -1833,7 +1841,7 @@ img {
   }
   .form-wrapper-spz .hbspt-form form .actions {
     margin-top: 20px;
-    width: 288px;
+    width: 292px;
   }
   .form-wrapper-spz .hbspt-form form .actions:before {
     top: 22px;
@@ -2121,7 +2129,7 @@ img {
     margin: 0 auto 3px;
   }
   .how-works-section .work-step-item .step-img {
-    max-width: 288px;
+    max-width: 292px;
   }
   .how-works-section .work-step-item .step-title {
     font-size: 16px;
@@ -3663,7 +3671,7 @@ img {
 }
 
 body .hero-section .form-wrapper-spz {
-  padding: 32px 40px 40px;
+  padding: 39px 40px 40px;
 }
 
 body .hero-section .form-wrapper-spz.step-1-active {
@@ -3687,7 +3695,7 @@ body .hero-section .form-wrapper-spz.step-1-active {
 
 @media (max-width: 767.98px) {
   body .hero-section .form-wrapper-spz {
-    padding: 32px 16px 40px;
+    padding: 25px 16px 40px;
   }
 }
 
@@ -4101,6 +4109,10 @@ body.header-fixed {
 body .header-nav {
   padding: 28px 0 28px;
   background: #fff;
+
+//   @media (max-width: 1199.98px) {
+//     padding: 28px 0 21px;
+//   }
 }
 @media (min-width: 1360px) {
   body .header-nav .nav-section {
