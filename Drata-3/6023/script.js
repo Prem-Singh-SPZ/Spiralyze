@@ -51,16 +51,23 @@ const formInt = setInterval(() => {
         // Add class '.form-step-2' on '.hbspt-form .hs-form-spz'
         document.querySelector('.hbspt-form .hs-form-spz').classList.add('form-step-2');
 
+        // append back arrow on '.form-step-2'
+        document.querySelector('.hbspt-form .hs-form-spz').insertAdjacentHTML('afterbegin', `
+        <div class="spz-back-arrow back-arrow-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16.2666 0L18.9926 2.71556L8.20453 13.4815H31.7333V17.3333H8.20453L18.9926 28.0992L16.2666 30.8148L0.799894 15.4074L16.2666 0Z" fill="#697586"/>
+            </svg>
+        </div>`);
         // Append 'PCI DSS' after second '.hs_demo_product_of_interest .inputs-list.multi-container label'
         // FYI, this is added because the 'PCI DSS' checkbox is not available in the form
-        document.querySelector('.hs_demo_product_of_interest .inputs-list.multi-container li:nth-child(2)').insertAdjacentHTML('afterend', `
-        <li class="hs-form-checkbox" role="checkbox">
-            <label class="hs-form-checkbox-display" for="demo_product_of_interest6-pci-dss-1">
-                <input class="hs-input" type="checkbox" name="demo_product_of_interest" value="PCI DSS">
-                <span>PCI DSS</span>
-            </label>
-        </li>
-    `);
+    //     document.querySelector('.hs_demo_product_of_interest .inputs-list.multi-container li:nth-child(2)').insertAdjacentHTML('afterend', `
+    //     <li class="hs-form-checkbox" role="checkbox">
+    //         <label class="hs-form-checkbox-display" for="demo_product_of_interest6-pci-dss-1">
+    //             <input class="hs-input" type="checkbox" name="demo_product_of_interest" value="PCI DSS">
+    //             <span>PCI DSS</span>
+    //         </label>
+    //     </li>
+    // `);
 
         // Hide '.hs_demo_product_of_interest' and its parent 'fieldset'
         document.querySelector('.hs_demo_product_of_interest').parentElement.style.display = 'none';
@@ -251,6 +258,12 @@ function openNextStep() {
         document.querySelector('.hero-right-section').scrollIntoView({
             behavior: 'smooth'
         });
+    });
+
+    // on click of '.back-arrow-cta' button open previous step
+    document.querySelector('.back-arrow-cta').addEventListener('click', () => {
+        document.querySelector('.form-step-2').classList.remove('active');
+        document.querySelector('.form-step-1').classList.add('active');
     });
 }
 
