@@ -1,6 +1,15 @@
 (function () {
     var css = `.ca-sp-077 .hero {overflow: hidden;} .mkto-wrap form.mktoForm, .mkto-wrap form.mktoForm .select-dropdown {padding: 0;}
-    .ca-sp-077 .hero #ca-sp-077-root-form .mktoFormRow select{padding-right: 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}`;
+    .ca-sp-077 .hero #ca-sp-077-root-form .mktoFormRow select{padding-right: 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+    .mkto-wrap form.mktoForm .mktoFormRow .mktoHtmlText{    margin: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+    font-size: .75rem;
+    line-height: 1rem;
+        --tw-text-opacity: 1!important;
+    color: rgba(var(--white),var(--tw-text-opacity))!important;}`;
     head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
     head.appendChild(style);
     style.type = 'text/css';
