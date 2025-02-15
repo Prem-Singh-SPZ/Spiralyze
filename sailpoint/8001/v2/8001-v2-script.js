@@ -56,6 +56,15 @@
       //on form submit set the cookie  for a year
       setCookie('spz_8001_form_submit', 'true', 365);
     });
+
+    //check if mktoform is loaded then only run the code
+
+    MktoForms2.whenReady(function (form) {
+      form.onSuccess(function (values, followUpUrl) {
+        console.log('form submitted');
+        setCookie('spz_8001_form_submit', 'true', 365);
+      });
+    });
   }
 
   function checkStateField() {
