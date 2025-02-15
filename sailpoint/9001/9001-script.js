@@ -466,6 +466,46 @@
     //click event listener
     document.addEventListener('click', function (e) {
       if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+
+        waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoError').then(function (elm) {
+          if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+            const targetNode = elm.parentNode;
+            const config = { attributes: true, childList: true, subtree: true };
+            const callback = (mutationList, observer) => {
+              for (const mutation of mutationList) {
+                if (mutation.type === "childList") {
+                  if (elm.parentNode === null && elm.style.display != 'none') {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                } else if (mutation.type === "attributes") {
+                  if (elm.parentNode === null) {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                }
+              }
+            };
+            const observer = new MutationObserver(callback);
+            observer.observe(targetNode, config);
+          } else {
+            let counterA = 0;
+            const intervalIdA = setInterval(() => {
+              if (document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoError #ValidMsgEmail') !== null) {
+                document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+              }
+              counterA++;
+              if (counterA >= 10) {
+                clearInterval(intervalIdA);
+              }
+            }, 500);
+          }
+        });
+
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
