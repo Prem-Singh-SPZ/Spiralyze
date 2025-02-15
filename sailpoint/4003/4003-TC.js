@@ -1,5 +1,6 @@
 (function () {
-    var css = `.ca-sp-077 .hero {overflow: hidden;} .mkto-wrap form.mktoForm, .mkto-wrap form.mktoForm .select-dropdown {padding: 0;}`;
+    var css = `.ca-sp-077 .hero {overflow: hidden;} .mkto-wrap form.mktoForm, .mkto-wrap form.mktoForm .select-dropdown {padding: 0;}
+    .ca-sp-077 .hero #ca-sp-077-root-form .mktoFormRow select{padding-right: 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}`;
     head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
     head.appendChild(style);
     style.type = 'text/css';

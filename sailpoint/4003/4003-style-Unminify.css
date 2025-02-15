@@ -219,6 +219,7 @@ section#gc-trusted-by,
     grid-template-rows: repeat(2, max-content);
     justify-content: space-between;
     gap: 32px 40px;
+    place-items: center;
   }
   .SPZ_4003_V1 .social-proof-logos .social-proof-images img {
     height: 70px;
@@ -387,6 +388,7 @@ select:-webkit-autofill:active {
 
 .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel {
   font-weight: 600;
+  color: #415364;
 }
 
 .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
@@ -571,17 +573,16 @@ select:-webkit-autofill:active {
   margin-bottom: 0;
 }
 
-.SPZ_4003_V1 .spz-form-section form.mktoForm label#LblreceivingAdvertisingInformation {
-  padding: 0;
-  background: transparent;
-}
+.SPZ_4003_V1 .spz-form-section form.mktoForm label#LblreceivingAdvertisingInformation ,
 .SPZ_4003_V1 .spz-form-section form.mktoForm label#LblmandatoryCollectionandUseofPersonalInfo,
 .SPZ_4003_V1 .spz-form-section form.mktoForm label#LbloptionalCollectionandUseofInformation {
+  padding: 0;
   position: relative;
   background: transparent;
   color: #fff;
   top: unset;
   left: unset;
+  font-weight: 400;
 }
 
 .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow .mktoHtmlText {
