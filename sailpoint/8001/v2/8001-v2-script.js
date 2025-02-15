@@ -220,17 +220,28 @@
         }
       }
     });
-
-    document.addEventListener('click', function (e) {
-      if (e.target.closest('#mktoForm_1016 .mktoButton')) {
-        //inject current time and date in EST timezone into .intellimize2 hidden field
-        var d = new Date();
-        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-        if (int2)
-          int2.value = n;
-      }
-    });
   }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('#mktoForm_1016 .mktoButton')) {
+
+      let checkButtonCopy = setInterval(() => {
+        if (document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent !== 'Unlock all product tours') {
+          document.querySelector('.mkto-wrap .mktoForm#mktoForm_1016 .mktoButtonRow .mktoButtonWrap .mktoButton').textContent = 'Unlock all product tours';
+        }
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(checkButtonCopy);
+      }, 2000);
+
+      //inject current time and date in EST timezone into .intellimize2 hidden field
+      var d = new Date();
+      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      if (int2)
+        int2.value = n;
+    }
+  });
   // Do not touch below hidden field code for any Experiment over
 })();
