@@ -89,7 +89,7 @@
               document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
             });
             let formLoaded = setInterval(() => {
-              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
+              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector('.mkto-wrap + .disclaimer')) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
                 document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
@@ -115,7 +115,7 @@
           }, 1000);
           setTimeout(function () {
             clearInterval(spzHeroInterval);
-          }, 15000);
+          }, 10000);
 
 
           function formModify() {
@@ -193,14 +193,14 @@
                     }
                     checkerrorcnt++;
                   });
-                  emailFocusCount++;
-                  if(emailFocusCount > 2){
-                    emailFocusCount = 2;
-                  }
-                  if(emailFocusCount === 2){
-                    el.closest('.mktoFieldWrap').classList.add('emailerror');
-                    checkEmail();
-                  }
+                  // emailFocusCount++;
+                  // if(emailFocusCount > 2){
+                  //   emailFocusCount = 2;
+                  // }
+                  // if(emailFocusCount === 2){
+                  //   el.closest('.mktoFieldWrap').classList.add('emailerror');
+                  //   checkEmail();
+                  // }
                 }
               }, true);
 
@@ -212,7 +212,7 @@
                   if (fieldName === 'Email') {
                     const newemailValue = el.value.trim();
                     const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                    if (newemailValue && !newemailRegex.test(newemailValue)) {
+                    if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
                       el.closest('.mktoFieldWrap').classList.add('emailerror');
                     } else {
                       el.closest('.mktoFieldWrap').classList.remove('emailerror');
@@ -238,6 +238,33 @@
                   el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
                   checkAllFields();
                 }
+
+                if(!document.body.classList.contains('form-expand')){
+                  const el = event.target;
+                  const fieldName = el.getAttribute('name');
+
+                  if (fieldName === 'Email') {
+                    const newemailValue = el.value.trim();
+                    const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                    if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
+                      el.closest('.mktoFieldWrap').classList.add('emailerror');
+                      checkEmail();
+                    } else {
+                      el.closest('.mktoFieldWrap').classList.remove('emailerror');
+                    }
+                  }
+
+                  const firstName = document.querySelector('input[name="FirstName"]').value.trim();
+                  const lastName = document.querySelector('input[name="LastName"]').value.trim();
+                  const emailValue = document.querySelector('input[name="Email"]').value.trim();
+                  const companyValue = document.querySelector('input[name="Company"]').value.trim();
+                  const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                  if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
+                    if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
+                      document.body.classList.add('form-expand');
+                    }
+                  }
+                } 
               }, true);
 
               form.addEventListener('input', function (event) {
@@ -305,7 +332,7 @@
                     }
                   }
                 });
-              }, 100);
+              }, 200);
 
               setTimeout(() => {
                 clearInterval(timeBuffer);
@@ -350,7 +377,7 @@
       if (document.querySelector('.SPZ-1005')) {
         document.body.classList.remove("SPZ-1005");
       }
-    }, 2000);
+    }, 1000);
   }
 
   function removeSpecificCookieValue(targetName, targetValue) {
@@ -416,47 +443,48 @@
     setTimeout(function () {
       clearInterval(spz_cro_Interval);
     }, 15000);
-
-    //click event listener
-		document.addEventListener('click', function (e) {
-			if (e.target.closest('.mktoForm .mktoButton')) {
-        const fields = document.querySelectorAll('.SPZ-1005 form.mktoForm .mktoField');
-        const timeBuffer = setInterval(() => {
-          fields.forEach(field => {
-            const fieldWrap = field.closest('.mktoFieldWrap');
-            if (fieldWrap) {
-              // Check for error
-              const errorElement = fieldWrap.querySelector('.mktoError');
-              if (errorElement && errorElement.style.display !== 'none') {
-                fieldWrap.classList.add('error');
-              } else {
-                fieldWrap.classList.remove('error');
-              }
-
-              // Check if the field is filled
-              if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
-                fieldWrap.classList.add('filled');
-              } else {
-                fieldWrap.classList.remove('filled');
-              }
-            }
-          });
-        }, 100);
-
-
-        setTimeout(() => {
-          clearInterval(timeBuffer);
-        }, 100);
-
-				//inject current time and date in EST timezone into .intellimize2 hidden field
-				var d = new Date();
-				var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-				var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-				if (int2)
-					int2.value = n;
-			}
-		});
   }
+
+  //click event listener
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.mktoForm .mktoButton')) {
+      const fields = document.querySelectorAll('.SPZ-1005 form.mktoForm .mktoField');
+      const timeBuffer = setInterval(() => {
+        fields.forEach(field => {
+          const fieldWrap = field.closest('.mktoFieldWrap');
+          if (fieldWrap) {
+            // Check for error
+            const errorElement = fieldWrap.querySelector('.mktoError');
+            if (errorElement && errorElement.style.display !== 'none') {
+              fieldWrap.classList.add('error');
+            } else {
+              fieldWrap.classList.remove('error');
+            }
+
+            // Check if the field is filled
+            if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+              fieldWrap.classList.add('filled');
+            } else {
+              fieldWrap.classList.remove('filled');
+            }
+          }
+        });
+      }, 200);
+
+
+      setTimeout(() => {
+        clearInterval(timeBuffer);
+      }, 1000);
+
+      //inject current time and date in EST timezone into .intellimize2 hidden field
+      var d = new Date();
+      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      if (int2)
+        int2.value = n;
+    }
+  });
+
   // Do not touch below hidden field code for any Experiment over
 
   history.pushState = (function (f) {
