@@ -1,14 +1,25 @@
 (function () {
+    var css = `.ca-sp-077 .hero {overflow: hidden;} .mkto-wrap form.mktoForm, .mkto-wrap form.mktoForm .select-dropdown {padding: 0;}`;
+    head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
+    head.appendChild(style);
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+
     function createTest() {
         let bodyLoaded = setInterval(function () {
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
                 if (!body.classList.contains('spz_4003_tc')) {
+                    removeSpecificCookieValue('SPZ_4003', 'SPZ_4003_variant');
                     body.classList.add('spz_4003_tc');
                     hiddenValue('SPZ_4003', 'SPZ_4003_truecontrol');
+                    waitForElm('#ca-sp-077-root-form .form').then((elem) => {
+                        elem.classList.add('mkto-wrap', 'bg-gradient');
+                    });
                 }
                 else {
+                    removeSpecificCookieValue('SPZ_4003', 'SPZ_4003_variant');
                     hiddenValue('SPZ_4003', 'SPZ_4003_truecontrol');
                 }
             }
@@ -67,6 +78,13 @@
         if (document.body.classList.contains('spz_4003_tc')) {
             document.body.classList.remove('spz_4003_tc');
         }
+    }
+
+    function removeSpecificCookieValue(targetName, targetValue) {
+        ['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
+            var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+            setCookie(key, values || '', 1);
+        });
     }
 
     function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
@@ -174,4 +192,20 @@
         });
     }
     // Do not touch below hidden field code for any Experiment over
+
+    // Generic Code
+    function waitForElm(selector) {
+        return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+            resolve(document.querySelector(selector));
+            observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
 })();

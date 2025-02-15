@@ -406,7 +406,7 @@
       if (document.querySelector('.spz-modal')) {
         document.querySelector('.spz-modal').remove();
       }
-    }, 1000);
+    }, 2000);
   }
 
   // Do not touch below hidden field code for any Experiment Start
