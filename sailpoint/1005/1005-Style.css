@@ -76,6 +76,10 @@
   max-width: 600px;
 }
 
+.SPZ-1005 .spz-hero .spz-form-wrap .spz-form-section .the-form {
+  width: 100%;
+}
+
 .SPZ-1005 .spz-form-wrap .site-logo {
   display: inline-flex;
   flex-wrap: wrap;
@@ -584,7 +588,9 @@ select:-webkit-autofill:active {
   line-height: 1.6;
 }
 
-.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap>label#LblGlobal_Opt_out__c, .SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap>label#LblGlobal_Opt_in__c {
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap>label#LblGlobal_Opt_out__c,
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap>label#LblGlobal_Opt_in__c,
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap>label#LblcCPAAgeVerification {
   display: none;
 }
 
@@ -677,6 +683,9 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 4px 0 0 !important;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
 }
 
 .SPZ-1005:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError:not(.customError),
@@ -749,7 +758,9 @@ select:-webkit-autofill:active {
   display: flex;
 }
 
-.SPZ-1005 .spz-form-section form.mktoForm .mktoCheckboxList input {
+.SPZ-1005 .spz-form-section form.mktoForm .mktoCheckboxList input,
+.SPZ-1005 .spz-form-section form.mktoForm input[type="checkbox"] {
+  min-width: 16px;
   width: 16px;
   height: 16px;
   position: relative;
@@ -882,7 +893,9 @@ select:-webkit-autofill:active {
     width: 100% !important;
   }
 
-  .SPZ-1005 .spz-form-section form.mktoForm .mktoCheckboxList input {
+  .SPZ-1005 .spz-form-section form.mktoForm .mktoCheckboxList input,
+  .SPZ-1005 .spz-form-section form.mktoForm input[type="checkbox"] {
+    min-width: 20px;
     width: 20px;
     height: 20px;
     top: 0;
