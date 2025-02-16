@@ -676,7 +676,7 @@ select:-webkit-autofill:active {
   box-shadow: inset 0 0 0 1px #0071CE;
 }
 
-.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError, .SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 {
   position: relative;
   top: unset !important;
   bottom: unset !important;
@@ -688,13 +688,13 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 
-.SPZ-1005:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError:not(.customError),
-.SPZ-1005.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError.customError,
-.SPZ-1005 .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError.customError {
+.SPZ-1005:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError,
+.SPZ-1005.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError_1.customError,
+.SPZ-1005 .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError_1.customError {
   display: none !important;
 }
 
-.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg, .SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 .mktoErrorMsg {
   background: transparent;
   max-width: unset;
   color: #E6241E;
@@ -712,7 +712,7 @@ select:-webkit-autofill:active {
   flex-wrap: wrap;
 }
 
-.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+.SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before, .SPZ-1005 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 .mktoErrorMsg::before {
   position: absolute;
   content: "";
   width: 12px;
