@@ -7,6 +7,13 @@
       if (getCookie('spz_8001_form_submit') === 'true') {
         // document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('hidden');
       } else {
+        // hide section on initial load
+        waitForElm('.spz-8001 .page-transition #product-features').then(() => {
+          document.querySelector('.spz-8001 .page-transition #product-features').classList.add('spz-sec-hide');
+          document.querySelector('.spz-8001 .page-transition main > .filter-element').classList.add('spz-sec-hide');
+          document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('spz-sec-hide');
+          document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.remove('hidden');
+        });
         formModify();
       }
 
@@ -15,12 +22,6 @@
   }
 
   function formModify() {
-    // hide section on initial load
-    document.querySelector('.spz-8001 .page-transition #product-features').classList.add('spz-sec-hide');
-    document.querySelector('.spz-8001 .page-transition main > .filter-element').classList.add('spz-sec-hide');
-    document.querySelector('.spz-8001 .page-transition #contact-us').classList.add('spz-sec-hide');
-    document.querySelector('.spz-8001 .page-transition main > .resource-form-row').classList.remove('hidden');
-
     if (document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner') && !document.querySelector('.spz-form-title-wrapper')) {
       document.querySelector('#page-container .page-transition main .resource-form-row .row__inner > .column:last-child .column__inner').insertAdjacentHTML('afterbegin', `<div class="spz-form-title-wrapper"><h6 class="f-title">See how SailPoint's identity security platform works</h6></div>`);
     }
