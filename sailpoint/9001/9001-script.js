@@ -395,6 +395,9 @@
   });
 
   function removeTest() {
+    if (document.querySelector('.spz-modal')) {
+      document.querySelector('.spz-modal').remove();
+    }
     setTimeout(() => {
       if (document.querySelector('.spz_9001')) {
         document.body.classList.remove("spz_9001");
@@ -402,9 +405,6 @@
       if (document.querySelector('.spz-show-modal')) {
         document.body.classList.remove('spz-show-modal');
         document.querySelector('html').classList.remove('spz-no-scroll');
-      }
-      if (document.querySelector('.spz-modal')) {
-        document.querySelector('.spz-modal').remove();
       }
     }, 2000);
   }

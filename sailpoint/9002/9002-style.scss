@@ -528,9 +528,11 @@ select:-webkit-autofill:active {
   justify-content: space-between;
   width: 100% !important;
   font-family: $poppins;
+  padding: 0;
 
   * {
     font-family: $poppins;
+    padding: 0;
   }
 }
 
@@ -560,6 +562,14 @@ select:-webkit-autofill:active {
   &.row_contactFormComments {
     .mktoFieldWrap .mktoField:not([type="checkbox"]) {
       height: 88px;
+      white-space: normal;
+      overflow: auto;
+      //css to hide scrollbar for all browsers
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+      }
     }
   }
 
@@ -628,16 +638,26 @@ select:-webkit-autofill:active {
   z-index: 9;
 }
 
-.spz_9002
-  .page-transition
-  .inner-row__inner
-  form.mktoForm
-  .mktoFieldWrap
-  label.mktoLabel#LblreceivingAdvertisingInformation {
-  position: relative;
-  top: unset;
-  left: unset;
-  padding: 0;
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap {
+  label.mktoLabel#LblreceivingAdvertisingInformation,
+  .mktoLabel#LblmandatoryCollectionandUseofPersonalInfo,
+  .mktoLabel#LbloptionalCollectionandUseofInformation {
+    position: relative;
+    top: unset;
+    left: unset;
+    padding: 0;
+    font-weight: 400;
+    color: #415364;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 0;
+  }
+
+  > label#LblGlobal_Opt_out__c,
+  > label#LblGlobal_Opt_in__c,
+  > label#LblcCPAAgeVerification {
+    display: none;
+  }
 }
 
 .spz_9002
@@ -795,7 +815,7 @@ select:-webkit-autofill:active {
   .mktoFieldWrap.active.typing
   .mktoField:not([type="checkbox"]) {
   border-color: #0071ce;
-  box-shadow: 0 0 0 1px #0071ce;
+  box-shadow: inset 0 0 0 1px #0071ce;
 }
 
 .spz_9002
@@ -901,8 +921,7 @@ select:-webkit-autofill:active {
   display: none !important;
 }
 
-.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList,
-.spz_9002 .mktoForm input[type="checkbox"] {
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCheckboxList {
   margin-bottom: 0;
 
   input {
@@ -917,6 +936,21 @@ select:-webkit-autofill:active {
     @media screen and (max-width: 767.98px) {
       margin-top: 0;
     }
+  }
+}
+
+.spz_9002 .mktoForm input[type="checkbox"]{
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  padding: 0;
+  outline: none;
+  margin-top: 2px;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 767.98px) {
+    margin-top: 0;
   }
 }
 
@@ -971,12 +1005,16 @@ select:-webkit-autofill:active {
   border-radius: 4px;
   border: none;
   background: #0071ce;
-  color: #fff;
+  color: #fff !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.6;
   transition: all 0.5s ease-in-out;
+
+  &:active {
+    color: #fff;
+  }
 }
 
 .spz_9002
