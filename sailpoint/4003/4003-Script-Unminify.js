@@ -111,8 +111,8 @@
                 <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
                 <div class="social-proof-images">
                   ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
-                    return `<img src="${item.url}" alt="${item.imgAlt}" width="84" height="60">`;
-                  }).join("") : ""}
+                return `<img src="${item.url}" alt="${item.imgAlt}" width="84" height="60">`;
+              }).join("") : ""}
                 </div>
               </div>` : ``}
               <section class="business-value">
@@ -127,8 +127,8 @@
               </section>`;
 
               document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
-              let formLoaded = setInterval(()=>{
-                if(document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input')){
+              let formLoaded = setInterval(() => {
+                if (document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input')) {
                   clearInterval(formLoaded)
                   document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
                   document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
@@ -138,11 +138,11 @@
               });
 
               function loadVidyardScript(callback) {
-                if (window.VidyardV4 && window.VidyardV4.api) { callback(); return;}
+                if (window.VidyardV4 && window.VidyardV4.api) { callback(); return; }
                 const script = document.createElement("script");
                 script.src = "https://play.vidyard.com/embed/v4.js";
                 script.async = true;
-                script.onload = () => {waitForVidyardAPI(callback);};
+                script.onload = () => { waitForVidyardAPI(callback); };
                 document.head.appendChild(script);
               }
               function waitForVidyardAPI(callback, attempts = 10) {
@@ -160,12 +160,12 @@
                 if (!container) {
                   return;
                 }
-                window.VidyardV4.api.renderPlayer({uuid: "C6CvYyMyXN8GUs6tiKa2th", container: document.querySelector(".business-value .vidyard-section"), type: "lightbox", v: 4, autoplay: 1}); 
+                window.VidyardV4.api.renderPlayer({ uuid: "C6CvYyMyXN8GUs6tiKa2th", container: document.querySelector(".business-value .vidyard-section"), type: "lightbox", v: 4, autoplay: 1 });
               }
               loadVidyardScript(initializeVidyardPlayer);
-              
+
             }
-            addBaseline(template_formContent,template_position,template_formSelector,template_heroSelector,template_additionalSection,template_businessValueSection);
+            addBaseline(template_formContent, template_position, template_formSelector, template_heroSelector, template_additionalSection, template_businessValueSection);
 
             function formModify() {
               // Add class in mktoFormRow using count
@@ -189,46 +189,46 @@
 
               function checkEmail() {
                 const emailField = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm input[name="Email"]');
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
                 if (emailField) {
-                    if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
-                      if(!emailField.parentElement.querySelector('.customError')){
-                        emailField.insertAdjacentHTML('afterend', '<div class="mktoError customError"><div class="mktoErrorMsg">valid email required.</div></div>');
-                      }
+                  if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
+                    if (!emailField.parentElement.querySelector('.customError')) {
+                      emailField.insertAdjacentHTML('afterend', '<div class="mktoError customError"><div class="mktoErrorMsg">valid email required.</div></div>');
                     }
+                  }
                 }
               }
               // On input focus add class on closest parent field class
               function focusFields() {
                 // Attach events using event delegation
                 const form = document.querySelector('.SPZ_4003_V1 form.mktoForm');
-                let emailFocusCount = 0; 
+                let emailFocusCount = 0;
                 form.addEventListener('focus', function (event) {
                   const el = event.target;
                   if (el.classList.contains('mktoField')) {
                     el.closest('.mktoFieldWrap').classList.add('active', 'typing');
                     checkAllFields();
                   }
-                  if(el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
+                  if (el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
                     emailFocusCount++;
-                    if(emailFocusCount > 2){
+                    if (emailFocusCount > 2) {
                       emailFocusCount = 2;
                     }
-                    if(emailFocusCount === 2){
-                      el.closest('.mktoFieldWrap').classList.add('emailerror'); 
+                    if (emailFocusCount === 2) {
+                      el.closest('.mktoFieldWrap').classList.add('emailerror');
                       checkEmail();
                     }
                   }
                 }, true);
                 form.addEventListener('keyup', function (event) {
-                  if(!document.body.classList.contains('form-expand')){
+                  if (!document.body.classList.contains('form-expand')) {
                     const el = event.target;
                     const fieldName = el.getAttribute('name');
-                    if(document.querySelector('input[name="Email"]').value.trim() !== ''){
-                      var newEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                    if (document.querySelector('input[name="Email"]').value.trim() !== '') {
+                      var newEmailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
                       if (newEmailRegex.test(document.querySelector('input[name="Email"]').value.trim())) {
                         el.closest('.mktoFieldWrap').classList.remove('emailerror');
-                      }else{
+                      } else {
                         el.closest('.mktoFieldWrap').classList.add('emailerror');
                       }
                     }
@@ -236,13 +236,13 @@
                     const firstName = document.querySelector('input[name="FirstName"]').value.trim();
                     const lastName = document.querySelector('input[name="LastName"]').value.trim();
                     const emailValue = document.querySelector('input[name="Email"]').value.trim();
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                    const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
                     if (['FirstName', 'LastName', 'Email'].includes(fieldName)) {
                       if (firstName && lastName && emailRegex.test(emailValue)) {
                         document.body.classList.add('form-expand');
                       }
                     }
-                  } 
+                  }
                 }, true);
 
                 form.addEventListener('blur', function (event) {
@@ -250,6 +250,29 @@
                   if (el.classList.contains('mktoField')) {
                     el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
                     checkAllFields();
+                  }
+
+                  if (!document.body.classList.contains('form-expand')) {
+                    const el = event.target;
+                    const fieldName = el.getAttribute('name');
+                    if (document.querySelector('input[name="Email"]').value.trim() !== '') {
+                      var newEmailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                      if (newEmailRegex.test(document.querySelector('input[name="Email"]').value.trim())) {
+                        el.closest('.mktoFieldWrap').classList.remove('emailerror');
+                      } else {
+                        el.closest('.mktoFieldWrap').classList.add('emailerror');
+                      }
+                    }
+
+                    const firstName = document.querySelector('input[name="FirstName"]').value.trim();
+                    const lastName = document.querySelector('input[name="LastName"]').value.trim();
+                    const emailValue = document.querySelector('input[name="Email"]').value.trim();
+                    const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                    if (['FirstName', 'LastName', 'Email'].includes(fieldName)) {
+                      if (firstName && lastName && emailRegex.test(emailValue)) {
+                        document.body.classList.add('form-expand');
+                      }
+                    }
                   }
                 }, true);
 
@@ -397,7 +420,7 @@
                       checkbox.checked = true;
                     }
                   }, 100);
-  
+
                   setTimeout(() => {
                     clearInterval(checkboxInterval);
                   }, 5000);
@@ -489,12 +512,12 @@
 
     document.addEventListener('click', function (e) {
       if (e.target.closest('#mktoForm_1016 .mktoButton')) {
-          //inject current time and date in EST timezone into .intellimize2 hidden field
-          var d = new Date();
-          var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-          var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-          if (int2)
-              int2.value = n;
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
       }
     });
   }
