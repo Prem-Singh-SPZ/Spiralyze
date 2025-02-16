@@ -529,8 +529,9 @@ select:-webkit-autofill:active {
   width: auto !important;
   display: flex;
 }
-.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input {
-  width: 16px;
+.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input,.SPZ_4003_V1 .spz-form-section form.mktoForm input[type="checkbox"] {
+  min-width: 16px;
+  max-width: 16px;
   height: 16px;
   min-width: 16px;
   position: relative;
@@ -748,8 +749,9 @@ select:-webkit-autofill:active {
   .SPZ_4003_V1 .spz-hero .spz-form-section {
     padding: 41px 24px 24px;
   }
-  .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input {
-    width: 20px;
+  .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoCheckboxList input, .SPZ_4003_V1 .spz-form-section form.mktoForm input[type="checkbox"] {
+    min-width: 20px;
+    max-width: 20px;
     height: 20px;
     min-width: 20px;
     top: 5px;

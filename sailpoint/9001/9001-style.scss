@@ -22,7 +22,7 @@ html.spz-no-scroll {
 
   .hero + .row {
     position: relative;
-    padding: 64px 0 56px;
+    padding: 64px 0 32px;
     overflow: hidden;
 
     &::before {
@@ -135,7 +135,7 @@ html.spz-no-scroll {
     width: 100%;
     max-width: 1288px;
     padding: 0 20px;
-    margin: 8px auto 64px;
+    margin: 32px auto 64px;
 
     .social-proof-heading {
       color: #415364;
@@ -512,7 +512,7 @@ html.spz-no-scroll {
 
 @media (max-width: 1199.98px) {
   .spz_9001 .hero + .row {
-    padding: 64px 0;
+    padding: 64px 0 32px;
     // margin-bottom: 134px;
   }
 
@@ -565,7 +565,7 @@ html.spz-no-scroll {
   .spz_9001 .social-proof-logos {
     max-width: unset;
     padding: 0;
-    margin: 0 auto 65px;
+    margin: 32px auto 65px;
     position: relative;
     overflow: hidden;
   }
@@ -621,6 +621,7 @@ html.spz-no-scroll {
   .spz_9001 .hero + .row {
     // padding: 16px 0 64px;
     margin-bottom: 0;
+    padding-bottom: 32px;
   }
 
   .spz_9001 .hero + .row:before {
@@ -661,7 +662,7 @@ html.spz-no-scroll {
   }
 
   .spz_9001 .social-proof-logos {
-    margin: 0 auto;
+    margin: 32px auto 0;
   }
 
   .spz_9001 .social-proof-logos .social-proof-heading {
@@ -758,6 +759,12 @@ select:-webkit-autofill:active {
       height: 88px;
       white-space: normal;
       overflow: auto;
+      //css to hide scrollbar for all browsers
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+      }
     }
   }
 
