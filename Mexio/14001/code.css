@@ -46,19 +46,12 @@ body.spz_14001::before {
 body.spz_14001 .sandbox-app {
   position: relative;
   z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 body.spz_14001 .sandbox-app .sandbox-login-card {
-  margin: 24px 0;
-}
-@media (min-width: 767.98px) and (min-height: 550px) {
-  body.spz_14001 .sandbox-app .sandbox-login-card {
-    height: -webkit-fill-available;
-  }
-}
-@media (max-width: 767.98px) and (min-height: 750px) {
-  body.spz_14001 .sandbox-app .sandbox-login-card {
-    height: -webkit-fill-available;
-  }
+  padding: 50px 0;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content {
   border: none;

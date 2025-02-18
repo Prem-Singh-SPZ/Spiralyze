@@ -62,19 +62,11 @@ body.spz_14001 {
   .sandbox-app {
     position: relative;
     z-index: 1;
+    display: grid;
+    place-items: center;
 
     .sandbox-login-card {
-      margin: 24px 0;
-      // padding: 0;
-
-      @media (min-width: 767.98px) and (min-height: 550px) {
-        // align-items: flex-start;
-        height: -webkit-fill-available;
-      }
-
-      @media (max-width: 767.98px) and (min-height: 750px) {
-        height: -webkit-fill-available;
-      }
+      padding: 50px 0;
     }
 
     .chargify-login-card#app_content {
@@ -124,7 +116,7 @@ body.spz_14001 {
               margin: 0 0 20px;
               padding: 5px 10px;
 
-              p{
+              p {
                 margin: 0;
               }
             }
