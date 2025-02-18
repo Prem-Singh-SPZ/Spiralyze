@@ -60,14 +60,14 @@ const formInt = setInterval(() => {
         </div>`);
         // Append 'PCI DSS' after second '.hs_demo_product_of_interest .inputs-list.multi-container label'
         // FYI, this is added because the 'PCI DSS' checkbox is not available in the form
-    //     document.querySelector('.hs_demo_product_of_interest .inputs-list.multi-container li:nth-child(2)').insertAdjacentHTML('afterend', `
-    //     <li class="hs-form-checkbox" role="checkbox">
-    //         <label class="hs-form-checkbox-display" for="demo_product_of_interest6-pci-dss-1">
-    //             <input class="hs-input" type="checkbox" name="demo_product_of_interest" value="PCI DSS">
-    //             <span>PCI DSS</span>
-    //         </label>
-    //     </li>
-    // `);
+        //     document.querySelector('.hs_demo_product_of_interest .inputs-list.multi-container li:nth-child(2)').insertAdjacentHTML('afterend', `
+        //     <li class="hs-form-checkbox" role="checkbox">
+        //         <label class="hs-form-checkbox-display" for="demo_product_of_interest6-pci-dss-1">
+        //             <input class="hs-input" type="checkbox" name="demo_product_of_interest" value="PCI DSS">
+        //             <span>PCI DSS</span>
+        //         </label>
+        //     </li>
+        // `);
 
         // Hide '.hs_demo_product_of_interest' and its parent 'fieldset'
         document.querySelector('.hs_demo_product_of_interest').parentElement.style.display = 'none';
@@ -171,6 +171,7 @@ function stepOneCheckboxes() {
         // Convert to lowercase and replace space with underscore
         const lbl = item.label.trim();
         const lci = lbl.toLowerCase().replace(/\s/g, '_');
+        const desc = item.desc ? item.desc : '';
 
         document.querySelector('.form-step-1 .framework-wrapper-spz').insertAdjacentHTML('beforeend', `
             <label class="custom-checkbox-spz with-icons" for="${item.for}" data-for="${item.for}">
@@ -179,11 +180,14 @@ function stepOneCheckboxes() {
                 </div>
                 <div class="ccs-wrap">
                     <div class="ccs-label">
+                        <div class="ccs-checkbox-lbl">
+                            <p class="lbl-bold">${lbl}</p>
+                            <p class="ccs-normal">${desc}</p>
+                        </div>
                         <div class="ccs-checkbox">
                             <input type="checkbox" id="${lci}" name="${lci}">
                             <span class="ccs-box"></span>
                         </div>
-                        ${lbl}
                     </div>
                 </div>
             </label>`);
@@ -218,6 +222,21 @@ function getIconByLabel(label) {
         {
             ico: 'v1690459079/drata/6009/custom_frameworks_1.svg',
             label: 'Other'
+        },
+        {
+            ico: 'v1739316293/drata/6023/icon-compliance-automation.svg',
+            label: 'Compliance Automation',
+            desc: 'SOC 2, ISO 27001, HIPAA, GDPR, etc'
+        },
+        {
+            ico: 'v1739316293/drata/6023/icon-trust-center.svg',
+            label: 'Trust Center',
+            desc: 'Manage and publish your security posture'
+        },
+        {
+            ico: 'v1739316293/drata/6023/icon-ai-security.svg',
+            label: 'AI Security Questionnaire Automation',
+            desc: 'Automate security reviews with Drata AI'
         }
     ];
 
