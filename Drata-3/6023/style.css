@@ -789,6 +789,12 @@ img {
   transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz ~ .hs-label-spz {
   display: none;
@@ -801,6 +807,12 @@ img {
   font-size: 16px;
   line-height: 24px;
   color: #485665;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]) {
@@ -1232,6 +1244,13 @@ img {
   line-height: 18px !important;
   margin-top: 12px !important;
 }
+@media (max-width: 1199.98px) {
+  .form-wrapper-spz .hbspt-form form .privacy-policy-spz {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form .partnership-spz {
   color: #96a1b2 !important;
@@ -1243,6 +1262,7 @@ img {
   line-height: 18px;
   text-align: center;
   width: 100%;
+  margin-top: 5px;
 }
 
 .form-wrapper-spz .hbspt-form form .hs-submit {
@@ -3088,7 +3108,7 @@ img {
   }
 }
 body .hero-section .form-wrapper-spz {
-  padding: 32px 40px;
+  padding: 32px 40px 40px;
 }
 
 body .hero-section .form-wrapper-spz.step-1-active {
