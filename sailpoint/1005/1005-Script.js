@@ -506,7 +506,7 @@
       if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
         if (!emailField.parentElement.querySelector('.customError')) {
           if (emailField.closest('.mktoFieldWrap').querySelectorAll('.customError').length == 0) {
-            emailField.insertAdjacentHTML('afterend', '<div class="mktoError_1 customError"><div class="mktoErrorMsg">valid email required.</div></div>');
+            emailField.insertAdjacentHTML('afterend', '<div class="mktoError_1 customError"><div class="mktoErrorMsg">Valid email required.</div></div>');
           }
         }
       }
