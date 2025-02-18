@@ -637,22 +637,22 @@ img {
   }
   .hero-section .list-grp-wrapper .list-group {
     margin-bottom: 0;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item {
     margin-bottom: 18px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item .ls-title {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
     margin-bottom: 0;
   }
   .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item:before {
-    top: -2px;
+    top: 0px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item:last-child {
     margin-bottom: 0;
@@ -698,11 +698,16 @@ img {
           justify-content: space-between;
   margin-top: 24px;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form {
+    margin-top: 15px;
+  }
+}
 .form-wrapper-spz .hbspt-form form .spz-back-arrow {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 48px;
+  top: 40px;
   left: 40px;
   cursor: pointer;
 }
@@ -710,8 +715,8 @@ img {
   .form-wrapper-spz .hbspt-form form .spz-back-arrow {
     width: 24px;
     height: 24px;
-    top: 32px;
-    left: 18px;
+    top: 24px;
+    left: 16px;
   }
 }
 .form-wrapper-spz .hbspt-form form .spz-back-arrow svg {
@@ -788,11 +793,13 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
+  white-space: nowrap;
 }
 @media (max-width: 767.98px) {
   .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz {
     font-size: 14px;
     line-height: 20px;
+    top: 14px;
   }
 }
 
@@ -839,6 +846,11 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]) {
+    height: 48px;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
   display: none;
@@ -865,15 +877,8 @@ img {
   color: transparent;
 }
 
-.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover {
-  border-color: #0068c9 !important;
-}
-.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover ~ label {
-  color: #485665;
-}
-
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus {
-  border-color: #697586 !important;
+  border-color: #0068c9 !important;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus ~ label {
@@ -886,6 +891,34 @@ img {
   font-size: 12px;
   color: #d53641;
   font-weight: 700;
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-moz-placeholder-shown) ~ label {
+  top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #697586;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-ms-input-placeholder) ~ label {
+  top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #697586;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-moz-placeholder-shown) ~ label {
@@ -915,6 +948,18 @@ img {
   color: #697586;
   font-weight: 700;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus ~ label,
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(:placeholder-shown) ~ label {
+    top: 0;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input[type=checkbox] ~ span,
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input[type=radio] ~ span {
@@ -938,18 +983,45 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border-color: #293642;
+  border-color: #697586;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border-color: #293642;
+  border-color: #697586;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
-  border-color: #293642;
+  border-color: #697586;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  top: 4px;
+  color: #485665;
+  font-size: 12px;
+  line-height: 18px;
+  height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  color: #485665;
+  top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  color: #485665;
   top: 4px;
   font-size: 12px;
   line-height: 18px;
@@ -957,6 +1029,7 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  color: #485665;
   top: 4px;
   font-size: 12px;
   line-height: 18px;
@@ -964,10 +1037,22 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
+  color: #485665;
   top: 4px;
   font-size: 12px;
   line-height: 18px;
   height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
+    top: 0;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
@@ -996,7 +1081,7 @@ img {
   -moz-appearance: none;
   appearance: none;
   -webkit-appearance: none;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg") #fff no-repeat right 0px center !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M15.8805 9.29L12.0005 13.17L8.12047 9.29C7.73047 8.9 7.10047 8.9 6.71047 9.29C6.32047 9.68 6.32047 10.31 6.71047 10.7L11.3005 15.29C11.6905 15.68 12.3205 15.68 12.7105 15.29L17.3005 10.7C17.6905 10.31 17.6905 9.68 17.3005 9.29C16.9105 8.91 16.2705 8.9 15.8805 9.29Z' fill='%23697586'/%3E%3C/svg%3E") #fff no-repeat right 0px center !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1031,12 +1116,40 @@ img {
   width: calc(100% - 60px);
   height: 30px;
 }
-.form-wrapper-spz .hbspt-form form fieldset .field.field-untouched .input .hs-input:hover ~ .hs-label-spz {
-  color: #485665 !important;
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-untouched .input .hs-label-spz {
+    font-size: 14px;
+    line-height: 20px;
+    top: 14px;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input {
   border-color: #d53641;
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+}
+
+.form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
@@ -1059,6 +1172,17 @@ img {
   line-height: 18px;
   height: 18px;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
+    top: 0;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
   top: 4px;
@@ -1066,12 +1190,22 @@ img {
   line-height: 18px;
   height: 18px;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+    top: 0;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
   top: 4px;
   font-size: 12px;
   line-height: 18px;
   height: 18px;
+}
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+    top: 0;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error.hs-fieldtype-select .input .hs-label-spz {
@@ -1104,7 +1238,7 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox).hs-fieldtype-select select {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg") #fff no-repeat right 0px center !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' transform='rotate(180)'%3E%3Cpath d='M15.8805 9.29L12.0005 13.17L8.12047 9.29C7.73047 8.9 7.10047 8.9 6.71047 9.29C6.32047 9.68 6.32047 10.31 6.71047 10.7L11.3005 15.29C11.6905 15.68 12.3205 15.68 12.7105 15.29L17.3005 10.7C17.6905 10.31 17.6905 9.68 17.3005 9.29C16.9105 8.91 16.2705 8.9 15.8805 9.29Z' fill='%23697586'/%3E%3C/svg%3E") #fff no-repeat right 0px center !important;
 }
 
 .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox {
@@ -1251,6 +1385,11 @@ img {
     margin-right: auto;
   }
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form .privacy-policy-spz {
+    max-width: 95%;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form .partnership-spz {
   color: #96a1b2 !important;
@@ -1262,7 +1401,12 @@ img {
   line-height: 18px;
   text-align: center;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 3.5px;
+}
+@media screen and (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form .partnership-spz {
+    margin: 3.5px 12px 8px;
+  }
 }
 
 .form-wrapper-spz .hbspt-form form .hs-submit {
@@ -1377,7 +1521,7 @@ img {
 .form-wrapper-spz .hbspt-form form textarea:-webkit-autofill:focus,
 .form-wrapper-spz .hbspt-form form textarea:-webkit-autofill:hover {
   background-color: #fff;
-  -webkit-text-fill-color: #0c131a;
+  -webkit-text-fill-color: #485665;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 
@@ -1386,7 +1530,7 @@ img {
 .form-wrapper-spz .hbspt-form form .hs-input:-webkit-autofill:focus,
 .form-wrapper-spz .hbspt-form form .hs-input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 56px #fff inset !important;
-  -webkit-text-fill-color: #0c131a !important;
+  -webkit-text-fill-color: #485665 !important;
 }
 
 .hbspt-form .submitted-message {
@@ -1442,11 +1586,11 @@ img {
             align-items: center;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field {
-    width: 292px !important;
+    width: 296px !important;
     margin-bottom: 10px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field .input {
-    width: 292px;
+    width: 296px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox {
     margin-top: 21px;
@@ -1473,12 +1617,16 @@ img {
     margin-bottom: 8px;
   }
   .form-wrapper-spz .hbspt-form form .actions {
-    margin-top: 20px;
-    width: 292px;
+    margin-top: 12px;
+    width: 296px;
+  }
+  .form-wrapper-spz .hbspt-form form .actions .hs-button {
+    height: 48px;
+    padding: 10px 59px 10px 30px;
   }
   .form-wrapper-spz .hbspt-form form .actions:before {
-    top: 22px;
-    right: 73px;
+    top: 16px;
+    right: 80px;
     height: 16px;
     width: 16px;
     background-size: 16px;
@@ -2549,6 +2697,11 @@ img {
   line-height: 18px;
   top: 4px;
 }
+@media (max-width: 767.98px) {
+  .review-get-started .get-started-section .get-started-input .form-input-field:focus + label {
+    top: 0;
+  }
+}
 
 .review-get-started .get-started-section .get-started-input label {
   color: var(--neutral-500, #697586);
@@ -2613,6 +2766,11 @@ img {
   font-size: 12px;
   line-height: 18px;
   top: 4px;
+}
+@media (max-width: 767.98px) {
+  .review-get-started .get-started-section .get-started-input.input-filled label {
+    top: 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -3223,9 +3381,6 @@ body .framework-wrapper-spz .custom-checkbox-spz {
   -webkit-transition-duration: 150ms;
   transition-duration: 150ms;
 }
-body .framework-wrapper-spz .custom-checkbox-spz:nth-child(-n+5) {
-  display: none;
-}
 
 body .framework-wrapper-spz .custom-checkbox-spz.with-icons .ccs-icon-wrap {
   width: 40px;
@@ -3386,8 +3541,8 @@ body .actions {
   position: relative;
   max-width: initial;
   height: 60px;
-  margin: 21px auto 8px;
-  max-width: 524px;
+  margin: 21px auto 0;
+  max-width: 100%;
 }
 
 body .actions .hs-button-spz {
@@ -3437,7 +3592,7 @@ body .actions .hs-button-spz:before {
   body .actions {
     width: 100%;
     max-width: initial;
-    margin: 13px auto 8px;
+    margin: 13px auto 0;
   }
 }
 @media (max-width: 767.98px) {

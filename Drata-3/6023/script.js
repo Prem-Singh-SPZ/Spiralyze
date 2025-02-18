@@ -30,6 +30,8 @@ const formInt = setInterval(() => {
         document.querySelectorAll('select.hs-input').forEach(function (el) {
             if (el.options.length > 0) {
                 el.closest('.field').classList.add('field-untouched');
+                //set autocomplete off
+                el.setAttribute('autocomplete', 'denied');
             }
         });
 
@@ -254,6 +256,15 @@ function getCheckBoxContent(controlLabel) {
 
 function checkboxEvents() {
     document.querySelectorAll('.form-step-1 .custom-checkbox-spz').forEach((checkbox) => {
+        //by default add active class to first checkbox and checked attribute to its input
+        if (checkbox.getAttribute('data-for') == 'demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514') {
+            checkbox.classList.add('active');
+            checkbox.querySelector('input').setAttribute('checked', true);
+            if (document.querySelector('.hs-form-checkbox-display[for="demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514"]')) {
+                document.querySelector('.hs-form-checkbox-display[for="demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514"]').click();
+            }
+        }
+
         checkbox.addEventListener('click', () => {
             // Add active class and checked attribute to clicked checkbox
             if (!checkbox.classList.contains('active') && checkbox.getAttribute('for')) {
@@ -433,79 +444,3 @@ document.addEventListener('keyup', function (e) {
 if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
     document.body.classList.add('safari');
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    waitForElm('form#hsForm_429140d2-bd90-4a8b-a561-5d732c9bd514').then(function () {
-        var form = document.getElementById('hsForm_429140d2-bd90-4a8b-a561-5d732c9bd514');
-        if (form) {
-            form.addEventListener('submit', function () {
-                if (window.dataLayer) {
-                    var element = form.querySelector('input[name="email"]').value;
-                    window.dataLayer.push({
-                        event: 'hubspot - form - success',
-                        user_data: { email: element }
-                    });
-                }
-            });
-        }
-    });
-});
-
-function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-    });
-}
-
-
-// Add header-fixed class to body when scroll more than 100px
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 70) {
-        document.body.classList.add('header-fixed');
-    } else {
-        document.body.classList.remove('header-fixed');
-    }
-});
-
-// On click of get demo button, scroll to the form '.form-wrapper-spz' section - 100px
-document.querySelector('.get-demo-spz').addEventListener('click', function (e) {
-    if (window.innerWidth < 1281) {
-        e.preventDefault();
-        e.stopPropagation();
-        var xs = document.querySelector('.hero-content').getBoundingClientRect();
-        window.scroll(0, xs.height)
-    } else if (window.innerWidth > 1280) {
-        document.querySelector('body').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-        });
-    }
-});
-
-// Move '.hs-form-spz .privacy-policy-spz' after '.hs-submit' in the form
-waitForElm('.hs-form-spz .privacy-policy-spz').then(function () {
-    var form = document.querySelector('.hs-form-spz');
-    var privacyPolicy = document.querySelector('.privacy-policy-spz');
-    var submit = document.querySelector('.hs-submit');
-    if (form && privacyPolicy && submit) {
-        form.insertBefore(privacyPolicy, submit.nextSibling);
-
-        waitForElm('.hs-form-spz .partnership-spz').then(function () {
-            var partner = document.querySelector('.partnership-spz');
-
-            if (partner) {
-                form.insertBefore(partner, privacyPolicy.nextSibling);
-            }
-        });
-    }
-});
