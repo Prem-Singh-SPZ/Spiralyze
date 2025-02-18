@@ -143,7 +143,7 @@ html.spz-no-scroll {
           @media (max-width: 767.98px) {
             font-size: 21px;
             line-height: 140%;
-            margin: 0 auto 12px;
+            margin: 0 auto 24px;
           }
         }
 
@@ -167,7 +167,7 @@ html.spz-no-scroll {
           padding: 41px 40px 39px;
 
           @media (max-width: 767.98px) {
-            padding: 24px 6px 38px;
+            padding: 22px 16px 38px;
           }
         }
       }
@@ -271,8 +271,12 @@ html.spz-no-scroll {
 
 .spz_9002 footer {
   width: 100%;
-  padding: 16.5px 0;
+  padding: 24.5px 0;
   margin-top: 0;
+
+  @media screen and (max-width: 1024.98px) {
+    padding: 16.5px 0;
+  }
 
   .container.flex {
     border: none;
@@ -282,9 +286,11 @@ html.spz-no-scroll {
 
     .order-1.text-left.text-sm {
       margin: 0;
+      margin-left: 16px;
 
       @media (max-width: 1024.98px) {
         padding-right: 48px;
+        margin-left: 0;
       }
 
       @media (max-width: 767.98px) {
@@ -552,6 +558,7 @@ select:-webkit-autofill:active {
   width: calc(50% - 8px);
 }
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
+  width: 100%;
   &.row_contactFormComments,
   &.row_Global_Opt_in__c,
   &.row_Global_Opt_out__c,
@@ -773,7 +780,7 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 0.3s ease-in-out;
+  transition: none;
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -974,6 +981,7 @@ select:-webkit-autofill:active {
     cursor: pointer;
     display: inline-flex;
     width: auto;
+    margin-top: 1px;
 
     @media screen and (max-width: 767.98px) {
       // padding-left: 8px;
@@ -983,7 +991,7 @@ select:-webkit-autofill:active {
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 7px;
+  margin-top: 7.5px;
 
   @media screen and (max-width: 767.98px) {
     margin: 20px 4px 0;
@@ -1052,13 +1060,13 @@ select:-webkit-autofill:active {
   .inner-row__inner
   form.mktoForm
   .mktoCaptchaDisclaimer {
-  margin-top: 10.5px;
+  margin-top: 10px;
 }
 
 .spz_9002 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin: 10px 14px 0;
+  margin: 8px 0 0;
 }
 
 .spz_9002.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -1132,6 +1140,7 @@ select:-webkit-autofill:active {
 
   .spz_9002 .page-transition .inner-row__inner .disclaimer {
     text-align: center;
+    margin: 19px 6px 0;
   }
 
   .spz_9002

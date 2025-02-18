@@ -140,7 +140,7 @@ html.spz-no-scroll {
   .spz_9002 .hero + .row > .row__inner .bg-gradient .spz-form-title {
     font-size: 21px;
     line-height: 140%;
-    margin: 0 auto 12px;
+    margin: 0 auto 24px;
   }
 }
 .spz_9002 .hero + .row > .row__inner .bg-gradient p.mx-auto,
@@ -159,7 +159,7 @@ html.spz-no-scroll {
 }
 @media (max-width: 767.98px) {
   .spz_9002 .hero + .row > .row__inner .bg-gradient > .inner-row__inner {
-    padding: 24px 6px 38px;
+    padding: 22px 16px 38px;
   }
 }
 .spz_9002 .social-proof-logos {
@@ -276,8 +276,13 @@ html.spz-no-scroll {
 
 .spz_9002 footer {
   width: 100%;
-  padding: 16.5px 0;
+  padding: 24.5px 0;
   margin-top: 0;
+}
+@media screen and (max-width: 1024.98px) {
+  .spz_9002 footer {
+    padding: 16.5px 0;
+  }
 }
 .spz_9002 footer .container.flex {
   border: none;
@@ -287,10 +292,12 @@ html.spz-no-scroll {
 }
 .spz_9002 footer .container.flex .order-1.text-left.text-sm {
   margin: 0;
+  margin-left: 16px;
 }
 @media (max-width: 1024.98px) {
   .spz_9002 footer .container.flex .order-1.text-left.text-sm {
     padding-right: 48px;
+    margin-left: 0;
   }
 }
 @media (max-width: 767.98px) {
@@ -540,6 +547,9 @@ select:-webkit-autofill:active {
   width: calc(50% - 8px);
 }
 
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
+  width: 100%;
+}
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_contactFormComments, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_in__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_out__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
 }
@@ -674,8 +684,8 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: none;
+  transition: none;
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -825,10 +835,11 @@ select:-webkit-autofill:active {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: auto;
+  margin-top: 1px;
 }
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 7px;
+  margin-top: 7.5px;
 }
 @media screen and (max-width: 767.98px) {
   .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
@@ -888,13 +899,13 @@ select:-webkit-autofill:active {
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCaptchaDisclaimer {
-  margin-top: 10.5px;
+  margin-top: 10px;
 }
 
 .spz_9002 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin: 10px 14px 0;
+  margin: 8px 0 0;
 }
 
 .spz_9002.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -942,6 +953,7 @@ select:-webkit-autofill:active {
   }
   .spz_9002 .page-transition .inner-row__inner .disclaimer {
     text-align: center;
+    margin: 19px 6px 0;
   }
   .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoCaptchaDisclaimer a {
     display: inline-block;
