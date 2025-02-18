@@ -41,7 +41,7 @@ const formInt = setInterval(() => {
         //6006 changes
         document.querySelector('.hbspt-form .hs-form-spz').insertAdjacentHTML('beforebegin', `
         <div class="form-step-1 active">
-            <div class="sub-desc">What compliance frameworks are you interested in?</div>
+            <div class="sub-desc">What product(s) are you interested in?</div>
             <div class="framework-wrapper-spz"></div>
             <div class="actions">
                 <button class="hs-button-spz primary large" type="button">Next</button>
@@ -171,18 +171,17 @@ function stepOneCheckboxes() {
         // Convert to lowercase and replace space with underscore
         const lbl = item.label.trim();
         const lci = lbl.toLowerCase().replace(/\s/g, '_');
-        const desc = item.desc ? item.desc : '';
 
         document.querySelector('.form-step-1 .framework-wrapper-spz').insertAdjacentHTML('beforeend', `
             <label class="custom-checkbox-spz with-icons" for="${item.for}" data-for="${item.for}">
                 <div class="ccs-icon-wrap">
-                    <img src="${getIconByLabel(lbl)}" alt="${lbl}" class="ccs-icon">
+                    <img src="${getCheckBoxContent(lbl).icon}" alt="${lbl}" class="ccs-icon">
                 </div>
                 <div class="ccs-wrap">
                     <div class="ccs-label">
                         <div class="ccs-checkbox-lbl">
-                            <p class="lbl-bold">${lbl}</p>
-                            <p class="ccs-normal">${desc}</p>
+                            <div class="lbl-bold">${getCheckBoxContent(lbl).label}</div>
+                            <div class="ccs-normal">${getCheckBoxContent(lbl).desc}</div>
                         </div>
                         <div class="ccs-checkbox">
                             <input type="checkbox" id="${lci}" name="${lci}">
@@ -196,59 +195,61 @@ function stepOneCheckboxes() {
     checkboxEvents()
 }
 
-function getIconByLabel(label) {
+function getCheckBoxContent(controlLabel) {
     const baseURl = 'https://res.cloudinary.com/spiralyze/image/upload/';
     const icons = [
         {
             ico: 'v1690459033/drata/6009/soc_2.svg',
-            label: 'SOC 2'
+            ctrlLabel: 'SOC 2'
         },
         {
             ico: 'v1690459081/drata/6009/iso_webp_1.webp',
-            label: 'ISO 27001'
+            ctrlLabel: 'ISO 27001'
         },
         {
             ico: 'v1690971738/drata/6009/pci_1.svg',
-            label: 'PCI DSS'
+            ctrlLabel: 'PCI DSS'
         },
         {
             ico: 'v1690459033/drata/6009/hipaa.svg',
-            label: 'HIPAA'
+            ctrlLabel: 'HIPAA'
         },
         {
             ico: 'v1690459033/drata/6009/gdpr.svg',
-            label: 'GDPR'
+            ctrlLabel: 'GDPR'
         },
         {
             ico: 'v1690459079/drata/6009/custom_frameworks_1.svg',
-            label: 'Other'
+            ctrlLabel: 'Other'
         },
         {
             ico: 'v1739316293/drata/6023/icon-compliance-automation.svg',
+            ctrlLabel: 'Compliance Automation (SOC 2, ISO 27001, HIPAA, GDPR, etc.)',
             label: 'Compliance Automation',
             desc: 'SOC 2, ISO 27001, HIPAA, GDPR, etc'
         },
         {
             ico: 'v1739316293/drata/6023/icon-trust-center.svg',
-            label: 'Trust Center',
+            ctrlLabel: 'Trust Center',
             desc: 'Manage and publish your security posture'
         },
         {
             ico: 'v1739316293/drata/6023/icon-ai-security.svg',
-            label: 'AI Security Questionnaire Automation',
+            ctrlLabel: 'AI Security Questionnaire Automation',
             desc: 'Automate security reviews with Drata AI'
         }
     ];
 
     let icon = icons.find((item) => {
-        return item.label == label;
+        return item.ctrlLabel == controlLabel;
     });
+
 
     if (icon == undefined) {
         return false;
     }
 
-    return baseURl + icon.ico;
+    return { icon: baseURl + icon.ico, label: icon.label ? icon.label : icon.ctrlLabel, desc: icon.desc ? icon.desc : '' };
 }
 
 function checkboxEvents() {
@@ -293,6 +294,10 @@ function forClearBitForms() {
             el.closest('fieldset').classList.add('field-hidden');
         } else {
             el.closest('fieldset').classList.remove('field-hidden');
+        }
+
+        if (document.querySelector('.form-columns-1[style*="display: none"] + .form-columns-0')) {
+            document.querySelector('.form-columns-1[style*="display: none"] + .form-columns-0').classList.add('field-hidden');
         }
 
         // Make 'How did you hear about us?' field full width if hidden fields count is odd
@@ -494,5 +499,13 @@ waitForElm('.hs-form-spz .privacy-policy-spz').then(function () {
     var submit = document.querySelector('.hs-submit');
     if (form && privacyPolicy && submit) {
         form.insertBefore(privacyPolicy, submit.nextSibling);
+
+        waitForElm('.hs-form-spz .partnership-spz').then(function () {
+            var partner = document.querySelector('.partnership-spz');
+
+            if (partner) {
+                form.insertBefore(partner, privacyPolicy.nextSibling);
+            }
+        });
     }
 });
