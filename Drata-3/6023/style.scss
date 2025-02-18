@@ -714,14 +714,10 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: 24px;
 
   .spz-back-arrow {
     width: 32px;
@@ -1589,13 +1585,38 @@ img {
 }
 
 .form-wrapper-spz .hbspt-form form .privacy-policy-spz {
-  color:  #96a1b2 !important;
+  color: #96a1b2 !important;
   text-align: center;
   font-family: "Inter", sans-serif !important;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 500 !important;
-  line-height: 18px !important; 
+  line-height: 18px !important;
+  margin-top: 12px !important;
+
+  a {
+    span {
+      color: #0068c9 !important;
+      font-family: "Inter", sans-serif !important;
+      font-size: 12px !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      line-height: 18px !important;
+      margin-top: 12px !important;
+    }
+  }
+}
+
+.form-wrapper-spz .hbspt-form form .partnership-spz {
+  color: #96a1b2 !important;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
 }
 
 .form-wrapper-spz .hbspt-form form .hs-submit {
@@ -1649,7 +1670,7 @@ img {
   content: "";
   position: absolute;
   top: 22px;
-  right: 35%;
+  right: 34%;
   width: 24px;
   height: 24px;
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/arrow_icon.svg")
