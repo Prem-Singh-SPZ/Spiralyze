@@ -125,9 +125,9 @@
             }, 1000);
         });
 
-        // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-        //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
-        // });
+        waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        });
 
         // On input focus add class on closest parent field class
         function focusFields() {
@@ -232,9 +232,9 @@
                 const optOutRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
                 const countryRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-                // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-                //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
-                // });
+                waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                    label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+                });
 
                 document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
             });

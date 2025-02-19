@@ -10,63 +10,11 @@ select:-webkit-autofill:active {
   -webkit-text-fill-color: #415364 !important;
 }
 
-.spz-form-container .spz-form-inner .spz-form-content {
-  border-radius: 24px;
-  background: #fff;
-  -webkit-box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
-          box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
-  max-width: 600px;
-  width: 100%;
-  margin: 64px auto;
-  padding: 40px;
-  position: relative;
+.spz_7002_v1 .page-transition {
+  overflow: hidden;
 }
-@media screen and (max-width: 767.98px) {
-  .spz-form-container .spz-form-inner .spz-form-content {
-    border-radius: 16px;
-    -webkit-box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-            box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-    width: calc(100% - 42px);
-    max-width: 500px;
-    padding: 24px 16px;
-  }
-}
-.spz-form-container .spz-form-inner .spz-form-content .spz-form-title {
-  color: #415364;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  text-align: center;
-}
-@media screen and (max-width: 767.98px) {
-  .spz-form-container .spz-form-inner .spz-form-content .spz-form-title {
-    font-size: 26px;
-    line-height: 1.2;
-  }
-}
-.spz-form-container .spz-form-inner .spz-form-content .spz-close-modal {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-@media screen and (max-width: 767.98px) {
-  .spz-form-container .spz-form-inner .spz-form-content .spz-close-modal {
-    top: 12px;
-    right: 12px;
-  }
-}
-.spz-form-container .spz-form-inner .spz-form-content .spz-close-modal svg {
-  pointer-events: none;
-}
-.spz-form-container .spz-form-inner .spz-form-content .spz-close-modal:hover svg path {
-  stroke: rgb(0, 113, 206);
-}
-.spz-form-container .spz-form-inner .spz-form-content .column__inner .mkto-wrap {
-  min-height: unset;
+.spz_7002_v1 .page-transition .row__inner .column:last-child .column__inner .spz-form-title {
+  display: none;
 }
 
 .spz_7002_v1.spz-show-modal {
@@ -85,13 +33,6 @@ select:-webkit-autofill:active {
 .spz_7002_v1.spz-show-modal #sp-050-modal {
   display: none;
 }
-.spz_7002_v1.spz-show-modal .spz-form-container {
-  -webkit-animation: slideInRight 0.5s;
-          animation: slideInRight 0.5s;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 .spz_7002_v1.spz-show-modal .spz_form_section {
   clip-path: none;
 }
@@ -103,13 +44,6 @@ select:-webkit-autofill:active {
   bottom: 0;
   z-index: 999999;
   overflow: auto;
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  /* pointer-events: none; */
-  -webkit-animation: slideOutTop 0.25s;
-          animation: slideOutTop 0.25s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,53 +54,85 @@ select:-webkit-autofill:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(134deg, rgba(0, 51, 161, 0.5) 38.16%, rgba(0, 79, 181, 0.5) 64.91%, rgba(0, 113, 206, 0.5) 100.05%);
   -webkit-backdrop-filter: blur(4.1999998093px);
           backdrop-filter: blur(4.1999998093px);
-  /* z-index: 9999999999; */
-  width: 100vw;
-  min-height: 100vh;
+  z-index: 9;
 }
-@-webkit-keyframes slideInRight {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title {
+  color: #415364;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  display: block;
 }
-@keyframes slideInRight {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+@media screen and (max-width: 767.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title {
+    font-size: 26px;
+    line-height: 1.2;
   }
 }
-@-webkit-keyframes slideOutTop {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal {
+    top: 12px;
+    right: 12px;
   }
 }
-@keyframes slideOutTop {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal svg {
+  pointer-events: none;
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal:hover svg path {
+  stroke: rgb(0, 113, 206);
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full {
+  border-radius: 24px;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+          box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+  max-width: 600px;
+  width: 100%;
+  margin: 64px auto;
+  padding: 40px;
+  position: relative;
+  min-height: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full {
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+            box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+    width: calc(100% - 42px);
+    max-width: 500px;
+    padding: 24px 16px;
   }
 }
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .mktoForm,
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .mktoForm * {
+  padding: 0;
+}
+
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,6 +155,10 @@ select:-webkit-autofill:active {
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow,
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
+}
+.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.full-span-field,
+.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width.full-span-field {
+  display: block;
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.row_Email,
@@ -318,8 +288,6 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -328,7 +296,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
-  min-height: 88px;
+  height: 88px !important;
   overflow-y: auto !important;
   white-space: normal !important;
 }
@@ -462,7 +430,8 @@ select:-webkit-autofill:active {
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 6px;
+  margin-top: 23px;
+  margin-bottom: 8px;
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
@@ -516,7 +485,7 @@ select:-webkit-autofill:active {
   margin: 8px auto 0;
   padding: 0;
   color: #415364;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -529,7 +498,7 @@ select:-webkit-autofill:active {
 
 .spz_7002_v1.spz-show-modal .disclaimer a {
   color: #0071ce;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;

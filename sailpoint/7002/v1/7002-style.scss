@@ -10,68 +10,13 @@ select:-webkit-autofill:active {
   -webkit-text-fill-color: #415364 !important;
 }
 
-.spz-form-container {
-  .spz-form-inner {
-    .spz-form-content {
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
-      max-width: 600px;
-      width: 100%;
-      margin: 64px auto;
-      padding: 40px;
-      position: relative;
+.spz_7002_v1 {
+  .page-transition {
+    overflow: hidden;
 
-      @media screen and (max-width: 767.98px) {
-        border-radius: 16px;
-        box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
-        width: calc(100% - 42px);
-        max-width: 500px;
-        padding: 24px 16px;
-      }
-
+    .row__inner .column:last-child .column__inner {
       .spz-form-title {
-        color: #415364;
-        // font-family:  Poppins;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%;
-        text-align: center;
-
-        @media screen and (max-width: 767.98px) {
-          font-size: 26px;
-          line-height: 1.2;
-        }
-      }
-
-      .spz-close-modal {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-
-        @media screen and (max-width: 767.98px) {
-          top: 12px;
-          right: 12px;
-        }
-
-        svg {
-          pointer-events: none;
-        }
-
-        &:hover {
-          svg path {
-            stroke: rgba(0, 113, 206, 1);
-          }
-        }
-      }
-
-      .column__inner {
-        .mkto-wrap {
-          min-height: unset;
-        }
+        display: none;
       }
     }
   }
@@ -81,7 +26,7 @@ select:-webkit-autofill:active {
   overflow: hidden;
   position: relative;
 
-  nav.navigation{
+  nav.navigation {
     z-index: 0;
   }
 
@@ -96,35 +41,6 @@ select:-webkit-autofill:active {
     display: none;
   }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: linear-gradient(
-  //     134deg,
-  //     rgba(0, 51, 161, 0.5) 38.16%,
-  //     rgba(0, 79, 181, 0.5) 64.91%,
-  //     rgba(0, 113, 206, 0.5) 100.05%
-  //   );
-  //   backdrop-filter: blur(4.199999809265137px);
-  //   z-index: 9999999999;
-  // }
-
-  .spz-form-container {
-    //create an animation of sliding in from the right
-    animation: slideInRight 0.5s;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-
-    // &.closing-modal {
-    //   animation: slideOutTop 0.5s;
-    // }
-  }
-
   .spz_form_section {
     clip-path: none;
     .row__inner {
@@ -137,56 +53,98 @@ select:-webkit-autofill:active {
           bottom: 0;
           z-index: 999999;
           overflow: auto;
-          /* opacity: 0; */
-          /* visibility: hidden; */
-          transition: all 0.3s ease-in-out;
-          /* pointer-events: none; */
-          animation: slideOutTop 0.25s;
           display: flex;
           flex-direction: column;
           align-items: center;
-          background: linear-gradient(
-            134deg,
-            rgba(0, 51, 161, 0.5) 38.16%,
-            rgba(0, 79, 181, 0.5) 64.91%,
-            rgba(0, 113, 206, 0.5) 100.05%
-          );
-          backdrop-filter: blur(4.199999809265137px);
-          /* z-index: 9999999999; */
           width: 100vw;
           min-height: 100vh;
+          transition: opacity 0.5s ease-in-out;
+
+          &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+              134deg,
+              rgba(0, 51, 161, 0.5) 38.16%,
+              rgba(0, 79, 181, 0.5) 64.91%,
+              rgba(0, 113, 206, 0.5) 100.05%
+            );
+            backdrop-filter: blur(4.199999809265137px);
+            z-index: 9;
+          }
+
+          .spz-form-title {
+            color: #415364;
+            // font-family:  Poppins;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            text-align: center;
+            display: block;
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 26px;
+              line-height: 1.2;
+            }
+
+            .spz-close-modal {
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+
+              @media screen and (max-width: 767.98px) {
+                top: 12px;
+                right: 12px;
+              }
+
+              svg {
+                pointer-events: none;
+              }
+
+              &:hover {
+                svg path {
+                  stroke: rgba(0, 113, 206, 1);
+                }
+              }
+            }
+          }
+
           .mkto-wrap.w-full {
+            border-radius: 24px;
+            background: #fff;
+            box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+            max-width: 600px;
+            width: 100%;
+            margin: 64px auto;
+            padding: 40px;
+            position: relative;
+            min-height: auto;
+
+            @media screen and (max-width: 767.98px) {
+              border-radius: 16px;
+              box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+              width: calc(100% - 42px);
+              max-width: 500px;
+              padding: 24px 16px;
+            }
+
+            .mktoForm,
+            .mktoForm * {
+              padding: 0;
+            }
           }
         }
       }
     }
   }
 }
-
-@keyframes slideInRight {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-//create another animation of sliding out to the top
-@keyframes slideOutTop {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-// .spz_7002_v1.spz-show-modal  #contact-us,
-// .spz_7002_v1.spz-show-modal  #footer-cta,
-// .spz_7002_v1.spz-show-modal  #get-started {
-//   display: none !important;
-// }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm {
   display: flex;
@@ -207,9 +165,9 @@ select:-webkit-autofill:active {
   .mktoFormRow.spz-full-width {
   width: 100%;
 
-  // &:not([class*="row_"]) {
-  //   display: none;
-  // }
+  &.full-span-field {
+    display: block;
+  }
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.row_Email,
@@ -394,7 +352,7 @@ select:-webkit-autofill:active {
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis;
-  transition: all 0.3s ease-in-out;
+  // transition: all 0.3s ease-in-out;
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -406,7 +364,7 @@ select:-webkit-autofill:active {
   #mktoForm_1017.mktoForm
   .mktoFieldWrap
   textarea.mktoField:not([type="checkbox"]) {
-  min-height: 88px;
+  height: 88px !important;
   overflow-y: auto !important;
   white-space: normal !important;
 
@@ -591,7 +549,8 @@ select:-webkit-autofill:active {
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 6px;
+  margin-top: 23px;
+  margin-bottom: 8px;
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
@@ -642,7 +601,7 @@ select:-webkit-autofill:active {
   padding: 0;
   color: #415364;
   // text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -653,38 +612,9 @@ select:-webkit-autofill:active {
   }
 }
 
-// .spz_7002_v1.spz-show-modal  .disclaimer {
-//   // max-width: 520px;
-//   margin-top: 8px;
-// }
-
-// .spz_7002_v1.spz-show-modal  #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a {
-//   color: #0071ce;
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 1.6;
-//   text-decoration-line: underline;
-//   transition: all 0.1s ease-in-out;
-//   text-underline-offset: 1px;
-
-//   &:hover {
-//     font-weight: 600;
-//     text-decoration: none;
-//   }
-
-//   &:active {
-//     border-radius: 4px;
-//     border: 1px solid #0071ce;
-//     background: rgba(0, 113, 206, 0.05);
-//     padding: 1px;
-//     text-decoration: none;
-//   }
-// }
-
 .spz_7002_v1.spz-show-modal .disclaimer a {
   color: #0071ce;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
