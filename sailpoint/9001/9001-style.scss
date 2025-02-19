@@ -137,10 +137,11 @@ html.spz-no-scroll {
   }
 
   &.form-submit {
-    .hero + .row {
-      &::before,
-      &::after {
-        display: none;
+    .social-proof-logos{
+        margin-top: 64px;
+
+      @media (max-width: 767.98px) {
+        margin-top: 134px;
       }
     }
   }
