@@ -28,6 +28,7 @@ select:-webkit-autofill:active {
 
   nav.navigation {
     z-index: 0;
+    opacity: 0.4;
   }
 
   #drift-frame-controller {
@@ -59,23 +60,13 @@ select:-webkit-autofill:active {
           width: 100vw;
           min-height: 100vh;
           transition: opacity 0.5s ease-in-out;
-
-          &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-              134deg,
-              rgba(0, 51, 161, 0.5) 38.16%,
-              rgba(0, 79, 181, 0.5) 64.91%,
-              rgba(0, 113, 206, 0.5) 100.05%
-            );
-            backdrop-filter: blur(4.199999809265137px);
-            z-index: 9;
-          }
+          background: linear-gradient(
+            134deg,
+            rgba(0, 51, 161, 0.5) 38.16%,
+            rgba(0, 79, 181, 0.5) 64.91%,
+            rgba(0, 113, 206, 0.5) 100.05%
+          );
+          backdrop-filter: blur(4.199999809265137px);
 
           .spz-form-title {
             color: #415364;
