@@ -256,15 +256,6 @@ function getCheckBoxContent(controlLabel) {
 
 function checkboxEvents() {
     document.querySelectorAll('.form-step-1 .custom-checkbox-spz').forEach((checkbox) => {
-        //by default add active class to first checkbox and checked attribute to its input
-        if (checkbox.getAttribute('data-for') == 'demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514') {
-            checkbox.classList.add('active');
-            checkbox.querySelector('input').setAttribute('checked', true);
-            if (document.querySelector('.hs-form-checkbox-display[for="demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514"]')) {
-                document.querySelector('.hs-form-checkbox-display[for="demo_product_of_interest0-429140d2-bd90-4a8b-a561-5d732c9bd514"]').click();
-            }
-        }
-
         checkbox.addEventListener('click', () => {
             // Add active class and checked attribute to clicked checkbox
             if (!checkbox.classList.contains('active') && checkbox.getAttribute('for')) {

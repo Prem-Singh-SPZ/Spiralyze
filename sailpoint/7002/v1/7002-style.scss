@@ -18,6 +18,10 @@ select:-webkit-autofill:active {
       .spz-form-title {
         display: none;
       }
+
+      .mktoCaptchaDisclaimer {
+        margin-top: 16px;
+      }
     }
   }
 }
@@ -55,57 +59,26 @@ select:-webkit-autofill:active {
           z-index: 999999;
           overflow: auto;
           display: flex;
-          flex-direction: column;
           align-items: center;
+          justify-content: center;
           width: 100vw;
           min-height: 100vh;
           transition: opacity 0.5s ease-in-out;
-          // background: linear-gradient(
-          //   134deg,
-          //   rgba(0, 51, 161, 0.5) 38.16%,
-          //   rgba(0, 79, 181, 0.5) 64.91%,
-          //   rgba(0, 113, 206, 0.5) 100.05%
-          // );
-          background: rgba(0, 0, 0, 0.8);
+          background: linear-gradient(
+            134deg,
+            rgba(0, 51, 161, 0.5) 38.16%,
+            rgba(0, 79, 181, 0.5) 64.91%,
+            rgba(0, 113, 206, 0.5) 100.05%
+          );
+          // background: rgba(0, 0, 0, 0.8);
           backdrop-filter: blur(4.199999809265137px);
 
-          .spz-form-title {
-            color: #415364;
-            // font-family:  Poppins;
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 120%;
-            text-align: center;
-            display: block;
+          @media (min-width: 767.98px) and (max-height: 799.98px) {
+            justify-content: flex-start;
+          }
 
-            @media screen and (max-width: 767.98px) {
-              font-size: 26px;
-              line-height: 1.2;
-            }
-
-            .spz-close-modal {
-              position: absolute;
-              top: 16px;
-              right: 16px;
-              cursor: pointer;
-              transition: all 0.3s ease-in-out;
-
-              @media screen and (max-width: 767.98px) {
-                top: 12px;
-                right: 12px;
-              }
-
-              svg {
-                pointer-events: none;
-              }
-
-              &:hover {
-                svg path {
-                  stroke: rgba(0, 113, 206, 1);
-                }
-              }
-            }
+          @media (max-width: 767.98px) and (max-height: 999.98px) {
+            justify-content: flex-start;
           }
 
           .mkto-wrap.w-full {
@@ -118,6 +91,7 @@ select:-webkit-autofill:active {
             padding: 40px;
             position: relative;
             min-height: auto;
+            animation: slideInFromTop 0.5s ease-in-out;
 
             @media screen and (max-width: 767.98px) {
               border-radius: 16px;
@@ -125,6 +99,45 @@ select:-webkit-autofill:active {
               width: calc(100% - 42px);
               max-width: 500px;
               padding: 24px 16px;
+            }
+
+            .spz-form-title {
+              color: #415364;
+              // font-family:  Poppins;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 120%;
+              text-align: center;
+              display: block;
+
+              @media screen and (max-width: 767.98px) {
+                font-size: 26px;
+                line-height: 1.2;
+              }
+
+              .spz-close-modal {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                @media screen and (max-width: 767.98px) {
+                  top: 12px;
+                  right: 12px;
+                }
+
+                svg {
+                  pointer-events: none;
+                }
+
+                &:hover {
+                  svg path {
+                    stroke: rgba(0, 113, 206, 1);
+                  }
+                }
+              }
             }
 
             .mktoForm,
@@ -135,6 +148,18 @@ select:-webkit-autofill:active {
         }
       }
     }
+  }
+}
+
+//create a sliding in animation from top
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -179,7 +204,9 @@ select:-webkit-autofill:active {
   width: calc(50% - 8px);
 }
 
-.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow.row_State.placeholder-row{
+.spz_7002_v1.spz-show-modal
+  #mktoForm_1017.mktoForm
+  .mktoFormRow.row_State.placeholder-row {
   display: block;
 }
 // .spz_7002_v1.spz-show-modal
@@ -585,6 +612,7 @@ select:-webkit-autofill:active {
   line-height: 1.6;
   // max-width: 60%;
   letter-spacing: -0.05px;
+  margin-top: 8px;
 
   @media screen and (max-width: 767.98px) {
     max-width: 100%;
@@ -592,7 +620,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v1.spz-show-modal .disclaimer {
-  margin: 8px auto 0;
+  margin: 1px auto 0;
   padding: 0;
   color: #415364;
   // text-align: center;

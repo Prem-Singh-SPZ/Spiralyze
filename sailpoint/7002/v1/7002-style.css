@@ -16,6 +16,9 @@ select:-webkit-autofill:active {
 .spz_7002_v1 .page-transition .row__inner .column:last-child .column__inner .spz-form-title {
   display: none;
 }
+.spz_7002_v1 .page-transition .row__inner .column:last-child .column__inner .mktoCaptchaDisclaimer {
+  margin-top: 16px;
+}
 
 .spz_7002_v1.spz-show-modal {
   overflow: hidden;
@@ -48,55 +51,33 @@ select:-webkit-autofill:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100vw;
   min-height: 100vh;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(134deg, rgba(0, 51, 161, 0.5) 38.16%, rgba(0, 79, 181, 0.5) 64.91%, rgba(0, 113, 206, 0.5) 100.05%);
   -webkit-backdrop-filter: blur(4.1999998093px);
           backdrop-filter: blur(4.1999998093px);
 }
-.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title {
-  color: #415364;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  text-align: center;
-  display: block;
-}
-@media screen and (max-width: 767.98px) {
-  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title {
-    font-size: 26px;
-    line-height: 1.2;
+@media (min-width: 767.98px) and (max-height: 799.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
-.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-@media screen and (max-width: 767.98px) {
-  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal {
-    top: 12px;
-    right: 12px;
+@media (max-width: 767.98px) and (max-height: 999.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-}
-.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal svg {
-  pointer-events: none;
-}
-.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .spz-form-title .spz-close-modal:hover svg path {
-  stroke: rgb(0, 113, 206);
 }
 .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full {
   border-radius: 24px;
@@ -109,6 +90,8 @@ select:-webkit-autofill:active {
   padding: 40px;
   position: relative;
   min-height: auto;
+  -webkit-animation: slideInFromTop 0.5s ease-in-out;
+          animation: slideInFromTop 0.5s ease-in-out;
 }
 @media screen and (max-width: 767.98px) {
   .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full {
@@ -120,11 +103,71 @@ select:-webkit-autofill:active {
     padding: 24px 16px;
   }
 }
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title {
+  color: #415364;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  display: block;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title .spz-close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title .spz-close-modal {
+    top: 12px;
+    right: 12px;
+  }
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title .spz-close-modal svg {
+  pointer-events: none;
+}
+.spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .spz-form-title .spz-close-modal:hover svg path {
+  stroke: rgb(0, 113, 206);
+}
 .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .mktoForm,
 .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .column:last-child .column__inner .mkto-wrap.w-full .mktoForm * {
   padding: 0;
 }
 
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,6 +508,7 @@ select:-webkit-autofill:active {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.05px;
+  margin-top: 8px;
 }
 @media screen and (max-width: 767.98px) {
   .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
@@ -473,7 +517,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v1.spz-show-modal .disclaimer {
-  margin: 8px auto 0;
+  margin: 1px auto 0;
   padding: 0;
   color: #415364;
   font-size: 12px;

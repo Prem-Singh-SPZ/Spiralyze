@@ -99,14 +99,14 @@
         const country_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Country');
         const company_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Company');
         const title_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Title');
-        const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
+        const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer ');
         const button = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow');
 
         if (company_field && title_field && disclaimer_field && button) {
-            // last_name_field.insertAdjacentElement('afterend', email_field);
-            // country_field.insertAdjacentElement('beforebegin', inquiry_field);
-            // company_field.after(title_field);
-            // button.after(disclaimer_field);
+            last_name_field.insertAdjacentElement('afterend', email_field);
+            country_field.insertAdjacentElement('beforebegin', inquiry_field);
+            company_field.after(title_field);
+            button.after(disclaimer_field);
         }
 
         waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
@@ -119,9 +119,9 @@
             }, 1000);
         });
 
-        // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-        // });
+        waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        });
 
         // On input focus add class on closest parent field class
         function focusFields() {
@@ -226,11 +226,11 @@
                 const optOutRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
                 const countryRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-                // waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
-                //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-                // });
+                waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                    label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+                });
 
-                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), optOutRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), optOutRow.classList.add('spz-full-width'));
+                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
             });
         }
 
