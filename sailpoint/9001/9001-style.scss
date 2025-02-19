@@ -23,7 +23,7 @@ html.spz-no-scroll {
   .hero + .row {
     position: relative;
     padding: 64px 0 32px;
-    overflow: hidden;
+    // overflow: hidden;
 
     &::before {
       position: absolute;
@@ -46,7 +46,8 @@ html.spz-no-scroll {
       width: 687px;
       height: 180px;
       left: -277px;
-      bottom: 174px;
+      // bottom: 149px;
+      top: 667px;
     }
 
     > .row__inner {
@@ -136,6 +137,8 @@ html.spz-no-scroll {
     max-width: 1288px;
     padding: 0 20px;
     margin: 32px auto 64px;
+    position: relative;
+    z-index: 1;
 
     .social-proof-heading {
       color: #415364;
@@ -231,6 +234,7 @@ html.spz-no-scroll {
         .link {
           text-underline-offset: 1px;
           text-decoration-skip-ink: none;
+          margin-right: 5px;
 
           &:hover {
             text-decoration: none;
@@ -695,7 +699,11 @@ html.spz-no-scroll {
   }
 
   .spz_9001 footer .container.flex {
-    padding: 10px 20px;
+    padding: 10px 20px 0;
+
+    .text-left.text-sm {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -763,7 +771,7 @@ select:-webkit-autofill:active {
 
   &.row_contactFormComments {
     .mktoFieldWrap .mktoField:not([type="checkbox"]) {
-      height: 88px;
+      height: 88px !important;
       white-space: normal;
       overflow: auto;
       //css to hide scrollbar for all browsers
@@ -790,6 +798,10 @@ select:-webkit-autofill:active {
   .mktoClear,
   .mktoGutter {
     display: none;
+  }
+
+  &.full-span-field{
+    display: block;
   }
 }
 
@@ -1260,7 +1272,7 @@ select:-webkit-autofill:active {
 .spz_9001 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .spz_9001.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -1353,6 +1365,8 @@ select:-webkit-autofill:active {
     max-width: 1288px;
     padding: 0 20px;
     margin: 0 auto;
+    z-index: 1;
+    position: relative;
 
     @media screen and (max-width: 1199.98px) {
       padding: 0;

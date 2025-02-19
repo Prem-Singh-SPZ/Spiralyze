@@ -18,7 +18,6 @@ html.spz-no-scroll {
 .spz_9001 .hero + .row {
   position: relative;
   padding: 64px 0 32px;
-  overflow: hidden;
 }
 .spz_9001 .hero + .row::before {
   position: absolute;
@@ -40,7 +39,7 @@ html.spz-no-scroll {
   width: 687px;
   height: 180px;
   left: -277px;
-  bottom: 174px;
+  top: 667px;
 }
 .spz_9001 .hero + .row > .row__inner {
   width: 100%;
@@ -126,6 +125,8 @@ html.spz-no-scroll {
   max-width: 1288px;
   padding: 0 20px;
   margin: 32px auto 64px;
+  position: relative;
+  z-index: 1;
 }
 .spz_9001 .social-proof-logos .social-proof-heading {
   color: #415364;
@@ -240,6 +241,7 @@ html.spz-no-scroll {
   text-underline-offset: 1px;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  margin-right: 5px;
 }
 .spz_9001 .spz-modal .spz-modal-content .spz-modal-body .link:hover {
   text-decoration: none;
@@ -697,7 +699,10 @@ html.spz-no-scroll {
     position: relative;
   }
   .spz_9001 footer .container.flex {
-    padding: 10px 20px;
+    padding: 10px 20px 0;
+  }
+  .spz_9001 footer .container.flex .text-left.text-sm {
+    margin-bottom: 0;
   }
 }
 @-webkit-keyframes scroll {
@@ -766,7 +771,7 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_contactFormComments .mktoFieldWrap .mktoField:not([type=checkbox]) {
-  height: 88px;
+  height: 88px !important;
   white-space: normal;
   overflow: auto;
   scrollbar-width: none; /* Firefox */
@@ -789,6 +794,9 @@ select:-webkit-autofill:active {
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoClear,
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoGutter {
   display: none;
+}
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.full-span-field {
+  display: block;
 }
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.field-11,
@@ -1114,7 +1122,7 @@ select:-webkit-autofill:active {
 .spz_9001 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .spz_9001.form-submit .page-transition .inner-row__inner .disclaimer {
@@ -1178,6 +1186,8 @@ select:-webkit-autofill:active {
   max-width: 1288px;
   padding: 0 20px;
   margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
 @media screen and (max-width: 1199.98px) {
   .spz_9001 .sp-container {
