@@ -136,6 +136,15 @@ html.spz-no-scroll {
     }
   }
 
+  &.form-submit {
+    .hero + .row {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   .social-proof-logos {
     width: 100%;
     max-width: 1288px;
