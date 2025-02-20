@@ -302,18 +302,6 @@
             MktoForms2.whenReady(function (form) {
               form.onSuccess(function (values, followUpUrl) {
                 document.body.classList.add('form-submit');
-
-                //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
-                var checkboxInterval = setInterval(() => {
-                  var checkbox = document.querySelector('.SPZ-1005-TC form.mktoForm #mktoCheckbox_27268_0');
-                  if (checkbox) {
-                    checkbox.checked = true;
-                  }
-                }, 100);
-
-                setTimeout(() => {
-                  clearInterval(checkboxInterval);
-                }, 5000);
               });
             });
 
