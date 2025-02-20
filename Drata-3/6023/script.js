@@ -277,9 +277,9 @@ function openNextStep() {
         document.querySelector('.form-step-2').classList.add('active');
 
         // smooth scroll to .contact-form-section
-        document.querySelector('.hero-right-section').scrollIntoView({
-            behavior: 'smooth'
-        });
+        // document.querySelector('.hero-right-section').scrollIntoView({
+        //     behavior: 'smooth'
+        // });
     });
 
     // on click of '.back-arrow-cta' button open previous step
