@@ -38,7 +38,7 @@
               socialProofImages: [
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
-                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg", imgAlt: "Paccar"},
+                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg", imgAlt: "Paccar" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg", imgAlt: "Philips" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg", imgAlt: "RWE" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg", imgAlt: "T Mobile" },
@@ -55,18 +55,18 @@
                   <div class="content-section">
                     ${formData.siteLogo.length !== 0 ? `<a class="site-logo" data-sentry-element="NextLink" data-sentry-source-file="MainLargeNavigation.tsx" href="/">
                       <img src="${formData.siteLogo}" alt="${formData.siteLogoAlt}" />
-                    </a>` : "" }
+                    </a>` : ""}
                     ${formData.contentSuperHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-superheading">${formData.contentSuperHeading}</div>` : ""}
                     ${formData.contentHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-heading">${formData.contentHeading}</div>` : ""}
                     <div class="spz-features-wrap">
                       ${formData.features.length > 0 ? formData.features.map((item) => {
-                        return `<div class="feature-item">
+              return `<div class="feature-item">
                           <img src="${item.checkmarkImage}" alt="checkmark" />
                           <span>${item.featureItemContent}</span>
                         </div>`;
-                      }).join("") : ""}
+            }).join("") : ""}
                     </div>
-                    ${formData.formArrow.length !== 0 ? `<img src="${formData.formArrow}" class="form-arrow" alt="Arrow" />` : "" }
+                    ${formData.formArrow.length !== 0 ? `<img src="${formData.formArrow}" class="form-arrow" alt="Arrow" />` : ""}
                   </div>
                   <div class="spz-form-section">
                     ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
@@ -78,10 +78,10 @@
                 <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
                 <div class="social-proof-images">
                   ${additionalSection.socialProofLogos.socialProofImages.length > 0 ? additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
-                    return `<img src="${item.url}" alt="${item.imgAlt}">`;
-                  }).join("") + additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
-                    return `<img src="${item.url}" class="repeat-img" alt="${item.imgAlt}">`;
-                  }).join("") : ""}
+              return `<img src="${item.url}" alt="${item.imgAlt}">`;
+            }).join("") + additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
+              return `<img src="${item.url}" class="repeat-img" alt="${item.imgAlt}">`;
+            }).join("") : ""}
                 </div>
               </div>` : ``}
             </section>`;
@@ -89,11 +89,11 @@
               document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
             });
             let formLoaded = setInterval(() => {
-              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector('.mkto-wrap + .disclaimer')) {
+              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector('.mkto-wrap .disclaimer')) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
                 // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
-                document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                // document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap .disclaimer'));
                 formModify();
               }
             });
@@ -145,9 +145,13 @@
             var state_field = document.querySelector('.SPZ-1005-TC form.mktoForm .field-10');
             state_field.after(employees_field);
 
-            // var disclaimer_field = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoCaptchaDisclaimer');
-            // var button = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoButtonRow');
-            // button.after(disclaimer_field);
+            waitForElm('.SPZ-1005-TC form.mktoForm .mktoCaptchaDisclaimer').then((elm) => {
+              var disclaimer_field = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoCaptchaDisclaimer');
+              const disclaimer = document.querySelector('.SPZ-1005-TC form.mktoForm .disclaimer');
+              var button = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoButtonRow');
+              button.before(disclaimer_field);
+              button.after(disclaimer);
+            });
 
             document.querySelector('.SPZ-1005-TC form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
@@ -404,16 +408,16 @@
     }, 15000);
 
     //click event listener
-		document.addEventListener('click', function (e) {
-			if (e.target.closest('.mktoForm .mktoButton')) {
-				//inject current time and date in EST timezone into .intellimize2 hidden field
-				var d = new Date();
-				var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-				var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-				if (int2)
-					int2.value = n;
-			}
-		});
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.mktoForm .mktoButton')) {
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
+      }
+    });
   }
   // Do not touch below hidden field code for any Experiment over
 
