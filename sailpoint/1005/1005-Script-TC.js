@@ -89,7 +89,7 @@
               document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
             });
             let formLoaded = setInterval(() => {
-              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector('.mkto-wrap .disclaimer')) {
+              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
                 // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
@@ -145,7 +145,7 @@
             var state_field = document.querySelector('.SPZ-1005-TC form.mktoForm .field-10');
             state_field.after(employees_field);
 
-            waitForElm('.SPZ-1005-TC form.mktoForm .mktoCaptchaDisclaimer').then((elm) => {
+            waitForElm('.SPZ-1005-TC form.mktoForm .disclaimer').then((elm) => {
               var disclaimer_field = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoCaptchaDisclaimer');
               const disclaimer = document.querySelector('.SPZ-1005-TC form.mktoForm .disclaimer');
               var button = document.querySelector('.SPZ-1005-TC form.mktoForm .mktoButtonRow');
@@ -410,6 +410,45 @@
     //click event listener
     document.addEventListener('click', function (e) {
       if (e.target.closest('.mktoForm .mktoButton')) {
+        waitForElm('.SPZ-1005-TC #mktoForm_1018.mktoForm .mktoError').then(function (elm) {
+          if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+            const targetNode = elm.parentNode;
+            const config = { attributes: true, childList: true, subtree: true };
+            const callback = (mutationList, observer) => {
+              for (const mutation of mutationList) {
+                if (mutation.type === "childList") {
+                  if (elm.parentNode === null && elm.style.display != 'none') {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                } else if (mutation.type === "attributes") {
+                  if (elm.parentNode === null) {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                }
+              }
+            };
+            const observer = new MutationObserver(callback);
+            observer.observe(targetNode, config);
+          } else {
+            let counterA = 0;
+            const intervalIdA = setInterval(() => {
+              if (document.querySelector('.SPZ-1005-TC #mktoForm_1018.mktoForm .mktoError #ValidMsgEmail') !== null) {
+                document.querySelector('.SPZ-1005-TC #mktoForm_1018.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+              }
+              counterA++;
+              if (counterA >= 10) {
+                clearInterval(intervalIdA);
+              }
+            }, 500);
+          }
+        });
+
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

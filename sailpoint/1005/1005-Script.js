@@ -89,10 +89,10 @@
               document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
             });
             let formLoaded = setInterval(() => {
-              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0 && document.querySelector('.mkto-wrap + .disclaimer')) {
+              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                // document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
                 formModify();
               }
             });
@@ -143,6 +143,15 @@
             var employees_field = document.querySelector('.SPZ-1005 form.mktoForm .field-8');
             var state_field = document.querySelector('.SPZ-1005 form.mktoForm .field-10');
             state_field.after(employees_field);
+
+            
+            waitForElm('.SPZ-1005 form.mktoForm .disclaimer').then((elm) => {
+              var disclaimer_field = document.querySelector('.SPZ-1005 form.mktoForm .mktoCaptchaDisclaimer');
+              const disclaimer = document.querySelector('.SPZ-1005 form.mktoForm .disclaimer');
+              var button = document.querySelector('.SPZ-1005 form.mktoForm .mktoButtonRow');
+              button.before(disclaimer_field);
+              button.after(disclaimer);
+            });
 
             document.querySelector('.SPZ-1005 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
