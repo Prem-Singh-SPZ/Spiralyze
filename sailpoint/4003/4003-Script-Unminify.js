@@ -10,7 +10,7 @@
           document.body.classList.add('SPZ_4003_V1');
           hiddenValue('SPZ_4003', 'SPZ_4003_variant');
           waitForElm('.SPZ_4003_V1 .hero').then(() => {
-            const template_heroSelector = `section.hero`;
+            const template_heroSelector = `.hero`;
             const template_position = "beforebegin"
             const template_formSelector = `form#mktoForm_1016`;
             const contentSuperHeading = `Special report`;
@@ -131,7 +131,10 @@
                 if (document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input')) {
                   clearInterval(formLoaded)
                   document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
-                  document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+
+                  waitForElm('.SPZ_4003_V1 .mkto-wrap + .disclaimer').then(form => {
+                    document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                  });
                   document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                   formModify();
                 }
@@ -193,7 +196,7 @@
                 if (emailField) {
                   if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
                     if (!emailField.parentElement.querySelector('.customError')) {
-                      emailField.insertAdjacentHTML('afterend', '<div class="mktoError customError"><div class="mktoErrorMsg">valid email required.</div></div>');
+                      emailField.insertAdjacentHTML('afterend', '<div class="mktoError customError"><div class="mktoErrorMsg">Valid email required.</div></div>');
                     }
                   }
                 }
