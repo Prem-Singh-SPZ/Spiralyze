@@ -92,7 +92,9 @@
               if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                // document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                waitForElm('.mkto-wrap + .disclaimer').then(() => {
+                  document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                });
                 formModify();
               }
             });
@@ -144,7 +146,7 @@
             var state_field = document.querySelector('.SPZ-1005 form.mktoForm .field-10');
             state_field.after(employees_field);
 
-            
+
             waitForElm('.SPZ-1005 form.mktoForm .disclaimer').then((elm) => {
               var disclaimer_field = document.querySelector('.SPZ-1005 form.mktoForm .mktoCaptchaDisclaimer');
               const disclaimer = document.querySelector('.SPZ-1005 form.mktoForm .disclaimer');

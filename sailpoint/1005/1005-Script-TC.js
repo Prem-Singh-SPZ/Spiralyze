@@ -34,7 +34,7 @@
           };
           const additionalSection = {
             socialProofLogos: {
-              socialProofHeading: "Used by 48% of the Fortune 500",
+              socialProofHeading: "50% of the Fortune 500 and 25% of the Forbes Global 2000",
               socialProofImages: [
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
@@ -92,7 +92,9 @@
               if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
                 document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                waitForElm('.mkto-wrap + .disclaimer').then(() => {
+                  document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                });
                 // document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap .disclaimer'));
                 formModify();
               }
