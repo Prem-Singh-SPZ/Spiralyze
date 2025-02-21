@@ -330,7 +330,10 @@
       if (document.querySelector('.SPZ-1005-TC')) {
         document.body.classList.remove("SPZ-1005-TC");
       }
-    }, 2000);
+      if (document.querySelector('.form-submit')) {
+        document.body.classList.remove("form-submit");
+      }
+    }, 1000);
   }
 
   function removeSpecificCookieValue(targetName, targetValue) {

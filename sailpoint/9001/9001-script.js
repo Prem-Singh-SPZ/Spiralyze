@@ -239,7 +239,6 @@
             clearInterval(fieldChanged);
             // disclaimer.after(button);
             button.insertAdjacentElement('afterend', disclaimer);
-            console.log(disclaimer_field);
             button.insertAdjacentElement('beforebegin', disclaimer_field);
             // button.after(disclaimer_field);
           }
@@ -562,6 +561,9 @@
     urlCheck(url);
     if (document.querySelector('.spz_9001')) {
       document.body.classList.remove("spz_9001");
+    }
+    if (document.querySelector('.form-submit')) {
+      document.body.classList.remove("form-submit");
     }
   });
 

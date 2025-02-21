@@ -376,6 +376,9 @@
       if (document.querySelector('.SPZ-1005')) {
         document.body.classList.remove("SPZ-1005");
       }
+      if (document.querySelector('.form-submit')) {
+        document.body.classList.remove("form-submit");
+      }
     }, 1000);
   }
 
