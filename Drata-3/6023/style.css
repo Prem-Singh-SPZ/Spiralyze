@@ -877,6 +877,13 @@ img {
   color: transparent;
 }
 
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover {
+  border-color: #0068c9 !important;
+}
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover ~ label {
+  color: #485665;
+}
+
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus {
   border-color: #0068c9 !important;
 }
@@ -1218,6 +1225,13 @@ img {
   width: calc(100% - 60px);
   height: 30px;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error.hs-fieldtype-select .input .hs-label-spz {
+    font-size: 14px;
+    line-height: 20px;
+    top: 14px;
+  }
+}
 
 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input {
   -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -1377,6 +1391,9 @@ img {
   font-weight: 500 !important;
   line-height: 18px !important;
   margin-top: 12px !important;
+}
+.form-wrapper-spz .hbspt-form form .privacy-policy-spz a:hover span {
+  color: #1253A8 !important;
 }
 @media (max-width: 1199.98px) {
   .form-wrapper-spz .hbspt-form form .privacy-policy-spz {
