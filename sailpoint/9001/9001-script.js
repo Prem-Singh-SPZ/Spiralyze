@@ -209,28 +209,43 @@
       });
     });
 
-    waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
-      label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-    });
+    // waitForElm('.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
+    //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+    // });
 
     waitForElm('.spz_9001 #mktoForm_1017.mktoForm .disclaimer').then(label => {
       // Change Field Position
       const email_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Email');
       const last_name_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_LastName');
-      const disclaimer = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .disclaimer');
-      const country_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Country');
       const company_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Company');
       const title_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Title');
-      const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
-      const button = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-      if (company_field && title_field && disclaimer_field && button && disclaimer) {
+      if (company_field && title_field) {
         last_name_field.insertAdjacentElement('afterend', email_field);
         company_field.after(title_field);
-        button.insertAdjacentElement('afterend', disclaimer);
-        button.insertAdjacentElement('beforebegin', disclaimer_field);
       }
+
+      swapPrivacyCopies();
     });
+
+    function swapPrivacyCopies() {
+      const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
+      const disclaimer = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .disclaimer');
+      const button = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow');
+
+      let fieldChanged = setInterval(() => {
+        if (disclaimer_field && disclaimer && button) {
+          if (!document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow + .disclaimer')) {
+            clearInterval(fieldChanged);
+            // disclaimer.after(button);
+            button.insertAdjacentElement('afterend', disclaimer);
+            console.log(disclaimer_field);
+            button.insertAdjacentElement('beforebegin', disclaimer_field);
+            // button.after(disclaimer_field);
+          }
+        }
+      }, 100);
+    }
 
     // document.querySelector('.spz_9001 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
@@ -351,11 +366,13 @@
         const reasonForInq = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
         const countryRow = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
-        waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
-          label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-        });
+        // waitForElm('.spz_9001 #mktoForm_1017.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
+        //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+        // });
 
         document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", reasonForInq.classList.remove('spz-full-width')) : (reasonForInq.classList.add('spz-full-width'));
+
+        swapPrivacyCopies();
       });
     }
 
