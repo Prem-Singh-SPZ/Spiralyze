@@ -132,8 +132,9 @@
                   clearInterval(formLoaded)
                   document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
 
-                  waitForElm('.SPZ_4003_V1 .mkto-wrap + .disclaimer').then(form => {
-                    document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
+                  waitForElm('.SPZ_4003_V1 .mktoForm .disclaimer').then(form => {
+                    document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mktoForm .disclaimer'));
+                    // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
                   });
                   document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                   formModify();
