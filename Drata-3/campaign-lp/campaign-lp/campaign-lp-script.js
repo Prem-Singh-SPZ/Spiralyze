@@ -51,7 +51,7 @@ const obsOptions = {
     // Set to 1.0 to trigger a callback when 100% of the target element is inside the viewport,   
     // or i.e: 0.5 when half of the target element is visible:
     threshold: 0.5,
-    
+
 };
 
 // Attach observer to every [data-inviewport] element:
@@ -60,3 +60,25 @@ document.querySelectorAll('[data-inviewport]').forEach(el => {
     Obs.observe(el, obsOptions);
 });
 // Animation on scroll Ends
+
+
+// Lightbox Starts
+window.addEventListener('click', function (e) {
+    // Open lightbox on image click
+    if (e.target.hasAttribute('lightbox-source')) {
+        // document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lbv-source').src = e.target.getAttribute('lightbox-source');
+        document.querySelector('.lightbox-video').classList.add('opened');
+        document.getElementById('lbv-source').play();
+        document.querySelector('html').classList.add('overflow-hidden');
+    }
+    
+    // Close lightbox on close button click
+    if (e.target.id == 'lb-close') {
+        document.querySelector('html').classList.remove('overflow-hidden');
+        // document.getElementById('lightbox').style.display = 'none';
+        document.querySelector('.lightbox-video').classList.remove('opened');
+        document.getElementById('lbv-source').pause();        
+    }
+});
+// Lightbox Ends
