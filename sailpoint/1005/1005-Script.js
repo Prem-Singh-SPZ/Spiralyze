@@ -34,7 +34,7 @@
           };
           const additionalSection = {
             socialProofLogos: {
-              socialProofHeading: "Used by 48% of the Fortune 500",
+              socialProofHeading: "50% of the Fortune 500 and 25% of the Forbes Global 2000",
               socialProofImages: [
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
