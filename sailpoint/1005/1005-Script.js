@@ -89,11 +89,11 @@
               document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
             });
             let formLoaded = setInterval(() => {
-              if (document.querySelector(".spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
+              if (document.querySelector(".SPZ-1005 .spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
                 clearInterval(formLoaded)
-                document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                waitForElm('.mkto-wrap + .disclaimer').then(() => {
-                  document.querySelector(".spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.mkto-wrap + .disclaimer'));
+                document.querySelector(".SPZ-1005 .spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
+                waitForElm('.SPZ-1005 .mkto-wrap + .disclaimer').then(() => {
+                  document.querySelector(".SPZ-1005 .spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.SPZ-1005 .mkto-wrap + .disclaimer'));
                 });
                 formModify();
               }
