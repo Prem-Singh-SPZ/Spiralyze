@@ -226,6 +226,10 @@
                     el.closest('.mktoFieldWrap').classList.add('active', 'typing');
                     checkAllFields();
                   }
+                  var email_field = document.querySelector('.SPZ_4003_V1 form.mktoForm input[name="Email"]');
+                  if (email_field.value.trim() === '') {
+                    email_field.closest('.mktoFieldWrap').classList.remove('emailerror');
+                  }
                   if (el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
                     var checkerrorcnt = 0;
                     var checkerrror = setInterval(function () {
