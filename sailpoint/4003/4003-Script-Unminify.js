@@ -53,7 +53,7 @@
                 socialProofHeading: "Trusted by leading companies",
                 socialProofImages: [
                   {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/4003/container.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo01.svg",
                     imgAlt: "gm",
                   },
                   {
@@ -73,7 +73,7 @@
                     imgAlt: "RWE",
                   },
                   {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/4003/container_1.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo06.svg",
                     imgAlt: "THE HOME DEPOT",
                   },
                   {
@@ -128,9 +128,13 @@
 
               document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
               let formLoaded = setInterval(() => {
-                if (document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input')) {
+                if (document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input') && document.querySelector(".spz-form-wrap .the-form")) {
                   clearInterval(formLoaded)
                   document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
+
+                  waitForElm('.SPZ_4003_V1 .mkto-wrap + .disclaimer').then(form => {
+                    document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mkto-wrap +  .disclaimer'));
+                  });
 
                   waitForElm('.SPZ_4003_V1 .mktoForm .disclaimer').then(form => {
                     document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mktoForm .disclaimer'));
@@ -516,6 +520,33 @@
 
     document.addEventListener('click', function (e) {
       if (e.target.closest('#mktoForm_1016 .mktoButton')) {
+
+        if (!document.body.classList.contains('form-expand')) {
+          const el = document.querySelector('input[name="Email"]');
+          const fieldName = el.getAttribute('name');
+          if (fieldName === 'Email') {
+            const newemailValue = el.value.trim();
+            const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+            if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
+              el.closest('.mktoFieldWrap').classList.add('emailerror');
+              checkEmail();
+            } else {
+              el.closest('.mktoFieldWrap').classList.remove('emailerror');
+            }
+          }
+  
+          const firstName = document.querySelector('input[name="FirstName"]').value.trim();
+          const lastName = document.querySelector('input[name="LastName"]').value.trim();
+          const emailValue = document.querySelector('input[name="Email"]').value.trim();
+          const companyValue = document.querySelector('input[name="Company"]').value.trim();
+          const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+          if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
+            if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
+              document.body.classList.add('form-expand');
+            }
+          }
+        }
+        
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

@@ -360,6 +360,10 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 
+.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.placeholder-row:not(.field-8){
+  display: none;
+}
+
 .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-2,
 .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-3,
 .SPZ_4003_V1 .spz-form-section form.mktoForm.phone-exists .mktoFormRow.field-4,
@@ -498,6 +502,7 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 5px 0 0 !important;
+  display: inline-block;
 }
 
 .SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError:not(.customError),
@@ -530,7 +535,7 @@ select:-webkit-autofill:active {
   content: "";
   width: 12px;
   height: 12px;
-  top: 4px;
+  top: 3px;
   left: 0;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1736156039/sailpoint/4003/error-icon.svg");
   background-size: contain;
@@ -724,7 +729,7 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  width: 65%;
+  /* width: 65%; */
   margin: 12px 0;
 }
 
