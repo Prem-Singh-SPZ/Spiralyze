@@ -195,17 +195,7 @@
                 label.textContent = "Uncheck to stop receiving SailPoint email communications.";
               });
 
-              function checkEmail() {
-                const emailField = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm input[name="Email"]');
-                const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                if (emailField) {
-                  if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
-                    if (!emailField.parentElement.querySelector('.customError')) {
-                      emailField.insertAdjacentHTML('afterend', '<div class="mktoError customError"><div class="mktoErrorMsg">Valid email required.</div></div>');
-                    }
-                  }
-                }
-              }
+
               // On input focus add class on closest parent field class
               function focusFields() {
                 // Attach events using event delegation
@@ -218,14 +208,25 @@
                     checkAllFields();
                   }
                   if (el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
-                    emailFocusCount++;
-                    if (emailFocusCount > 2) {
-                      emailFocusCount = 2;
-                    }
-                    if (emailFocusCount === 2) {
-                      el.closest('.mktoFieldWrap').classList.add('emailerror');
-                      checkEmail();
-                    }
+                    var checkerrorcnt = 0;
+                    var checkerrror = setInterval(function () {
+                      if (el.closest('.mktoFieldWrap') !== null) {
+                        clearInterval(checkerrror);
+                        if (el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)') !== null && el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)').style.display != 'none') {
+                          el.closest('.mktoFieldWrap').classList.add('emailerror');
+                          checkEmail();
+                        }
+                      }
+                      checkerrorcnt++;
+                    });
+                    // emailFocusCount++;
+                    // if(emailFocusCount > 2){
+                    //   emailFocusCount = 2;
+                    // }
+                    // if(emailFocusCount === 2){
+                    //   el.closest('.mktoFieldWrap').classList.add('emailerror');
+                    //   checkEmail();
+                    // }
                   }
                 }, true);
                 form.addEventListener('keyup', function (event) {
@@ -448,6 +449,18 @@
     });
   }
 
+  function checkEmail() {
+    const emailField = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm input[name="Email"]');
+    const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+    if (emailField) {
+      if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
+        if (!emailField.parentElement.querySelector('.customError')) {
+          emailField.insertAdjacentHTML('afterend', '<div class="mktoError_1 customError"><div class="mktoErrorMsg">Valid email required.</div></div>');
+        }
+      }
+    }
+  }
+
   function removeTest() {
     setTimeout(() => {
       if (document.querySelector('.SPZ_4003_V1')) {
@@ -534,7 +547,7 @@
               el.closest('.mktoFieldWrap').classList.remove('emailerror');
             }
           }
-  
+
           const firstName = document.querySelector('input[name="FirstName"]').value.trim();
           const lastName = document.querySelector('input[name="LastName"]').value.trim();
           const emailValue = document.querySelector('input[name="Email"]').value.trim();
@@ -546,7 +559,7 @@
             }
           }
         }
-        
+
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

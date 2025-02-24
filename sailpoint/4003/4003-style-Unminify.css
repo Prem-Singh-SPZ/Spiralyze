@@ -495,7 +495,7 @@ select:-webkit-autofill:active {
   border-color: #e6241e;
 }
 
-.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
+.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError, .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 {
   position: relative;
   top: unset !important;
   bottom: unset !important;
@@ -505,14 +505,14 @@ select:-webkit-autofill:active {
   display: inline-block;
 }
 
-.SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError:not(.customError),
-.SPZ_4003_V1.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError.customError,
-.SPZ_4003_V1 .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError.customError,
+.SPZ_4003_V1:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError,
+.SPZ_4003_V1.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError_1.customError,
+.SPZ_4003_V1 .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError_1.customError,
 .SPZ_4003_V1:not(.form-expand) .spz-hero .form-footer {
   display: none !important;
 }
 
-.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg, .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 .mktoErrorMsg  {
   color: #ffcb27;
   background: transparent;
   max-width: unset;
@@ -530,7 +530,7 @@ select:-webkit-autofill:active {
   flex-wrap: wrap;
 }
 
-.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before, .SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError_1 .mktoErrorMsg::before {
   position: absolute;
   content: "";
   width: 12px;
