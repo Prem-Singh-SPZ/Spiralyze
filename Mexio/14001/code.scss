@@ -72,7 +72,9 @@ body.spz_14001 {
     .chargify-login-card#app_content {
       border: none;
       background: #fff;
-      box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+      border-radius: 3px;
+      box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.16),
+        0px 2px 32px 0px rgba(0, 0, 0, 0.05);
       max-width: 560px;
       padding: 35px 48px 40px;
       width: 100%;
@@ -186,7 +188,7 @@ body.spz_14001 {
                   position: absolute;
                   top: 14px;
                   left: 10px;
-                  color: #858585;
+                  color: #808080;
                   font-family: Test Founders Grotesk;
                   font-size: 16px;
                   font-style: normal;
@@ -203,7 +205,7 @@ body.spz_14001 {
 
                 &.filled {
                   .maxio-text-field__label {
-                    color: #858585;
+                    color: #808080;
                     font-size: 13px;
                     line-height: 1.28;
                     top: -10px;
@@ -250,7 +252,7 @@ body.spz_14001 {
               .sandbox__fields.sandbox_checkbox__field {
                 margin: -4px 0 13px;
                 label {
-                  color: #858585;
+                  color: #808080;
                   font-family: "Test Founders Grotesk";
                   font-size: 14px;
                   font-style: normal;
@@ -259,7 +261,7 @@ body.spz_14001 {
                   position: relative;
 
                   .maxio-label-xs {
-                    color: #858585;
+                    color: #808080;
                     font-family: "Test Founders Grotesk";
                     font-size: 14px;
                     font-weight: 400;
@@ -282,6 +284,7 @@ body.spz_14001 {
                       border: 1.125px solid #0042ff;
                       margin: 0;
                       font-size: 0;
+                      border-radius: 3px;
                     }
 
                     &::after {
@@ -326,18 +329,19 @@ body.spz_14001 {
                   display: block;
                   margin: auto;
                   background: #0042ff;
+                  transition: background 0.2s ease-in-out;
 
                   &:hover {
-                    background: #2d2d30;
+                    background: #0036CC;
                   }
 
-                  &:active {
-                    background: #002eeb;
-                  }
+                  // &:active {
+                  //   background: #002eeb;
+                  // }
                 }
 
                 .terms-text {
-                  color: #858585;
+                  color: #808080;
                   text-align: center;
                   font-family: "Test Founders Grotesk";
                   font-size: 13px;
@@ -346,11 +350,11 @@ body.spz_14001 {
                   line-height: 20px;
 
                   a {
-                    color: #858585;
+                    color: #808080;
                     text-decoration: underline;
 
                     &:hover {
-                      color: #0042ff;
+                      color: #0036CC;
                     }
                   }
                 }

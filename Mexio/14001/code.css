@@ -56,8 +56,9 @@ body.spz_14001 .sandbox-app .sandbox-login-card {
 body.spz_14001 .sandbox-app .chargify-login-card#app_content {
   border: none;
   background: #fff;
-  -webkit-box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.16), 0px 2px 32px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.16), 0px 2px 32px 0px rgba(0, 0, 0, 0.05);
   max-width: 560px;
   padding: 35px 48px 40px;
   width: 100%;
@@ -168,7 +169,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   position: absolute;
   top: 14px;
   left: 10px;
-  color: #858585;
+  color: #808080;
   font-family: Test Founders Grotesk;
   font-size: 16px;
   font-style: normal;
@@ -184,7 +185,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   width: calc(100% - 40px);
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields:not(.sandbox_checkbox__field).filled .maxio-text-field__label {
-  color: #858585;
+  color: #808080;
   font-size: 13px;
   line-height: 1.28;
   top: -10px;
@@ -221,7 +222,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   margin: -4px 0 13px;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields.sandbox_checkbox__field label {
-  color: #858585;
+  color: #808080;
   font-family: "Test Founders Grotesk";
   font-size: 14px;
   font-style: normal;
@@ -230,7 +231,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   position: relative;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields.sandbox_checkbox__field label .maxio-label-xs {
-  color: #858585;
+  color: #808080;
   font-family: "Test Founders Grotesk";
   font-size: 14px;
   font-weight: 400;
@@ -252,6 +253,7 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   border: 1.125px solid #0042ff;
   margin: 0;
   font-size: 0;
+  border-radius: 3px;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .sandbox__fields.sandbox_checkbox__field label .maxio-checkbox__control::after {
   position: absolute;
@@ -290,15 +292,14 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   display: block;
   margin: auto;
   background: #0042ff;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .form__fields--submit-form .maxio-button:hover {
-  background: #2d2d30;
-}
-body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .form__fields--submit-form .maxio-button:active {
-  background: #002eeb;
+  background: #0036CC;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .form__fields--submit-form .terms-text {
-  color: #858585;
+  color: #808080;
   text-align: center;
   font-family: "Test Founders Grotesk";
   font-size: 13px;
@@ -307,11 +308,11 @@ body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-sect
   line-height: 20px;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .form__fields--submit-form .terms-text a {
-  color: #858585;
+  color: #808080;
   text-decoration: underline;
 }
 body.spz_14001 .sandbox-app .chargify-login-card#app_content #main .sandbox-section #signup-form .form__section .form__fields--submit-form .terms-text a:hover {
-  color: #0042ff;
+  color: #0036CC;
 }
 body.spz_14001 input:-webkit-autofill,
 body.spz_14001 input:-webkit-autofill:hover,
