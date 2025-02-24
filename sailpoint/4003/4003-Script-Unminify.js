@@ -13,7 +13,8 @@
             const template_heroSelector = `.hero`;
             const template_position = "beforebegin"
             const template_formSelector = `form#mktoForm_1016`;
-            const contentSuperHeading = `Special report`;
+            let eyeBrowTxt = document.querySelector('.hero.hero--gated .hero__eyebrow.eyebrow');
+            const contentSuperHeading = eyeBrowTxt && eyeBrowTxt.textContent ? eyeBrowTxt.textContent : `Analyst Report`;
             var contentHeading = ``;
             var contentInnerHTML = ``;
             if (location.href.indexOf('/identity-library/identity-governance-administration') > -1) {
@@ -126,18 +127,33 @@
                 </div>
               </section>`;
 
-              document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
+              let checkVariantHero = setInterval(() => {
+                if (document.querySelectorAll('.spz-hero').length == 0) {
+                  document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
+                }
+
+                setTimeout(() => {
+                  clearInterval(checkVariantHero);
+                }, 2000);
+              });
+
               let formLoaded = setInterval(() => {
                 if (document.querySelector('.SPZ_4003_V1 #mktoForm_1016.mktoForm .mktoFormRow input') && document.querySelector(".spz-form-wrap .the-form")) {
                   clearInterval(formLoaded)
                   document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(template_formSelector));
 
                   waitForElm('.SPZ_4003_V1 .mkto-wrap + .disclaimer').then(form => {
-                    document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mkto-wrap +  .disclaimer'));
+                    if (document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow")) {
+
+                      document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mkto-wrap +  .disclaimer'));
+                    }
                   });
 
                   waitForElm('.SPZ_4003_V1 .mktoForm .disclaimer').then(form => {
-                    document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mktoForm .disclaimer'));
+                    if (document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow")) {
+
+                      document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement('afterend', document.querySelector('.SPZ_4003_V1 .mktoForm .disclaimer'));
+                    }
                     // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
                   });
                   document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
@@ -173,7 +189,10 @@
               loadVidyardScript(initializeVidyardPlayer);
 
             }
-            addBaseline(template_formContent, template_position, template_formSelector, template_heroSelector, template_additionalSection, template_businessValueSection);
+
+            waitForElm('.SPZ_4003_V1 .hero').then(() => {
+              addBaseline(template_formContent, template_position, template_formSelector, template_heroSelector, template_additionalSection, template_businessValueSection);
+            });
 
             function formModify() {
               // Add class in mktoFormRow using count
