@@ -9,7 +9,8 @@
     font-size: .75rem;
     line-height: 1rem;
         --tw-text-opacity: 1!important;
-    color: rgba(var(--white),var(--tw-text-opacity))!important;}`;
+    color: rgba(var(--white),var(--tw-text-opacity))!important;}
+    @media (max-width: 991px) {#ca-sp-077-root-form .trusted .trusted-text{text-align: center; width: 100%;}}`;
     head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
     head.appendChild(style);
     style.type = 'text/css';
@@ -26,6 +27,21 @@
                     hiddenValue('SPZ_4003', 'SPZ_4003_truecontrol');
                     waitForElm('#ca-sp-077-root-form .form').then((elem) => {
                         elem.classList.add('mkto-wrap', 'bg-gradient');
+                    });
+
+                    waitForElm('.spz_4003_tc form.mktoForm .mktoFieldWrap input').then((elem) => {
+                        // Change Label Text
+                        ['#LblCountry:Country', '#LblState:State', '#LblTitle:Job title', '#LblPhone:Phone number'].forEach(item => {
+                            const [id, text] = item.split(':');
+                            waitForElm(`.spz_4003_tc form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
+                                label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
+                            });
+                        });
+
+                        document.querySelector('.spz_4003_tc form.mktoForm .mktoFieldWrap select#Country').addEventListener('change', () => {
+                            const stateExists = document.querySelector('.spz_4003_tc form.mktoForm .mktoFieldWrap select#State');
+                            stateExists ? (document.querySelector('label#LblState').textContent = "State") : '';
+                        });
                     });
                 }
                 else {
@@ -206,16 +222,16 @@
     // Generic Code
     function waitForElm(selector) {
         return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
             if (document.querySelector(selector)) {
-            resolve(document.querySelector(selector));
-            observer.disconnect();
+                return resolve(document.querySelector(selector));
             }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+            const observer = new MutationObserver(function (mutations) {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
     }
 })();
