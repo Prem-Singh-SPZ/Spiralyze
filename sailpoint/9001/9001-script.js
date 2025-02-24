@@ -228,26 +228,26 @@
         company_field.after(title_field);
       }
 
-      swapPrivacyCopies();
+      // swapPrivacyCopies();
     });
 
-    function swapPrivacyCopies() {
-      const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
-      const disclaimer = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .disclaimer');
-      const button = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow');
+    // function swapPrivacyCopies() {
+    //   const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
+    //   const disclaimer = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .disclaimer');
+    //   const button = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-      let fieldChanged = setInterval(() => {
-        if (disclaimer_field && disclaimer && button) {
-          if (!document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow + .disclaimer')) {
-            clearInterval(fieldChanged);
-            // disclaimer.after(button);
-            button.insertAdjacentElement('afterend', disclaimer);
-            button.insertAdjacentElement('beforebegin', disclaimer_field);
-            // button.after(disclaimer_field);
-          }
-        }
-      }, 100);
-    }
+    //   let fieldChanged = setInterval(() => {
+    //     if (disclaimer_field && disclaimer && button) {
+    //       if (!document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoButtonRow + .disclaimer')) {
+    //         clearInterval(fieldChanged);
+    //         // disclaimer.after(button);
+    //         button.insertAdjacentElement('afterend', disclaimer);
+    //         button.insertAdjacentElement('beforebegin', disclaimer_field);
+    //         // button.after(disclaimer_field);
+    //       }
+    //     }
+    //   }, 100);
+    // }
 
     // document.querySelector('.spz_9001 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
