@@ -48,12 +48,15 @@
         if (!body.classList.contains('spz_9001')) {
           body.classList.add('spz_9001');
 
+          console.log(document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3'));
           waitForElm('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3').then(() => {
             pageModify();
           });
 
           waitForElm('.spz_9001 #page-container .page-transition .inner-row__inner #mktoForm_1017 input').then(() => {
             formModify();
+            console.log(document.querySelector('.spz_9001 .hero + .row > .row__inner .bg-gradient p.text-h3'));
+            pageModify();
           });
 
           //the .spz-hero gets added to the page and removed after some time, so keep checking for it to add the form
