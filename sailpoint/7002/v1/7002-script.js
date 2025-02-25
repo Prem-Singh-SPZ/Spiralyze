@@ -94,12 +94,11 @@
             const title_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Title');
             const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer');
             const button = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow');
-            console.log('fields found');
             if (company_field && title_field && disclaimer_field && button && email_field && last_name_field && inquiry_field && country_field) {
                 last_name_field.insertAdjacentElement('afterend', email_field);
                 country_field.insertAdjacentElement('beforebegin', inquiry_field);
                 company_field.after(title_field);
-                button.insertAdjacentElement('afterend', disclaimer_field);
+                // button.insertAdjacentElement('afterend', disclaimer_field);
                 // button.after(disclaimer_field);
             }
         });
