@@ -10,7 +10,10 @@
     line-height: 1rem;
         --tw-text-opacity: 1!important;
     color: rgba(var(--white),var(--tw-text-opacity))!important;}
-    @media (max-width: 991px) {#ca-sp-077-root-form .trusted .trusted-text{text-align: center; width: 100%;}}`;
+    @media (max-width: 991px) {#ca-sp-077-root-form .trusted .trusted-text{text-align: center; width: 100%;}}
+     @media (max-width: 556px) {.mkto-wrap form.mktoForm .mktoError .mktoErrorMsg{line-height: 0.9rem;}
+    .mkto-wrap form.mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail{display:block;}
+    }`;
     head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
     head.appendChild(style);
     style.type = 'text/css';

@@ -19,11 +19,10 @@
             var contentInnerHTML = ``;
             if (location.href.indexOf('/identity-library/identity-governance-administration') > -1) {
               contentHeading = `2024 Gartner® Market Guide for Identity Governance and Administration`;
-              contentInnerHTML = `<p>Access the 2024 Gartner® Market Guide report to gain crucial insights into the current IGA landscape, emerging trends, and key factors for choosing a solution for your organization, including:</p>
+              contentInnerHTML = `<p>As digital transformation shifts and erodes the value of legacy perimeter-based security strategies, Gartner®️ notes the increasing need for an identity-first security strategy.</p>
+              <p>Access the guide and discover how to:</p>
               <ul>
-                <li>Key Business Drivers: Understand the motivations behind adopting IGA solutions and the essential features and capabilities required to achieve desired outcomes.</li>
-                <li>Expert Guidance: Get advice tailored for security and risk management leaders on how to maximize the value of your IGA solution.</li>
-                <li>Innovative IGA Trends: Explore the latest advancements in IGA, including AI-driven enhancements for improved visibility and intelligence.</li>
+                <li>Use centralized policies to control access across decentralized, distributed digital assets in a consistent manner.</li><li>Apply adaptive controls throughout the session, not just at login.</li><li>Use contextual data associated with identities and assets to drive dynamic decisions.</li>
               </ul>`;
             } else if (location.href.indexOf('/identity-library/dora-compliance') > -1) {
               contentHeading = `Building Digital Operational Resilience: DORA Compliance Through Enhanced Identity Security`;
@@ -156,7 +155,7 @@
                     }
                     // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
                   });
-                  document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
+                  // document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                   formModify();
                 }
               });
@@ -203,7 +202,7 @@
               }
 
               // Change Label Text
-              ['#LblCountry:Country', '#LblState:State', '#LblTitle:Job title', '#LblPhone:Phone number (optional)'].forEach(item => {
+              ['#LblCountry:Country', '#LblState:State', '#LblTitle:Job title', '#LblPhone:Phone number'].forEach(item => {
                 const [id, text] = item.split(':');
                 waitForElm(`.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                   label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
