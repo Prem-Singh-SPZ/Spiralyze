@@ -24,9 +24,21 @@ select:-webkit-autofill:active {
   overflow: hidden;
   position: relative;
 }
+.spz_7002_v1.spz-show-modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-backdrop-filter: blur(4.1999998093px);
+          backdrop-filter: blur(4.1999998093px);
+}
 .spz_7002_v1.spz-show-modal nav.navigation {
   z-index: 0;
-  opacity: 0.4;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 .spz_7002_v1.spz-show-modal #drift-frame-controller {
   z-index: 99 !important;
@@ -36,6 +48,10 @@ select:-webkit-autofill:active {
 }
 .spz_7002_v1.spz-show-modal #sp-050-modal {
   display: none;
+}
+.spz_7002_v1.spz-show-modal .page-transition > main > *:not(.spz_form_section) {
+  -webkit-filter: blur(4.1999998093px);
+          filter: blur(4.1999998093px);
 }
 .spz_7002_v1.spz-show-modal .spz_form_section {
   clip-path: none;
@@ -61,7 +77,7 @@ select:-webkit-autofill:active {
   min-height: 100vh;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  background: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(134deg, rgba(0, 51, 161, 0.5) 38.16%, rgba(0, 79, 181, 0.5) 64.91%, rgba(0, 113, 206, 0.5) 100.05%);
   -webkit-backdrop-filter: blur(4.1999998093px);
           backdrop-filter: blur(4.1999998093px);
 }

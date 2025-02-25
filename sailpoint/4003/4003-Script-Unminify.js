@@ -42,7 +42,8 @@
                 <li>Use centralized policies to control access across decentralized, distributed digital assets in a consistent manner.</li>
                 <li>Apply adaptive controls throughout the session, not just at login.</li>
                 <li>Use contextual data associated with identities and assets to drive dynamic decisions.</li>
-              </ul>`;
+              </ul>
+              <span class="text-sm">Gartner, Identity-First Security Maximizes Cybersecurity Effectiveness, 7 December 2022, Rebecca Archambault Et Al.<br>GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.</span>`;
             }
             const template_formContent = {
               customHTMLBefore: `Get the report`,
@@ -268,7 +269,7 @@
                     const lastName = document.querySelector('input[name="LastName"]').value.trim();
                     const emailValue = document.querySelector('input[name="Email"]').value.trim();
                     const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                    if (['FirstName', 'LastName', 'Email'].includes(fieldName)) {
+                    if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
                       if (firstName && lastName && emailRegex.test(emailValue)) {
                         document.body.classList.add('form-expand');
                       }
@@ -299,7 +300,7 @@
                     const lastName = document.querySelector('input[name="LastName"]').value.trim();
                     const emailValue = document.querySelector('input[name="Email"]').value.trim();
                     const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                    if (['FirstName', 'LastName', 'Email'].includes(fieldName)) {
+                    if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
                       if (firstName && lastName && emailRegex.test(emailValue)) {
                         document.body.classList.add('form-expand');
                       }
@@ -386,7 +387,7 @@
                 const countryRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-7');
                 const stateRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-8');
                 const stateExists = document.querySelector('select#State');
-                stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
+                stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden')) : (stateRow.classList.add('hidden'));
 
                 const optOutRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-28');
                 document.querySelector('label#LblGlobal_Opt_out__c') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
