@@ -7,18 +7,21 @@
                 if (!document.body.classList.contains('spz_7002_v1')) {
                     removeSpecificCookieValue('SPZ_7002', 'SPZ_7002_truecontrol');
                     document.body.classList.add('spz_7002_v1');
-                    hiddenValue('SPZ_7002', 'SPZ_7002_variant1');
                     waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
+                                clearInterval(spzFormInterval);
                                 addCta();
                                 formModify();
                                 hiddenValue('SPZ_7002', 'SPZ_7002_variant1');
                             }
-                        }, 500);
+                            else {
+                                clearInterval(spzFormInterval);
+                            }
+                        }, 100);
                         setTimeout(function () {
                             clearInterval(spzFormInterval);
-                        }, 10000);
+                        }, 5000);
                     });
 
                 } else {
