@@ -47,7 +47,6 @@
                 if (!document.body.classList.contains('spz_3002')) {
                     removeSpecificCookieValue('SPZ_3002', 'SPZ_3002_truecontrol');
                     document.body.classList.add('spz_3002');
-                    hiddenValue('SPZ_3002', 'SPZ_3002_variant');
                     waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
@@ -72,14 +71,14 @@
     }
 
     function heroUpdate() {
-        if (document.querySelectorAll('.spz_3002 #page-container  a.spz-contact-us').length == 0) {
+        if (document.querySelectorAll('.spz_3002 #page-container  a.redirect-to-demo').length == 0) {
             document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap').insertAdjacentHTML('beforeend', `<div class="hero__short-desc">Book your live demo of SailPoint&#8217;s identity security software to see how organizations like yours have:</div><ul class="hero__list"><li>Reduced staff onboarding from 10 days to 4 hours</li><li>Cut manually provisioned support tickets by 40%</li><li>Slashed time to provision new hires from 14 hours to 2.5 minutes</li></ul><div class="spz-email">
 					 <div class="form-group-wrapper">
 							<div class="form-group-spz">
 								<input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
 								<label class="form-label-spz">Email</label>
 							</div>
-							<a href="javascript:;" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_3002 spz-contact-us">
+							<a href="javascript:;" id="hero-copy-url" class="hero-btn btn btn--hotpink redirect-to-demo spz_tracking_3002">
 								<span>Get a Demo</span> 
 							</a>
 					</div>
@@ -400,7 +399,7 @@
 
     //click event listener
     document.body.addEventListener('click', function (e) {
-        if (e.target.closest('.spz-contact-us')) {
+        if (e.target.closest('.redirect-to-demo')) {
             document.body.classList.add('spz-show-modal');
             document.querySelector('html').classList.add('spz-no-scroll');
         }
@@ -419,8 +418,8 @@
             if (document.querySelector('.spz-form-container')) {
                 document.querySelector('.spz-form-container').remove();
             }
-            if (document.querySelector('.spz-contact-us')) {
-                document.querySelectorAll('.spz-contact-us').forEach(function (el) {
+            if (document.querySelector('.redirect-to-demo')) {
+                document.querySelectorAll('.redirect-to-demo').forEach(function (el) {
                     el.remove();
                 });
             }

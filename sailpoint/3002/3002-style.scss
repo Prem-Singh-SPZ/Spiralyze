@@ -727,7 +727,13 @@ html.spz-no-scroll {
           ),
           #fff;
         .hero__container {
+          display: flex;
+          padding-bottom: 24px;
+          
           .hero__content-wrap {
+            margin-top: 53px;
+            flex-basis: 46.3%;
+
             .hero__content,
             .hero__buttons {
               display: none;
@@ -744,8 +750,8 @@ html.spz-no-scroll {
               margin: 0 0 12px;
             }
 
-            .hero__heading{
-              color: #0033A1;
+            .hero__heading {
+              color: #0033a1;
               font-family: $poppins;
               font-size: 50px;
               font-weight: 600;
@@ -753,19 +759,20 @@ html.spz-no-scroll {
               margin: 0 0 16px;
             }
 
-            .hero__short-desc{
+            .hero__short-desc {
               color: #415364;
               font-family: $poppins;
               font-size: 16px;
               font-weight: 400;
               line-height: 160%;
-              margin: 0 0 14px;
+              margin: 0 0 15px;
             }
 
-            .hero__list{
+            .hero__list {
               padding: 0;
+              margin-bottom: 26px;
 
-              li{
+              li {
                 padding-left: 36px;
                 position: relative;
                 color: #415364;
@@ -775,8 +782,8 @@ html.spz-no-scroll {
                 line-height: 160%;
                 margin: 0 0 14px;
 
-                &:before{
-                  content: '';
+                &:before {
+                  content: "";
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -787,6 +794,10 @@ html.spz-no-scroll {
                 }
               }
             }
+          }
+
+          .hero__image-wrapper{
+            flex-basis: 51.4%;
           }
         }
       }
@@ -811,16 +822,14 @@ html.spz-no-scroll {
 
         .form-label-spz {
           position: absolute;
-          top: 13px;
-          font-size: 12px;
-          line-height: 24px;
+          top: calc(50% - 7.5px);
+          left: 16px;
+          font-size: 16px;
+          line-height: 160%;
           overflow: hidden;
           color: #000;
           text-overflow: ellipsis;
-          font-size: 20px;
-          font-style: normal;
           font-weight: 400;
-          line-height: 100%;
           pointer-events: none;
           -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
@@ -829,7 +838,7 @@ html.spz-no-scroll {
         .form-field-spz {
           width: 100%;
           height: 58px;
-          padding: 0px 12px 0px 24px;
+          padding: 0px 12px 0px 16px;
           background: #fff;
           border: none;
           overflow: hidden;
@@ -837,7 +846,7 @@ html.spz-no-scroll {
           text-overflow: ellipsis;
           font-family: $poppins;
           font-size: 16px;
-          font-weight:  400;
+          font-weight: 400;
           line-height: 160%;
           outline: none;
           transition-duration: 150ms;
@@ -891,11 +900,9 @@ html.spz-no-scroll {
                   label {
                     left: 10px;
                     top: -12px;
-
                     display: flex;
                     height: 22px;
                     padding: 1px 6px;
-
                     align-items: center;
                     border-radius: 3px;
                     background: #150839;
@@ -913,9 +920,9 @@ html.spz-no-scroll {
           &:not([value=""]) {
             ~ {
               .form-label-spz {
-                top: calc(50% - 12px);
-                left: 24px;
-                font-size: 20px;
+                top: calc(50% - 7.5px);
+                left: 16px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 100%;
@@ -944,32 +951,20 @@ html.spz-no-scroll {
             }
           }
         }
-  
       }
       .hero-btn {
         display: flex;
         flex-wrap: wrap;
-
         align-items: center;
-
         justify-content: center;
         width: 195px;
         height: 58px;
         border-radius: 0 3px 3px 0;
-        background: #0042ff;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 160%;
         color: #fff;
         text-decoration: none;
-
-        transition: all 0.15s;
-        &:hover {
-          background: #2d2d30;
-        }
-        &:active {
-          background: #002eeb;
-        }
       }
     }
   }
