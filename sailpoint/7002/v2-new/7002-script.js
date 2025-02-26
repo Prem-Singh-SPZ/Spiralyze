@@ -371,6 +371,7 @@
     // List of URLs
     const urls = [
         "https://www.sailpoint.com/",
+        "https://www.sailpoint.com/products/identity-security-cloud",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/suites",
         "https://www.sailpoint.com/products/identity-security-software/identity-iq",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/cloud-infrastructure-entitlement-management",

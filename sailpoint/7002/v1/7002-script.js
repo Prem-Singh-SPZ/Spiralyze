@@ -333,7 +333,7 @@
             }
         });
     }
-    
+
     //click event listener
     document.addEventListener('click', function (e) {
         if (e.target.closest('#mktoForm_1017 .mktoButton')) {
@@ -371,6 +371,7 @@
     // List of URLs
     const urls = [
         "https://www.sailpoint.com/",
+        "https://www.sailpoint.com/products/identity-security-cloud",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/suites",
         "https://www.sailpoint.com/products/identity-security-software/identity-iq",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/cloud-infrastructure-entitlement-management",
