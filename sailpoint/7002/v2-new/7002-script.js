@@ -50,6 +50,7 @@
                 <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
                 </svg></a></div>`);
 
+                document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm').closest('.column.relative').classList.add('spz-form-column');
                 document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm').closest('.column.relative').classList.remove('relative');
                 document.querySelector('.spz_7002_v2 #mktoForm_1017.mktoForm').closest('section').classList.add('spz_form_section');
             });
@@ -371,7 +372,6 @@
     // List of URLs
     const urls = [
         "https://www.sailpoint.com/",
-        "https://www.sailpoint.com/products/identity-security-cloud",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/suites",
         "https://www.sailpoint.com/products/identity-security-software/identity-iq",
         "https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/cloud-infrastructure-entitlement-management",
