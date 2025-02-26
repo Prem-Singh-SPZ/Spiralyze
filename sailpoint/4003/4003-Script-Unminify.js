@@ -169,8 +169,9 @@
                 script.onload = () => { waitForVidyardAPI(callback); };
                 document.head.appendChild(script);
               }
-              function waitForVidyardAPI(callback, attempts = 10) {
+              function waitForVidyardAPI(callback, attempts = 20) {
                 if (window.VidyardV4 && window.VidyardV4.api) {
+                  console.log('Vidyard API is ready', attempts);
                   callback();
                 } else if (attempts > 0) {
                   setTimeout(() => waitForVidyardAPI(callback, attempts - 1), 500);
@@ -210,9 +211,9 @@
                 });
               });
 
-              waitForElm('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow label#LblGlobal_Opt_out__c ~ .mktoCheckboxList label').then(label => {
-                label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-              });
+              // waitForElm('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow label#LblGlobal_Opt_out__c ~ .mktoCheckboxList label').then(label => {
+              //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+              // });
 
 
               // On input focus add class on closest parent field class
@@ -389,8 +390,8 @@
                 const stateExists = document.querySelector('select#State');
                 stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden')) : (stateRow.classList.add('hidden'));
 
-                const optOutRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-28');
-                document.querySelector('label#LblGlobal_Opt_out__c') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
+                // const optOutRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-28');
+                // document.querySelector('label#LblGlobal_Opt_out__c') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
               });
 
               const form = document.querySelector('form#mktoForm_1016');
