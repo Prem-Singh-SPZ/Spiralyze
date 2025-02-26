@@ -83,7 +83,6 @@
         });
 
 
-        console.log('checking fields');
         waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer').then(() => {
             // Change Field Position
             const email_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Email');
@@ -94,7 +93,7 @@
             const title_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Title');
             const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer');
             const button = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow');
-            if (company_field && title_field && disclaimer_field && button && email_field && last_name_field && inquiry_field && country_field) {
+            if (company_field && title_field && email_field && last_name_field && inquiry_field && country_field) {
                 last_name_field.insertAdjacentElement('afterend', email_field);
                 country_field.insertAdjacentElement('beforebegin', inquiry_field);
                 company_field.after(title_field);
@@ -216,7 +215,7 @@
 
         if (document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm select#Country')) {
             document.querySelector('select#Country').addEventListener('change', () => {
-                const stateRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
+                const stateRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Country + .mktoFormRow');
                 const optOutRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
                 const countryRow = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
 
@@ -224,7 +223,7 @@
                 //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
                 // });
 
-                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State") : '';
+                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.add('row_State'), countryRow.classList.remove('full-span-field')) : (stateRow.classList.remove('row_State'), countryRow.classList.add('full-span-field'));
             });
         }
 
