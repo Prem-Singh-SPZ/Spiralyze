@@ -130,6 +130,7 @@
               let checkVariantHero = setInterval(() => {
                 if (document.querySelectorAll('.spz-hero').length == 0) {
                   document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
+                  loadVidyardScript(initializeVidyardPlayer);
                 }
 
                 setTimeout(() => {
@@ -169,9 +170,8 @@
                 script.onload = () => { waitForVidyardAPI(callback); };
                 document.head.appendChild(script);
               }
-              function waitForVidyardAPI(callback, attempts = 20) {
+              function waitForVidyardAPI(callback, attempts = 10) {
                 if (window.VidyardV4 && window.VidyardV4.api) {
-                  console.log('Vidyard API is ready', attempts);
                   callback();
                 } else if (attempts > 0) {
                   setTimeout(() => waitForVidyardAPI(callback, attempts - 1), 500);
@@ -187,7 +187,6 @@
                 }
                 window.VidyardV4.api.renderPlayer({ uuid: "C6CvYyMyXN8GUs6tiKa2th", container: document.querySelector(".business-value .vidyard-section"), type: "lightbox", v: 4, autoplay: 1 });
               }
-              loadVidyardScript(initializeVidyardPlayer);
 
             }
 
