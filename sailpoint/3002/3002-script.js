@@ -79,7 +79,7 @@
 								<label class="form-label-spz">Email</label>
 							</div>
 							<a href="javascript:;" id="hero-copy-url" class="hero-btn btn btn--hotpink redirect-to-demo spz_tracking_3002">
-								<span>Get a Demo</span> 
+								<span>Get a demo</span> 
 							</a>
 					</div>
 				</div>`);
