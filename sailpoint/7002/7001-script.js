@@ -493,7 +493,7 @@ select:-webkit-autofill:active {
                 clearInterval(bodyLoaded);
                 if (!document.body.classList.contains('SPZ_7001')) {
                     document.body.classList.add('SPZ_7001');
-                    hiddenValue('SPZ_7001', 'SPZ_7002_truecontrol');
+                    hiddenValue('SPZ_7002', 'SPZ_7002_truecontrol');
                     waitForElm('.SPZ_7001 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.field-1').length == 0) {
@@ -507,7 +507,7 @@ select:-webkit-autofill:active {
                     });
                 } else {
                     if (document.body.classList.contains('SPZ_7001')) {
-                        hiddenValue('SPZ_7001', 'SPZ_7002_truecontrol');
+                        hiddenValue('SPZ_7002', 'SPZ_7002_truecontrol');
                         setHiddenFieldValue();
                     }
                 }
