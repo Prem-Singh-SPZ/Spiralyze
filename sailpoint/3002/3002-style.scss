@@ -176,7 +176,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   padding: 0;
   font-family: $poppins;
 
-  *{
+  * {
     padding: 0;
     font-family: $poppins;
   }
@@ -270,15 +270,28 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
     font-size 0.3s ease-in-out;
   z-index: 9;
-
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix {
-  color: #E6241E !important;
-} 
+.spz_3002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.error
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_3002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.error
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
+  .mktoAsterix,
+.spz_3002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.error.active.typing
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_3002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.error.active.typing
+  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
+  .mktoAsterix {
+  color: #e6241e !important;
+}
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
   display: none !important;
@@ -368,12 +381,14 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   #mktoForm_1017.mktoForm
   .mktoFieldWrap
   textarea.mktoField:not([type="checkbox"]) {
-  min-height: 88px;
+  height: 88px;
   overflow-y: auto !important;
   white-space: normal !important;
-
-  @media screen and (max-width: 767.98px) {
-    min-height: 80px;
+  // add css to hide scrollbar
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -411,9 +426,12 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   outline: 1px solid #0071ce;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
-    border-color: #E6241E !important;
-    outline: none !important;
+.spz_3002
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap.error
+  .mktoField:not([type="checkbox"]) {
+  border-color: #e6241e !important;
+  outline: none !important;
 }
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
@@ -603,29 +621,29 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 //   margin-top: 8px;
 // }
 
-// .spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a {
-//   color: #0071ce;
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 1.6;
-//   text-decoration-line: underline;
-//   transition: all 0.1s ease-in-out;
-//   text-underline-offset: 1px;
+.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a {
+  color: #0071ce;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration-line: underline;
+  transition: all 0.1s ease-in-out;
+  text-underline-offset: 1px;
 
-//   &:hover {
-//     font-weight: 600;
-//     text-decoration: none;
-//   }
+  &:hover {
+    font-weight: 600;
+    text-decoration: none;
+  }
 
-//   &:active {
-//     border-radius: 4px;
-//     border: 1px solid #0071ce;
-//     background: rgba(0, 113, 206, 0.05);
-//     padding: 1px;
-//     text-decoration: none;
-//   }
-// }
+  &:active {
+    border-radius: 4px;
+    border: 1px solid #0071ce;
+    background: rgba(0, 113, 206, 0.05);
+    padding: 1px;
+    text-decoration: none;
+  }
+}
 
 .spz_3002 .disclaimer a {
   color: #0071ce;
@@ -968,7 +986,6 @@ html.spz-no-scroll {
             }
           }
 
-
           &:focus {
             ~ {
               .form-label-spz {
@@ -1006,8 +1023,8 @@ html.spz-no-scroll {
         }
       }
 
-      &.spz-input-filled{
-        border: 1px solid #DAE1E9;
+      &.spz-input-filled {
+        border: 1px solid #dae1e9;
       }
     }
   }

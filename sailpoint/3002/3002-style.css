@@ -272,7 +272,7 @@ select:-webkit-autofill:active {
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix,
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix {
-  color: #E6241E !important;
+  color: #e6241e !important;
 }
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
@@ -338,14 +338,14 @@ select:-webkit-autofill:active {
 }
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
-  min-height: 88px;
+  height: 88px;
   overflow-y: auto !important;
   white-space: normal !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-@media screen and (max-width: 767.98px) {
-  .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
-    min-height: 80px;
-  }
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox])::-webkit-scrollbar {
+  display: none;
 }
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
@@ -370,7 +370,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type=checkbox]) {
-  border-color: #E6241E !important;
+  border-color: #e6241e !important;
   outline: none !important;
 }
 
@@ -538,6 +538,29 @@ select:-webkit-autofill:active {
   .spz_3002 #mktoForm_1017.mktoForm .disclaimer {
     max-width: 100%;
   }
+}
+
+.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a {
+  color: #0071ce;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration-line: underline;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-underline-offset: 1px;
+}
+.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:hover {
+  font-weight: 600;
+  text-decoration: none;
+}
+.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:active {
+  border-radius: 4px;
+  border: 1px solid #0071ce;
+  background: rgba(0, 113, 206, 0.05);
+  padding: 1px;
+  text-decoration: none;
 }
 
 .spz_3002 .disclaimer a {
@@ -894,7 +917,7 @@ html.spz-no-scroll {
   }
 }
 .spz_3002 .spz-email .form-group-wrapper.spz-input-filled {
-  border: 1px solid #DAE1E9;
+  border: 1px solid #dae1e9;
 }
 .spz_3002 .social-proof-logos {
   width: 100%;
