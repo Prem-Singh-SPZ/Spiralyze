@@ -796,7 +796,7 @@ html.spz-no-scroll {
               margin-bottom: 26px;
 
               @media (max-width: 767.98px) {
-                margin-bottom: 25px;
+                margin-bottom: 27px;
               }
 
               li {
@@ -893,7 +893,7 @@ html.spz-no-scroll {
           line-height: 160%;
           outline: none;
           transition-duration: 150ms;
-          // border-radius: 3px 0px 0px 3px;
+          border-radius: 4px 0px 0px 4px;
           // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
 
           @media (max-width: 767.98px) {
@@ -944,7 +944,7 @@ html.spz-no-scroll {
           &:not([value=""]) {
             ~ {
               .form-label-spz {
-                top: calc(50% - 9.5px);
+                top: calc(50% - 12px);
                 left: 16px;
                 font-size: 16px;
                 font-style: normal;
@@ -957,6 +957,8 @@ html.spz-no-scroll {
               }
             }
           }
+
+
           &:focus {
             ~ {
               .form-label-spz {
@@ -979,7 +981,7 @@ html.spz-no-scroll {
         justify-content: center;
         width: 195px;
         height: 58px;
-        border-radius: 0 3px 3px 0;
+        border-radius: 0 4px 4px 0;
         font-size: 16px;
         font-weight: 600;
         line-height: 160%;
@@ -988,10 +990,14 @@ html.spz-no-scroll {
 
         @media (max-width: 767.98px) {
           width: 100%;
-          margin-top: 13px;
+          margin-top: 11.5px;
           height: 48px;
           border-radius: 4px;
         }
+      }
+
+      &.spz-input-filled{
+        border: 1px solid #DAE1E9;
       }
     }
   }

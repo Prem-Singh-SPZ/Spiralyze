@@ -84,6 +84,18 @@
 					</div>
 				</div>`);
 
+                //wait for .email-hero-spz to load and then add event listener 
+                waitForElm('.spz_3002 .email-hero-spz').then(() => {
+                    //check all the evenet listener on the email field
+                    document.querySelector('.spz_3002 .email-hero-spz').addEventListener('input', function () {
+                        if (this.value) {
+                            this.closest('.form-group-wrapper').classList.add('spz-input-filled');
+                        } else {
+                            this.closest('.form-group-wrapper').classList.remove('spz-input-filled');
+                        }
+                    });
+                }); 
+
             if (document.querySelectorAll('.social-proof-logos').length == 0)
                 document.querySelector('.spz_3002 .hero').insertAdjacentHTML('beforeend', `${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
                               <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
@@ -402,6 +414,13 @@
         if (e.target.closest('.redirect-to-demo')) {
             document.body.classList.add('spz-show-modal');
             document.querySelector('html').classList.add('spz-no-scroll');
+            //take the value of .email-hero-spz and set it to the email field in the form
+            var email = document.querySelector('.email-hero-spz');
+            var emailField = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Email input');
+            if (email && email.value && emailField) {
+                emailField.value = email.value;
+                emailField.dispatchEvent(new Event('input'));
+            }
         }
         if (e.target.closest('.spz-close-modal')) {
             e.stopPropagation();
