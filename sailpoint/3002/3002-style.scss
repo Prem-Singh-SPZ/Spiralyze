@@ -173,6 +173,13 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   width: 100% !important;
   max-width: 520px;
   margin: 23px auto 0;
+  padding: 0;
+  font-family: $poppins;
+
+  *{
+    padding: 0;
+    font-family: $poppins;
+  }
 
   @media screen and (max-width: 767.98px) {
     margin: 16px auto 0;
@@ -263,7 +270,15 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out,
     font-size 0.3s ease-in-out;
   z-index: 9;
+
 }
+
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix,
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel:not(#LblreceivingAdvertisingInformation) .mktoAsterix {
+  color: #E6241E !important;
+} 
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
   display: none !important;
@@ -322,13 +337,6 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   .mktoAsterix {
   color: #0071ce !important;
 }
-
-/* .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel .mktoAsterix {
-    color: #E6241E !important;
-} */
 
 .spz_3002
   #mktoForm_1017.mktoForm
@@ -403,9 +411,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   outline: 1px solid #0071ce;
 }
 
-/* .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
+.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap.error .mktoField:not([type="checkbox"]) {
     border-color: #E6241E !important;
-} */
+    outline: none !important;
+}
 
 .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
   position: relative;
@@ -452,6 +461,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 
   @media screen and (max-width: 767.98px) {
     margin: 8px 0 0 !important;
+    padding: 0;
   }
 }
 
@@ -572,7 +582,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 .disclaimer {
+.spz_3002 #mktoForm_1017.mktoForm .disclaimer {
   margin: 8px auto 0;
   padding: 0;
   color: #415364;

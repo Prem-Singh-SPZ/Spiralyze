@@ -211,17 +211,17 @@
                 document.querySelector('.spz_3002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .mkto-wrap.w-full').parentElement);
             });
 
-            if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
-                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
-            }
+            // if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
+            //     document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
+            // }
         }
         else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
             waitForElm('.spz_3002 .mkto-wrap.w-full .mktoFormRow input').then(() => {
                 document.querySelector('.spz_3002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .mkto-wrap.w-full').parentElement);
             });
-            if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
-                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
-            }
+            // if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
+            //     document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
+            // }
         }
 
 
@@ -262,7 +262,7 @@
         const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
         const button = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-        if (company_field && title_field && disclaimer_field && button) {
+        if (company_field && title_field && inquiry_field && country_field && email_field && last_name_field) {
             last_name_field.insertAdjacentElement('afterend', email_field);
             country_field.insertAdjacentElement('beforebegin', inquiry_field);
             company_field.after(title_field);
