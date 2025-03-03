@@ -157,6 +157,8 @@
                     }
                     // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
                   });
+
+                  fcd = setInterval((() => { waitForElm(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer").then((e => { clearInterval(fcd); document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow") && document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement("beforebegin", document.querySelector(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer")) })) }))
                   // document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                   formModify();
                 }
@@ -383,14 +385,12 @@
                 }, 1000);
               }
 
-              document.querySelector('select#Country').addEventListener('change', () => {
-                const countryRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-7');
-                const stateRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-8');
-                const stateExists = document.querySelector('select#State');
-                stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden')) : (stateRow.classList.add('hidden'));
 
-                // const optOutRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-28');
-                // document.querySelector('label#LblGlobal_Opt_out__c') ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.") : '';
+              document.querySelector('select#Country').addEventListener('change', () => {
+                const countryRow = document.querySelector('.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-8');
+                const stateRow = document.querySelector('.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-9');
+                const stateExists = document.querySelector('select#State');
+                stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
               });
 
               const form = document.querySelector('form#mktoForm_1016');
