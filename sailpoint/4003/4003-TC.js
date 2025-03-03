@@ -10,6 +10,7 @@
     line-height: 1rem;
         --tw-text-opacity: 1!important;
     color: rgba(var(--white),var(--tw-text-opacity))!important;}
+    .iron-theme.mkto-wrap form.mktoForm .mktoFormRow:has(.mktoHtmlText){width: 100%;}
     @media (max-width: 991px) {#ca-sp-077-root-form .trusted .trusted-text{text-align: center; width: 100%;}}
      @media (max-width: 556px) {.mkto-wrap form.mktoForm .mktoError .mktoErrorMsg{line-height: 0.9rem;}
     .mkto-wrap form.mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail{display:block;}

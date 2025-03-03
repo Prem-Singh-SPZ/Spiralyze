@@ -384,13 +384,13 @@
                   clearInterval(timeBuffer);
                 }, 1000);
               }
-
-
+              
               document.querySelector('select#Country').addEventListener('change', () => {
-                const countryRow = document.querySelector('.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-8');
-                const stateRow = document.querySelector('.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-9');
+                const countryRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-8');
+                const stateRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-9');
                 const stateExists = document.querySelector('select#State');
                 stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
+
               });
 
               const form = document.querySelector('form#mktoForm_1016');
