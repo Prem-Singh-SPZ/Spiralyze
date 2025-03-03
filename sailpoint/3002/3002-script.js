@@ -47,9 +47,9 @@
                 if (!document.body.classList.contains('spz_3002')) {
                     removeSpecificCookieValue('SPZ_3002', 'SPZ_3002_truecontrol');
                     document.body.classList.add('spz_3002');
-                    waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                    waitForElm('.spz_3002 .hero .hero__container .hero__content').then(() => {
                         let spzFormInterval = setInterval(() => {
-                            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
+                            if (document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow.row_Email').length == 0) {
                                 heroUpdate();
                                 formModify();
                                 hiddenValue('SPZ_3002', 'SPZ_3002_variant');
@@ -84,17 +84,17 @@
 					</div>
 				</div>`);
 
-                //wait for .email-hero-spz to load and then add event listener 
-                waitForElm('.spz_3002 .email-hero-spz').then(() => {
-                    //check all the evenet listener on the email field
-                    document.querySelector('.spz_3002 .email-hero-spz').addEventListener('input', function () {
-                        if (this.value) {
-                            this.closest('.form-group-wrapper').classList.add('spz-input-filled');
-                        } else {
-                            this.closest('.form-group-wrapper').classList.remove('spz-input-filled');
-                        }
-                    });
-                }); 
+            //wait for .email-hero-spz to load and then add event listener 
+            waitForElm('.spz_3002 .email-hero-spz').then(() => {
+                //check all the evenet listener on the email field
+                document.querySelector('.spz_3002 .email-hero-spz').addEventListener('input', function () {
+                    if (this.value) {
+                        this.closest('.form-group-wrapper').classList.add('spz-input-filled');
+                    } else {
+                        this.closest('.form-group-wrapper').classList.remove('spz-input-filled');
+                    }
+                });
+            });
 
             if (document.querySelectorAll('.social-proof-logos').length == 0)
                 document.querySelector('.spz_3002 .hero').insertAdjacentHTML('beforeend', `${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
@@ -122,111 +122,101 @@
 
                     const scrollSpeed = 2; // Adjust scrolling speed (pixels per interval)
                     const scrollInterval = 30; // Adjust scrolling interval (milliseconds)
-                  
+
                     let currentPosition = 0;
                     let autoScrollEnabled = true; // Flag for auto-scrolling
-                  
+
                     setInterval(() => {
-                      if (autoScrollEnabled) { // Only scroll automatically if enabled
-                        currentPosition += scrollSpeed;
-                        marqueeContainer.scrollLeft = currentPosition;
-                  
-                        // Reset scroll position when it reaches the end
-                        if (currentPosition >= marqueeContainer.scrollWidth - marqueeContainer.offsetWidth) {
-                          currentPosition = 0;
+                        if (autoScrollEnabled) { // Only scroll automatically if enabled
+                            currentPosition += scrollSpeed;
+                            marqueeContainer.scrollLeft = currentPosition;
+
+                            // Reset scroll position when it reaches the end
+                            if (currentPosition >= marqueeContainer.scrollWidth - marqueeContainer.offsetWidth) {
+                                currentPosition = 0;
+                            }
                         }
-                      }
                     }, scrollInterval);
-                  
+
                     let startX;
                     let scrollLeft;
                     let isDragging = false; // Flag for dragging state
-                  
+
                     marqueeContainer.addEventListener('mousedown', (e) => {
-                      startX = e.clientX;
-                      scrollLeft = marqueeContainer.scrollLeft;
-                      isDragging = true;
-                      autoScrollEnabled = false; // Disable auto-scroll while dragging
-                      marqueeContainer.style.cursor = 'grabbing'; // Visual feedback
+                        startX = e.clientX;
+                        scrollLeft = marqueeContainer.scrollLeft;
+                        isDragging = true;
+                        autoScrollEnabled = false; // Disable auto-scroll while dragging
+                        marqueeContainer.style.cursor = 'grabbing'; // Visual feedback
                     });
-                  
+
                     marqueeContainer.addEventListener('mousemove', (e) => {
-                      if (isDragging) {
-                        const currentX = e.clientX;
-                        const deltaX = currentX - startX;
-                        marqueeContainer.scrollLeft = scrollLeft - deltaX;
-                        currentPosition = marqueeContainer.scrollLeft; // Keep sync with auto scroll
-                      }
+                        if (isDragging) {
+                            const currentX = e.clientX;
+                            const deltaX = currentX - startX;
+                            marqueeContainer.scrollLeft = scrollLeft - deltaX;
+                            currentPosition = marqueeContainer.scrollLeft; // Keep sync with auto scroll
+                        }
                     });
-                  
+
                     marqueeContainer.addEventListener('mouseup', () => {
-                      isDragging = false;
-                      autoScrollEnabled = true; // Re-enable auto-scroll after dragging
-                      marqueeContainer.style.cursor = 'grab'; // Reset cursor
+                        isDragging = false;
+                        autoScrollEnabled = true; // Re-enable auto-scroll after dragging
+                        marqueeContainer.style.cursor = 'grab'; // Reset cursor
                     });
-                  
+
                     marqueeContainer.addEventListener('mouseleave', () => {
-                      isDragging = false;
-                      autoScrollEnabled = true; // Re-enable auto-scroll if mouse leaves
-                      marqueeContainer.style.cursor = 'grab'; // Reset cursor
+                        isDragging = false;
+                        autoScrollEnabled = true; // Re-enable auto-scroll if mouse leaves
+                        marqueeContainer.style.cursor = 'grab'; // Reset cursor
                     });
-                  
+
                     // Touch Events (similar logic as mouse events)
                     marqueeContainer.addEventListener('touchstart', (e) => {
-                      startX = e.touches[0].clientX;
-                      scrollLeft = marqueeContainer.scrollLeft;
-                      isDragging = true;
-                      autoScrollEnabled = false;
+                        startX = e.touches[0].clientX;
+                        scrollLeft = marqueeContainer.scrollLeft;
+                        isDragging = true;
+                        autoScrollEnabled = false;
                     });
-                  
+
                     marqueeContainer.addEventListener('touchmove', (e) => {
-                      if (isDragging) {
-                        const currentX = e.touches[0].clientX;
-                        const deltaX = currentX - startX;
-                        marqueeContainer.scrollLeft = scrollLeft - deltaX;
-                        currentPosition = marqueeContainer.scrollLeft;
-                        e.preventDefault(); // Prevent default touch behavior
-                      }
+                        if (isDragging) {
+                            const currentX = e.touches[0].clientX;
+                            const deltaX = currentX - startX;
+                            marqueeContainer.scrollLeft = scrollLeft - deltaX;
+                            currentPosition = marqueeContainer.scrollLeft;
+                            e.preventDefault(); // Prevent default touch behavior
+                        }
                     });
-                  
+
                     marqueeContainer.addEventListener('touchend', () => {
-                      isDragging = false;
-                      autoScrollEnabled = true;
+                        isDragging = false;
+                        autoScrollEnabled = true;
                     });
-                  
-                  }
+
+                }
             });
         }
     }
 
     function formModify() {
         if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
-            document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
-            </svg></a></div></div></div>`);
+            </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
+
+            loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
+
 
             waitForElm('.spz_3002 .mkto-wrap.w-full .mktoFormRow input').then(() => {
                 if (document.querySelectorAll('.spz-form-title').length == 0)
-                    document.querySelector('.spz_3002 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Get live demo</div>`);
-                document.querySelector('.spz_3002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .mkto-wrap.w-full').parentElement);
+                    document.querySelector('.spz_3002 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', ``);
             });
-
-            // if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
-            //     document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
-            // }
-        }
-        else if (document.querySelectorAll('.spz-form-container').length == 1 && document.querySelectorAll('.spz-form-container .mkto-wrap.w-full').length == 0) {
-            waitForElm('.spz_3002 .mkto-wrap.w-full .mktoFormRow input').then(() => {
-                document.querySelector('.spz_3002 #page-container .flex.min-h-screen .spz-form-content').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .mkto-wrap.w-full').parentElement);
-            });
-            // if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelector('.spz_3002 .disclaimer')) {
-            //     document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentElement('beforeend', document.querySelector('.spz_3002 .disclaimer'));
-            // }
         }
 
 
         // Add class in mktoField using the name attribute
-        var form_fields = document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow');
+        var form_fields = document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
             if (form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])')) {
                 var dynamicClass = form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])').getAttribute('name');
@@ -247,31 +237,31 @@
         // Change Label Text
         ['#LblCountry:Country', '#LblState:State', '#LblreasonforInquiry:Reason for inquiry'].forEach(item => {
             const [id, text] = item.split(':');
-            waitForElm(`.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
+            waitForElm(`.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
             });
         });
 
         // Change Field Position
-        const email_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Email');
-        const last_name_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_LastName');
-        const inquiry_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_reasonforInquiry');
-        const country_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Country');
-        const company_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Company');
-        const title_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Title');
-        const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
-        const button = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow');
+        // const email_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email');
+        // const last_name_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_LastName');
+        // const inquiry_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_reasonforInquiry');
+        // const country_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Country');
+        // const company_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Company');
+        // const title_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Title');
+        // const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer');
+        // const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
 
-        if (company_field && title_field && inquiry_field && country_field && email_field && last_name_field) {
-            last_name_field.insertAdjacentElement('afterend', email_field);
-            country_field.insertAdjacentElement('beforebegin', inquiry_field);
-            company_field.after(title_field);
-            // button.after(disclaimer_field);
-        }
+        // if (company_field && title_field && inquiry_field && country_field && email_field && last_name_field) {
+        //     last_name_field.insertAdjacentElement('afterend', email_field);
+        //     country_field.insertAdjacentElement('beforebegin', inquiry_field);
+        //     company_field.after(title_field);
+        //     // button.after(disclaimer_field);
+        // }
 
-        waitForElm(`.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
+        waitForElm(`.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {
-                document.querySelectorAll(`.spz_3002 #mktoForm_1017.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+                document.querySelectorAll(`.spz_3002 #mktoForm_1018.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
                     if (el && el.value && (el.value != '')) {
                         el.closest('.mktoFieldWrap').classList.add('filled');
                     }
@@ -279,14 +269,14 @@
             }, 1000);
         });
 
-        // waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+        // waitForElm('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
         //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
         // });
 
         // On input focus add class on closest parent field class
         function focusFields() {
             // Attach events using event delegation
-            const form = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm');
+            const form = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm');
             if (!form) return;
 
             form.addEventListener('focus', function (event) {
@@ -321,7 +311,7 @@
 
             // Function to reapply functionality for dynamic fields
             function reapplyStateFieldListeners() {
-                const stateField = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField#State');
+                const stateField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField#State');
                 if (stateField) {
                     stateField.addEventListener('focus', function () {
                         stateField.closest('.mktoFieldWrap').classList.add('active', 'typing');
@@ -345,14 +335,14 @@
                 reapplyStateFieldListeners();
             });
 
-            const container = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm');
+            const container = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm');
             if (container) {
                 observer.observe(container, { childList: true, subtree: true });
             }
         }
         focusFields();
         function checkAllFields() {
-            const fields = document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .mktoField');
+            const fields = document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .mktoField');
             const timeBuffer = setInterval(() => {
                 fields.forEach(field => {
                     const fieldWrap = field.closest('.mktoFieldWrap');
@@ -380,17 +370,17 @@
             }, 1000);
         }
 
-        if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm select#Country')) {
+        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#Country')) {
             document.querySelector('select#Country').addEventListener('change', () => {
-                const stateRow = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_State');
-                const optOutRow = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c');
-                const countryRow = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
+                const stateRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_State');
+                const optOutRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_reasonforInquiry');
+                const countryRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country');
 
-                // waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
+                // waitForElm('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Global_Opt_out__c .mktoCheckboxList label').then(label => {
                 //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
                 // });
 
-                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
+                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), optOutRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), optOutRow.classList.add('spz-full-width'));
             });
         }
 
@@ -409,6 +399,17 @@
 
     }
 
+    function loadForm() {
+        //setintervel to check the form is loaded or not
+        var formInterval = setInterval(function () {
+            console.log('formInterval');
+            if (document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
+                clearInterval(formInterval);
+                window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "".concat(1018));
+            }
+        }, 100);
+    }
+
     //click event listener
     document.body.addEventListener('click', function (e) {
         if (e.target.closest('.redirect-to-demo')) {
@@ -416,7 +417,7 @@
             document.querySelector('html').classList.add('spz-no-scroll');
             //take the value of .email-hero-spz and set it to the email field in the form
             var email = document.querySelector('.email-hero-spz');
-            var emailField = document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .row_Email input');
+            var emailField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email input');
             if (email && email.value && emailField) {
                 emailField.value = email.value;
                 emailField.dispatchEvent(new Event('input'));
@@ -491,7 +492,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
@@ -509,7 +510,7 @@
 
         //click event listener
         document.addEventListener('click', function (e) {
-            if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+            if (e.target.closest('#mktoForm_1018 .mktoButton')) {
                 //inject current time and date in EST timezone into .intellimize2 hidden field
                 var d = new Date();
                 var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

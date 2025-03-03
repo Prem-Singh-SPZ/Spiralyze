@@ -160,13 +160,13 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #contact-us,
-.spz_3002 #footer-cta,
-.spz_3002 #get-started {
-  display: none !important;
-}
+// .spz_3002 #contact-us,
+// .spz_3002 #footer-cta,
+// .spz_3002 #get-started {
+//   display: none !important;
+// }
 
-.spz_3002 #mktoForm_1017.mktoForm {
+.spz_3002 #mktoForm_1018.mktoForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -186,8 +186,8 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
 
   // &:not([class*="row_"]) {
@@ -195,41 +195,41 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   // }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Email,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_FirstName,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_LastName,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Title,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Company,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Phone,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Country,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_State,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry,
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Number_of_Employees__c {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Email,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_FirstName,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_LastName,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Title,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Company,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Phone,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_State,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_reasonforInquiry,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Number_of_Employees__c {
   width: calc(50% - 8px);
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.row_Country + .mktoFormRow {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country + .mktoFormRow {
   display: block;
   width: calc(50% - 8px);
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormRow.spz-full-width {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm > div:not([class]):not([id]),
+.spz_3002 #mktoForm_1018.mktoForm > div:not([class]):not([id]),
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFormRow.row_Phone:has(.mktoPlaceholderPhone),
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFormRow.row_Number_of_Employees__c:has(
     .mktoPlaceholderNumber_of_Employees__c
   ) {
   display: none;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFormCol {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormCol {
   margin: 0 !important;
   width: 100% !important;
 
@@ -239,7 +239,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap {
   position: relative;
   margin-bottom: 16px;
   width: 100% !important;
@@ -249,10 +249,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002
-  #mktoForm_1017.mktoForm
-  .mktoFieldWrap
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel {
   color: #415364 !important;
   font-size: 14px;
   font-style: normal;
@@ -272,38 +269,45 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   z-index: 9;
 }
 
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.error
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_3002
-  #mktoForm_1017.mktoForm
-  .mktoFieldWrap.error
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
+  label.mktoLabel
   .mktoAsterix,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.error.active.typing
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+  label.mktoLabel,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.error.active.typing
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
+  label.mktoLabel
   .mktoAsterix {
   color: #e6241e !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo {
+  position: relative;
+  width: auto !important;
+  color: #415364 !important;
+  top: unset;
+  left: unset;
+  font-weight: 400;
+}
+
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
   display: none !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .field-12 .mktoFieldWrap label.mktoLabel {
+.spz_3002 #mktoForm_1018.mktoForm .field-12 .mktoFieldWrap label.mktoLabel {
   top: 14px;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap:hover label.mktoLabel,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:hover label.mktoLabel,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap:hover
   label.mktoLabel
   .mktoAsterix {
@@ -311,25 +315,19 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.filled:not(.active):not(.error)
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
+  label.mktoLabel,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.filled:not(.active):not(.error)
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation)
+  label.mktoLabel
   .mktoAsterix {
   color: #415364 !important;
 }
 
-.spz_3002
-  #mktoForm_1017.mktoForm
-  .mktoFieldWrap.active.typing
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation),
-.spz_3002
-  #mktoForm_1017.mktoForm
-  .mktoFieldWrap.filled
-  label.mktoLabel:not(#LblreceivingAdvertisingInformation) {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.filled label.mktoLabel {
   width: auto !important;
   top: -11px;
   background: #fff;
@@ -339,12 +337,12 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.active.typing
   label.mktoLabel
   .mktoAsterix,
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.active.typing
   label.mktoLabel
   .mktoAsterix {
@@ -352,7 +350,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap
   .mktoField:not([type="checkbox"]) {
   width: 100% !important;
@@ -378,7 +376,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap
   textarea.mktoField:not([type="checkbox"]) {
   height: 88px;
@@ -393,18 +391,18 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap:not(.active):not(.typing):not(.filled)
   select.mktoField {
   color: transparent !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap select.mktoField {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select.mktoField {
   padding-right: 37px !important;
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap
   select.mktoField
   option:first-child {
@@ -412,14 +410,14 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap:hover
   .mktoField:not([type="checkbox"]) {
   border-color: #415364;
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.active.typing
   .mktoField:not([type="checkbox"]) {
   border-color: #0071ce;
@@ -427,14 +425,14 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap.error
   .mktoField:not([type="checkbox"]) {
   border-color: #e6241e !important;
   outline: none !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError {
   position: relative;
   top: unset !important;
   bottom: unset !important;
@@ -443,7 +441,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   margin: 0 0 !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
   /* color: #FFF; */
   font-size: 12px;
   font-style: normal;
@@ -458,7 +456,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   padding: 0;
 }
 
-// .spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+// .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
 //     position: absolute;
 //     content: "";
 //     width: 12px;
@@ -470,11 +468,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 //     background-repeat: no-repeat;
 // }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .select-wrapper {
   margin: 0 !important;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCheckboxList {
+.spz_3002 #mktoForm_1018.mktoForm .mktoCheckboxList {
   margin: 2px 0 0 !important;
 
   @media screen and (max-width: 767.98px) {
@@ -483,7 +481,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper::after {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .select-wrapper::after {
   position: absolute;
   content: "";
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1730978539/sailpoint/1001/icons__system.svg");
@@ -498,7 +496,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap
   .select-wrapper
   .select-dropdown {
@@ -506,7 +504,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .mktoFieldWrap
   .mktoError
   .mktoErrorArrowWrap {
@@ -514,7 +512,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002
-  #mktoForm_1017.mktoForm
+  #mktoForm_1018.mktoForm
   .row_FirstName0
   .mktoFieldWrap
   label.mktoLabel {
@@ -529,7 +527,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   left: unset;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCheckboxList input[type="checkbox"] {
+.spz_3002 #mktoForm_1018.mktoForm .mktoCheckboxList input[type="checkbox"] {
   min-width: 16px;
   max-width: 16px;
   min-height: 16px;
@@ -540,7 +538,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   padding: 0;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCheckboxList label {
+.spz_3002 #mktoForm_1018.mktoForm .mktoCheckboxList label {
   position: relative;
   color: #415364 !important;
   font-size: 12px;
@@ -555,12 +553,12 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   margin: 0;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow {
+.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow {
   width: 100%;
   margin-top: 6px;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton {
+.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow .mktoButton {
   width: 100%;
   height: 48px;
   display: flex;
@@ -579,11 +577,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   box-shadow: none;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow .mktoButton:hover {
+.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow .mktoButton:hover {
   background: #005daa;
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer {
   // margin: 8px auto 0;
   padding: 0;
   color: #415364;
@@ -600,7 +598,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .disclaimer {
+.spz_3002 #mktoForm_1018.mktoForm .disclaimer {
   margin: 8px auto 0;
   padding: 0;
   color: #415364;
@@ -621,7 +619,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 //   margin-top: 8px;
 // }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a {
+.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a {
   color: #0071ce;
   font-size: 12px;
   font-style: normal;
@@ -669,10 +667,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:hover,
+.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:hover,
 .spz_3002 .disclaimer a:hover,
-.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:active,
-.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
+.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:active,
+.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
 .spz_3002 .disclaimer a:active,
 .spz_3002 .disclaimer a:focus-visible {
   text-decoration: none;
@@ -699,11 +697,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
     display: none;
   }
 
-  // .spz_3002 #mktoForm_1017.mktoForm {
+  // .spz_3002 #mktoForm_1018.mktoForm {
   //   margin: 2px auto 0;
   // }
 
-  // .spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer {
+  // .spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer {
   //   max-width: unset;
   //   padding: 0 5px;
   // }
@@ -731,11 +729,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
     width: 100%;
   }
 
-  .spz_3002 #mktoForm_1017.mktoForm .mktoFormRow {
+  .spz_3002 #mktoForm_1018.mktoForm .mktoFormRow {
     width: 100% !important;
   }
 
-  // .spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow {
+  // .spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow {
   //   margin-top: 0;
   // }
 }
