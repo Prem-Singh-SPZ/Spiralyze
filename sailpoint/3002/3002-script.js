@@ -49,8 +49,17 @@
                     document.body.classList.add('spz_3002');
                     waitForElm('.spz_3002 .hero .hero__container .hero__content').then(() => {
                         let spzFormInterval = setInterval(() => {
+                            if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
+                                document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
+                                </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
+
+                                loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
+                            }
+
+                            heroUpdate();
+
                             if (document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow.row_Email').length == 0) {
-                                heroUpdate();
                                 formModify();
                                 hiddenValue('SPZ_3002', 'SPZ_3002_variant');
                             }
@@ -200,20 +209,23 @@
     }
 
     function formModify() {
-        if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
-            document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
-            </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
-
-            loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
-
-
-            waitForElm('.spz_3002 .mkto-wrap.w-full .mktoFormRow input').then(() => {
-                if (document.querySelectorAll('.spz-form-title').length == 0)
-                    document.querySelector('.spz_3002 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', ``);
-            });
+        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm input[name="Salutation"]')) {
+            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm input[name="Salutation"]').closest(".mktoFormRow").classList.add("hidden")
         }
 
+        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country')) {
+            // select united states as default country
+            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country').value = "United States";
+            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country option[value="United States"]').setAttribute('selected', 'selected');
+
+            d(document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country'), '', "United States");
+        }
+
+        function d(e, t, a) {
+            t && (null == e || e.setValues({
+                Country: a
+            }))
+        }
 
         // Add class in mktoField using the name attribute
         var form_fields = document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow');
@@ -243,21 +255,25 @@
         });
 
         // Change Field Position
-        // const email_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email');
-        // const last_name_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_LastName');
-        // const inquiry_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_reasonforInquiry');
-        // const country_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Country');
-        // const company_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Company');
-        // const title_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Title');
-        // const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer');
-        // const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
+        const email_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email');
+        const last_name_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_LastName');
+        const inquiry_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_reasonforInquiry');
+        const country_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Country');
+        const company_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Company');
+        const title_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Title');
+        const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer');
+        const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
 
-        // if (company_field && title_field && inquiry_field && country_field && email_field && last_name_field) {
-        //     last_name_field.insertAdjacentElement('afterend', email_field);
-        //     country_field.insertAdjacentElement('beforebegin', inquiry_field);
-        //     company_field.after(title_field);
-        //     // button.after(disclaimer_field);
-        // }
+        if (button && disclaimer_field) {
+            // last_name_field.insertAdjacentElement('afterend', email_field);
+            // country_field.insertAdjacentElement('beforebegin', inquiry_field);
+            // company_field.after(title_field);
+            button.after(disclaimer_field);
+
+            if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 0) {
+                button.insertAdjacentHTML('beforebegin', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+            }
+        }
 
         waitForElm(`.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {

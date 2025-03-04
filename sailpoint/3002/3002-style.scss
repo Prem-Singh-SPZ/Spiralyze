@@ -247,6 +247,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   @media screen and (max-width: 767.98px) {
     margin-bottom: 12px;
   }
+
+  #LblGlobal_Opt_out__c, #LblGlobal_Opt_in__c {
+    display: none;
+  }
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel {
@@ -287,8 +291,14 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   color: #e6241e !important;
 }
 
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation,
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo {
+.spz_3002
+  #mktoForm_1018.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel#LblreceivingAdvertisingInformation,
+.spz_3002
+  #mktoForm_1018.mktoForm
+  .mktoFieldWrap
+  label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo {
   position: relative;
   width: auto !important;
   color: #415364 !important;
@@ -399,6 +409,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select.mktoField {
   padding-right: 37px !important;
+  -webkit-appearance: none;
 }
 
 .spz_3002
@@ -439,6 +450,8 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   left: unset !important;
   right: unset !important;
   margin: 0 0 !important;
+  display: inline-block;
+  z-index: 1;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
@@ -474,6 +487,8 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoCheckboxList {
   margin: 2px 0 0 !important;
+  width: 100% !important;
+  display: flex;
 
   @media screen and (max-width: 767.98px) {
     margin: 8px 0 0 !important;
@@ -556,6 +571,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 .spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow {
   width: 100%;
   margin-top: 6px;
+
+  .mktoButtonWrap {
+    margin: 0 !important;
+  }
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow .mktoButton {
