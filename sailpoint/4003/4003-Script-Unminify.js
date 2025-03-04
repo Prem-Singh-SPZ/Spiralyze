@@ -116,7 +116,7 @@
               }).join("") : ""}
                 </div>
               </div>` : ``}
-              <section class="business-value">
+              ${window.location.href.indexOf('/identity-library/dora-compliance') > -1 ? `<section class="business-value">
                 <div class="business-value-wrap">
                   <div class="content-section">
                     ${businessValueSection.businessSuperHeading ? `<div class="content-superheading">${businessValueSection.businessSuperHeading}</div>` : ""}
@@ -125,7 +125,8 @@
                   </div>
                   <div class="vidyard-section"></div>
                 </div>
-              </section>`;
+              </section>`: ''}
+              `;
 
               let checkVariantHero = setInterval(() => {
                 if (document.querySelectorAll('.spz-hero').length == 0) {
@@ -384,7 +385,7 @@
                   clearInterval(timeBuffer);
                 }, 1000);
               }
-              
+
               document.querySelector('select#Country').addEventListener('change', () => {
                 const countryRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-8');
                 const stateRow = document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoFormRow.field-9');
