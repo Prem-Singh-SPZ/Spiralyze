@@ -228,7 +228,7 @@ function getCheckBoxContent(controlLabel) {
             ico: 'v1739316293/drata/6023/icon-compliance-automation.svg',
             ctrlLabel: 'Compliance Automation (SOC 2, ISO 27001, HIPAA, GDPR, etc.)',
             label: 'Compliance Automation',
-            desc: 'SOC 2, ISO 27001, HIPAA, GDPR, etc'
+            desc: 'SOC 2, ISO 27001, HIPAA, GDPR, etc.'
         },
         {
             ico: 'v1739316293/drata/6023/icon-trust-center.svg',

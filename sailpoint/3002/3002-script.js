@@ -218,7 +218,9 @@
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country').value = "United States";
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country option[value="United States"]').setAttribute('selected', 'selected');
 
-            d(document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country'), '', "United States");
+            setTimeout(() => {
+                document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country').dispatchEvent(new Event('change'));
+            }, 500);
         }
 
         function d(e, t, a) {
