@@ -11,6 +11,18 @@
         --tw-text-opacity: 1!important;
     color: rgba(var(--white),var(--tw-text-opacity))!important;}
     .iron-theme.mkto-wrap form.mktoForm .mktoFormRow:has(.mktoHtmlText){width: 100%;}
+    .iron-theme.mkto-wrap form.mktoForm .mktoError{width: 100%;}
+    .iron-theme.mkto-wrap form.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation{    position: relative;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-right: 0;
+    cursor: pointer;
+    display: inline-flex;
+    top: unset;
+    background:transparent;
+    color: rgba(var(--white),var(--tw-text-opacity))!important;}
     @media (max-width: 991px) {#ca-sp-077-root-form .trusted .trusted-text{text-align: center; width: 100%;}}
      @media (max-width: 556px) {.mkto-wrap form.mktoForm .mktoError .mktoErrorMsg{line-height: 0.9rem;}
     .mkto-wrap form.mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail{display:block;}
