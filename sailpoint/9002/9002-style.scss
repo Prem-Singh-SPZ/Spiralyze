@@ -568,7 +568,7 @@ select:-webkit-autofill:active {
 
   &.row_contactFormComments {
     .mktoFieldWrap .mktoField:not([type="checkbox"]) {
-      height: 88px;
+      height: 88px !important;
       white-space: normal;
       overflow: auto;
       //css to hide scrollbar for all browsers
@@ -991,10 +991,10 @@ select:-webkit-autofill:active {
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 7.5px;
+  margin-top: 12px;
 
   @media screen and (max-width: 767.98px) {
-    margin: 20px 4px 0;
+    margin: 12px 4px 8px;
   }
 }
 
@@ -1055,13 +1055,13 @@ select:-webkit-autofill:active {
     padding: 0;
   }
 }
-.spz_9002
-  .page-transition
-  .inner-row__inner
-  form.mktoForm
-  .mktoCaptchaDisclaimer {
-  margin-top: 10px;
-}
+// .spz_9002
+//   .page-transition
+//   .inner-row__inner
+//   form.mktoForm
+//   .mktoCaptchaDisclaimer {
+//   margin-top: 10px;
+// }
 
 .spz_9002 .page-transition .inner-row__inner .disclaimer {
   max-width: unset;
