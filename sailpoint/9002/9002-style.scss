@@ -272,7 +272,8 @@ html.spz-no-scroll {
 .spz_9002 footer {
   width: 100%;
   padding: 24.5px 0;
-  margin-top: 0;
+  // margin-top: 0;
+  margin-top: auto;
 
   @media screen and (max-width: 1024.98px) {
     padding: 16.5px 0;
@@ -1343,6 +1344,12 @@ select:-webkit-autofill:active {
 
                 .list-value {
                   margin: 0;
+
+                  @media (max-width: 767.98px) {
+                    a{
+                      white-space: nowrap;
+                    }
+                  }
                 }
 
                 p.link {

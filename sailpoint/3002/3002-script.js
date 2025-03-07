@@ -223,12 +223,6 @@
             }, 500);
         }
 
-        function d(e, t, a) {
-            t && (null == e || e.setValues({
-                Country: a
-            }))
-        }
-
         // Add class in mktoField using the name attribute
         var form_fields = document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow');
         for (var i = 0; i < form_fields.length; i++) {
@@ -260,9 +254,9 @@
         const email_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email');
         const last_name_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_LastName');
         const inquiry_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_reasonforInquiry');
-        const country_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Country');
-        const company_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Company');
-        const title_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Title');
+        const comment_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_contactFormComments');
+        const disclaimer = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer');
+        const num_of_emp_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Number_of_Employees__c');
         const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer');
         const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
 
@@ -270,12 +264,19 @@
             // last_name_field.insertAdjacentElement('afterend', email_field);
             // country_field.insertAdjacentElement('beforebegin', inquiry_field);
             // company_field.after(title_field);
-            button.after(disclaimer_field);
+            // button.after(disclaimer_field);
+
+            comment_field.insertAdjacentElement('beforebegin', num_of_emp_field);
 
             if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 0) {
-                button.insertAdjacentHTML('beforebegin', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+                button.insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
             }
         }
+
+        if(document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')){
+            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments').value = 'Get live demo';
+        }
+
 
         waitForElm(`.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
             setTimeout(() => {

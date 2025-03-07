@@ -248,7 +248,8 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
     margin-bottom: 12px;
   }
 
-  #LblGlobal_Opt_out__c, #LblGlobal_Opt_in__c {
+  #LblGlobal_Opt_out__c,
+  #LblGlobal_Opt_in__c {
     display: none;
   }
 }
@@ -400,6 +401,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
+.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_contactFormComments {
+  display: none !important;
+}
+
 .spz_3002
   #mktoForm_1018.mktoForm
   .mktoFieldWrap:not(.active):not(.typing):not(.filled)
@@ -455,7 +460,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
-  color: #e6241e; 
+  color: #e6241e;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
