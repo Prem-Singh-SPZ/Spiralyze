@@ -261,11 +261,7 @@
         const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
 
         if (button && disclaimer_field) {
-            // last_name_field.insertAdjacentElement('afterend', email_field);
-            // country_field.insertAdjacentElement('beforebegin', inquiry_field);
-            // company_field.after(title_field);
-            // button.after(disclaimer_field);
-
+            num_of_emp_field.classList.add('spz-full-width');
             comment_field.insertAdjacentElement('beforebegin', num_of_emp_field);
 
             if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 0) {
@@ -273,7 +269,7 @@
             }
         }
 
-        if(document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')){
+        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')) {
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments').value = 'Get live demo';
         }
 
@@ -390,8 +386,9 @@
         }
 
         if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#Country')) {
-            document.querySelector('select#Country').addEventListener('change', () => {
-                const stateRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_State');
+            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#Country').addEventListener('change', () => {
+                console.log('Country Changed');
+                const stateRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country + .mktoFormRow');
                 const optOutRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_reasonforInquiry');
                 const countryRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country');
 
@@ -399,23 +396,9 @@
                 //     label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
                 // });
 
-                document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), optOutRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), optOutRow.classList.add('spz-full-width'));
+                document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#State') ? (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full-width')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full-width'));
             });
         }
-
-        //check mktoforms2 library is loaded or not
-        if (typeof MktoForms2 !== 'undefined') {
-            MktoForms2.whenReady(function (form) {
-                form.onSuccess(function (values, followUpUrl) {
-                    document.body.classList.add('form-submit');
-                });
-
-                if (document.body.classList.contains('spz-form-loaded')) {
-                    document.body.classList.remove('spz-form-loaded');
-                }
-            });
-        }
-
     }
 
     function loadForm() {
@@ -425,6 +408,19 @@
             if (document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
                 clearInterval(formInterval);
                 window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "".concat(1018));
+
+                //check mktoforms2 library is loaded or not
+                if (typeof MktoForms2 !== 'undefined') {
+                    MktoForms2.whenReady(function (form) {
+                        form.onSuccess(function (values, followUpUrl) {
+                            document.body.classList.add('form-submit');
+                        });
+
+                        if (document.body.classList.contains('spz-form-loaded')) {
+                            document.body.classList.remove('spz-form-loaded');
+                        }
+                    });
+                }
             }
         }, 100);
     }
