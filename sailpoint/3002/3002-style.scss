@@ -45,6 +45,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
         width: calc(100% - 42px);
         max-width: 500px;
         padding: 32px 20px 40px;
+        margin: 40px auto;
       }
 
       .spz-form-title {
@@ -69,10 +70,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
-        @media screen and (max-width: 767.98px) {
-          top: 12px;
-          right: 12px;
-        }
+        // @media screen and (max-width: 767.98px) {
+        //   top: 12px;
+        //   right: 12px;
+        // }
 
         svg {
           pointer-events: none;
@@ -586,6 +587,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   display: inline-flex;
   width: auto;
   margin: 0;
+
+  @media screen and (max-width: 767.98px) {
+    font-size: 14px;
+    padding-left: 8px;
+  }
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow {
@@ -634,7 +640,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
 
   @media screen and (max-width: 767.98px) {
     max-width: 100%;
-    margin-top: 18px;
+    margin-top: 13px;
     margin-bottom: 13px;
   }
 }
