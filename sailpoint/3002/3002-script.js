@@ -387,7 +387,6 @@
 
         if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#Country')) {
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm select#Country').addEventListener('change', () => {
-                console.log('Country Changed');
                 const stateRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country + .mktoFormRow');
                 const optOutRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_reasonforInquiry');
                 const countryRow = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_Country');
@@ -404,7 +403,6 @@
     function loadForm() {
         //setintervel to check the form is loaded or not
         var formInterval = setInterval(function () {
-            console.log('formInterval');
             if (document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
                 clearInterval(formInterval);
                 window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "".concat(1018));
@@ -435,7 +433,7 @@
             var emailField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email input');
             if (email && email.value && emailField) {
                 emailField.value = email.value;
-                emailField.dispatchEvent(new Event('input'));
+                emailField.closest('.mktoFieldWrap').classList.add('filled');
             }
         }
         if (e.target.closest('.spz-close-modal')) {
