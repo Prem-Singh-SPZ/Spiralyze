@@ -1,15 +1,35 @@
 body.spz_3004 {
   #page-container {
+    nav.navigation {
+      display: none !important;
+    }
+
     .page-transition {
       .product-hero {
+        background: linear-gradient(
+          124deg,
+          rgba(84, 192, 232, 0.5) -18.44%,
+          rgba(84, 192, 232, 0.18) 47.83%,
+          rgba(84, 192, 232, 0) 84.18%
+        );
+        padding-bottom: 50px !important;
         .row__inner {
+          max-width: 1331px;
           .spz-lc-container {
+            padding-right: 0;
             .column__inner {
               > *:not(.spz-left-copy) {
                 display: none !important;
               }
 
               .spz-left-copy {
+                .sp-logo {
+                  margin-bottom: 32px;
+                  a {
+                    display: inline-block;
+                  }
+                }
+
                 .eyebrow {
                   color: #415364;
                   font-size: 14px;
@@ -17,7 +37,7 @@ body.spz_3004 {
                   line-height: 100%;
                   letter-spacing: 2px;
                   text-transform: uppercase;
-                  margin-bottom: 20px;
+                  margin-bottom: 20.5px;
                 }
 
                 .text-cobalt {
@@ -35,6 +55,7 @@ body.spz_3004 {
                     font-weight: 400;
                     line-height: 160%;
                     margin-bottom: 28px;
+                    padding-left: 36px;
 
                     span {
                       font-weight: 600;
@@ -44,6 +65,48 @@ body.spz_3004 {
                       width: 24px;
                       height: 24px;
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/check.svg);
+                    }
+                  }
+                }
+
+                .trusted-companies {
+                  margin-top: 70px;
+                  .main-heading {
+                    color: #415364;
+                    font-size: 21px;
+                    font-weight: 600;
+                    line-height: 140%;
+                    margin-bottom: 23px;
+                  }
+
+                  .company-logos {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    gap: 12px 20.5px;
+
+                    .logo-card {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 0 0 calc(25% - 38px); // Adjust width as needed
+
+                      img {
+                        max-width: 100%;
+                        max-height: 80px;
+                        object-fit: contain;
+                      }
+                    }
+
+                    @media (max-width: 767.98px) {
+                      gap: 15px;
+
+                      .logo-card {
+                        flex: 0 0 calc(50% - 15px); // Adjust width for smaller screens
+                        img {
+                          max-height: 60px;
+                        }
+                      }
                     }
                   }
                 }
@@ -62,7 +125,9 @@ body.spz_3004 {
                   #0071ce 100.05%
                 ),
                 #fff;
-                gap: 28px;
+              gap: 28px;
+              max-width: 604px;
+              margin-left: auto;
 
               .column:first-child {
                 .column__inner {
@@ -80,25 +145,31 @@ body.spz_3004 {
                 }
               }
 
-              .column:last-child{
-                .mkto-wrap.w-full.iron-theme{
+              .column:last-child {
+                .mkto-wrap.w-full.iron-theme {
                   min-height: unset;
 
-                  .mktoForm{
-                    .mktoFormRow{
-                      .mktoFormCol{
-                        .mktoFieldWrap{
-                          .mktoCheckboxList{
-                            input{
-                              caret-color: rgba(var(--blue),1);
+                  .mktoForm {
+                    .mktoFormRow {
+                      .mktoFormCol {
+                        .mktoFieldWrap {
+                          .mktoCheckboxList {
+                            padding: 0;
+                            input {
                               accent-color: #fff;
+                              min-width: 16px;
+                              max-width: 16px;
+                            }
+                            label {
+                              font-size: 14px;
                             }
                           }
                         }
                       }
                     }
 
-                    .disclaimer, .mktoCaptchaDisclaimer{
+                    .disclaimer,
+                    .mktoCaptchaDisclaimer {
                       margin: 0;
                       max-width: 100%;
                       text-align: left;
@@ -111,45 +182,117 @@ body.spz_3004 {
         }
       }
 
-      #gc-customer-logos, .sticky ,#business-value, #use-cases, #product-modules, #advanced-capabilities, #sp-bg-logo, #suites, #faq, #resources, #product-tour {
+      #gc-customer-logos,
+      nav.breadcrumb,
+      .sticky,
+      #business-value,
+      #use-cases,
+      #product-modules,
+      #advanced-capabilities,
+      #sp-bg-logo,
+      #suites,
+      #faq,
+      #resources,
+      #product-tour {
         display: none !important;
       }
-    }
-  }
 
-  .trusted-companies {
-    .main-heading {
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .company-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: start;
-      gap: 20px 12px;
-
-      .logo-card {
+      .help-section {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 0 0 calc(25% - 20px); // Adjust width as needed
+        align-items: flex-start;
+        gap: 40px;
 
-        img {
-          max-width: 100%;
-          max-height: 80px;
-          object-fit: contain;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        gap: 15px;
-
-        .logo-card {
-          flex: 0 0 calc(50% - 15px); // Adjust width for smaller screens
-          img {
-            max-height: 60px;
+        .help-title {
+          .section-heading {
+            color: #415364;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
           }
+
+          .main-title {
+            color: #0033a1;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 120%;
+          }
+        }
+
+        .help-content {
+          flex: 1;
+
+          .accordion {
+            .accordion-item {
+              border-bottom: 1px solid #eee;
+
+              .accordion-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                cursor: pointer;
+
+                .toggle-button {
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/plus.svg)
+                    no-repeat center center;
+                  border: none;
+                  cursor: pointer;
+                  outline: none;
+                  -webkit-appearance: none;
+                  width: 32px;
+                  height: 32px;
+                  background-size: 100%;
+                }
+              }
+
+              .accordion-content {
+                padding: 0 0 15px 0;
+                display: none; // Initially hidden
+              }
+
+              &.active {
+                .accordion-header {
+                  .toggle-button {
+                    background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/minus.svg);
+                  }
+                }
+                .accordion-content {
+                  display: block; // Show content when active
+                }
+              }
+            }
+          }
+
+          .demo-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+          }
+        }
+
+        .help-image {
+          flex: 1;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+          .image-container {
+            display: none; // Initially hide all image containers
+          }
+
+          .image-container.active {
+            display: block; // Show image container when active
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          flex-direction: column;
+          align-items: stretch;
         }
       }
     }

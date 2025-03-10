@@ -12,6 +12,7 @@
                             if (document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt') && document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt').textContent !== 'Streamline identity and access management') {
                                 heroSectionUpdate();
                                 formModify();
+                                accordionSection();
                             }
                             hiddenValue('SPZ_3004', 'SPZ_3004_variant');
                         }, 10);
@@ -40,6 +41,7 @@
         if (document.querySelectorAll('.spz_3004 .product-hero .row__inner .column.relative .column__inner .trusted-companies').length === 0) {
             document.querySelector('.spz_3004 .product-hero .row__inner .column.relative').classList.add('spz-lc-container');
             document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner').insertAdjacentHTML('beforeend', `<div class="spz-left-copy">
+                <div class="sp-logo"><a href="javascript:;" class="sp-logo-home"><img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/logo__colored.svg" alt="SailPoint"></a></div>
                 <h1 class="eyebrow">Identity Security Cloud</h1>
                 <p class="text-h2 text-h1 text-cobalt">Streamline identity and access management</p>
                 <ul class="list--checkmarks">
@@ -64,8 +66,107 @@
         }
     }
 
+    function accordionSection() {
+        //create accordion section json data
+        let accordionItems = [{
+            title: 'Accelerate insights & automation with AI',
+            content: 'Make smart access decisions, detect threats and ensure compliance.',
+            demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai.webp'
+        }, {
+            title: 'Discover & secure all machine identities',
+            content: 'Enhance security by gaining control over machine identities',
+            demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities.webp'
+        }, {
+            title: 'Manage & secure the non-employee lifecycle',
+            content: 'Content for non-employee lifecycle management.',
+            demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle.webp'
+        }, {
+            title: 'Secure & govern access to sensitive data',
+            content: 'Information on securing sensitive data.',
+            demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data.webp'
+        }, {
+            title: 'Automate & delegate privileged tasks',
+            content: 'Content about automating privileged tasks.',
+            demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks.webp'
+        }];
+
+        if (document.querySelectorAll('.spz_3004 .help-section').length === 0) {
+            document.querySelector('.spz_3004 .product-hero').insertAdjacentHTML('afterend', `<section class="help-section row"><div class="row__inner grid container">
+            <div class="help-title">
+                <h2 class="section-heading eyebrow">HOW WE HELP</h2>
+                <h1 class="main-title text-cobalt">See how SailPoint helps secure every identity and protect your enterprise.</h1>
+            </div>
+            <div class="grid md:gap-16 md:grid-cols-50-50">
+        <div class="help-content">
+            <div class="accordion">
+            ${accordionItems.map((item, index) => {
+                return `<div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>${item.title}</span>
+                        <button class="toggle-button"></button>
+                    </div>
+                    <div class="accordion-content" data-image="image${index + 1}">
+                        <p>${item.content}</p>
+                        <a href="#" class="demo-link">Get a demo →</a>
+                    </div>
+                </div>`;
+            }).join('')}</div>
+                </div>
+                <div class="help-image">
+                    ${accordionItems.map((item, index) => {
+                return ` <div class="image-container image${index + 1}">
+                                    <img src="${item.image}" alt="${item.title}">
+                                </div>`;
+            }).join('')}
+                </div>
+        </div>
+        </div>
+    </section>
+    `);
+
+            waitForElm('.spz_3004 .accordion-item').then(() => {
+                const accordionItems = document.querySelectorAll('.accordion-item');
+                const imageContainers = document.querySelectorAll('.image-container');
+
+                accordionItems.forEach((item, index) => {
+                    const header = item.querySelector('.accordion-header');
+                    const content = item.querySelector('.accordion-content');
+                    const toggleButton = item.querySelector('.toggle-button');
+                    const imageClass = content.dataset.image;
+
+                    header.addEventListener('click', () => {
+                        accordionItems.forEach(item => item.classList.remove('active')); // Remove active class from all items
+                        item.classList.add('active');
+                        toggleButton.textContent = item.classList.contains('active') ? '-' : '+';
+
+                        // Show/hide the corresponding image container
+                        imageContainers.forEach(container => container.classList.remove('active'));
+                        document.querySelector('.' + imageClass).classList.add('active');
+                    });
+
+                    console.log(index);
+                    // Activate the first accordion item and show its image
+                    if (index === 0) {
+                        item.classList.add('active');
+                        toggleButton.textContent = '-';
+                        document.querySelector('.' + imageClass).classList.add('active');
+                    }
+                });
+            });
+        }
+    }
+
     //click event listener
     document.body.addEventListener('click', function (e) {
+        if (e.target.classList.contains('sp-logo-home')) {
+            e.preventDefault();
+            document.querySelector('a[href="/"]').click();
+        }
 
     });
 

@@ -787,8 +787,8 @@ html.spz-no-scroll {
   position: relative;
   max-width: 100%;
   border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
+          box-shadow: 0px 4px 16px 0px rgba(65, 83, 100, 0.08);
 }
 @media (max-width: 767.98px) {
   .spz_3002 .spz-email .form-group-wrapper {
@@ -796,6 +796,8 @@ html.spz-no-scroll {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 .spz_3002 .spz-email .form-group-wrapper .form-group-spz {
@@ -843,6 +845,7 @@ html.spz-no-scroll {
   .spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz {
     border-radius: 4px;
     height: 50px;
+    border: 1px solid #dae1e9;
   }
 }
 .spz_3002 .spz-email .form-group-wrapper .form-group-spz .form-field-spz:not(.is-placeholder):not(:focus):not(:-moz-placeholder-shown) ~ label {
@@ -932,6 +935,11 @@ html.spz-no-scroll {
 }
 .spz_3002 .spz-email .form-group-wrapper.spz-input-filled {
   border: 1px solid #dae1e9;
+}
+@media (max-width: 767.98px) {
+  .spz_3002 .spz-email .form-group-wrapper.spz-input-filled {
+    border: none;
+  }
 }
 .spz_3002 .social-proof-logos {
   width: 100%;
