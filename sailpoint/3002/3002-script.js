@@ -50,7 +50,7 @@
                     waitForElm('.spz_3002 .hero .hero__container .hero__content').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
-                                document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><div id="demo_submit" style="display: none;"><h3 style="text-align: center;">Thank you!</h3><h4 style="text-align: center;">A representative will reach out to you shortly.</h4></div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
                                 </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
 
@@ -412,6 +412,13 @@
                     MktoForms2.whenReady(function (form) {
                         form.onSuccess(function (values, followUpUrl) {
                             document.body.classList.add('form-submit');
+                            form.getFormElem().hide();
+                            document.querySelector('.spz-form-container .spz-form-content .spz-form-title').style.display = 'none';
+                            document.getElementById('demo_submit').style.display = 'block';
+
+                            //return false to prevent the submission handler from taking the lead to the follow up url.
+
+                            return false;
                         });
 
                         if (document.body.classList.contains('spz-form-loaded')) {

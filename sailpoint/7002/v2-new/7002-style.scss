@@ -11,14 +11,14 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v2 {
-  #page-container{
+  #page-container {
     // overflow: hidden;
     .page-transition {
       .spz_form_section {
         .spz-form-title {
           display: none;
         }
-  
+
         .mktoCaptchaDisclaimer {
           margin-top: 16px;
         }
@@ -74,8 +74,8 @@ select:-webkit-autofill:active {
           bottom: 0;
           z-index: 999999;
           overflow: auto;
-          display: flex;
-          align-items: center;
+          display: grid;
+          place-items: center;
           justify-content: center;
           width: 100vw;
           min-height: 100vh;
@@ -89,13 +89,13 @@ select:-webkit-autofill:active {
           // background: rgba(1, 1, 1, 0.9);
           backdrop-filter: blur(4.199999809265137px);
 
-          @media (min-width: 767.98px) and (max-height: 799.98px) {
-            justify-content: flex-start;
-          }
+          // @media (min-width: 767.98px) and (max-height: 799.98px) {
+          //   justify-content: flex-start;
+          // }
 
-          @media (max-width: 767.98px) and (max-height: 999.98px) {
-            justify-content: flex-start;
-          }
+          // @media (max-width: 767.98px) and (max-height: 999.98px) {
+          //   justify-content: flex-start;
+          // }
 
           .mkto-wrap.w-full {
             border-radius: 24px;
@@ -297,6 +297,17 @@ select:-webkit-autofill:active {
 .spz_7002_v2.spz-show-modal
   #mktoForm_1017.mktoForm
   .mktoFieldWrap
+  label.mktoLabel#LblreceivingAdvertisingInformation {
+  top: unset;
+  left: unset;
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.spz_7002_v2.spz-show-modal
+  #mktoForm_1017.mktoForm
+  .mktoFieldWrap
   label.mktoLabel
   .mktoAsterix {
   display: none !important;
@@ -457,6 +468,7 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 0 0 !important;
+  width: 100% !important;
 }
 
 .spz_7002_v2.spz-show-modal
