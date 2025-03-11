@@ -507,7 +507,7 @@
             e.preventDefault();
             document.querySelector('a[href="/"]').click();
         }
-        if (e.target.classList.contains('.go-to-demo')) {
+        if (e.target.classList.contains('go-to-demo')) {
             e.preventDefault();
             document.querySelector('.spz_3004 a[href="/demo"]').click();
         }

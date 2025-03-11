@@ -17,6 +17,7 @@ body.spz_3004 {
 
         @media (max-width: 991.98px) {
           padding-top: 80px;
+        padding-bottom: 40px !important;
         }
 
         .row__inner {
@@ -33,6 +34,10 @@ body.spz_3004 {
                   margin-bottom: 32px;
                   a {
                     display: inline-block;
+
+                    img{
+                      pointer-events: none;
+                    }
                   }
                 }
 
@@ -299,10 +304,20 @@ body.spz_3004 {
           flex: 1;
           max-width: 594px;
 
+          @media (max-width: 991.98px) {
+            max-width: 100%;
+            
+          }
+
           .accordion {
             .accordion-item {
               border-bottom: 1px solid #eee;
               padding: 24px 0;
+
+              @media screen and (max-width: 991.98px) {
+                padding-bottom: 23.5px;
+                
+              }
 
               .accordion-header {
                 display: flex;
@@ -334,6 +349,10 @@ body.spz_3004 {
                 padding: 9px 0 10.5px 0;
                 display: none; // Initially hidden
 
+                @media screen and (max-width: 991.98px) {
+                 padding-bottom: 0;
+                }
+
                 p {
                   color: #415364;
                   font-size: 16px;
@@ -347,9 +366,11 @@ body.spz_3004 {
                   border-radius: 24px;
                   max-height: 474px;
                   display: none;
+                  margin-top: 19px;
 
                   @media screen and (max-width: 991.98px) {
-                    display: block;
+                    display: flex;
+                    align-items: center;
                   }
 
                   img {
@@ -401,6 +422,7 @@ body.spz_3004 {
             max-width: 100%;
             height: 100%;
             border-radius: 24px;
+            object-fit: cover;
 
             @media (max-width: 1199.98px) {
               height: auto;

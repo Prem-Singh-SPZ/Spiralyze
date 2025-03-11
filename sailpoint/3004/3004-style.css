@@ -9,6 +9,7 @@ body.spz_3004 #page-container .page-transition .product-hero {
 @media (max-width: 991.98px) {
   body.spz_3004 #page-container .page-transition .product-hero {
     padding-top: 80px;
+    padding-bottom: 40px !important;
   }
 }
 body.spz_3004 #page-container .page-transition .product-hero .row__inner {
@@ -25,6 +26,9 @@ body.spz_3004 #page-container .page-transition .product-hero .row__inner .spz-lc
 }
 body.spz_3004 #page-container .page-transition .product-hero .row__inner .spz-lc-container .column__inner .spz-left-copy .sp-logo a {
   display: inline-block;
+}
+body.spz_3004 #page-container .page-transition .product-hero .row__inner .spz-lc-container .column__inner .spz-left-copy .sp-logo a img {
+  pointer-events: none;
 }
 body.spz_3004 #page-container .page-transition .product-hero .row__inner .spz-lc-container .column__inner .spz-left-copy .eyebrow {
   color: #415364;
@@ -266,9 +270,19 @@ body.spz_3004 #page-container .page-transition .help-section .help-content {
           flex: 1;
   max-width: 594px;
 }
+@media (max-width: 991.98px) {
+  body.spz_3004 #page-container .page-transition .help-section .help-content {
+    max-width: 100%;
+  }
+}
 body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item {
   border-bottom: 1px solid #eee;
   padding: 24px 0;
+}
+@media screen and (max-width: 991.98px) {
+  body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item {
+    padding-bottom: 23.5px;
+  }
 }
 body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item .accordion-header {
   display: -webkit-box;
@@ -302,6 +316,11 @@ body.spz_3004 #page-container .page-transition .help-section .help-content .acco
   padding: 9px 0 10.5px 0;
   display: none;
 }
+@media screen and (max-width: 991.98px) {
+  body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item .accordion-content {
+    padding-bottom: 0;
+  }
+}
 body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item .accordion-content p {
   color: #415364;
   font-size: 16px;
@@ -314,10 +333,16 @@ body.spz_3004 #page-container .page-transition .help-section .help-content .acco
   border-radius: 24px;
   max-height: 474px;
   display: none;
+  margin-top: 19px;
 }
 @media screen and (max-width: 991.98px) {
   body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item .accordion-content .image-container {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 body.spz_3004 #page-container .page-transition .help-section .help-content .accordion .accordion-item .accordion-content .image-container img {
@@ -362,6 +387,8 @@ body.spz_3004 #page-container .page-transition .help-section .help-image img {
   max-width: 100%;
   height: 100%;
   border-radius: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1199.98px) {
   body.spz_3004 #page-container .page-transition .help-section .help-image img {
