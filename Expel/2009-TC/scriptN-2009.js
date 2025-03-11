@@ -139,6 +139,7 @@ function formModify() {
 	for (var i = 0; i < form_fields.length; i++) {
 		var dynamicClass = 'field-' + (i + 1);
 		form_fields[i].classList.add(dynamicClass);
+		form_fields[i].getAttribute('data-wrapper-for') ? (form_fields[i].getAttribute('data-wrapper-for') == "Email" ? '' : form_fields[i].style.display = 'none') : '';
 	}
 	// Updating Form Labels
 	document.querySelector('#LblCompany_Size__c').textContent = "Company Size";
