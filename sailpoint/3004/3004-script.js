@@ -136,6 +136,9 @@
                     <div class="accordion-content" data-image="image${index + 1}">
                         <p>${item.content}</p>
                         <a href="#" class="demo-link">Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
+                        <div class="image-container">
+                            <img src="${item.image}" alt="${item.title}">
+                        </div>
                     </div>
                 </div>`;
             }).join('')}</div>
@@ -154,7 +157,7 @@
 
             waitForElm('.spz_3004 .accordion-item').then(() => {
                 const accordionItems = document.querySelectorAll('.accordion-item');
-                const imageContainers = document.querySelectorAll('.image-container');
+                const imageContainers = document.querySelectorAll('.help-image .image-container');
 
                 accordionItems.forEach((item, index) => {
                     const header = item.querySelector('.accordion-header');
