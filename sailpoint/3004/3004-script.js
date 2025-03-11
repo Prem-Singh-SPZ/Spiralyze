@@ -135,7 +135,7 @@
                     </div>
                     <div class="accordion-content" data-image="image${index + 1}">
                         <p>${item.content}</p>
-                        <a href="#" class="demo-link">Get a demo →</a>
+                        <a href="#" class="demo-link">Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
                     </div>
                 </div>`;
             }).join('')}</div>
@@ -466,6 +466,8 @@
                 initSlider();
             }
         });
+
+        getStarted();
     }
 
     function initSlider() {
@@ -481,86 +483,19 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            breakpoints: {
-                768: {
-                    spaceBetween: 60
-                }
-            },
-            children: [p.map( (e, t) => {
-                let s = [...u, "slides", t];
-                return (0,
-                r.jsx)(es.o5, {
-                    className: "customer-stories__slide",
-                    children: t => {
-                        var a, o, i, l, n;
-                        let {isActive: c} = t;
-                        return (0,
-                        r.jsxs)(r.Fragment, {
-                            children: ["slide" === e._type && (0,
-                            r.jsx)(el, {
-                                contentLayout: null !== (o = e.contentLayout) && void 0 !== o ? o : "defined",
-                                encodeDataAttribute: h,
-                                sourceMapTrail: s,
-                                image: e.image.asset ? {
-                                    url: e.image.asset.url,
-                                    alt: null !== (i = e.image.alt) && void 0 !== i ? i : ""
-                                } : void 0,
-                                logo: (null === (a = e.logo) || void 0 === a ? void 0 : a.asset) ? {
-                                    url: e.logo.asset.url,
-                                    alt: null !== (l = e.logo.alt) && void 0 !== l ? l : ""
-                                } : void 0,
-                                flexibleContent: e.flexibleContent,
-                                nameDesignation: e.nameDesignation,
-                                quote: e.quote,
-                                stat: e.stat && e.stat.showStat && e.stat.stat && e.stat.content ? {
-                                    value: e.stat.stat,
-                                    description: e.stat.content
-                                } : void 0,
-                                button: e.buttonToggle && e.button ? {
-                                    ...e.button,
-                                    link: (0,
-                                    v.C5)(e.button.link),
-                                    encodeDataAttribute: h,
-                                    sourceMapTrail: [...s, "button"]
-                                } : void 0
-                            }), "videoSlide" === e._type && (0,
-                            r.jsx)(ed, {
-                                ...e,
-                                backgroundImage: (0,
-                                m.ZP)(e.backgroundImage.asset).quality(80).url(),
-                                button: e.button ? {
-                                    ...e.button,
-                                    icon: "arrow",
-                                    link: (0,
-                                    v.C5)(e.button.link)
-                                } : void 0,
-                                logo: e.logo ? {
-                                    url: e.logo.asset.url,
-                                    alt: null !== (n = e.logo.alt) && void 0 !== n ? n : ""
-                                } : void 0,
-                                isActive: c
-                            })]
-                        })
-                    }
-                }, e._key)
-            }
-            ), (0,
-            r.jsxs)("div", {
-                className: "swiper-navigation mt-5 flex items-center justify-center gap-3 md:gap-8",
-                children: [(0,
-                r.jsx)(eh, {
-                    type: "button",
-                    id: "slider-prev"
-                }), (0,
-                r.jsx)("div", {
-                    className: "pagination !w-auto"
-                }), (0,
-                r.jsx)(em, {
-                    type: "button",
-                    id: "slider-next"
-                })]
-            })]
         });
+    }
+
+    function getStarted() {
+        if (document.querySelectorAll('.spz_3004 .sailpoint-banner').length == 0) {
+            document.querySelector('.spz_3004 #customer-stories').insertAdjacentHTML('afterend', `<div class="sailpoint-banner">
+                <div class="sailpoint-banner-content">
+                    <p class="sailpoint-get-started">GET STARTED</p>
+                    <h1>Modernize your identity security <br> with SailPoint</h1>
+                    <a href="javascript:;" class="btn btn--blue-alt go-to-demo">Get a demo</a>
+                </div>
+            </div>`);
+        }
     }
 
     //click event listener

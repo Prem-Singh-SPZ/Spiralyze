@@ -1,6 +1,7 @@
 body.spz_3004 {
   #page-container {
-    nav.navigation, footer > .grid.w-full.grid-cols-1 {
+    nav.navigation,
+    footer > .grid.w-full.grid-cols-1 {
       display: none !important;
     }
 
@@ -13,6 +14,11 @@ body.spz_3004 {
           rgba(84, 192, 232, 0) 84.18%
         );
         padding-bottom: 50px !important;
+
+        @media (max-width: 991.98px) {
+          padding-top: 80px;
+        }
+
         .row__inner {
           max-width: 1331px;
           .spz-lc-container {
@@ -71,6 +77,11 @@ body.spz_3004 {
 
                 .trusted-companies {
                   margin-top: 70px;
+
+                  @media (max-width: 991.98px) {
+                    max-width: 630px;
+                  }
+
                   .main-heading {
                     color: #415364;
                     font-size: 21px;
@@ -129,6 +140,10 @@ body.spz_3004 {
               max-width: 604px;
               margin-left: auto;
 
+              @media (max-width: 991.98px) {
+                margin: 8px auto 0;
+              }
+
               .column:first-child {
                 .column__inner {
                   justify-content: center;
@@ -151,10 +166,18 @@ body.spz_3004 {
 
                   .mktoForm {
                     .mktoFormRow {
+
+                      &:not(.full-span-field){
+                        @media (min-width: 767.98px) {
+                          max-width: calc(50% - .5rem);
+                        }
+                      }
+
                       .mktoFormCol {
                         .mktoFieldWrap {
                           .mktoCheckboxList {
                             padding: 0;
+                            margin: 4px 0 0;
                             input {
                               accent-color: #fff;
                               min-width: 16px;
@@ -162,6 +185,7 @@ body.spz_3004 {
                             }
                             label {
                               font-size: 14px;
+                              padding-left: 12px;
                             }
                           }
                         }
@@ -201,8 +225,10 @@ body.spz_3004 {
         display: flex;
         align-items: flex-start;
         gap: 40px;
+        padding-bottom: 134px;
 
         .help-title {
+          margin-bottom: 24px;
           .section-heading {
             color: #415364;
             font-size: 14px;
@@ -221,19 +247,36 @@ body.spz_3004 {
           }
         }
 
+        .grid[class*="md:grid-cols-50-50"] {
+          gap: 24px;
+
+          @media (max-width: 991.98px) {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+        }
+
         .help-content {
           flex: 1;
+          max-width: 594px;
 
           .accordion {
             .accordion-item {
               border-bottom: 1px solid #eee;
+              padding: 24px 0;
 
               .accordion-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 15px 0;
                 cursor: pointer;
+
+                span {
+                  color: #415364;
+                  font-size: 21px;
+                  font-weight: 600;
+                  line-height: 140%;
+                }
 
                 .toggle-button {
                   background: url(//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/plus.svg)
@@ -249,8 +292,15 @@ body.spz_3004 {
               }
 
               .accordion-content {
-                padding: 0 0 15px 0;
+                padding: 9px 0 10.5px 0;
                 display: none; // Initially hidden
+
+                p {
+                  color: #415364;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 160%;
+                }
               }
 
               &.active {
@@ -267,22 +317,37 @@ body.spz_3004 {
           }
 
           .demo-link {
-            display: inline-block;
             margin-top: 20px;
             color: #007bff;
             text-decoration: none;
+            display: flex;
+
+            img {
+              margin-left: 8px;
+            }
           }
         }
 
         .help-image {
           flex: 1;
+          margin-top: 8px;
+
           img {
             max-width: 100%;
-            height: auto;
+            height: 100%;
+            border-radius: 24px;
+
+            @media (max-width: 1199.98px) {
+              height: auto;
+            }
           }
 
           .image-container {
             display: none; // Initially hide all image containers
+            height: 100%;
+            overflow: hidden;
+            border-radius: 24px;
+            max-height: 474px;
           }
 
           .image-container.active {
@@ -297,11 +362,11 @@ body.spz_3004 {
       }
 
       #our-partners {
+        padding: 230px 0;
+        margin: 30px 0;
         .logo-container {
           display: none;
         }
-        padding: 230px 0;
-        margin: 30px 0;
         .logo-container.logo-container--top {
           display: block;
           height: 235px;
@@ -322,13 +387,11 @@ body.spz_3004 {
           margin-right: -50%;
           transform: translate(-50%, -50%);
         }
-      }
-      .our-partners__content {
-        max-width: 850px;
-        margin: 0 auto;
-      }
-      @media (min-width: 850px) {
-        #our-partners {
+        .our-partners__content {
+          max-width: 850px;
+          margin: 0 auto;
+        }
+        @media (min-width: 850px) {
           .logo-container.logo-container--top {
             display: none;
           }
@@ -338,9 +401,7 @@ body.spz_3004 {
           padding: 106px 0 95px 0;
           margin: 0;
         }
-      }
-      @media (min-width: 1378px) {
-        #our-partners {
+        @media (min-width: 1378px) {
           .logo-container.logo-container--left {
             display: block;
             position: absolute;
@@ -359,6 +420,101 @@ body.spz_3004 {
           }
         }
       }
+
+      #atlas {
+        padding-top: 153px;
+
+        > .row__inner.container {
+          align-items: center;
+
+          > .column.relative:first-child {
+            margin-bottom: 34px;
+
+            h2:not(.eyebrow) {
+              margin-bottom: 20px;
+            }
+
+            .btn {
+              width: 127px;
+              height: 48px;
+              white-space: nowrap;
+              padding-top: 13px;
+            }
+          }
+        }
+      }
+
+      .sailpoint-banner {
+        background: var(
+          --Gradients-Main,
+          linear-gradient(
+            134deg,
+            #0033a1 38.16%,
+            #004fb5 64.91%,
+            #0071ce 100.05%
+          )
+        );
+        text-align: center;
+        padding: 80px 20px;
+
+        .sailpoint-banner-content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .sailpoint-get-started {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        h1 {
+          color: #fff;
+          text-align: center;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 120%;
+          margin-bottom: 32px;
+        }
+
+        .btn--blue-alt {
+          width: 127px;
+          height: 48px;
+          white-space: nowrap;
+          padding-top: 13px;
+        }
+      }
+    }
+
+    footer {
+      padding-top: 10px;
+      padding-bottom: 8px;
+
+      .border-darkgray {
+        border: none;
+
+        p.order-1 {
+          margin-left: 0;
+        }
+        .text-left {
+          ul.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+            margin-left: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px),
+    only screen and (max-device-width: 480px),
+    only screen and (max-device-height: 480px) {
+    .mktoMobileShow .mktoForm,
+    .mktoForm * {
+      padding: 0;
     }
   }
 }
