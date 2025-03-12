@@ -348,6 +348,36 @@
             if (int2)
                 int2.value = n;
         }
+
+        if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+            const fields = document.querySelectorAll('.spz_7002_v1 form.mktoForm .mktoField');
+            const timeBuffer = setInterval(() => {
+                fields.forEach(field => {
+                    const fieldWrap = field.closest('.mktoFieldWrap');
+                    if (fieldWrap) {
+                        // Check for error
+                        const errorElement = fieldWrap.querySelector('.mktoError');
+                        if (errorElement && errorElement.style.display !== 'none') {
+                            fieldWrap.classList.add('error');
+                        } else {
+                            fieldWrap.classList.remove('error');
+                        }
+
+                        // Check if the field is filled
+                        if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                            fieldWrap.classList.add('filled');
+                        } else {
+                            fieldWrap.classList.remove('filled');
+                        }
+                    }
+                });
+            }, 200);
+
+
+            setTimeout(() => {
+                clearInterval(timeBuffer);
+            }, 3000);
+        }
     });
     // Do not touch below hidden field code for any Experiment over
 
