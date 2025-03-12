@@ -17,7 +17,7 @@ body.spz_3004 {
 
         @media (max-width: 991.98px) {
           padding-top: 80px;
-        padding-bottom: 40px !important;
+          padding-bottom: 40px !important;
         }
 
         .row__inner {
@@ -35,7 +35,7 @@ body.spz_3004 {
                   a {
                     display: inline-block;
 
-                    img{
+                    img {
                       pointer-events: none;
                     }
                   }
@@ -177,11 +177,11 @@ body.spz_3004 {
                         }
                       }
 
-                      &:has(.mktoHtmlText){
+                      &:has(.mktoHtmlText) {
                         width: 100%;
                         max-width: 100%;
 
-                        .mktoHtmlText{
+                        .mktoHtmlText {
                           position: relative;
                           font-size: 14px;
                           color: #fff;
@@ -211,7 +211,7 @@ body.spz_3004 {
                             }
                           }
 
-                          label#LblreceivingAdvertisingInformation{
+                          label#LblreceivingAdvertisingInformation {
                             position: relative;
                             font-size: 14px;
                             color: #fff !important;
@@ -271,6 +271,10 @@ body.spz_3004 {
         gap: 40px;
         padding-bottom: 134px;
 
+        @media screen and (max-width: 991.98px) {
+          padding-bottom: 105px;
+        }
+
         .help-title {
           margin-bottom: 24px;
           .section-heading {
@@ -306,7 +310,6 @@ body.spz_3004 {
 
           @media (max-width: 991.98px) {
             max-width: 100%;
-            
           }
 
           .accordion {
@@ -316,7 +319,6 @@ body.spz_3004 {
 
               @media screen and (max-width: 991.98px) {
                 padding-bottom: 23.5px;
-                
               }
 
               .accordion-header {
@@ -350,7 +352,7 @@ body.spz_3004 {
                 display: none; // Initially hidden
 
                 @media screen and (max-width: 991.98px) {
-                 padding-bottom: 0;
+                  padding-bottom: 0;
                 }
 
                 p {
@@ -511,8 +513,45 @@ body.spz_3004 {
       #atlas {
         padding-top: 153px;
 
+        @media screen and (max-width: 991.98px) {
+          padding-top: 128px;
+        }
+
         > .row__inner.container {
           align-items: center;
+
+          @media screen and (max-width: 991.98px) {
+            grid-template-columns: 1fr;
+            gap: 15px;
+
+            > .column:last-child {
+              padding: 0;
+
+              .video-wrapper {
+                max-height: 392px;
+
+                .video-wrapper__inner {
+                  border-radius: 24px;
+                  height: 100%;
+
+                  .vidyard-player-container,
+                  .vidyard-lightbox-thumbnail {
+                    height: 100%;
+                    max-height: 392px;
+                    .vidyard-lightbox-centering {
+                      height: 100%;
+                      max-height: 392px;
+                      padding-bottom: 54% !important;
+
+                      img {
+                        object-fit: cover;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
 
           > .column.relative:first-child {
             margin-bottom: 34px;
@@ -543,6 +582,10 @@ body.spz_3004 {
         );
         text-align: center;
         padding: 80px 20px;
+
+        @media screen and (max-width: 991.98px) {
+          padding: 64px 20px;
+        }
 
         .sailpoint-banner-content {
           max-width: 800px;
@@ -581,15 +624,32 @@ body.spz_3004 {
       padding-top: 10px;
       padding-bottom: 8px;
 
+      @media screen and (max-width: 991.98px) {
+        padding-bottom: 17px;
+      }
+
       .border-darkgray {
         border: none;
 
+        @media screen and (max-width: 991.98px) {
+          flex-direction: column;
+        }
+
         p.order-1 {
-          margin-left: 0;
+          @media screen and (min-width: 991.98px) {
+            margin-left: 0;
+          }
+          @media screen and (max-width: 991.98px) {
+            margin-bottom: 9px;
+          }
         }
         .text-left {
           ul.space-x-4 > :not([hidden]) ~ :not([hidden]) {
             margin-left: 33px;
+
+            @media screen and (min-width: 991.98px) {
+              margin-left: 24px;
+            }
           }
         }
       }
