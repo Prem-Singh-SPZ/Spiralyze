@@ -59,12 +59,12 @@
                             stateExists ? (document.querySelector('label#LblState').textContent = "State") : '';
                         });
 
-                        if (document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid img')) {
-                            document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:first-child .image-wrapper img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo01.svg');
-                            document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:first-child .image-wrapper img').setAttribute('srcset', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo01.svg');
-                            document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:nth-child(6) .image-wrapper img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo06.svg');
-                            document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:nth-child(6) .image-wrapper img').setAttribute('srcset', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo06.svg');
-                        }
+                        // if (document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid img')) {
+                        //     document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:first-child .image-wrapper img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo01.svg');
+                        //     document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:first-child .image-wrapper img').setAttribute('srcset', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo01.svg');
+                        //     document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:nth-child(6) .image-wrapper img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo06.svg');
+                        //     document.querySelector('.spz_4003_tc #gc-trusted-by .inner-row .inner-row__inner.grid .column.relative:nth-child(6) .image-wrapper img').setAttribute('srcset', '//res.cloudinary.com/spiralyze/image/upload/v1739783003/sailpoint/4003/logo06.svg');
+                        // }
                     });
                 }
                 else {
