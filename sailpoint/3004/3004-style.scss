@@ -20,6 +20,10 @@ body.spz_3004 {
           padding-bottom: 40px !important;
         }
 
+        @media screen and (max-width: 767.98px) {
+          padding-top: 40px;
+        }
+
         .row__inner {
           max-width: 1331px;
           .spz-lc-container {
@@ -49,6 +53,10 @@ body.spz_3004 {
                   letter-spacing: 2px;
                   text-transform: uppercase;
                   margin-bottom: 20.5px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 12px;
+                  }
                 }
 
                 .text-cobalt {
@@ -57,6 +65,10 @@ body.spz_3004 {
                   font-weight: 600;
                   line-height: 120%;
                   margin-bottom: 32px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 44px;
+                  }
                 }
 
                 .list--checkmarks {
@@ -77,11 +89,20 @@ body.spz_3004 {
                       height: 24px;
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/check.svg);
                     }
+
+                    @media screen and (max-width: 767.98px) {
+                      font-size: 14px;
+                      margin-bottom: 26.5px;
+                    }
                   }
                 }
 
                 .trusted-companies {
                   margin-top: 70px;
+
+                  @media (max-width: 767.98px) {
+                    margin-top: 65px;
+                  }
 
                   @media (max-width: 991.98px) {
                     max-width: 630px;
@@ -93,6 +114,11 @@ body.spz_3004 {
                     font-weight: 600;
                     line-height: 140%;
                     margin-bottom: 23px;
+
+                    @media (max-width: 767.98px) {
+                      font-size: 18px;
+                      margin-bottom: 26px;
+                    }
                   }
 
                   .company-logos {
@@ -115,10 +141,12 @@ body.spz_3004 {
                     }
 
                     @media (max-width: 767.98px) {
-                      gap: 15px;
+                      gap: 12.5px 20px;
+
 
                       .logo-card {
-                        flex: 0 0 calc(50% - 15px); // Adjust width for smaller screens
+                        flex: 0 0 calc(33.33% - 16px);
+
                         img {
                           max-height: 60px;
                         }
@@ -149,9 +177,17 @@ body.spz_3004 {
                 margin: 8px auto 0;
               }
 
+              @media (max-width: 767.98px) {
+                margin: 9px auto 0;
+                gap: 17px;
+                padding: 40px 10px;
+              }
+
               .column:first-child {
                 .column__inner {
                   justify-content: center;
+                  text-align: center;
+
                   .text-sm {
                     display: none !important;
                   }
@@ -161,6 +197,12 @@ body.spz_3004 {
                     font-size: 30px;
                     font-weight: 600;
                     line-height: 120%;
+                    width: 100%;
+
+                    @media screen and (max-width: 767.98px) {
+                      font-size: 26px;
+                      
+                    }
                   }
                 }
               }
@@ -647,7 +689,7 @@ body.spz_3004 {
           ul.space-x-4 > :not([hidden]) ~ :not([hidden]) {
             margin-left: 33px;
 
-            @media screen and (min-width: 991.98px) {
+            @media screen and (max-width: 991.98px) {
               margin-left: 24px;
             }
           }
