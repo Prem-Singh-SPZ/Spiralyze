@@ -4,6 +4,8 @@
 		"https://www.sailpoint.com/",
 		"https://www.sailpoint.com/demo",
 		"https://www.sailpoint.com/demo/interactive",
+		"https://www.sailpoint.com/products/identity-security-cloud/atlas",
+		"https://www.sailpoint.com/contact-us",
 	];
 
 	var url = location.href;
