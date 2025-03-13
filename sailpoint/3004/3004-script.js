@@ -179,7 +179,7 @@
                     // Activate the first accordion item and show its image
                     if (index === 0) {
                         item.classList.add('active');
-                        toggleButton.textContent = '-';
+                        // toggleButton.textContent = '-';
                         document.querySelector('.' + imageClass).classList.add('active');
                     }
                 });

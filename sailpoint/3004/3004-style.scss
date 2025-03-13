@@ -433,8 +433,12 @@ body.spz_3004 {
               }
 
               .accordion-content {
-                padding: 9px 0 10.5px 0;
-                display: none; // Initially hidden
+                // display: none; // Initially hidden
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all 0.4s ease-in-out;
+                visibility: hidden;
 
                 @media screen and (max-width: 991.98px) {
                   padding-bottom: 0;
@@ -489,7 +493,11 @@ body.spz_3004 {
                   }
                 }
                 .accordion-content {
-                  display: block; // Show content when active
+                  // display: block; // Show content when active
+                  padding: 9px 0 10.5px 0;
+                  height: auto;
+                  opacity: 1;
+                  visibility: visible;
                 }
               }
             }
@@ -527,15 +535,19 @@ body.spz_3004 {
           }
 
           .image-container {
-            display: none; // Initially hide all image containers
-            height: 100%;
             overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
             border-radius: 24px;
             max-height: 474px;
+            // position: absolute;
+            height: 0;
+            pointer-events: none;
           }
 
           .image-container.active {
-            display: block; // Show image container when active
+            height: 100%;
+            animation: showImage 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
           }
         }
 
@@ -819,6 +831,16 @@ body.spz_3004 {
           }
         }
       }
+    }
+  }
+
+  @keyframes showImage {
+    0% {
+      // transform: translateY(-150%);
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
