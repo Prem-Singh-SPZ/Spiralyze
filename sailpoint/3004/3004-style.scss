@@ -331,8 +331,17 @@ body.spz_3004 {
           padding-bottom: 105px;
         }
 
+        @media screen and (max-width: 767.98px) {
+          padding-bottom: 58px;
+        }
+
         .help-title {
           margin-bottom: 24px;
+
+          @media screen and (max-width: 767.98px) {
+            margin-bottom: 25px;
+          }
+
           .section-heading {
             color: #415364;
             font-size: 14px;
@@ -341,6 +350,11 @@ body.spz_3004 {
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 20px;
+
+            @media (max-width: 767.98px) {
+              font-size: 12px;
+              margin-bottom: 20px;
+            }
           }
 
           .main-title {
@@ -348,6 +362,10 @@ body.spz_3004 {
             font-size: 40px;
             font-weight: 600;
             line-height: 120%;
+
+            @media (max-width: 767.98px) {
+              font-size: 34px;
+            }
           }
         }
 
@@ -388,6 +406,12 @@ body.spz_3004 {
                   font-size: 21px;
                   font-weight: 600;
                   line-height: 140%;
+
+                  @media screen and (max-width: 767.98px) {
+                    font-size: 18px;
+                    line-height: 160%;
+                    padding-right: 50px;
+                  }
                 }
 
                 .toggle-button {
@@ -400,6 +424,11 @@ body.spz_3004 {
                   width: 32px;
                   height: 32px;
                   background-size: 100%;
+
+                  @media screen and (max-width: 767.98px) {
+                    width: 42px;
+                    height: 42px;
+                  }
                 }
               }
 
@@ -416,6 +445,11 @@ body.spz_3004 {
                   font-size: 16px;
                   font-weight: 400;
                   line-height: 160%;
+
+                  @media screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                    line-height: 160%;
+                  }
                 }
 
                 .image-container {
@@ -438,6 +472,11 @@ body.spz_3004 {
 
                     @media (max-width: 1199.98px) {
                       height: auto;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      object-fit: cover;
+                      min-height: 266px;
                     }
                   }
                 }
@@ -573,6 +612,10 @@ body.spz_3004 {
           padding-top: 128px;
         }
 
+        @media screen and (max-width: 767.98px) {
+          padding-top: 78px;
+        }
+
         > .row__inner.container {
           align-items: center;
 
@@ -585,19 +628,33 @@ body.spz_3004 {
 
               .video-wrapper {
                 max-height: 392px;
+                @media screen and (max-width: 767.98px) {
+                  min-height: 232px;
+                }
 
                 .video-wrapper__inner {
                   border-radius: 24px;
                   height: 100%;
+                  @media screen and (max-width: 767.98px) {
+                    min-height: 232px;
+                  }
 
                   .vidyard-player-container,
                   .vidyard-lightbox-thumbnail {
                     height: 100%;
                     max-height: 392px;
+                    @media screen and (max-width: 767.98px) {
+                      min-height: 232px;
+                    }
+
                     .vidyard-lightbox-centering {
                       height: 100%;
                       max-height: 392px;
                       padding-bottom: 54% !important;
+
+                      @media screen and (max-width: 767.98px) {
+                        min-height: 232px;
+                      }
 
                       img {
                         object-fit: cover;
@@ -621,6 +678,22 @@ body.spz_3004 {
               height: 48px;
               white-space: nowrap;
               padding-top: 13px;
+
+              @media screen and (max-width: 767.98px) {
+                width: 100%;
+              }
+            }
+
+            .eyebrow {
+              @media screen and (max-width: 767.98px) {
+                margin-bottom: 20px;
+              }
+            }
+
+            p {
+              @media screen and (max-width: 767.98px) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -643,6 +716,10 @@ body.spz_3004 {
           padding: 64px 20px;
         }
 
+        @media screen and (max-width: 767.98px) {
+          padding: 40px 20px;
+        }
+
         .sailpoint-banner-content {
           max-width: 800px;
           margin: 0 auto;
@@ -656,6 +733,10 @@ body.spz_3004 {
           letter-spacing: 2px;
           text-transform: uppercase;
           margin-bottom: 20px;
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 12px;
+          }
         }
 
         h1 {
@@ -665,6 +746,10 @@ body.spz_3004 {
           font-weight: 600;
           line-height: 120%;
           margin-bottom: 32px;
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 34px;
+          }
         }
 
         .btn--blue-alt {
@@ -672,6 +757,10 @@ body.spz_3004 {
           height: 48px;
           white-space: nowrap;
           padding-top: 13px;
+
+          @media screen and (max-width: 767.98px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -691,6 +780,10 @@ body.spz_3004 {
           flex-direction: column;
         }
 
+        @media screen and (max-width: 767.98px) {
+          flex-direction: column-reverse;
+        }
+
         p.order-1 {
           @media screen and (min-width: 991.98px) {
             margin-left: 0;
@@ -698,13 +791,30 @@ body.spz_3004 {
           @media screen and (max-width: 991.98px) {
             margin-bottom: 9px;
           }
+
+          @media screen and (max-width: 767.98px) {
+            text-align: center;
+            max-width: 70%;
+            margin-bottom: 12px;
+          }
         }
         .text-left {
-          ul.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-            margin-left: 33px;
+          ul.space-x-4 {
+            @media screen and (max-width: 767.98px) {
+              flex-direction: column;
+              gap: 2px;
+            }
 
-            @media screen and (max-width: 991.98px) {
-              margin-left: 24px;
+            & > :not([hidden]) ~ :not([hidden]) {
+              margin-left: 33px;
+
+              @media screen and (max-width: 991.98px) {
+                margin-left: 24px;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                margin-left: 0;
+              }
             }
           }
         }
