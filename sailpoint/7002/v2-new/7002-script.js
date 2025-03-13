@@ -376,7 +376,7 @@
 
             setTimeout(() => {
                 clearInterval(timeBuffer);
-            }, 3000);
+            }, 5000);
         }
     });
     // Do not touch below hidden field code for any Experiment over

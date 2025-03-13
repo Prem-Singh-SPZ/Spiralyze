@@ -26,6 +26,13 @@ body.spz_3004 {
 
         .row__inner {
           max-width: 1331px;
+
+          @media screen and (max-width: 767.98px) {
+            > .column:last-child {
+              display: none;
+            }
+          }
+
           .spz-lc-container {
             padding-right: 0;
             .column__inner {
@@ -143,7 +150,6 @@ body.spz_3004 {
                     @media (max-width: 767.98px) {
                       gap: 12.5px 20px;
 
-
                       .logo-card {
                         flex: 0 0 calc(33.33% - 16px);
 
@@ -201,7 +207,6 @@ body.spz_3004 {
 
                     @media screen and (max-width: 767.98px) {
                       font-size: 26px;
-                      
                     }
                   }
                 }
@@ -279,7 +284,7 @@ body.spz_3004 {
                       text-align: left;
                       padding-right: 100px;
 
-                      @media (max-width: 767.98px){
+                      @media (max-width: 767.98px) {
                         padding-right: 0;
                       }
                     }
