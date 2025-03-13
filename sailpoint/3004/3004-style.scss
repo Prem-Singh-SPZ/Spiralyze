@@ -244,6 +244,10 @@ body.spz_3004 {
 
                       .mktoFormCol {
                         .mktoFieldWrap {
+                          select.mktoField:not([type="checkbox"]) {
+                            padding-right: 32px !important;
+                          }
+
                           .mktoCheckboxList {
                             padding: 0;
                             margin: 4px 0 0;
@@ -287,16 +291,60 @@ body.spz_3004 {
                       @media (max-width: 767.98px) {
                         padding-right: 0;
                       }
+
+                      a {
+                        &:hover {
+                          color: #54c0e8;
+                          font-weight: 400;
+                          text-decoration: underline;
+                        }
+                      }
                     }
                     .disclaimer {
                       margin: 0 0;
                       max-width: 100%;
                       text-align: left;
+
+                      a {
+                        &:hover {
+                          color: #54c0e8;
+                          font-weight: 400;
+                          text-decoration: underline;
+                        }
+                      }
                     }
 
                     .mktoButtonRow {
                       margin-top: 11px;
                       margin-bottom: 12px;
+
+                      .mktoButton {
+                        &:hover {
+                          border: 1px solid #005daa;
+                          color: #005daa;
+                        }
+
+                        &:active {
+                          border-radius: 6px;
+                          border: none;
+                          background-color: #fff;
+                          box-shadow: none;
+                          position: relative;
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: -4px;
+                            right: 4px;
+                            bottom: 4px;
+                            border-radius: 6px;
+                            border: 1.5px solid #0071ce;
+                            width: calc(100% + 8px);
+                            height: calc(100% + 8px);
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -437,7 +485,7 @@ body.spz_3004 {
                 height: 0;
                 opacity: 0;
                 overflow: hidden;
-                transition: all 0.4s ease-in-out;
+                transition: all 0.4s cubic-bezier(0, 0, 0, 0.97);
                 visibility: hidden;
 
                 @media screen and (max-width: 991.98px) {
@@ -505,12 +553,21 @@ body.spz_3004 {
 
           .demo-link {
             margin-top: 20px;
-            color: #007bff;
             text-decoration: none;
             display: flex;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 160%;
+            color: #0071ce;
+            width: fit-content;
 
             img {
               margin-left: 8px;
+            }
+
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 2px;
             }
           }
         }
@@ -773,6 +830,32 @@ body.spz_3004 {
           @media screen and (max-width: 767.98px) {
             width: 100%;
           }
+
+          &:hover {
+            border: 1px solid #005daa;
+            color: #005daa;
+          }
+
+          &:active {
+            border-radius: 6px;
+            border: none;
+            background-color: #fff;
+            box-shadow: none;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: -4px;
+              left: -4px;
+              right: 4px;
+              bottom: 4px;
+              border-radius: 6px;
+              border: 1.5px solid #0071ce;
+              width: calc(100% + 8px);
+              height: calc(100% + 8px);
+            }
+          }
         }
       }
     }
@@ -828,6 +911,11 @@ body.spz_3004 {
                 margin-left: 0;
               }
             }
+
+            a:hover {
+              color: #0071ce;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -852,4 +940,10 @@ body.spz_3004 {
       padding: 0;
     }
   }
+  
+  .iron-theme.mkto-wrap form.mktoForm .mktoLabel {
+    font-size: 14px;
+    top: 1.1rem;
+  }
 }
+
