@@ -1,39 +1,39 @@
 (function () {
     const additionalSection = {
         socialProofLogos: {
-            socialProofHeading: "Used by 48% of the Fortune 500",
+            socialProofHeading: "Trusted by 48% of the Fortune 500",
             socialProofImages: [
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_01.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/gm_logo.webp",
                     imgAlt: "GM",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_02.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/hershey_logo.webp",
                     imgAlt: "Hershey",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_03.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/paccar_logo.webp",
                     imgAlt: "Paccar",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_04.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/philips_logo.webp",
                     imgAlt: "Philips",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_05.svg",
-                    imgAlt: "RWE",
-                },
-                {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104229/sailpoint/9001/logo_06.svg",
-                    imgAlt: "T Mobile",
-                },
-                {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_07.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/thehomedepot_logo.webp",
                     imgAlt: "The Home Depot",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/v1737360173/sailpoint/9001/logo_9.svg",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/thesalvationarmy_logo.webp",
                     imgAlt: "The Salvation Army",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/vodafone_logo.webp",
+                    imgAlt: "Vodafone",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/frame_1538229057.webp",
+                    imgAlt: "WeightWatchers",
                 },
             ]
         },
@@ -47,9 +47,9 @@
                 if (!document.body.classList.contains('spz_3002')) {
                     removeSpecificCookieValue('SPZ_3002', 'SPZ_3002_truecontrol');
                     document.body.classList.add('spz_3002');
-                    waitForElm('.spz_3002 .hero .hero__container .hero__content').then(() => {
+                    waitForElm('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').then(() => {
                         let spzFormInterval = setInterval(() => {
-                            if (document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
+                            if (document.querySelector('.spz_3002 .hero .hero__container .hero__content') && document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
                                 document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><div id="demo_submit" style="display: none;"><h3 style="text-align: center;">Thank you!</h3><h4 style="text-align: center;">A representative will reach out to you shortly.</h4></div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
                                 </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
@@ -264,10 +264,23 @@
             num_of_emp_field.classList.add('spz-full-width');
             comment_field.insertAdjacentElement('beforebegin', num_of_emp_field);
 
-            if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 0) {
-                button.insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
-            }
+
         }
+
+        let checkDisclaimer = setInterval(() => {
+            if (document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
+                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+            }
+
+            if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
+                document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
+            }
+        }, 200);
+
+        setTimeout(() => {
+            clearInterval(checkDisclaimer);
+        }, 5000);
+
 
         if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')) {
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments').value = 'Get live demo';
@@ -378,6 +391,14 @@
                         }
                     }
                 });
+
+                if (document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
+                    document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+                }
+
+                if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
+                    document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
+                }
             }, 100);
 
             setTimeout(() => {
@@ -447,6 +468,36 @@
             e.stopPropagation();
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
+        }
+
+        if (e.target.closest('#mktoForm_1018 .mktoButton')) {
+            const fields = document.querySelectorAll('.spz_3002 form.mktoForm .mktoField');
+            const timeBuffer = setInterval(() => {
+                fields.forEach(field => {
+                    const fieldWrap = field.closest('.mktoFieldWrap');
+                    if (fieldWrap) {
+                        // Check for error
+                        const errorElement = fieldWrap.querySelector('.mktoError');
+                        if (errorElement && errorElement.style.display !== 'none') {
+                            fieldWrap.classList.add('error');
+                        } else {
+                            fieldWrap.classList.remove('error');
+                        }
+
+                        // Check if the field is filled
+                        if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                            fieldWrap.classList.add('filled');
+                        } else {
+                            fieldWrap.classList.remove('filled');
+                        }
+                    }
+                });
+            }, 200);
+
+
+            setTimeout(() => {
+                clearInterval(timeBuffer);
+            }, 5000);
         }
     });
 
