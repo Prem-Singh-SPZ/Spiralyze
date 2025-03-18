@@ -9,206 +9,95 @@ const template_position = "afterend" //"beforebegin", "beforeend", "afterend"
 
 //DEV 4/5. Headline & accordion section
 const template_sectionContent = {
-    sectionHeading: "Features",
-    sectionSubHeading: "Duis aute - irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    sectionHeading: "All-In-One SaaS Subscription Management",
+    sectionSubHeading: "Streamline subscription and contract billing. Automate invoicing. Stay GAAP & IFRS compliant.",
     accordionItems: [
         {
-            title: 'Accordion 1',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Usage-based billing',
+            content: `<p>Sync product usage with billing for accurate invoicing. No more spreadsheets and manual reconciliation.</p>
+                        <p>Charge based on license quantity, usage beyond prepaid capacity, or run a meter. Supports per unit, volume-based, tiered, and stairstep pricing schemes. No code.</p>`,
             image: [
                 {
                     breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_usage-based_billing_5.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_usage-based_billing_3.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_automate_usage-based_billing_4.webp",
                 },
             ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
         },
         {
-            title: 'Accordion 2',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Subscription management',
+            content: `<p>Create subscription plans and individual contracts in minutes. Set prices. Enable setup fees, coupons, add-ons, and upsells.</p> 
+                        <p>Let users get custom pricing by filling out a PCI-compliant form. Auto-generate invoices for self-service billing. Sync customer data with Salesforce, HubSpot, and other CRMs.</p>`,
             image: [
                 {
                     breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_16.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_automate_usage-based_billing_4.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_full_subscription_management_4.webp",
                 },
             ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
         },
         {
-            title: 'Accordion 3',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Revenue recognition & reporting',
+            content: `<p>Create revenue recognition rules based on your ASC 606/IFTS 15 policies. Or use premade recognition methods for fast results.</p>
+                        <p>Automate schedules, run calculations, and identify deviations. Visualize data with unlimited custom dashboards. Drill down. Generate 1-click reports. ARR summary, DSO, and 30+ others.</p>`,
             image: [
                 {
                     breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_17.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_automate_usage-based_billing_5.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_revenue_recognition__reporting_4.webp",
                 },
             ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
         },
         {
-            title: 'Accordion 4',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Integrations',
+            content: `<p>Integrate with dozens of payment providers, including Stripe, Braintree, and Authorize.net. Or use our in-house payment solution.</p>`,
             image: [
                 {
                     breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_18.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_19.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_dozens_of_payment_providers_5.webp",
                 },
             ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
-        },
-        {
-            title: 'Accordion 5',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            image: [
-                {
-                    breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
-                },
-                {
-                    breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
-                },
-                {
-                    breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
-                },
-            ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
-        },
-        {
-            title: 'Accordion 6',
-            content: 'Subhead (regular paragraph) - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            image: [
-                {
-                    breakPoint: 1024,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-desktop.png",
-                },
-                {
-                    breakPoint: 768,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-tablet.png",
-                },
-                {
-                    breakPoint: 320,
-                    url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/accordion-image-placeholder-mobile.png",
-                },
-            ],
-            CTABlock: [
-                {
-                    CTAText: "Primary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-primary inner-accordion"
-                },
-                {
-                    CTAText: "Secondary CTA",
-                    CTAHref: "spiralyze.com",
-                    className: "spz-secondary inner-accordion"
-                }
-            ]
-
         },
     ],
 
     CTABlock: [
         {
-            CTAText: "Primary CTA",
-            CTAHref: "spiralyze.com",
+            CTAText: "Get a demo",
+            CTAHref: "https://www.maxio.com/demo/",
             className: "spz-primary"
         },
         {
-            CTAText: "Secondary CTA",
-            CTAHref: "spiralyze.com",
+            CTAText: "Take a tour",
+            CTAHref: "https://www.maxio.com/tour-center/",
             className: "spz-secondary"
         }
     ]
@@ -239,9 +128,6 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 						        </div>
 						        <div class="solution__content">
 						        	<p>${item.content}</p>
-						        	<div class="spz-ctas-wrap">
-					         		${item.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className}>${item.CTAText}</a>`).join('')}
-					         	   </div>
 						        </div>
 						        <div class="solution__image">
 						          <picture>
@@ -259,7 +145,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 			</div>
 			${content.CTABlock.length !== 0
             ? `<div class="spz-ctas-wrap separate-block">
-	         		${content.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className}>${item.CTAText}</a>`).join('')}
+	         		${content.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className} spz_tracking_1005>${item.CTAText}</a>`).join('')}
 	         	   </div>`
             : ""
         }
@@ -268,7 +154,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
         .querySelector(template_sectionSelector)
         .insertAdjacentHTML(whereToPut, formTemplate);
     // Start of Accordion Logic
-    const DURATION = 7000; // 7 seconds
+    const DURATION = 8000; // 7 seconds
     const accordionContents = document.querySelector('.spz-features-accordion__contents');
     const NoOfAccordion = content.accordionItems.length;
     let currenctActive = 0;
@@ -395,7 +281,7 @@ function mainPage() {
     if (bodyEle) {
         //home page
         if (window.location.pathname === "/") {
-            bodyEle.classList.add('spz-1005-home');
+            bodyEle.classList.add('spz-1005');
             bodyEle.classList.add('spz-home');
             //hidden value
             cookieValue('#1005', '#1005_variant1');
@@ -410,10 +296,6 @@ function mainPage() {
         }
     }
 }
-
-/**
- * Common Codes Starts from Here
- */
 
 // function to wait and find elements
 function waitForElm(selector) {
@@ -435,31 +317,6 @@ function hiddenValue() {
             clearInterval(spz_cro_Interval);
             var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
             cro_primary.value = ExistingHiddenFieldValue;
-        }
-    });
-
-    const cro_sec = setInterval(function () {
-        const cro_secondary = document.querySelector('form#pardot-form .form-field.cro_secondary input');
-        if (cro_secondary) {
-            clearInterval(cro_sec);
-            var activeTilesValue = getCookie('activeTilesValue');
-            if (activeTilesValue) {
-                cro_secondary.value = activeTilesValue;
-            }
-        }
-    });
-
-    // added this code from Maxio 1002
-    var spz_email_Interval = setInterval(function () {
-        var emailfiled = document.querySelector('form#pardot-form .form-field.CP_Email input');
-        if (emailfiled) {
-            clearInterval(spz_email_Interval);
-            var SPZEmailValue = getCookie('SPZ_Carry_Email');
-            var emailField = document.querySelector('form#pardot-form .form-field.CP_Email input');
-            if (SPZEmailValue) {
-                emailField.value = SPZEmailValue;
-                emailField.focus();
-            }
         }
     });
 }
