@@ -66,7 +66,7 @@
                         }, 500);
                         setTimeout(function () {
                             clearInterval(spzFormInterval);
-                        }, 10000);
+                        }, 5000);
                     });
 
                 } else {
@@ -80,7 +80,7 @@
     }
 
     function heroUpdate() {
-        if (document.querySelectorAll('.spz_3002 #page-container  a.redirect-to-demo').length == 0) {
+        if (document.querySelectorAll('.spz_3002 #page-container  a.redirect-to-demo').length == 0 && document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap') && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
             document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap').insertAdjacentHTML('beforeend', `<div class="hero__short-desc">Book your live demo of SailPoint&#8217;s identity security software to see how organizations like yours have:</div><ul class="hero__list"><li>Reduced staff onboarding from 10 days to 4 hours</li><li>Cut manually provisioned support tickets by 40%</li><li>Slashed time to provision new hires from 14 hours to 2.5 minutes</li></ul><div class="spz-email">
 					 <div class="form-group-wrapper">
 							<div class="form-group-spz">
@@ -268,11 +268,11 @@
         }
 
         let checkDisclaimer = setInterval(() => {
-            if (document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
+            if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
                 document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
             }
 
-            if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
+            if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer') && document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
                 document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
             }
         }, 200);
@@ -502,17 +502,25 @@
     });
 
     function removeTest() {
+        if (document.querySelector('.spz_3002 .spz-form-container')) {
+            document.querySelector('.spz_3002 .spz-form-container').remove();
+        }
+        if (document.querySelector('.spz_3002 .social-proof-logos')) {
+            document.querySelector('.spz_3002 .social-proof-logos').remove();
+        }
+        if (document.querySelector('.spz_3002 .spz-email')) {
+            document.querySelector('.spz_3002 .spz-email').remove();
+            document.querySelector('.spz_3002 .hero__short-desc').remove();
+            document.querySelector('.spz_3002 .hero__list').remove();
+        }
+        if (document.querySelector('.spz_3002 .redirect-to-demo')) {
+            document.querySelectorAll('.spz_3002 .redirect-to-demo').forEach(function (el) {
+                el.remove();
+            });
+        }
         setTimeout(() => {
             if (document.querySelector('.spz_3002')) {
                 document.body.classList.remove("spz_3002");
-            }
-            if (document.querySelector('.spz-form-container')) {
-                document.querySelector('.spz-form-container').remove();
-            }
-            if (document.querySelector('.redirect-to-demo')) {
-                document.querySelectorAll('.redirect-to-demo').forEach(function (el) {
-                    el.remove();
-                });
             }
         }, 200);
     }
