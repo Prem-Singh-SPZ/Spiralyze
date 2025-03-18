@@ -121,9 +121,9 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 				<div class="spz-features-accordion__row">
 				  <div class="spz-features-accordion">
 				    <div class="spz-features-accordion__contents">
-				    	${content.accordionItems.map(item => {
+				    	${content.accordionItems.map((item, index) => {
         return `
-				    		<div class="content">
+				    		<div class="content ac_card_${index}">
 						        <div class="spz-features-accordion__item">
 						          <span>${item.title}</span>
 						          <div class="progress_bar"></div>
@@ -145,11 +145,11 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 				  </div>
 				</div>
                 ${content.CTABlock.length !== 0
-                ? `<div class="spz-ctas-wrap separate-block">
-                         ${content.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className} spz_tracking_1005>${item.CTAText}</a>`).join('')}
+            ? `<div class="spz-ctas-wrap separate-block">
+                         ${content.CTABlock.map(item => `<a href=${item.CTAHref} class="${item.className} spz_tracking_1005">${item.CTAText}</a>`).join('')}
                         </div>`
-                : ""
-            }
+            : ""
+        }
 			</div>
 		</div>`;
     document
@@ -161,7 +161,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     const NoOfAccordion = content.accordionItems.length;
     let currenctActive = 0;
     let currentSlideProgress = 0;
-    let autoSlide = true;
+    let autoSlide = false;
 
     // Initialize Accordion active item 
     accordionContents.children[currenctActive].classList.add('active');
@@ -169,7 +169,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                autoSlide = true;
+                // autoSlide = true;
             } else {
                 autoSlide = false;
             }
