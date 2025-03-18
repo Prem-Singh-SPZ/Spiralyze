@@ -129,7 +129,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 						          <div class="progress_bar"></div>
 						        </div>
 						        <div class="solution__content">
-						        	<p>${item.content}</p>
+						        	${item.content}
 						        </div>
 						        <div class="solution__image">
 						          <picture>

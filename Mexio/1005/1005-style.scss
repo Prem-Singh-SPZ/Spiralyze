@@ -7,7 +7,7 @@ $color_6: var(--cta-secondary-hover-font-color);
 $sec_black: #1e1a34;
 
 :root {
-  --container-width: 1200px;
+  --container-width: 1232px;
   --section-bg-color: #f1efff;
   --cta-primary-font-color: #fff;
   --primary-blue-color: #3620ff;
@@ -15,7 +15,7 @@ $sec_black: #1e1a34;
   --cta-secondary-hover-font-color: #1300c1;
 }
 .spz-bg-wrap {
-  padding: 100px 32px;
+  padding: 80px 32px;
 
   @media (max-width: 991.98px) {
     padding: 80px 60px;
@@ -30,13 +30,14 @@ $sec_black: #1e1a34;
     font-family: var(--Font-Family-Headlines, "Founders Grotesk");
     font-size: 64px;
     font-weight: 500;
-    line-height: 108%;
+    line-height: 100%;
     background: linear-gradient(90deg, #000 0%, #002eb2 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     max-width: 790px;
     margin: 0 auto 20px;
+    padding-bottom: 4px;
   }
   .features-subheading {
     color: #2d2d30;
@@ -45,7 +46,7 @@ $sec_black: #1e1a34;
     font-weight: 300;
     line-height: 120%;
     max-width: 790px;
-    margin: 0 auto 40px;
+    margin: 0 auto 64px;
   }
 
   .spz-ctas-wrap {
@@ -101,23 +102,22 @@ $sec_black: #1e1a34;
   .spz-features-accordion__row {
     position: relative;
     .spz-features-accordion {
-      max-width: 448px;
+      max-width: 508px;
 
       .spz-features-accordion__item {
         display: block;
         max-height: 76px;
-        padding: 18px 32px 18px 0;
+        padding: 19px 32px 18px 0;
         border-top: 1px solid #c6ced2;
         background-color: transparent;
         width: 100%;
         position: relative;
         cursor: pointer;
         span {
-          color: $sec_black;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 28px;
+          color: #000;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 100%;
         }
         span.active-title {
           display: none;
@@ -150,7 +150,7 @@ $sec_black: #1e1a34;
             }
             &:before {
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 11.2954L11.2933 4L12.707 4L20 11.2951L18.5862 12.7093L13.9995 8.12132L12.9998 9.12132L12.9998 20L11.0004 20L11.0004 9.12132L10.0007 8.12132L5.41379 12.7096L4 11.2954Z' fill='black'/%3E%3C/svg%3E");
-              top: 28px;
+              top: 20px;
               opacity: 1;
             }
           }
@@ -164,8 +164,8 @@ $sec_black: #1e1a34;
           background: transparent;
           .solution__content {
             max-height: 500px;
-            padding: 0 0 32px 0;
-            margin-top: -10px;
+            padding: 0 0 8px 0;
+            margin-top: -1px;
           }
           .solution__image {
             display: block;
@@ -188,12 +188,12 @@ $sec_black: #1e1a34;
           .spz-features-accordion__item {
             &:before {
               content: "";
-              width: 20px;
-              height: 20px;
+              width: 24px;
+              height: 24px;
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 12.7046L12.7067 20L11.293 20L4 12.7049L5.41384 11.2907L10.0005 15.8787L11.0002 14.8787L11.0002 4L12.9996 4L12.9996 14.8787L13.9993 15.8787L18.5862 11.2904L20 12.7046Z' fill='black'/%3E%3C/svg%3E");
               background-size: contain;
               position: absolute;
-              top: 28px;
+              top: 20px;
               right: 0;
               opacity: 0.5;
             }
@@ -202,11 +202,11 @@ $sec_black: #1e1a34;
             max-height: 0px;
             overflow: hidden;
             p {
-              color: $grey;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 24px;
+              color: #2d2d30;
+              font-size: 20px;
+              font-weight: 300;
+              line-height: 140%;
+              margin-bottom: 12px;
             }
             .spacer {
               display: block;
@@ -221,8 +221,27 @@ $sec_black: #1e1a34;
             z-index: 1;
             // pointer-events: none !important;
             // transform: translateX(45%);
-            max-width: 627px;
+            max-width: 700px;
             top: 2px;
+
+            &::before {
+              content: "";
+              width: 580px;
+              height: 580px;
+              flex-shrink: 0;
+              aspect-ratio: 1/1;
+              border-radius: 580px;
+              opacity: 0.16;
+              background: #019875;
+              filter: blur(150px);
+              display: block;
+              z-index: 0;
+              position: absolute;
+            }
+
+            picture{
+              z-index: 1;
+            }
           }
         }
       }
