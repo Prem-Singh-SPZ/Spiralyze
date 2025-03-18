@@ -1,40 +1,41 @@
 (function () {
     const additionalSection = {
         socialProofLogos: {
-            socialProofHeading: "Trusted by 48% of the Fortune 500",
+            socialProofHeading: "Trusted by 50% of the Fortune 500",
             socialProofImages: [
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/gm_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_01.svg",
+                    imgAlt: "AES",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240096/sailpoint/3002/logo_02.svg",
                     imgAlt: "GM",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/hershey_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240096/sailpoint/3002/logo_03.svg",
                     imgAlt: "Hershey",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/paccar_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_04.svg",
                     imgAlt: "Paccar",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/philips_logo.webp",
-                    imgAlt: "Philips",
-                },
-                {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/thehomedepot_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_05.svg",
                     imgAlt: "The Home Depot",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/thesalvationarmy_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_06.svg",
+                    imgAlt: "Legal & General",
+                },
+                {
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_07.svg",
                     imgAlt: "The Salvation Army",
                 },
                 {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/vodafone_logo.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_08.svg",
                     imgAlt: "Vodafone",
                 },
-                {
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3002/frame_1538229057.webp",
-                    imgAlt: "WeightWatchers",
-                },
+
             ]
         },
     }
