@@ -128,14 +128,14 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 						          <span>${item.title}</span>
 						          <div class="progress_bar"></div>
 						        </div>
+						        <div class="solution__image">
+                                    <picture>
+                                        ${item.image.map(image => `<source media="(min-width:${image.breakPoint}px)" srcset="${image.url}" />`).join("")}
+                                        <img src="${item.image[0].url}" alt="${item.title}" title="${item.title}" />
+                                    </picture>
+						        </div>
 						        <div class="solution__content">
 						        	${item.content}
-						        </div>
-						        <div class="solution__image">
-						          <picture>
-						        	${item.image.map(image => `<source media="(min-width:${image.breakPoint}px)" srcset="${image.url}" />`).join("")}
-						            <img src="${item.image[0].url}" alt="${item.title}" title="${item.title}" />
-						          </picture>
 						        </div>
 						      </div>
 				    		`
