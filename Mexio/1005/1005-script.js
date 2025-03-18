@@ -741,9 +741,9 @@ function urlCheck_1003(url_1003) {
     } else {
         //console.log('target page not found');
         /*------remove test ---------*/
-        if (document.body.classList.contains('spz-1003')) {
-            document.querySelector("body").classList.remove("spz-1003");
-            document.body.classList.add('spz-1003-other');
+        if (document.body.classList.contains('spz-1005')) {
+            document.querySelector("body").classList.remove("spz-1005");
+            document.body.classList.add('spz-1005-other');
         }
     }
 }
@@ -764,21 +764,10 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     return false;
 }
 
-//iframe page
-function load_iframe() {
-    if (location.href.indexOf("https://www2.maxio.com/l/699023/2022-08-16/nh4lk") > -1) {
-        var iframebodyEle = document.querySelector('body');
-        iframebodyEle.classList.add('spz-1003-iframe');
-        waitForElm('.spz-1003-iframe form#pardot-form .submit input').then(function () {
-            hiddenValue();
-        });
-    }
-}
-
 // init variant function
 function load_variant_1003() {
     const config = {
-        default_class: 'spz-1003',
+        default_class: 'spz-1005',
     };
 
     const bodyEle = document.querySelector('body');
@@ -789,11 +778,8 @@ function load_variant_1003() {
                 bodyEle.classList.add(config.default_class);
             }
 
-            //hidden value
-            cookieValue('#1003', '#1003_variant1');
-
             // look for '.entry-content' div (updated selector from .spz-1003 main#blocks-page > section:nth-child(2) because of Maxio 1002 code conflict)
-            waitForElm('.spz-1003 main#blocks-page > section:nth-of-type(2)').then((elm) => {
+            waitForElm('.spz-1005 main#blocks-page > section:nth-of-type(2)').then((elm) => {
                 addReviewRibbon(sliderSettings, socialProof, slides, placement, sectionSelector);
             });
         }
