@@ -534,15 +534,15 @@
 
     // Do not touch below hidden field code for any Experiment Start
     function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-        var ExistingHiddenFieldName = getCookie('HiddenFieldNameContact');
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+        var ExistingHiddenFieldName = getCookie('HiddenFieldNameDemo');
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
 
         if (!ExistingHiddenFieldName) {
-            setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldNameDemo', currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValueDemo', currentHiddenFieldValue, 1);
         } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-            setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldNameDemo', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValueDemo', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
         }
 
         setHiddenFieldValue();
@@ -574,7 +574,7 @@
             var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
-                var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+                var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
                 //check if hidden field value is empty then only set the value else set the value with , seperated
                 if (intellimize1.value == '') {
                     intellimize1.value = ExistingHiddenFieldValue;

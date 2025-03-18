@@ -96,7 +96,9 @@ const template_sectionContent = {
             className: "spz-primary"
         },
         {
-            CTAText: "Take a tour",
+            CTAText: `Take a tour <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7046 4L20 11.2933L20 12.707L12.7049 20L11.2907 18.5862L15.8787 13.9995L14.8787 12.9998L4 12.9998L4 11.0004L14.8787 11.0004L15.8787 10.0007L11.2904 5.41379L12.7046 4Z" fill="#0042FF"/>
+                    </svg>`,
             CTAHref: "https://www.maxio.com/tour-center/",
             className: "spz-secondary"
         }
@@ -132,7 +134,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 						        <div class="solution__image">
 						          <picture>
 						        	${item.image.map(image => `<source media="(min-width:${image.breakPoint}px)" srcset="${image.url}" />`).join("")}
-						            <img src="${item.image[0].url}" alt="accordion image" />
+						            <img src="${item.image[0].url}" alt="${item.title}" title="${item.title}" />
 						          </picture>
 						        </div>
 						      </div>
@@ -142,13 +144,13 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 				    </div>
 				  </div>
 				</div>
+                ${content.CTABlock.length !== 0
+                ? `<div class="spz-ctas-wrap separate-block">
+                         ${content.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className} spz_tracking_1005>${item.CTAText}</a>`).join('')}
+                        </div>`
+                : ""
+            }
 			</div>
-			${content.CTABlock.length !== 0
-            ? `<div class="spz-ctas-wrap separate-block">
-	         		${content.CTABlock.map(item => `<a href=${item.CTAHref} class=${item.className} spz_tracking_1005>${item.CTAText}</a>`).join('')}
-	         	   </div>`
-            : ""
-        }
 		</div>`;
     document
         .querySelector(template_sectionSelector)
@@ -163,6 +165,19 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 
     // Initialize Accordion active item 
     accordionContents.children[currenctActive].classList.add('active');
+    //check if .spz-features-accordion is in view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                autoSlide = true;
+            } else {
+                autoSlide = false;
+            }
+        });
+    }
+        , { rootMargin: "0px 0px -50% 0px" });
+    observer.observe(document.querySelector('.spz-features-accordion'));
+
 
     // Add event listeners to accordion navigation items for hover functionality
     Array.from(accordionContents.children).forEach((item, index) => {
@@ -174,15 +189,15 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
         });
         item.addEventListener('mouseenter', (e) => {
             e.preventDefault();
-            if (currenctActive === index) {
-                autoSlide = false;
-            }
+            // if (currenctActive === index) {
+            autoSlide = false;
+            // }
         });
         item.addEventListener('mouseleave', (e) => {
             e.preventDefault();
-            if (currenctActive === index) {
-                autoSlide = true;
-            }
+            // if (currenctActive === index) {
+            autoSlide = true;
+            // }
         });
     });
 
