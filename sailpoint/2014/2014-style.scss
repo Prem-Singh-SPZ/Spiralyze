@@ -66,7 +66,7 @@ body.spz-2014 {
 
       .accordion {
         .accordion-item {
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid #DAE1E9;
           padding: 24px 0 23.25px;
 
           @media screen and (max-width: 991.98px) {
@@ -99,14 +99,11 @@ body.spz-2014 {
               cursor: pointer;
               outline: none;
               -webkit-appearance: none;
-              width: 32px;
-              height: 32px;
-              background-size: 100%;
-
-              @media screen and (max-width: 767.98px) {
-                width: 42px;
-                height: 42px;
-              }
+              min-width: 32px;
+              min-height: 32px;
+              max-width: 32px;
+              max-height: 32px;
+              background-size: 32px 32px;
             }
           }
 
@@ -228,6 +225,10 @@ body.spz-2014 {
         height: 100%;
         border-radius: 24px;
         object-fit: cover;
+
+        @media (min-width: 1199.98px) and (max-width: 1331.98px) {
+          height: auto;
+        }
 
         @media (max-width: 1199.98px) {
           height: auto;
