@@ -68,7 +68,7 @@ body.spz_1008 {
             font-weight: 600;
             line-height: 1.2;
             text-align: center;
-            margin-bottom: 23px;
+            margin-bottom: 32px;
           }
         }
       }
@@ -89,6 +89,33 @@ body.spz_1008 {
           #0071ce 100.05%
         );
         padding: 40px 80px 32px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 320px;
+          height: 222px;
+          position: absolute;
+          top: 106px;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/decoration-1_img.webp)
+            no-repeat;
+          background-size: contain;
+          left: 0;
+          opacity: 0.6;
+        }
+
+        &::after {
+          content: "";
+          width: 320px;
+          height: 222px;
+          position: absolute;
+          right: 0px;
+          top: 306px;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/decoration-2_img.webp)
+            no-repeat;
+          background-size: contain;
+          opacity: 0.6;
+        }
 
         .content-wrapper {
           .content-superheading {
@@ -237,39 +264,8 @@ body.spz_1008 {
 }
 
 @media (min-width: 1601px) {
-  .spz_1008 .spz-hero:before {
-    right: 0;
-    width: 672px;
-    height: 480px;
-    top: 43px;
-  }
-
-  .spz_1008 .spz-hero:after {
-    width: 1056px;
-    height: 272px;
-    left: -693px;
-    bottom: 124px !important;
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1001/illustration_-_2_webp.webp");
-  }
-
   .spz_1008 .spz-hero .social-proof-logos {
     margin: 64px auto 0;
-  }
-}
-
-@media (max-width: 1399.98px) {
-  .spz_1008 .spz-hero:before {
-    right: -30%;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .spz_1008 .spz-hero:before {
-    right: -50%;
-  }
-
-  .spz_1008 .spz-form-wrap .form-arrow {
-    margin: -20px -65px 0 auto;
   }
 }
 
@@ -277,7 +273,7 @@ body.spz_1008 {
   html:has(.spz_1008) {
     overflow: auto;
   }
-  
+
   body.spz_1008 {
     overflow: auto;
   }
@@ -326,25 +322,6 @@ body.spz_1008 {
     position: relative;
   }
 
-  .spz_1008 .spz-hero .social-proof-logos::before,
-  .spz_1008 .spz-hero .social-proof-logos::after {
-    position: absolute;
-    content: "";
-    width: 122px;
-    height: 60px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    transform: rotate(180deg);
-    z-index: 9;
-  }
-
-  .spz_1008 .spz-hero .social-proof-logos::after {
-    left: unset;
-    right: 0;
-    transform: none;
-  }
-
   .spz_1008 .spz-hero .social-proof-logos .social-proof-images {
     display: flex;
     flex-wrap: unset;
@@ -363,17 +340,6 @@ body.spz_1008 {
   .spz_1008 .spz-hero {
     padding: 16px 0 64px;
     margin-bottom: 0;
-  }
-
-  .spz_1008 .spz-hero:before {
-    width: 336px;
-    height: 240px;
-    top: 620px;
-    right: -70px;
-  }
-
-  .spz_1008 .spz-hero:after {
-    bottom: 244px !important;
   }
 
   .spz_1008 .spz-hero .spz-wrapper {
@@ -415,11 +381,6 @@ body.spz_1008 {
     line-height: 1.6;
     margin-bottom: 23px;
     padding: 0 16px;
-  }
-
-  .spz_1008 .spz-hero .social-proof-logos:before,
-  .spz_1008 .spz-hero .social-proof-logos:after {
-    height: 48px;
   }
 
   .spz_1008 .spz-hero .social-proof-logos .social-proof-images {
@@ -871,7 +832,7 @@ select:-webkit-autofill:active {
 .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList label {
   position: relative;
   color: #415364;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;

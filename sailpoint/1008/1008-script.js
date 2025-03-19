@@ -11,38 +11,38 @@
                     const position = "beforebegin";
                     const formSelector = `#mktoForm_1018`;
                     const heroContent = {
-                        siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo__colored.svg",
+                        siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1742375540/sailpoint/1008/logo.svg",
                         siteLogoAlt: "SailPoint",
                         contentSuperHeading: "Discover, manage, and secure all identities",
                         features: [
                             {
-                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1742375626/sailpoint/1008/check.svg",
                                 featureItemContent: "<b>Access management.</b> Monitor user access. Auto-implement roles. Streamline access approval or removal.",
                             },
                             {
-                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1742375626/sailpoint/1008/check.svg",
                                 featureItemContent: "<b>Complete coverage.</b> Manage non-employee or privileged access, machine identities, entitlements across clouds, passwords, risk, etc. Detect threats.",
                             },
                             {
-                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
+                                checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1742375626/sailpoint/1008/check.svg",
                                 featureItemContent: "<b>Compliance.</b> Demonstrate compliance with audit trails. GDPR, HIPAA, PCI, CCPA, FISMA, PCPD, PDPA, and more.",
                             },
                         ],
-                        formArrow: "//res.cloudinary.com/spiralyze/image/upload/v1730978717/sailpoint/1001/arrow.svg",
+                        formArrow: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/image_dashboard.webp",
                         formHeading: "Get live demo",
                     };
                     const additionalSection = {
                         socialProofLogos: {
                             socialProofHeading: "Trusted by 50% of the Fortune 500",
                             socialProofImages: [
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/logo-1.webp", imgAlt: "AES" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg", imgAlt: "Paccar" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_04.svg", imgAlt: "Philips" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_05.svg", imgAlt: "RWE" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_06.svg", imgAlt: "T Mobile" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg", imgAlt: "The Home Depot" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-6.svg", imgAlt: "Legal & General" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1737472368/sailpoint/1005/salvation_army-logo.svg", imgAlt: "The Salvation Army" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-8.svg", imgAlt: "Vodafone" },
                             ]
                         },
                     }
@@ -137,6 +137,10 @@
                             waitForElm(`.spz_1008 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
                             });
+                        });
+
+                        waitForElm('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
+                            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
                         });
 
                         //   var company_field = document.querySelector('.spz_1008 form.mktoForm .field-6');
@@ -347,6 +351,10 @@
 
                             const stateExists = document.querySelector('select#State');
                             stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half')) : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
+
+                            document.querySelector('label#LblGlobal_Opt_out__c')
+                            ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))
+                            : optOutRow.classList.add('hidden');
 
                             if (stateExists) {
                                 document.querySelector('select#State').addEventListener('change', () => {
