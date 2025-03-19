@@ -13,8 +13,7 @@
                     const heroContent = {
                         siteLogo: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo__colored.svg",
                         siteLogoAlt: "SailPoint",
-                        contentSuperHeading: "Unified identity security",
-                        contentHeading: "Discover, manage, and secure all identities",
+                        contentSuperHeading: "Discover, manage, and secure all identities",
                         features: [
                             {
                                 checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1730978649/sailpoint/1001/check.svg",
@@ -34,7 +33,7 @@
                     };
                     const additionalSection = {
                         socialProofLogos: {
-                            socialProofHeading: "50% of the Fortune 500 and 25% of the Forbes Global 2000",
+                            socialProofHeading: "Trusted by 50% of the Fortune 500",
                             socialProofImages: [
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
@@ -86,6 +85,7 @@
                         }).join("") : ""}
                       </div>
                     </div>
+                        <div class="content-footer"><div class="footer-links"><ul class="links-list"><a class="f-anchor" href="/legal/terms-of-use">Terms of Use</a><a class="f-anchor" href="/legal/cookie-notice">Cookie notice</a><a class="f-anchor" href="/legal/privacy">Privacy</a><a class="f-anchor" href="/legal">Legal</a><a class="f-anchor" target="_blank" href="https://go.sailpoint.com/Preference-Center.html">Email preferences</a><a class="f-anchor" href="/legal/security">Disclosure policy</a></ul></div><p class="copyright-text"> © 2025 SailPoint Technologies, Inc. All Rights Reserved. </p></div>
                     </div>
                   </div>
                 </div>
