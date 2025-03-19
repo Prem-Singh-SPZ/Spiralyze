@@ -34,7 +34,7 @@ body.spz_1008 {
       display: flex;
 
       .form-wrapper {
-        width: 50%;
+        width: 100%;
         max-width: 560px;
         height: 100dvh;
         overflow: auto;
@@ -43,6 +43,8 @@ body.spz_1008 {
         &::-webkit-scrollbar {
           display: none; /* Chrome, Safari, Opera*/
         }
+        display: flex;
+        flex-direction: column;
 
         .logo-wrap {
           padding: 32px 40px 8px 40px;
@@ -150,11 +152,28 @@ body.spz_1008 {
                 font-weight: 400;
                 line-height: 160%;
                 margin-right: 24px;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                  text-decoration: underline;
+                  text-underline-offset: 2px;
+                  font-weight: 600;
+                }
+
+                &:active,
+                &:focus-visible {
+                  text-decoration: none;
+                  font-weight: 600;
+                  border-radius: 4px;
+                  border: 1.5px solid #fff;
+                  background: rgba(0, 113, 206, 0.05);
+                  padding: 0 4px;
+                }
               }
             }
           }
 
-          .copyright-text{
+          .copyright-text {
             color: #fff;
             font-size: 14px;
             font-weight: 400;
@@ -184,7 +203,7 @@ body.spz_1008 {
 }
 
 .spz_1008 .spz-hero .social-proof-logos {
-  margin-top: 57px;
+  margin-top: auto;
   width: 100%;
   position: relative;
   padding: 32px 40px;
@@ -254,36 +273,24 @@ body.spz_1008 {
   }
 }
 
-@media (max-width: 1023.98px) {
-  .spz_1008 .spz-hero {
-    padding: 32px 0 97px;
-    margin-bottom: 87px;
+@media (max-width: 1024.98px) {
+  html:has(.spz_1008) {
+    overflow: auto;
   }
-
-  .spz_1008 .spz-hero:before {
-    top: 537px;
-    right: -138px;
-  }
-
-  .spz_1008 .spz-hero:after {
-    width: 388.24px;
-    height: 100px;
-    left: -228px;
-    bottom: 198px !important;
-  }
-
-  .spz_1008 .spz-hero .spz-wrapper {
-    max-width: 640px;
+  
+  body.spz_1008 {
+    overflow: auto;
   }
 
   .spz_1008 .spz-hero .spz-form-wrap {
     flex-direction: column;
   }
 
-  .spz_1008 .spz-hero .spz-form-wrap .content-section,
-  .spz_1008 .spz-hero .spz-form-wrap .spz-form-section {
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .form-wrapper,
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section {
     width: 100%;
     max-width: unset;
+    height: auto;
   }
 
   .spz_1008 .spz-form-wrap .content-superheading {
@@ -344,17 +351,11 @@ body.spz_1008 {
     align-items: unset;
     justify-content: unset;
     position: relative;
-    width: 2368px;
-    gap: 0 32px;
-    -webkit-animation: scroll 25s linear infinite;
-    animation: scroll 25s linear infinite;
   }
 
   .spz_1008 .social-proof-logos .social-proof-images img {
     width: 100%;
     max-width: 120px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
   }
 }
 
@@ -973,23 +974,7 @@ select:-webkit-autofill:active {
   padding: 0 4px;
 }
 
-@media (max-width: 1149.98px) and (min-width: 1024px) {
-  .spz_1008 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel {
-    font-size: 12px;
-  }
-
-  .spz_1008
-    .spz-form-section
-    form.mktoForm
-    .mktoFieldWrap
-    .select-wrapper:after {
-    width: 12px;
-    top: 21px;
-    right: 11px;
-  }
-}
-
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow .mktoButton {
     padding: 11px 11px 9px;
   }
