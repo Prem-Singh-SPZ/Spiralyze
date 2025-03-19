@@ -27,7 +27,6 @@
   --cta-background-color-hover: #1300c1;
 }
 
-body.spz-1005 #content #blocks-page .logo-banner,
 body.spz-1005 #content #blocks-page .hero-generic {
   display: none;
 }
@@ -1053,7 +1052,7 @@ body.spz-1005 .social-proof-logos .sp-container img {
 
   /* testimonials */
   .spz-1005 .spz-testimonials {
-      padding: 57px 0 46px; /* figma 60px 0 46px */
+      padding: 40px 0 46px; /* figma 60px 0 46px */
   }
 
   .spz-1005 .spz-testimonial {
@@ -1140,7 +1139,7 @@ $sec_black: #1e1a34;
   --cta-secondary-hover-font-color: #1300c1;
 }
 .spz-bg-wrap {
-  padding: 80px 32px;
+  padding: 80px 32px 100px;
   position: relative;
   max-width: 1440px;
   margin: auto;
@@ -1180,11 +1179,15 @@ $sec_black: #1e1a34;
   }
 
   @media (max-width: 1024.98px) {
-    padding: 56px 24px;
+    padding: 56px 24px 104px;
 
     &::before {
       display: none;
     }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 56px 24px 80px;
   }
 
   .features-heading {
@@ -1228,7 +1231,7 @@ $sec_black: #1e1a34;
   .spz-ctas-wrap {
     display: flex;
     gap: 0 40px;
-    margin-top: 40px;
+    margin-top: 41.5px;
     position: relative;
 
     @media (max-width: 1024.98px) {
@@ -1238,7 +1241,7 @@ $sec_black: #1e1a34;
 
     @media (max-width: 767.98px) {
      flex-direction: column;
-      margin-top: 56px;
+      margin-top: 54.5px;
       gap: 40px 0;
       align-items: center;
     }
@@ -1257,9 +1260,7 @@ $sec_black: #1e1a34;
       color: #fff;
 
       &:hover {
-        background: var(--primary-blue-color);
-        color: $color_5;
-        border: 2px solid var(--cta-primary-font-color);
+        background: #0036CC;
       }
     }
     .spz-secondary {
@@ -1284,9 +1285,11 @@ $sec_black: #1e1a34;
       }
 
       &:hover {
-        background: var(--primary-blue-color);
-        color: $color_6;
-        border: 2px solid var(--cta-primary-font-color);
+        color: #0036CC;
+
+        svg path{
+          fill: #0036CC;
+        }
       }
     }
   }
@@ -1313,6 +1316,7 @@ $sec_black: #1e1a34;
 
         @media (max-width: 767.98px) {
           max-height: 88px;
+          padding-top: 20px;
         }
 
         span {
@@ -1368,6 +1372,10 @@ $sec_black: #1e1a34;
             max-height: 500px;
             padding: 0 0 8px 0;
             margin-top: -1px;
+
+            @media (max-width: 1024.98px) {
+              margin-top: -2px;
+            }
           }
           .solution__image {
             display: block;
