@@ -36,27 +36,27 @@
             title: 'Accelerate insights & automation with AI',
             content: 'Make smart access decisions, detect threats and ensure compliance.',
             demoLink: 'https://www.sailpoint.com/demo',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai_1.webp'
         }, {
             title: 'Discover & secure all machine identities',
             content: 'Enhance security by gaining control over machine identities',
             demoLink: 'https://www.sailpoint.com/demo',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities_1.webp'
         }, {
             title: 'Manage & secure the non-employee lifecycle',
             content: 'Content for non-employee lifecycle management.',
             demoLink: 'https://www.sailpoint.com/demo',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle_1.webp'
         }, {
             title: 'Secure & govern access to sensitive data',
             content: 'Information on securing sensitive data.',
             demoLink: 'https://www.sailpoint.com/demo',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data_1.webp'
         }, {
             title: 'Automate & delegate privileged tasks',
             content: 'Content about automating privileged tasks.',
             demoLink: 'https://www.sailpoint.com/demo',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks_1.webp'
         }];
 
         if (document.querySelectorAll('.spz-2014 .help-section').length === 0) {
@@ -70,7 +70,7 @@
                         <div class="help-content">
                             <div class="accordion">
                             ${accordionItems.map((item, index) => {
-                                return `<div class="accordion-item">
+                return `<div class="accordion-item">
                                             <div class="accordion-header">
                                                 <span>${item.title}</span>
                                                 <button class="toggle-button"></button>
@@ -83,15 +83,15 @@
                                                 </div>
                                             </div>
                                         </div>`;
-                                    }).join('')}
+            }).join('')}
                             </div>
                         </div>
                         <div class="help-image">
                             ${accordionItems.map((item, index) => {
-                                return ` <div class="image-container image${index + 1}">
+                return ` <div class="image-container image${index + 1}">
                                             <img src="${item.image}" alt="${item.title}">
                                         </div>`;
-                            }).join('')}
+            }).join('')}
                         </div>
                     </div>
                 </div>
@@ -162,15 +162,15 @@
 
     // Do not touch below hidden field code for any Experiment Start
     function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-        var ExistingHiddenFieldName = getCookie('HiddenFieldNameContact');
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+        var ExistingHiddenFieldName = getCookie('HiddenFieldName');
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
 
         if (!ExistingHiddenFieldName) {
-            setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldName', currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValue', currentHiddenFieldValue, 1);
         } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-            setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-            setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+            setCookie('HiddenFieldName', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+            setCookie('HiddenFieldValue', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
         }
 
         setHiddenFieldValue();
@@ -199,7 +199,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
