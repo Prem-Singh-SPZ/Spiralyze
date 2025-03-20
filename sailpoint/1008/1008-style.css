@@ -99,6 +99,11 @@ body.spz_1008 {
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
+@media (min-width: 1600px) {
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section {
+    padding-top: 64px;
+  }
+}
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .arrow-icon {
   position: absolute;
   left: 0;
@@ -117,6 +122,11 @@ body.spz_1008 {
   left: 0;
   opacity: 0.6;
 }
+@media (min-width: 1600px) {
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::before {
+    top: 79px;
+  }
+}
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::after {
   content: "";
   width: 320px;
@@ -128,10 +138,16 @@ body.spz_1008 {
   background-size: contain;
   opacity: 0.6;
 }
+@media (min-width: 1600px) {
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::after {
+    top: 259px;
+  }
+}
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper {
   position: relative;
   z-index: 1;
-  margin-bottom: 64px;
+  max-width: 720px;
+  margin: 0 auto 64px;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .content-superheading {
   color: #fff;
@@ -187,6 +203,9 @@ body.spz_1008 {
       flex-wrap: wrap;
   gap: 16px;
   margin-top: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-footer .footer-links .links-list .f-anchor {
   color: #fff;
@@ -273,11 +292,6 @@ body.spz_1008 {
      object-fit: contain;
 }
 
-@media (min-width: 1601px) {
-  .spz_1008 .spz-hero .social-proof-logos {
-    margin: 64px auto 0;
-  }
-}
 @media (max-width: 1024.98px) {
   html:has(.spz_1008) {
     overflow: auto;

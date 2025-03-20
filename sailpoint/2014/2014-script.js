@@ -229,6 +229,14 @@
     }
     // Do not touch below hidden field code for any Experiment over
 
+    
+    // List of URLs
+    const urls = [
+        "https://www.sailpoint.com/",
+        "https://www.sailpoint.com/demo",
+        "https://www.sailpoint.com/demo/interactive",
+    ];
+    
     history.pushState = (function (f) {
         return function pushState() {
             var ret = f.apply(this, arguments);
@@ -258,13 +266,6 @@
     });
     var url = location.href;
     urlCheck(url);
-
-    // List of URLs
-    const urls = [
-        "https://www.sailpoint.com/",
-        "https://www.sailpoint.com/demo",
-        "https://www.sailpoint.com/demo/interactive",
-    ];
 
     function urlCheck(url) {
         if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {

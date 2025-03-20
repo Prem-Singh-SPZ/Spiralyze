@@ -94,6 +94,10 @@ body.spz_1008 {
         display: flex;
         flex-direction: column;
 
+        @media (min-width: 1600px) {
+          padding-top: 64px;
+        }
+
         .arrow-icon {
           position: absolute;
           left: 0;
@@ -113,6 +117,10 @@ body.spz_1008 {
           background-size: contain;
           left: 0;
           opacity: 0.6;
+
+          @media (min-width: 1600px) {
+            top: 79px;
+          }
         }
 
         &::after {
@@ -126,12 +134,18 @@ body.spz_1008 {
             no-repeat;
           background-size: contain;
           opacity: 0.6;
+
+          
+          @media (min-width: 1600px) {
+            top: 259px;
+          }
         }
 
         .content-wrapper {
           position: relative;
           z-index: 1;
-          margin-bottom: 64px;
+          max-width: 720px;
+          margin: 0 auto 64px;
 
           .content-superheading {
             color: #fff;
@@ -189,6 +203,7 @@ body.spz_1008 {
           flex-wrap: wrap;
           gap: 16px;
           margin-top: auto;
+          justify-content: space-between;
 
           .footer-links {
             .links-list {
@@ -277,12 +292,6 @@ body.spz_1008 {
   width: auto;
   height: 48.5px;
   object-fit: contain;
-}
-
-@media (min-width: 1601px) {
-  .spz_1008 .spz-hero .social-proof-logos {
-    margin: 64px auto 0;
-  }
 }
 
 @media (max-width: 1024.98px) {
