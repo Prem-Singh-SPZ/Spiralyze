@@ -4,8 +4,6 @@
 		"https://www.sailpoint.com/",
 		"https://www.sailpoint.com/demo",
 		"https://www.sailpoint.com/demo/interactive",
-		"https://www.sailpoint.com/products/identity-security-cloud/atlas",
-		"https://www.sailpoint.com/contact-us",
 	];
 
 	var url = location.href;
@@ -39,7 +37,7 @@
 	});
 
 	function urlCheck(url) {
-		if (urls.indexOf(window.location.href.split('?')[0]) >= 0 || urls.indexOf('https://www.sailpoint.com/') >= 0) {
+		if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
 			initTC();
 		} else {
 			if (document.querySelector('body').classList.contains('spz_2014_tc')) {

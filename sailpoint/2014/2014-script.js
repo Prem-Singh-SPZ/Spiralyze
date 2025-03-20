@@ -259,10 +259,18 @@
     var url = location.href;
     urlCheck(url);
 
+    // List of URLs
+    const urls = [
+        "https://www.sailpoint.com/",
+        "https://www.sailpoint.com/demo",
+        "https://www.sailpoint.com/demo/interactive",
+    ];
+
     function urlCheck(url) {
-        if (location.pathname === "/") {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
             createTest();
-        } else {
+        }
+        else {
             removeTest();
         }
     }

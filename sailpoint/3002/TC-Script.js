@@ -103,15 +103,15 @@
 
   // Do not touch below hidden field code for any Experiment Start
   function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-    var ExistingHiddenFieldName = getCookie('HiddenFieldNameContactUs');
-    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
+    var ExistingHiddenFieldName = getCookie('HiddenFieldName3002');
+    var ExistingHiddenFieldValue = getCookie('HiddenFieldValue3002');
 
     if (!ExistingHiddenFieldName) {
-      setCookie('HiddenFieldNameContactUs', currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueContactUs', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldName3002', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValue3002', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-      setCookie('HiddenFieldNameContactUs', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueContactUs', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldName3002', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValue3002', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -137,25 +137,27 @@
   }
   function setHiddenFieldValue() {
     var spz_cro_Interval = setInterval(function () {
-      var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
-      if (intellimize1) {
-        clearInterval(spz_cro_Interval);
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
-        //check if hidden field value is empty then only set the value else set the value with , seperated
-        if (intellimize1.value == '') {
-          intellimize1.value = ExistingHiddenFieldValue;
-        }
-        else {
-          if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
-            intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+      var intellimizeValue = document.querySelectorAll('form.mktoForm input[name="intellimize1"]');
+      intellimizeValue.forEach(function (intellimize1) {
+        if (intellimize1) {
+          clearInterval(spz_cro_Interval);
+          var ExistingHiddenFieldValue = getCookie('HiddenFieldValue3002');
+          //check if hidden field value is empty then only set the value else set the value with , seperated
+          if (intellimize1.value == '') {
+            intellimize1.value = ExistingHiddenFieldValue;
+          }
+          else {
+            if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+              intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+            }
           }
         }
-      }
+      });
     });
 
     //click event listener
     document.addEventListener('click', function (e) {
-      if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+      if (e.target.closest('form.mktoForm .mktoButton')) {
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
