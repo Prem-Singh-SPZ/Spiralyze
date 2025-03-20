@@ -48,6 +48,7 @@ body.spz_1008 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .form-wrapper::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
@@ -67,7 +68,7 @@ body.spz_1008 {
   height: auto;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .form-wrapper .spz-form-section {
-  padding: 40px 40px 0;
+  padding: 40px 40px;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .form-wrapper .spz-form-section .form-heading {
   color: #0033a1;
@@ -87,9 +88,23 @@ body.spz_1008 {
   background: linear-gradient(134deg, #0033a1 38.16%, #004fb5 64.91%, #0071ce 100.05%);
   padding: 40px 80px 32px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
+}
+.spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .arrow-icon {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 24px);
+  width: 21px;
+  height: 48px;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section::before {
   content: "";
@@ -108,17 +123,22 @@ body.spz_1008 {
   height: 222px;
   position: absolute;
   right: 0px;
-  top: 306px;
+  top: 272px;
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/decoration-2_img.webp) no-repeat;
   background-size: contain;
   opacity: 0.6;
+}
+.spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 64px;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .content-superheading {
   color: #fff;
   font-size: 28px;
   font-weight: 600;
   line-height: 120%;
-  margin: 57px 0 13px;
+  margin: 0 0 34px;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .spz-features-wrap {
   display: -webkit-box;
@@ -126,7 +146,7 @@ body.spz_1008 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 40px;
   position: relative;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .spz-features-wrap .feature-item {
@@ -135,7 +155,7 @@ body.spz_1008 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 29px;
+  margin-bottom: 25px;
   padding-left: 36px;
   position: relative;
 }
@@ -166,6 +186,7 @@ body.spz_1008 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 16px;
+  margin-top: auto;
 }
 .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-footer .footer-links .links-list .f-anchor {
   color: #fff;
@@ -230,10 +251,6 @@ body.spz_1008 {
   margin-bottom: 20px;
 }
 
-.spz_1008.form-expand .spz-hero .social-proof-logos {
-  margin: 64px auto 0;
-}
-
 .spz_1008 .spz-hero .social-proof-logos .social-proof-images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,11 +263,12 @@ body.spz_1008 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 15px;
 }
 
 .spz_1008 .social-proof-logos .social-proof-images img {
   width: auto;
-  height: 58px;
+  height: 48.5px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -708,6 +726,7 @@ select:-webkit-autofill:active {
 
 .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow {
   width: 100%;
+  margin-top: 16px;
 }
 
 .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow .mktoButtonWrap {

@@ -36,12 +36,12 @@
                             socialProofHeading: "Trusted by 50% of the Fortune 500",
                             socialProofImages: [
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/logo-1.webp", imgAlt: "AES" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_01.svg", imgAlt: "GM" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_02.svg", imgAlt: "Hershey" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_03.svg", imgAlt: "Paccar" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1730174324/sailpoint/1001/logo_07.svg", imgAlt: "The Home Depot" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-2.svg", imgAlt: "GM" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-3.svg", imgAlt: "Hershey" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375598/sailpoint/1008/logo-4_1.svg", imgAlt: "Paccar" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-5.svg", imgAlt: "The Home Depot" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-6.svg", imgAlt: "Legal & General" },
-                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1737472368/sailpoint/1005/salvation_army-logo.svg", imgAlt: "The Salvation Army" },
+                                { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-7.svg", imgAlt: "The Salvation Army" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-8.svg", imgAlt: "Vodafone" },
                             ]
                         },
@@ -71,6 +71,7 @@
                         </div>` : ``}
                     </div>
                     <div class="content-section">
+                        <span class="arrow-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/polygon.svg" alt="White Arrow"></span>
                         <div class="content-wrapper">
                       ${formData.contentSuperHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-superheading">${formData.contentSuperHeading}</div>` : ""}
                       <div class="content-banner-image">
