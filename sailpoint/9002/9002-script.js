@@ -81,6 +81,7 @@
   }
 
   function pageModify() {
+    document.querySelector('.spz_9002 .hero + .row').classList.add('spz-hero');
     if (document.querySelectorAll('.spz-logo').length == 0) {
       document.querySelector('.spz_9002 .hero + .row > .row__inner').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a class="logo-anchor" href="javascript:;"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737104112/sailpoint/9001/logo__colored.svg" alt="SailPoint" class=""></a>`);
     }
@@ -489,6 +490,45 @@
     //click event listener
     document.addEventListener('click', function (e) {
       if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+        waitForElm('.spz_9002 #mktoForm_1017.mktoForm .mktoError').then(function (elm) {
+          if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+            const targetNode = elm.parentNode;
+            const config = { attributes: true, childList: true, subtree: true };
+            const callback = (mutationList, observer) => {
+              for (const mutation of mutationList) {
+                if (mutation.type === "childList") {
+                  if (elm.parentNode === null && elm.style.display != 'none') {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                } else if (mutation.type === "attributes") {
+                  if (elm.parentNode === null) {
+                    targetNode.classList.add('error');
+                  } else {
+                    elm.parentNode.classList.add('error');
+                  }
+                  observer.disconnect();
+                }
+              }
+            };
+            const observer = new MutationObserver(callback);
+            observer.observe(targetNode, config);
+          } else {
+            let counterA = 0;
+            const intervalIdA = setInterval(() => {
+              if (document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .mktoError #ValidMsgEmail') !== null) {
+                document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+              }
+              counterA++;
+              if (counterA >= 10) {
+                clearInterval(intervalIdA);
+              }
+            }, 500);
+          }
+        });
+
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });

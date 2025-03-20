@@ -15,8 +15,9 @@ html.spz-no-scroll {
     display: none;
   }
 }
-.spz_9002 .page-transition {
+.spz_9002 #__next {
   overflow: hidden;
+  position: relative;
 }
 .spz_9002 .hero + .row {
   position: relative;
@@ -167,6 +168,7 @@ html.spz-no-scroll {
   max-width: 1330px;
   padding: 0 20px;
   margin: 8px auto 82px;
+  position: relative;
 }
 @media (min-width: 1599.98px) {
   .spz_9002 .social-proof-logos {
@@ -195,6 +197,7 @@ html.spz-no-scroll {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #fff;
 }
 .spz_9002 .social-proof-logos .social-proof-images img {
   width: auto;
@@ -661,6 +664,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap.error label.mktoLabel,
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix {
   color: #e6241e !important;
 }
@@ -712,9 +716,9 @@ select:-webkit-autofill:active {
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap.error .mktoField:not([type=checkbox]) {
-  border-color: #e6241e;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  border-color: #e6241e !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .mktoError {
@@ -724,6 +728,7 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 4px 0 0 !important;
+  display: inline;
 }
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
@@ -989,6 +994,9 @@ select:-webkit-autofill:active {
 .spz_9002 .spz-tab-section .spz-tab-buttons .spz-tab-button.active {
   color: #0071ce;
   border-bottom: 4px solid #0071ce;
+  opacity: 1;
+}
+.spz_9002 .spz-tab-section .spz-tab-buttons .spz-tab-button:hover {
   opacity: 1;
 }
 @media screen and (max-width: 767.98px) {
@@ -1455,6 +1463,7 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+  margin-right: 6px;
 }
 @media screen and (max-width: 767.98px) {
   .spz_9002 .spz-tab-content .sp-container .int-locations > .row .row__inner .bg-white .flex.flex-col .group .group__content .link,

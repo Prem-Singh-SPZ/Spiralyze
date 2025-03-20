@@ -20,9 +20,12 @@ html.spz-no-scroll {
     }
   }
 
-  .page-transition {
+  // &:not(.form-submit) {
+  #__next {
     overflow: hidden;
+    position: relative;
   }
+  // }
 
   .hero + .row {
     position: relative;
@@ -179,6 +182,7 @@ html.spz-no-scroll {
     max-width: 1330px;
     padding: 0 20px;
     margin: 8px auto 82px;
+    position: relative;
 
     @media (min-width: 1599.98px) {
       max-width: 1288px;
@@ -200,6 +204,7 @@ html.spz-no-scroll {
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      background: #fff;
 
       img {
         width: auto;
@@ -756,6 +761,12 @@ select:-webkit-autofill:active {
   .page-transition
   .inner-row__inner
   form.mktoForm
+  .mktoFieldWrap.error.active.typing
+  label.mktoLabel,
+.spz_9002
+  .page-transition
+  .inner-row__inner
+  form.mktoForm
   .mktoFieldWrap.error
   label.mktoLabel
   .mktoAsterix {
@@ -832,8 +843,8 @@ select:-webkit-autofill:active {
   form.mktoForm
   .mktoFieldWrap.error
   .mktoField:not([type="checkbox"]) {
-  border-color: #e6241e;
-  box-shadow: none;
+  border-color: #e6241e !important;
+  box-shadow: none !important;
 }
 
 .spz_9002
@@ -848,6 +859,7 @@ select:-webkit-autofill:active {
   left: unset !important;
   right: unset !important;
   margin: 4px 0 0 !important;
+  display: inline;
 }
 
 .spz_9002
@@ -947,7 +959,7 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_9002 .mktoForm input[type="checkbox"]{
+.spz_9002 .mktoForm input[type="checkbox"] {
   min-width: 16px;
   max-width: 16px;
   min-height: 16px;
@@ -1185,6 +1197,10 @@ select:-webkit-autofill:active {
           opacity: 1;
         }
 
+        &:hover {
+          opacity: 1;
+        }
+
         @media screen and (max-width: 767.98px) {
           font-size: 16px;
           font-weight: 400;
@@ -1346,7 +1362,7 @@ select:-webkit-autofill:active {
                   margin: 0;
 
                   @media (max-width: 767.98px) {
-                    a{
+                    a {
                       white-space: nowrap;
                     }
                   }
@@ -1652,6 +1668,7 @@ select:-webkit-autofill:active {
                       font-style: normal;
                       font-weight: 400;
                       line-height: 160%;
+                      margin-right: 6px;
 
                       @media screen and (max-width: 767.98px) {
                         white-space: normal;
