@@ -104,6 +104,10 @@ body.spz_1008 {
           top: calc(50% - 24px);
           width: 21px;
           height: 48px;
+
+          @media (max-height: 900px) {
+            top: 425px;
+          }
         }
 
         &::before {
@@ -135,7 +139,6 @@ body.spz_1008 {
           background-size: contain;
           opacity: 0.6;
 
-          
           @media (min-width: 1600px) {
             top: 259px;
           }
