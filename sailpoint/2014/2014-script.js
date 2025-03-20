@@ -5,14 +5,14 @@
             if (body) {
                 clearInterval(bodyLoaded);
                 if (!document.body.classList.contains('spz-2014')) {
-                    removeSpecificCookieValue('spz-2014', 'spz_2014_truecontrol');
+                    removeSpecificCookieValue('SPZ_2014', 'spz_2014_truecontrol');
                     document.body.classList.add('spz-2014');
                     waitForElm('.grid.bg-black').then(() => {
                         let keepChanges = setInterval(() => {
                             if (document.querySelector('.grid.bg-black')) {
                                 accordionSection();
                             }
-                            hiddenValue('spz-2014', 'spz_2014_variant');
+                            hiddenValue('SPZ_2014', 'spz_2014_variant');
                         }, 10);
 
                         setTimeout(() => {
@@ -23,7 +23,7 @@
                 } else {
                     if (document.body.classList.contains('spz-2014')) {
                         removeSpecificCookieValue('spz-2014', 'spz_2014_truecontrol');
-                        hiddenValue('spz-2014', 'spz_2014_variant');
+                        hiddenValue('SPZ_2014', 'spz_2014_variant');
                     }
                 }
             }
