@@ -89,6 +89,9 @@
     if (document.querySelectorAll('.spz-form-title').length == 0)
       document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us</div>`);
 
+    if(document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full.iron-theme'))
+      document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full.iron-theme').classList.remove('iron-theme');
+
     if (document.querySelectorAll('.social-proof-logos').length == 0)
       document.querySelector('.spz_9002 .hero + .row').insertAdjacentHTML('afterend', `${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
                 <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
@@ -353,7 +356,7 @@
             }
           }
         });
-      }, 100);
+      }, 50);
 
 
       setTimeout(() => {
@@ -380,18 +383,6 @@
       MktoForms2.whenReady(function (form) {
         form.onSuccess(function (values, followUpUrl) {
           document.body.classList.add('form-submit');
-
-          //if #mktoCheckbox_27268_0 this checkbox is there, keep it checked with setinterval
-          var checkboxInterval = setInterval(() => {
-            var checkbox = document.querySelector('.spz_9002 form.mktoForm #mktoCheckbox_27268_0');
-            if (checkbox) {
-              checkbox.checked = true;
-            }
-          }, 100);
-
-          setTimeout(() => {
-            clearInterval(checkboxInterval);
-          }, 5000);
         });
       });
     }
