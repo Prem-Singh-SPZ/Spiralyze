@@ -109,8 +109,8 @@
                     let spzHeroInterval = setInterval(() => {
                         if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
                             addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
-                            removeSpecificCookieValue('spz_1008', 'SPZ_1008_truecontrol');
-                            hiddenValue('spz_1008', 'SPZ_1008_variant');
+                            removeSpecificCookieValue('SPZ_1008', 'SPZ_1008_truecontrol');
+                            hiddenValue('SPZ_1008', 'SPZ_1008_variant');
                             setHiddenFieldValue();
                         }
                         else {
@@ -140,9 +140,9 @@
                             });
                         });
 
-                        waitForElm('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
-                            label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-                        });
+                        // waitForElm('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
+                        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
+                        // });
 
                         //   var company_field = document.querySelector('.spz_1008 form.mktoForm .field-6');
                         //   var lastName_field = document.querySelector('.spz_1008 form.mktoForm .field-4');
@@ -353,9 +353,9 @@
                             const stateExists = document.querySelector('select#State');
                             stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half')) : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
 
-                            document.querySelector('label#LblGlobal_Opt_out__c')
-                            ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))
-                            : optOutRow.classList.add('hidden');
+                            // document.querySelector('label#LblGlobal_Opt_out__c')
+                            // ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))
+                            // : optOutRow.classList.add('hidden');
 
                             if (stateExists) {
                                 document.querySelector('select#State').addEventListener('change', () => {
@@ -377,8 +377,8 @@
                     }
                 } else {
                     if (body.classList.contains('spz_1008')) {
-                        removeSpecificCookieValue('spz_1008', 'SPZ_1008_truecontrol');
-                        hiddenValue('spz_1008', 'SPZ_1008_variant');
+                        removeSpecificCookieValue('SPZ_1008', 'SPZ_1008_truecontrol');
+                        hiddenValue('SPZ_1008', 'SPZ_1008_variant');
                         let callMultipleTimes = setInterval(() => {
                             setHiddenFieldValue();
                         }, 500);

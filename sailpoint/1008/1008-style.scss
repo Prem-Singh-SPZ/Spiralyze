@@ -145,7 +145,7 @@ body.spz_1008 {
           }
 
           @media (max-width: 1024.98px) {
-            top: -13px;
+            top: -14px;
             left: calc(50% - 10px);
             transform: rotate(90deg);
           }
@@ -228,6 +228,10 @@ body.spz_1008 {
             line-height: 120%;
             margin: 0 0 34px;
 
+            @media (min-width: 1600px) {
+              margin: 0 0 32px;
+            }
+
             @media (max-width: 1024.98px) {
               margin: 0 0 24px;
             }
@@ -307,8 +311,8 @@ body.spz_1008 {
           }
 
           @media screen and (max-width: 767.98px) {
-           gap: 5px;
-           margin: 0 auto 23px;
+            gap: 5px;
+            margin: 0 auto 23px;
           }
 
           .footer-links {
@@ -924,13 +928,28 @@ select:-webkit-autofill:active {
   display: flex;
 }
 
+.spz_1008
+  .spz-form-section
+  form.mktoForm
+  #LblGlobal_Opt_out__c
+  ~ .mktoCheckboxList,
+.spz_1008
+  .spz-form-section
+  form.mktoForm
+  #LblcCPAAgeVerification
+  ~ .mktoCheckboxList {
+  &.mktoLogicalField {
+    align-items: center;
+  }
+}
+
 .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList input,
 .spz_1008 .spz-form-section form.mktoForm input[type="checkbox"] {
   min-width: 16px;
   width: 16px;
   height: 16px;
   position: relative;
-  top: 2px;
+  // top: 2px;
 }
 
 .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList label {
@@ -1051,17 +1070,11 @@ select:-webkit-autofill:active {
     width: 100% !important;
   }
 
-  .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList input,
-  .spz_1008 .spz-form-section form.mktoForm input[type="checkbox"] {
-    min-width: 20px;
-    width: 20px;
-    height: 20px;
-    /* top: 0; */
-  }
-
   .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList label {
+    margin-top: 3px;
     width: calc(100% - 20px);
-    padding-left: 8px;
+    padding-left: 12px;
+    font-size: 12px;
   }
 
   .spz_1008 .spz-form-section .disclaimer {
@@ -1076,6 +1089,10 @@ select:-webkit-autofill:active {
   .spz_1008 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a {
     display: inline-block;
     padding: 0;
+  }
+
+  .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow{
+    margin-top: 6.3px;
   }
 }
 

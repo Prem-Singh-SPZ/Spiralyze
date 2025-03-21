@@ -161,7 +161,7 @@ body.spz_1008 {
 }
 @media (max-width: 1024.98px) {
   .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .arrow-icon {
-    top: -13px;
+    top: -14px;
     left: calc(50% - 10px);
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
@@ -247,6 +247,11 @@ body.spz_1008 {
   font-weight: 600;
   line-height: 120%;
   margin: 0 0 34px;
+}
+@media (min-width: 1600px) {
+  .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .content-superheading {
+    margin: 0 0 32px;
+  }
 }
 @media (max-width: 1024.98px) {
   .spz_1008 .spz-hero .spz-wrapper .spz-form-wrap .content-section .content-wrapper .content-superheading {
@@ -822,13 +827,19 @@ select:-webkit-autofill:active {
   display: flex;
 }
 
+.spz_1008 .spz-form-section form.mktoForm #LblGlobal_Opt_out__c ~ .mktoCheckboxList.mktoLogicalField,
+.spz_1008 .spz-form-section form.mktoForm #LblcCPAAgeVerification ~ .mktoCheckboxList.mktoLogicalField {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList input,
 .spz_1008 .spz-form-section form.mktoForm input[type=checkbox] {
   min-width: 16px;
   width: 16px;
   height: 16px;
   position: relative;
-  top: 2px;
 }
 
 .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList label {
@@ -954,16 +965,11 @@ select:-webkit-autofill:active {
   .spz_1008 .spz-form-section form.mktoForm .mktoFormRow {
     width: 100% !important;
   }
-  .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList input,
-  .spz_1008 .spz-form-section form.mktoForm input[type=checkbox] {
-    min-width: 20px;
-    width: 20px;
-    height: 20px;
-    /* top: 0; */
-  }
   .spz_1008 .spz-form-section form.mktoForm .mktoCheckboxList label {
+    margin-top: 3px;
     width: calc(100% - 20px);
-    padding-left: 8px;
+    padding-left: 12px;
+    font-size: 12px;
   }
   .spz_1008 .spz-form-section .disclaimer {
     margin-top: 14px;
@@ -975,6 +981,9 @@ select:-webkit-autofill:active {
   .spz_1008 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a {
     display: inline-block;
     padding: 0;
+  }
+  .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow {
+    margin-top: 6.3px;
   }
 }
 /* Form Styling CSS End */
