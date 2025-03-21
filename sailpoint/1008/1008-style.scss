@@ -13,6 +13,21 @@ html:has(.spz_1008) {
 
 body.spz_1008 {
   overflow: hidden;
+
+  .the-form {
+    .contact_us_submit_spz {
+      color: #0033a1;
+      display: none;
+    }
+  }
+
+  &.form-submit {
+    .the-form {
+      .contact_us_submit_spz {
+        display: block;
+      }
+    }
+  }
 }
 
 .spz_1008 #__next .font-sans > .flex-col {
@@ -1091,7 +1106,7 @@ select:-webkit-autofill:active {
     padding: 0;
   }
 
-  .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow{
+  .spz_1008 .spz-form-section form.mktoForm .mktoButtonRow {
     margin-top: 6.3px;
   }
 }

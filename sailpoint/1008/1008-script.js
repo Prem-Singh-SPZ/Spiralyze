@@ -59,7 +59,7 @@
                         </div>                                          
                         <div class="spz-form-section">
                             ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                            <div class="the-form"></div>
+                            <div class="the-form"><div class="contact_us_submit_spz"><h3 class="text-center">Thank you!</h3><h4 class="text-center">A representative will reach out to you shortly.</h4></div></div>
                         </div>
                         ${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
                             <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
@@ -372,6 +372,10 @@
                             form.onSuccess(function (values, followUpUrl) {
                                 document.body.classList.add('form-submit');
                             });
+                        });
+
+                        waitForElm('.spz_1008 .mkto-wrap.w-full #confirm #contact_us_submit').then(() => {
+                            document.body.classList.add('form-submit');
                         });
 
                     }
