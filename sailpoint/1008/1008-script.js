@@ -75,7 +75,7 @@
                         <div class="content-wrapper">
                       ${formData.contentSuperHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-superheading">${formData.contentSuperHeading}</div>` : ""}
                       <div class="content-banner-image">
-                        ${formData.formArrow.length !== 0 ? `<img src="${formData.formArrow}" class="spz-banner-img" alt="" />` : ""}
+                        ${formData.formArrow.length !== 0 ? `<img src="${formData.formArrow}" class="spz-banner-img" alt="${formData.contentSuperHeading}" />` : ""}
                       </div>
                       <div class="spz-features-wrap">
                         ${formData.features.length > 0 ? formData.features.map((item) => {
