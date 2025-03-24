@@ -322,7 +322,7 @@ function mainPage() {
 			bodyEle.classList.add('spz-1003-home');
 			bodyEle.classList.add('spz-home');
 			//hidden value
-			cookieValue('#1003', '#1003_variant1');
+			cookieValue('#1005', '#1005_true_control');
 
 			waitForElm('#content #blocks-page .hero-generic .container > div > div:first-child .my-6 a').then(function () {
 				addHero(
@@ -465,7 +465,7 @@ function load_variant_1003() {
             }
 
             //hidden value
-			cookieValue('#1003', '#1003_variant1');
+			cookieValue('#1005', '#1005_true_control');
         
             // look for '.entry-content' div (updated selector from .spz-1003 main#blocks-page > section:nth-child(2) because of Maxio 1002 code conflict)
             waitForElm('.spz-1003 main#blocks-page > section:nth-of-type(2)').then((elm) => {
