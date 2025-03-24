@@ -161,7 +161,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     const NoOfAccordion = content.accordionItems.length;
     let currenctActive = 0;
     let currentSlideProgress = 0;
-    let autoSlide = false;
+    let autoSlide = true;
 
     // Initialize Accordion active item 
     accordionContents.children[currenctActive].classList.add('active');
@@ -169,7 +169,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // autoSlide = true;
+                autoSlide = true;
             } else {
                 autoSlide = false;
             }
