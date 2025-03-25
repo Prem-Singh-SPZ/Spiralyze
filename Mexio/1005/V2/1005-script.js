@@ -19,15 +19,15 @@ const template_sectionContent = {
             image: [
                 {
                     breakPoint: 1024,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_usage-based_billing_5.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_usage_billing_6.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_usage-based_billing_3.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_usage_billing_5.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_automate_usage-based_billing_4.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_usage_billing_3.webp",
                 },
             ],
         },
@@ -38,15 +38,15 @@ const template_sectionContent = {
             image: [
                 {
                     breakPoint: 1024,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_16.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_subscription_management_3.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_automate_usage-based_billing_4.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_subscription_management_2.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_full_subscription_management_4.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_subscription_management_4.webp",
                 },
             ],
         },
@@ -57,15 +57,15 @@ const template_sectionContent = {
             image: [
                 {
                     breakPoint: 1024,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_17.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_revenue_recognition__reporting_2.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_tab_automate_usage-based_billing_5.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_revenue_recognition__reporting_2.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_revenue_recognition__reporting_4.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_revenue_recognition__reporting_2.webp",
                 },
             ],
         },
@@ -75,15 +75,15 @@ const template_sectionContent = {
             image: [
                 {
                     breakPoint: 1024,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_18.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_20.webp",
                 },
                 {
                     breakPoint: 768,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_19.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_21.webp",
                 },
                 {
                     breakPoint: 320,
-                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_dozens_of_payment_providers_5.webp",
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_dozens_of_payment_providers_6.webp",
                 },
             ],
         },
@@ -557,7 +557,7 @@ function mainPage() {
             bodyEle.classList.add('spz-1005');
             bodyEle.classList.add('spz-home');
             //hidden value
-            cookieValue('#1005', '#1005_variant1');
+            cookieValue('#1005', '#1005_variant2');
 
             waitForElm('#content #blocks-page .hero-generic .container > div > div:first-child .my-6 a').then(function () {
                 addHorizontalAccordion(
