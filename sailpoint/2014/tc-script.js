@@ -46,7 +46,7 @@
 			if (document.querySelector('body').classList.contains('spz_2014_tc_HF')) {
 				document.querySelector('body').classList.remove('spz_2014_tc_HF');
 			}
-			removeSpecificCookieValue('SPZ_2014', 'spz_2014_truecontrol');
+			removeSpecificCookieValue('SPZ_2014', 'SPZ_2014_truecontrol');
 		}
 	}
 
@@ -57,7 +57,7 @@
 				clearInterval(bodyLoaded);
 				if (!body.classList.contains('spz_2014_tc')) {
 					body.classList.add('spz_2014_tc');
-					hiddenValue('SPZ_2014', 'spz_2014_truecontrol');
+					hiddenValue('SPZ_2014', 'SPZ_2014_truecontrol');
 				}
 			}
 			else {

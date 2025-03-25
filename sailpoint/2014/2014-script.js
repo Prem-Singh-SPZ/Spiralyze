@@ -12,7 +12,7 @@
                             if (document.querySelector('.grid.bg-black')) {
                                 accordionSection();
                             }
-                            hiddenValue('SPZ_2014', 'spz_2014_variant');
+                            hiddenValue('SPZ_2014', 'SPZ_2014_variant');
                         }, 10);
 
                         setTimeout(() => {
@@ -22,8 +22,15 @@
 
                 } else {
                     if (document.body.classList.contains('spz-2014')) {
-                        removeSpecificCookieValue('spz-2014', 'spz_2014_truecontrol');
-                        hiddenValue('SPZ_2014', 'spz_2014_variant');
+                        removeSpecificCookieValue('SPZ_2014', 'SPZ_2014_truecontrol');
+                        hiddenValue('SPZ_2014', 'SPZ_2014_variant');
+                        let callHF = setInterval(() => {
+                            setHiddenFieldValue();
+                        }, 100);
+        
+                        setTimeout(() => {
+                            clearInterval(callHF);
+                        }, 10000);
                     }
                 }
             }
@@ -35,27 +42,27 @@
         let accordionItems = [{
             title: 'Accelerate insights & automation with AI',
             content: 'Make smart access decisions, detect threats and ensure compliance.',
-            demoLink: 'https://www.sailpoint.com/demo',
+            demoLink: 'https://www.sailpoint.com/products/ai-driven-identity-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai_1.webp'
         }, {
             title: 'Discover & secure all machine identities',
             content: 'Enhance security by gaining control over machine identities',
-            demoLink: 'https://www.sailpoint.com/demo',
+            demoLink: 'https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/machine-identity-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities_1.webp'
         }, {
             title: 'Manage & secure the non-employee lifecycle',
             content: 'Content for non-employee lifecycle management.',
-            demoLink: 'https://www.sailpoint.com/demo',
+            demoLink: 'https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/non-employee-risk-management',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle_1.webp'
         }, {
             title: 'Secure & govern access to sensitive data',
             content: 'Information on securing sensitive data.',
-            demoLink: 'https://www.sailpoint.com/demo',
+            demoLink: 'https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/data-access-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data_1.webp'
         }, {
             title: 'Automate & delegate privileged tasks',
             content: 'Content about automating privileged tasks.',
-            demoLink: 'https://www.sailpoint.com/demo',
+            demoLink: 'https://www.sailpoint.com/products/privileged-task-automation',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks_1.webp'
         }];
 
@@ -77,7 +84,7 @@
                                             </div>
                                             <div class="accordion-content" data-image="image${index + 1}">
                                                 <p>${item.content}</p>
-                                                <a href="${item.demoLink}" class="demo-link">Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
+                                                <a href="${item.demoLink}" class="demo-link">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
                                                 <div class="image-container">
                                                     <img src="${item.image}" alt="${item.title}">
                                                 </div>
@@ -202,7 +209,7 @@
             var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
-                var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+                var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
                 //check if hidden field value is empty then only set the value else set the value with , seperated
                 if (intellimize1.value == '') {
                     intellimize1.value = ExistingHiddenFieldValue;
@@ -217,7 +224,7 @@
 
         //click event listener
         document.addEventListener('click', function (e) {
-            if (e.target.closest('#mktoForm_1018 .mktoButton')) {
+            if (e.target.closest('form.mktoForm .mktoButton')) {
                 //inject current time and date in EST timezone into .intellimize2 hidden field
                 var d = new Date();
                 var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
