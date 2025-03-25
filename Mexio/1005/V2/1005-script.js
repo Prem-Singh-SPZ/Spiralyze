@@ -162,6 +162,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     let currenctActive = 0;
     let currentSlideProgress = 0;
     let autoSlide = true;
+    let accordionPaused = false; // New flag to track pause state
 
     // Initialize Accordion active item 
     accordionContents.children[currenctActive].classList.add('active');
@@ -169,8 +170,11 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                autoSlide = true;
-            } else {
+                if (!accordionPaused) {
+                    autoSlide = true;
+                }
+            } 
+            else {
                 autoSlide = false;
             }
         });
@@ -183,6 +187,8 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
     Array.from(accordionContents.children).forEach((item, index) => {
         item.querySelector('.spz-features-accordion__item').addEventListener('click', (e) => {
             e.preventDefault();
+            accordionPaused = true; // Pause the accordion
+            autoSlide = false;
             if (currenctActive !== index) {
                 changeAccordionActiveItem(index);
             }
@@ -196,7 +202,9 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
         item.addEventListener('mouseleave', (e) => {
             e.preventDefault();
             // if (currenctActive === index) {
-            autoSlide = true;
+            if (!accordionPaused) {
+                autoSlide = true;
+            }
             // }
         });
     });
@@ -204,7 +212,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
 
     // Running Interval
     const autoSlideInterval = setInterval(function () {
-        if (!autoSlide) return;
+        if (!autoSlide || accordionPaused) return;
         if (currentSlideProgress >= 100) {
             currenctActive = (currenctActive + 1 >= NoOfAccordion) ? 0 : (currenctActive + 1);
             changeAccordionActiveItem(currenctActive);
