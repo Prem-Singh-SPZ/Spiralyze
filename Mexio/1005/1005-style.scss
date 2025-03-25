@@ -1373,6 +1373,8 @@ $sec_black: #1e1a34;
             max-height: 500px;
             padding: 0 0 8px 0;
             margin-top: -1px;
+            //add animation: of 0.5 sec opacity
+            animation: fadeIn 0.5s forwards;
 
             @media (max-width: 1024.98px) {
               margin-top: -2px;
@@ -1435,6 +1437,8 @@ $sec_black: #1e1a34;
             max-width: 700px;
             width: calc(100% - 508px);
             top: 2px;
+            //add animation: of 0.5 sec opacity
+            animation: fadeIn 0.5s forwards;
 
             picture {
               z-index: 1;
@@ -1545,6 +1549,15 @@ body.spz-1005 {
           display: none !important;
         }
       }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

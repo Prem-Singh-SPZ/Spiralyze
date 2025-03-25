@@ -1407,6 +1407,8 @@ body.spz-1005 .social-proof-logos .sp-container img {
   max-height: 500px;
   padding: 0 0 8px 0;
   margin-top: -1px;
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
 }
 @media (max-width: 1024.98px) {
   .spz-features-accordion__wrapper .spz-features-accordion__row .spz-features-accordion .spz-features-accordion__contents > .content.active .solution__content {
@@ -1457,6 +1459,8 @@ body.spz-1005 .social-proof-logos .sp-container img {
   max-width: 700px;
   width: calc(100% - 508px);
   top: 2px;
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
 }
 .spz-features-accordion__wrapper .spz-features-accordion__row .spz-features-accordion .spz-features-accordion__contents > .content .solution__image picture {
   z-index: 1;
@@ -1548,4 +1552,20 @@ body.spz-1005 #page #content.site-content #blocks-page.blocks-page > #integratio
 body.spz-1005 #page #content.site-content #blocks-page.blocks-page > section[id*=content-media-block]:not(.theme-black.prose-white),
 body.spz-1005 #page #content.site-content #blocks-page.blocks-page > #testimonials {
   display: none !important;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
