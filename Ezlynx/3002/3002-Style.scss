@@ -35,7 +35,7 @@
   z-index: 0;
 }
 .spz-3002 .spz-hero .site-header-logo {
-  padding: 48px 0 40px;
+  padding: 24px 0 48px;
 }
 .spz-3002 .spz-hero .site-header-logo a {
   display: inline-block;
@@ -45,7 +45,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 .spz-3002 .spz-hero .heading-block {
   display: none;
@@ -64,7 +64,7 @@
   line-height: 24px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  margin: 0 0 16px !important;
+  margin: 0 0 20px !important;
 }
 .spz-3002 .spz-hero .content-section .content-heading,
 .spz-3002 .spz-hero .heading-block .content-heading {
@@ -72,14 +72,14 @@
   font-size: 40px !important;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.2;
   margin: 0 0 30px !important;
 }
 .spz-3002 .spz-hero .content-section .feature-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 .spz-3002 .spz-hero .content-section .feature-item:last-child {
@@ -88,12 +88,12 @@
 .spz-3002 .spz-hero .content-section .feature-item img {
   width: 24px;
   height: 24px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .spz-3002 .spz-hero .content-section .feature-item span {
   font-family: "Open Sans";
-  color: #000;
-  font-size: 18px;
+  color: #212121;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -107,22 +107,22 @@
   position: relative;
   padding: 33px 32px 32px;
 }
-.spz-3002 .spz-hero .spz-form-section::before {
-  position: absolute;
-  content: "";
-  top: -150px;
-  left: -84px;
-  width: 769px;
-  height: 842px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/2001/v3_tablet_bg.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: -1;
-}
-.spz-3002.page-special-deals .spz-hero .spz-form-section::before {
-  top: -101px;
-}
+// .spz-3002 .spz-hero .spz-form-section::before {
+//   position: absolute;
+//   content: "";
+//   top: -150px;
+//   left: -84px;
+//   width: 769px;
+//   height: 842px;
+//   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/2001/v3_tablet_bg.webp");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   pointer-events: none;
+//   z-index: -1;
+// }
+// .spz-3002.page-special-deals .spz-hero .spz-form-section::before {
+//   top: -101px;
+// }
 .spz-3002 .spz-hero .form-heading {
   color: #212121;
   font-family: "Open Sans";
@@ -233,10 +233,16 @@
 }
 @media (max-width: 1023.98px) {
   .spz-3002 .spz-hero::before {
-    display: none;
+    width: 688px;
+    height: 753.311px;
+    left: 40px;
+    bottom: 280.344px;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1742810396/ezlynx/3002/element_bg_tablet_v1_1.svg) no-repeat;
+    background-size: contain;
   }
   .spz-3002 .spz-hero .site-header-logo {
     text-align: center;
+    padding: 48px 0 39px;
   }
   .spz-3002 .spz-hero .spz-form-wrap {
     flex-direction: column-reverse;
@@ -251,10 +257,11 @@
     text-align: center;
   }
   .spz-3002 .spz-hero .heading-block .content-superheading {
-    margin: 31px 0 15px !important;
+    margin: 31px 0 16px !important;
   }
   .spz-3002.page-free-quote .spz-hero .heading-block .content-heading {
     max-width: 75%;
+    line-height: normal;
   }
   .spz-3002 .spz-hero .heading-block .content-heading {
     margin: 0 auto !important;
@@ -279,6 +286,9 @@
   .spz-3002 .spz-hero .content-section .content-superheading,
   .spz-3002 .spz-hero .content-section .content-heading {
     display: none;
+  }
+  .spz-3002 .spz-hero .form-heading{
+    margin-bottom: 32px !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -347,7 +357,9 @@
   justify-content: space-between;
   width: 100%;
 
-  > div:not([class]), > .g-recaptcha, > .field-8 {
+  > div:not([class]),
+  > .g-recaptcha,
+  > .field-8 {
     display: none !important;
   }
 }
@@ -625,6 +637,11 @@
   form.mktoForm
   .mktoFormRow.field-7 {
   padding: 0 !important;
+
+  .mktoFieldWrap {
+    margin-bottom: 9px;
+  }
+
   .mktoHtmlText {
     margin: 0;
 
@@ -646,11 +663,10 @@
       line-height: 140%;
 
       a {
-        color: #CC202C;
+        color: #cc202c;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 26px;
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -659,7 +675,7 @@
         text-underline-position: from-font;
 
         &:hover {
-        color: #841619;
+          color: #841619;
         }
       }
     }
@@ -681,11 +697,10 @@
   padding: 0 !important;
 
   a {
-    color: #CC202C;
+    color: #cc202c;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
@@ -710,7 +725,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FDC20F !important;
+  background: #fdc20f !important;
   background-image: none !important;
   border: none !important;
   color: #212121 !important;
@@ -719,7 +734,11 @@
   font-weight: 700 !important;
   line-height: 24px !important;
   letter-spacing: 0.1px !important;
-  margin: 24px 0 12px !important;
+  margin: 24px 0 16px !important;
+
+  @media screen and (max-width: 1023.98px) {
+    font-size: 18px !important;
+  }
 }
 .spz-3002
   .spz-hero
@@ -727,7 +746,7 @@
   .spz-form-section
   form.mktoForm
   button.mktoButton[type="submit"]:hover {
-  background: #FBEB79 !important;
+  background: #fbeb79 !important;
 }
 @media (max-width: 767.98px) {
   .spz-3002
