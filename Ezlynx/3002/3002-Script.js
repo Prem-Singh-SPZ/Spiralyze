@@ -249,6 +249,7 @@
       "LblLastName": "Last Name",
       "LblPhone": "Phone",
       "LblPostalCode": "ZIP Code",
+      "LblStateCode": "State",
       "LblNumberOfEmployees": "Number of Employees",
       "LblPrimary_Alliance_Partner__c": "Alliance/Network Member?",
       "LblTitle": "Job Title"
@@ -272,6 +273,14 @@
     var email_field = document.querySelector('.spz-3002 .spz-hero .the-form form.mktoForm .mktoFormRow.field-1');
     var company_field = document.querySelector('.spz-3002 .spz-hero .the-form form.mktoForm .mktoFormRow.field-4');
     company_field.after(email_field);
+
+    const captchaField = document.querySelector('.spz-3002 .spz-hero .the-form form.mktoForm .mktoCaptchaDisclaimer');
+    const submitButton = document.querySelector('.spz-3002 .spz-hero .the-form form.mktoForm .mktoButtonRow');
+    const privacyPolicy = document.querySelector('.spz-3002 .spz-hero .the-form form.mktoForm .mktoFormRow.field-7');
+    if (captchaField && submitButton && privacyPolicy) {
+      submitButton.after(captchaField);
+      submitButton.after(privacyPolicy);
+    }
     // }
     setHiddenFields();
 

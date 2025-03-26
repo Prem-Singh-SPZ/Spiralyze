@@ -3,7 +3,7 @@
 .spz-3002 footer,
 .spz-3002 main#content .TwoColumnMarketoForm,
 .spz-3002 main#content section.hero,
-.spz-3002 main#content section.SingleColumnMarketoForm{
+.spz-3002 main#content section.SingleColumnMarketoForm {
   display: none;
 }
 .spz-3002 .spz-body-wrapper {
@@ -52,7 +52,7 @@
 }
 .spz-3002 .spz-hero .content-section {
   width: 47.94%;
-  max-width: 580px;
+  max-width: 510px;
 }
 .spz-3002 .spz-hero .content-section .content-superheading,
 .spz-3002 .spz-hero .heading-block .content-superheading {
@@ -99,8 +99,8 @@
   line-height: 1.5;
 }
 .spz-3002 .spz-hero .spz-form-section {
-  width: 47.11%;
-  max-width: 570px;
+  width: 49.11%;
+  max-width: 593px;
   border-radius: 24px;
   background: #fff;
   box-shadow: -8px 24px 24px 0px rgba(0, 0, 0, 0.08);
@@ -346,6 +346,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+
+  > div:not([class]), > .g-recaptcha {
+    display: none;
+  }
 }
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm * {
   font-family: "Open Sans" !important;
@@ -416,6 +420,7 @@
   left: 10px;
   pointer-events: none;
   max-width: calc(100% - 30px);
+  width: 100% !important;
   text-overflow: ellipsis;
   overflow: hidden !important;
   white-space: nowrap;
@@ -426,9 +431,9 @@
   .spz-form-wrap
   .spz-form-section
   form.mktoForm
-  .mktoFormRow.field-8
+  .mktoFormRow.field-6
   .mktoLabel {
-  max-width: calc(100% - 52px);
+  max-width: calc(100% - 48px);
 }
 .spz-3002
   .spz-hero
@@ -448,6 +453,7 @@
   font-size: 13px;
   line-height: 1.4;
   max-width: calc(100% - 20px);
+  width: auto !important;
 }
 .spz-3002
   .spz-hero
@@ -493,6 +499,48 @@
   overflow: hidden !important;
   white-space: nowrap;
   transition: all 0.35s ease-in-out;
+  box-shadow: none !important;
+}
+
+//write autofill css
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  input:-webkit-autofill,
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  input:-webkit-autofill:hover,
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  input:-webkit-autofill:focus,
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  select:-webkit-autofill,
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  select:-webkit-autofill:hover,
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #212121 !important;
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
 }
 .spz-3002
   .spz-hero
@@ -575,51 +623,82 @@
   .spz-form-wrap
   .spz-form-section
   form.mktoForm
+  .mktoFormRow.field-7 {
+  padding: 0 !important;
   .mktoHtmlText {
+    margin: 0;
+
+    .checkboxLabel {
+      color: #464646;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    em {
+      color: #464646;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      a {
+        color: #cf202d;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.spz-3002
+  .spz-hero
+  .spz-form-wrap
+  .spz-form-section
+  form.mktoForm
+  .mktoCaptchaDisclaimer {
   color: #464646;
+  text-align: center;
   font-size: 14px;
-  font-style: normal !important;
-  font-weight: 400;
-  line-height: 26px;
-  margin: 0;
-}
-.spz-3002
-  .spz-hero
-  .spz-form-wrap
-  .spz-form-section
-  form.mktoForm
-  .mktoHtmlText
-  em {
   font-style: normal;
-}
-.spz-3002
-  .spz-hero
-  .spz-form-wrap
-  .spz-form-section
-  form.mktoForm
-  .mktoHtmlText
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0 !important;
+
   a {
-  color: #464646 !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
+    color: #cf202d;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
-.spz-3002
-  .spz-hero
-  .spz-form-wrap
-  .spz-form-section
-  form.mktoForm
-  .mktoHtmlText
-  a:hover {
-  text-decoration: none;
-}
+
 .spz-3002
   .spz-hero
   .spz-form-wrap
@@ -656,8 +735,8 @@
     .spz-form-wrap
     .spz-form-section
     form.mktoForm
-    .mktoFormRow {
-    width: 100%;
+    .mktoFormRow:not(.field-7) {
+    width: 100% !important;
   }
 }
 /* Form Styling CSS End */
