@@ -217,6 +217,19 @@
         }
         addBaseline(template_heroContent, template_position, template_formSelector, template_heroSelector, template_socialProofSection);
 
+        if (document.querySelectorAll('.spz-3002 #content .spz-footer').length === 0) {
+          document.querySelector('.spz-3002 #content').insertAdjacentHTML('afterend', `<section class="spz-footer">
+              <div class="spz-wrapper">
+                <div class="copyright">
+                 <p>All rights reserved © EZLynx 2025.</p>
+                </div>
+                <ul class="footer-menu">
+                    <li><a href="https://www.ezlynx.com/globalassets/all-documents/ezlynx/legal/terms.pdf" target="_blank">Terms of Use</a></li>
+                    <li><a href="/legal/privacy/" target="_blank">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </section>`);
+        }
       }
     }
   });
