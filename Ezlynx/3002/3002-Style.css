@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 .spz-3002 header,
-.spz-3002 main#content .TwoColumnMarketoForm {
+.spz-3002 main#content .TwoColumnMarketoForm,
+.spz-3002 main#content section.hero,
+.spz-3002 main#content section.SingleColumnMarketoForm {
   display: none;
 }
 
@@ -18,21 +20,20 @@
 
 .spz-3002 .spz-hero {
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(253, 194, 15, 0.04)), to(rgba(253, 194, 15, 0.12)));
-  background: linear-gradient(180deg, rgba(253, 194, 15, 0.04) 0%, rgba(253, 194, 15, 0.12) 100%);
+  background: rgba(26, 153, 205, 0.1);
   overflow: hidden;
 }
 
 .spz-3002 .spz-hero::before {
   position: absolute;
   content: "";
-  top: 0;
-  right: 0;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/2001/v3_desktop_bg_vector_2.webp");
+  right: 40px;
+  bottom: 0px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1742810396/ezlynx/3002/element_bg_desktop_v1_1.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 769px;
-  height: 818px;
+  height: 738px;
   pointer-events: none;
   z-index: 0;
 }

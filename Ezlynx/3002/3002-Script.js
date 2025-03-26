@@ -54,73 +54,73 @@
             "/landing/insurance-quoting": "Get Started"
           },
           contentSuperHeading: {
-            "/lp/ams-agency-management-system": "Rating Engine",
+            "/lp/ams-agency-management-system": "Agency Management Software",
             "/landing/comparative-rater": "Agency Management Software",
             "/landing/insurance-quoting": "Agency Management Software"
           },
           contentHeading: {
-            "/lp/ams-agency-management-system": "Boost sales with instant rates & quotes",
-            "/landing/comparative-rater": "Boost sales & efficiency by streamlining quoting & agency management",
-            "/landing/insurance-quoting": "Boost sales & efficiency by streamlining quoting & agency management"
+            "/lp/ams-agency-management-system": "Win deals with real-time rating & instant quoting.",
+            "/landing/comparative-rater": "Win deals with real-time rating & instant quoting.",
+            "/landing/insurance-quoting": "Win deals with real-time rating & instant quoting."
           },
           featureContent: {
             "/lp/ams-agency-management-system": [
-              "<b>Instant rates.</b> Get rates from 330+ carriers. Compare multiple personal lines carriers at once. ",
-              "<b>Instant quotes.</b> Generate quotes for auto, home, dwelling fire, and other policies. Identify cross-sell opportunities. ",
-              "<b>Faster workflows.</b> Send quotes to customers online or via text. Automate renewals. Prefill driver and vehicle data."
+              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
+              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
+              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
             "/landing/comparative-rater": [
-              "<b>Generate Quotes.</b> Get real-time personal and commercial rates. 330+ carriers. Quote online or via text. Bind and issue policies.",
-              "<b>Agency Management.</b> Manage policies, accounting, reporting, and comms. Automate renewals. Let clients pay online.",
-              "<b>Sales.</b> Manage leads. Auto-move leads through the sales pipeline. Close more deals. Identify cross-sell and upsell opps."
+              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
+              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
+              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
             "/landing/insurance-quoting": [
-              "<b>Generate Quotes.</b> Get real-time personal and commercial rates. 330+ carriers. Quote online or via text. Bind and issue policies.",
-              "<b>Agency Management.</b> Manage policies, accounting, reporting, and comms. Automate renewals. Let clients pay online.",
-              "<b>Sales.</b> Manage leads. Auto-move leads through the sales pipeline. Close more deals. Identify cross-sell and upsell opps."
+              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
+              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
+              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ]
           },
           featureIcons: {
             "/lp/ams-agency-management-system": [
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503792/ezlynx/2001/auto-fix.svg",
-                iconAlt: "Instant rates"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/account-group.svg",
-                iconAlt: "Instant quotes"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/headset.svg",
-                iconAlt: "Faster workflows"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               }
             ],
             "/landing/comparative-rater": [
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503792/ezlynx/2001/auto-fix.svg",
-                iconAlt: "Generate Quotes"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/account-group.svg",
-                iconAlt: "Agency Management"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/headset.svg",
-                iconAlt: "Sales"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               }
             ],
             "/landing/insurance-quoting": [
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503792/ezlynx/2001/auto-fix.svg",
-                iconAlt: "Generate Quotes"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/account-group.svg",
-                iconAlt: "Agency Management"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               },
               {
-                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1741503793/ezlynx/2001/headset.svg",
-                iconAlt: "Sales"
+                iconImage: "//res.cloudinary.com/spiralyze/image/upload/v1742802034/ezlynx/3002/tablercheck.svg",
+                iconAlt: "Checkmark"
               }
             ],
           },
