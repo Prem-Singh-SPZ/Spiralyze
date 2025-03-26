@@ -231,7 +231,7 @@
 .spz-3002 .spz-footer .footer-menu li a:hover {
   text-decoration: none;
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3002 .spz-hero::before {
     width: 688px;
     height: 753.311px;
@@ -246,6 +246,7 @@
   }
   .spz-3002 .spz-hero .spz-form-wrap {
     flex-direction: column-reverse;
+    margin-bottom: 104px;
   }
   .spz-3002 .spz-hero .content-section {
     width: 100%;
@@ -640,6 +641,10 @@
 
   .mktoFieldWrap {
     margin-bottom: 9px;
+
+    @media (max-width: 1024.98px) {
+      margin-bottom: 0;
+    }
   }
 
   .mktoHtmlText {
@@ -736,8 +741,9 @@
   letter-spacing: 0.1px !important;
   margin: 24px 0 16px !important;
 
-  @media screen and (max-width: 1023.98px) {
+  @media screen and (max-width: 1024.98px) {
     font-size: 18px !important;
+    margin-bottom: 13px !important;
   }
 }
 .spz-3002
