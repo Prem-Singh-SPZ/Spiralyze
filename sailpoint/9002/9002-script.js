@@ -2,39 +2,39 @@
 
   const additionalSection = {
     socialProofLogos: {
-      socialProofHeading: "Used by 48% of the Fortune 500",
+      socialProofHeading: "Trusted by 50% of the Fortune 500",
       socialProofImages: [
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_01.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_01.svg",
+          imgAlt: "AES",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240096/sailpoint/3002/logo_02.svg",
           imgAlt: "GM",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_02.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240096/sailpoint/3002/logo_03.svg",
           imgAlt: "Hershey",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_03.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_04.svg",
           imgAlt: "Paccar",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_04.svg",
-          imgAlt: "Philips",
-        },
-        {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_05.svg",
-          imgAlt: "RWE",
-        },
-        {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104229/sailpoint/9001/logo_06.svg",
-          imgAlt: "T Mobile",
-        },
-        {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737104228/sailpoint/9001/logo_07.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_05.svg",
           imgAlt: "The Home Depot",
         },
         {
-          url: "//res.cloudinary.com/spiralyze/image/upload/v1737360173/sailpoint/9001/logo_9.svg",
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_06.svg",
+          imgAlt: "Legal & General",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_07.svg",
           imgAlt: "The Salvation Army",
+        },
+        {
+          url: "//res.cloudinary.com/spiralyze/image/upload/v1742240097/sailpoint/3002/logo_08.svg",
+          imgAlt: "Vodafone",
         },
       ]
     },
@@ -89,7 +89,7 @@
     if (document.querySelectorAll('.spz-form-title').length == 0)
       document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us</div>`);
 
-    if(document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full.iron-theme'))
+    if (document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full.iron-theme'))
       document.querySelector('.spz_9002 .hero + .row > .row__inner .bg-gradient .mkto-wrap.w-full.iron-theme').classList.remove('iron-theme');
 
     if (document.querySelectorAll('.social-proof-logos').length == 0)
