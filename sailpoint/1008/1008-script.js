@@ -336,7 +336,7 @@
                                         }
                                     }
                                 });
-                            }, 200);
+                            }, 300);
 
                             setTimeout(() => {
                                 clearInterval(timeBuffer);
@@ -511,7 +511,7 @@
                         }
                     }
                 });
-            }, 200);
+            }, 300);
 
 
             setTimeout(() => {

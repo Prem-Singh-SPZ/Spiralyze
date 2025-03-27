@@ -72,7 +72,7 @@
 	max-width: 600px;
 }
 
-.SPZ-1008-TC .spz-hero .spz-form-wrap .spz-form-section .the-form{
+.SPZ-1008-TC .spz-hero .spz-form-wrap .spz-form-section .the-form {
 	width: 100%;
 }
 
@@ -171,9 +171,14 @@
 	margin-bottom: 23px;
 }
 
-.SPZ-1008-TC.form-submit .spz-form-section .form-heading {
+.SPZ-1008-TC.form-submit .spz-form-section .form-heading, .SPZ-1008-TC .the-form .contact_us_submit_spz {
 	display: none;
 }
+
+body.SPZ-1008-TC.form-submit .the-form .contact_us_submit_spz {
+	display: block;
+}
+
 
 .SPZ-1008-TC .spz-hero .social-proof-logos {
 	margin-top: 57px;
@@ -491,7 +496,8 @@ select:-webkit-autofill:active {
 .SPZ-1008-TC .spz-form-section form.mktoForm #captcha {
 	width: 100%;
 }
-.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.placeholder-row:not(.field-10){
+
+.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.placeholder-row:not(.field-10) {
 	display: none;
 }
 

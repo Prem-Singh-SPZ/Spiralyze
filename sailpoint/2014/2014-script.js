@@ -19,18 +19,12 @@
                             clearInterval(keepChanges);
                         }, 5000);
                     });
+                    hiddenValue('SPZ_2014', 'SPZ_2014_variant');
 
                 } else {
                     if (document.body.classList.contains('spz-2014')) {
-                        removeSpecificCookieValue('SPZ_2014', 'SPZ_2014_truecontrol');
+                        removeSpecificCookieValue('SPZ_2014', 'spz_2014_truecontrol');
                         hiddenValue('SPZ_2014', 'SPZ_2014_variant');
-                        let callHF = setInterval(() => {
-                            setHiddenFieldValue();
-                        }, 100);
-        
-                        setTimeout(() => {
-                            clearInterval(callHF);
-                        }, 10000);
                     }
                 }
             }
@@ -41,7 +35,7 @@
         //create accordion section json data
         let accordionItems = [{
             title: 'Accelerate insights & automation with AI',
-            content: 'Make smart access decisions, detect threats and ensure compliance.',
+            content: 'Make data-driven decisions and maximize efficiencies using AI agents',
             demoLink: 'https://www.sailpoint.com/products/ai-driven-identity-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai_1.webp'
         }, {
@@ -84,7 +78,7 @@
                                             </div>
                                             <div class="accordion-content" data-image="image${index + 1}">
                                                 <p>${item.content}</p>
-                                                <a href="${item.demoLink}" class="demo-link">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
+                                                <a href="${item.demoLink}" class="demo-link">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
                                                 <div class="image-container">
                                                     <img src="${item.image}" alt="${item.title}">
                                                 </div>
@@ -210,7 +204,7 @@
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
-                //check if hidden field value is empty then only set the value else set the value with , seperated
+                //check if hidden field value is empty then only set the value else set the value with, separated
                 if (intellimize1.value == '') {
                     intellimize1.value = ExistingHiddenFieldValue;
                 }
@@ -236,14 +230,13 @@
     }
     // Do not touch below hidden field code for any Experiment over
 
-    
+
     // List of URLs
     const urls = [
         "https://www.sailpoint.com/",
-        "https://www.sailpoint.com/demo",
-        "https://www.sailpoint.com/demo/interactive",
+        "https://www.sailpoint.com/demo"
     ];
-    
+
     history.pushState = (function (f) {
         return function pushState() {
             var ret = f.apply(this, arguments);
@@ -278,7 +271,10 @@
         if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
             createTest();
         }
-        else {
+        else if (window.location.pathname === "/demo/interactive") {
+            document.querySelector('body').classList.remove('spz_2014_int');
+            setHiddenFieldValue();
+        } else {
             removeTest();
         }
     }
