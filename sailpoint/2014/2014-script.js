@@ -34,7 +34,7 @@
     function accordionSection() {
         //create accordion section json data
         let accordionItems = [{
-            title: 'Accelerate insights & automation with AI',
+            title: 'Accelerate insights and automation with SailPoint Harbor Pilot',
             content: 'Make data-driven decisions and maximize efficiencies using AI agents',
             demoLink: 'https://www.sailpoint.com/products/ai-driven-identity-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2014/image01.webp'
