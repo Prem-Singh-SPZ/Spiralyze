@@ -37,7 +37,7 @@
             title: 'Accelerate insights & automation with AI',
             content: 'Make data-driven decisions and maximize efficiencies using AI agents',
             demoLink: 'https://www.sailpoint.com/products/ai-driven-identity-security',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai_1.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/2014/image01.webp'
         }, {
             title: 'Discover & secure all machine identities',
             content: 'Enhance security by gaining control over machine identities',
