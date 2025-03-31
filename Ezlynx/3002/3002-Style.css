@@ -122,6 +122,7 @@
   width: 24px;
   height: 24px;
   margin-top: 2px;
+  min-width: 24px;
 }
 
 .spz-3002 .spz-hero .content-section .feature-item span {
@@ -132,14 +133,15 @@
   font-weight: 400;
   line-height: 1.5;
 }
+.spz-3002 .spz-hero .content-section .feature-item span b {
+  font-weight: 700;
+}
 
 .spz-3002 .spz-hero .spz-form-section {
   width: 49.11%;
   max-width: 593px;
   border-radius: 24px;
   background: #fff;
-  -webkit-box-shadow: -8px 24px 24px 0px rgba(0, 0, 0, 0.08);
-          box-shadow: -8px 24px 24px 0px rgba(0, 0, 0, 0.08);
   position: relative;
   padding: 33px 32px 32px;
 }
@@ -237,7 +239,7 @@
 }
 
 .spz-3002 .spz-footer .copyright p {
-  color: #ffffff;
+  color: #F5F5F5;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
@@ -265,7 +267,7 @@
 }
 
 .spz-3002 .spz-footer .footer-menu li a {
-  color: #ffffff;
+  color: #F5F5F5;
   font-family: "Open Sans";
   font-size: 12px;
   font-style: normal;
@@ -497,6 +499,12 @@
   white-space: nowrap;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoLabel .mktoAsterix {
+  padding-left: 2px !important;
 }
 
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoFormRow.field-6 .mktoLabel {
@@ -506,14 +514,14 @@
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoLabel,
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoFieldWrap.filled .mktoLabel {
   top: -14px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.4;
   max-width: calc(100% - 20px);
   width: auto !important;
 }
 
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoLabel {
-  color: #212121;
+  color: #212121 !important;
 }
 
 .spz-3002 .spz-hero .spz-form-wrap .spz-form-section form.mktoForm .mktoFieldWrap.error.active.typing .mktoLabel,
@@ -562,7 +570,7 @@
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1741845091/ezlynx/2001/Dropdown.svg");
   background-size: 20px 26px;
   background-repeat: no-repeat;
-  background-position: calc(100% - 14px) 14px;
+  background-position: calc(100% - 15px) 14px;
   font-family: inherit;
 }
 
@@ -695,7 +703,6 @@
   font-style: normal;
   font-weight: 700 !important;
   line-height: 24px !important;
-  letter-spacing: 0.1px !important;
   margin: 24px 0 16px !important;
 }
 @media screen and (max-width: 1024.98px) {

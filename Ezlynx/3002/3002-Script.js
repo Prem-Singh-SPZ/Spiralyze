@@ -243,21 +243,21 @@
     }
     // Change Label Text
     const labels = {
-      "LblEmail": "Email",
-      "LblCompany": "Company",
-      "LblFirstName": "First Name",
-      "LblLastName": "Last Name",
-      "LblPhone": "Phone",
-      "LblPostalCode": "ZIP Code",
-      "LblStateCode": "State",
-      "LblNumberOfEmployees": "Number of Employees",
+      "LblEmail": `Email<div class="mktoAsterix">*</div>`,
+      "LblCompany": `Company<div class="mktoAsterix">*</div>`,
+      "LblFirstName": `First Name<div class="mktoAsterix">*</div>`,
+      "LblLastName": `Last Name<div class="mktoAsterix">*</div>`,
+      "LblPhone": `Phone<div class="mktoAsterix">*</div>`,
+      "LblPostalCode": `Zip Code<div class="mktoAsterix">*</div>`,
+      "LblStateCode": `State<div class="mktoAsterix">*</div>`,
+      "LblNumberOfEmployees": `Number of Employees<div class="mktoAsterix">*</div>`,
       "LblPrimary_Alliance_Partner__c": "Alliance/Network Member?",
       "LblTitle": "Job Title"
     };
     Object.entries(labels).forEach(([id, text]) => {
       const label = document.querySelector(`label#${id}`);
       if (label) {
-        label.textContent = text;
+        label.innerHTML = text;
       }
     });
     // Change Field Positions
