@@ -59,7 +59,7 @@
 
           //the .spz-hero gets added to the page and removed after some time, so keep checking for it to add the form
           let spzHeroInterval = setInterval(() => {
-            hiddenValue('spz_9001', 'SPZ_9001_variant');
+            hiddenValue('SPZ_9002', 'SPZ_9002_truecontrol');
             setHiddenFieldValue();
           }, 1000);
           setTimeout(function () {
@@ -67,7 +67,7 @@
           }, 10000);
         } else {
           if (body.classList.contains('spz_9001')) {
-            hiddenValue('spz_9001', 'SPZ_9001_variant');
+            hiddenValue('SPZ_9002', 'SPZ_9002_truecontrol');
             let callMultipleTimes = setInterval(() => {
               setHiddenFieldValue();
             }, 500);
