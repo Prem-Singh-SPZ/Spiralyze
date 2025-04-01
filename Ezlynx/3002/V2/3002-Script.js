@@ -418,7 +418,7 @@
   }
 
   window.addEventListener('click', function (event) {
-    if (event.target.closest('.btn.amber')) {
+    if (event.target.closest('.TwoColumnText .btn.amber')) {
       event.preventDefault();
       const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
       if (target) {

@@ -419,7 +419,7 @@
 
   //check click event on window
   window.addEventListener('click', function (event) {
-    if (event.target.closest('.btn.amber')) {
+    if (event.target.closest('.TwoColumnText .btn.amber')) {
       //scroll page to .spz-form-section slowly
       const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
       if (target) {

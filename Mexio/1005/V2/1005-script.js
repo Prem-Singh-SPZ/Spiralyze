@@ -189,6 +189,7 @@ function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
             e.preventDefault();
             accordionPaused = true; // Pause the accordion
             autoSlide = false;
+            e.target.closest('.spz-features-accordion__item').classList.add('acc-paused');
             if (currenctActive !== index) {
                 changeAccordionActiveItem(index);
             }
