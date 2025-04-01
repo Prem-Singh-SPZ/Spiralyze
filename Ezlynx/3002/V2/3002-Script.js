@@ -417,6 +417,20 @@
     });
   }
 
+  window.addEventListener('click', function (event) {
+    if (event.target.closest('.btn.amber')) {
+      event.preventDefault();
+      const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
+      if (target) {
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+
   function waitForElm(selector) {
     return new Promise(function (resolve) {
       if (document.querySelector(selector)) {
