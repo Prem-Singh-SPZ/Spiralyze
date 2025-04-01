@@ -5,7 +5,7 @@
       let form = document.querySelector("form.mktoForm");
       let submitButton = form.querySelector('[type="submit"]');
       if (event.persisted) {
-        submitButton.textContent = "Get Started";
+        submitButton.textContent = "Submit";
         submitButton.disabled = false;
       }
     });
@@ -54,30 +54,30 @@
             "/landing/insurance-quoting": "Get Started"
           },
           contentSuperHeading: {
-            "/lp/ams-agency-management-system": "Agency Management Software",
+            "/lp/ams-agency-management-system": "Rates & Quoting solution",
             "/landing/comparative-rater": "Agency Management Software",
-            "/landing/insurance-quoting": "Agency Management Software"
+            "/landing/insurance-quoting": "Insurance Quoting solution"
           },
           contentHeading: {
-            "/lp/ams-agency-management-system": "Win deals with real-time rating & instant quoting.",
-            "/landing/comparative-rater": "Win deals with real-time rating & instant quoting.",
-            "/landing/insurance-quoting": "Win deals with real-time rating & instant quoting."
+            "/lp/ams-agency-management-system": "Win deals faster with #1 comparative rater.",
+            "/landing/comparative-rater": "Get the #1 agency solution. Boost sales.",
+            "/landing/insurance-quoting": "Win deals with the #1 instant quoting tool."
           },
           featureContent: {
             "/lp/ams-agency-management-system": [
-              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
-              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
+              "<b>Carriers.</b> Get instant rates from 330+ carriers. Compare multiple carriers at once. Personal auto, home, and dwelling fire policies. ",
+              "<b>Quotes.</b> Generate quotes in a few clicks. Send to customers online or via text. Bind and issue policies.",
               "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
             "/landing/comparative-rater": [
-              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
-              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
-              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
+              "<b>Generate Quotes.</b> Instant personal and commercial rates. 330+ carriers. Send quotes online or via text. Bind and issue policies.",
+              "<b>Policy Management.</b> Manage policies, reporting, documents, and client communications. Automate renewals. Increase retention.",
+              "<b>Sales & Payments.</b> Manage leads. Auto-move leads through the pipeline. Find cross-sell opps. Close deals. Let clients pay online."
             ],
             "/landing/insurance-quoting": [
-              "<b>Carriers.</b> Get real-time rates from 330+ carriers. Compare. Personal and commercial policies. Auto, home, and more. ",
-              "<b>Quotes.</b> Get quotes from multiple carriers at once. Provide quotes to customers online or via text. Bind and issue policies.",
-              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
+              "<b>Quoting.</b> Let clients get instant quotes directly from your website. Compare 330+ carriers. Auto, home, dwelling fire, and more. ",
+              "<b>Sales.</b> Capture leads on your agency website and re-quote. Automate follow-ups and email marketing campaigns.",
+              "<b>Servicing.</b> Track quote status. Automate re-quoting for renewals. Compare current and renewal coverage."
             ]
           },
           featureIcons: {
@@ -251,8 +251,8 @@
       "LblPostalCode": `Zip Code<div class="mktoAsterix">*</div>`,
       "LblStateCode": `State<div class="mktoAsterix">*</div>`,
       "LblNumberOfEmployees": `Number of Employees<div class="mktoAsterix">*</div>`,
-      "LblPrimary_Alliance_Partner__c": "Alliance/Network Member?",
-      "LblTitle": "Job Title"
+      "LblPrimary_Alliance_Partner__c": `Alliance Partner<div class="mktoAsterix">*</div>`,
+      "LblTitle": `Title<div class="mktoAsterix">*</div>`,
     };
     Object.entries(labels).forEach(([id, text]) => {
       const label = document.querySelector(`label#${id}`);
@@ -436,10 +436,10 @@
     waitForElm('.mktoForm .mktoFormRow [name="CRO1__c"]').then(function () {
       const field_int = setInterval(function () {
         if (document.querySelector('.mktoFormRow [name="CRO1__c"]')) {
-          if (document.querySelector('.mktoFormRow [name="CRO1__c"]').getAttribute('value') == "SPZ_3002_v1") {
+          if (document.querySelector('.mktoFormRow [name="CRO1__c"]').getAttribute('value') == "SPZ_3002_v2") {
             clearInterval(field_int);
           }
-          document.querySelector('.mktoFormRow [name="CRO1__c"]').setAttribute('value', 'SPZ_3002_v1');
+          document.querySelector('.mktoFormRow [name="CRO1__c"]').setAttribute('value', 'SPZ_3002_v2');
         }
       }, 100);
     });
