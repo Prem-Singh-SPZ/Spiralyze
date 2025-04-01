@@ -7,8 +7,8 @@
   const pageClasses = {
     "/landing/find-winning-quotes-faster": "page-winning-quotes",
     "/lp/ams-agency-management-system": "page-ams-agency-management-system",
-    "/landing/comparative-rater/": "page-comparative-rater",
-    "/landing/insurance-quoting/": "page-insurance-quoting",
+    "/landing/comparative-rater": "page-comparative-rater",
+    "/landing/insurance-quoting": "page-insurance-quoting",
   };
 
   let bodyLoaded = setInterval(function () {
@@ -35,13 +35,13 @@
           formFooter: ``,
           contentSuperHeading: {
             "/lp/ams-agency-management-system": "Agency Management Software",
-            "/landing/comparative-rater/": "Rates & Quoting solution",
-            "/landing/insurance-quoting/": "Insurance Quoting solution"
+            "/landing/comparative-rater": "Rates & Quoting solution",
+            "/landing/insurance-quoting": "Insurance Quoting solution"
           },
           contentHeading: {
             "/lp/ams-agency-management-system": "Get the #1 agency solution. Boost sales.",
-            "/landing/comparative-rater/": "Win deals faster with #1 comparative rater.",
-            "/landing/insurance-quoting/": "Win deals with the #1 instant quoting tool."
+            "/landing/comparative-rater": "Win deals faster with #1 comparative rater.",
+            "/landing/insurance-quoting": "Win deals with the #1 instant quoting tool."
           },
           featureContent: {
             "/lp/ams-agency-management-system": [
@@ -49,12 +49,12 @@
               "<b>Policy Management.</b> Manage policies, reporting, documents, and client communications. Automate renewals. Increase retention.",
               "<b>Sales & Payments.</b> Manage leads. Auto-move leads through the pipeline. Find cross-sell opps. Close deals. Let clients pay online."
             ],
-            "/landing/comparative-rater/": [
+            "/landing/comparative-rater": [
               "<b>Carriers.</b> Get instant rates from 330+ carriers. Compare multiple carriers at once. Personal auto, home, and dwelling fire policies. ",
               "<b>Quotes.</b> Generate quotes in a few clicks. Send to customers online or via text. Bind and issue policies.",
               "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
-            "/landing/insurance-quoting/": [
+            "/landing/insurance-quoting": [
               "<b>Quoting.</b> Let clients get instant quotes directly from your website. Compare 330+ carriers. Auto, home, dwelling fire, and more. ",
               "<b>Sales.</b> Capture leads on your agency website and re-quote. Automate follow-ups and email marketing campaigns.",
               "<b>Servicing.</b> Track quote status. Automate re-quoting for renewals. Compare current and renewal coverage."
@@ -124,7 +124,7 @@
                     <source srcSet="//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/3001/mobile.webp" media="(max-width: 767.98px)" ></source>
                     <source srcSet="//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/3001/tablet.webp" media="(max-width: 1023.98px)" ></source>
                     <source srcSet="//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/3001/v3_destkop_3.webp" media="(max-width: 1440px)" ></source>
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/3001/v3_4k.webp" alt="EZLynx Dashboard" />
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/3001/4k.webp" alt="EZLynx Dashboard" />
                     </picture>
                   </div>
                 </div>
