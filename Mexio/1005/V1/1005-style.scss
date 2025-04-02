@@ -1593,6 +1593,10 @@ $sec_black: #1e1a34;
   max-width: 1440px;
   margin: auto;
 
+  @media (min-width: 1600px) {
+    padding: 80px 16px 100px;
+  }
+
   &::before {
     content: "";
     width: 580px;
@@ -1757,6 +1761,11 @@ $sec_black: #1e1a34;
   max-width: var(--container-width);
   margin: auto;
   overflow: hidden;
+
+  @media (min-width: 1600px) {
+    max-width: 1440px;
+  }
+
   .spz-features-accordion__row {
     position: relative;
     .spz-features-accordion {
