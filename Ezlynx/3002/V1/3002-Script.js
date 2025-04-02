@@ -153,7 +153,7 @@
               <div class="spz-wrapper">
                 ${formData.siteLogo.url ? `<div class="site-header-logo">
                   <a href="/" title="Home">
-                    <img src="${formData.siteLogo.url}" alt="${formData.siteLogo.alt}" width="120px" height="74px">
+                    <img src="${formData.siteLogo.url}" alt="${formData.siteLogo.alt}" width="120" height="74">
                   </a>
                 </div>` : ""}
                 <div class="spz-form-wrap">
@@ -162,7 +162,7 @@
                     ${contentHeading ? `<h2 class="content-heading">${contentHeading}</h2>` : ""}
                     <div class="spz-features-wrap">
                       ${featureIcon.map((item, index) => `<div class="feature-item">
-                        <img src="${item.iconImage}" alt="${item.iconAlt}" width="24px" height="24px" />
+                        <img src="${item.iconImage}" alt="${item.iconAlt}" width="24" height="24" />
                         <span>${featureContent[index] || ''}</span>
                       </div>`).join("")}
                     </div>
@@ -182,7 +182,7 @@
               <div class="social-proof-heading">${socialProofdata.socialProofHeading}</div>
               <div class="logos-wrapper">
                 ${socialProofdata.socialProofImages.length > 0 ? `${[...socialProofdata.socialProofImages, ...socialProofdata.socialProofImages].map((item) => `<div class="logo-item">
-                  <img src="${item.url}" alt="${item.alt}" width="${item.width}px" height="${item.height}px" />
+                  <img src="${item.url}" alt="${item.alt}" width="${item.width}" height="${item.height}" />
                 </div>`).join("")}` : ""}
               </div>
             </section>` : ``}
