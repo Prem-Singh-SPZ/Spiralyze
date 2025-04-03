@@ -54,25 +54,25 @@
             "/landing/insurance-quoting": "Get Started"
           },
           contentSuperHeading: {
-            "/lp/ams-agency-management-system": "Rates & Quoting solution",
-            "/landing/comparative-rater": "Agency Management Software",
+            "/lp/ams-agency-management-system": "Agency Management Software",
+            "/landing/comparative-rater": "Rates & Quoting solution",
             "/landing/insurance-quoting": "Insurance Quoting solution"
           },
           contentHeading: {
-            "/lp/ams-agency-management-system": "Win deals faster with #1 comparative rater.",
-            "/landing/comparative-rater": "Get the #1 agency solution. Boost sales.",
+            "/lp/ams-agency-management-system": "Get the #1 agency solution. Boost sales.",
+            "/landing/comparative-rater": "Win deals faster with #1 comparative rater.",
             "/landing/insurance-quoting": "Win deals with the #1 instant quoting tool."
           },
           featureContent: {
             "/lp/ams-agency-management-system": [
-              "<b>Carriers.</b> Get instant rates from 330+ carriers. Compare multiple carriers at once. Personal auto, home, and dwelling fire policies. ",
-              "<b>Quotes.</b> Generate quotes in a few clicks. Send to customers online or via text. Bind and issue policies.",
-              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
-            ],
-            "/landing/comparative-rater": [
               "<b>Generate Quotes.</b> Instant personal and commercial rates. 330+ carriers. Send quotes online or via text. Bind and issue policies.",
               "<b>Policy Management.</b> Manage policies, reporting, documents, and client communications. Automate renewals. Increase retention.",
               "<b>Sales & Payments.</b> Manage leads. Auto-move leads through the pipeline. Find cross-sell opps. Close deals. Let clients pay online."
+            ],
+            "/landing/comparative-rater": [
+              "<b>Carriers.</b> Get instant rates from 330+ carriers. Compare multiple carriers at once. Personal auto, home, and dwelling fire policies. ",
+              "<b>Quotes.</b> Generate quotes in a few clicks. Send to customers online or via text. Bind and issue policies.",
+              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
             "/landing/insurance-quoting": [
               "<b>Quoting.</b> Let clients get instant quotes directly from your website. Compare 330+ carriers. Auto, home, dwelling fire, and more. ",
@@ -282,7 +282,10 @@
       submitButton.after(privacyPolicy);
     }
     // }
-    setHiddenFields();
+    hiddenValue('SPZ_3002', 'SPZ_3002_v2');
+    waitForElm('.spz-3002 .TwoColumnText .btn.amber').then(function (elem) {
+      elem.setAttribute('href', 'javascript:void(0);');
+    });
 
     // On input focus add class on closest parent field class
     function focusFields() {
@@ -445,17 +448,60 @@
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
   }
+  // Do not touch below hidden field code for any Experiment Start
+  function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
+    var ExistingHiddenFieldName = getCookie('HiddenFieldName');
+    var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
 
-  function setHiddenFields() {
-    waitForElm('.mktoForm .mktoFormRow [name="CRO1__c"]').then(function () {
-      const field_int = setInterval(function () {
-        if (document.querySelector('.mktoFormRow [name="CRO1__c"]')) {
-          if (document.querySelector('.mktoFormRow [name="CRO1__c"]').getAttribute('value') == "SPZ_3002_v2") {
-            clearInterval(field_int);
-          }
-          document.querySelector('.mktoFormRow [name="CRO1__c"]').setAttribute('value', 'SPZ_3002_v2');
+    if (!ExistingHiddenFieldName) {
+      setCookie('HiddenFieldName', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValue', currentHiddenFieldValue, 1);
+    } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
+      setCookie('HiddenFieldName', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValue', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+    }
+    let callHF = setInterval(() => {
+      setHiddenFieldValue();
+    }, 100);
+
+    setTimeout(() => {
+      clearInterval(callHF);
+    }, 10000);
+  }
+
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=ezlynx.com;";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  function setHiddenFieldValue() {
+    waitForElm(`form.mktoForm input[name="CRO1__c"]`).then((elm) => {
+      var intellimize1 = document.querySelector(`form.mktoForm input[name="CRO1__c"]`);
+      var ExistingHiddenFieldValue = getCookie('HiddenFieldValue');
+      if (intellimize1.value == '') {
+        intellimize1.value = ExistingHiddenFieldValue;
+      } else {
+        if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+          intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
         }
-      }, 100);
+      }
     });
   }
+  // Do not touch below hidden field code for any Experiment over
 })();
