@@ -427,9 +427,8 @@
       //scroll page to .spz-form-section slowly
       const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
       if (target) {
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: targetPosition,
+          top: 0,
           behavior: 'smooth'
         });
       }
