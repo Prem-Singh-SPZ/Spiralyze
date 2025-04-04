@@ -100,7 +100,7 @@
         "https://www.sailpoint.com/identity-library/identity-governance-administration",
         "https://www.sailpoint.com/identity-library/dora-compliance",
         "https://www.sailpoint.com/identity-library/iga-gartner",
-        "https://www.sailpoint.com/identity-library/identity-first-security"
+        "https://www.sailpoint.com/identity-library/zero-trust-implementation"
     ];
 
     window.addEventListener("locationchange", function () {

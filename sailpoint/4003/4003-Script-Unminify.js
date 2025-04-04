@@ -13,7 +13,7 @@
             const template_heroSelector = `.hero`;
             const template_position = "beforebegin"
             const template_formSelector = `form#mktoForm_1016`;
-            let eyeBrowTxt = document.querySelector('.hero.hero--gated .hero__eyebrow.eyebrow');
+            let eyeBrowTxt = document.querySelector('.hero .eyebrow');
             const contentSuperHeading = eyeBrowTxt && eyeBrowTxt.textContent ? eyeBrowTxt.textContent : `Analyst Report`;
             var contentHeading = ``;
             var contentInnerHTML = ``;
@@ -34,16 +34,15 @@
                 <li>Manage third-party access risks</li>
                 <li>Improve resilience in the cloud</li>
               </ul>`;
-            } else if (location.href.indexOf('/identity-library/identity-first-security') > -1) {
-              contentHeading = `Gartner Identity-First Security Maximizes Cybersecurity Effectiveness`;
-              contentInnerHTML = `<p>As digital transformation shifts and erodes the value of legacy perimeter-based securitystrategies, Gartner® notes the increasing need for an identity-first security strategy.</p>
-              <p>Access the guide and discover how to:</p>
+            } else if (location.href.indexOf('/identity-library/zero-trust-implementation') > -1) {
+              contentHeading = `The Strategic Roadmap to Zero Trust Security Program Implementation `;
+              contentInnerHTML = `<p>As organizations move toward zero trust architectures, identity security has emerged as the essential foundation. Learn why Gartner discusses identity security as a prerequisite for zero trust success and how to prepare.</p>
+              <p>Read Gartner&#8217;s key findings and their latest research including:</p>
               <ul>
-                <li>Use centralized policies to control access across decentralized, distributed digital assets in a consistent manner.</li>
-                <li>Apply adaptive controls throughout the session, not just at login.</li>
-                <li>Use contextual data associated with identities and assets to drive dynamic decisions.</li>
-              </ul>
-              <span class="text-sm">Gartner, Identity-First Security Maximizes Cybersecurity Effectiveness, 7 December 2022, Rebecca Archambault Et Al.<br>GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.</span>`;
+                <li>Why attempting zero trust implementation without robust identity security is "destined for failure" and how to build the right identity foundation</li>
+                <li>The critical role of establishing clear, attribute-based access policies that define "who should have access to what"</li>
+                <li>Practical steps for consolidating identity systems and creating scalable processes for zero trust policy management</li>
+              </ul>`;
             }
             const template_formContent = {
               customHTMLBefore: `Get the report`,
@@ -621,7 +620,7 @@
     "https://www.sailpoint.com/identity-library/identity-governance-administration",
     "https://www.sailpoint.com/identity-library/dora-compliance",
     "https://www.sailpoint.com/identity-library/iga-gartner",
-    "https://www.sailpoint.com/identity-library/identity-first-security"
+    "https://www.sailpoint.com/identity-library/zero-trust-implementation"
   ];
 
   window.addEventListener("locationchange", function () {
