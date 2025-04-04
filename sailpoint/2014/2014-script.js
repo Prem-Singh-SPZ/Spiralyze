@@ -45,17 +45,17 @@
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities_1.webp'
         }, {
             title: 'Manage & secure the non-employee lifecycle',
-            content: 'Content for non-employee lifecycle management.',
+            content: 'Boost efficiency with simplified management of non-employees',
             demoLink: 'https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/non-employee-risk-management',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle_1.webp'
         }, {
             title: 'Secure & govern access to sensitive data',
-            content: 'Information on securing sensitive data.',
+            content: 'Extend visibility and access governance to your sensitive data',
             demoLink: 'https://www.sailpoint.com/products/identity-security-cloud/atlas/add-ons/data-access-security',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data_1.webp'
         }, {
             title: 'Automate & delegate privileged tasks',
-            content: 'Content about automating privileged tasks.',
+            content: 'Improve productivity and security by automating manual tasks',
             demoLink: 'https://www.sailpoint.com/products/privileged-task-automation',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks_1.webp'
         }];
