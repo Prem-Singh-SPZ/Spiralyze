@@ -45,7 +45,7 @@
         window.location.pathname == '/lp/ams-agency-management-system' ? template_formSelector = `section.TwoColumnMarketoForm .row:nth-child(2) .offset-md-0` : template_formSelector = `section.SingleColumnMarketoForm .row:nth-child(2) .offset-md-0`;
         const template_heroContent = {
           siteLogo: {
-            url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/ezlynx/2001/ezlynx_logo.webp",
+            url: "//res.cloudinary.com/spiralyze/image/upload/v1743759802/ezlynx/3002/ezlogo-redblack.svg",
             alt: "EZLynx logo"
           },
           formHeadings: {
@@ -368,57 +368,6 @@
         clearInterval(timeBuffer);
       }, 1000);
     }
-
-    const form = document.querySelector('.spz-3002 .spz-hero form.mktoForm');
-    const button = form.querySelector('button[type="submit"]');
-
-    const changeButtonText = (text) => {
-      if (button && button.textContent !== text) {
-        button.textContent = text;
-      }
-    };
-    changeButtonText("Submit");
-    form.addEventListener("submit", function () {
-      changeButtonText("Please Wait");
-    });
-    const restoreTextOnInputChange = () => {
-      changeButtonText("Submit");
-    };
-    form.addEventListener("input", restoreTextOnInputChange);
-    form.addEventListener("change", restoreTextOnInputChange);
-    const observer = new MutationObserver(() => {
-      if (button && button.textContent === "Please Wait") {
-        const hasErrors = document.querySelector(".mktoError");
-        if (hasErrors) {
-          changeButtonText("Submit");
-        }
-      }
-    });
-    if (button) {
-      observer.observe(button, { childList: true, subtree: true });
-    }
-    MktoForms2.whenReady((formInstance) => {
-      formInstance.onValidate((valid) => {
-        if (!valid) {
-          changeButtonText("Submit");
-          setTimeout(() => {
-            if (button.textContent === "Please Wait") {
-              changeButtonText("Submit");
-            }
-          }, 500);
-        }
-      });
-
-      formInstance.onSubmit(() => {
-        changeButtonText("Please Wait");
-        setTimeout(() => {
-          const hasErrors = document.querySelector(".mktoError");
-          if (hasErrors) {
-            changeButtonText("Submit");
-          }
-        }, 500);
-      });
-    });
   }
 
   //check click event on window
