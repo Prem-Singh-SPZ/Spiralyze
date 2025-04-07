@@ -27,8 +27,8 @@ html.spz-no-scroll {
   }
   // }
 
-  &.form-submit{
-    .hero + .row > .row__inner .bg-gradient .spz-form-title{
+  &.form-submit {
+    .hero + .row > .row__inner .bg-gradient .spz-form-title {
       display: none !important;
     }
   }
@@ -849,7 +849,8 @@ select:-webkit-autofill:active {
   .inner-row__inner
   form.mktoForm
   .mktoFieldWrap.error
-  .mktoField:not([type="checkbox"]),.spz_9002
+  .mktoField:not([type="checkbox"]),
+.spz_9002
   .page-transition
   .inner-row__inner
   form.mktoForm
@@ -1261,13 +1262,13 @@ select:-webkit-autofill:active {
       .sp-contact-info {
         .link {
           color: #0071ce;
-          text-underline-offset: 1px;
-          text-decoration-skip-ink: none;
           white-space: nowrap;
+          text-decoration: none;
 
           &:hover {
-            text-decoration: none;
-            font-weight: 600;
+            text-underline-offset: 1px;
+            text-decoration-skip-ink: none;
+            text-decoration: underline;
           }
 
           &:active,
@@ -1408,12 +1409,12 @@ select:-webkit-autofill:active {
         }
 
         .link {
-          text-underline-offset: 1px;
-          text-decoration-skip-ink: none;
+          text-decoration: none;
 
           &:hover {
-            text-decoration: none;
-            font-weight: 600;
+            text-underline-offset: 1px;
+            text-decoration-skip-ink: none;
+            text-decoration: underline;
           }
 
           &:active,
@@ -1441,14 +1442,14 @@ select:-webkit-autofill:active {
 
         .sp-hq-details {
           .link {
-            text-underline-offset: 1px;
-            text-decoration-skip-ink: none;
             color: #0071ce;
             white-space: nowrap;
+            text-decoration: none;
 
             &:hover {
-              text-decoration: none;
-              font-weight: 600;
+              text-underline-offset: 1px;
+              text-decoration-skip-ink: none;
+              text-decoration: underline;
             }
 
             &:active,
@@ -1679,22 +1680,21 @@ select:-webkit-autofill:active {
 
                     .link {
                       color: #0071ce;
-                      text-underline-offset: 1px;
-                      text-decoration-skip-ink: none;
                       white-space: nowrap;
                       font-size: 14px;
                       font-style: normal;
                       font-weight: 400;
                       line-height: 160%;
                       margin-right: 6px;
-
+                      text-decoration: none;
                       @media screen and (max-width: 767.98px) {
                         white-space: normal;
                       }
 
                       &:hover {
-                        text-decoration: none;
-                        font-weight: 600;
+                        text-decoration: underline;
+                        text-underline-offset: 1px;
+                        text-decoration-skip-ink: none;
                       }
 
                       &:active,
