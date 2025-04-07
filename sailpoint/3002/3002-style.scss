@@ -704,17 +704,15 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  text-decoration-line: underline;
-  transition: all 0.1s ease-in-out;
-  text-underline-offset: 1px;
+  text-decoration: none;
 
   @media screen and (max-width: 767.98px) {
     font-size: 12px;
   }
 
   &:hover {
-    font-weight: 600;
-    text-decoration: none;
+    text-underline-offset: 1px;
+    text-decoration: underline;
   }
 
   &:active {
@@ -726,14 +724,14 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:hover,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:hover,
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:active,
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:active,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:focus-visible {
-  text-decoration: none;
-}
+// .spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:hover,
+// .spz_3002 #mktoForm_1018.mktoForm .disclaimer a:hover,
+// .spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:active,
+// .spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
+// .spz_3002 #mktoForm_1018.mktoForm .disclaimer a:active,
+// .spz_3002 #mktoForm_1018.mktoForm .disclaimer a:focus-visible {
+//   text-decoration: none;
+// }
 
 @media (max-width: 767.98px) {
   .spz_3002 #mktoForm_1018.mktoForm .mktoFormRow {

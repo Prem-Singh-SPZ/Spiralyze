@@ -583,10 +583,7 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  text-decoration-line: underline;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  text-underline-offset: 1px;
+  text-decoration: none;
 }
 @media screen and (max-width: 767.98px) {
   .spz_3002 #mktoForm_1018.mktoForm .disclaimer a {
@@ -594,23 +591,14 @@ select:-webkit-autofill:active {
   }
 }
 .spz_3002 #mktoForm_1018.mktoForm .disclaimer a:hover {
-  font-weight: 600;
-  text-decoration: none;
+  text-underline-offset: 1px;
+  text-decoration: underline;
 }
 .spz_3002 #mktoForm_1018.mktoForm .disclaimer a:active {
   border-radius: 4px;
   border: 1px solid #0071ce;
   background: rgba(0, 113, 206, 0.05);
   padding: 1px;
-  text-decoration: none;
-}
-
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:hover,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:hover,
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:active,
-.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer a:focus-visible,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:active,
-.spz_3002 #mktoForm_1018.mktoForm .disclaimer a:focus-visible {
   text-decoration: none;
 }
 
