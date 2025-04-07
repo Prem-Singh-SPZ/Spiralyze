@@ -70,7 +70,7 @@
                   </div>
                   <div class="spz-form-section">
                     ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                    <div class="the-form"></div>
+                    <div class="the-form"><div class="contact_us_submit_spz"><h3 class="text-center">Thank you!</h3><h4 class="text-center">A representative will reach out to you shortly.</h4></div></div>
                   </div>
                 </div>
               </div>
@@ -105,8 +105,8 @@
           let spzHeroInterval = setInterval(() => {
             if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
               addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
-              removeSpecificCookieValue('SPZ-1005', 'SPZ_1005_variant');
-              hiddenValue('SPZ-1005', 'SPZ_1005_truecontrol');
+              removeSpecificCookieValue('SPZ_1005', 'SPZ_1005_variant');
+              hiddenValue('SPZ_1005', 'SPZ_1005_truecontrol');
               setHiddenFieldValue();
             }
             else {
@@ -306,12 +306,15 @@
                 document.body.classList.add('form-submit');
               });
             });
+            waitForElm('.SPZ-1005-TC .mkto-wrap.w-full #confirm #contact_us_submit').then(() => {
+              document.body.classList.add('form-submit');
+            });
 
           }
         } else {
           if (body.classList.contains('SPZ-1005-TC')) {
-            removeSpecificCookieValue('SPZ-1005', 'SPZ_1005_variant');
-            hiddenValue('SPZ-1005', 'SPZ_1005_truecontrol');
+            removeSpecificCookieValue('SPZ_1005', 'SPZ_1005_variant');
+            hiddenValue('SPZ_1005', 'SPZ_1005_truecontrol');
             let callMultipleTimes = setInterval(() => {
               setHiddenFieldValue();
             }, 500);
