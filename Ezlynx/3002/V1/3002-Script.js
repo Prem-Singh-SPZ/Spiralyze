@@ -283,7 +283,7 @@
     }
     // }
     hiddenValue('SPZ_3002', 'SPZ_3002_v1');
-    waitForElm('.spz-3002 .TwoColumnText .btn.amber').then(function (elem) {
+    waitForElm('.spz-3002 .btn.amber').then(function (elem) {
       elem.setAttribute('href', 'javascript:void(0);');
     });
 
@@ -372,7 +372,7 @@
 
   //check click event on window
   window.addEventListener('click', function (event) {
-    if (event.target.closest('.TwoColumnText .btn.amber')) {
+    if (event.target.closest('.btn.amber')) {
       //scroll page to .spz-form-section slowly
       const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
       if (target) {

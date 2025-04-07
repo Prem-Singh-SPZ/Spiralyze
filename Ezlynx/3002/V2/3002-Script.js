@@ -283,8 +283,10 @@
     }
     // }
     hiddenValue('SPZ_3002', 'SPZ_3002_v2');
-    waitForElm('.spz-3002 .TwoColumnText .btn.amber').then(function (elem) {
-      elem.setAttribute('href', 'javascript:void(0);');
+    waitForElm('.spz-3002 .btn.amber').then(function (elem) {
+      document.querySelectorAll('.spz-3002 .btn.amber').forEach(function (elem) {
+        elem.setAttribute('href', 'javascript:void(0);');
+      });
     });
 
     // On input focus add class on closest parent field class
@@ -370,7 +372,7 @@
   }
 
   window.addEventListener('click', function (event) {
-    if (event.target.closest('.TwoColumnText .btn.amber')) {
+    if (event.target.closest('.btn.amber')) {
       event.preventDefault();
       const target = document.querySelector('.spz-3002 .spz-hero .spz-form-section');
       if (target) {
