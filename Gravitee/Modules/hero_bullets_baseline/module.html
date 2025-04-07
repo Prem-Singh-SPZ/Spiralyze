@@ -1,0 +1,34 @@
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .hero-content .list-grp-wrapper .list-group .list-item::before {
+      background: url("{{ module.bullet_icon.src }}");
+    }
+  {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+<div class="hero-content">
+  {% if module.eyebrow_title %}
+    <div class="eye-brow">{{ module.eyebrow_title }}</div>
+  {% endif %}
+
+  {% if module.title %}
+    <h1 class="hc-title">{{ module.title }}</h1>
+  {% endif %}
+  
+    <div class="list-grp-wrapper">
+        <ul class="list-group">
+          
+          {% for item in module.bullet_list %}
+             <li class="list-item">
+               <div class="ls-title">
+                {% inline_text field="bullet_point" value="{{ item.bullet_point }}" %}
+               </div>
+             </li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,401 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "default": 50,
+                    "display": "slider",
+                    "display_width": null,
+                    "help_text": "Sets the maximum height of the logos.<br><br>Setting a max logo height is best when trying to make multiple logos of drastically different dimensions visually equal in size.",
+                    "id": "styles.group_logo.max_logo_height",
+                    "label": "Max logo height",
+                    "locked": false,
+                    "max": 80,
+                    "min": 40,
+                    "name": "max_logo_height",
+                    "required": true,
+                    "step": 1,
+                    "suffix": "px",
+                    "type": "number"
+                },
+                {
+                    "children": [
+                        {
+                            "default": {
+                                "color": null,
+                                "opacity": null,
+                                "rgba": null,
+                                "rgb": null,
+                                "hex": null
+                            },
+                            "display_width": null,
+                            "id": "styles.group_logo.group_background.background_color",
+                            "label": "Background color",
+                            "locked": false,
+                            "name": "background_color",
+                            "required": false,
+                            "type": "color"
+                        }
+                    ],
+                    "default": {
+                        "background_color": {
+                            "color": null,
+                            "opacity": null,
+                            "rgba": null,
+                            "rgb": null,
+                            "hex": null
+                        }
+                    },
+                    "display_width": null,
+                    "expanded": false,
+                    "group_occurrence_meta": null,
+                    "id": "styles.group_logo.group_background",
+                    "label": "Background",
+                    "locked": false,
+                    "name": "group_background",
+                    "required": false,
+                    "tab": "STYLE",
+                    "type": "group"
+                }
+            ],
+            "default": {
+                "max_logo_height": 50,
+                "group_background": {
+                    "background_color": {
+                        "color": null,
+                        "opacity": null,
+                        "rgba": null,
+                        "rgb": null,
+                        "hex": null
+                    }
+                }
+            },
+            "display_width": null,
+            "expanded": false,
+            "group_occurrence_meta": null,
+            "id": "styles.group_logo",
+            "inline_help_text": "Due to the responsive nature of web, the rendered height of the logos might be less than the set value based on a combination of screen size, original image size, logo padding, grid gap, and column count.",
+            "label": "Logo image",
+            "locked": false,
+            "name": "group_logo",
+            "required": false,
+            "tab": "STYLE",
+            "type": "group"
+        },
+        {
+            "children": [
+                {
+                    "default": 30,
+                    "display": "slider",
+                    "display_width": null,
+                    "help_text": "Set the spacing between grid items.<br><br>Setting a background in <strong>Logo image > Background</strong> may help you visualize the logo grid.",
+                    "id": "styles.group_logo_grid.grid_gap",
+                    "label": "Grid gap",
+                    "locked": false,
+                    "max": 75,
+                    "min": 0,
+                    "name": "grid_gap",
+                    "required": true,
+                    "step": 1,
+                    "suffix": "px",
+                    "type": "number"
+                }
+            ],
+            "default": {
+                "grid_gap": 30
+            },
+            "display_width": null,
+            "expanded": false,
+            "group_occurrence_meta": null,
+            "help_text": "Setting a background color in <strong>Logo image > Background</strong> may help you visualize the logo grid. ",
+            "id": "styles.group_logo_grid",
+            "label": "Logo grid",
+            "locked": false,
+            "name": "group_logo_grid",
+            "required": false,
+            "tab": "STYLE",
+            "type": "group"
+        },
+        {
+            "children": [
+                {
+                    "default": {
+                        "padding": {
+                            "top": {
+                                "value": 56,
+                                "units": "px"
+                            },
+                            "bottom": {
+                                "value": 56,
+                                "units": "px"
+                            },
+                            "left": {
+                                "value": 0,
+                                "units": "px"
+                            },
+                            "right": {
+                                "value": 0,
+                                "units": "px"
+                            }
+                        }
+                    },
+                    "display_width": null,
+                    "help_text": "Set padding around the logo.",
+                    "id": "styles.group_logo.group_spacing.padding",
+                    "label": "Spacing",
+                    "limits": {
+                        "margin": null,
+                        "padding": {
+                            "bottom": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "left": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "right": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "top": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            }
+                        }
+                    },
+                    "locked": false,
+                    "name": "padding",
+                    "required": true,
+                    "type": "spacing",
+                    "visibility": {
+                        "hidden_subfields": {
+                            "margin": true
+                        },
+                        "operator": "NOT_EMPTY"
+                    }
+                }
+            ],
+            "default": {
+                "padding": {
+                    "padding": {
+                        "top": {
+                            "value": 56,
+                            "units": "px"
+                        },
+                        "bottom": {
+                            "value": 56,
+                            "units": "px"
+                        },
+                        "left": {
+                            "value": 0,
+                            "units": "px"
+                        },
+                        "right": {
+                            "value": 0,
+                            "units": "px"
+                        }
+                    }
+                }
+            },
+            "display_width": null,
+            "expanded": false,
+            "group_occurrence_meta": null,
+            "id": "styles.group_logo.group_spacing",
+            "label": "Spacing",
+            "locked": false,
+            "name": "group_spacing",
+            "required": false,
+            "tab": "STYLE",
+            "type": "group"
+        },
+        {
+            "children": [
+                {
+                    "default": {
+                        "padding": {
+                            "top": {
+                                "value": 56,
+                                "units": "px"
+                            },
+                            "bottom": {
+                                "value": 56,
+                                "units": "px"
+                            },
+                            "left": {
+                                "value": 0,
+                                "units": "px"
+                            },
+                            "right": {
+                                "value": 0,
+                                "units": "px"
+                            }
+                        }
+                    },
+                    "display_width": null,
+                    "help_text": "Set padding around the logo.",
+                    "id": "910e29e0-7f5e-7be3-c99c-9150358e6346",
+                    "label": "Spacing",
+                    "limits": {
+                        "margin": null,
+                        "padding": {
+                            "bottom": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "left": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "right": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            },
+                            "top": {
+                                "max": 75,
+                                "min": 0,
+                                "units": [
+                                    "px"
+                                ]
+                            }
+                        }
+                    },
+                    "locked": false,
+                    "name": "padding",
+                    "required": true,
+                    "type": "spacing",
+                    "visibility": {
+                        "hidden_subfields": {
+                            "margin": true
+                        },
+                        "operator": "NOT_EMPTY"
+                    }
+                }
+            ],
+            "default": {
+                "padding": {
+                    "padding": {
+                        "top": {
+                            "value": 56,
+                            "units": "px"
+                        },
+                        "bottom": {
+                            "value": 56,
+                            "units": "px"
+                        },
+                        "left": {
+                            "value": 0,
+                            "units": "px"
+                        },
+                        "right": {
+                            "value": 0,
+                            "units": "px"
+                        }
+                    }
+                }
+            },
+            "display_width": null,
+            "expanded": false,
+            "group_occurrence_meta": null,
+            "id": "0d5bd150-1c29-49f8-2ab0-d6be19bfa160",
+            "label": "Spacing (Mobile)",
+            "locked": false,
+            "name": "spacing_mobile",
+            "required": false,
+            "tab": "STYLE",
+            "type": "group"
+        }
+    ],
+    "default": {
+        "group_logo": {
+            "max_logo_height": 50,
+            "group_background": {
+                "background_color": {
+                    "color": null,
+                    "opacity": null,
+                    "rgba": null,
+                    "rgb": null,
+                    "hex": null
+                }
+            }
+        },
+        "group_logo_grid": {
+            "grid_gap": 30
+        },
+        "group_spacing": {
+            "padding": {
+                "padding": {
+                    "top": {
+                        "value": 56,
+                        "units": "px"
+                    },
+                    "bottom": {
+                        "value": 56,
+                        "units": "px"
+                    },
+                    "left": {
+                        "value": 0,
+                        "units": "px"
+                    },
+                    "right": {
+                        "value": 0,
+                        "units": "px"
+                    }
+                }
+            }
+        },
+        "spacing_mobile": {
+            "padding": {
+                "padding": {
+                    "top": {
+                        "value": 56,
+                        "units": "px"
+                    },
+                    "bottom": {
+                        "value": 56,
+                        "units": "px"
+                    },
+                    "left": {
+                        "value": 0,
+                        "units": "px"
+                    },
+                    "right": {
+                        "value": 0,
+                        "units": "px"
+                    }
+                }
+            }
+        }
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "styles",
+    "label": "Styles",
+    "locked": false,
+    "name": "styles",
+    "required": false,
+    "tab": "STYLE",
+    "type": "group"
+}

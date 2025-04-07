@@ -1,0 +1,94 @@
+{% require_css %}
+<style>
+  @layer module {
+      {
+      % scope_css %
+    }
+
+    .hero-content .list-grp-wrapper .list-group .list-item::before {
+      background: url("{{ module.hero_bullets.bullet_icon.src }}");
+    }
+
+      {
+      % if module.background_image.src %
+    }
+
+    .hero-section::before {
+      background-image: url("{{ module.background_image.src }}");
+    }
+
+      {
+      % endif %
+    }
+
+      {
+      % end_scope_css %
+    }
+  }
+</style>
+{% end_require_css %}
+
+{% if module.header.brand_logo.src %}
+<section class="spz-header">
+  <div class="row-fluid">
+    <!-- Brand logo -->
+    <div class="spz-header__brand">
+      <a href="{{ module.header.redirection_link }}">
+        <img src="{{ module.header.brand_logo.src|escape_url }}" alt="{{ module.header.brand_logo.alt|escape_attr }}"
+          class="brand-logo">
+      </a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="hero-section">
+  <div class="row-fluid">
+    <div class="hero-container">
+      <!-- Left Content -->
+      <div class="hero-content">
+        {% if module.hero_bullets.eyebrow_title %}
+        <div class="eye-brow">{{ module.hero_bullets.eyebrow_title }}</div>
+        {% endif %}
+
+        {% if module.hero_bullets.title %}
+        <h1 class="hc-title">{{ module.hero_bullets.title }}</h1>
+        {% endif %}
+
+        <div class="list-grp-wrapper">
+          <ul class="list-group">
+
+            {% for item in module.hero_bullets.bullet_list %}
+            <li class="list-item">
+              <div class="ls-title">
+                {% inline_text field="bullet_point" value="{{ item.bullet_point }}" %}
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="hero-right-section">
+        <div class="form-overlay">
+          <div class="form-wrapper-spz">
+            <h2 class="form-title-spz">{{ module.form_section.form_title }}</h2>
+
+            <!-- FORM HERE -->
+            <div class="hs-form-spz">
+              {% form
+              form_to_use="{{ module.form_section.form_field.form_id }}"
+              response_response_type="{{ module.form_section.form_field.response_type }}"
+              response_message="{{ module.form_section.form_field.message }}"
+              response_redirect_id="{{ module.form_section.form_field.redirect_id }}"
+              response_redirect_url="{{module.form_section.form_field.redirect_url}}"
+              gotowebinar_webinar_key="{{ module.form_section.form_field.gotowebinar_webinar_key }}"
+              %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

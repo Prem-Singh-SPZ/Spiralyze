@@ -1,0 +1,50 @@
+{% require_css %}
+  <style>
+  @layer module {
+    {% scope_css %}
+      .testimonial-section {
+        {{ module.styles.spacings.spacing_field.css }}
+      }
+
+      @media (max-width: 767.98px) {
+        .testimonial-section {
+          {{ module.styles.spacings_mobile.spacing_field.css }}
+        }
+      }
+    {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+<section class="testimonial-section">
+    <div class="row-fluid">
+        <div class="testimonial-wrapper">
+          
+          {% for item in module.testimonials %}
+            <div class="testimonial-card">
+                  <!-- Testimonial Header -->
+                  <div class="testimonial-reviews">
+                      <div class="testimonial-stars">
+                          <img src="{{ module.stars_image.src|escape_url }}" alt="{{ module.stars_image.alt|escape_attr }}">
+                      </div>
+                      <div class="testimonial-g2">
+                          <img src="{{ module.g2_image.src|escape_url }}" alt="{{ module.g2_image.alt|escape_attr }}">
+                      </div>
+                  </div>
+
+                  <!-- Testimonial Content -->
+                  <div class="testimonial-content">
+                      <div class="testimonial-bl">
+                          <div class="testimonial-feat">“{{ item.title }}”</div>
+                          <div class="testimonial-text">{{ item.more_details }}</div>
+                      </div>
+                      <div class="testimonial-author">
+                          <div class="testimonial-author-name">{{ item.author }}</div>
+                      </div>
+                  </div>
+              </div>
+            {% endfor %}
+          
+        </div>
+    </div>
+</section>

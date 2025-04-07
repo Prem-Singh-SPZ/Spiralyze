@@ -1,0 +1,261 @@
+[
+    {
+        "default": {
+            "size_type": "auto",
+            "src": "https://www.gravitee.io/hubfs/background_logo-1.svg",
+            "alt": "background_logo",
+            "loading": "lazy",
+            "width": 917,
+            "height": 876,
+            "max_width": 917,
+            "max_height": 876
+        },
+        "display_width": null,
+        "id": "f05a55f5-a2a1-41ac-67a1-a299736fc0a5",
+        "label": "Background image",
+        "locked": false,
+        "name": "background_image",
+        "required": false,
+        "resizable": false,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image"
+    },
+    {
+        "children": [
+            {
+                "default": {
+                    "size_type": "auto",
+                    "src": "https://www.gravitee.io/hubfs/Imported%20sitepage%20images/gravitee_logo_light.webp",
+                    "alt": "Gravitee logo",
+                    "loading": "disabled",
+                    "width": 357,
+                    "height": 64,
+                    "max_width": 357,
+                    "max_height": 64
+                },
+                "display_width": null,
+                "id": "eb394a0e-cf24-d8c9-2bae-fe5d6d3e7a13",
+                "label": "Brand logo",
+                "locked": false,
+                "name": "brand_logo",
+                "required": true,
+                "resizable": false,
+                "responsive": true,
+                "show_loading": false,
+                "type": "image"
+            },
+            {
+                "allow_new_line": false,
+                "default": "/",
+                "display_width": null,
+                "id": "9ce5889d-1771-b1c2-1d5f-000b47e0861e",
+                "label": "Redirection Link",
+                "locked": false,
+                "name": "redirection_link",
+                "required": true,
+                "show_emoji_picker": false,
+                "type": "text",
+                "validation_regex": ""
+            }
+        ],
+        "default": {
+            "brand_logo": {
+                "size_type": "auto",
+                "src": "https://www.gravitee.io/hubfs/Imported%20sitepage%20images/gravitee_logo_light.webp",
+                "alt": "Gravitee logo",
+                "loading": "disabled",
+                "width": 357,
+                "height": 64,
+                "max_width": 357,
+                "max_height": 64
+            },
+            "redirection_link": "/"
+        },
+        "display_width": null,
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "id": "235c8449-5a51-1e56-9d95-64be209842dd",
+        "label": "Header",
+        "locked": false,
+        "name": "header",
+        "required": false,
+        "tab": "CONTENT",
+        "type": "group"
+    },
+    {
+        "children": [
+            {
+                "allow_new_line": false,
+                "default": "A leader in 2024 Gartner® Magic Quadrant for API Management",
+                "display_width": null,
+                "id": "d00f1093-5aa3-f866-b98c-827a045435b1",
+                "label": "Eyebrow title",
+                "locked": false,
+                "name": "eyebrow_title",
+                "required": false,
+                "show_emoji_picker": false,
+                "type": "text",
+                "validation_regex": ""
+            },
+            {
+                "default": "Create, manage, and secure <span>APIs at scale</span>",
+                "display_width": null,
+                "id": "20b75166-3e8e-f856-5c1b-ef33900d6365",
+                "label": "Title",
+                "locked": false,
+                "name": "title",
+                "required": true,
+                "type": "richtext"
+            },
+            {
+                "default": {
+                    "size_type": "auto",
+                    "src": "https://www.gravitee.io/hubfs/hero-check%5B1%5D.svg",
+                    "alt": "Check mark",
+                    "loading": "lazy",
+                    "width": 21,
+                    "height": 28,
+                    "max_width": 21,
+                    "max_height": 28
+                },
+                "display_width": null,
+                "id": "7cd39b2d-0e32-ff36-f1fa-8ed9f75b0285",
+                "label": "Bullet icon",
+                "locked": false,
+                "name": "bullet_icon",
+                "required": true,
+                "resizable": false,
+                "responsive": true,
+                "show_loading": false,
+                "type": "image"
+            },
+            {
+                "children": [
+                    {
+                        "default": "<strong>Manage. </strong>Manage APIs across gateways. Dozens of policies for rate limiting, traffic shaping, etc. Multi-protocol streaming.",
+                        "display_width": null,
+                        "id": "59668a49-f7bd-876e-6545-a58c4c3c7d65",
+                        "label": "Bullet point",
+                        "locked": false,
+                        "name": "bullet_point",
+                        "required": true,
+                        "type": "richtext"
+                    }
+                ],
+                "default": [
+                    {
+                        "bullet_point": "<strong>Manage. </strong>Manage APIs across gateways. Dozens of policies for rate limiting, traffic shaping, etc. Multi-protocol streaming."
+                    },
+                    {
+                        "bullet_point": "<strong>Manage. </strong>Manage APIs across gateways. Dozens of policies for rate limiting, traffic shaping, etc. Multi-protocol streaming."
+                    }
+                ],
+                "display_width": null,
+                "expanded": false,
+                "group_occurrence_meta": null,
+                "id": "605e9dac-090b-369a-48d2-79f528d6cef7",
+                "label": "Bullet list",
+                "locked": false,
+                "name": "bullet_list",
+                "occurrence": {
+                    "default": 2,
+                    "max": 3,
+                    "min": 2
+                },
+                "required": false,
+                "tab": "CONTENT",
+                "type": "group"
+            }
+        ],
+        "default": {
+            "eyebrow_title": "A leader in 2024 Gartner® Magic Quadrant for API Management",
+            "title": "Create, manage, and secure <span>APIs at scale</span>",
+            "bullet_icon": {
+                "size_type": "auto",
+                "src": "https://www.gravitee.io/hubfs/hero-check%5B1%5D.svg",
+                "alt": "Check mark",
+                "loading": "lazy",
+                "width": 21,
+                "height": 28,
+                "max_width": 21,
+                "max_height": 28
+            },
+            "bullet_list": [
+                {
+                    "bullet_point": "<strong>Manage. </strong>Manage APIs across gateways. Dozens of policies for rate limiting, traffic shaping, etc. Multi-protocol streaming."
+                },
+                {
+                    "bullet_point": "<strong>Manage. </strong>Manage APIs across gateways. Dozens of policies for rate limiting, traffic shaping, etc. Multi-protocol streaming."
+                }
+            ]
+        },
+        "display_width": null,
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "id": "d2e3324c-c05f-bb18-1b21-4fa98d6f644e",
+        "label": "Hero Bullets",
+        "locked": false,
+        "name": "hero_bullets",
+        "required": false,
+        "tab": "CONTENT",
+        "type": "group"
+    },
+    {
+        "children": [
+            {
+                "allow_new_line": false,
+                "default": "Get a Demo",
+                "display_width": null,
+                "id": "d63d5ff7-2092-e6c5-7a35-b65185dad5ad",
+                "label": "Form title",
+                "locked": false,
+                "name": "form_title",
+                "required": true,
+                "show_emoji_picker": false,
+                "type": "text",
+                "validation_regex": ""
+            },
+            {
+                "default": {
+                    "form_id": "4c660fc0-fb55-4ee3-b3e8-325faf09018d",
+                    "response_type": "inline",
+                    "message": "<h3><span style=\"color: #ffffff;\">Thank you for requesting a demo. We will be in touch to book a time.</span></h3>\n<h3><span style=\"color: #ffffff;\">In the meantime, we encourage you to <a href=\"https://www.gravitee.io/thank-you-for-filling-in-the-demo-request-form\" rel=\"noopener\" style=\"color: #ffffff;\">explore some additional popular resources </a>you may find helpful:&nbsp;&nbsp;</span></h3>",
+                    "gotowebinar_webinar_key": null,
+                    "webinar_id": null,
+                    "webinar_source": null,
+                    "form_type": "HUBSPOT"
+                },
+                "display_width": null,
+                "id": "9295fa20-2d0b-bd08-3fa2-493def1fbc61",
+                "label": "Form",
+                "locked": false,
+                "name": "form_field",
+                "required": false,
+                "type": "form"
+            }
+        ],
+        "default": {
+            "form_title": "Get a Demo",
+            "form_field": {
+                "form_id": "4c660fc0-fb55-4ee3-b3e8-325faf09018d",
+                "response_type": "inline",
+                "message": "<h3><span style=\"color: #ffffff;\">Thank you for requesting a demo. We will be in touch to book a time.</span></h3>\n<h3><span style=\"color: #ffffff;\">In the meantime, we encourage you to <a href=\"https://www.gravitee.io/thank-you-for-filling-in-the-demo-request-form\" rel=\"noopener\" style=\"color: #ffffff;\">explore some additional popular resources </a>you may find helpful:&nbsp;&nbsp;</span></h3>",
+                "gotowebinar_webinar_key": null,
+                "webinar_id": null,
+                "webinar_source": null,
+                "form_type": "HUBSPOT"
+            }
+        },
+        "display_width": null,
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "id": "af8761e7-6fd9-d4c2-9133-fb7ddf5e8c80",
+        "label": "Form section",
+        "locked": false,
+        "name": "form_section",
+        "required": false,
+        "tab": "CONTENT",
+        "type": "group"
+    }
+]

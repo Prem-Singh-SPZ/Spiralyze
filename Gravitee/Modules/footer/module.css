@@ -1,0 +1,107 @@
+.footer-section {
+    background-color: #0b0b0a;
+    color: white;
+    padding: 24px 0;
+}
+
+@media (min-width: 1440px) and (min-height: 1304px) {
+    .footer-section.sticky-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 9;
+    }
+}
+
+.footer-section .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+    .footer-section .footer-flex {
+        padding: 0 60px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-section .footer-flex {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+}
+
+.footer-section .left-section {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767.98px) {
+    .footer-section .left-section {
+        margin-bottom: 10px;
+    }
+}
+
+.footer-section .left-section .ls-copy {
+    color: #fff;
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.footer-section .left-section .ls-copy .separator {
+    border: 1px solid white;
+    margin: 0 18px;
+    opacity: 0.2;
+}
+
+@media (max-width: 767.98px) {
+    .footer-section .left-section .ls-copy .separator {
+        margin: 0 8px;
+    }
+}
+
+.footer-section .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section .right-section .rs-link {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.footer-section .right-section .rs-link+.separator {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #ea392d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.footer-section .right-section .rs-link:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}

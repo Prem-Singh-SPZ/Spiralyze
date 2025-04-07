@@ -1,0 +1,73 @@
+{% set logos = module.group_logos %}
+{% set grid_settings = module.styles.group_logo_grid %}
+{% set logo_styles = module.styles.group_logo %}
+{% set grid_basis_spacing = grid_settings.grid_gap - (grid_settings.grid_gap / grid_settings.column_count) %}
+
+
+{% macro add_style_if_value(style, field, unit = "") %}
+  {% set field_with_unit = field ~ unit %}
+    {{ style }}: {{ field_with_unit }};
+{% endmacro %}
+
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .social-proof-section {
+      {{ module.styles.group_spacing.padding.css }}
+      {{ add_style_if_value("background-color", logo_styles.group_background.background_color.css ) }}
+    }
+    
+    @media (max-width: 767.98px) {
+      .social-proof-section {
+        {{ module.styles.spacing_mobile.padding.css }}
+        {{ add_style_if_value("background-color", logo_styles.group_background.background_color.css ) }}
+      }
+    }
+    
+    .sp-marquee {
+      gap: {{ grid_settings.grid_gap ~ "px" }};
+    }
+    .sp-img {
+      max-height: {{ logo_styles.max_logo_height ~ "px" }};
+    }
+    .sp-logo-item, .sp-logo-group {
+      height: {{ logo_styles.max_logo_height ~ "px" }};
+    }
+  {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+{% macro build_image(image) %}
+  {% if image.src %}
+    {% set sizeAttrs = 'width="{{ image.width|escape_attr }}" height="{{ image.height|escape_attr }}"' %}
+    {% set loadingAttr = image.loading != 'disabled' ? 'loading="{{ image.loading|escape_attr }}"' : '' %}
+    <img class="sp-img" src="{{ image.src|escape_url }}" alt="{{ image.alt|escape_attr }}" {{ loadingAttr }}>
+  {% endif %}
+{% endmacro %}
+
+{% macro build_logo_grid() %}
+  {% for item in logos %}
+    <div class="sp-logo-item">
+      {{ build_image(item.logo) }}
+    </div>
+  {% endfor %}
+  <!-- Repeat -->
+  {% for item in logos %}
+    <div class="sp-logo-item">
+      {{ build_image(item.logo) }}
+    </div>
+  {% endfor %}
+{% endmacro %}
+
+<section class="social-proof-section">
+  <div class="social-proof row-fluid">
+    <div class="social-proof__title">Trusted to run APIs at the world’s top enterprises</div>
+    <div class="sp-logo-group">    
+      <div class="sp-marquee">
+          {{ build_logo_grid() }} {# Sanitization happening in macro above #}
+      </div>
+    </div>
+  </div>
+</section>
