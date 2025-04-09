@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.SPZ_4004 .announcement-banner,
+.SPZ_4004 nav.navigation,
+.SPZ_4004 .page-transition,
+.SPZ_4004 footer .container.grid {
+    display: none;
+}
+
+.SPZ_4004 {
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/4004/bg_desktop.webp") no-repeat top left/cover;
+    background-attachment: fixed;
+}
+
+@media(min-width: 1600px) {
+    .SPZ_4004 {
+        background-position: center;
+    }
+}
+
+.SPZ_4004 #drift-frame-controller {
+    bottom: 75px !important;
+}
+
+@media (max-width: 635.98px) {
+    .SPZ_4004 #drift-frame-controller {
+        bottom: 24px !important;
+    }
+}
+
+.SPZ_4004 #__next {
+    position: relative;
+}
+
+@media (max-height: 800px) {
+    .SPZ_4004 #__next {
+        min-height: 100dvh;
+    }
+}
+
+.SPZ_4004 footer {
+    background-color: transparent;
+    color: #dae1e9;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.SPZ_4004 footer .container.flex {
+    position: relative;
+    border: none;
+    width: 100%;
+    max-width: 1248px;
+    padding: 0;
+    z-index: 1;
+}
+
+.SPZ_4004 footer .container.flex p {
+    margin: 0;
+    color: #DAE1E9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.SPZ_4004 footer ul a {
+    padding: 0;
+    color: #DAE1E9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-left: 32.6px !important;
+    text-decoration: none !important;
+}
+
+.SPZ_4004 footer ul a:hover {
+    color: #FFFFFF;
+}
+
+.SPZ_4004 .spz-form-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 42px);
+    min-height: calc(100dvh - 151px);
+    margin: 50px auto 101px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.SPZ_4004 .spz-form-wrap .form-section {
+    max-width: 593px;
+    width: 100%;
+    padding: 40px 40px 24px;
+    border-radius: 24px;
+    background: linear-gradient(134deg, #0033A1 38.16%, #004FB5 64.91%, #0071CE 100.05%);
+    box-shadow: 0px 8px 40px 0px rgba(65, 83, 100, 0.16);
+    z-index: 1000000;
+}
+
+.SPZ_4004 .spz-form-wrap .form-superheading {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.SPZ_4004 .spz-form-wrap .form-heading {
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    width: 80%;
+    margin: 17px auto 24px;
+}
+
+.SPZ_4004.form-submitted .spz-form-wrap .form-superheading,
+.SPZ_4004.form-submitted .spz-form-wrap .form-heading {
+    display: none;
+}
+
+@media(max-width: 1023.98px) {
+    .SPZ_4004 .spz-form-wrap {
+        min-height: calc(100dvh - 227px);
+        margin: 88px auto 139px;
+    }
+
+    .SPZ_4004 footer .container.flex {
+        flex-direction: column;
+    }
+
+    .SPZ_4004 footer .container.flex p {
+        margin-bottom: 7px;
+    }
+
+    .SPZ_4004 footer ul {
+        justify-content: center;
+    }
+
+    .SPZ_4004 footer ul a:first-child {
+        margin-left: 0 !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .SPZ_4004 .spz-form-wrap {
+        align-items: flex-start;
+        min-height: unset;
+        margin: 48.5px auto;
+    }
+
+    .SPZ_4004 .spz-form-wrap .form-section {
+        padding: 40px 20px 23px;
+    }
+
+    .SPZ_4004 .spz-form-wrap .form-superheading {
+        font-size: 12px;
+    }
+
+    .SPZ_4004 .spz-form-wrap .form-heading {
+        font-size: 26px;
+        width: 100%;
+        margin: 17px auto 23px;
+    }
+
+    .SPZ_4004 footer {
+        position: relative;
+        bottom: unset;
+    }
+
+    .SPZ_4004 footer .container.flex {
+        flex-direction: column-reverse;
+    }
+
+    .SPZ_4004 footer .container.flex p {
+        margin-bottom: 7px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .SPZ_4004 footer ul {
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    .SPZ_4004 footer ul a {
+        margin: 0 0 11.6px 0 !important;
+    }
+}
+
+/* Form Styling CSS Start */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    -webkit-text-fill-color: #415364 !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoOffset,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoClear,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoGutter {
+    display: none !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100% !important;
+    padding: 0;
+    font-family: "Poppins", serif !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm * {
+    font-family: "Poppins", serif;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm #captcha {
+    width: 100%;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow {
+    width: calc(50% - 8px);
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-9~.mktoFormRow,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-8.spz-full {
+    width: 100%;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm>div:not([class]):not([id]) {
+    display: none;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormCol {
+    margin: 0 !important;
+    width: 100%;
+    min-height: unset;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 16px;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-18 .mktoFieldWrap,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow.field-28 .mktoFieldWrap {
+    margin-bottom: 0;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap label.mktoLabel {
+    color: #415364;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background: #FFF;
+    width: auto !important;
+    height: auto;
+    pointer-events: none;
+    transition: color .3s ease-in-out, top .3s ease-in-out, font-size .3s ease-in-out;
+    z-index: 9;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
+    display: none !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel {
+    font-weight: 600;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.active.typing label.mktoLabel,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled label.mktoLabel {
+    width: auto !important;
+    top: 7px;
+    color: #0071CE;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled label.mktoLabel {
+    color: #415364;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled label.mktoLabel#LblreceivingAdvertisingInformation,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled label.mktoLabel#LbloptionalCollectionandUseofInformation,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.filled label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo {
+    position: relative;
+    width: auto !important;
+    background: transparent;
+    top: unset;
+    left: unset;
+    color: #fff;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .mktoField:not([type=checkbox]) {
+    width: 100% !important;
+    height: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 23px 16px 9px;
+    margin: 0 !important;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    background: #FFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .3s ease-in-out;
+    color: #415364 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
+    color: transparent !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap select.mktoField {
+    padding-right: 37px !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap:hover .mktoField:not([type="checkbox"]) {
+    border-color: #0071CE;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap.active.typing .mktoField:not([type="checkbox"]) {
+    border-color: #FFF;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .mktoError {
+    position: relative;
+    top: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    right: unset !important;
+    margin: 4px 0 0 !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+    color: #FFCB27;
+    background: transparent;
+    max-width: unset;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 16px;
+    margin: 0;
+    text-shadow: none;
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 0;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1736156039/sailpoint/4003/error-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .select-wrapper {
+    margin: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .select-wrapper::after {
+    position: absolute;
+    content: "";
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1730978539/sailpoint/1001/icons__system.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 10px;
+    top: 23px;
+    right: 16px;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .select-wrapper .select-dropdown,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+    display: none !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList {
+    margin: 8px 0 7px;
+    padding: 0;
+    width: auto !important;
+    display: flex;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList~input[type="checkbox"] {
+    display: none !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList input {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList label {
+    position: relative;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-left: 13px;
+    padding-right: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-flex;
+    width: calc(100% - 16px);
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoHtmlText {
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow {
+    width: 100%;
+    margin: 15px 0 8px;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButtonWrap {
+    margin: 0 !important;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton,
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset .btn {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: #FFF;
+    color: #0071CE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6;
+    transition: all 0.5s ease-in-out;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton:hover,
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset .btn:hover {
+    color: #005DAA;
+    border-color: #005DAA;
+}
+
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton:active,
+.SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton:focus {
+    outline: 1.5px solid #0071CE;
+    outline-offset: 4px;
+}
+
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset {
+    min-height: unset !important;
+}
+
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset h5,
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset p {
+    color: #FFF;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.SPZ_4004 .spz-form-wrap .form-section h3.text-white {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.SPZ_4004 .spz-form-wrap .form-section #gated-asset .btn {
+    width: auto;
+    margin: 0 auto;
+}
+
+.SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer,
+.SPZ_4004 .spz-form-wrap .disclaimer {
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 65%;
+    margin: 8px auto 0;
+    padding: 0;
+}
+
+.SPZ_4004 .spz-form-wrap .disclaimer {
+    width: 100%;
+}
+
+.SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer a,
+.SPZ_4004 .spz-form-wrap .disclaimer a {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding: 0;
+}
+
+.SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer a:hover,
+.SPZ_4004 .spz-form-wrap .disclaimer a:hover {
+    color: #54C0E8;
+}
+
+.SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer a:active,
+.SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer a:focus-visible,
+.SPZ_4004 .spz-form-wrap .disclaimer a:active,
+.SPZ_4004 .spz-form-wrap .disclaimer a:focus-visible {
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1.5px solid var(--Colors-Brand-Colors-Aqua, #54C0E8);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0 4px;
+    color: #54C0E8;
+
+}
+
+@media(max-width: 1023.98px) {
+
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton,
+    .SPZ_4004 .spz-form-wrap .form-section #gated-asset .btn {
+        padding: 10px 10px 8px;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoFormRow {
+        width: 100% !important;
+    }
+
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList input {
+        width: 20px;
+        height: 20px;
+        top: 0;
+    }
+
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoCheckboxList label {
+        width: calc(100% - 20px);
+        padding-left: 8px;
+    }
+
+    .SPZ_4004 .spz-form-wrap .mktoCaptchaDisclaimer,
+    .SPZ_4004 .spz-form-wrap .disclaimer {
+        width: 100%;
+        margin: 9px auto 0;
+    }
+
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoCaptchaDisclaimer a {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .SPZ_4004 .spz-form-wrap form.mktoForm .mktoButtonRow {
+        margin: 15px 0 7px;
+    }
+}
+
+/* Form Styling CSS End */
