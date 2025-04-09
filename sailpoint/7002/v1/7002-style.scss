@@ -11,17 +11,15 @@ select:-webkit-autofill:active {
 }
 
 .spz_7002_v1 {
-  #page-container {
-    // overflow: hidden;
-    .page-transition {
-      .spz_form_section {
-        .spz-form-title {
-          display: none;
-        }
+  // overflow: hidden;
+  .page-transition {
+    .spz_form_section {
+      .spz-form-title {
+        display: none;
+      }
 
-        .mktoCaptchaDisclaimer {
-          margin-top: 16px;
-        }
+      .mktoCaptchaDisclaimer {
+        margin-top: 16px;
       }
     }
   }
@@ -109,7 +107,7 @@ select:-webkit-autofill:active {
             min-height: auto;
             animation: slideInFromTop 0.5s ease-in-out;
 
-            #contact_us_submit{
+            #contact_us_submit {
               color: #415364 !important;
             }
 
@@ -129,7 +127,7 @@ select:-webkit-autofill:active {
               font-weight: 600;
               line-height: 120%;
               text-align: center;
-              display: block !important;
+              display: block;
 
               @media screen and (max-width: 767.98px) {
                 font-size: 26px;
@@ -169,6 +167,10 @@ select:-webkit-autofill:active {
       }
     }
   }
+}
+
+.spz_7002_v1.spz-show-modal.form-submit-7002 .spz_form_section .row__inner .spz-form-column .column__inner .mkto-wrap.w-full .spz-form-title {
+  display: none;
 }
 
 //create a sliding in animation from top
@@ -520,9 +522,9 @@ select:-webkit-autofill:active {
     margin: 8px 0 0 !important;
   }
 
-  & ~ input[type="checkbox"] {
-    display: none;
-  }
+  // & ~ input[type="checkbox"] {
+  //   display: none;
+  // }
 }
 
 .spz_7002_v1.spz-show-modal
@@ -601,6 +603,15 @@ select:-webkit-autofill:active {
   display: inline-flex;
   width: auto;
   margin: 0;
+}
+
+.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow .mktoHtmlText{
+  position: relative;
+  color: #415364 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow {

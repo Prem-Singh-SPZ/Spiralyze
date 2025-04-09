@@ -10,10 +10,10 @@ select:-webkit-autofill:active {
   -webkit-text-fill-color: #415364 !important;
 }
 
-.spz_7002_v1 #page-container .page-transition .spz_form_section .spz-form-title {
+.spz_7002_v1 .page-transition .spz_form_section .spz-form-title {
   display: none;
 }
-.spz_7002_v1 #page-container .page-transition .spz_form_section .mktoCaptchaDisclaimer {
+.spz_7002_v1 .page-transition .spz_form_section .mktoCaptchaDisclaimer {
   margin-top: 16px;
 }
 
@@ -109,7 +109,7 @@ select:-webkit-autofill:active {
   font-weight: 600;
   line-height: 120%;
   text-align: center;
-  display: block !important;
+  display: block;
 }
 @media screen and (max-width: 767.98px) {
   .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .spz-form-column .column__inner .mkto-wrap.w-full .spz-form-title {
@@ -140,6 +140,10 @@ select:-webkit-autofill:active {
 .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .spz-form-column .column__inner .mkto-wrap.w-full .mktoForm,
 .spz_7002_v1.spz-show-modal .spz_form_section .row__inner .spz-form-column .column__inner .mkto-wrap.w-full .mktoForm * {
   padding: 0;
+}
+
+.spz_7002_v1.spz-show-modal.form-submit-7002 .spz_form_section .row__inner .spz-form-column .column__inner .mkto-wrap.w-full .spz-form-title {
+  display: none;
 }
 
 @-webkit-keyframes slideInFromTop {
@@ -410,9 +414,6 @@ select:-webkit-autofill:active {
     margin: 8px 0 0 !important;
   }
 }
-.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoCheckboxList ~ input[type=checkbox] {
-  display: none;
-}
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFieldWrap .select-wrapper::after {
   position: absolute;
@@ -473,6 +474,15 @@ select:-webkit-autofill:active {
   display: inline-flex;
   width: auto;
   margin: 0;
+}
+
+.spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoFormRow .mktoHtmlText {
+  position: relative;
+  color: #415364 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .spz_7002_v1.spz-show-modal #mktoForm_1017.mktoForm .mktoButtonRow {

@@ -235,7 +235,7 @@
         if (typeof MktoForms2 !== 'undefined') {
             MktoForms2.whenReady(function (form) {
                 form.onSuccess(function (values, followUpUrl) {
-                    document.body.classList.add('form-submit');
+                    document.body.classList.add('form-submit-7002');
                 });
 
                 if (document.body.classList.contains('spz-form-loaded')) {
