@@ -549,7 +549,7 @@ select:-webkit-autofill:active {
 }
 
 .spz_1005 .spz-form-section form.mktoForm .mktoFormRow.field-11,
-.spz_1005:not(.form-expand) .spz-form-section form.mktoForm .mktoFormRow.field-4~.mktoFormRow,
+.spz_1005:not(.form-expand) .spz-form-section form.mktoForm .mktoFormRow.field-6~.mktoFormRow,
 .spz_1005:not(.form-expand) .spz-form-section form.mktoForm .mktoCaptchaDisclaimer,
 .spz_1005 .spz-form-section form.mktoForm>div:not([class]):not([id]) {
   display: none;
@@ -1096,7 +1096,7 @@ style.appendChild(document.createTextNode(css));
 
             var company_field = document.querySelector('.spz_1005 form.mktoForm .field-6');
             var lastName_field = document.querySelector('.spz_1005 form.mktoForm .field-4');
-            company_field.after(lastName_field);
+            // company_field.after(lastName_field);
 
             var phone_field = document.querySelector('.spz_1005 form.mktoForm .field-5');
             var job_field = document.querySelector('.spz_1005 form.mktoForm .field-7');
@@ -1113,7 +1113,6 @@ style.appendChild(document.createTextNode(css));
               var button = document.querySelector('.spz_1005 form.mktoForm .mktoButtonRow');
               button.before(disclaimer_field);
               button.after(disclaimer);
-              company_field.after(lastName_field);
             });
 
             document.querySelector('.spz_1005 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
@@ -1125,7 +1124,6 @@ style.appendChild(document.createTextNode(css));
                     el.closest('.mktoFieldWrap').classList.add('filled');
                   }
                 });
-                company_field.after(lastName_field);
               }, 1000);
             });
 
@@ -1412,33 +1410,44 @@ style.appendChild(document.createTextNode(css));
   //click event listener
   document.addEventListener('click', function (e) {
     if (e.target.closest('.mktoForm .mktoButton')) {
-      const fields = document.querySelectorAll('.spz_1005 form.mktoForm .mktoField');
-      const timeBuffer = setInterval(() => {
-        fields.forEach(field => {
-          const fieldWrap = field.closest('.mktoFieldWrap');
-          if (fieldWrap) {
-            // Check for error
-            const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
-            if (errorElement && errorElement.style.display !== 'none') {
-              fieldWrap.classList.add('error');
-            } else {
-              fieldWrap.classList.remove('error');
+      waitForElm('.spz_1005 #mktoForm_1018.mktoForm .mktoError').then(function (elm) {
+        if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+          const targetNode = elm.parentNode;
+          const config = { attributes: true, childList: true, subtree: true };
+          const callback = (mutationList, observer) => {
+            for (const mutation of mutationList) {
+              if (mutation.type === "childList") {
+                if (elm.parentNode === null && elm.style.display != 'none') {
+                  targetNode.classList.add('error');
+                } else {
+                  elm.parentNode.classList.add('error');
+                }
+                observer.disconnect();
+              } else if (mutation.type === "attributes") {
+                if (elm.parentNode === null) {
+                  targetNode.classList.add('error');
+                } else {
+                  elm.parentNode.classList.add('error');
+                }
+                observer.disconnect();
+              }
             }
-
-            // Check if the field is filled
-            if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
-              fieldWrap.classList.add('filled');
-            } else {
-              fieldWrap.classList.remove('filled');
+          };
+          const observer = new MutationObserver(callback);
+          observer.observe(targetNode, config);
+        } else {
+          let counterA = 0;
+          const intervalIdA = setInterval(() => {
+            if (document.querySelector('.spz_1005 #mktoForm_1018.mktoForm .mktoError #ValidMsgEmail') !== null) {
+              document.querySelector('.spz_1005 #mktoForm_1018.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
             }
-          }
-        });
-      }, 200);
-
-
-      setTimeout(() => {
-        clearInterval(timeBuffer);
-      }, 1000);
+            counterA++;
+            if (counterA >= 10) {
+              clearInterval(intervalIdA);
+            }
+          }, 500);
+        }
+      });
 
       if (!document.body.classList.contains('form-expand')) {
         const el = document.querySelector('input[name="Email"]');
