@@ -242,11 +242,11 @@
     const disclaimer = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .disclaimer');
     const button = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .mktoButtonRow');
 
-    if (company_field && title_field && disclaimer_field && button && email_field && inquiry_field && country_field && phone_field) {
+    if (company_field && title_field ) {
       company_field.after(title_field);
-      title_field.after(phone_field);
-      num_emp_field.before(inquiry_field);
-      company_field.before(email_field);
+      // title_field.after(phone_field);
+      // num_emp_field.before(inquiry_field);
+      // company_field.before(email_field);
       // button.before(disclaimer_field);
       // disclaimer.after(button);
     }
@@ -374,7 +374,7 @@
         //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         // });
 
-        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
+        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", reasonForInq.classList.remove('spz-full-width')) : (reasonForInq.classList.add('spz-full-width'));
       });
     }
 

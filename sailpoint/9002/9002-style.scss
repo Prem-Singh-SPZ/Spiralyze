@@ -1364,7 +1364,7 @@ select:-webkit-autofill:active {
 
               .sp-email-tupple {
                 max-width: 181px;
-                width: min-content;
+                width: 100%;
 
                 .list-title {
                   color: #415364;
@@ -1392,8 +1392,16 @@ select:-webkit-autofill:active {
                   width: fit-content;
                 }
 
-                &:nth-last-child(2) {
+                &:nth-child(2) {
+                  max-width: 158px;
+                }
+
+                &:nth-child(4) {
                   max-width: 141px;
+                }
+
+                &:nth-child(5) {
+                  max-width: 154px;
                 }
               }
             }
