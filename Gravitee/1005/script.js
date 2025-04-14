@@ -1,7 +1,20 @@
-// when dom is loaded remove script where src includes '/template_child.min.css"'
-document.addEventListener("DOMContentLoaded", function() {
-    var scripts = document.querySelectorAll('script[src*="/template_child.min.css"]');
-    scripts.forEach(function(script) {
-        script.remove();
-    });
+console.log("script.js loaded");
+waitForElm('.nav-item>a[href*="/demo"]').then(label => {
+
 });
+
+// Generic Code
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+}
