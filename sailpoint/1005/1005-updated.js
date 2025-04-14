@@ -39,7 +39,7 @@ var css = `@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wg
   width: 528px;
   height: 136px;
   left: -328px;
-  bottom: 151px;
+  bottom: 160px;
 }
 
 .spz_1005.form-expand .spz-hero::after {
@@ -303,7 +303,7 @@ var css = `@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wg
     width: 388.24px;
     height: 100px;
     left: -228px;
-    bottom: 198px !important;
+    bottom: 210px !important;
   }
 
   .spz_1005 .spz-hero .spz-wrapper {

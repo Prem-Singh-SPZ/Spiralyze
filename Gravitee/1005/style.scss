@@ -1,92 +1,11 @@
-.comparison-section {
-  margin: -200px 0;
-
-  .comparison-wrapper {
-    border-radius: 16px;
-    background: url("./assets/hero-bg.png") no-repeat top left;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-  }
-
-  &__hero {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  &__hero-g {
-    font-size: 80px;
-    font-weight: bold;
-    color: orange;
-    margin-right: 20px;
-  }
-
-  &__hero-vs {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 20px;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-
-    @media (max-width: 767.98px) {
-      grid-template-columns: 1fr; /* Mobile layout */
-    }
-
-    &-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      border: 1px solid #eee;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease-in-out;
-
-      &:hover {
-        transform: scale(1.02);
-      }
-
-      &-logo {
-        max-width: 50px;
-        height: auto;
-        margin-bottom: 5px;
-      }
-
-      &-logo-aws {
-        max-width: 70px; /* Adjust AWS logo width if needed */
-        height: auto;
-        margin-bottom: 5px;
-      }
-
-      span {
-        font-size: 14px;
-      }
-
-      &--aws {
-        flex-direction: row; /* Adjust AWS layout */
-        align-items: center;
-
-        span {
-          margin-left: 5px;
-        }
-      }
-    }
-
-    &__see-more {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 15px 0;
-      font-size: 16px;
-      color: #337ab7;
-      cursor: pointer;
-    }
-  }
+.sticky-holder .right-content .section-copy .sec-title {
+  color: #ea3527;
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
