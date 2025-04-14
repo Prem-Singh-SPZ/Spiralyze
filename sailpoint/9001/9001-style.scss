@@ -24,6 +24,12 @@ html.spz-no-scroll {
     }
   }
 
+  &.form-submit {
+    .hero + .row > .row__inner .bg-gradient .spz-form-title {
+      display: none !important;
+    }
+  }
+
   .hero + .row {
     position: relative;
     padding: 64px 0 32px;
@@ -770,7 +776,7 @@ select:-webkit-autofill:active {
   }
 }
 
-.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow{
+.spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
   width: 100%;
 }
 

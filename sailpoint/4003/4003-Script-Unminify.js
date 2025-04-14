@@ -446,19 +446,15 @@
               MktoForms2.whenReady(function (form) {
                 form.onSuccess(function (values, followUpUrl) {
                   document.body.classList.add('form-submit');
-                  var checkboxInterval = setInterval(() => {
-                    var checkbox = document.querySelector('.SPZ_3993_V1 form.mktoForm #mktoCheckbox_27627_0');
-                    if (checkbox) {
-                      checkbox.checked = true;
+                  waitForElm('.SPZ_4003_V1 .mkto-wrap #confirm #gated-asset').then(() => {
+                    //append #confirm to the .spz-form-wrap
+                    const confirmSection = document.querySelector('.SPZ_4003_V1 .mkto-wrap #confirm').outerHTML;
+                    if (confirmSection && document.querySelectorAll('.SPZ_4003_V1 .spz-form-wrap .the-form #confirm').length == 0) {
+                      document.querySelector('.SPZ_4003_V1 .spz-form-wrap .the-form').insertAdjacentHTML('afterbegin', confirmSection);
                     }
-                  }, 100);
-
-                  setTimeout(() => {
-                    clearInterval(checkboxInterval);
-                  }, 5000);
+                  });
                 });
               });
-
             }
           });
         } else {
