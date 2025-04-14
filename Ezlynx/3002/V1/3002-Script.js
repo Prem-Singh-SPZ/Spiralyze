@@ -55,29 +55,29 @@
           },
           contentSuperHeading: {
             "/lp/ams-agency-management-system": "Agency Management Software",
-            "/landing/comparative-rater": "Rates & Quoting solution",
+            "/landing/comparative-rater": "Rates & Quoting Solution",
             "/landing/insurance-quoting": "Insurance Quoting solution"
           },
           contentHeading: {
-            "/lp/ams-agency-management-system": "Get the #1 agency solution. Boost sales.",
-            "/landing/comparative-rater": "Win deals faster with #1 comparative rater.",
-            "/landing/insurance-quoting": "Win deals with the #1 instant quoting tool."
+            "/lp/ams-agency-management-system": "Get the #1 agency management solution.",
+            "/landing/comparative-rater": "Win deals faster with the #1 comparative rater.",
+            "/landing/insurance-quoting": "Win more deals with the #1 insurance quoting tool."
           },
           featureContent: {
             "/lp/ams-agency-management-system": [
-              "<b>Generate Quotes.</b> Instant personal and commercial rates. 330+ carriers. Send quotes online or via text. Bind and issue policies.",
+              "<b>Sales & Payments.</b> Manage leads. Auto-move leads through the pipeline. Find cross-sell opps. Close deals. Let clients pay online.",
               "<b>Policy Management.</b> Manage policies, reporting, documents, and client communications. Automate renewals. Increase retention.",
-              "<b>Sales & Payments.</b> Manage leads. Auto-move leads through the pipeline. Find cross-sell opps. Close deals. Let clients pay online."
+              "<b>Generate Quotes.</b> Compare and get rates from 330+ carriers in one platform. Send quotes online or via text. Bind and issue policies.",
             ],
             "/landing/comparative-rater": [
-              "<b>Carriers.</b> Get instant rates from 330+ carriers. Compare multiple carriers at once. Personal auto, home, and dwelling fire policies. ",
-              "<b>Quotes.</b> Generate quotes in a few clicks. Send to customers online or via text. Bind and issue policies.",
-              "<b>Renewals.</b> Instantly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
+              "<b>Carriers.</b> Compare and get rates from 330+ carriers in one platform. Personal auto, home, and dwelling fire policies.",
+              "<b>Quotes.</b> Generate quotes in a few clicks. Provide to customers online or via text. Bind and issue policies.",
+              "<b>Renewals.</b> Quickly update client info. Automate re-quoting for renewals. Compare current and renewal coverage."
             ],
             "/landing/insurance-quoting": [
-              "<b>Quoting.</b> Let clients get instant quotes directly from your website. Compare 330+ carriers. Auto, home, dwelling fire, and more. ",
-              "<b>Sales.</b> Capture leads on your agency website and re-quote. Automate follow-ups and email marketing campaigns.",
-              "<b>Servicing.</b> Track quote status. Automate re-quoting for renewals. Compare current and renewal coverage."
+              "<b>Quoting.</b> Spend less time quoting. Compare 330+ carriers in one platform. Auto, home, dwelling fire.",
+              "<b>Sales.</b> Capture leads on your agency website. Automate follow-ups and email marketing campaigns.",
+              "<b>Servicing.</b> Automate remarketing for premiums. Compare current and renewal coverage."
             ]
           },
           featureIcons: {
