@@ -284,7 +284,9 @@
     // }
     hiddenValue('SPZ_3002', 'SPZ_3002_v1');
     waitForElm('.spz-3002 .btn.amber').then(function (elem) {
-      elem.setAttribute('href', 'javascript:void(0);');
+      document.querySelectorAll('.spz-3002 .btn.amber').forEach(function (elem) {
+        elem.setAttribute('href', 'javascript:void(0);');
+      });
     });
 
 
