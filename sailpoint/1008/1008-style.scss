@@ -157,7 +157,7 @@ body.spz_1008 {
 
           // @media (max-height: 900px) {
           //   top: 425px;
-           
+
           // }
 
           @media (max-width: 1024.98px) {
@@ -568,17 +568,20 @@ select:-webkit-autofill:active {
 .spz_1008
   .spz-form-section
   form.mktoForm
-  .mktoFormRow.placeholder-row:not(.field-10) {
+  .mktoFormRow.placeholder-row:not(.field-10),
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.comment-toggle,
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.comment-row-hidden {
   display: none;
 }
 
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-1,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-2,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-3,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-4,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-5,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-6,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-7,
-.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-8.spz-half,
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-8,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-9,
 .spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-10 {
   width: calc(50% - 8px);
@@ -588,8 +591,8 @@ select:-webkit-autofill:active {
 .spz_1008:not(.form-expand)
   .spz-form-section
   form.mktoForm
-  .mktoFormRow.field-5
-  ~ .mktoFormRow:not(.field-31),
+  .mktoFormRow.field-4
+  ~ .mktoFormRow:not(.field-30),
 .spz_1008 .spz-form-section form.mktoForm > div:not([class]):not([id]) {
   display: none;
 }
@@ -836,19 +839,19 @@ select:-webkit-autofill:active {
 .spz_1008:not(.form-expand)
   .spz-form-section
   form.mktoForm
-  .field-4
+  .field-3
   .mktoFieldWrap
   .mktoError,
 .spz_1008.form-expand
   .spz-form-section
   form.mktoForm
-  .field-4
+  .field-3
   .mktoFieldWrap
   .mktoError_1.customError,
 .spz_1008
   .spz-form-section
   form.mktoForm
-  .field-4
+  .field-3
   .mktoFieldWrap:not(.emailerror)
   .mktoError_1.customError {
   display: none !important;
@@ -952,6 +955,7 @@ select:-webkit-autofill:active {
   padding: 0;
   width: auto !important;
   display: flex;
+  align-items: center;
 }
 
 .spz_1008
@@ -1063,7 +1067,19 @@ select:-webkit-autofill:active {
   transition: all 0.1s ease-in-out;
 }
 
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow a {
+  color: #0071ce;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration-line: underline;
+  text-underline-offset: 1px;
+  transition: all 0.1s ease-in-out;
+}
+
 .spz_1008 .spz-form-section .disclaimer a:hover,
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow a:hover,
 .spz_1008 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:hover {
   text-decoration: none;
   font-weight: 600;
@@ -1071,6 +1087,8 @@ select:-webkit-autofill:active {
 
 .spz_1008 .spz-form-section .disclaimer a:active,
 .spz_1008 .spz-form-section .disclaimer a:focus-visible,
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow a:active,
+.spz_1008 .spz-form-section form.mktoForm .mktoFormRow a:focus-visible,
 .spz_1008 .spz-form-section form.mktoForm .mktoCaptchaDisclaimer a:active,
 .spz_1008
   .spz-form-section

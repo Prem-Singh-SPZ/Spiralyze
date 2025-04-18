@@ -48,7 +48,7 @@
                 if (!document.body.classList.contains('spz_3002')) {
                     removeSpecificCookieValue('SPZ_3002', 'SPZ_3002_truecontrol');
                     document.body.classList.add('spz_3002');
-                    waitForElm('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').then(() => {
+                    waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelector('.spz_3002 .hero .hero__container .hero__content') && document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
                                 document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content"><div class="spz-form-title">Get live demo</div><div id="demo_submit" style="display: none;"><h3 style="text-align: center;">Thank you!</h3><h4 style="text-align: center;">A representative will reach out to you shortly.</h4></div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -59,6 +59,11 @@
                             }
 
                             heroUpdate();
+
+                            waitForElm('.spz_3002 #mktoForm_1018.mktoForm input').then(() => {
+                                formModify();
+                                hiddenValue('SPZ_3002', 'SPZ_3002_variant');
+                            });
 
                             if (document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow.row_Email').length == 0) {
                                 formModify();
@@ -210,10 +215,6 @@
     }
 
     function formModify() {
-        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm input[name="Salutation"]')) {
-            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm input[name="Salutation"]').closest(".mktoFormRow").classList.add("hidden")
-        }
-
         if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country')) {
             // select united states as default country
             document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country').value = "United States";
@@ -261,26 +262,24 @@
         const disclaimer_field = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoCaptchaDisclaimer');
         const button = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow');
 
-        if (button && disclaimer_field) {
-            num_of_emp_field.classList.add('spz-full-width');
-            comment_field.insertAdjacentElement('beforebegin', num_of_emp_field);
+        // if (button && disclaimer_field) {
+        //     // num_of_emp_field.classList.add('spz-full-width');
+        //     button.before(disclaimer_field);
+        // }
 
+        // let checkDisclaimer = setInterval(() => {
+        //     if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
+        //         document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+        //     }
 
-        }
+        //     if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer') && document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
+        //         document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
+        //     }
+        // }, 200);
 
-        let checkDisclaimer = setInterval(() => {
-            if (document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow') && document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
-                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
-            }
-
-            if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer') && document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
-                document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
-            }
-        }, 200);
-
-        setTimeout(() => {
-            clearInterval(checkDisclaimer);
-        }, 5000);
+        // setTimeout(() => {
+        //     clearInterval(checkDisclaimer);
+        // }, 5000);
 
 
         if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')) {
@@ -393,13 +392,13 @@
                     }
                 });
 
-                if (document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
-                    document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
-                }
+                // if (document.querySelectorAll('.spz_3002 #mktoForm_1017.mktoForm .disclaimer').length == 0) {
+                //     document.querySelector('.spz_3002 #mktoForm_1017.mktoForm .mktoButtonRow').insertAdjacentHTML('afterend', `<p class="disclaimer mt-8 text-sm">By submitting this form, you understand and agree that use of SailPoint&#8217;s website is subject to <a href="/privacy" class="underline underline-offset-[3px] hover:no-underline">SailPoint Technologies&#8217; Privacy Statement</a>.</p>`);
+                // }
 
-                if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
-                    document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
-                }
+                // if (document.querySelectorAll('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').length == 2) {
+                //     document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .disclaimer').remove();
+                // }
             }, 100);
 
             setTimeout(() => {
