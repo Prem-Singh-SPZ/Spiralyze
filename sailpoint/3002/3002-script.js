@@ -426,7 +426,7 @@
         var formInterval = setInterval(function () {
             if (document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
                 clearInterval(formInterval);
-                window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "".concat(1018));
+                window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "1018");
 
                 //check mktoforms2 library is loaded or not
                 if (typeof MktoForms2 !== 'undefined') {

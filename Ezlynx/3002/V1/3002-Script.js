@@ -16,6 +16,11 @@
     if (body) {
       clearInterval(bodyLoaded);
 
+      //when domcontentloaded and form is not loaded then add class to body
+      document.addEventListener("DOMContentLoaded", function () {
+        loadForm()
+      });
+
       waitForElm('.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input').then(function (elem) {
         if (!body.classList.contains('spz-3002')) {
           body.classList.add('spz-3002');
@@ -235,6 +240,35 @@
       });
     }
   });
+
+  function loadForm() {
+    //setintervel to check the form is loaded or not
+    var formInterval = setInterval(function () {
+      if (document.querySelectorAll('.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input').length == 0 && document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
+        clearInterval(formInterval);
+        window.MktoForms2.loadForm("//app-abk.marketo.com", "373-DBF-030", "4552");
+
+        //check mktoforms2 library is loaded or not
+        if (typeof MktoForms2 !== 'undefined') {
+          MktoForms2.whenReady(function (form) {
+            form.onSuccess(function (values, followUpUrl) {
+              document.body.classList.add('form-submit');
+              location.href = "/thank-you/";
+              return false;
+            });
+
+            if (document.body.classList.contains('spz-form-loaded')) {
+              document.body.classList.remove('spz-form-loaded');
+            }
+          });
+        }
+      }
+      if (document.querySelectorAll('.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input').length > 0) {
+        clearInterval(formInterval);
+        document.body.classList.add('spz-form-loaded');
+      }
+    }, 100);
+  }
 
   function formModify() {
     // Add class in mktoFormRow using count
