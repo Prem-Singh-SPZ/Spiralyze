@@ -49,7 +49,7 @@
         if (document.querySelector('.spz_7002_v1 #page-container .flex.min-h-screen')) {
             waitForElm('.spz_7002_v1 .mkto-wrap.w-full .mktoFormRow input').then(() => {
                 if (document.querySelectorAll('.spz-form-title').length == 0)
-                    document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title">Contact us <a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    document.querySelector('.spz_7002_v1 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><span>Contact us</span> <a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
                 </svg></a></div>`);
 
@@ -84,26 +84,6 @@
             waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
             });
-        });
-
-
-        waitForElm('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer').then(() => {
-            // Change Field Position
-            const email_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Email');
-            const last_name_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_LastName');
-            const inquiry_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_reasonforInquiry');
-            const country_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Country');
-            const company_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Company');
-            const title_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .row_Title');
-            const disclaimer_field = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .disclaimer');
-            const button = document.querySelector('.spz_7002_v1 #mktoForm_1017.mktoForm .mktoButtonRow');
-            if (company_field && title_field && email_field && last_name_field && inquiry_field && country_field) {
-                last_name_field.insertAdjacentElement('afterend', email_field);
-                country_field.insertAdjacentElement('beforebegin', inquiry_field);
-                company_field.after(title_field);
-                // button.insertAdjacentElement('afterend', disclaimer_field);
-                // button.after(disclaimer_field);
-            }
         });
 
         waitForElm(`.spz_7002_v1 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
@@ -210,7 +190,7 @@
                         }
                     }
                 });
-            }, 100);
+            }, 500);
 
             setTimeout(() => {
                 clearInterval(timeBuffer);
