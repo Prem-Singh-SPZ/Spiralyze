@@ -43,6 +43,7 @@ select:-webkit-autofill:active {
   margin: 64px auto;
   padding: 40px;
   position: relative;
+  min-height: unset;
 }
 @media screen and (max-width: 767.98px) {
   .spz-form-container .spz-form-inner .spz-form-content {
@@ -501,6 +502,11 @@ select:-webkit-autofill:active {
     font-size: 14px;
     padding-left: 8px;
   }
+}
+
+.spz_3002 .mkto-wrap #mktoForm_1018.mktoForm input[type=checkbox][name=Global_Opt_out__c] + label {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoButtonRow {
