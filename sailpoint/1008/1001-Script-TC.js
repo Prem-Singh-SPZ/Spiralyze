@@ -70,7 +70,7 @@
                   </div>
                   <div class="spz-form-section">
                     ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                    <div class="the-form"><div class="contact_us_submit_spz"><h3 class="text-center">Thank you!</h3><h4 class="text-center">A representative will reach out to you shortly.</h4></div></div>
+                    <div class="the-form mkto-wrap"><div class="contact_us_submit_spz"><h3 class="text-center">Thank you!</h3><h4 class="text-center">A representative will reach out to you shortly.</h4></div></div>
                   </div>
                 </div>
               </div>
@@ -143,17 +143,17 @@
             // });
 
             // Change Field Position
-            var employees_field = document.querySelector('.SPZ-1008-TC form.mktoForm .field-8');
-            var state_field = document.querySelector('.SPZ-1008-TC form.mktoForm .field-10');
-            state_field.after(employees_field);
+            // var employees_field = document.querySelector('.SPZ-1008-TC form.mktoForm .field-8');
+            // var state_field = document.querySelector('.SPZ-1008-TC form.mktoForm .field-10');
+            // state_field.after(employees_field);
 
-            waitForElm('.SPZ-1008-TC form.mktoForm .disclaimer').then((elm) => {
-              var disclaimer_field = document.querySelector('.SPZ-1008-TC form.mktoForm .mktoCaptchaDisclaimer');
-              const disclaimer = document.querySelector('.SPZ-1008-TC form.mktoForm .disclaimer');
-              var button = document.querySelector('.SPZ-1008-TC form.mktoForm .mktoButtonRow');
-              button.before(disclaimer_field);
-              button.after(disclaimer);
-            });
+            // waitForElm('.SPZ-1008-TC form.mktoForm .disclaimer').then((elm) => {
+            //   var disclaimer_field = document.querySelector('.SPZ-1008-TC form.mktoForm .mktoCaptchaDisclaimer');
+            //   const disclaimer = document.querySelector('.SPZ-1008-TC form.mktoForm .disclaimer');
+            //   var button = document.querySelector('.SPZ-1008-TC form.mktoForm .mktoButtonRow');
+            //   button.before(disclaimer_field);
+            //   button.after(disclaimer);
+            // });
 
             document.querySelector('.SPZ-1008-TC form.mktoForm .field-11 .mktoField').value = 'Get live demo';
 
@@ -289,12 +289,13 @@
 
             document.querySelector('select#Country').addEventListener('change', () => {
               const stateRow = document.querySelector('.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.field-10');
+              const countryRow = document.querySelector('.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.field-7');
               const optOutRow = document.querySelector('.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.field-31');
               const employeeNumberRow = document.querySelector('.SPZ-1008-TC .spz-form-section form.mktoForm .mktoFormRow.field-8');
 
               const stateExists = document.querySelector('select#State');
-              stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half'))
-                : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
+              stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full'))
+                : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
 
               // document.querySelector('label#LblGlobal_Opt_out__c')
               //   ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))

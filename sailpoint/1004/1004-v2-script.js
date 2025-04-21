@@ -324,9 +324,9 @@
                             });
                         });
 
-                        var company_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-6');
-                        var lastName_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-4');
-                        company_field.after(lastName_field);
+                        // var company_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-6');
+                        // var lastName_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-4');
+                        // company_field.after(lastName_field);
 
                         var phone_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-5');
                         var job_field = document.querySelector('.spz-1004-v2 form.mktoForm .field-7');

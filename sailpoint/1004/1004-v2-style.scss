@@ -1328,7 +1328,13 @@ select:-webkit-autofill:active {
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 0;
+  text-underline-position: from-font;
+  transition: all 0.1s ease-in-out;
 }
 
 .spz-1004-v2 .spz-form-section .disclaimer,
@@ -1346,13 +1352,8 @@ select:-webkit-autofill:active {
 }
 
 .spz-1004-v2 .spz-form-section .disclaimer a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 0;
-  text-underline-position: from-font;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .spz-1004-v2 .spz-form-section .disclaimer a:active,
