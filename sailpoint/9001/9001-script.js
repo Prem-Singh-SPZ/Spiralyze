@@ -217,20 +217,20 @@
     //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
     // });
 
-    waitForElm('.spz_9001 #mktoForm_1017.mktoForm .disclaimer').then(label => {
-      // Change Field Position
-      const email_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Email');
-      const last_name_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_LastName');
-      const company_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Company');
-      const title_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Title');
+    // waitForElm('.spz_9001 #mktoForm_1017.mktoForm .disclaimer').then(label => {
+    //   // Change Field Position
+    //   const email_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Email');
+    //   const last_name_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_LastName');
+    //   const company_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Company');
+    //   const title_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .row_Title');
 
-      if (company_field && title_field) {
-        last_name_field.insertAdjacentElement('afterend', email_field);
-        company_field.after(title_field);
-      }
+    //   if (company_field && title_field) {
+    //     last_name_field.insertAdjacentElement('afterend', email_field);
+    //     company_field.after(title_field);
+    //   }
 
-      // swapPrivacyCopies();
-    });
+    //   // swapPrivacyCopies();
+    // });
 
     // function swapPrivacyCopies() {
     //   const disclaimer_field = document.querySelector('.spz_9001 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
@@ -355,7 +355,7 @@
             }
           }
         });
-      }, 100);
+      }, 500);
 
 
       setTimeout(() => {
@@ -373,7 +373,7 @@
         //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         // });
 
-        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", reasonForInq.classList.remove('spz-full-width')) : (reasonForInq.classList.add('spz-full-width'));
+        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
 
         swapPrivacyCopies();
       });

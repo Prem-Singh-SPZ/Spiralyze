@@ -799,6 +799,7 @@ select:-webkit-autofill:active {
   &.row_contactFormComments,
   &.row_Global_Opt_in__c,
   &.row_Global_Opt_out__c,
+  &.row_reasonforInquiry,
   &.spz-full-width {
     width: 100%;
   }
@@ -1136,6 +1137,12 @@ select:-webkit-autofill:active {
   padding: 0;
 }
 
+.spz_9001 .mkto-wrap form.mktoForm input[type=checkbox][name=Global_Opt_out__c]+label {
+  padding-left: 0;
+  padding-right: 0;
+  cursor: default;
+}
+
 .spz_9001
   .page-transition
   .inner-row__inner
@@ -1236,7 +1243,7 @@ select:-webkit-autofill:active {
 
 .spz_9001 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 19px;
+  margin-bottom: 12px;
 }
 
 .spz_9001
@@ -1314,7 +1321,7 @@ select:-webkit-autofill:active {
   display: none;
 }
 
-.spz_9001 .page-transition .inner-row__inner .disclaimer a {
+.spz_9001 .page-transition .inner-row__inner .mktoFormRow a {
   color: #0071ce;
   font-size: 14px;
   font-style: normal;
@@ -1326,13 +1333,13 @@ select:-webkit-autofill:active {
   text-decoration-skip-ink: none;
 }
 
-.spz_9001 .page-transition .inner-row__inner .disclaimer a:hover {
+.spz_9001 .page-transition .inner-row__inner .mktoFormRow a:hover {
   text-decoration: none;
   font-weight: 600;
 }
 
-.spz_9001 .page-transition .inner-row__inner .disclaimer a:active,
-.spz_9001 .page-transition .inner-row__inner .disclaimer a:focus-visible {
+.spz_9001 .page-transition .inner-row__inner .mktoFormRow a:active,
+.spz_9001 .page-transition .inner-row__inner .mktoFormRow a:focus-visible {
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;

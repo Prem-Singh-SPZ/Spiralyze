@@ -356,7 +356,7 @@
             }
           }
         });
-      }, 50);
+      }, 500);
 
 
       setTimeout(() => {
@@ -374,7 +374,7 @@
         //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
         // });
 
-        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", reasonForInq.classList.remove('spz-full-width')) : (reasonForInq.classList.add('spz-full-width'));
+        document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", countryRow.classList.remove('spz-full-width')) : (countryRow.classList.add('spz-full-width'));
       });
     }
 

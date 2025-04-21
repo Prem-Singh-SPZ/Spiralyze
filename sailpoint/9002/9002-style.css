@@ -556,7 +556,7 @@ select:-webkit-autofill:active {
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow {
   width: 100%;
 }
-.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_contactFormComments, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_in__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_out__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.spz-full-width {
+.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_contactFormComments, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_in__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_Global_Opt_out__c, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_reasonforInquiry, .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.spz-full-width {
   width: 100%;
 }
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow.row_contactFormComments .mktoFieldWrap .mktoField:not([type=checkbox]) {
@@ -802,6 +802,12 @@ select:-webkit-autofill:active {
   }
 }
 
+.spz_9002 .mkto-wrap form.mktoForm input[type=checkbox][name=Global_Opt_out__c] + label {
+  padding-left: 0;
+  padding-right: 0;
+  cursor: default;
+}
+
 .spz_9002 .mktoForm input[type=checkbox] {
   min-width: 16px;
   max-width: 16px;
@@ -849,7 +855,7 @@ select:-webkit-autofill:active {
 
 .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin-top: 12px;
+  margin-bottom: 12px;
 }
 @media screen and (max-width: 767.98px) {
   .spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoButtonRow {
@@ -918,24 +924,24 @@ select:-webkit-autofill:active {
   display: none;
 }
 
-.spz_9002 .page-transition .inner-row__inner .disclaimer a {
+.spz_9002 .page-transition .inner-row__inner .mktoFormRow a {
   color: #0071ce;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
   text-decoration: none;
 }
 
-.spz_9002 .page-transition .inner-row__inner .disclaimer a:hover {
+.spz_9002 .page-transition .inner-row__inner .mktoFormRow a:hover {
   text-decoration-line: underline;
   text-underline-offset: 1px;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
 
-.spz_9002 .page-transition .inner-row__inner .disclaimer a:active,
-.spz_9002 .page-transition .inner-row__inner .disclaimer a:focus-visible {
+.spz_9002 .page-transition .inner-row__inner .mktoFormRow a:active,
+.spz_9002 .page-transition .inner-row__inner .mktoFormRow a:focus-visible {
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
