@@ -345,13 +345,13 @@
 
                         document.querySelector('select#Country').addEventListener('change', () => {
                             const stateRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-10');
-                            const optOutRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-31');
+                            const countryRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-7');
                             const employeeNumberRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-8');
 
                             changePos();
 
                             const stateExists = document.querySelector('select#State');
-                            stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half')) : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
+                            stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
 
                             // document.querySelector('label#LblGlobal_Opt_out__c')
                             // ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))

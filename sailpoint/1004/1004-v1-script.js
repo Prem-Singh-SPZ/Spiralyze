@@ -237,7 +237,7 @@
                             }
                                 </div>
                                 <div class="spz-form-section">
-                                    <div class="the-form">
+                                    <div class="the-form mkto-wrap">
                                         <div class="contact_us_submit_spz">
                                             <h3 class="text-center">Thank you!</h3>
                                             <h4 class="text-center">A representative will reach out to you shortly.</h4>
@@ -325,29 +325,8 @@
                             });
                         });
 
-                        waitForElm('.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
-                            label.textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.";
-                        });
 
-                        // Change Field Position
-
-                        // var company_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-6');
-                        // var lastName_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-4');
-                        // company_field.after(lastName_field);
-
-                        var phone_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-5');
-                        var job_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-7');
-                        job_field.after(phone_field);
-
-                        var employees_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-8');
-                        var state_field = document.querySelector('.spz-1004-v1 form.mktoForm .field-10');
-                        state_field.after(employees_field);
-
-                        // var disclaimer_field = document.querySelector('.spz-1004-v1 form.mktoForm .mktoCaptchaDisclaimer');
-                        // var button = document.querySelector('.spz-1004-v1 form.mktoForm .mktoButtonRow');
-                        // button.after(disclaimer_field);
-
-                        document.querySelector('.spz-1004-v1 form.mktoForm .field-11 .mktoField').value = 'Get a demo';
+                        document.querySelector('.spz-1004-v1 form.mktoForm #contactFormComments.mktoField').value = 'Get a demo';
 
                         waitForElm(`.spz-1004-v1 .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
                             setTimeout(() => {
@@ -460,16 +439,12 @@
 
                         document.querySelector('select#Country').addEventListener('change', () => {
                             const stateRow = document.querySelector('.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-10');
-                            const optOutRow = document.querySelector('.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-31');
+                            const countryRow = document.querySelector('.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-7');
                             const employeeNumberRow = document.querySelector('.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-8');
 
                             const stateExists = document.querySelector('select#State');
-                            stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half'))
-                                : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
-
-                            document.querySelector('label#LblGlobal_Opt_out__c')
-                                ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck the box to discontinue receiving email communications from SailPoint.", optOutRow.classList.remove('hidden'))
-                                : optOutRow.classList.add('hidden');
+                            stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full'))
+                                : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
                         });
 
                     }

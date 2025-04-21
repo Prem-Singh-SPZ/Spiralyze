@@ -536,20 +536,23 @@ select:-webkit-autofill:active {
   display: none;
 }
 
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-1,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-2,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-3,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-4,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-5,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-6,
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-7,
-.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-8.spz-half,
-.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-9,
-.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-10 {
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-8 {
   width: calc(50% - 8px);
 }
 
-.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-11,
-.spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .mktoFormRow.field-6~.mktoFormRow,
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-7.spz-full {
+  width: 100%;
+}
+
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.comment-toggle,
+.spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .mktoFormRow.field-4~.mktoFormRow,
 .spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .mktoCaptchaDisclaimer,
 .spz_1004_tc .spz-form-section form.mktoForm>div:not([class]):not([id]) {
   display: none;
@@ -844,12 +847,12 @@ select:-webkit-autofill:active {
 }
 
 .spz_1004_tc .spz-form-section form.mktoForm .mktoCaptchaDisclaimer {
-  margin-bottom: 7px;
+  margin-top: 8px;
 }
 
 .spz_1004_tc .spz-form-section .disclaimer {
   max-width: unset;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 20px;
 }
 
@@ -861,9 +864,9 @@ select:-webkit-autofill:active {
   display: none;
 }
 
-.spz_1004_tc .spz-form-section .disclaimer a {
+.spz_1004_tc .spz-form-section .mktoFormRow a {
   color: #0071CE;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -872,13 +875,13 @@ select:-webkit-autofill:active {
   transition: all 0.1s ease-in-out;
 }
 
-.spz_1004_tc .spz-form-section .disclaimer a:hover {
+.spz_1004_tc .spz-form-section .mktoFormRow a:hover {
   text-decoration: none;
   font-weight: 600;
 }
 
-.spz_1004_tc .spz-form-section .disclaimer a:active,
-.spz_1004_tc .spz-form-section .disclaimer a:focus-visible {
+.spz_1004_tc .spz-form-section .mktoFormRow a:active,
+.spz_1004_tc .spz-form-section .mktoFormRow a:focus-visible {
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
@@ -1017,7 +1020,7 @@ style.appendChild(document.createTextNode(css));
                   </div>
                   <div class="spz-form-section">
                     ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                    <div class="the-form">
+                    <div class="the-form mkto-wrap">
                         <div class="contact_us_submit_spz">
                             <h3 class="text-center">Thank you!</h3>
                             <h4 class="text-center">A representative will reach out to you shortly.</h4>
@@ -1096,28 +1099,7 @@ style.appendChild(document.createTextNode(css));
               });
             });
 
-            // var company_field = document.querySelector('.spz_1004_tc form.mktoForm .field-6');
-            // var lastName_field = document.querySelector('.spz_1004_tc form.mktoForm .field-4');
-            // company_field.after(lastName_field);
-
-            var phone_field = document.querySelector('.spz_1004_tc form.mktoForm .field-5');
-            var job_field = document.querySelector('.spz_1004_tc form.mktoForm .field-7');
-            job_field.after(phone_field);
-
-            var employees_field = document.querySelector('.spz_1004_tc form.mktoForm .field-8');
-            var state_field = document.querySelector('.spz_1004_tc form.mktoForm .field-10');
-            state_field.after(employees_field);
-
-
-            waitForElm('.spz_1004_tc form.mktoForm .disclaimer').then((elm) => {
-              var disclaimer_field = document.querySelector('.spz_1004_tc form.mktoForm .mktoCaptchaDisclaimer');
-              const disclaimer = document.querySelector('.spz_1004_tc form.mktoForm .disclaimer');
-              var button = document.querySelector('.spz_1004_tc form.mktoForm .mktoButtonRow');
-              button.before(disclaimer_field);
-              button.after(disclaimer);
-            });
-
-            document.querySelector('.spz_1004_tc form.mktoForm .field-11 .mktoField').value = 'Get live demo';
+            document.querySelector('.spz_1004_tc form.mktoForm #contactFormComments.mktoField').value = 'Get live demo';
 
             waitForElm(`.spz_1004_tc .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
               setTimeout(() => {
@@ -1183,9 +1165,9 @@ style.appendChild(document.createTextNode(css));
                   const firstName = document.querySelector('input[name="FirstName"]').value.trim();
                   const lastName = document.querySelector('input[name="LastName"]').value.trim();
                   const emailValue = document.querySelector('input[name="Email"]').value.trim();
-                  const companyValue = document.querySelector('input[name="Company"]').value.trim();
+                  const companyValue = document.querySelector('input[name="Phone"]').value.trim();
                   const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                  if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
+                  if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
                     if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
                       document.body.classList.add('form-expand');
                     }
@@ -1302,11 +1284,11 @@ style.appendChild(document.createTextNode(css));
 
             document.querySelector('select#Country').addEventListener('change', () => {
               const stateRow = document.querySelector('.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-10');
-              const optOutRow = document.querySelector('.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-31');
+              const countryRow = document.querySelector('.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-7');
               const employeeNumberRow = document.querySelector('.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.field-8');
 
               const stateExists = document.querySelector('select#State');
-              stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), employeeNumberRow.classList.remove('spz-half')) : (stateRow.classList.add('hidden'), employeeNumberRow.classList.add('spz-half'));
+              stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
             });
 
             MktoForms2.whenReady(function (form) {
