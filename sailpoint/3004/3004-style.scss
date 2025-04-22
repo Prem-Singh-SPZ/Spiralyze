@@ -224,6 +224,19 @@ body.spz_3004 {
                         }
                       }
 
+                      &.comment-toggle,
+                      &.comment-row-hidden {
+                        display: none !important;
+                      }
+
+                      .mktoCheckboxList  a {
+                        &:hover {
+                          color: #54c0e8;
+                          font-weight: 400;
+                          text-decoration: underline;
+                        }
+                      }
+
                       &:has(.mktoHtmlText) {
                         width: 100%;
                         max-width: 100%;
@@ -261,23 +274,23 @@ body.spz_3004 {
                               min-width: 16px;
                               max-width: 16px;
                             }
-                            label {
-                              font-size: 14px;
-                              padding-left: 12px;
-                            }
+                            // label {
+                            //   font-size: 14px;
+                            //   padding-left: 12px;
+                            // }
                           }
 
-                          label#LblreceivingAdvertisingInformation {
-                            position: relative;
-                            font-size: 14px;
-                            color: #fff !important;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 1.6;
-                            background: transparent;
-                            width: auto;
-                            margin-bottom: 8px;
-                          }
+                          // label#LblreceivingAdvertisingInformation {
+                          //   position: relative;
+                          //   font-size: 14px;
+                          //   color: #fff !important;
+                          //   font-style: normal;
+                          //   font-weight: 400;
+                          //   line-height: 1.6;
+                          //   background: transparent;
+                          //   width: auto;
+                          //   margin-bottom: 8px;
+                          // }
                         }
                       }
                     }
@@ -436,7 +449,7 @@ body.spz_3004 {
 
           .accordion {
             .accordion-item {
-              border-bottom: 1px solid #DAE1E9;
+              border-bottom: 1px solid #dae1e9;
               padding: 24px 0;
 
               @media screen and (max-width: 991.98px) {
@@ -677,6 +690,7 @@ body.spz_3004 {
 
       #atlas {
         padding-top: 153px;
+        background: #FFF;
 
         @media screen and (max-width: 991.98px) {
           padding-top: 128px;
@@ -859,6 +873,10 @@ body.spz_3004 {
           }
         }
       }
+
+      #customer-stories {
+        display: block !important;
+      }
     }
 
     footer {
@@ -941,10 +959,9 @@ body.spz_3004 {
       padding: 0;
     }
   }
-  
+
   .iron-theme.mkto-wrap form.mktoForm .mktoLabel {
     font-size: 14px;
     top: 1.1rem;
   }
 }
-
