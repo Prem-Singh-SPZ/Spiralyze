@@ -35,6 +35,130 @@
     function formModify() {
         document.querySelector('.spz_3004 .product-hero .row__inner .inner-row').classList.add('spz-form-container');
         document.querySelector('.spz_3004 .product-hero .row__inner .inner-row__inner .form-header .text-white').textContent = 'Get a demo';
+
+        var form_fields = document.querySelectorAll('.spz_3004 #mktoForm_1018.mktoForm .mktoFormRow');
+        for (var i = 0; i < form_fields.length; i++) {
+            if (form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])')) {
+                var dynamicClass = form_fields[i].querySelector('.mktoField[name]:not([type="hidden"])').getAttribute('name');
+                form_fields[i].classList.add('row_' + dynamicClass);
+            }
+            else {
+                if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
+                    if (i <= 12) {
+                        form_fields[i].classList.add('hidden');
+                    }
+                }
+                else {
+                    form_fields[i].classList.add('row_Global_Opt_in__c');
+                }
+            }
+        }
+
+        waitForElm(`.spz_3004 #mktoForm_1018.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
+            setTimeout(() => {
+                document.querySelectorAll(`.spz_3004 #mktoForm_1018.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+                    if (el && el.value && (el.value != '')) {
+                        el.closest('.mktoFieldWrap').classList.add('filled');
+                    }
+                });
+            }, 1000);
+        });
+
+        function focusFields() {
+            // Attach events using event delegation
+            const form = document.querySelector('.spz_3004 #mktoForm_1018.mktoForm');
+            if (!form) return;
+
+            form.addEventListener('focus', function (event) {
+                const el = event.target;
+                if (el.classList.contains('mktoField')) {
+                    el.closest('.mktoFieldWrap').classList.add('typing');
+                    checkAllFields();
+                }
+            }, true);
+
+            form.addEventListener('blur', function (event) {
+                const el = event.target;
+                if (el.classList.contains('mktoField')) {
+                    el.closest('.mktoFieldWrap').classList.remove('typing');
+                    checkAllFields();
+                }
+            }, true);
+
+            form.addEventListener('input', function (event) {
+                const el = event.target;
+                if (el.classList.contains('mktoField')) {
+                    checkAllFields();
+                }
+            });
+
+            form.addEventListener('change', function (event) {
+                const el = event.target;
+                if (el.classList.contains('mktoField')) {
+                    checkAllFields();
+                }
+            });
+
+            // Function to reapply functionality for dynamic fields
+            function reapplyStateFieldListeners() {
+                const stateField = document.querySelector('.spz_3004 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField#State');
+                if (stateField) {
+                    stateField.addEventListener('focus', function () {
+                        stateField.closest('.mktoFieldWrap').classList.add('typing');
+                        checkAllFields();
+                    });
+                    stateField.addEventListener('blur', function () {
+                        stateField.closest('.mktoFieldWrap').classList.remove('typing');
+                        checkAllFields();
+                    });
+                    stateField.addEventListener('input', function () {
+                        checkAllFields();
+                    });
+                    stateField.addEventListener('change', function () {
+                        checkAllFields();
+                    });
+                }
+            }
+
+            // Reapply listeners whenever the state field is dynamically updated
+            const observer = new MutationObserver(() => {
+                reapplyStateFieldListeners();
+            });
+
+            const container = document.querySelector('.spz_3004 #mktoForm_1018.mktoForm');
+            if (container) {
+                observer.observe(container, { childList: true, subtree: true });
+            }
+        }
+        focusFields();
+        function checkAllFields() {
+            const fields = document.querySelectorAll('.spz_3004 #mktoForm_1018.mktoForm .mktoField');
+            const timeBuffer = setInterval(() => {
+                fields.forEach(field => {
+                    const fieldWrap = field.closest('.mktoFieldWrap');
+                    if (fieldWrap) {
+                        // Check for error
+                        const errorElement = fieldWrap.querySelector('.mktoError');
+                        if (errorElement && errorElement.style.display !== 'none') {
+                            fieldWrap.classList.add('error');
+                        } else {
+                            fieldWrap.classList.remove('error');
+                        }
+
+                        // Check if the field is filled
+                        if (field.value && field.value.trim() !== '') {
+                            fieldWrap.classList.add('filled');
+                        } else {
+                            fieldWrap.classList.remove('filled');
+                        }
+                    }
+                });
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(timeBuffer);
+            }, 1000);
+        }
     }
 
     function heroSectionUpdate() {
