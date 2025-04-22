@@ -103,7 +103,7 @@
                   </div>
                   <div class="spz-form-section">
                     <div class="form-heading">${formData.customHTMLBefore.replace(/\s/g, "").length !== 0 ? formData.customHTMLBefore : ""}</div>
-                    <div class="the-form"></div>
+                    <div class="the-form mkto-wrap"></div>
                   </div>
                 </div>
               </section>
@@ -158,7 +158,7 @@
                     // document.querySelector(".spz-form-wrap .the-form")?.appendChild(document.querySelector('.mkto-wrap + .disclaimer')?.cloneNode(true));
                   });
 
-                  fcd = setInterval((() => { waitForElm(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer").then((e => { clearInterval(fcd); document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow") && document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement("beforebegin", document.querySelector(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer")) })) }))
+                  // fcd = setInterval((() => { waitForElm(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer").then((e => { clearInterval(fcd); document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow") && document.querySelector(".SPZ_4003_V1 .mktoForm .mktoButtonRow").insertAdjacentElement("beforebegin", document.querySelector(".SPZ_4003_V1 form.mktoForm .mktoCaptchaDisclaimer")) })) }))
                   // document.querySelector('.SPZ_4003_V1 .spz-form-section form.mktoForm .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="form-footer">${formData.customHTMLAfter.replace(/\s/g, "").length !== 0 ? formData.customHTMLAfter : ""}</div>`);
                   formModify();
                 }
@@ -270,9 +270,10 @@
                     const firstName = document.querySelector('input[name="FirstName"]').value.trim();
                     const lastName = document.querySelector('input[name="LastName"]').value.trim();
                     const emailValue = document.querySelector('input[name="Email"]').value.trim();
+                    const emailPhone = document.querySelector('input[name="Phone"]').value.trim();
                     const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                    if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
-                      if (firstName && lastName && emailRegex.test(emailValue)) {
+                    if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
+                      if (firstName && lastName && emailRegex.test(emailValue) && emailPhone) {
                         document.body.classList.add('form-expand');
                       }
                     }
@@ -302,8 +303,10 @@
                     const lastName = document.querySelector('input[name="LastName"]').value.trim();
                     const emailValue = document.querySelector('input[name="Email"]').value.trim();
                     const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                    if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
-                      if (firstName && lastName && emailRegex.test(emailValue)) {
+                    const PhoneValue = document.querySelector('input[name="Phone"]').value.trim();
+
+                    if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
+                      if (firstName && lastName && emailRegex.test(emailValue) && PhoneValue) {
                         document.body.classList.add('form-expand');
                       }
                     }
@@ -570,10 +573,10 @@
           const firstName = document.querySelector('input[name="FirstName"]').value.trim();
           const lastName = document.querySelector('input[name="LastName"]').value.trim();
           const emailValue = document.querySelector('input[name="Email"]').value.trim();
-          const companyValue = document.querySelector('input[name="Company"]').value.trim();
+          const PhoneValue = document.querySelector('input[name="Phone"]').value.trim();
           const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-          if (['FirstName', 'LastName', 'Email', 'Company'].includes(fieldName)) {
-            if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
+          if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
+            if (firstName && lastName && PhoneValue && emailRegex.test(emailValue)) {
               document.body.classList.add('form-expand');
             }
           }
