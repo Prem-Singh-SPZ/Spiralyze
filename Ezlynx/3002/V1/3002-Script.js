@@ -16,11 +16,6 @@
     if (body) {
       clearInterval(bodyLoaded);
 
-      //when domcontentloaded and form is not loaded then add class to body
-      document.addEventListener("DOMContentLoaded", function () {
-        loadForm()
-      });
-
       waitForElm('.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input').then(function (elem) {
         if (!body.classList.contains('spz-3002')) {
           body.classList.add('spz-3002');

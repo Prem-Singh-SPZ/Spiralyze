@@ -226,33 +226,6 @@
       });
     });
 
-    // waitForElm('.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFormRow .mktoCheckboxList.mktoLogicalField input[name="Global_Opt_out__c"] ~ label').then(label => {
-    //   label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-    // });
-
-    // Change Field Position
-    const email_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Email');
-    const num_emp_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Number_of_Employees__c');
-    const inquiry_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_reasonforInquiry');
-    const country_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Country');
-    const company_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Company');
-    const phone_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Phone');
-    const title_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .row_Title');
-    const disclaimer_field = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer');
-    const disclaimer = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .disclaimer');
-    const button = document.querySelector('.spz_9002 #mktoForm_1017.mktoForm .mktoButtonRow');
-
-    if (company_field && title_field ) {
-      company_field.after(title_field);
-      // title_field.after(phone_field);
-      // num_emp_field.before(inquiry_field);
-      // company_field.before(email_field);
-      // button.before(disclaimer_field);
-      // disclaimer.after(button);
-    }
-
-    // document.querySelector('.spz_9002 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
-
     waitForElm(`.spz_9002 .page-transition .inner-row__inner form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
       setTimeout(() => {
         document.querySelectorAll(`.spz_9002 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
