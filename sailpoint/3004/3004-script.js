@@ -193,10 +193,10 @@
     function accordionSection() {
         //create accordion section json data
         let accordionItems = [{
-            title: 'Accelerate insights & automation with AI',
-            content: 'Make smart access decisions, detect threats and ensure compliance.',
+            title: 'Accelerate insights and automation with SailPoint Harbor Pilot',
+            content: 'Make data-driven decisions and maximize efficiencies using AI agents',
             demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
-            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights__automation_with_ai_1.webp'
+            image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/accelerate_insights_and_automation_with_sailpoint_1.webp'
         }, {
             title: 'Discover & secure all machine identities',
             content: 'Enhance security by gaining control over machine identities',
@@ -204,17 +204,17 @@
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/discover__secure_all_machine_identities_1.webp'
         }, {
             title: 'Manage & secure the non-employee lifecycle',
-            content: 'Content for non-employee lifecycle management.',
+            content: 'Boost efficiency with simplified management of non-employees',
             demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/manage__secure_the_non-employee_lifecycle_1.webp'
         }, {
             title: 'Secure & govern access to sensitive data',
-            content: 'Information on securing sensitive data.',
+            content: 'Extend visibility and access governance to your sensitive data',
             demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/secure__govern_access_to_sensitive_data_1.webp'
         }, {
             title: 'Automate & delegate privileged tasks',
-            content: 'Content about automating privileged tasks.',
+            content: 'Improve productivity and security by automating manual tasks',
             demoLink: 'Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right">',
             image: '//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/automate__delegate_privileged_tasks_1.webp'
         }];
@@ -308,10 +308,15 @@
             demoBtn.setAttribute('href', 'javascript:;');
 
             waitForElm('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').then(() => {
-                document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').outerHTML = `<pcture><source media="max-width:767" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_mobile.webp" type="image/webp"><source media="max-width:1024" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_tablet.webp" type="image/webp"><img class="vidyard-lightbox-image" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb.webp" alt="Video Thumbnail"></picture>`;
+                document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').outerHTML = `<picture>
+                    <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb.webp">
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_tablet.webp">
+                    <img class="vidyard-lightbox-image" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_mobile.webp" alt="Video Thumbnail">
+                </picture>`;
             });
         }
 
+        
         modifyCustomerStories();
     }
 
