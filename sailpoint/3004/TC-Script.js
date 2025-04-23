@@ -4,14 +4,14 @@
       const body = document.querySelector('body');
       if (body) {
         clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz_3002_tc')) {
-          body.classList.add('spz_3002_tc');
-          hiddenValue('spz_3002', 'SPZ_3002_truecontrol');
+        if (!body.classList.contains('SPZ_3004_tc')) {
+          body.classList.add('SPZ_3004_tc');
+          hiddenValue('SPZ_3004', 'SPZ_3004_truecontrol');
           setHiddenFieldValue();
         }
         else {
-          if (body.classList.contains('spz_3002_tc')) {
-            hiddenValue('spz_3002', 'SPZ_3002_truecontrol');
+          if (body.classList.contains('SPZ_3004_tc')) {
+            hiddenValue('SPZ_3004', 'SPZ_3004_truecontrol');
             setHiddenFieldValue();
           }
         }
@@ -21,8 +21,8 @@
 
   function removeTest() {
     setTimeout(() => {
-      if (document.querySelector('.spz_3002_tc')) {
-        document.body.classList.remove("spz_3002_tc");
+      if (document.querySelector('.SPZ_3004_tc')) {
+        document.body.classList.remove("SPZ_3004_tc");
       }
     }, 2000);
   }
@@ -52,14 +52,14 @@
   window.addEventListener("locationchange", function () {
     url = location.href;
     urlCheck(url);
-    if (document.querySelector('.spz_3002_tc')) {
-      document.body.classList.remove("spz_3002_tc");
+    if (document.querySelector('.SPZ_3004_tc')) {
+      document.body.classList.remove("SPZ_3004_tc");
     }
   });
 
   function urlCheck(url) {
     let testURL = "";
-    if (window.location.pathname === '/products/identity-security-cloud') {
+    if (window.location.pathname === '/products/identity-security-cloud-2') {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
@@ -103,15 +103,15 @@
 
   // Do not touch below hidden field code for any Experiment Start
   function hiddenValue(currentHiddenFieldName, currentHiddenFieldValue) {
-    var ExistingHiddenFieldName = getCookie('HiddenFieldNameContactUs');
-    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
+    var ExistingHiddenFieldName = getCookie('HiddenFieldNameContact');
+    var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
 
     if (!ExistingHiddenFieldName) {
-      setCookie('HiddenFieldNameContactUs', currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueContactUs', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-      setCookie('HiddenFieldNameContactUs', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-      setCookie('HiddenFieldValueContactUs', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -140,7 +140,7 @@
       var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
       if (intellimize1) {
         clearInterval(spz_cro_Interval);
-        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContactUs');
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
         //check if hidden field value is empty then only set the value else set the value with , seperated
         if (intellimize1.value == '') {
           intellimize1.value = ExistingHiddenFieldValue;

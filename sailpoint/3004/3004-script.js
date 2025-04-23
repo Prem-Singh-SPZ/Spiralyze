@@ -11,9 +11,14 @@
                         let keepChanges = setInterval(() => {
                             if (document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt') && document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt').textContent !== 'Streamline identity and access management') {
                                 heroSectionUpdate();
-                                formModify();
                                 accordionSection();
                             }
+                            // if (document.querySelector('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row__inner .column:last-child .mkto-wrap.w-full.iron-theme #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField')) {
+                            //     formModify();
+                            // }
+                            waitForElm('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row__inner .column:last-child .mkto-wrap.w-full.iron-theme #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField').then(() => {
+                                formModify();
+                            });
                             hiddenValue('SPZ_3004', 'SPZ_3004_variant');
                         }, 10);
 
@@ -159,6 +164,19 @@
                 clearInterval(timeBuffer);
             }, 1000);
         }
+
+        MktoForms2.whenReady(function (form) {
+            form.onSuccess(function (values, followUpUrl) {
+                document.body.classList.add('form-submit');
+                document.querySelector('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row .inner-row__inner .column:first-child .column__inner').style.display = 'none';
+
+                return false;
+            });
+
+            waitForElm('.spz_3004 .mkto-wrap.w-full.iron-theme #confirm #contact_us_submit').then(() => {
+                document.querySelector('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row .inner-row__inner .column:first-child .column__inner').style.display = 'none';
+            });
+        });
     }
 
     function heroSectionUpdate() {
@@ -236,7 +254,7 @@
                     </div>
                     <div class="accordion-content" data-image="image${index + 1}">
                         <p>${item.content}</p>
-                        <a href="#" class="demo-link">Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
+                        <a href="javascript:;" class="demo-link go-to-demo">Get a demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1740474377/sailpoint/3004/arrow.svg" alt="Arrow Right"></a>
                         <div class="image-container">
                             <img src="${item.image}" alt="${item.title}">
                         </div>
@@ -276,7 +294,6 @@
                         document.querySelector('.' + imageClass).classList.add('active');
                     });
 
-                    console.log(index);
                     // Activate the first accordion item and show its image
                     if (index === 0) {
                         item.classList.add('active');
@@ -302,10 +319,7 @@
     function modifyAtlas() {
         if (document.querySelector('.spz_3004 #atlas .column.relative .column__inner .btn.btn--blue-alt')) {
             let demoBtn = document.querySelector('.spz_3004 #atlas .column.relative .column__inner .btn.btn--blue-alt');
-            demoBtn.classList.remove('btn--blue-alt');
-            demoBtn.classList.add('btn--hotpink', 'go-to-demo');
-            demoBtn.textContent = 'Get a demo';
-            demoBtn.setAttribute('href', 'javascript:;');
+            demoBtn.outerHTML = `<a class="btn btn--hotpink go-to-demo" href="javascript:;">Get a demo</a>`;
 
             waitForElm('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').then(() => {
                 document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').outerHTML = `<picture>
@@ -316,7 +330,7 @@
             });
         }
 
-        
+
         modifyCustomerStories();
     }
 
@@ -346,7 +360,7 @@
         }
         if (e.target.classList.contains('go-to-demo')) {
             e.preventDefault();
-            document.querySelector('.spz_3004 a[href="/demo"]').click();
+            document.querySelector('a[href="/demo"]').click();
         }
     });
 
