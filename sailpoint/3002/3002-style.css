@@ -253,31 +253,17 @@ select:-webkit-autofill:active {
   transition: color 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out;
   z-index: 9;
 }
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LbloptionalCollectionandUseofInformation {
-  position: relative;
-  top: unset;
-  left: unset;
-  font-weight: 400;
-}
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblcCPAAgeVerification {
-  display: none;
+
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:hover label.mktoLabel,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:hover label.mktoLabel .mktoAsterix {
+  color: #415364 !important;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel,
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix,
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel,
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error.active.typing label.mktoLabel .mktoAsterix {
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel .mktoAsterix {
   color: #e6241e !important;
-}
-
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblreceivingAdvertisingInformation,
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel#LblmandatoryCollectionandUseofPersonalInfo {
-  position: relative;
-  width: auto !important;
-  color: #415364 !important;
-  top: unset;
-  left: unset;
-  font-weight: 400;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
@@ -286,11 +272,6 @@ select:-webkit-autofill:active {
 
 .spz_3002 #mktoForm_1018.mktoForm .field-12 .mktoFieldWrap label.mktoLabel {
   top: 14px;
-}
-
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:hover label.mktoLabel,
-.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:hover label.mktoLabel .mktoAsterix {
-  color: #415364 !important;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.filled:not(.active):not(.error) label.mktoLabel,
@@ -353,10 +334,6 @@ select:-webkit-autofill:active {
   display: none;
 }
 
-.spz_3002 #mktoForm_1018.mktoForm .mktoFormRow.row_contactFormComments {
-  display: none !important;
-}
-
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap:not(.active):not(.typing):not(.filled) select.mktoField {
   color: transparent !important;
 }
@@ -380,8 +357,8 @@ select:-webkit-autofill:active {
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error .mktoField:not([type=checkbox]) {
-  border-color: #e6241e !important;
-  outline: none !important;
+  border-color: #e6241e;
+  outline: none;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError {
@@ -393,6 +370,7 @@ select:-webkit-autofill:active {
   margin: 0 0 !important;
   display: inline-block;
   z-index: 1;
+  width: 100%;
 }
 
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {

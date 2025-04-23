@@ -282,9 +282,9 @@
         // }, 5000);
 
 
-        if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')) {
-            document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments').value = 'Get live demo';
-        }
+        // if (document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments')) {
+        //     document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #contactFormComments').value = 'Get live demo';
+        // }
 
 
         waitForElm(`.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
