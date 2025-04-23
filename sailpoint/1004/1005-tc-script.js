@@ -1069,7 +1069,7 @@ style.appendChild(document.createTextNode(css));
             if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
               addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
               // removeSpecificCookieValue('spz_1004_tc', 'SPZ_1005_truecontrol');
-              hiddenValue('spz-1004', 'SPZ_1004_truecontrol');
+              hiddenValue('SPZ_1004', 'SPZ_1004_truecontrol');
               setHiddenFieldValue();
             }
             else {
@@ -1301,7 +1301,7 @@ style.appendChild(document.createTextNode(css));
         } else {
           if (body.classList.contains('spz_1004_tc')) {
             // removeSpecificCookieValue('spz_1004_tc', 'SPZ_1005_truecontrol');
-            hiddenValue('spz-1004', 'SPZ_1004_truecontrol');
+            hiddenValue('SPZ_1004', 'SPZ_1004_truecontrol');
             let callMultipleTimes = setInterval(() => {
               setHiddenFieldValue();
             }, 500);

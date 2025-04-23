@@ -292,7 +292,7 @@
                     let spzHeroInterval = setInterval(() => {
                         if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
                             addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
-                            hiddenValue('spz-1004', 'SPZ_1004_variant_2');
+                            hiddenValue('SPZ_1004', 'SPZ_1004_variant_2');
                             setHiddenFieldValue();
                         }
                         else {
@@ -485,7 +485,7 @@
                     }
                 } else {
                     if (body.classList.contains('spz-1004-v2')) {
-                        hiddenValue('spz-1004', 'SPZ_1004_variant_2');
+                        hiddenValue('SPZ_1004', 'SPZ_1004_variant_2');
                         let callMultipleTimes = setInterval(() => {
                             setHiddenFieldValue();
                         }, 500);
