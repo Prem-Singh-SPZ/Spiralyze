@@ -306,6 +306,10 @@
             demoBtn.classList.add('btn--hotpink', 'go-to-demo');
             demoBtn.textContent = 'Get a demo';
             demoBtn.setAttribute('href', 'javascript:;');
+
+            waitForElm('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').then(() => {
+                document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').outerHTML = `<pcture><source media="max-width:767" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_mobile.webp" type="image/webp"><source media="max-width:1024" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_tablet.webp" type="image/webp"><img class="vidyard-lightbox-image" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb.webp" alt="Video Thumbnail"></picture>`;
+            });
         }
 
         modifyCustomerStories();
@@ -313,7 +317,7 @@
 
     function modifyCustomerStories() {
         if (document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container') && document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container .customer-stories__content') == null) {
-            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">CUSTOMER STORIES</h2><p class="text-h2 text-cobalt text-h1">Many of the world&#8217;s leading enterprises trust SailPoint </p><p class="plain-text">50% of the Fortune 500 and 25% of the Forbes Global 2000 </p></div>`);
+            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">OUR CUSTOMERS</h2><p class="text-h2 text-cobalt text-h1">Many of the world&#8217;s leading enterprises trust SailPoint </p><p class="plain-text">50% of the Fortune 500 and 25% of the Forbes Global 2000 </p></div>`);
         }
     }
 
