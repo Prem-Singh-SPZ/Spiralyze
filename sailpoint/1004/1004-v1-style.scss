@@ -886,10 +886,25 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 
-.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.comment-toggle,
+// .spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.comment-toggle,
 .spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.field-12,
 .spz-1004-v1 .spz-form-section form.mktoForm > div:not([class]):not([id]) {
   display: none;
+}
+
+.spz-1004-v1 .spz-form-section form.mktoForm .mktoFormRow.comment-toggle {
+  margin: 14px 0;
+  svg path {
+    stroke: #415364;
+  }
+
+  .contactFormComments {
+    color: #415364;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
 }
 
 .spz-1004-v1 .spz-form-section form.mktoForm .mktoFormCol {
@@ -1022,6 +1037,10 @@ select:-webkit-autofill:active {
   color: #0071ce;
   font-size: 12px;
   font-weight: 600;
+
+  @media screen and (max-width: 767.98px) {
+    top: -10px;
+  }
 }
 
 .spz-1004-v1
@@ -1189,7 +1208,7 @@ select:-webkit-autofill:active {
   height: 16px;
   line-height: 1;
   min-width: 16px;
-  margin-top: 3px;
+  margin-top: 1px;
   cursor: pointer;
   top: 0 !important;
 }

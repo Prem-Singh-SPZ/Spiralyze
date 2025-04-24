@@ -706,9 +706,9 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 
-.spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError,
-.spz_1004_tc.form-expand .spz-form-section form.mktoForm .field-4 .mktoFieldWrap .mktoError_1.customError,
-.spz_1004_tc .spz-form-section form.mktoForm .field-4 .mktoFieldWrap:not(.emailerror) .mktoError_1.customError {
+.spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .field-3 .mktoFieldWrap .mktoError,
+.spz_1004_tc.form-expand .spz-form-section form.mktoForm .field-3 .mktoFieldWrap .mktoError_1.customError,
+.spz_1004_tc .spz-form-section form.mktoForm .field-3 .mktoFieldWrap:not(.emailerror) .mktoError_1.customError {
   display: none !important;
 }
 

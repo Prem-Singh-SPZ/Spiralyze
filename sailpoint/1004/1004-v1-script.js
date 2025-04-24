@@ -326,7 +326,7 @@
                         });
 
 
-                        document.querySelector('.spz-1004-v1 form.mktoForm #contactFormComments.mktoField').value = 'Get a demo';
+                        // document.querySelector('.spz-1004-v1 form.mktoForm #contactFormComments.mktoField').value = 'Get a demo';
 
                         waitForElm(`.spz-1004-v1 .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
                             setTimeout(() => {
