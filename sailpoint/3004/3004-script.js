@@ -20,7 +20,7 @@
                                 formModify();
                             });
                             hiddenValue('SPZ_3004', 'SPZ_3004_variant');
-                        }, 10);
+                        }, 200);
 
                         setTimeout(() => {
                             clearInterval(keepChanges);
@@ -158,11 +158,11 @@
                         }
                     }
                 });
-            }, 100);
+            }, 300);
 
             setTimeout(() => {
                 clearInterval(timeBuffer);
-            }, 1000);
+            }, 900);
         }
 
         MktoForms2.whenReady(function (form) {
