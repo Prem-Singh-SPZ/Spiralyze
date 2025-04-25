@@ -244,7 +244,7 @@ function addHero(formData, template_position, template_heroSelector, template_ad
 						<input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
 						<label class="form-label-spz">Business Email</label>
 					</div>
-					<a href="${formData.heroCTA.CTAHref}" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_1007">
+					<a href="${formData.heroCTA.CTAHref}" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_1005">
 						<span>${formData.heroCTA.CTAText}</span> 
 					</a>
 				</div>
@@ -291,9 +291,9 @@ function formPage() {
                     var formAction = document.querySelector('body #pardot-form').action;
                     //check if url has query params
                     if (formAction.includes('?')) {
-                        document.querySelector('body #pardot-form').action = formAction + '&spz=1007' + urlQuery;
+                        document.querySelector('body #pardot-form').action = formAction + '&spz=1005' + urlQuery;
                     } else {
-                        document.querySelector('body #pardot-form').action = formAction + '?spz=1007' + '&' + urlQuery;
+                        document.querySelector('body #pardot-form').action = formAction + '?spz=1005' + '&' + urlQuery;
                     }
                 });
                 waitForElm('.spz-1005-iframe-V1 form#pardot-form .submit input').then(function () {
@@ -315,9 +315,9 @@ function demoPage() {
                 setTimeout(() => {
                     var iframeSrc = document.querySelector('.blocks-page iframe').src;
                     if (iframeSrc.includes('?')) {
-                        document.querySelector('.blocks-page iframe').src = iframeSrc + '&spz=1007' + urlQuery;
+                        document.querySelector('.blocks-page iframe').src = iframeSrc + '&spz=1005' + urlQuery;
                     } else {
-                        document.querySelector('.blocks-page iframe').src = iframeSrc + '?spz=1007' + '&' + urlQuery;
+                        document.querySelector('.blocks-page iframe').src = iframeSrc + '?spz=1005' + '&' + urlQuery;
                     }
                 }, 500);
             });
@@ -331,7 +331,7 @@ if (window.location.pathname === "/") {
 if (location.href.indexOf('/demo') > -1) {
     demoPage();
 }
-if (location.href.indexOf('spz=1007') > -1) {
+if (location.href.indexOf('spz=1005') > -1) {
     formPage();
 }
 

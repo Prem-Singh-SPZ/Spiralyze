@@ -117,6 +117,110 @@ const template_additionalSection = {
     ],
 };
 
+//DEV 2/5. Find the class or ID of the control hero section and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
+const acc_template_sectionSelector = `.social-proof-logos`;
+
+//DEV 3/5. Choose where you redesigned hero section should appear
+const acc_template_position = "afterend" //"beforebegin", "beforeend", "afterend"
+
+//DEV 4/5. Headline & accordion section
+const acc_template_sectionContent = {
+    sectionHeading: "All-In-One SaaS Subscription Management",
+    sectionSubHeading: "Streamline subscription and contract billing. Automate invoicing. Stay GAAP & IFRS compliant.",
+    accordionItems: [
+        {
+            title: 'Usage-based billing',
+            content: `<p>Sync product usage with billing for accurate invoicing. No more spreadsheets and manual reconciliation.</p>
+                        <p>Charge based on license quantity, usage beyond prepaid capacity, or run a meter. Supports per unit, volume-based, tiered, and stairstep pricing schemes. No code.</p>`,
+            image: [
+                {
+                    breakPoint: 1024,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_usage_billing_6.webp",
+                },
+                {
+                    breakPoint: 768,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_usage_billing_5.webp",
+                },
+                {
+                    breakPoint: 320,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_usage_billing_3.webp",
+                },
+            ],
+        },
+        {
+            title: 'Subscription management',
+            content: `<p>Create subscription plans and individual contracts in minutes. Set prices. Enable setup fees, coupons, add-ons, and upsells.</p> 
+                        <p>Let users get custom pricing by filling out a PCI-compliant form. Auto-generate invoices for self-service billing. Sync customer data with Salesforce, HubSpot, and other CRMs.</p>`,
+            image: [
+                {
+                    breakPoint: 1024,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_subscription_management_3.webp",
+                },
+                {
+                    breakPoint: 768,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_subscription_management_2.webp",
+                },
+                {
+                    breakPoint: 320,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_subscription_management_4.webp",
+                },
+            ],
+        },
+        {
+            title: 'Revenue recognition & reporting',
+            content: `<p>Create revenue recognition rules based on your ASC 606/IFTS 15 policies. Or use premade recognition methods for fast results.</p>
+                        <p>Automate schedules, run calculations, and identify deviations. Visualize data with unlimited custom dashboards. Drill down. Generate 1-click reports. ARR summary, DSO, and 30+ others.</p>`,
+            image: [
+                {
+                    breakPoint: 1024,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_revenue_recognition__reporting_2.webp",
+                },
+                {
+                    breakPoint: 768,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_tab_revenue_recognition__reporting_2.webp",
+                },
+                {
+                    breakPoint: 320,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/image_mob_revenue_recognition__reporting_2.webp",
+                },
+            ],
+        },
+        {
+            title: 'Integrations',
+            content: `<p>Integrate with dozens of payment providers, including Stripe, Braintree, and Authorize.net. Or use our in-house payment solution.</p>`,
+            image: [
+                {
+                    breakPoint: 1024,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_20.webp",
+                },
+                {
+                    breakPoint: 768,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/img_automate_usage-based_billing_21.webp",
+                },
+                {
+                    breakPoint: 320,
+                    url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1005/mob_img_dozens_of_payment_providers_6.webp",
+                },
+            ],
+        },
+    ],
+
+    CTABlock: [
+        {
+            CTAText: "Get a demo",
+            CTAHref: "https://www.maxio.com/demo/",
+            className: "spz-primary"
+        },
+        {
+            CTAText: `Take a tour <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7046 4L20 11.2933L20 12.707L12.7049 20L11.2907 18.5862L15.8787 13.9995L14.8787 12.9998L4 12.9998L4 11.0004L14.8787 11.0004L15.8787 10.0007L11.2904 5.41379L12.7046 4Z" fill="#0042FF"/>
+                    </svg>`,
+            CTAHref: "https://www.maxio.com/tour-center/",
+            className: "spz-secondary"
+        }
+    ]
+};
+
 function addHero(formData, template_position, template_heroSelector, template_additionalSection) {
     const formTemplate = `<div class="spz-hero">
 		<div class="hero-wrapper">
@@ -140,7 +244,7 @@ function addHero(formData, template_position, template_heroSelector, template_ad
 						<input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
 						<label class="form-label-spz">Business Email</label>
 					</div>
-					<a href="${formData.heroCTA.CTAHref}" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_1007">
+					<a href="${formData.heroCTA.CTAHref}" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_1005">
 						<span>${formData.heroCTA.CTAText}</span> 
 					</a>
 				</div>
@@ -152,7 +256,7 @@ function addHero(formData, template_position, template_heroSelector, template_ad
 				</picture>
 			</div>` : ``}
 		</div>
-		${template_additionalSection?.socialProofImages ? `<div class="social-proof-logos">
+        ${template_additionalSection?.socialProofImages ? `<div class="social-proof-logos">
 			<div class="logos-wrap">
 				${template_additionalSection.socialProofImages.map(item => `<img src="${item.url}" alt="${item.alt || 'Social Proof Logo'}" class="social-proof-logo" />`).join("")}
 			</div>
@@ -180,19 +284,19 @@ function formPage() {
     var iframebodyInterval = setInterval(function () {
         var iframebodyEle = document.querySelector('body');
         if (iframebodyEle) {
-            if (!iframebodyEle.classList.contains('SPZ-1007-iframe-V1')) {
+            if (!iframebodyEle.classList.contains('spz-1005-iframe-V2')) {
                 clearInterval(iframebodyInterval);
-                iframebodyEle.classList.add('SPZ-1007-iframe-V1');
+                iframebodyEle.classList.add('spz-1005-iframe-V2');
                 waitForElm('body #pardot-form').then(function () {
                     var formAction = document.querySelector('body #pardot-form').action;
                     //check if url has query params
                     if (formAction.includes('?')) {
-                        document.querySelector('body #pardot-form').action = formAction + '&spz=1007' + urlQuery;
+                        document.querySelector('body #pardot-form').action = formAction + '&spz=1005' + urlQuery;
                     } else {
-                        document.querySelector('body #pardot-form').action = formAction + '?spz=1007' + '&' + urlQuery;
+                        document.querySelector('body #pardot-form').action = formAction + '?spz=1005' + '&' + urlQuery;
                     }
                 });
-                waitForElm('.SPZ-1007-iframe-V1 form#pardot-form .submit input').then(function () {
+                waitForElm('.spz-1005-iframe-V2 form#pardot-form .submit input').then(function () {
                     hiddenValue();
                 });
             }
@@ -204,16 +308,16 @@ function formPage() {
 function demoPage() {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('SPZ-1007-demo-V1')) {
+        if (!bodyEle.classList.contains('spz-1005-demo-V2')) {
             clearInterval(bodyInterval);
-            bodyEle.classList.add('SPZ-1007-demo-V1');
+            bodyEle.classList.add('spz-1005-demo-V2');
             waitForElm('.blocks-page iframe').then(function () {
                 setTimeout(() => {
                     var iframeSrc = document.querySelector('.blocks-page iframe').src;
                     if (iframeSrc.includes('?')) {
-                        document.querySelector('.blocks-page iframe').src = iframeSrc + '&spz=1007' + urlQuery;
+                        document.querySelector('.blocks-page iframe').src = iframeSrc + '&spz=1005' + urlQuery;
                     } else {
-                        document.querySelector('.blocks-page iframe').src = iframeSrc + '?spz=1007' + '&' + urlQuery;
+                        document.querySelector('.blocks-page iframe').src = iframeSrc + '?spz=1005' + '&' + urlQuery;
                     }
                 }, 500);
             });
@@ -227,19 +331,19 @@ if (window.location.pathname === "/") {
 if (location.href.indexOf('/demo') > -1) {
     demoPage();
 }
-if (location.href.indexOf('spz=1007') > -1) {
+if (location.href.indexOf('spz=1005') > -1) {
     formPage();
 }
 
 function mainPage() {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-1007-v1')) {
+        if (!bodyEle.classList.contains('spz-1005-v2')) {
             clearInterval(bodyInterval);
             document.cookie = "spzdevicewidth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.maxio.com";
-            removeSpecificCookieValue('#1005', ['#1005_variant1', '#1005_variant2']);
-            bodyEle.classList.add('spz-1007-v1');
-            cookieValue('#1005', '#1005_true_control');
+            removeSpecificCookieValue('#1005', ['#1005_variant1', '#1005_true_control']);
+            bodyEle.classList.add('spz-1005-v2');
+            cookieValue('#1005', '#1005_variant2');
 
             waitForElm('#content #blocks-page .hero-generic .container > div > div:first-child .my-6 a').then(function () {
                 addHero(template_heroContent, template_position, template_heroSelector, template_additionalSection);
@@ -268,9 +372,14 @@ function mainPage() {
                 // document.querySelector('.subscription-billing').insertAdjacentHTML('afterend', customerStories());
                 // document.querySelector('.customer-stories').insertAdjacentHTML('afterend', featureSection());
                 // document.querySelector('.features-sec').insertAdjacentHTML('afterend', integratedSection());
+                addHorizontalAccordion(
+                    acc_template_sectionContent, //object with the data
+                    acc_template_position, //any value you pass using insertAdjacentHTML
+                    acc_template_sectionSelector
+                );
 
-                [integratedSection(), featureSection(), customerStories(), subscriptionCont()].forEach(template => {
-                    document.querySelector('.social-proof-logos').insertAdjacentHTML('afterend', template);
+                [integratedSection(), featureSection(), customerStories()].forEach(template => {
+                    document.querySelector('.spz-bg-wrap').insertAdjacentHTML('afterend', template);
                 });
             });
 
@@ -375,157 +484,135 @@ function deleteCookie(name) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/; domain=maxio.com;';
 }
 
-// Subscription Section
-function subscriptionCont() {
-    const subscriptionCont = {
-        section: "subscription-billing",
-        container: {
-            title: "End-to-end subscription <br/> & usage-based billing",
-            features: [
-                {
-                    alignment: "right-img green-bg",
-                    featureItem: {
-                        leftContent: {
-                            fIcon: {
-                                imageURL: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/billing_bg.svg",
-                                alt: "Automate Usage-Based Billing Icon",
-                            },
-                            fiCont: {
-                                fiTitle: "Automate usage-based billing",
-                                fiDesc: "Create usage-based products, set prices, and configure catalogs in a few clicks. Collect usage data and automatically calculate line items for invoices.",
-                                readMore: {
-                                    link: "https://www.maxio.com/billing/usage-based-billing-software",
-                                    text: "Read more",
-                                },
-                            },
-                        },
-                        rightContent: {
-                            imageURL: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/img_automate_usage-based_billing_3.webp",
-                            imageURLTab: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/tab_img_automate_usage-based_billing_2.webp",
-                            imageURLMob: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/mob_img_automate_usage-based_billing_2.webp",
-                            alt: "Automate usage-based billing",
-                        },
-                    },
-                },
-                {
-                    alignment: "left-img purple-bg",
-                    featureItem: {
-                        leftContent: {
-                            fIcon: {
-                                imageURL: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/subscription.svg",
-                                alt: "Full subscription management Icon",
-                            },
-                            fiCont: {
-                                fiTitle: "Full subscription management",
-                                fiDesc: "Collect recurring payments. Manage subscriptions. Handle signups, trials, and upgrades. Automate collections.",
-                                readMore: {
-                                    link: "https://www.maxio.com/subscription-management",
-                                    text: "Read more",
-                                },
-                            },
-                        },
-                        rightContent: {
-                            imageURL: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/img_full_subscription_management_3.webp",
-                            imageURLTab: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/tab_img_full_subscription_management_2.webp",
-                            imageURLMob: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/mob_img_full_subscription_management_2.webp",
-                            alt: "Full subscription management",
-                        },
-                    },
-                },
-                {
-                    alignment: "right-img orange-bg",
-                    featureItem: {
-                        leftContent: {
-                            fIcon: {
-                                imageURL: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/revenue.svg",
-                                alt: "Revenue recognition & reporting Icon",
-                            },
-                            fiCont: {
-                                fiTitle: "Revenue recognition & reporting",
-                                fiDesc: "Automate GAAP & IFRS compliance. Generate reports on ARR, MRR, churn, renewals, etc. Get revenue waterfall & drill-down reports.",
-                                readMore: {
-                                    link: "https://www.maxio.com/revenue-recognition",
-                                    text: "Read more",
-                                },
-                            },
-                        },
-                        rightContent: {
-                            imageURL: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/img_revenue_recognition__reporting_3.webp",
-                            imageURLTab: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/tab_img_revenue_recognition__reporting_2.webp",
-                            imageURLMob: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/mob_img_revenue_recognition__reporting_2.webp",
-                            alt: "Revenue recognition & reporting",
-                        },
-                    },
-                },
-                {
-                    alignment: "left-img blue-bg",
-                    featureItem: {
-                        leftContent: {
-                            fIcon: {
-                                imageURL: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/payments.svg",
-                                alt: "Dozens of payment providers Icon",
-                            },
-                            fiCont: {
-                                fiTitle: "Dozens of payment providers",
-                                fiDesc: "Integrate with dozens of payment providers, including Stripe, Braintree, and Authorize.net. Or use our in-house payment solution.",
-                                readMore: {
-                                    link: "https://www.maxio.com/payment-gateways",
-                                    text: "See all payment gateways",
-                                },
-                            },
-                        },
-                        rightContent: {
-                            imageURL: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/img_dozens_of_payment_providers_3.webp",
-                            imageURLTab: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/tab_img_dozens_of_payment_providers_2.webp",
-                            imageURLMob: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/mob_img_dozens_of_payment_providers_2.webp",
-                            alt: "Dozens of payment providers",
-                        },
-                    },
-                },
-            ],
-        },
-    };
+function addHorizontalAccordion(content, whereToPut, template_sectionSelector) {
+    const formTemplate = `
+		<div class="spz-bg-wrap">
+			<div class="features-heading">${content.sectionHeading}</div>
+			<div class="features-subheading">${content.sectionSubHeading}</div>
+			<div class="spz-features-accordion__wrapper">
+				<div class="spz-features-accordion__row">
+				  <div class="spz-features-accordion">
+				    <div class="spz-features-accordion__contents">
+				    	${content.accordionItems.map((item, index) => {
+        return `
+				    		<div class="content ac_card_${index}">
+						        <div class="spz-features-accordion__item">
+						          <span>${item.title}</span>
+						          <div class="progress_bar"></div>
+						        </div>
+						        <div class="solution__image">
+                                    <picture>
+                                        ${item.image.map(image => `<source media="(min-width:${image.breakPoint}px)" srcset="${image.url}" />`).join("")}
+                                        <img src="${item.image[0].url}" alt="${item.title}" title="${item.title}" />
+                                    </picture>
+						        </div>
+						        <div class="solution__content">
+						        	${item.content}
+						        </div>
+						      </div>
+				    		`
+    }).join("")
+        }
+				    </div>
+				  </div>
+				</div>
+                ${content.CTABlock.length !== 0
+            ? `<div class="spz-ctas-wrap separate-block">
+                         ${content.CTABlock.map(item => `<a href=${item.CTAHref} class="${item.className} spz_tracking_1005">${item.CTAText}</a>`).join('')}
+                        </div>`
+            : ""
+        }
+			</div>
+		</div>`;
+    document
+        .querySelector(template_sectionSelector)
+        .insertAdjacentHTML(whereToPut, formTemplate);
+    // Start of Accordion Logic
+    const DURATION = 8000; // 7 seconds
+    const accordionContents = document.querySelector('.spz-features-accordion__contents');
+    const NoOfAccordion = content.accordionItems.length;
+    let currenctActive = 0;
+    let currentSlideProgress = 0;
+    let autoSlide = true;
+    let accordionPaused = false; // New flag to track pause state
 
-    // Convert to HTML
-    const subscriptionContHTML = `<section class="${subscriptionCont.section}">
-		<div class="container">
-			<div class="sb-title">${subscriptionCont.container.title}</div>
-			${subscriptionCont.container.features.map((feature) => {
-        return `<div class="sb-features ${feature.alignment}">
-							<div class="feature-item">
-								<div class="left-content">
-									<div class="f-icon">
-										<img src="${feature.featureItem.leftContent.fIcon.imageURL}" alt="${feature.featureItem.leftContent.fIcon.alt}"> 
-									</div>
-									<div class="fi-cont">
-										<div class="fi-title">${feature.featureItem.leftContent.fiCont.fiTitle}</div>
-										<div class="fi-desc">${feature.featureItem.leftContent.fiCont.fiDesc}</div>
-										<a href="${feature.featureItem.leftContent.fiCont.readMore.link}" class="fi-link group">${feature.featureItem.leftContent.fiCont.readMore.text}
-											<svg xmlns="http://www.w3.org/2000/svg" class="group-hover:translate-x-1 transform transition" width="24" height="24" viewBox="0 0 24 24" fill="none">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7046 4L20 11.2933L20 12.707L12.7049 20L11.2907 18.5862L15.8787 13.9995L14.8787 12.9998L4 12.9998L4 11.0004L14.8787 11.0004L15.8787 10.0007L11.2904 5.41379L12.7046 4Z" fill="#0042FF"></path>
-											</svg>
-										</a>
-									</div>
-								</div>
-								<div class="right-content">
-									<picture>
-										<source media="(min-width: 1024px)" srcset="${feature.featureItem.rightContent.imageURL}">
-										<source media="(min-width: 768px)" srcset="${feature.featureItem.rightContent.imageURLTab}">
-										<source media="(min-width: 300px)" srcset="${feature.featureItem.rightContent.imageURLMob}">
-										<img src="${feature.featureItem.rightContent.imageURL}" alt="${feature.featureItem.rightContent.alt}">
-									</picture>
-								</div>
-								<a href="${feature.featureItem.leftContent.fiCont.readMore.link}" class="fi-link group mobile-only">${feature.featureItem.leftContent.fiCont.readMore.text}
-									<svg xmlns="http://www.w3.org/2000/svg" class="group-hover:translate-x-1 transform transition" width="24" height="24" viewBox="0 0 24 24" fill="none">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7046 4L20 11.2933L20 12.707L12.7049 20L11.2907 18.5862L15.8787 13.9995L14.8787 12.9998L4 12.9998L4 11.0004L14.8787 11.0004L15.8787 10.0007L11.2904 5.41379L12.7046 4Z" fill="#0042FF"></path>
-									</svg>
-								</a>
-							</div>
-						</div>`;
-    }).join("")}
-		</div>
-	</section>`;
-    return subscriptionContHTML;
+    // Initialize Accordion active item 
+    accordionContents.children[currenctActive].classList.add('active');
+    //check if .spz-features-accordion is in view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!accordionPaused) {
+                    autoSlide = true;
+                }
+            }
+            else {
+                autoSlide = false;
+            }
+        });
+    }
+        , { rootMargin: "0px 0px -50% 0px" });
+    observer.observe(document.querySelector('.spz-features-accordion'));
+
+
+    // Add event listeners to accordion navigation items for hover functionality
+    Array.from(accordionContents.children).forEach((item, index) => {
+        item.querySelector('.spz-features-accordion__item').addEventListener('click', (e) => {
+            e.preventDefault();
+            accordionPaused = true; // Pause the accordion
+            autoSlide = false;
+            e.target.closest('.spz-features-accordion__item').classList.add('acc-paused');
+            if (currenctActive !== index) {
+                changeAccordionActiveItem(index);
+            }
+        });
+        item.addEventListener('mouseenter', (e) => {
+            e.preventDefault();
+            // if (currenctActive === index) {
+            autoSlide = false;
+            // }
+        });
+        item.addEventListener('mouseleave', (e) => {
+            e.preventDefault();
+            // if (currenctActive === index) {
+            if (!accordionPaused) {
+                autoSlide = true;
+            }
+            // }
+        });
+    });
+
+
+    // Running Interval
+    const autoSlideInterval = setInterval(function () {
+        if (!autoSlide || accordionPaused) return;
+        if (currentSlideProgress >= 100) {
+            currenctActive = (currenctActive + 1 >= NoOfAccordion) ? 0 : (currenctActive + 1);
+            changeAccordionActiveItem(currenctActive);
+        } else {
+            currentSlideProgress = currentSlideProgress + (100 * 200 / DURATION);
+            progressBarWidthAnimation(currenctActive, currentSlideProgress);
+        }
+    }, 200);
+
+    // Methods
+    function progressBarWidthAnimation(active, width) {
+        Array.from(accordionContents.children)[active].querySelector('.spz-features-accordion__item .progress_bar').style.width = `${width}%`;
+    }
+    function changeAccordionActiveItem(current) {
+        currentSlideProgress = 0;
+        currenctActive = current;
+
+        // Remove all active classes
+        for (let i = 0; i < NoOfAccordion; i++) {
+            Array.from(accordionContents.children)[i].classList.remove("active");
+            progressBarWidthAnimation(i, currentSlideProgress);
+        }
+        // Add active class to current item
+        Array.from(accordionContents.children)[current].classList.add("active");
+
+    }
+    // End of Accordion Logic
 }
 
 // Customer Stories Section
