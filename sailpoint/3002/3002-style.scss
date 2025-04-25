@@ -111,6 +111,10 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
     z-index: 99 !important;
   }
 
+  .intellimize-popup--backdrop {
+    z-index: 99;
+  }
+
   #sp-050-modal {
     display: none;
   }
@@ -287,8 +291,6 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   color: #415364 !important;
 }
 
-
-
 .spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap label.mktoLabel .mktoAsterix {
   display: none !important;
 }
@@ -338,10 +340,7 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   .mktoFieldWrap.error
   label.mktoLabel
   .mktoAsterix,
-.spz_3002
-  #mktoForm_1018.mktoForm
-  .mktoFieldWrap.error
-  label.mktoLabel,
+.spz_3002 #mktoForm_1018.mktoForm .mktoFieldWrap.error label.mktoLabel,
 .spz_3002
   #mktoForm_1018.mktoForm
   .mktoFieldWrap.error
@@ -577,7 +576,11 @@ $poppins: __Poppins_d55420, __Poppins_Fallback_d55420, Helvetica, Arial,
   }
 }
 
-.spz_3002 .mkto-wrap #mktoForm_1018.mktoForm input[type=checkbox][name=Global_Opt_out__c]+label{
+.spz_3002
+  .mkto-wrap
+  #mktoForm_1018.mktoForm
+  input[type="checkbox"][name="Global_Opt_out__c"]
+  + label {
   padding-left: 0;
   padding-right: 0;
 }

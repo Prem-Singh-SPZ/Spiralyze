@@ -551,11 +551,24 @@ select:-webkit-autofill:active {
   width: 100%;
 }
 
-.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.comment-toggle,
 .spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .mktoFormRow.field-4~.mktoFormRow,
 .spz_1004_tc:not(.form-expand) .spz-form-section form.mktoForm .mktoCaptchaDisclaimer,
 .spz_1004_tc .spz-form-section form.mktoForm>div:not([class]):not([id]) {
   display: none;
+}
+
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.comment-toggle{
+ margin: 6px 0 14px;
+}
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.comment-toggle svg path {
+  stroke: #415364;
+}
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFormRow.comment-toggle .contactFormComments {
+  color: #415364;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 .spz_1004_tc .spz-form-section form.mktoForm .mktoFormCol {
@@ -785,6 +798,14 @@ select:-webkit-autofill:active {
   height: 16px;
   position: relative;
   top: 2px;
+}
+
+.spz_1004_tc .spz-form-section form.mktoForm .mktoFieldWrap textarea.mktoField:not([type=checkbox]) {
+  height: 88px;
+  overflow-y: auto !important;
+  white-space: normal !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .spz_1004_tc .spz-form-section form.mktoForm .mktoCheckboxList label {
@@ -1099,7 +1120,7 @@ style.appendChild(document.createTextNode(css));
               });
             });
 
-            document.querySelector('.spz_1004_tc form.mktoForm #contactFormComments.mktoField').value = 'Get live demo';
+            // document.querySelector('.spz_1004_tc form.mktoForm #contactFormComments.mktoField').value = 'Get live demo';
 
             waitForElm(`.spz_1004_tc .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
               setTimeout(() => {
