@@ -1,0 +1,285 @@
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .comparison-section {
+     {{ module.styles.spacing.spacing_desktop.css }}
+    }
+    
+    .comparison-section .comparison-container {
+       background-image: url({{ module.styles.background_images.background_desktop.src }});
+       background-repeat: no-repeat;
+       background-size: 100% 100%;
+    }
+    
+     @media (max-width: 1000.98px) {
+        .comparison-section {
+         {{ module.styles.spacing.spacing_tablet.css }}
+        }
+      .comparison-section .comparison-container {
+        background-image: url({{ module.styles.background_images.background_tablet.src }});
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+      .comparison-section {
+         {{ module.styles.spacing.spacing_mobile.css }}
+        }
+      .comparison-section .comparison-container {
+        background-image: url({{ module.styles.background_images.background_mobile.src }});
+      }
+    }
+  {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+<div class="comparison-section">
+  <div class="comparison-container">
+    <div class="comparison-section__title">{{ module.section_title }}</div>
+    <div class="comparison-wrapper">
+      <div class="comparison-section__hero">
+          <img class="comparison-section__hero-g-logo" src="{{ module.main_logo.src|escape_url }}" alt="{{ module.main_logo.alt|escape_attr }}" {{ loadingAttr }}>
+      </div>
+      <div class="comparison-section__hero-vs">VS</div>
+      <div class="comparison-section__grid">
+        {% for item in module.comparison_cards %}
+          <a href="{{item.card_url.url.href}}" class="comparison-section__grid-item">
+            <img class="comparison-section__grid-item-logo" src="{{ item.card_icon.src|escape_url }}" alt="{{ item.card_icon.alt|escape_attr }}" {{ loadingAttr }}>
+            <span>{{ item.card_title }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+footer.footer{
+    background-color: #0B0B0A !important;
+    background-image: none !important;
+  }
+  
+  footer.footer .container-fluid.footer__container{
+    padding-top: 102px;
+  }
+  
+  footer.footer .footer-cta{
+    display: none;
+  }
+  
+    footer.footer form    .hs_recaptcha {
+          display: none;
+        }
+  
+  .comparison-section .comparison-container {
+    max-width: 1080px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 74px 100px;
+  }
+  .comparison-section .comparison-container .comparison-section__title {
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    margin-bottom: 50px;
+  }
+  .comparison-section .comparison-container .comparison-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .comparison-section .comparison-container .comparison-section__hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 308px;
+  }
+  .comparison-section .comparison-container .comparison-section__hero-vs {
+    color: #000;
+    font-family: Manrope, sans-serif !important;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -.28px;
+    line-height: 120%;
+    margin-left: 42px;
+    margin-right: 30px;
+    max-width: 39px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .comparison-section .comparison-container .comparison-section__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+  .comparison-section .comparison-container .comparison-section__grid-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 140px;
+    height: 120px;
+    padding: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 12px;
+    border: 0.663px solid #b7b7b7;
+    background: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    -webkit-box-flex: calc(33.33% - 14px);
+        -ms-flex: calc(33.33% - 14px);
+            flex: calc(33.33% - 14px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .comparison-section .comparison-container .comparison-section__grid-item:hover {
+    border: 2px solid #ff492c;
+  }
+  .comparison-section .comparison-container .comparison-section__grid-item-logo {
+    width: auto;
+    height: 36px;
+    margin-bottom: 16px;
+  }
+  .comparison-section .comparison-container .comparison-section__grid-item span {
+    color: #000;
+    font-family: Manrope, sans-serif !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.18px;
+    white-space: nowrap;
+  }
+  
+  footer.footer .container-fluid.footer__container form .hs-button, 
+  footer.footer .container-fluid.footer__container form input[type=submit]{
+      background: #ea3527;
+      border-radius: 100px;
+      color: #fff!important;
+      font-family: Manrope,sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22.4px;
+      margin: 0;
+      text-align: center;
+      border: none;
+  }
+  
+  footer.footer .container-fluid.footer__container form .hs-button:hover, 
+  footer.footer .container-fluid.footer__container form input[type=submit]:hover{
+     background: #f09135;
+  }
+  
+  footer.footer .container-fluid.footer__container form input[type=submit]:focus{
+     border: none !important;
+  }
+  
+  @media (max-width: 1000.98px) {
+    .comparison-section .comparison-container .comparison-section__title {
+      font-size: 32px;
+    }
+    .comparison-section .comparison-container .comparison-section__grid-item{
+      flex-direction: row;
+      flex: calc(50% - 14px);
+      padding: 16px 20px;
+      height: 64px;
+      width: 160px;
+    }
+    #main-content .comparison-section .comparison-container{
+      width: 688px;
+      height: 440px;
+      padding: 64px 42px;
+    }
+    .comparison-section .comparison-container .comparison-section__grid{
+      gap: 16px;
+    }
+    .comparison-section .comparison-container .comparison-section__hero{
+      min-width: 190px;
+      max-width: 190px;
+    }
+    .comparison-section .comparison-container .comparison-section__hero-vs{
+      margin-left: 25px;
+      margin-right: 18px;
+      max-width: 34px;
+      margin-top: 8px;
+      font-size: 23px;
+    }
+    .comparison-section .comparison-container .comparison-section__grid-item-logo{
+      height: 32px !important;
+      margin-right: 12px;
+      margin-bottom:0;
+    }
+    footer.footer .container-fluid.footer__container{
+      padding-top: 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    #main-content .comparison-section .comparison-container {
+      height: auto;
+      width: 100%;
+      padding: 30px;
+    }
+    .comparison-section .comparison-container .comparison-wrapper {
+      flex-direction: column;
+    }
+    .comparison-section .comparison-container .comparison-section__grid-item{
+      flex: 100%;
+      width: 280px;
+    }
+    .comparison-section .comparison-container .comparison-section__title{
+      font-size: 24px;
+      letter-spacing: -0.24px;
+      line-height: 120%;
+      padding: 0 10px;
+    }
+    .comparison-section .comparison-container .comparison-section__hero {
+      max-width: 84px;
+      min-width: 84px;
+    }
+    .comparison-section .comparison-container .comparison-section__hero-vs{
+      margin: 24px 0;
+    }
+    .comparison-section .comparison-container .comparison-section__grid{
+      gap: 8px;
+    }
+    footer.footer .container-fluid.footer__container{
+      padding-top: 392px;
+      max-width: 340px;
+    }
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    var comparisonSections = document.querySelectorAll('.comparison-section');
+    comparisonSections.forEach(function(section) {
+        var closestRow = section.closest('.row-fluid-wrapper.dnd-section');
+        if (closestRow) {
+            closestRow.classList.add('hs_footer_comp_row');
+        }
+    });
+});

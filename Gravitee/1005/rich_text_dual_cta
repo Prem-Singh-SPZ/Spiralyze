@@ -1,0 +1,199 @@
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .rtd__content-wrapper .rtd__content-container {
+      {{ module.styles.spacing_desktop.spacing_field.css }}
+    }
+    .rtd__content-wrapper .rtd__content-container .rtd__btns{
+      gap: {{ module.styles.rtd_button.gap_bw_cta ~ "px" }};
+      margin-top:{{ module.styles.rtd_button.margin_above_cta_desktop ~ "px"}};
+    }
+
+     @media (max-width: 1000.98px) {
+     .rtd__content-wrapper .rtd__content-container {
+       {{ module.styles.spacing_desktop.spacing_tablet.css }}
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns{
+       margin-top:{{ module.styles.rtd_button.margin_above_cta_tablet  ~ "px"}};
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+     .rtd__content-wrapper .rtd__content-container {
+       {{ module.styles.spacing_desktop.spacing_mobile.css }}
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns{
+       margin-top:{{ module.styles.rtd_button.margin_above_cta_mobile  ~ "px"}};
+      }
+    }
+  {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+<div class="rtd__content-wrapper">
+        <div class="rtd__content-container">
+            {% if module.show_description %}
+              <div class="rtd_desc">{{ module.rtd_description }}</div>
+            {% endif %}
+            {% if module.dual_button_options.show_buttons %}
+              <div class="rtd__btns">
+                  <a href="{{module.dual_button_options.cta_1_url.url.href}}" class="btn {{ module.dual_button_options.cta_1_style }}">{{ module.dual_button_options.cta_1_copy }}</a>
+                  {% if module.dual_button_options.show_cta_2 %}
+                    <a href="{{module.dual_button_options.cta_2_url.url.href}}" class="btn {{ module.dual_button_options.cta_2_style }}">{{ module.dual_button_options.cta_2_copy }}</a>
+                  {% endif %}    
+              </div>
+            {% endif %}
+        </div>
+    </div>
+
+    .rtd__content-wrapper .rtd__content-container {
+        max-width: 884px;
+        text-align: center;
+        margin: auto;
+      }
+      
+      .rtd__content-wrapper .rtd__content-container .rtd_desc .rtd_title_p {
+        color: #fff;
+        text-align: center;
+        font-family: "Manrope", sans-serif !important;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 20px;
+      }
+      
+      .rtd__content-wrapper .rtd__content-container .rtd_desc .rtd_title_h1{
+        color: #F8F1EE;
+        text-align: center;
+        font-family: "Manrope", sans-serif !important;
+        font-size: 48px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.96px;
+        margin-bottom: 20px;
+      }
+      
+      .rtd__content-wrapper .rtd__content-container .rtd_desc .fcs_title{
+        color: #000; 
+        text-align: center; 
+        font-family: Manrope, sans-serif; 
+        font-size: 48px; 
+        font-weight: bold; 
+        line-height: 100%; 
+        letter-spacing: -0.48px; 
+        margin-bottom: 30px;
+      }
+      
+      .rtd__content-wrapper .rtd__content-container .rtd__btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn {
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        white-space:nowrap;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-bg {
+        border-radius: 46px;
+      /*   border: 1px solid rgba(255, 255, 255, 0.03); */
+        background: linear-gradient(99deg, #f09135 2.8%, #ea3527 96.58%);
+        color: #fff;
+        font-family: "Manrope", sans-serif;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 120%;
+        padding: 16px 33.6px;
+        height: 54px;
+        transition: none;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-bg:hover {
+        background: #EA392D;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-outline {
+        border-radius: 46px;
+        color: #fff;
+        text-align: center;
+        font-family: "Manrope", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        padding: 16px 33.2px;
+        height: 52px;
+        margin: 1px 0;
+        position: relative;
+        background: #0D0B16;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-outline::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        content: "";
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        z-index: -1;
+        border-radius: 46px;
+        background: linear-gradient(to right, #F0913B, #EB3F2E);
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-outline:hover {
+        background: #F09135;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-outline:hover::before {
+         background: #F09135;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.dark-outline {
+        border-radius: 46px;
+        border: 1px solid #000;
+        color: #000;
+        text-align: center;
+        font-family: "Manrope", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        padding: 16px 32px;
+        height: 54px;
+      }
+      .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.dark-outline:hover {
+        background: #f09135;
+        color: #fff;
+        border-color: #f09135;
+      }
+      
+      @media (max-width: 767.98px) {
+        .rtd__content-wrapper .rtd__content-container .rtd_desc .rtd_title_h1 {
+          font-size: 36px !important;
+          letter-spacing: -0.72px;
+        }
+        .rtd__content-wrapper .rtd__content-container .rtd_desc .rtd_title_p {
+          font-size: 16px;
+        }
+        .rtd__content-wrapper .rtd__content-container .rtd__btns{
+          flex-direction: column;
+        }
+        .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-bg, 
+        .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.gradient-outline,
+        .rtd__content-wrapper .rtd__content-container .rtd__btns .btn.dark-outline {
+          width: 100%;
+        }
+        #main-content .body-container--comparison .span12.widget-span.widget-type-cell>.dnd-section {
+          padding: 0 10px!important;
+        }
+      }

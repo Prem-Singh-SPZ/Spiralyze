@@ -2,7 +2,7 @@
   templateType: page
   isAvailableForNewContent: true
   label: Comparison Page
-  screenshotPath: './template_previews/hero_baseline.jpg'
+  screenshotPath: './template_previews/comparison-page.png'
 -->
 {% extends "../layouts/base_spz.html" %}
 
@@ -38,16 +38,32 @@ class="body-container body-container--comparison"
         {% dnd_module path="/Spiralyze/Modules/1005/rich_text_dual_cta",%}
         {% end_dnd_module %}
         {% end_dnd_row %}
-
-        <!-- Social Proof -->
-        {% dnd_row %}
-        {% dnd_module path="/Spiralyze/Modules/social_proof_slider", %}
-        {% end_dnd_module %}
-
-        {% end_dnd_row %}
+      
         {% end_dnd_column %}
         {% end_dnd_section %}
         <!-- Hero Section Baseline End -->
+
+        <!-- Social Proof -->
+        {% dnd_section background_color={r: 248, g: 241,b: 238,a: 1},
+        full_width=false,
+        max_width=1200,
+        padding={"top": "0","bottom": "0","left": "0","right": "0","default": {"top": "0","left": "0","right":
+        "0","bottom": "0"},"mobile": {"top": "0","bottom": "0"}},
+        margin={"top": "0","bottom": "0"}
+        %}
+        {% dnd_column
+        padding={"top": "0","bottom": "0","left": "0","right": "0","default": {"top": "0","left": "0","right":
+        "0","bottom": "0"},"mobile": {"top": "0","bottom": "0"}},
+        margin={"top": "0","bottom": "0"}
+        %}
+        {% dnd_row %}
+        {% dnd_module path="/Spiralyze/Modules/social_proof_slider", %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      
+        {% end_dnd_column %}
+        {% end_dnd_section %}
+        <!-- Social Proof End -->
 
         <!-- Comparison Section -->
         {% dnd_section background_color={r: 248, g: 241,b: 238,a: 1},
@@ -72,15 +88,16 @@ class="body-container body-container--comparison"
         {% dnd_module path="/Spiralyze/Modules/1005/rich_text_dual_cta", %}
         {% end_dnd_module %}
         {% end_dnd_row %}
+      
         <!-- Footer Comparison Card -->
         {% dnd_row %}
         {% dnd_module path="/Spiralyze/Modules/1005/footer_comparison_section",%}
         {% end_dnd_module %}
         {% end_dnd_row %}
+      
         {% end_dnd_column %}
         {% end_dnd_section %}
         <!-- Comparison Section End -->
-
     </div>
 </div>
 {% end_dnd_area %}

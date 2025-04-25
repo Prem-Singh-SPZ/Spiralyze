@@ -1,0 +1,769 @@
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .sticky-holder {
+      {{ module.style.spacing.spacing_desktop.css }}
+    }
+    
+     @media (max-width: 1000.98px) {
+      .sticky-holder {
+       {{ module.style.spacing.spacing_tablet.css }}
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+      .sticky-holder {
+       {{ module.style.spacing.spacing_mobile.css }}
+      }
+    }
+  {% end_scope_css %}
+  }
+  </style>
+{% end_require_css %}
+
+<div class="sticky-holder">
+  <div class="right-content">
+    {% if module.title %}
+     <h2>{{ module.title }}</h2>
+    {% endif %}
+    {% for item in module.section %}
+    <div class="page-header section-header target {% if item.info_callout %}callout{% endif %}" id="section-{{ loop.index }}">
+
+      <div class="section-copy">
+          {% if item.section_title %}
+            <h3 class="sec-title">{{ item.section_title }}</h3>
+          {% endif %}
+          {% inline_rich_text field="section_content" value="{{ item.section_content }}" %}
+      </div>
+      {% if item.add_table %}
+      {#==all tables==#}
+       <div class="marketing-table pricing-table responsive-div-table" id="PricingDivTable{{ loop.index }}">
+        <div class="div-table-header">
+            <div class="div-table-header-cell">
+                <p class="heading--4">Features</p>
+            </div>
+            <div class="div-table-header-cell" id="p-1">
+                <p class="heading--4"><img src="{{ item.table_heading_col_1.src|escape_attr }}"
+                        alt="{{ item.table_heading_col_1.alt }}" {{ loadingAttr }}></p>
+                <div class="tooltip" id="tipProfessional"></div>
+            </div>
+            <div class="div-table-header-cell" id="p-2">
+                <p class="heading--4"><img src="{{ item.table_heading_col_2.src|escape_attr }}"
+                        alt="{{ item.table_heading_col_2.alt }}" {{ loadingAttr }}></p>
+                <div class="tooltip" id="tipEnterprise"></div>
+            </div>
+        </div>
+
+        <div class="div-table-body">
+            {% for item2 in item.feature_rows %}
+            <div class="div-table-row">
+                <div class="div-table-feature" id="f-website">
+                    <div class="pricing-table__feature-name">
+                        <dl class="feature-label">
+                            <dt class="feature-label__text">{{ item2.feature_name }}
+                                {% if item2.feature_info_popup %}
+                                <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                                    <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                        style="padding-left: 5px;"></i>
+                                    <span class="tooltiptext">
+                                        {{ item2.feature_info_popup }}
+                                    </span>
+                                </div>
+                                <br />
+                                {% endif %}
+                                {% if item2.feature_description %}
+                                <div class="benefit_pricing">
+                                    {{ item2.feature_description }}
+                                </div>
+                                {% endif %}
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+                <div class="div-table-value" headers="p-1 f-website">
+                    <div class="pricing-table__feature-value">
+                        {# Product 1 #}
+                        {% if item2.product_1_check == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/Check.svg" style="width: 20px;"
+                            alt="check icon">
+                        {% if item2.product_1_check_popup %}
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_1_check_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_1_warning == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/warning%201.svg" style="width: 20px;"
+                            alt="caution icon">
+                        {% if item2.product_1_warning_popup %}
+
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_1_warning_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_1_no == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/Cross.svg" style="width: 20px;"
+                            alt="no entry icon">
+                        {% if item2.product_1_no_popup %}
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_1_no_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_1_unlimited == true %}
+                        {{ item2.product_1_unlimited_copy }}
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="div-table-value" headers="p-2 f-website">
+                    <div class="pricing-table__feature-value">
+                        {# Product 2 #}
+                        {% if item2.product_2_check == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/Check.svg" style="width: 20px;"
+                            alt="check icon">
+                        {% if item2.product_2_check_popup %}
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_2_check_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_2_warning == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/warning%201.svg" style="width: 20px;"
+                            alt="caution icon">
+                        {% if item2.product_2_warning_popup %}
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_2_warning_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_2_no == true %}
+                        <img src="https://www.gravitee.io/hubfs/Spiralyze/1005/Cross.svg" style="width: 20px;"
+                            alt="no entry icon">
+                        {% if item2.product_2_no_popup %}
+                        <div role="tooltip" class="tooltip" id="{{ item2.feature_name }}">
+                            <i aria-describedby="{{ item2.feature_name }}" class="fas fa-info-circle"
+                                style="padding-left: 5px; position: absolute; right: 30px; top: 10px;"></i>
+                            <span class="tooltiptext">
+                                {{ item2.product_2_no_popup }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if item2.product_2_unlimited == true %}
+                        {{ item2.product_2_unlimited_copy }}
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+   {% endif %}
+
+    </div>
+    {% endfor %}
+
+
+
+
+
+  </div>
+</div>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+
+
+
+:root {
+    --bg-table-stripe: #f6f6f5;
+    --b-table: #e3e3e2;
+    --caption: #242423;
+  }
+  .tooltip {
+    display: inline;
+    position: relative;
+  }
+  .pricing-table__feature-value .tooltip {
+    position: initial;
+  }
+  .tooltip .tooltiptext {
+    background-color: #fff;
+    border-radius: 8px;
+    left: auto;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    transition: opacity .3s;
+    visibility: hidden;
+    width: 250px;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .sticky-holder {
+    position: relative;
+  }
+  .sticky-holder::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255, 73, 44, 0.00) 0%, #FF492C 50%, rgba(255, 73, 44, 0.00) 100%);
+    height: 1px;
+    width: 90%;
+    max-width: 662px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  span.pricing-table__feature-value {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 150px !important;
+    position: relative;
+    width: 150px !important;
+  }
+  .section-label {
+    font-weight: 700;
+    display: inline-block;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .page-header {
+    margin-bottom: 50px;
+    display: flex;
+  }
+  
+  .active {
+    background: #eae8f2;
+    color: #100c27!important;
+    font-weight: bold !important;
+  }
+  
+  .pricing-table__feature-value .tooltip i:before, .pricing-table .feature-label__text .tooltip i:before {
+    content: url('https://www.gravitee.io/hubfs/Spiralyze/1005/Symbol.svg');
+  }
+  
+  .marketing-table.pricing-table{
+      background: #fff;
+      border: 0;
+      border-radius: 16px;
+      flex: 0 0 50%;
+      max-width: 600px;
+      box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0.05);
+      margin: 0;
+  }
+  
+  .sticky-holder .right-content .section-copy .sec-title {
+    color: #ea3527;
+    font-family: Manrope, sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+  }
+  
+  .sticky-holder .right-content .section-copy .comp-copy-title{
+    color: #000; 
+    font-family: Manrope; 
+    font-size: 36px; 
+    font-weight: bold!important; 
+    line-height: 120%; 
+    letter-spacing: -0.72px; 
+    margin-bottom: 20px;
+  }
+  
+  .sticky-holder .right-content .section-copy .comp-copy-desc{
+    color: #000; 
+    font-family: Manrope !important; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 150%;
+  }
+  
+  .hs_footer_comp_row{
+    position:relative;
+  }
+  
+  .hs_footer_comp_row::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 1390px;
+      height: 30px;
+      border-radius: 0px 0px 40px 40px;
+      opacity: 0.85;
+      background: linear-gradient(180deg, rgba(255, 73, 44, 0.40) 0%, #FF492C 100%);
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  .hs_footer_comp_row .sticky-holder .page-header.section-header.target {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 121px;
+  }
+  .hs_footer_comp_row .sticky-holder .page-header.section-header.target .section-copy {
+    max-width: 550px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 46%;
+            flex: 0 0 46%;
+  }
+  .hs_footer_comp_row .sticky-holder .page-header.section-header.target .marketing-table.pricing-table {
+    padding: 20px;
+  }
+  
+  .responsive-div-table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px 0;
+    /* Adjust margin as needed */
+  }
+  
+  .div-table-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .div-table-header-cell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 17px 16px 15px;
+    width: 114px;
+  }
+  .div-table-header-cell .heading--4 {
+    color: #0d0b16;
+    font-family: Manrope, sans-serif !important;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+  
+  .div-table-header-cell:first-child {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: calc(100% - 228px);
+    width: 100%;
+  }
+  
+  .div-table-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .div-table-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #dadada;
+  }
+  
+  .div-table-feature,
+  .div-table-value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px 16px 15px;
+  }
+  
+  .div-table-feature {
+    text-align: left;
+    width: calc(100% - 228px);
+  }
+  .div-table-feature .pricing-table__feature-name .feature-label__text {
+    color: #000;
+    font-family: Manrope, sans-serif !important;
+    font-size: 15.8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.26px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .div-table-feature .pricing-table__feature-name .feature-label__text .tooltip {
+     margin: 1px 0 0 4px;
+     height: 16px;
+  }
+  .div-table-feature .pricing-table__feature-name .feature-label__text .tooltip .tooltiptext {
+    padding: 20px;
+    border: 1px solid #f09135;
+    color: #4e4e4e;
+    font-family: Manrope, sans-serif !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-left: 0;
+    top: 48px;
+    right: -32px;
+    left: auto;
+  }
+  .div-table-feature .pricing-table__feature-name .feature-label__text .tooltip .tooltiptext::after {
+    width: 63px;
+    height: 18px;
+    border: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='63' height='20' viewBox='0 0 63 20' fill='none'%3E%3Cpath d='M32 1L20 19.5H43L32 1Z' fill='white' stroke='url(%23paint0_linear_26116_8170)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_26116_8170' x1='31.5' y1='1' x2='31.5' y2='19.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F09135'/%3E%3Cstop offset='0.972762' stop-color='%23F09135'/%3E%3Cstop offset='0.973395' stop-color='white'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    top: -18px;
+    right: 8px;
+    margin-top: 0;
+  }
+  
+  .div-table-value {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 114.5px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .div-table-value .tooltip {
+    margin: 0;
+  }
+  .div-table-value .tooltip i.fas.fa-info-circle {
+   right: -5px!important;
+   top: -10px!important;
+  }
+  .div-table-value .tooltip .tooltiptext {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #f09135;
+    background: #fff;
+    color: #4e4e4e;
+    font-family: Manrope, sans-serif !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-left: 0;
+    top: 32px;
+    left: auto;
+    right: -32px;
+  }
+  .div-table-value .tooltip .tooltiptext::after {
+    width: 63px;
+    height: 18px;
+    border: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='63' height='20' viewBox='0 0 63 20' fill='none'%3E%3Cpath d='M32 1L20 19.5H43L32 1Z' fill='white' stroke='url(%23paint0_linear_26116_8170)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_26116_8170' x1='31.5' y1='1' x2='31.5' y2='19.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F09135'/%3E%3Cstop offset='0.972762' stop-color='%23F09135'/%3E%3Cstop offset='0.973395' stop-color='white'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    top: -18px;
+    right: 0;
+    margin-top: 0;
+  }
+  
+  .pricing-table__feature-value {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 50px;
+    /* Adjust as needed */
+  }
+  
+  .pricing-table__feature-value img {
+    width: 20px;
+    /* Adjust icon size as needed */
+    height: auto;
+  }
+  
+  /* Style the tooltip */
+  .tooltip {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #fff;
+    color: #100c27;
+    text-align: left;
+    border-radius: 6px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 120%;
+    /* Adjust for positioning */
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  .feature-label__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .feature-label__text .tooltip {
+    margin-left: 5px;
+  }
+  
+  .pricing-table__feature-value .cc-unlimited-tag {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+  /*   margin: -4px 0; */
+  }
+  
+  .pricing-table__feature-value .cc-unlimited-tag .cc-ut-img {
+    width: 24px;
+  }
+  
+  .pricing-table__feature-value .cc-unlimited-tag .cc-ut-copy {
+    color: #000; 
+    text-align: center; 
+    font-family: Manrope; 
+    font-size: 12px; 
+    font-weight: 400; 
+    line-height: 120%;
+  }
+  
+  @media (max-width: 1279.98px) {
+    #main-content .comparison-section .comparison-container {
+      padding: 74px 44px;
+    }
+  }
+  
+  @media (max-width: 1000.98px) {
+    .hs_footer_comp_row:before {
+      width: calc(100% - 80px);
+    }
+    .hs_footer_comp_row .sticky-holder .page-header.section-header.target {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 50px;
+      margin-bottom: 61px;
+    }
+    .hs_footer_comp_row .sticky-holder .page-header.section-header.target:last-child{
+      margin-bottom: 40px;
+    }
+    .marketing-table.pricing-table{
+      flex: 0 0 100%;
+      max-width: 648px;
+    }
+    .hs_footer_comp_row .sticky-holder .page-header.section-header.target .section-copy{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .sticky-holder .right-content .section-copy .sec-title{
+      margin-bottom: 20px;
+    }
+    .div-table-feature .pricing-table__feature-name .feature-label__text{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .hs_footer_comp_row:before {
+      width: calc(100% - 40px);
+      height: 20px;
+    }
+    .sticky-holder .right-content .section-copy .sec-title {
+      text-align: center;
+      font-size: 14px !important;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 0.28px;
+    }
+    .sticky-holder .right-content .section-copy .comp-copy-title {
+      font-size: 28px;
+      letter-spacing: -0.56px;
+      text-align: center;
+    }
+    .sticky-holder .right-content .section-copy .comp-copy-desc{
+      text-align: center;
+    }
+    .hs_footer_comp_row .sticky-holder .page-header.section-header.target .marketing-table.pricing-table{
+      padding: 0;
+      box-shadow: 0 0 0 6px rgba(0, 0, 0, .05);
+    }
+    .div-table-header, .div-table-row {
+      flex-wrap: wrap;
+    }
+    .div-table-header-cell{
+      width: 50%;
+      padding: 16px 16px 8px;
+    }
+    .div-table-header-cell:first-child{
+      max-width: 100%;
+      background: #0D0B16;
+      justify-content: center;
+      border-radius: 16px 16px 0 0;
+      padding: 20px 16px;
+    }
+    .div-table-header-cell .heading--4{
+      color: #FFF;
+      font-size: 18px;
+      letter-spacing: -0.18px;
+    }
+    
+    .div-table-feature{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      background: #F8F1EE;
+      border-bottom: 1px solid #DADADA;
+      padding: 19px 16px 18.5px;
+    }
+    .div-table-value{
+      width: 50%;
+      justify-content: center;
+      padding: 20px 16px;
+    }
+    .hs_footer_comp_row .sticky-holder .page-header.section-header.target {
+      gap: 20px;
+    }
+    .div-table-feature .pricing-table__feature-name .feature-label__text{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .div-table-value .tooltip i.fas.fa-info-circle{
+  /*     right: 34px!important; */
+      top: -14px!important;
+    }
+    .rtd__content-wrapper .rtd__content-container .rtd_desc .fcs_title {
+      font-size: 32px;
+      line-height: 48px;
+      letter-spacing: -0.32px;
+    }
+  /*   .div-table-value .tooltip .tooltiptext {
+      right: 8px;
+    } */
+    .div-table-value[headers*=p-1] .tooltip .tooltiptext {
+      right: auto;
+      left: calc(50% - 8px);
+    }
+    .div-table-value[headers*=p-1] .tooltip .tooltiptext::after {
+      right: auto;
+      left: 0;
+    }
+    .pricing-table__feature-value .cc-unlimited-tag {
+      flex-direction: row;
+      margin: -1.2px 0;
+      gap: 11px;
+    }
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    var scripts = document.querySelectorAll('link[href*="/template_child.min.css"]');
+    scripts.forEach(function(script) {
+        script.remove();
+    });
+});
