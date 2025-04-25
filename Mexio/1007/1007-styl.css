@@ -1,0 +1,1565 @@
+@font-face {
+    font-family: "Test Founders Grotesk";
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot");
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff2") format("woff2"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577387/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff") format("woff"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577392/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Test Founders Grotesk";
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot");
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot?#iefix") format("embedded-opentype"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff2") format("woff2"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff") format("woff"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577514/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*UI Image Section*/
+/*Social Proof Logos*/
+:root {
+    --container-width: 1220px;
+    --section-bg-color: #f1efff;
+    --content-section-width: 1024px;
+    --superheading-color: #3620ff;
+    --content-text-color: #000;
+    --cta-color: #fff;
+    --cta-background-color: #3620ff;
+    --cta-color-hover: #fff;
+    --cta-background-color-hover: #1300c1;
+}
+
+@font-face {
+    font-family: "Test Founders Grotesk";
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot");
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577390/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff2") format("woff2"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577387/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.woff") format("woff"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577392/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Test Founders Grotesk";
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot");
+    src: url("//res.cloudinary.com/spiralyze/raw/upload/v1731577513/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.eot?#iefix") format("embedded-opentype"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff2") format("woff2"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577512/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.woff") format("woff"), url("//res.cloudinary.com/spiralyze/raw/upload/v1731577514/maxio/Founders%20Grotesk%20Fonts/FoundersGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body.spz-1007-v1 #content #blocks-page .logo-banner,
+body.spz-1007-v1 #content #blocks-page .hero-generic,
+body.spz-1007-v1 #content #blocks-page section[id*=content-media-block]:not(:has(iframe)),
+body.spz-1007-v1 #content #blocks-page #testimonials,
+body.spz-1007-v1 #content #blocks-page #integrations {
+    display: none;
+}
+
+/* Header CSS Start Here */
+.spz-1007-v1 header {
+    background: #fff !important;
+    border-bottom: 1px solid #c6ced2;
+}
+
+.spz-1007-v1 header .container {
+    width: 100%;
+    max-width: 1248px;
+    gap: 0;
+}
+
+.spz-1007-v1 header a[aria-label="Maxio Logo"] svg path,
+.spz-1007-v1 header svg.open-mobile-icon path {
+    fill: #000;
+}
+
+.spz-1007-v1 header svg.close-mobile-icon line {
+    stroke: #000;
+}
+
+@media (min-width: 1280px) {
+    .spz-1007-v1 header .nav-header-container {
+        margin: 0;
+        background: transparent;
+    }
+}
+
+.spz-1007-v1 .header-menu {
+    margin-left: 32px;
+}
+
+.spz-1007-v1 .header-menu>.menu-item>a {
+    padding: 16px !important;
+    color: #000 !important;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: 0.36px;
+}
+
+.spz-1007-v1 header .nav-header-container .nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.spz-1007-v1 header .nav-header-container .nav-buttons a.underline {
+    padding: 0;
+    color: #2d2d30;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.spz-1007-v1 header .nav-header-container .nav-buttons a.underline:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.spz-1007-v1 header .nav-header-container .nav-buttons a.bg-theme-button-bg {
+    width: 176px;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.spz-1007-v1 header .nav-header-container .nav-buttons a.bg-theme-button-bg:hover {
+    background: #2d2d30;
+}
+
+@media (max-width: 1279.98px) {
+    .spz-1007-v1 header .container {
+        padding: 20px 24px;
+    }
+
+    .spz-1007-v1 header .nav-header-container {
+        background: #000;
+    }
+
+    .spz-1007-v1 .header-menu {
+        margin-left: 0;
+    }
+
+    .spz-1007-v1 .header-menu>.menu-item>a {
+        color: #fff !important;
+    }
+
+    .spz-1007-v1 header .nav-header-container .nav-buttons a.bg-theme-button-bg {
+        background: #bfee56;
+        color: #000;
+    }
+
+    .spz-1007-v1 header .nav-header-container .nav-buttons a.bg-theme-button-bg:hover {
+        background: #f1f2f2;
+    }
+
+    .spz-1007-v1 header .nav-header-container .nav-buttons a.underline {
+        color: #fff;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 header .container {
+        padding: 18px 24px;
+    }
+
+    .spz-1007-v1 header a[aria-label="Maxio Logo"] svg {
+        height: 26px;
+    }
+
+    .spz-1007-v1 header svg[class*=mobile-icon] {
+        height: 32px;
+        margin-top: -2px;
+    }
+}
+
+/* Header CSS End Here */
+/* Hero CSS Start Here */
+.spz-1007-v1 .spz-hero {
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/desk_head.webp") no-repeat;
+    background-size: 100% 1080px;
+    background-position: 0 -30px;
+    padding: 60px 0 0;
+}
+
+.spz-1007-v1 .hero-wrapper {
+    width: 100%;
+    max-width: 1284px;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+
+.spz-1007-v1 .spz-hero .content-superheading {
+    color: #0042ff;
+    text-align: center;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.spz-1007-v1 .spz-hero .content-heading {
+    text-align: center;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 108%;
+    background: linear-gradient(90deg, #000 19.1%, #002eb2 80.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 16px 0 36px;
+}
+
+.spz-1007-v1 .spz-hero .content-heading br {
+    display: none;
+}
+
+.spz-1007-v1 .spz-hero .tiles-heading {
+    color: #000;
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 24px auto 40px;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item {
+    align-items: center;
+    border-radius: 3px;
+    background: linear-gradient(180deg, rgba(0, 66, 255, 0) 0%, rgba(236, 222, 255, 0) 100%), rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 4px 4px 0px rgba(0, 20, 77, 0.04), 0px 8px 8px 0px rgba(0, 20, 77, 0.04);
+    border: 1px solid transparent;
+    padding: 22px 7px 17px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    left: 11px;
+    border-radius: 3px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/tiles_checkbox_2.svg");
+    background-size: contain;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item.active::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/maxio/1007/tiles_checkbox_3.svg");
+    background-size: contain;
+    border: none;
+    box-shadow: none;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item.active {
+    border-color: #0042ff;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.spz-1007-v1 .spz-hero .tile-item .tile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 66, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 14px;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item.active .tile-image {
+    background: #0042ff;
+    border-color: #0042ff;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item:not(:nth-of-type(1)):not(:nth-of-type(4)).active .tile-image svg path {
+    stroke: #fff;
+}
+
+.spz-1007-v1 .spz-hero .tiles-items .tile-item:nth-of-type(1).active .tile-image svg path,
+.spz-1007-v1 .spz-hero .tiles-items .tile-item:nth-of-type(4).active .tile-image svg path {
+    fill: #fff;
+}
+
+.spz-1007-v1 .spz-hero .tile-item .tile-heading {
+    color: #000;
+    text-align: center;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-group-wrapper {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 20, 77, 0.04), 0px 8px 8px 0px rgba(0, 20, 77, 0.04);
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-group-spz {
+    position: relative;
+    width: calc(100% - 178px);
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz {
+    width: 100%;
+    height: 48px;
+    padding: 0px 12px 0px 24px;
+    background: #fff;
+    border: none;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    overflow: hidden;
+    color: #000;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    outline: none;
+    transition-duration: 150ms;
+    border-radius: 3px 0px 0px 3px;
+    box-shadow: none;
+    outline: none;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:-webkit-autofill,
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:-webkit-autofill:hover,
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:-webkit-autofill:focus,
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 48px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-label-spz {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    overflow: hidden;
+    color: #808080;
+    text-overflow: ellipsis;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    pointer-events: none;
+    transition-duration: 150ms;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:focus~.form-label-spz {
+    left: 10px;
+    top: -12px;
+    display: flex;
+    height: 22px;
+    padding: 1px 6px;
+    align-items: center;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.64);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .form-field-spz:not(.is-placeholder):not(:focus):not(:placeholder-shown)~label {
+    left: 10px;
+    top: -12px;
+    display: flex;
+    height: 22px;
+    padding: 1px 6px;
+    align-items: center;
+    border-radius: 3px;
+    background: #150839;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #fff;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .hero-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 178px;
+    height: 48px;
+    border-radius: 0 3px 3px 0;
+    background: #0042ff;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+.spz-1007-v1 .spz-hero .spz-email .hero-btn:hover {
+    background: #0036cc;
+}
+
+.spz-1007-v1 .spz-hero .interface-image-wrap {
+    margin-top: 1px;
+}
+
+@media (min-width: 1430px) {
+    .spz-1007-v1 .spz-hero .interface-image-wrap {
+        height: 415px;
+        max-width: 1440px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .spz-hero {
+        padding: 59px 0 0;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/tab_head.webp") no-repeat;
+        background-size: 100% 1057px;
+        background-position: 0 -76px;
+    }
+
+    .spz-1007-v1 .spz-hero .content-heading {
+        font-size: 48px;
+        margin: 16px 0 38px;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-items {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 24px auto 40px;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-items .tile-item {
+        padding: 22px 7px 18.5px;
+    }
+
+    .spz-1007-v1 .spz-hero .interface-image-wrap {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .spz-hero {
+        padding: 33px 0 0;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1007/mob_head_4.webp") no-repeat;
+        background-size: 100% 1252px;
+        background-position: 0 -76px;
+    }
+
+    .spz-1007-v1 .hero-wrapper {
+        padding: 0 24px;
+    }
+
+    .spz-1007-v1 .spz-hero .content-superheading {
+        font-size: 16px;
+        line-height: 1.28;
+    }
+
+    .spz-1007-v1 .spz-hero .content-heading {
+        background: linear-gradient(90deg, #000 4.4%, #002eb2 97.15%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 32px;
+        margin: 0 auto;
+        margin: 27px auto 21px;
+        max-width: 95%;
+    }
+
+    .spz-1007-v1 .spz-hero .content-heading br {
+        display: block;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-heading {
+        font-size: 20px;
+        font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-items {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 24px auto 32px;
+        gap: 8px;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-items .tile-item {
+        padding: 7px 45px 7.75px 7px;
+        flex-direction: row;
+    }
+
+    .spz-1007-v1 .spz-hero .tiles-items .tile-item::before {
+        top: 50%;
+        left: unset;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .spz-1007-v1 .spz-hero .tile-item .tile-image {
+        border-radius: 3px;
+        margin: 0 12px 0 0;
+    }
+
+    .spz-1007-v1 .spz-hero .tile-item .tile-heading {
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.28;
+        justify-content: flex-start;
+        padding-bottom: 1px;
+    }
+
+    .spz-1007-v1 .spz-hero .tile-item .tile-heading br {
+        display: none;
+    }
+
+    .spz-1007-v1 .spz-hero .spz-email .form-group-wrapper {
+        flex-wrap: wrap;
+        max-width: unset;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.16);
+        padding: 8px;
+    }
+
+    .spz-1007-v1 .spz-hero .spz-email .form-group-spz {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .spz-1007-v1 .spz-hero .spz-email .form-field-spz {
+        border-radius: 3px;
+    }
+
+    .spz-1007-v1 .spz-hero .spz-email .hero-btn {
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    .spz-1007-v1 .spz-hero .interface-image-wrap {
+        margin-top: 56px;
+    }
+}
+
+/* Hero CSS End Here */
+/* Social Proof CSS End Here */
+.spz-1007-v1 .social-proof-logos {
+    margin: 32px 0;
+}
+
+.spz-1007-v1 .social-proof-logos .logos-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.spz-1007-v1 .social-proof-logos .logos-wrap .social-proof-logo {
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .social-proof-logos .logos-wrap .social-proof-logo {
+        height: 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .social-proof-logos {
+        margin: 24px 0;
+    }
+
+    .spz-1007-v1 .social-proof-logos .logos-wrap {
+        max-width: 385px;
+        justify-content: center;
+        gap: 16px 40px;
+    }
+
+    .spz-1007-v1 .social-proof-logos .logos-wrap .social-proof-logo {
+        height: 29.78px;
+    }
+}
+
+/* Social Proof CSS Start Here */
+.spz-1007-v1 .subscription-billing {
+    padding: 75px 0 80px;
+    overflow: hidden;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing {
+        padding: 52px 0 56px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing {
+        padding: 38px 0 41px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .container {
+        padding: 0 24px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-title {
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 109%;
+    text-align: center;
+    background: linear-gradient(90deg, #000 23.8%, #002eb2 75.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 57px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-title {
+        font-size: 48px;
+        margin-bottom: 59px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-title {
+        font-size: 28px;
+        margin-bottom: 53px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features {
+        margin-bottom: 57.5px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features:last-child {
+    margin-bottom: 0;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 63px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item {
+        gap: 11px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content {
+    display: flex;
+    min-height: 264px;
+    max-width: 519px;
+    gap: 24px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content {
+        max-width: initial;
+        min-height: initial;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content {
+        gap: 20px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .f-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .f-icon {
+        margin-top: 2px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .f-icon {
+        margin-top: 4px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .f-icon img {
+    width: 100%;
+    min-width: 40px;
+    height: 40px;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-title {
+    color: #000;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 32px;
+    padding-right: 10px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-title {
+        font-size: 40px;
+        margin-bottom: 16px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-title {
+        font-size: 24px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-desc {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 32px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    align-self: stretch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-desc {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-desc {
+        font-size: 18px;
+        line-height: 128%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .left-content .fi-link {
+        display: none;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 9.5px 0 9px;
+    min-height: 48px;
+    color: #0042ff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    text-decoration: none;
+    border-bottom: 1px solid #0042ff;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link.mobile-only {
+        display: inline-flex;
+        align-self: flex-start;
+        margin-left: 62px;
+    }
+
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link.mobile-only svg {
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link.mobile-only {
+        display: none;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link svg {
+    margin-left: 13px;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link:hover {
+    color: #0036cc;
+    border-bottom: 1px solid #0036cc;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .fi-link:hover svg path {
+    fill: #0036cc;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .right-content {
+    position: relative;
+    max-width: 650px;
+    text-align: center;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .right-content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    width: 346px;
+    height: 346px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 346px;
+    opacity: 0.3;
+    filter: blur(150px);
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features .feature-item .right-content::before {
+        top: 50%;
+        right: -25%;
+        transform: translate(-50%, -50%);
+        width: 233px;
+        height: 233px;
+        fill: #019875;
+        opacity: 0.2;
+        filter: blur(100px);
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features .feature-item .right-content img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.right-img .feature-item {
+    flex-direction: row;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features.right-img .feature-item {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .spz-1007-v1 .subscription-billing .sb-features.right-img .feature-item .right-content::before {
+        top: 50%;
+        right: 48px;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.left-img .feature-item {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .subscription-billing .sb-features.left-img .feature-item {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .spz-1007-v1 .subscription-billing .sb-features.left-img .feature-item .right-content::before {
+        top: 50%;
+        left: 48px;
+        right: initial;
+    }
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.green-bg .feature-item .right-content::before {
+    background: #019875;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.purple-bg .feature-item .right-content::before {
+    background: #50f;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.orange-bg .feature-item .right-content::before {
+    background: #ff8000;
+}
+
+.spz-1007-v1 .subscription-billing .sb-features.blue-bg .feature-item .right-content::before {
+    background: #05f;
+}
+
+.spz-1007-v1 .customer-stories {
+    padding: 90px 0 95px;
+    background: radial-gradient(112.03% 112.03% at 50% 112.03%, rgba(0, 66, 255, 0.5) 0%, rgba(128, 0, 255, 0.5) 50%, rgba(0, 0, 0, 0) 100%), #000;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories {
+        padding: 49.5px 0 56px;
+        background: radial-gradient(100% 100% at 50% 100%, rgba(0, 66, 255, 0.5) 0%, rgba(128, 0, 255, 0.5) 50%, rgba(0, 0, 0, 0) 100%), #000;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories {
+        padding: 41.5px 0 40.5px;
+        background: radial-gradient(100.03% 100.03% at 50% 100.03%, rgba(0, 66, 255, 0.5) 0%, rgba(128, 0, 255, 0.5) 50%, rgba(0, 0, 0, 0) 100%), #000;
+    }
+}
+
+.spz-1007-v1 .customer-stories .container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories .container {
+        padding: 0 24px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__header {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__header {
+        max-width: 265px;
+        margin: 0 auto 40px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__subtitle {
+    color: #fff;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__subtitle {
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__subtitle {
+        font-size: 13px;
+        line-height: 128%;
+        letter-spacing: 1.3px;
+        margin-bottom: 12px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__title {
+    text-align: center;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    background: linear-gradient(90deg, #fff 1.24%, #b2c6ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__title {
+        font-size: 28px;
+        line-height: 100%;
+    }
+}
+
+.spz-1007-v1 .customer-stories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__grid {
+        gap: 12px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__item {
+    border-radius: 3px;
+    background: #f5f6fc;
+    padding: 18px 24px 25px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__item {
+        padding: 18px 24px 13px;
+        min-height: 258px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__item {
+        padding: 5.5px 16px 20px;
+        min-height: 223px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__item-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__item-content {
+        justify-content: space-between;
+        height: initial;
+    }
+}
+
+.spz-1007-v1 .customer-stories__stat {
+    display: flex;
+    align-items: center;
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 12px;
+}
+
+.spz-1007-v1 .customer-stories__stat>span {
+    color: #0042ff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    margin-right: 6.5px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__stat {
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__stat {
+        margin-bottom: 11px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__quote {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 124%;
+    min-height: 80px;
+    margin-bottom: 15.5px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .customer-stories__quote {
+        margin-bottom: 15.5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__quote {
+        min-height: initial;
+        margin-bottom: 19px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__author {
+    display: flex;
+    align-items: center;
+}
+
+.spz-1007-v1 .customer-stories__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    object-fit: cover;
+    margin-right: 19px;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .customer-stories__avatar {
+        margin-right: 12px;
+    }
+}
+
+.spz-1007-v1 .customer-stories__author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.spz-1007-v1 .customer-stories__author-name {
+    color: #000;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128%;
+    margin-bottom: 4px;
+}
+
+.spz-1007-v1 .customer-stories__author-title {
+    color: #808080;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%;
+}
+
+.spz-1007-v1 .features-sec {
+    padding: 80px 0;
+    background: #f5f6fc;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec {
+        padding: 56px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec {
+        padding: 40px 0;
+    }
+}
+
+.spz-1007-v1 .features-sec .container {
+    max-width: 1268px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec .container {
+        padding: 0 24px;
+    }
+}
+
+.spz-1007-v1 .features-sec__title {
+    color: #000;
+    text-align: center;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 64px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec__title {
+        font-size: 48px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec__title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+}
+
+.spz-1007-v1 .features-sec__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec__grid {
+        gap: 16px;
+    }
+}
+
+.spz-1007-v1 .features-sec__item {
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 20, 77, 0.06), 0px 8px 16px 0px rgba(0, 20, 77, 0.08);
+    padding: 25px;
+    min-height: 196px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec__item {
+        padding: 24px 24px 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec__item {
+        padding: 16px 16px 14.065px;
+        min-height: initial;
+    }
+}
+
+.spz-1007-v1 .features-sec__icon {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec__icon {
+        margin-bottom: 20px;
+    }
+}
+
+.spz-1007-v1 .features-sec__icon img {
+    max-width: 50px;
+    height: auto;
+}
+
+.spz-1007-v1 .features-sec__item-title {
+    color: #000;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .features-sec__item-title {
+        margin-bottom: 14.5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec__item-title {
+        margin-bottom: 12.5px;
+    }
+}
+
+.spz-1007-v1 .features-sec__item-description {
+    color: #2d2d30;
+    font-family: "Test Founders Grotesk", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .features-sec__item-description {
+        align-self: stretch;
+    }
+}
+
+.spz-1007-v1 .integrate-section {
+    background: #000000;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.spz-1007-v1 .integrate-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.spz-1007-v1 .integrate-wrapper::before {
+    position: absolute;
+    content: "";
+    top: -46.39px;
+    right: -39.54px;
+    width: 914px;
+    height: 327px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1740389391/maxio/1007/BG-Gradient.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    filter: blur(150px);
+    transform: rotate(6deg);
+}
+
+.spz-1007-v1 .integrate-section .content-wrap {
+    width: 32.5%;
+    max-width: 400px;
+    z-index: 99;
+}
+
+.spz-1007-v1 .integrate-section .content-heading {
+    font-family: "Test Founders Grotesk";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    background: linear-gradient(86deg, #fff 5.12%, #99b8ff 85.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 24px;
+}
+
+.spz-1007-v1 .integrate-section .content {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.28;
+}
+
+.spz-1007-v1 .integrate-section .integrate-cta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 48px;
+    margin-top: 24px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+    border-bottom: 1px solid #fff;
+    z-index: 1;
+}
+
+.spz-1007-v1 .integrate-section .integrate-cta:hover {
+    color: #c6ced2;
+    border-color: #c6ced2;
+}
+
+.spz-1007-v1 .integrate-section .integrate-cta svg {
+    margin-left: 13px;
+}
+
+.spz-1007-v1 .integrate-section .integrate-cta:hover svg path {
+    fill: #c6ced2;
+}
+
+.spz-1007-v1 .integrate-section .logos-wrap {
+    width: 63.8%;
+    max-width: 786px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 99;
+}
+
+.spz-1007-v1 .integrate-section .logos-item {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120.5px;
+}
+
+.spz-1007-v1 .integrate-section .logos-item .integrate-logo {
+    width: auto;
+    height: 72px;
+    object-fit: contain;
+}
+
+.spz-1007-v1 .integrate-section .logos-wrap+.integrate-cta {
+    display: none;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-1007-v1 .integrate-section {
+        padding: 57px 0;
+    }
+
+    .spz-1007-v1 .integrate-wrapper::before {
+        top: unset;
+        bottom: -38.823px;
+        left: calc(60% - 97px);
+        right: initial;
+        margin: 0 auto;
+        filter: blur(115px);
+        transform: rotate(12deg) translateX(-50%);
+    }
+
+    .spz-1007-v1 .integrate-section .content-wrap {
+        width: 100%;
+        max-width: unset;
+        text-align: center;
+    }
+
+    .spz-1007-v1 .integrate-section .content-heading {
+        padding-bottom: 23px;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-wrap {
+        width: 100%;
+        max-width: unset;
+        margin: 42px 0;
+        gap: 16px;
+    }
+
+    .spz-1007-v1 .integrate-section .content-wrap .integrate-cta {
+        display: none;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-wrap+.integrate-cta {
+        display: inline-flex;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-1007-v1 .integrate-section {
+        padding: 40px 0;
+    }
+
+    .spz-1007-v1 .integrate-wrapper::before {
+        width: 538px;
+        height: 192px;
+        left: calc(50% - 18px);
+        bottom: -44.79px;
+        filter: blur(70px);
+        transform: rotate(20deg) translateX(-50%);
+    }
+
+    .spz-1007-v1 .integrate-section .content-wrap {
+        text-align: left;
+    }
+
+    .spz-1007-v1 .integrate-section .content-heading {
+        font-size: 28px;
+        padding-bottom: 24px;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-wrap {
+        margin: 40px 0;
+        gap: 8px;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-item {
+        height: 52px;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-item .integrate-logo {
+        height: 30px;
+    }
+
+    .spz-1007-v1 .integrate-section .logos-wrap+.integrate-cta {
+        margin: 0;
+    }
+}
