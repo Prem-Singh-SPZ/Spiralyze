@@ -35,7 +35,7 @@
                 <div class="form-section">
                   ${formData.SuperHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-superheading">${formData.SuperHeading}</div>` : ""}
                   ${formData.Heading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.Heading}</div>` : ""}
-                  <div class="the-form"></div>
+                  <div class="the-form mkto-wrap"></div>
                   <div class="submit_spz">
                     <h3 class="text-center">Thank you!</h3>
                     <h4 class="text-center">Your download should start automatically, if it does not, click the button below.</h4>
