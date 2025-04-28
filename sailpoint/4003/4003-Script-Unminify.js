@@ -128,7 +128,7 @@
               `;
 
               let checkVariantHero = setInterval(() => {
-                if (document.querySelectorAll('.spz-hero').length == 0) {
+                if (document.querySelectorAll('.social-proof-logos').length == 0) {
                   document.querySelector(template_heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
                   loadVidyardScript(initializeVidyardPlayer);
                 }
