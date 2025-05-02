@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Manrope:wght@200..800&display=swap");
+
+body {
+  background: #0d0b16;
+
+  &.local-dev .row-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: 1300px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 0 20px;
+    }
+  }
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  // min-height: 100vh;
+}
+
+body {
+  position: relative;
+
+  .row-fluid-custom {
+    @media (max-width: 1300px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 1139px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 0 20px;
+    }
+  }
+
+  // Hubspot Styling
+  // header,
+  // footer {
+  //   display: none;
+  // }
+
+  // .body-container-wrapper {
+  //   padding-top: 0;
+  // }
+}

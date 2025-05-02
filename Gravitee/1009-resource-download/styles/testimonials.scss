@@ -1,0 +1,114 @@
+// Testimonial Section Start
+.testimonial-section {
+  .testimonial-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+
+    // margin: 80px 0 64px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimonial-card {
+      position: relative;
+      backdrop-filter: blur(25px);
+      padding: 28.5px 40px 32px;
+      border-radius: 12px;
+      background: linear-gradient(to bottom, #ea392d, #ea392d00);
+      min-height: 302px;
+
+      @media (max-width: 1200px) {
+        min-height: 249px;
+      }
+
+      @media (max-width: 767.98px) {
+        min-height: 304px;
+        padding: 28.5px 30px 32px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        width: calc(100% - 2.5px);
+        border-radius: 12px;
+        background: #181621;
+        border-radius: 11px;
+        z-index: 0;
+      }
+
+      .testimonial-reviews {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+
+        .testimonial-stars {
+          img {
+            width: auto;
+            max-height: 22px;
+          }
+        }
+        .testimonial-g2 {
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .testimonial-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 47px);
+        position: relative;
+        z-index: 1;
+
+        .testimonial-feat {
+          color: #fff;
+          font-family: "Manrope", sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+          margin-bottom: 12px;
+          // margin-left: -8px;
+        }
+
+        .testimonial-text {
+          overflow: hidden;
+          color: #fff;
+          // text-overflow: ellipsis;
+          // white-space: nowrap;
+          font-family: "Manrope", sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 150%;
+        }
+        .testimonial-author {
+          @media (max-width: 767.98px) {
+            margin-top: 24px;
+          }
+
+          .testimonial-author-name {
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
+// Testimonial Section End
