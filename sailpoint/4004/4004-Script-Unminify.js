@@ -37,9 +37,7 @@
                   ${formData.Heading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.Heading}</div>` : ""}
                   <div class="the-form mkto-wrap"></div>
                   <div class="submit_spz">
-                    <h3 class="text-center">Thank you!</h3>
-                    <h4 class="text-center">Your download should start automatically, if it does not, click the button below.</h4>
-                    <a id="resource-asset" class="mt-2 btn btn--blue" href="https://docs.sailpoint.com/wp-content/uploads/SailPoint-Horizons-of-Identity-Security-Report-2024-2025-SP2487.pdf" target="_blank" rel="noopener">Get my copy</a>
+                    <h3 class="text-white">Thank you!</h3><p class="text-white my-2" style="text-align: center;">Want to learn more? Visit our <a class="underline underline-offset-4 hover:no-underline" href="/identity-library">Identity Library</a>.</p><p class="text-white" style="text-align: center;">Didn't automatically open?</p><a id="resource-asset" class="mt-2 btn btn--blue-alt" href="https://docs.sailpoint.com/wp-content/uploads/SailPoint-Horizons-of-Identity-Security-Report-2024-2025-SP2487.pdf" target="_blank" rel="noopener">Download</a>
                   </div>
                 </div>
               </div>`;
