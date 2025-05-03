@@ -533,10 +533,19 @@
             document.querySelector('.hero-right-section').style.height = curDivHt + curCoverHt + 'px';
             document.querySelector('.hero-right-section').style.marginBottom =  '-' + curCoverHt + 'px';
             
+            //when screen is resized below 1280px, remove the sticky class and set the height to auto 
+            if (window.innerWidth < 1280) {
+                document.querySelector('body').classList.remove('form-sticky');
+                document.querySelector('.hero-right-section').style.height = 'auto';
+                document.querySelector('.hero-right-section').style.marginBottom =  '0px';
+            } else {
+                document.querySelector('body').classList.add('form-sticky');
+            }
         });
 
         // start observing for resize
         resize_ob.observe(document.querySelector(".form-overlay"));
+
 
         
 
