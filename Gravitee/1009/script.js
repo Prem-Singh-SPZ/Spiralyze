@@ -1,6 +1,7 @@
 let bodyInterval;
 
 function formInit() {
+
     waitForElm('form.hs-form-private .hs-input').then(function (formElement) {
 
         focusFields();
@@ -58,14 +59,26 @@ function setupEventListeners() {
     const showFields = ['spz-firstname', 'spz-lastname', 'spz-email'];
     document.querySelectorAll('.hs-input').forEach(function (el) {
         let name = el.getAttribute('name');
-        if (name) {
-            el.closest('fieldset').classList.add(`spz-${name}`);
+        if (name && el.closest('.hs-form-field')) {
+            el.closest('.hs-form-field').classList.add(`spz-${name}`);
+
+            // check if the label span is empty and add the input placeholder as a label with all the null checks
+            if (el.closest('.field').querySelector('label span').textContent === '' && el.getAttribute('placeholder')) {
+                el.closest('.field').querySelector('label span').textContent = el.getAttribute('placeholder');
+            }
         }
 
-        if (!showFields.some(field => el.closest('fieldset').classList.contains(field))) {
-            el.closest('fieldset').classList.add('spz-hidden');
+        if (document.querySelectorAll('.hs-input:not([type="checkbox"]):not([type="hidden"])').length > 2) {
+            if (el.closest('.hs-form-field') && !showFields.some(field => el.closest('.hs-form-field').classList.contains(field))) {
+                el.closest('.hs-form-field').classList.add('spz-hidden');
+            }
+            if (document.querySelector('.legal-consent-container')) {
+                document.querySelector('.legal-consent-container').classList.add('spz-hidden');
+            }
         }
     });
+
+
 
     const commentField = document.querySelector('.spz-comments');
     if (commentField && !document.querySelector('.spz-anchor')) {
@@ -97,6 +110,30 @@ function setupEventListeners() {
         input.removeEventListener('blur', handleBlur);
         input.addEventListener('blur', handleBlur);
     });
+
+    makeFormCompatible();
+}
+
+function makeFormCompatible() {
+    //country field label change
+    let country_row = document.querySelector('.hs_contacts_country') || document.querySelector('.hs_country');
+    if (country_row) {
+        country_row.querySelector('label span').textContent = 'Country';
+    }
+
+    let email_row = document.querySelector('.hs_email');
+    if (email_row) {
+        email_row.querySelector('label span').textContent = 'Work Email';
+    }
+
+    if (document.querySelector('.spz-lastname') && document.querySelector('.spz-email') && !document.querySelector('.spz-lastname + .spz-email')) {
+        if (document.querySelector('.spz-lastname').closest('fieldset')) {
+            document.querySelector('.spz-lastname').closest('fieldset').insertAdjacentElement('afterend', document.querySelector('.spz-email'));
+        }
+        else {
+            document.querySelector('.spz-lastname').insertAdjacentElement('afterend', document.querySelector('.spz-email'));
+        }
+    }
 }
 
 function handleFocus(el) {
@@ -114,7 +151,7 @@ function handleBlur(el) {
 
 function checkAndShowFields() {
     const fields = ['hs-firstname', 'hs-lastname', 'hs-email'];
-    const hiddenFields = document.querySelectorAll('fieldset.spz-hidden:not(.hs-comments)');
+    const hiddenFields = document.querySelectorAll('form.hs-form-private .spz-hidden:not(.hs-comments)');
     const allInitialFieldsFilled = fields.every(field => {
         const input = document.querySelector(`.${field} .hs-input`);
         return input && input.value.trim() !== null && input.value.trim() !== '' && input.value.trim() !== undefined;
