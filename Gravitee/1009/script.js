@@ -1,43 +1,50 @@
 let bodyInterval;
+let formObservers = {}; // To store observers for each form
 
-function formInit() {
-
-    waitForElm('form.hs-form-private .hs-input').then(function (formElement) {
-
-        focusFields();
-        setupEventListeners();
-        checkAndShowFields();
-
-        // Set up a MutationObserver to watch for changes within the form
-        formObserver = new MutationObserver(function (mutations) {
-            mutations.forEach(mutation => {
-                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                    checkAndShowFields();
-                    focusFields();
-                } else if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
-                    // Value of an input changed, could be autofill
-                    checkAndShowFields();
-                }
-            });
+function formInit(formElement) {
+    const formId = formElement.id || Math.random().toString(36).substring(7); // Get existing ID or create a random one
+    formObservers[formId] = new MutationObserver(function (mutations) {
+        mutations.forEach(mutation => {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                checkAndShowFields(formElement);
+                focusFields(formElement);
+            } else if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
+                // Value of an input changed, could be autofill
+                checkAndShowFields(formElement);
+            }
         });
-
-        // Start observing the form for changes (add more options if needed)
-        formObserver.observe(formElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['value'] });
-
-        // Optionally, set a timeout to stop observing after a reasonable delay
-        // setTimeout(() => {
-        //     if (formObserver) {
-        //         formObserver.disconnect();
-        //     }
-        // }, 10000);
-
     });
+
+    // Start observing the specific form for changes
+    formObservers[formId].observe(formElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['value'] });
+
+    const inputElements = formElement.querySelectorAll('.hs-input');
+    focusFields(formElement);
+    setupEventListeners(formElement);
+    checkAndShowFields(formElement);
+
+    // Optionally, set a timeout to stop observing after a reasonable delay
+    // setTimeout(() => {
+    //     if (formObservers[formId]) {
+    //         formObservers[formId].disconnect();
+    //         delete formObservers[formId];
+    //     }
+    // }, 10000);
 }
 
 function initScript() {
     bodyInterval = setInterval(function () {
-        if (document.querySelectorAll('form.hs-form-private .hs-input').length > 0) {
-            formInit();
+        const formWrappers = document.querySelectorAll('.form-wrapper-spz');
+        if (formWrappers.length > 0) {
+            formWrappers.forEach(wrapper => {
+                const formsInWrapper = wrapper.querySelectorAll('form');
+                formsInWrapper.forEach(form => {
+                    // Check if this form has already been initialized
+                    if (!formObservers[form.id || 'noId']) {
+                        formInit(form);
+                    }
+                });
+            });
         }
     }, 200);
 
@@ -46,18 +53,18 @@ function initScript() {
     }, 5000);
 }
 
-function setupEventListeners() {
-    window.addEventListener("click", function (e) {
+function setupEventListeners(formElement) {
+    formElement.addEventListener("click", function (e) {
         if (e.target.classList.contains("hs-button")) {
-            checkError();
+            checkError(formElement);
         }
         if (e.target.closest('ul') && e.target.closest('ul').classList.contains('hs-error-msgs')) {
-            checkError();
+            checkError(formElement);
         }
     });
 
     const showFields = ['spz-firstname', 'spz-lastname', 'spz-email'];
-    document.querySelectorAll('.hs-input').forEach(function (el) {
+    formElement.querySelectorAll('.hs-input').forEach(function (el) {
         let name = el.getAttribute('name');
         if (name && el.closest('.hs-form-field')) {
             el.closest('.hs-form-field').classList.add(`spz-${name}`);
@@ -68,41 +75,39 @@ function setupEventListeners() {
             }
         }
 
-        if (document.querySelectorAll('.hs-input:not([type="checkbox"]):not([type="hidden"])').length > 2) {
+        if (formElement.querySelectorAll('.hs-input:not([type="checkbox"]):not([type="hidden"])').length > 2) {
             if (el.closest('.hs-form-field') && !showFields.some(field => el.closest('.hs-form-field').classList.contains(field))) {
                 el.closest('.hs-form-field').classList.add('spz-hidden');
             }
-            if (document.querySelector('.legal-consent-container')) {
-                document.querySelector('.legal-consent-container').classList.add('spz-hidden');
+            if (formElement.querySelector('.legal-consent-container')) {
+                formElement.querySelector('.legal-consent-container').classList.add('spz-hidden');
             }
         }
     });
 
+    // const commentField = formElement.querySelector('.spz-comments');
+    // if (commentField && !formElement.querySelector('.spz-anchor')) {
+    //     commentField.querySelector('.field').classList.add('spz-hidden');
+    //     commentField.insertAdjacentHTML(`afterbegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic" rel="nofollow">[Comment +]</a></div>`);
 
-
-    const commentField = document.querySelector('.spz-comments');
-    if (commentField && !document.querySelector('.spz-anchor')) {
-        commentField.querySelector('.field').classList.add('spz-hidden');
-        commentField.insertAdjacentHTML(`afterbegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic" rel="nofollow">[Comment +]</a></div>`);
-
-        const commentAnchor = document.querySelector('.spz-anchor a.show-comment-dynamic');
-        commentAnchor.addEventListener('click', function () {
-            commentField.querySelector('.field').classList.toggle('spz-hidden');
-            document.querySelector('.spz-anchor').classList.add('spz-hidden');
-        });
-    }
+    //     const commentAnchor = formElement.querySelector('.spz-anchor a.show-comment-dynamic');
+    //     commentAnchor.addEventListener('click', function () {
+    //         commentField.querySelector('.field').classList.toggle('spz-hidden');
+    //         formElement.querySelector('.spz-anchor').classList.add('spz-hidden');
+    //     });
+    // }
 
     const fieldsToCheck = ['hs-firstname', 'hs-lastname', 'hs-email'];
     fieldsToCheck.forEach(function (field) {
-        const fieldElement = document.querySelector(`.${field} .hs-input`);
+        const fieldElement = formElement.querySelector(`.${field} .hs-input`);
         if (fieldElement) {
-            fieldElement.addEventListener('input', checkAndShowFields);
-            fieldElement.addEventListener('change', checkAndShowFields);
+            fieldElement.addEventListener('input', () => checkAndShowFields(formElement));
+            fieldElement.addEventListener('change', () => checkAndShowFields(formElement));
         }
     });
 
     // Ensure event listeners are also set for any initially hidden fields that become visible
-    const allInputs = document.querySelectorAll('.hs-input');
+    const allInputs = formElement.querySelectorAll('.hs-input');
     allInputs.forEach(input => {
         // Re-apply focus/blur listeners in case new fields appeared
         input.removeEventListener('focus', handleFocus); // Avoid duplicate listeners
@@ -111,27 +116,32 @@ function setupEventListeners() {
         input.addEventListener('blur', handleBlur);
     });
 
-    makeFormCompatible();
+    makeFormCompatible(formElement);
 }
 
-function makeFormCompatible() {
+function makeFormCompatible(formElement) {
     //country field label change
-    let country_row = document.querySelector('.hs_contacts_country') || document.querySelector('.hs_country');
-    if (country_row) {
+    let country_row = formElement.querySelector('.hs_contacts_country') || formElement.querySelector('.hs_country');
+    if (country_row ) {
         country_row.querySelector('label span').textContent = 'Country';
     }
 
-    let email_row = document.querySelector('.hs_email');
-    if (email_row) {
+    let email_row = formElement.querySelector('.hs_email');
+    if (email_row && email_row.querySelector('label span').textContent.toLowerCase().includes('email')) {
         email_row.querySelector('label span').textContent = 'Work Email';
     }
 
-    if (document.querySelector('.spz-lastname') && document.querySelector('.spz-email') && !document.querySelector('.spz-lastname + .spz-email')) {
-        if (document.querySelector('.spz-lastname').closest('fieldset')) {
-            document.querySelector('.spz-lastname').closest('fieldset').insertAdjacentElement('afterend', document.querySelector('.spz-email'));
+    let phone_input = formElement.querySelector('.hs-input[name="phone"]');
+    if (phone_input) {
+        phone_input.setAttribute('placeholder', 'Work Phone');
+    }
+
+    if (formElement.querySelector('.spz-lastname') && formElement.querySelector('.spz-email') && !formElement.querySelector('.spz-lastname + .spz-email')) {
+        if (formElement.querySelector('.spz-lastname').closest('fieldset')) {
+            formElement.querySelector('.spz-lastname').closest('fieldset').insertAdjacentElement('afterend', formElement.querySelector('.spz-email'));
         }
         else {
-            document.querySelector('.spz-lastname').insertAdjacentElement('afterend', document.querySelector('.spz-email'));
+            formElement.querySelector('.spz-lastname').insertAdjacentElement('afterend', formElement.querySelector('.spz-email'));
         }
     }
 }
@@ -144,16 +154,16 @@ function handleFocus(el) {
 function handleBlur(el) {
     setTimeout(() => {
         el.target.closest('.field').classList.remove('field-focus');
-        checkError();
+        checkError(el.target.form); // Pass the form element to checkError
         checkValid(el.target);
     }, 500);
 }
 
-function checkAndShowFields() {
+function checkAndShowFields(formElement) {
     const fields = ['hs-firstname', 'hs-lastname', 'hs-email'];
-    const hiddenFields = document.querySelectorAll('form.hs-form-private .spz-hidden:not(.hs-comments)');
+    const hiddenFields = formElement.querySelectorAll('.spz-hidden');
     const allInitialFieldsFilled = fields.every(field => {
-        const input = document.querySelector(`.${field} .hs-input`);
+        const input = formElement.querySelector(`.${field} .hs-input`);
         return input && input.value.trim() !== null && input.value.trim() !== '' && input.value.trim() !== undefined;
     });
 
@@ -165,9 +175,9 @@ function checkAndShowFields() {
 }
 
 // On input focus add class on closest parent .field class
-function focusFields() {
+function focusFields(formElement) {
     setTimeout(() => {
-        document.querySelectorAll('.hs-input').forEach(function (el) {
+        formElement.querySelectorAll('.hs-input').forEach(function (el) {
             el.removeEventListener('focus', handleFocus);
             el.addEventListener('focus', handleFocus);
             el.removeEventListener('blur', handleBlur);
@@ -185,24 +195,25 @@ function checkValid(el) {
         el.closest('.field').classList.add('field-valid');
     }
 
-    if (document.querySelectorAll('.field-valid').length >= 4) {
-        document.querySelectorAll('.spz-hidden:not(.hs-comments)').forEach(function (el) {
-            el.classList.remove('spz-hidden');
-        });
-    }
+    // const formElement = el.closest('form');
+    // if (formElement && formElement.querySelectorAll('.field-valid').length >= 4) {
+    //     formElement.querySelectorAll('.spz-hidden:not(.hs-comments)').forEach(function (el) {
+    //         el.classList.remove('spz-hidden');
+    //     });
+    // }
 }
 
 // Add .field-error class on closest parent .field class if .error is exist on .hs-input
-function checkError() {
+function checkError(formElement) {
     let timeBuffer = setInterval(() => {
-        document.querySelectorAll('.hs-input').forEach(function (el) {
+        formElement.querySelectorAll('.hs-input').forEach(function (el) {
             if (el.closest('.field').querySelector('.error') != null) {
                 el.closest('.field').classList.add('field-error');
             } else {
                 el.closest('.field').classList.remove('field-error');
             }
         });
-        document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
+        formElement.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
             if (el && el.value) {
                 el.closest('.field').classList.add('input-filled');
             } else {
