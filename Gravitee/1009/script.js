@@ -100,6 +100,13 @@ function setupEventListeners(formElement) {
                 if (!allInitialFieldsFilled) {
                     dependentField.classList.add('spz-hidden');
                 }
+
+                if (elem === '.hs_us_state') {
+                    const stateLabel = dependentField.closest('.field').querySelector('label span');
+                    if (stateLabel && stateLabel.textContent === '') {
+                        stateLabel.textContent = 'State';
+                    }
+                }
             });
         }
     }
@@ -173,7 +180,7 @@ function makeFormCompatible(formElement) {
 
     if (formElement.querySelector('.spz-lastname') && formElement.querySelector('.spz-email') && !formElement.querySelector('.spz-lastname + .spz-email')) {
         if (formElement.querySelector('.spz-lastname').closest('fieldset')) {
-            formElement.querySelector('.spz-lastname').closest('fieldset').insertAdjacentElement('afterend', formElement.querySelector('.spz-email'));
+            formElement.querySelector('.spz-lastname').closest('fieldset').insertAdjacentElement('afterend', formElement.querySelector('.spz-email').closest('fieldset'));
         }
         else {
             formElement.querySelector('.spz-lastname').insertAdjacentElement('afterend', formElement.querySelector('.spz-email'));
