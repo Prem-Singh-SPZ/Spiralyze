@@ -411,11 +411,21 @@ form.hs-form-private > fieldset .hs-form-field:not(.hs-fieldtype-checkbox) {
 form.hs-form-private > fieldset:not(.form-columns-2):has(.hs-firstname, .hs-lastname) {
   width: calc(50% - 8px);
 }
+@media screen and (max-width: 767.98px) {
+  form.hs-form-private > fieldset:not(.form-columns-2):has(.hs-firstname, .hs-lastname) {
+    width: 100%;
+  }
+}
 form.hs-form-private > .hs-form-field:not(.hs-fieldtype-checkbox) {
   width: 100%;
 }
 form.hs-form-private > .hs-form-field:not(.hs-fieldtype-checkbox).hs-firstname, form.hs-form-private > .hs-form-field:not(.hs-fieldtype-checkbox).hs-lastname {
   width: calc(50% - 8px);
+}
+@media screen and (max-width: 767.98px) {
+  form.hs-form-private > .hs-form-field:not(.hs-fieldtype-checkbox).hs-firstname, form.hs-form-private > .hs-form-field:not(.hs-fieldtype-checkbox).hs-lastname {
+    width: 100%;
+  }
 }
 form.hs-form-private .hs_submit.hs-submit {
   width: 100%;
@@ -428,6 +438,7 @@ form.hs-form-private .hs-form-booleancheckbox label input[type=checkbox] + span 
   margin: 0 !important;
   line-height: 1;
 }
-form.hs-form-private .hs-richtext, form.hs-form-private .hs-fieldtype-checkbox {
+form.hs-form-private .hs-richtext,
+form.hs-form-private .hs-fieldtype-checkbox {
   text-align: left;
 }

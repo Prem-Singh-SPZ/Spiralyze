@@ -79,11 +79,30 @@ function setupEventListeners(formElement) {
             if (el.closest('.hs-form-field') && !showFields.some(field => el.closest('.hs-form-field').classList.contains(field))) {
                 el.closest('.hs-form-field').classList.add('spz-hidden');
             }
+
             if (formElement.querySelector('.legal-consent-container')) {
                 formElement.querySelector('.legal-consent-container').classList.add('spz-hidden');
             }
         }
     });
+
+    checkDependentField('.hs_us_state');
+
+    function checkDependentField(elem) {
+        if (formElement.querySelector('.hs-dependent-field')) {
+            waitForElm('.hs-dependent-field ' + elem + ':not(.spz-hidden)').then(() => {
+                const dependentField = formElement.querySelector('.hs-dependent-field').querySelector(elem + ':not(.spz-hidden)');
+                const fields = ['hs-firstname', 'hs-lastname', 'hs-email'];
+                const allInitialFieldsFilled = fields.every(field => {
+                    const input = formElement.querySelector(`.${field} .hs-input`);
+                    return input && input.value.trim() !== null && input.value.trim() !== '' && input.value.trim() !== undefined;
+                });
+                if (!allInitialFieldsFilled) {
+                    dependentField.classList.add('spz-hidden');
+                }
+            });
+        }
+    }
 
     // const commentField = formElement.querySelector('.spz-comments');
     // if (commentField && !formElement.querySelector('.spz-anchor')) {
@@ -122,18 +141,34 @@ function setupEventListeners(formElement) {
 function makeFormCompatible(formElement) {
     //country field label change
     let country_row = formElement.querySelector('.hs_contacts_country') || formElement.querySelector('.hs_country');
-    if (country_row ) {
-        country_row.querySelector('label span').textContent = 'Country';
+    if (country_row) {
+        //set below label only if span is empty or it consist a long label of more than three words
+        if (country_row.querySelector('label span').textContent === '' || country_row.querySelector('label span').textContent.split(' ').length > 3) {
+            country_row.querySelector('label span').textContent = 'Country';
+        }
     }
 
     let email_row = formElement.querySelector('.hs_email');
-    if (email_row && email_row.querySelector('label span').textContent.toLowerCase().includes('email')) {
-        email_row.querySelector('label span').textContent = 'Work Email';
+    if (email_row) {
+        if (email_row.querySelector('label span').textContent === '' || email_row.querySelector('label span').textContent.split(' ').length > 3) {
+            //check if the firstname has aestrisk and add it to the email label
+            let firstName = formElement.querySelector('.hs_firstname') || formElement.querySelector('.hs-firstname');
+            if (firstName && firstName.querySelector('label span').textContent.includes('*')) {
+                email_row.querySelector('label span').textContent = 'Work Email*';
+            } else {
+                email_row.querySelector('label span').textContent = 'Work Email';
+            }
+        }
     }
 
     let phone_input = formElement.querySelector('.hs-input[name="phone"]');
     if (phone_input) {
         phone_input.setAttribute('placeholder', 'Work Phone');
+    }
+
+    let textArea = formElement.querySelector('.hs-fieldtype-textarea textarea');
+    if (textArea) {
+        textArea.setAttribute('placeholder', '');
     }
 
     if (formElement.querySelector('.spz-lastname') && formElement.querySelector('.spz-email') && !formElement.querySelector('.spz-lastname + .spz-email')) {

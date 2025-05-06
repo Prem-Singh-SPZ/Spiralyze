@@ -142,7 +142,10 @@ form .hs-form-field:not(.hs-fieldtype-checkbox) > label .hs-form-required {
 form .hs-form-field:not(.hs-fieldtype-checkbox) .input {
   margin-right: 0 !important;
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox) .input .hs-input:not([type="checkbox"]) {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox)
+  .input
+  .hs-input:not([type="checkbox"]) {
   border-radius: 4px;
   border: 1px solid #c6ced2;
   background: #fff;
@@ -156,14 +159,23 @@ form .hs-form-field:not(.hs-fieldtype-checkbox) .input .hs-input:not([type="chec
   transition-duration: 0.15s;
 }
 @media (max-width: 767.98px) {
-  form .hs-form-field:not(.hs-fieldtype-checkbox) .input .hs-input:not([type="checkbox"]) {
+  form
+    .hs-form-field:not(.hs-fieldtype-checkbox)
+    .input
+    .hs-input:not([type="checkbox"]) {
     font-size: 16px;
   }
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox) .input .hs-input:not([type="checkbox"]):focus {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox)
+  .input
+  .hs-input:not([type="checkbox"]):focus {
   border: 1px solid #6f7382 !important;
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox) .input .hs-input:not([type="checkbox"]):-webkit-autofill,
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox)
+  .input
+  .hs-input:not([type="checkbox"]):-webkit-autofill,
 form
   .hs-form-field:not(.hs-fieldtype-checkbox)
   .input
@@ -203,7 +215,11 @@ form .hs-form-field:not(.hs-fieldtype-checkbox) .hs-error-msgs li label {
   margin: 10px 0 0;
   padding: 0;
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox) .hs-error-msgs + .hs-error-msgs label {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox)
+  .hs-error-msgs
+  + .hs-error-msgs
+  label {
   margin-top: 0;
 }
 form .hs-form-field:not(.hs-fieldtype-checkbox).field-focus > label {
@@ -218,13 +234,19 @@ form .hs-form-field:not(.hs-fieldtype-checkbox).field-focus > label {
     top: -12px;
   }
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox).field-focus > label span:first-child {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox).field-focus
+  > label
+  span:first-child {
   padding: 0 6px;
   text-align: left;
   color: #100c26;
   font-size: 13px;
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox).field-focus .input .hs-input:not([type="checkbox"]) {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox).field-focus
+  .input
+  .hs-input:not([type="checkbox"]) {
   border: 1px solid #6f7382 !important;
 }
 form .hs-form-field:not(.hs-fieldtype-checkbox).input-filled > label {
@@ -239,13 +261,19 @@ form .hs-form-field:not(.hs-fieldtype-checkbox).input-filled > label {
     top: -12px;
   }
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox).input-filled > label span:first-child {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox).input-filled
+  > label
+  span:first-child {
   padding: 0 6px;
   text-align: left;
   color: #100c26;
   font-size: 13px;
 }
-form .hs-form-field:not(.hs-fieldtype-checkbox).field-error .input .hs-input:not([type="checkbox"]) {
+form
+  .hs-form-field:not(.hs-fieldtype-checkbox).field-error
+  .input
+  .hs-input:not([type="checkbox"]) {
   border: 1px solid #ff0004 !important;
 }
 form .form-columns-2 {
@@ -375,6 +403,10 @@ form.hs-form-private {
 
     &:not(.form-columns-2):has(.hs-firstname, .hs-lastname) {
       width: calc(50% - 8px);
+
+      @media screen and (max-width: 767.98px) {
+        width: 100%;
+      }
     }
   }
 
@@ -384,6 +416,9 @@ form.hs-form-private {
     &.hs-firstname,
     &.hs-lastname {
       width: calc(50% - 8px);
+      @media screen and (max-width: 767.98px) {
+        width: 100%;
+      }
     }
   }
 
@@ -397,16 +432,16 @@ form.hs-form-private {
         text-align: left;
         line-height: 1;
 
-        p{
-            margin: 0 !important;
-        line-height: 1;
-
+        p {
+          margin: 0 !important;
+          line-height: 1;
         }
       }
     }
   }
 
-  .hs-richtext, .hs-fieldtype-checkbox{
+  .hs-richtext,
+  .hs-fieldtype-checkbox {
     text-align: left;
   }
 }
