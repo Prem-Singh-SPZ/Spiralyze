@@ -70,29 +70,3 @@
     {% endfor %}
 
 </div>
-
-{% for item in module.sticky_accordion_section %}
-{% inline_text field="section_cta_title" value="{{ item.section_cta_title }}" %}
-{% inline_text field="top_title" value="{{ item.top_title }}" %}
-{% inline_rich_text field="top_description" value="{{ item.top_description }}" %}
-{% for item2 in item.tab_section %}
-{% inline_text field="tab_cta_title" value="{{ item2.tab_cta_title }}" %}
-{% inline_rich_text field="tab_content" value="{{ item2.tab_content }}" %}
-{% endfor %}
-{% inline_text field="bottom_title" value="{{ item.bottom_title }}" %}
-{% inline_rich_text field="bottom_description" value="{{ item.bottom_description }}" %}
-{% for item2 in item.section_cta %}
-{% inline_text field="button_copy" value="{{ item2.button_copy }}" %}
-{% set href = item2.button_link.url.href %}
-{% if item2.button_link.url.type is equalto "EMAIL_ADDRESS" %}
-{% set href = "mailto:" + href %}
-{% endif %}
-<a {% if item2.button_link.url.type is equalto "CALL_TO_ACTION" %} href="{{ href }}" {# The href here is not escaped as
-    it is not editable and functions as a JavaScript call to the associated CTA #} {% else %}
-    href="{{ href|escape_url }}" {% endif %} {% if item2.button_link.open_in_new_tab %} target="_blank" {% endif %} {%
-    if item2.button_link.rel %} rel="{{ item2.button_link.rel|escape_attr }}" {% endif %}>
-    Link text
-</a>
-{{ item2.button_style }}
-{% endfor %}
-{% endfor %}
