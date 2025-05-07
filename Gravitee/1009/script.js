@@ -111,17 +111,17 @@ function setupEventListeners(formElement) {
         }
     }
 
-    // const commentField = formElement.querySelector('.spz-comments');
-    // if (commentField && !formElement.querySelector('.spz-anchor')) {
-    //     commentField.querySelector('.field').classList.add('spz-hidden');
-    //     commentField.insertAdjacentHTML(`afterbegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic" rel="nofollow">[Comment +]</a></div>`);
+    const commentField = formElement.querySelector('.spz-comments');
+    if (commentField && !formElement.querySelector('.spz-anchor')) {
+        commentField.querySelector('.field').classList.add('spz-hidden');
+        commentField.insertAdjacentHTML(`afterbegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic" rel="nofollow">[Comment +]</a></div>`);
 
-    //     const commentAnchor = formElement.querySelector('.spz-anchor a.show-comment-dynamic');
-    //     commentAnchor.addEventListener('click', function () {
-    //         commentField.querySelector('.field').classList.toggle('spz-hidden');
-    //         formElement.querySelector('.spz-anchor').classList.add('spz-hidden');
-    //     });
-    // }
+        const commentAnchor = formElement.querySelector('.spz-anchor a.show-comment-dynamic');
+        commentAnchor.addEventListener('click', function () {
+            commentField.querySelector('.field').classList.toggle('spz-hidden');
+            formElement.querySelector('.spz-anchor').classList.add('spz-hidden');
+        });
+    }
 
     const fieldsToCheck = ['hs-firstname', 'hs-lastname', 'hs-email'];
     fieldsToCheck.forEach(function (field) {
@@ -237,12 +237,12 @@ function checkValid(el) {
         el.closest('.field').classList.add('field-valid');
     }
 
-    // const formElement = el.closest('form');
-    // if (formElement && formElement.querySelectorAll('.field-valid').length >= 4) {
-    //     formElement.querySelectorAll('.spz-hidden:not(.hs-comments)').forEach(function (el) {
-    //         el.classList.remove('spz-hidden');
-    //     });
-    // }
+    const formElement = el.closest('form');
+    if (formElement && formElement.querySelectorAll('.field-valid').length >= 4) {
+        formElement.querySelectorAll('.spz-hidden:not(.hs-comments)').forEach(function (el) {
+            el.classList.remove('spz-hidden');
+        });
+    }
 }
 
 // Add .field-error class on closest parent .field class if .error is exist on .hs-input

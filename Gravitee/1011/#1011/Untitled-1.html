@@ -1,0 +1,98 @@
+<div class="sticky_header_and_accordian_section">
+    <!-- hiw-tab-section Start -->
+    <div class="hiw-tab-section">
+        <div class="container">
+            <div class="tab-desktop">
+                <ul class="tab-links">
+                    {% for item in module.sticky_accordion_section %}
+                    <li class="tab-link" button-value="scroll_tab_{{loop.index}}">{{ item.section_cta_title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="tab-mob">
+                <div class="custom-dropdown">
+                    <div class="selected">Select an option</div>
+                    <ul class="dropdown-options">
+                        {% for item in module.sticky_accordion_section %}
+                        <li button-value="scroll_tab_{{loop.index}}">{{ item.section_cta_title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div><!-- END of hiw-tab-section -->
+
+    <!-- hiw-content-section Start -->
+    {% for item in module.sticky_accordion_section %}
+    <div class="hiw-content-section" id="scroll_tab_{{loop.index}}" content-value="scroll_tab_{{loop.index}}">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="top-content">
+                    <h3>{{ item.top_title }}</h3>
+                    <p>{{ item.top_description }}</p>
+                </div>
+                <div class="review-wrapper">
+                    <div class="tab-container">
+                        {% set tab_section_length = item.tab_section|length %}
+                        {% if tab_section_length > 1 %}
+                        <div class="tabs">
+                            {% for item2 in item.tab_section %}
+                            <div class="tab {% if loop.first %} active{% endif %}" data-tab="tab_{{loop.index}}"><img
+                                    src="/asstes/tab-icon.svg" class="normal" alt="Tab Icon"><img
+                                    src="/asstes/tab-icon-active.svg" class="active" alt="Tab Icon"><span>{{
+                                    item2.tab_cta_title }}</span></div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <div class="tabpanel-container">
+                            {% for item2 in item.tab_section %}
+                            <div class="tab-content" id="tab_{{loop.index}}">{{ item2.tab_content }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom-content">
+                    <h3>{{ item.bottom_title }}</h3>
+                    <p>{{ item.bottom_description }}</p>
+                </div>
+                <div class="button-wrapper">
+                    {% for item2 in item.section_cta %}
+                    <a class="btn {{ item2.button_style }}" href="{{item2.button_link.url.href}}">{{ item2.button_copy
+                        }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div> <!-- END of #create-api -->
+    {% endfor %}
+
+</div>
+
+{% for item in module.sticky_accordion_section %}
+{% inline_text field="section_cta_title" value="{{ item.section_cta_title }}" %}
+{% inline_text field="top_title" value="{{ item.top_title }}" %}
+{% inline_rich_text field="top_description" value="{{ item.top_description }}" %}
+{% for item2 in item.tab_section %}
+{% inline_text field="tab_cta_title" value="{{ item2.tab_cta_title }}" %}
+{% inline_rich_text field="tab_content" value="{{ item2.tab_content }}" %}
+{% endfor %}
+{% inline_text field="bottom_title" value="{{ item.bottom_title }}" %}
+{% inline_rich_text field="bottom_description" value="{{ item.bottom_description }}" %}
+{% for item2 in item.section_cta %}
+{% inline_text field="button_copy" value="{{ item2.button_copy }}" %}
+{% set href = item2.button_link.url.href %}
+{% if item2.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+{% set href = "mailto:" + href %}
+{% endif %}
+<a {% if item2.button_link.url.type is equalto "CALL_TO_ACTION" %} href="{{ href }}" {# The href here is not escaped as
+    it is not editable and functions as a JavaScript call to the associated CTA #} {% else %}
+    href="{{ href|escape_url }}" {% endif %} {% if item2.button_link.open_in_new_tab %} target="_blank" {% endif %} {%
+    if item2.button_link.rel %} rel="{{ item2.button_link.rel|escape_attr }}" {% endif %}>
+    Link text
+</a>
+{{ item2.button_style }}
+{% endfor %}
+{% endfor %}
