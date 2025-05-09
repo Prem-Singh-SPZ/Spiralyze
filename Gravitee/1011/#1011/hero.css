@@ -41,7 +41,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 }
 
 html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.dark-btn {
-  background: #0d0b16;
+  background: #0D0B16;
 }
 
 .body-wrapper .header {
@@ -94,17 +94,20 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 }
 
 .hero-section {
-  padding: 80px 0;
+  padding: 161px 0 80px;
   position: relative;
 }
 
 @media (max-width: 1199.98px) {
   .hero-section {
-    padding: 50px 0;
+    padding: 147px 0 50px;
+  }
+  .hero-section .container {
+    padding: 0 40px;
   }
 }
 .hero-section .container .hero-wrapper .hero-title {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
 @media (max-width: 1199.98px) {
@@ -119,7 +122,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 }
 .hero-section .container .hero-wrapper .hero-title .sub-title {
   display: block;
-  color: #f0913b;
+  color: #F0913B;
   text-align: center;
   font-size: 15px;
   font-style: normal;
@@ -139,17 +142,18 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 .hero-section .container .hero-wrapper .hero-title .main-title {
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: #FFF;
   text-align: center;
-  font-size: 40px;
+  font-size: 40px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: -0.8px;
+  font-family: Manrope, sans-serif !important;
 }
 
 .hero-section .container .hero-wrapper .hero-title .main-title span {
-  color: #ff492c;
+  color: #FF492C;
 }
 
 @media (max-width: 767.98px) {
@@ -165,7 +169,10 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 
 @media (max-width: 1199.98px) {
   .hero-section .container .hero-wrapper .hero-content {
-    margin-bottom: 32px;
+    margin-bottom: 27px;
+  }
+  .hero-section .container .hero-wrapper .hero-content .content-wrapper {
+    padding: 0;
   }
 }
 .hero-section .container .hero-wrapper .hero-content .content-wrapper .content-boxes {
@@ -200,8 +207,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
   list-style: none;
-  width: -o-calc(33.33% - 10px);
-  width: calc(33.33% - 10px);
+  width: calc(33.33% - 13.5px);
 }
 
 @media (max-width: 1199.98px) {
@@ -216,7 +222,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
   .hero-section .container .hero-wrapper .hero-content .content-wrapper .content-boxes .content-box:last-child {
     margin-bottom: 0;
@@ -231,7 +237,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
   }
 }
 .hero-section .container .hero-wrapper .hero-content .content-wrapper .content-boxes .content-box .img-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 @media (max-width: 1199.98px) {
@@ -260,12 +266,13 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 .hero-section .container .hero-wrapper .hero-content .content-wrapper .content-boxes .content-box .heading-wrapper h2 {
   margin: 0 0 24px;
   padding: 0;
-  color: #fff;
+  color: #FFF;
   text-align: center;
-  font-size: 24px;
+  font-size: 24px !important;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 31.2px;
+  font-family: Manrope, sans-serif !important;
 }
 
 @media (max-width: 767.98px) {
@@ -276,7 +283,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 .hero-section .container .hero-wrapper .hero-content .content-wrapper .content-boxes .content-box .heading-wrapper p {
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: #FFF;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -344,9 +351,9 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
   }
 }
 .hero-section .container .hero-wrapper .hero-btn .button-wrapper a.btn {
-  padding: 16.21px 10px;
+  padding: 16.21px 32px;
   border-radius: 46px;
-  color: #fff;
+  color: #FFF;
   font-family: "Manrope", sans-serif;
   text-align: center;
   font-size: 18px;
@@ -372,7 +379,7 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
 }
 
 .hero-section .container .hero-wrapper .hero-btn .button-wrapper a.btn.gradient-bg:hover {
-  background: #ea392d;
+  background: #EA392D;
 }
 
 @media (max-width: 767.98px) {
@@ -397,8 +404,8 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
   top: -1px;
   z-index: 0;
   border-radius: 46px;
-  background: -webkit-gradient(linear, left top, right top, from(#f0913b), to(#eb3f2e));
-  background: linear-gradient(to right, #f0913b, #eb3f2e);
+  background: -webkit-gradient(linear, left top, right top, from(#F0913B), to(#EB3F2E));
+  background: linear-gradient(to right, #F0913B, #EB3F2E);
 }
 
 .hero-section .container .hero-wrapper .hero-btn .button-wrapper a.btn.gradient-outline span {
@@ -406,16 +413,16 @@ html body header.header #menu-mobile .nav-menu-mobile .nav-item-mobile .button.d
   display: block;
   position: relative;
   padding: 15.21px 10px;
-  background: #0d0b16;
+  background: #0D0B16;
   border-radius: 46px;
 }
 
 .hero-section .container .hero-wrapper .hero-btn .button-wrapper a.btn.gradient-outline:hover span {
-  background: #f09135;
+  background: #F09135;
 }
 
 .hero-section .container .hero-wrapper .hero-btn .button-wrapper a.btn.gradient-outline:hover::before {
-  background: #f09135;
+  background: #F09135;
 }
 
 @media (max-width: 767.98px) {
