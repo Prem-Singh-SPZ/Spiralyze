@@ -25,48 +25,109 @@
     </div><!-- END of hiw-tab-section -->
 
     <!-- hiw-content-section Start -->
+    {% set tab_overall_index = 0 %}
+
     {% for item in module.sticky_accordion_section %}
     <div class="hiw-content-section" id="scroll_tab_{{loop.index}}" content-value="scroll_tab_{{loop.index}}">
         <div class="container">
             <div class="content-wrapper">
                 <div class="top-content">
-                    <h3>{{ item.top_title }}</h3>
-                    <p>{{ item.top_description }}</p>
+                    <h3>{{ item.top_copy.top_title }}</h3>
+                    <p>{{ item.top_copy.top_description }}</p>
                 </div>
                 <div class="review-wrapper">
+                    {% set tab_overall_index = tab_overall_index + 1 %}
                     <div class="tab-container">
                         {% set tab_section_length = item.tab_section|length %}
                         {% if tab_section_length > 1 %}
                         <div class="tabs">
-                            {% for item2 in item.tab_section %}
-                            <div class="tab {% if loop.first %} active{% endif %}" data-tab="tab_{{loop.index}}"><img
-                                    src="/asstes/tab-icon.svg" class="normal" alt="Tab Icon"><img
-                                    src="/asstes/tab-icon-active.svg" class="active" alt="Tab Icon"><span>{{
-                                    item2.tab_cta_title }}</span></div>
+                            {% for iTab in item.tab_section %}
+                            <div class="tab {% if loop.first %} active{% endif %}"
+                                data-tab="tab_{{ tab_overall_index }}{{loop.index}}">
+                                <img src="https://www.gravitee.io/hubfs/Spiralyze/1011/Stack_icon.svg" alt="Stack Icon"
+                                    class="default">
+                                <img src="https://www.gravitee.io/hubfs/Spiralyze/1011/Stack_icon_active.svg"
+                                    alt="Stack Icon" class="active">
+
+                                <span>{{iTab.tab_cta_title }}</span>
+                            </div>
                             {% endfor %}
                         </div>
                         {% endif %}
                         <div class="tabpanel-container">
-                            {% for item2 in item.tab_section %}
-                            <div class="tab-content" id="tab_{{loop.index}}">{{ item2.tab_content }}</div>
+                            {% for iTabCont in item.tab_section %}
+                            <div class="tab-content {% if loop.first %} active{% endif %}"
+                                id="tab_{{ tab_overall_index }}{{loop.index}}">{{
+                                iTabCont.tab_content }}</div>
                             {% endfor %}
                         </div>
                     </div>
 
                 </div>
                 <div class="bottom-content">
-                    <h3>{{ item.bottom_title }}</h3>
-                    <p>{{ item.bottom_description }}</p>
+                    <h3>{{ item.bottom_copy.bottom_title }}</h3>
+                    <p>{{ item.bottom_copy.bottom_description }}</p>
                 </div>
                 <div class="button-wrapper">
-                    {% for item2 in item.section_cta %}
-                    <a class="btn {{ item2.button_style }}" href="{{item2.button_link.url.href}}">{{ item2.button_copy
-                        }}</a>
+                    {% for iTabCTA in item.section_cta %}
+                    <a class="btn {{ iTabCTA.button_style }}" href="{{iTabCTA.button_link.url.href}}">{{
+                        iTabCTA.button_copy }}</a>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div> <!-- END of #create-api -->
     {% endfor %}
-
 </div>
+
+{% for item in module.sticky_accordion_section %}
+{% inline_text field="section_cta_title" value="{{ item.section_cta_title }}" %}
+{% inline_text field="top_copy.top_title" value="{{ item.top_copy.top_title }}" %}
+{% inline_text field="top_copy.top_description" value="{{ item.top_copy.top_description }}" %}
+{% for item2 in item.tab_section %}
+{% inline_text field="tab_cta_title" value="{{ item2.tab_cta_title }}" %}
+{% if item2.icon.src %}
+<img src="{{ item2.icon.src }}" alt="{{ item2.icon.alt|escape_attr }}">
+{% endif %}
+{% if item2.tab_icon_active.src %}
+
+<img src="{{ item2.tab_icon_active.src }}" alt="{{ item2.tab_icon_active.alt|escape_attr }}">
+{% endif %}
+{% inline_rich_text field="tab_content" value="{{ item2.tab_content }}" %}
+{% endfor %}
+{% inline_text field="bottom_copy.bottom_title" value="{{ item.bottom_copy.bottom_title }}" %}
+{% inline_text field="bottom_copy.bottom_description" value="{{ item.bottom_copy.bottom_description }}" %}
+{% for item2 in item.section_cta %}
+{% inline_text field="button_copy" value="{{ item2.button_copy }}" %}
+{% set href = item2.button_link.url.href %}
+{% if item2.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+{% set href = "mailto:" + href %}
+{% endif %}
+<a {% if item2.button_link.url.type is equalto "CALL_TO_ACTION" %} href="{{ href }}" {# The href here is not escaped as
+    it is not editable and functions as a JavaScript call to the associated CTA #} {% else %}
+    href="{{ href|escape_url }}" {% endif %} {% if item2.button_link.open_in_new_tab %} target="_blank" {% endif %} {%
+    if item2.button_link.rel %} rel="{{ item2.button_link.rel|escape_attr }}" {% endif %}>
+    Link text
+</a>
+{{ item2.button_style }}
+{% endfor %}
+{% endfor %}
+
+{% if module.hero_bg_and_nav_cta.background_image.src %}
+	{% set sizeAttrs = 'width="{{ module.hero_bg_and_nav_cta.background_image.width|escape_attr }}" height="{{ module.hero_bg_and_nav_cta.background_image.height|escape_attr }}"' %}
+	{% if module.hero_bg_and_nav_cta.background_image.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.hero_bg_and_nav_cta.background_image.width|escape_attr }}" height="{{ module.hero_bg_and_nav_cta.background_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+	{% elif module.hero_bg_and_nav_cta.background_image.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.hero_bg_and_nav_cta.background_image.max_width|escape_attr }}" height="{{ module.hero_bg_and_nav_cta.background_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+	{% endif %}
+	 {% set loadingAttr = module.hero_bg_and_nav_cta.background_image.loading != 'disabled' ? 'loading="{{ module.hero_bg_and_nav_cta.background_image.loading|escape_attr }}"' : '' %}
+	<img src="{{ module.hero_bg_and_nav_cta.background_image.src|escape_url }}" alt="{{ module.hero_bg_and_nav_cta.background_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+{% endif %}
+{% if module.hero_bg_and_nav_cta.update_cta_get_pricing %}
+	<!-- HTML to show when checked -->
+{% endif %}
+{% inline_text field="hero_bg_and_nav_cta.cta_1_text" value="{{ module.hero_bg_and_nav_cta.cta_1_text }}" %}
+{% if module.hero_bg_and_nav_cta.update_cta_get_demo %}
+	<!-- HTML to show when checked -->
+{% endif %}
+{% inline_text field="hero_bg_and_nav_cta.cta_2_text" value="{{ module.hero_bg_and_nav_cta.cta_2_text }}" %}
