@@ -98,11 +98,16 @@
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
+
+  img{
+    margin-left: 5px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .quickLink-section .quickLink-wrapper .right-content .quick-link {
     max-width: 100%;
     gap: 21px 20px;
+    // justify-content: center;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -115,19 +120,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 26px;
+  padding: 16px 25.7px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 1199.98px) {
   .quickLink-section .quickLink-wrapper .right-content .quick-link li {
-    padding: 16px 31px;
-    max-width: 219px;
+    padding: 16px 0;
+    max-width: 220px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 767.98px) {
   .quickLink-section .quickLink-wrapper .right-content .quick-link li {
     margin: 0 auto;
     padding: 12px 31px;
+    max-width: 100%;
   }
 }
 .quickLink-section .quickLink-wrapper .right-content .quick-link li a {
@@ -138,7 +145,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 22.4px;
-  margin-right: 8px;
   display: block;
   white-space: nowrap;
   outline: none;
