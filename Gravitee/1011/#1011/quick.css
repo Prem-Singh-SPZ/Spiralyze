@@ -46,6 +46,8 @@
 @media (max-width: 767.98px) {
   .quickLink-section .quickLink-wrapper {
     padding: 20.5px 0 23px;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 .quickLink-section .quickLink-wrapper .left-content {
@@ -163,11 +165,12 @@
   color: #ea392d;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+  text-decoration: underline;
 }
 
 .quickLink-section .quickLink-wrapper .right-content .quick-link li span svg {
