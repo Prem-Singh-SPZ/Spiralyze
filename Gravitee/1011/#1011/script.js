@@ -151,7 +151,7 @@ waitForElm('.tab-container .tabpanel-container .tab-content *').then(() => {
       const sectionId = section.id;
       const correspondingNavLink = document.querySelector(`.tab-link[button-value="${sectionId}"]`);
 
-      if (scrollY >= sectionTop - (window.innerHeight / 3) && scrollY < sectionTop + sectionHeight - (window.innerHeight / 3)) {
+      if (scrollY >= sectionTop - (window.innerHeight / 2) && scrollY < sectionTop + sectionHeight - (window.innerHeight / 2)) {
         navLinks.forEach(link => link.classList.remove('active'));
         if (correspondingNavLink) {
           correspondingNavLink.classList.add('active');
