@@ -555,9 +555,9 @@
 }
 
 .hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-bg:hover {
-  background: #EA392D;
+  background: #ea392d;
   color: #fff;
-  border-color: #EA392D;
+  border-color: #ea392d;
 }
 
 @media (max-width: 767.98px) {
@@ -566,33 +566,34 @@
   }
 }
 .hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline {
-  margin: 0.5px 0;
-  position: relative;
   padding: 0;
-}
-
-.hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline::before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  content: "";
-  left: -1px;
-  right: -1px;
-  top: -1px;
-  z-index: 0;
-  border-radius: 46px;
+  position: relative;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: -webkit-gradient(linear, left top, right top, from(#f0913b), to(#eb3f2e));
-  background: linear-gradient(to right, #f0913b, #eb3f2e);
+  background: linear-gradient(90deg, #f0913b, #eb3f2e);
 }
 
 .hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline span {
-  z-index: 0;
+  position: relative; /* To sit above the ::before */
+  z-index: 1;
   display: block;
-  position: relative;
-  padding: 15.21px 32px;
-  background: #f8f1ee;
-  border-radius: 46px;
+  padding: 15px 32px; /* Adjust padding to control border thickness */
+  background-color: #f8f1ee; /* Your inner background color */
+  border-radius: inherit; /* Inherit the border-radius from the parent */
   color: #000000;
+  text-decoration: none;
+  height: 51px;
+  width: 100%;
+  margin: 0 1px;
 }
 
 .hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline:hover span {
@@ -600,7 +601,7 @@
   color: #fff;
 }
 
-.hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline:hover::before {
+.hiw-content-section .container .content-wrapper .button-wrapper .btn.gradient-outline:hover {
   background: #f09135;
 }
 
