@@ -29,6 +29,13 @@
   backdrop-filter: blur(40px);
   box-sizing: border-box;
   justify-content: space-between;
+  overflow: auto;
+  //hide scrollbar
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  } 
 }
 
 .hiw-tab-section .container .tab-desktop .tab-links li.tab-link {
@@ -44,6 +51,7 @@
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
+  white-space: nowrap;
 }
 .hiw-tab-section .container .tab-desktop .tab-links li.tab-link.active {
   border-radius: 100px;

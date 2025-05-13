@@ -36,6 +36,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hiw-tab-section .container .tab-desktop .tab-links::-webkit-scrollbar {
+  display: none;
 }
 
 .hiw-tab-section .container .tab-desktop .tab-links li.tab-link {
@@ -53,6 +59,7 @@
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .hiw-tab-section .container .tab-desktop .tab-links li.tab-link.active {
