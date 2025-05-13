@@ -1,5 +1,6 @@
+//wrap everything in domContentLoaded
 // review-tab section
-waitForElm('.tab-container .tab').then(() => {
+waitForElm('.tab-container .tabpanel-container .tab-content *').then(() => {
   document.querySelectorAll('.tab-container').forEach(container => {
     const tabs = container.querySelectorAll('.tab');
     const contents = container.querySelectorAll('.tab-content');
