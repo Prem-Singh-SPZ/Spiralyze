@@ -1,0 +1,152 @@
+.testimonials-section {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.testimonials-section * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.testimonials-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+@media (max-width: 1024.98px) {
+  .testimonials-section.desktop-only {
+    display: none;
+  }
+}
+.testimonials-section.desktop-only #desktopTestimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.testimonials-section.desktop-only .testimonial-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.testimonials-section.mobile-only {
+  display: none;
+}
+@media (max-width: 1024.98px) {
+  .testimonials-section.mobile-only {
+    display: block;
+  }
+}
+.testimonials-section.mobile-only .swiper {
+  width: 100%;
+  padding-bottom: 30px;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1024.98px) {
+  .testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+}
+@media (max-width: 1024.98px) {
+  .testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card {
+    width: 100%;
+  }
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card blockquote {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 3px solid #ccc;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card .author-info {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card .author-info .details {
+  font-weight: normal;
+  color: #777;
+  display: block;
+  margin-top: 5px;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card .author-info .source {
+  font-style: italic;
+  color: #999;
+  display: block;
+  margin-top: 5px;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card .rating {
+  color: gold;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card.has-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card.has-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card.has-image .author-info {
+  text-align: center;
+}
+.testimonials-section.mobile-only .swiper .swiper-wrapper .swiper-slide .testimonial-card.has-image blockquote {
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+}
+.testimonials-section.mobile-only .swiper .swiper-pagination {
+  position: static;
+  margin-top: 20px;
+}
+.testimonials-section .testimonial-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

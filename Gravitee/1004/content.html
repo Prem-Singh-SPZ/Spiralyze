@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="testimonials-section desktop-only">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container" id="desktopTestimonials">
+        </div>
+    </section>
+
+    <section class="testimonials-section mobile-only">
+        <h2>Testimonials</h2>
+        <div class="swiper" id="mobileSwiper">
+            <div class="swiper-wrapper" id="mobileTestimonialsWrapper">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const testimonialsContainer = document.getElementById('desktopTestimonials');
+        // Create three column containers
+        const column1 = document.createElement('div');
+        const column2 = document.createElement('div');
+        const column3 = document.createElement('div');
+
+        // Add classes for potential styling
+        column1.classList.add('testimonial-column');
+        column2.classList.add('testimonial-column');
+        column3.classList.add('testimonial-column');
+
+        testimonialsContainer.appendChild(column1);
+        testimonialsContainer.appendChild(column2);
+        testimonialsContainer.appendChild(column3);
+
+        const testimonialsData = [
+            {
+                "quote": "Well designed product. Having APIs and Events in the same place to manage is incredible.",
+                "author": "Martin R.",
+                "rating": 4
+            },
+            {
+                "quote": "Gravitee.io has a solid developer portal for internal and external APIs. It also has capabilities to manage APIs that hit other gateways like AWS / Apigee. A great one stop shop that’s what you’re looking for.",
+                "author": "cdys",
+                "source": "reddit",
+                "rating": null
+            },
+            {
+                "quote": "Game changer. Instead of our devs taking time to be \"admins\" we can now concentrate on being developers and allow the workflow to take on the heavy lifting.",
+                "author": "Gartner User",
+                "details": "Head of Integration",
+                "source": "Gartner Peer Insights",
+                "rating": 5
+            },
+            {
+                "quote": "I would certainly recommend Gravitee. I don't have to worry about compliance anymore. And the ease of use has been extremely helpful for getting things done quickly.",
+                "author": "Oussama Bennis",
+                "details": "CTO, Billo",
+                "rating": 5
+            },
+            {
+                "quote": null,
+                "author": "Sparsh M.",
+                "details": "Back End Developer",
+                "image": "https://via.placeholder.com/80", // Replace with actual image path
+                "rating": 5
+            },
+            {
+                "quote": "We were using a different API Manager that was difficult to set up and manage. Gravitee is a breath of fresh air. Great policies that enable us to customise and control our APIs.",
+                "author": "Gartner User",
+                "details": "Senior Integration Developer",
+                "source": "Gartner Peer Insights",
+                "rating": 4
+            },
+            {
+                "quote": "Provides us a secure gateway to enable partners to integrate fast and securely with APIs. This is a huge milestone for our organization. Gets the job done!",
+                "author": "Terence Y.",
+                "details": "Manager, Application Development",
+                "rating": 5
+            },
+            {
+                "quote": "Great application. We have multiple APIs located on different servers. With Gravitee we can easily manage all our APIs at the same place.",
+                "author": "Aleksandar G.",
+                "source": "Gartner Peer Insights",
+                "rating": 4
+            },
+            {
+                "quote": "The way you manage your APIs is just so easy. Easy to adapt, easy to implement, easy security, transform policies. Even monitoring your APIs using alerts is fun.",
+                "author": "Seger P.",
+                "details": "Project Manager Infrastructure",
+                "rating": 5
+            },
+
+        ];
+
+        function renderRating(rating) {
+            if (rating === null) {
+                return '';
+            }
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                stars += i < rating ? '★' : '☆';
+            }
+            return `<div class="rating">${stars}</div>`;
+        }
+
+        testimonialsData.forEach((testimonial, index) => {
+            const card = document.createElement('div');
+            card.classList.add('testimonial-card');
+
+            if (testimonial.image) {
+                card.classList.add('has-image');
+                card.innerHTML = `
+        <img src="${testimonial.image}" alt="${testimonial.author}">
+        <div class="author-info">
+          <strong>${testimonial.author}</strong>
+          ${testimonial.details ? `<span class="details">${testimonial.details}</span>` : ''}
+        </div>
+        ${testimonial.quote ? `<blockquote>${testimonial.quote}</blockquote>` : ''}
+        ${renderRating(testimonial.rating)}
+      `;
+            } else {
+                card.innerHTML = `
+        <blockquote>${testimonial.quote}</blockquote>
+        <div class="author-info">
+          <strong>${testimonial.author}</strong>
+          ${testimonial.details ? `<span class="details">${testimonial.details}</span>` : ''}
+          ${testimonial.source ? `<span class="source">${testimonial.source}</span>` : ''}
+        </div>
+        ${renderRating(testimonial.rating)}
+      `;
+            }
+
+            // Append the card to one of the columns
+            const columnIndex = index % 3; // Distribute cards cyclically
+            if (columnIndex === 0) {
+                column1.appendChild(card);
+            } else if (columnIndex === 1) {
+                column2.appendChild(card);
+            } else {
+                column3.appendChild(card);
+            }
+        });
+
+
+
+        // Mobile Swiper
+        const mobileTestimonialsWrapper = document.getElementById('mobileTestimonialsWrapper');
+        for (let i = 0; i < testimonialsData.length; i += 2) {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            const card1Data = testimonialsData[i];
+            const card1 = document.createElement('div');
+            card1.classList.add('testimonial-card');
+            card1.innerHTML = `
+      <blockquote>${card1Data.quote || ''}</blockquote>
+      <div class="author-info">
+        <strong>${card1Data.author}</strong>
+        ${card1Data.details ? `<span class="details">${card1Data.details}</span>` : ''}
+        ${card1Data.source ? `<span class="source">${card1Data.source}</span>` : ''}
+      </div>
+      ${renderRating(card1Data.rating)}
+      ${card1Data.image ? `<img src="${card1Data.image}" alt="${card1Data.author}">` : ''}
+    `;
+            if (card1Data.image) {
+                card1.classList.add('has-image');
+                card1.innerHTML = `
+        <img src="${card1Data.image}" alt="${card1Data.author}">
+        <div class="author-info">
+          <strong>${card1Data.author}</strong>
+          ${card1Data.details ? `<span class="details">${card1Data.details}</span>` : ''}
+        </div>
+        ${card1Data.quote ? `<blockquote>${card1Data.quote}</blockquote>` : ''}
+        ${renderRating(card1Data.rating)}
+      `;
+            }
+            slide.appendChild(card1);
+
+            if (testimonialsData[i + 1]) {
+                const card2Data = testimonialsData[i + 1];
+                const card2 = document.createElement('div');
+                card2.classList.add('testimonial-card');
+                card2.innerHTML = `
+        <blockquote>${card2Data.quote || ''}</blockquote>
+        <div class="author-info">
+          <strong>${card2Data.author}</strong>
+          ${card2Data.details ? `<span class="details">${card2Data.details}</span>` : ''}
+          ${card2Data.source ? `<span class="source">${card2Data.source}</span>` : ''}
+        </div>
+        ${renderRating(card2Data.rating)}
+        ${card2Data.image ? `<img src="${card2Data.image}" alt="${card2Data.author}">` : ''}
+      `;
+                if (card2Data.image) {
+                    card2.classList.add('has-image');
+                    card2.innerHTML = `
+          <img src="${card2Data.image}" alt="${card2Data.author}">
+          <div class="author-info">
+            <strong>${card2Data.author}</strong>
+            ${card2Data.details ? `<span class="details">${card2Data.details}</span>` : ''}
+          </div>
+          ${card2Data.quote ? `<blockquote>${card2Data.quote}</blockquote>` : ''}
+          ${renderRating(card2Data.rating)}
+        `;
+                }
+                slide.appendChild(card2);
+            }
+            mobileTestimonialsWrapper.appendChild(slide);
+        }
+
+        // Initialize Swiper
+        const swiper = new Swiper('#mobileSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                577: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    });
+</script>
+
+</html>
