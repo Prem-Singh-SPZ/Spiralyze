@@ -70,64 +70,6 @@
             @media (max-width: 1024.98px) {
               width: 100%; // One card per slide on smaller mobile
             }
-
-            blockquote {
-              font-style: italic;
-              color: #555;
-              margin-bottom: 15px;
-              padding-left: 20px;
-              border-left: 3px solid #ccc;
-            }
-
-            .author-info {
-              margin-top: 15px;
-              font-weight: bold;
-              color: #333;
-
-              .details {
-                font-weight: normal;
-                color: #777;
-                display: block;
-                margin-top: 5px;
-              }
-
-              .source {
-                font-style: italic;
-                color: #999;
-                display: block;
-                margin-top: 5px;
-              }
-            }
-
-            .rating {
-              color: gold;
-              font-size: 1.2em;
-              margin-top: 10px;
-            }
-
-            &.has-image {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-
-              img {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                margin-bottom: 10px;
-                object-fit: cover;
-              }
-
-              .author-info {
-                text-align: center;
-              }
-
-              blockquote {
-                text-align: center;
-                border-left: none;
-                padding-left: 0;
-              }
-            }
           }
         }
       }
@@ -140,12 +82,90 @@
   }
 
   .testimonial-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 28px 24px;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #faf8f5;
 
-    // ... (rest of the testimonial card styles - same for both sections) ...
+    blockquote {
+      text-align: left;
+      border-left: none;
+      padding-left: 0;
+      color: #002e22;
+      font-family: Manrope, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      position: relative;
+
+      span {
+        font-weight: 700;
+      }
+
+      &:before {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 22.4px;
+        height: 16px;
+        background: url(https://www.gravitee.io/hubfs/Spiralyze/1004/assets/icons/quote.svg)
+          no-repeat center center;
+        background-size: cover;
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+
+    .author-info {
+      margin-top: 20px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      strong {
+        color: #002e22;
+        font-family: Manrope, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+
+      .details {
+        font-weight: normal;
+        color: #777;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .source {
+        color: #333;
+        font-family: Manrope, sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+      }
+    }
+
+    .rating {
+      color: gold;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    &.has-image {
+      .img-video-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        object-fit: cover;
+      }
+    }
   }
 }
