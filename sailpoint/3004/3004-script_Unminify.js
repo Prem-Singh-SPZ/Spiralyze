@@ -338,7 +338,7 @@
 
     function modifyCustomerStories() {
         if (document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container') && document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container .customer-stories__content') == null) {
-            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">OUR CUSTOMERS</h2><p class="text-h2 text-cobalt text-h1">Many of the worldÃ¢â‚¬â„¢s leading enterprises trust SailPoint</p><p class="plain-text">51% of the Fortune 500 and 26% of the Forbes Global 2000</p></div>`);
+            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">OUR CUSTOMERS</h2><p class="text-h2 text-cobalt text-h1">Many of the world&#8217;s leading enterprises trust SailPoint</p><p class="plain-text">51% of the Fortune 500 and 26% of the Forbes Global 2000</p></div>`);
         }
     }
 
