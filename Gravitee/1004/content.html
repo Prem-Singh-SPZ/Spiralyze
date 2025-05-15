@@ -12,13 +12,13 @@
 
 <body>
     <section class="testimonials-section desktop-only">
-        <h2>Testimonials</h2>
+        <div class="test-title">Testimonials</div>
         <div class="testimonials-container" id="desktopTestimonials">
         </div>
     </section>
 
     <section class="testimonials-section mobile-only">
-        <h2>Testimonials</h2>
+        <div class="test-title">Testimonials</div>
         <div class="swiper" id="mobileSwiper">
             <div class="swiper-wrapper" id="mobileTestimonialsWrapper">
             </div>
@@ -52,14 +52,12 @@
             {
                 "quote": "Gravitee.io has a solid developer portal for internal and external APIs. It also has capabilities to manage APIs that hit other gateways like AWS / Apigee. A great one stop shop that’s what you’re looking for.",
                 "author": "cdys",
-                "source": "reddit",
                 "rating": "https://www.gravitee.io/hubfs/Spiralyze/1004/assets/icons/Gartner_logo.svg"
             },
             {
                 "quote": "Game changer. Instead of our devs taking time to be \"admins\" we can now concentrate on being developers and allow the workflow to take on the heavy lifting.",
                 "author": "Gartner User",
                 "details": "Head of Integration",
-                "source": "Gartner Peer Insights",
                 "rating": "https://www.gravitee.io/hubfs/Spiralyze/1004/assets/icons/reddit.svg"
             },
             {
@@ -79,7 +77,6 @@
                 "quote": "We were using a different API Manager that was difficult to set up and manage. Gravitee is a breath of fresh air. Great policies that enable us to customise and control our APIs.",
                 "author": "Gartner User",
                 "details": "Senior Integration Developer",
-                "source": "Gartner Peer Insights",
                 "rating": "https://www.gravitee.io/hubfs/Spiralyze/1004/assets/icons/Stars%204.svg"
             },
             {
@@ -91,7 +88,6 @@
             {
                 "quote": "Great application. We have multiple APIs located on different servers. With Gravitee we can easily manage all our APIs at the same place.",
                 "author": "Aleksandar G.",
-                "source": "Gartner Peer Insights",
                 "rating": "https://www.gravitee.io/hubfs/Spiralyze/1004/assets/icons/Gartner_logo.svg"
             },
             {
@@ -124,7 +120,6 @@
         <div class="author-info">
           <strong>${testimonial.author}</strong>
           ${testimonial.details ? `<span class="details">${testimonial.details}</span>` : ''}
-          ${testimonial.source ? `<span class="source">${testimonial.source}</span>` : ''}
         </div>
         <div class="rating"><img src="${testimonial.rating}" alt="${testimonial.author}"></div>
       `;
@@ -156,7 +151,6 @@
       <div class="author-info">
         <strong>${card1Data.author}</strong>
         ${card1Data.details ? `<span class="details">${card1Data.details}</span>` : ''}
-        ${card1Data.source ? `<span class="source">${card1Data.source}</span>` : ''}
       </div>
       <div class="rating"><img src="${card1Data.rating}" alt="${card1Data.author}"></div>
       ${card1Data.image ? `<img src="${card1Data.image}" alt="${card1Data.author}">` : ''}
@@ -184,7 +178,6 @@
         <div class="author-info">
           <strong>${card2Data.author}</strong>
           ${card2Data.details ? `<span class="details">${card2Data.details}</span>` : ''}
-          ${card2Data.source ? `<span class="source">${card2Data.source}</span>` : ''}
         </div>
        <div class="rating"><img src="${card2Data.rating}" alt="${card2Data.author}"></div>
         ${card2Data.image ? `<img src="${card2Data.image}" alt="${card2Data.author}">` : ''}
@@ -214,6 +207,7 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            autoHeight: true,
         });
     });
 </script>

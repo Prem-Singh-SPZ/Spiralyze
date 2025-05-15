@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Manrope:wght@200..800&display=swap");
+
+body {
+  background: #f8f1ee;
+}
+
 .testimonials-section {
   padding: 40px 20px;
   text-align: center;
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -9,9 +15,28 @@
     box-sizing: border-box;
   }
 
-  h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+  .test-title {
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.48px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1024.98px) {
+      font-size: 36px;
+      letter-spacing: -0.36px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 32px;
+      letter-spacing: -0.32px;
+      margin-bottom: 20px;
+    }
   }
 
   // Desktop Styles
@@ -22,7 +47,7 @@
 
     #desktopTestimonials {
       display: flex;
-      gap: 20px;
+      gap: 17px;
       width: 100%;
     }
 
@@ -30,7 +55,11 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 17px;
+
+      &:nth-child(2) {
+        margin-top: 64px;
+      }
     }
   }
 
@@ -40,6 +69,11 @@
 
     @media (max-width: 1024.98px) {
       display: block;
+      max-width: 688px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 40px 12px;
     }
 
     .swiper {
@@ -54,35 +88,40 @@
 
           @media (max-width: 1024.98px) {
             flex-direction: column;
-            gap: 10px;
+            gap: 24px;
           }
 
           .testimonial-card {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: calc(
-              50% - 10px
-            ); // Two cards per slide on wider mobile/tablet
-
-            @media (max-width: 1024.98px) {
-              width: 100%; // One card per slide on smaller mobile
-            }
           }
         }
       }
 
       .swiper-pagination {
         position: static;
-        margin-top: 20px;
+        margin-top: 42px;
+
+        @media screen and (max-width: 767.98px) {
+          margin-top: 15px;
+        }
+
+        .swiper-pagination-bullet {
+          margin: 0 6px;
+          width: 10px;
+          height: 10px;
+          background: #ddd4d0;
+          opacity: 1;
+
+          &.swiper-pagination-bullet-active {
+            background: #ff492c;
+            box-shadow: 0px 0px 0px 3px rgba(254, 117, 94, 0.5);
+          }
+        }
       }
     }
   }
 
   .testimonial-card {
-    padding: 28px 24px;
+    padding: 28px 24px 24px;
     text-align: left;
     border-radius: 8px;
     background: #faf8f5;
@@ -125,6 +164,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
+      margin-bottom: 28px;
 
       strong {
         color: #002e22;
@@ -136,13 +176,6 @@
       }
 
       .details {
-        font-weight: normal;
-        color: #777;
-        display: block;
-        margin-top: 5px;
-      }
-
-      .source {
         color: #333;
         font-family: Manrope, sans-serif;
         font-size: 13px;
@@ -153,12 +186,11 @@
     }
 
     .rating {
-      color: gold;
-      font-size: 1.2em;
-      margin-top: 10px;
+      padding-top: 28px;
+      border-top: 1px solid #ebe6df;
     }
 
-    &.has-image {
+    &.has-video {
       .img-video-container {
         width: 80px;
         height: 80px;
