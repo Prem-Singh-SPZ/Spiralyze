@@ -622,6 +622,90 @@ html
         }
       }
     }
+
+    .blog-related-posts {
+      background: linear-gradient(
+          105deg,
+          rgba(0, 0, 0, 0.05) 5.21%,
+          rgba(0, 0, 0, 0.03) 92.1%
+        ),
+        #f8f1ee;
+      .content-wrapper {
+        .heading2 {
+          color: #000;
+          text-align: center;
+          font-family: Manrope, sans-serif;
+          font-size: 36px !important;
+          font-weight: 700 !important;
+          line-height: 120%;
+          margin-bottom: 48px;
+        }
+
+        .blog-related-posts__list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 32px;
+          justify-content: center;
+
+          @media (max-width: 1200.98px) {
+            gap: 32px 24px;
+          }
+
+          @media (max-width: 767.98px) {
+            gap: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .blog-related-posts__post {
+            background: transparent;
+            padding: 0;
+            max-width: 378px;
+            width: 100%;
+
+            @media (max-width: 1200.98px) {
+              max-width: 312px;
+            }
+
+            @media (max-width: 1024.98px) {
+              max-width: 320px;
+              margin-bottom: 0;
+            }
+
+            .blog-related-posts__image {
+              max-width: 100%;
+              width: 100%;
+              border-radius: 8px;
+              height: 212px !important;
+            }
+
+            .blog-related-posts__date {
+              margin-top: 20px;
+              color: #000;
+              font-family: Manrope;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            .blog-related-posts__title {
+              margin: 8px 0 0;
+
+              .blog-related-posts__title-link {
+                color: #000;
+                font-family: Manrope;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 /*hero Css ends */
