@@ -147,9 +147,9 @@
                         // Check for error
                         const errorElement = fieldWrap.querySelector('.mktoError');
                         if (errorElement && errorElement.style.display !== 'none') {
-                            fieldWrap.classList.add('error');
+                            // fieldWrap.classList.add('error');
                         } else {
-                            fieldWrap.classList.remove('error');
+                            // fieldWrap.classList.remove('error');
                         }
 
                         // Check if the field is filled
@@ -450,19 +450,17 @@
                         for (const mutation of mutationList) {
                             if (mutation.type === "childList") {
                                 if (elm.parentNode === null && elm.style.display != 'none') {
-                                    targetNode.classList.add('error');
+                                    // targetNode.classList.add('error');
                                 } else {
-                                    elm.parentNode.classList.add('error');
+                                    // elm.parentNode.classList.add('error');
                                 }
-                                // document.querySelector('.mkto-wrap form.mktoForm input[type=checkbox][name=Global_Opt_out__c]').checked = true;
                                 observer.disconnect();
                             } else if (mutation.type === "attributes") {
                                 if (elm.parentNode === null) {
-                                    targetNode.classList.add('error');
+                                    // targetNode.classList.add('error');
                                 } else {
-                                    elm.parentNode.classList.add('error');
+                                    // elm.parentNode.classList.add('error');
                                 }
-                                // document.querySelector('.mkto-wrap form.mktoForm input[type=checkbox][name=Global_Opt_out__c]').checked = true;
                                 observer.disconnect();
                             }
                         }
@@ -473,8 +471,7 @@
                     let counterA = 0;
                     const intervalIdA = setInterval(() => {
                         if (document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail') !== null) {
-                            document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-                            // document.querySelector('.mkto-wrap form.mktoForm input[type=checkbox][name=Global_Opt_out__c]').checked = true;
+                            // document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
                         }
                         counterA++;
                         if (counterA >= 10) {
