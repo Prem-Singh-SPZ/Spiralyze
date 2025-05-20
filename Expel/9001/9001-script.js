@@ -3,7 +3,7 @@ let bodyLoaded = setInterval(function () {
     if (body) {
         clearInterval(bodyLoaded);
 
-        if (window.location.href.indexOf('/on-demand-mdr-demo') > -1 || window.location.href.indexOf('/mdr-packages') > -1) {
+        if (window.location.href.indexOf('/on-demand-mdr-demo') > -1 || window.location.href.indexOf('/mdr-packages') > -1 || window.location.href.indexOf('/contact') > -1) {
             waitForElm('.mktoForm input[name="Email"]').then(function () {
                 if (document.querySelector('.mktoForm input[name="Email"]')) {
                     if (sessionStorage.getItem('marketoEmailSPZ')) {
