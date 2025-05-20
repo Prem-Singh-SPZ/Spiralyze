@@ -17,12 +17,12 @@
                             //     formModify();
                             // }
                             waitForElm('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row__inner .column:last-child .mkto-wrap.w-full.iron-theme #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField').then(() => {
-                                if (!document.querySelector('.spz_3004 .product-hero .row__inner #mktoForm_1018.mktoForm .row_FirstName')) {
+                                if (!document.querySelector('.spz_3004 #page-container .page-transition .product-hero #mktoForm_1018.mktoForm .row_FirstName')) {
                                     formModify();
                                 }
                             });
                             hiddenValue('SPZ_3004', 'SPZ_3004_variant');
-                        }, 200);
+                        }, 10);
 
                         setTimeout(() => {
                             clearInterval(keepChanges);
@@ -338,7 +338,7 @@
 
     function modifyCustomerStories() {
         if (document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container') && document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container .customer-stories__content') == null) {
-            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">OUR CUSTOMERS</h2><p class="text-h2 text-cobalt text-h1">Many of the world&#8217;s leading enterprises trust SailPoint</p><p class="plain-text">51% of the Fortune 500 and 26% of the Forbes Global 2000</p></div>`);
+            document.querySelector('.spz_3004 #customer-stories > .text-darkgray.container').insertAdjacentHTML('beforeend', `<div class="customer-stories__content"><h2 class="eyebrow">OUR CUSTOMERS</h2><p class="text-h2 text-cobalt text-h1">Many of the world’s leading enterprises trust SailPoint </p><p class="plain-text">51% of the Fortune 500 and 26% of the Forbes Global 2000</p></div>`);
         }
     }
 
@@ -347,7 +347,7 @@
             document.querySelector('.spz_3004 #customer-stories').insertAdjacentHTML('afterend', `<div class="sailpoint-banner">
                 <div class="sailpoint-banner-content">
                     <p class="sailpoint-get-started">GET STARTED</p>
-                    <h1>Modernize your identity security <br> with SailPoint</h1>
+                    <h1>Modernize your identity security with SailPoint</h1>
                     <a href="javascript:;" class="btn btn--blue-alt go-to-demo">Get a demo</a>
                 </div>
             </div>`);
