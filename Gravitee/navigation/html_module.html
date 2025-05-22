@@ -59,21 +59,9 @@
                                             {% inline_text field="submenu_item_name" value="{{
                                             sub_item.submenu_item_name }}" %}
                                             {% if left_group.style == 'with_icons' %}
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
-                                                viewBox="0 0 15 16" fill="none">
-                                                <path
-                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
-                                                    fill="white" />
-                                            </svg>
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
                                             {% else %}
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
-                                                viewBox="0 0 15 16" fill="none">
-                                                <path
-                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
-                                                    fill="white" />
-                                            </svg>
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
                                             {% endif %}
@@ -123,12 +111,6 @@
                                         <div class="menu-content">
                                             {% inline_text field="submenu_item_name" value="{{
                                             sub_item.submenu_item_name }}" %}
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
-                                                viewBox="0 0 15 16" fill="none">
-                                                <path
-                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
-                                                    fill="white" />
-                                            </svg>
                                             {% if right_group.style != 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -171,7 +153,6 @@
                                         {% endif %}
                                         {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
                                         }}" %}
-                                        <em aria-hidden="true">→</em>
                                     </a>
                                 </li>
                                 {% endfor %}
@@ -254,20 +235,23 @@
                                         {% endif %}
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
-                                        <img alt="icon" class="menu-icon" aria-hidden="true"
-                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                        <div class="menu-image">
+                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                                src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
+                                        </div>
                                         {% endif %}
-                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
-                                        }}" %}
-                                        {% if left_group.style == 'with_icons' %}
-                                        <em aria-hidden="true">→</em>
-                                        <span>{% inline_text field="mini_description" value="{{
-                                            sub_item.mini_description }}" %}</span>
-                                        {% else %}
-                                        <em aria-hidden="true">→</em>
-                                        <span>{% inline_text field="mini_description" value="{{
-                                            sub_item.mini_description }}" %}</span>
-                                        {% endif %}
+                                        <div class="menu-content">
+                                            {% inline_text field="submenu_item_name" value="{{
+                                            sub_item.submenu_item_name
+                                            }}" %}
+                                            {% if left_group.style == 'with_icons' %}
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% else %}
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% endif %}
+                                        </div>
                                     </a>
                                 </li>
                                 {% endfor %}
@@ -306,16 +290,20 @@
                                         {% endif %}
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
-                                        <img alt="icon" class="menu-icon" aria-hidden="true"
-                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                        <div class="menu-image">
+                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                                src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
+                                        </div>
                                         {% endif %}
-                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
-                                        }}" %}
-                                        <em aria-hidden="true">→</em>
-                                        {% if right_group.style != 'with_icons' %}
-                                        <span>{% inline_text field="mini_description" value="{{
-                                            sub_item.mini_description }}" %}</span>
-                                        {% endif %}
+                                        <div class="menu-content">
+                                            {% inline_text field="submenu_item_name" value="{{
+                                            sub_item.submenu_item_name
+                                            }}" %}
+                                            {% if right_group.style != 'with_icons' %}
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% endif %}
+                                        </div>
                                     </a>
                                 </li>
                                 {% endfor %}
@@ -349,11 +337,10 @@
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
                                         <img alt="icon" class="menu-icon" aria-hidden="true"
-                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         {% endif %}
                                         {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
                                         }}" %}
-                                        <em aria-hidden="true">→</em>
                                     </a>
                                 </li>
                                 {% endfor %}

@@ -87,8 +87,37 @@
                             padding: 16px;
                             align-items: flex-start;
                             gap: 12px;
-                            .menu-icon {
-                              position: relative;
+
+                            .menu-image {
+                              min-width: 40px;
+                              height: 40px;
+                              max-width: 40px;
+                              .menu-icon {
+                                position: relative;
+                                width: 100%;
+                              }
+                            }
+
+                            .menu-content {
+                              div[data-hs-cos-field="submenu_item_name"] {
+                                color: #fff;
+                                font-family: Manrope, sans-serif;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                margin-bottom: 4px;
+                              }
+
+                              span [data-hs-cos-field="mini_description"]{
+                                color: #e6e6e6;
+                                font-family: Manrope, sans-serif;
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                opacity: 1;
+                              }
                             }
                           }
                         }
