@@ -1,0 +1,440 @@
+<div id="pattern" class="pattern">
+    <a href="#menu" class="menu-link">Menu <svg
+            style="fill: #fff; width: 22px; margin-left: 10px; position: relative; top: 5px;"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+        </svg></a>
+    <nav id="menu" class="non-mobile menu" role="navigation">
+        <ul class="nav-menu level-1">
+            {% for item in module.menu_item %}
+            <li class="nav-item {% if item.submenu_exist_ %}has-subnav{% endif %}">
+                <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
+                    %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
+                    equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+                    item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
+                    {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
+                </a>
+                {% if item.submenu_exist_ %}
+                <div class="sub-nav {{ item.nav_item_name|lower|replace(' ', '-') }} level-2">
+                    <div class="sub-nav-container">
+                        <div class="sub-nav-white">
+                            {% for left_group in item.left_side.menu_group %}
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_1_heading" value="{{ left_group.submenu_1_heading }}" %}
+                            </h3>
+                            <ul
+                                class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %}">
+                                {% for sub_item in left_group.submenu_1 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <div class="menu-image">
+                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                                src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
+                                        </div>
+                                        {% endif %}
+                                        <div class="menu-content">
+                                            {% inline_text field="submenu_item_name" value="{{
+                                            sub_item.submenu_item_name }}" %}
+                                            {% if left_group.style == 'with_icons' %}
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
+                                                viewBox="0 0 15 16" fill="none">
+                                                <path
+                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% else %}
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
+                                                viewBox="0 0 15 16" fill="none">
+                                                <path
+                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </div>
+                        {% if item.right_sub_menu_exist_ %}
+                        <div class="sub-nav-grey">
+                            {% for right_group in item.right_side.manu_group %}
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_1_heading" value="{{ right_group.submenu_1_heading }}" %}
+                            </h3>
+                            <ul
+                                class="sub-nav-group {% if right_group.style == 'with_icons' %}with-icons{% else %}simple-list with-icons{% endif %}">
+                                {% for sub_item in right_group.submenu_1 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <div class="menu-image">
+                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                                src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
+                                        </div>
+                                        {% endif %}
+                                        <div class="menu-content">
+                                            {% inline_text field="submenu_item_name" value="{{
+                                            sub_item.submenu_item_name }}" %}
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"
+                                                viewBox="0 0 15 16" fill="none">
+                                                <path
+                                                    d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z"
+                                                    fill="white" />
+                                            </svg>
+                                            {% if right_group.style != 'with_icons' %}
+                                            <span>{% inline_text field="mini_description" value="{{
+                                                sub_item.mini_description }}" %}</span>
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% if right_group.submenu_2 %}
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_2_heading" value="{{ right_group.submenu_2_heading }}" %}
+                            </h3>
+                            <ul class="sub-nav-group with-icons">
+                                {% for sub_item in right_group.submenu_2 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
+                                        {% endif %}
+                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
+                                        }}" %}
+                                        <em aria-hidden="true">→</em>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            <!-- CTAs  -->
+            {% if module.cta_1.button_label %}
+            <li class="nav-item">
+                <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    {{ module.cta_1.button_label }}
+                </a>
+            </li>
+            {% endif %}
+
+            {% if module.cta_2.button_label %}
+            <li class="nav-item">
+                <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    {{ module.cta_2.button_label }}
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <!-- MOBILE BEGINS -->
+    <nav id="menu-mobile" class="menu" role="navigation">
+        <ul class="nav-menu level-1">
+            {% for item in module.menu_item %}
+            <li class="nav-item {% if item.submenu_exist_ %}has-subnav{% endif %}">
+                <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
+                    %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
+                    equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+                    item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
+                    {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
+                </a>
+                {% if item.submenu_exist_ %}
+                <div class="sub-nav {{ item.nav_item_name|lower|replace(' ', '-') }} level-2">
+                    <div class="sub-nav-container">
+                        <div class="sub-nav-white">
+                            {% for left_group in item.left_side.menu_group %}
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_1_heading" value="{{ left_group.submenu_1_heading }}" %}
+                            </h3>
+                            <ul
+                                class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %}">
+                                {% for sub_item in left_group.submenu_1 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                        {% endif %}
+                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
+                                        }}" %}
+                                        {% if left_group.style == 'with_icons' %}
+                                        <em aria-hidden="true">→</em>
+                                        <span>{% inline_text field="mini_description" value="{{
+                                            sub_item.mini_description }}" %}</span>
+                                        {% else %}
+                                        <em aria-hidden="true">→</em>
+                                        <span>{% inline_text field="mini_description" value="{{
+                                            sub_item.mini_description }}" %}</span>
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </div>
+                        {% if item.right_sub_menu_exist_ %}
+                        <div class="sub-nav-grey">
+                            {% for right_group in item.right_side.manu_group %}
+
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_1_heading" value="{{ right_group.submenu_1_heading }}" %}
+                            </h3>
+                            <ul
+                                class="sub-nav-group {% if right_group.style == 'with_icons' %}with-icons{% else %}simple-list with-icons{% endif %}">
+                                {% for sub_item in right_group.submenu_1 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                        {% endif %}
+                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
+                                        }}" %}
+                                        <em aria-hidden="true">→</em>
+                                        {% if right_group.style != 'with_icons' %}
+                                        <span>{% inline_text field="mini_description" value="{{
+                                            sub_item.mini_description }}" %}</span>
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% if right_group.submenu_2 %}
+                            <h3 class="mega-menu-heading">
+                                {% inline_text field="submenu_2_heading" value="{{ right_group.submenu_2_heading }}" %}
+                            </h3>
+                            <ul class="sub-nav-group with-icons">
+                                {% for sub_item in right_group.submenu_2 %}
+                                <li>
+                                    <a {% set sub_href=sub_item.link_field.url.href %} {% if
+                                        sub_item.link_field.url.type is equalto "EMAIL_ADDRESS" %} {% set
+                                        sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
+                                        is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
+                                        href="{{ sub_href|escape_url }}" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
+                                        endif %}>
+                                        {% if sub_item.icon.src %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}"' %}
+                                        {% if sub_item.icon.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
+                                        sub_item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif sub_item.icon.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ sub_item.icon.max_width|escape_attr }}" height="{{
+                                        sub_item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"'
+                                        %}
+                                        {% endif %}
+                                        {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
+                                        sub_item.icon.loading|escape_attr }}"' : '' %}
+                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                        {% endif %}
+                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
+                                        }}" %}
+                                        <em aria-hidden="true">→</em>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            <!-- CTAs  -->
+            {% if module.cta_1.button_label %}
+            <li class="nav-item">
+                <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    {{ module.cta_1.button_label }}
+                </a>
+            </li>
+            {% endif %}
+
+            {% if module.cta_2.button_label %}
+            <li class="nav-item">
+                <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    {{ module.cta_2.button_label }}
+                </a>
+            </li>
+            {% endif %}
+
+        </ul>
+    </nav>
+</div>
+
+
+
+
+<script
+    src="https://cdn2.hubspot.net/hub/7600448/hub_generated/template_assets/67140955727/1645809009192/Gravitee_2022/js/megamenu-custom.js"></script>
+<!-- initialize a selector as an accessibleMegaMenu -->
+<script>
+    $("#menu.non-mobile").accessibleMegaMenu({
+        /* prefix for generated unique id attributes, which are required 
+                   to indicate aria-owns, aria-controls and aria-labelledby */
+
+        /* css class used to define the megamenu styling */
+        menuClass: "nav-menu",
+
+        /* css class for a top-level navigation item in the megamenu */
+        topNavItemClass: "nav-item",
+
+        /* css class for a megamenu panel */
+        panelClass: "sub-nav",
+
+        /* css class for a group of items within a megamenu panel */
+        panelGroupClass: "sub-nav-group",
+
+        openOnMouseover: true
+    });
+
+    $("#menu-mobile").accessibleMegaMenu({
+        /* prefix for generated unique id attributes, which are required 
+                   to indicate aria-owns, aria-controls and aria-labelledby */
+
+        /* css class used to define the megamenu styling */
+        menuClass: "nav-menu",
+
+        /* css class for a top-level navigation item in the megamenu */
+        topNavItemClass: "nav-item",
+
+        /* css class for a megamenu panel */
+        panelClass: "sub-nav",
+
+        /* css class for a group of items within a megamenu panel */
+        panelGroupClass: "sub-nav-group",
+
+        openOnMouseover: false
+    });
+</script>
