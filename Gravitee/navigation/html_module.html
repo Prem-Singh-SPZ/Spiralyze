@@ -56,8 +56,7 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            {% inline_text field="submenu_item_name" value="{{
-                                            sub_item.submenu_item_name }}" %}
+                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">{{sub_item.submenu_item_name }}</div>
                                             {% if left_group.style == 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -109,8 +108,8 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            {% inline_text field="submenu_item_name" value="{{
-                                            sub_item.submenu_item_name }}" %}
+                                            <div class="menu-title">{{sub_item.submenu_item_name }}</div>
+
                                             {% if right_group.style != 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -151,8 +150,8 @@
                                         <img alt="icon" class="menu-icon" aria-hidden="true"
                                             src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         {% endif %}
-                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
-                                        }}" %}
+                                        <div class="menu-title">{{sub_item.submenu_item_name }}</div>
+
                                     </a>
                                 </li>
                                 {% endfor %}
@@ -241,9 +240,7 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            {% inline_text field="submenu_item_name" value="{{
-                                            sub_item.submenu_item_name
-                                            }}" %}
+                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">{{sub_item.submenu_item_name }}</div>
                                             {% if left_group.style == 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -296,9 +293,8 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            {% inline_text field="submenu_item_name" value="{{
-                                            sub_item.submenu_item_name
-                                            }}" %}
+                                            <div class="menu-title">{{sub_item.submenu_item_name }}</div>
+
                                             {% if right_group.style != 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -339,8 +335,8 @@
                                         <img alt="icon" class="menu-icon" aria-hidden="true"
                                             src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         {% endif %}
-                                        {% inline_text field="submenu_item_name" value="{{ sub_item.submenu_item_name
-                                        }}" %}
+                                        <div class="menu-title">{{sub_item.submenu_item_name }}</div>
+
                                     </a>
                                 </li>
                                 {% endfor %}
