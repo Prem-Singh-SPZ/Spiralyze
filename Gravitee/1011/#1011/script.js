@@ -134,11 +134,42 @@ waitForElm('.tab-container .tabpanel-container .tab-content *').then(() => {
     highlightedSectionBottom = highlightedSection.offsetTop + highlightedSection.offsetHeight;
   }
 
+
+  //calculate the height of header.header
+  const header = document.querySelector('.header');
+  const headerHeight = header ? header.offsetHeight : 0;
+  let hsWebInteractivesTopAnchorHeight = 0;
+  //check if #hs-web-interactives-top-anchor 
+  let hsWebInteractivesTopAnchor = document.querySelector('#hs-web-interactives-top-push-anchor');
+  // waitForElm('#hs-web-interactives-top-push-anchor').then(() => {
+  //   if (hsWebInteractivesTopAnchor) {
+  //     hsWebInteractivesTopAnchorHeight = hsWebInteractivesTopAnchor.style.height;
+  //     hsWebInteractivesTopAnchorHeight = parseFloat(hsWebInteractivesTopAnchorHeight);
+  //     console.log('hsWebInteractivesTopAnchorHeight:', hsWebInteractivesTopAnchorHeight);
+  //   }
+  // });
+
+  const stickyHeader = document.querySelector('.sticky-nav .hiw-tab-section>.container');
+
   function handleScroll() {
     if (window.scrollY >= stickyPoint && (highlightedSection ? window.scrollY < highlightedSectionBottom : true)) {
       body.classList.add('sticky-nav');
+      if (document.querySelector('.sticky-nav .hiw-tab-section>.container')) {
+        document.querySelector('.sticky-nav .hiw-tab-section>.container').style.top = `${headerHeight + 10}px`;
+        console.log('here:');
+        if (document.querySelector('#hs-web-interactives-top-push-anchor') && !!((el = document.querySelector('#hs-web-interactives-top-anchor .hs-cta-embed__loaded')) && window.getComputedStyle(el).getPropertyValue('visibility').trim() === 'visible')) {
+          console.log('there:');
+          hsWebInteractivesTopAnchorHeight = document.querySelector('#hs-web-interactives-top-push-anchor').style.height;
+          hsWebInteractivesTopAnchorHeight = parseFloat(hsWebInteractivesTopAnchorHeight);
+          document.querySelector('.sticky-nav .hiw-tab-section>.container').style.top = `${headerHeight + hsWebInteractivesTopAnchorHeight + 10}px`;
+        }
+        else {
+          document.querySelector('.sticky-nav .hiw-tab-section>.container').style.top = `${headerHeight + 10}px`;
+        }
+      }
     } else {
       body.classList.remove('sticky-nav');
+      //document.querySelector('.hiw-tab-section>.container').style.top = 'unset'; 
     }
   }
 
