@@ -13,7 +13,7 @@
                 <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
                     %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
                     equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
-                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                     item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
                     {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
                 </a>
@@ -26,7 +26,7 @@
                                 {% inline_text field="submenu_1_heading" value="{{ left_group.submenu_1_heading }}" %}
                             </h3>
                             <ul
-                                class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %}">
+                                class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %} {% if not item.right_sub_menu_exist_ %}no-right-menu{% endif %}">
                                 {% for sub_item in left_group.submenu_1 %}
                                 <li>
                                     <a {% set sub_href=sub_item.link_field.url.href %} {% if
@@ -34,7 +34,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -86,7 +86,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -131,7 +131,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -170,7 +170,7 @@
             {% if module.cta_1.button_label %}
             <li class="nav-item">
                 <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
-                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
                     module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_1.button_label }}
                 </a>
@@ -180,7 +180,7 @@
             {% if module.cta_2.button_label %}
             <li class="nav-item">
                 <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
-                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
                     module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_2.button_label }}
                 </a>
@@ -197,7 +197,7 @@
                 <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
                     %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
                     equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
-                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                     item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
                     {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
                 </a>
@@ -218,7 +218,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -271,7 +271,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -316,7 +316,7 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% endif %} {% if
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
                                         sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
                                         endif %}>
                                         {% if sub_item.icon.src %}
@@ -355,7 +355,7 @@
             {% if module.cta_1.button_label %}
             <li class="nav-item">
                 <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
-                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
                     module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_1.button_label }}
                 </a>
@@ -365,7 +365,7 @@
             {% if module.cta_2.button_label %}
             <li class="nav-item">
                 <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
-                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% endif %} {% if
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
                     module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_2.button_label }}
                 </a>
