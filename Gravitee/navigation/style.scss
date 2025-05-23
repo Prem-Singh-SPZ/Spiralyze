@@ -225,6 +225,7 @@
                         #120c16 100%
                       );
                       padding: 32px;
+                      align-self: flex-start;
 
                       .mega-menu-heading {
                         color: #fff;
@@ -247,6 +248,10 @@
                           padding: 0;
                           margin-bottom: 16px;
                           background-color: transparent;
+
+                          &:last-child {
+                            margin-bottom: 0;
+                          }
 
                           a {
                             display: inline-block;
