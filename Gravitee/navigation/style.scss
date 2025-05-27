@@ -96,7 +96,7 @@
                     width: 100%;
                     max-width: 1200px;
                     margin: 0 auto;
-                    padding: 54px 0 48px;
+                    padding: 54.5px 0 48px;
                     display: flex;
                     gap: 26px;
 
@@ -124,7 +124,7 @@
                         flex-wrap: wrap;
                         grid-row-gap: 0;
                         grid-column-gap: 0;
-                        gap: 20px;
+                        gap: 17.5px 22px;
                         margin-bottom: 32px;
 
                         &:last-child {
@@ -141,7 +141,7 @@
 
                           > a {
                             display: flex;
-                            padding: 16px;
+                            padding: 16px 15px;
                             align-items: flex-start;
                             gap: 12px;
                             border: 0.5px solid transparent;
@@ -177,7 +177,7 @@
                                   height: 15px;
                                   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"><path d="M1.33325 7.13989C0.919038 7.13989 0.583252 7.47568 0.583252 7.88989C0.583252 8.30411 0.919038 8.63989 1.33325 8.63989L1.33325 7.13989ZM13.8636 8.42022C14.1565 8.12733 14.1565 7.65246 13.8636 7.35956L9.09061 2.58659C8.79772 2.2937 8.32284 2.2937 8.02995 2.58659C7.73706 2.87949 7.73706 3.35436 8.02995 3.64725L12.2726 7.88989L8.02995 12.1325C7.73706 12.4254 7.73706 12.9003 8.02995 13.1932C8.32284 13.4861 8.79772 13.4861 9.09061 13.1932L13.8636 8.42022ZM1.33325 7.88989L1.33325 8.63989L13.3333 8.63989L13.3333 7.88989L13.3333 7.13989L1.33325 7.13989L1.33325 7.88989Z" fill="white"/></svg>')
                                     no-repeat center center;
-                                  margin-left: 10px;
+                                  margin-left: 11px;
                                   order: 3;
                                 }
 
@@ -228,7 +228,7 @@
                         }
 
                         &.no-right-menu {
-                          gap: 18px 60px;
+                          gap: 17.5px 60px;
                           margin-bottom: 30px;
 
                           @media (width < 1199.98px) {
@@ -300,6 +300,13 @@
 
                             .menu-image {
                               margin-left: 8px;
+
+                              .menu-icon{
+                                min-width: 18px;
+                                max-width: 18px;
+                                height: 18px;
+                                margin-right: 6px;
+                              }
                             }
 
                             .menu-content {
@@ -345,6 +352,10 @@
                       }
                     }
                   }
+                }
+
+                &:nth-last-child(2) {
+                  padding-left: 83px;
                 }
               }
             }
