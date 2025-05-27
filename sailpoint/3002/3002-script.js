@@ -59,8 +59,6 @@
                             }
 
                             heroUpdate();
-                            console.log('SPZ_3002: Hero Updated');
-
                             waitForElm('.spz_3002 #mktoForm_1018.mktoForm input').then(() => {
                                 formModify();
                                 hiddenValue('SPZ_3002', 'SPZ_3002_variant');
@@ -461,14 +459,12 @@
                 loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
             }
 
-            console.log('SPZ_3002: Form Loaded');
             document.body.classList.add('spz-show-modal');
             document.querySelector('html').classList.add('spz-no-scroll');
             //take the value of .email-hero-spz and set it to the email field in the form
             waitForElm('.spz_3002 #mktoForm_1018.mktoForm .row_Email input').then(() => {
                 var email = document.querySelector('.email-hero-spz');
                 var emailField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email input');
-                console.log('SPZ_3002: Email Field Found');
                 if (email && email.value && emailField) {
                     emailField.value = email.value;
                     emailField.closest('.mktoFieldWrap').classList.add('filled');
