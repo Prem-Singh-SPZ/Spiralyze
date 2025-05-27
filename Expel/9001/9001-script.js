@@ -48,6 +48,17 @@ let bodyLoaded = setInterval(function () {
                     emailInput.addEventListener('onchange', () => {
                         sessionStorage.setItem('marketoEmailSPZ', emailInput.value);
                     });
+
+                    //when user hit enter on email input, click the first button
+                    emailInput.addEventListener('keydown', (event) => {
+                        if (event.key === 'Enter') {
+                            const firstButton = document.querySelector('#hero-section .hero-buttons .blue-button');
+                            if (firstButton) {
+                                sessionStorage.setItem('marketoEmailSPZ', emailInput.value);
+                                firstButton.click();
+                            }
+                        }
+                    });
                 }
             }
         }

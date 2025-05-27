@@ -13,8 +13,8 @@
                 <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
                     %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
                     equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
-                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                    item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif
+                    %} {% if item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
                     {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
                 </a>
                 {% if item.submenu_exist_ %}
@@ -22,9 +22,11 @@
                     <div class="sub-nav-container">
                         <div class="sub-nav-white">
                             {% for left_group in item.left_side.menu_group %}
+                            {% if left_group.submenu_1_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_1_heading" value="{{ left_group.submenu_1_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul
                                 class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %} {% if not item.right_sub_menu_exist_ %}no-right-menu{% endif %}">
                                 {% for sub_item in left_group.submenu_1 %}
@@ -34,9 +36,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -56,7 +58,8 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">{{sub_item.submenu_item_name }}</div>
+                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">
+                                                {{sub_item.submenu_item_name }}</div>
                                             {% if left_group.style == 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -74,9 +77,11 @@
                         {% if item.right_sub_menu_exist_ %}
                         <div class="sub-nav-grey">
                             {% for right_group in item.right_side.manu_group %}
+                            {% if right_group.submenu_1_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_1_heading" value="{{ right_group.submenu_1_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul
                                 class="sub-nav-group {% if right_group.style == 'with_icons' %}with-icons{% else %}simple-list with-icons{% endif %}">
                                 {% for sub_item in right_group.submenu_1 %}
@@ -86,9 +91,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -120,9 +125,11 @@
                                 {% endfor %}
                             </ul>
                             {% if right_group.submenu_2 %}
+                            {% if right_group.submenu_2_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_2_heading" value="{{ right_group.submenu_2_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul class="sub-nav-group with-icons">
                                 {% for sub_item in right_group.submenu_2 %}
                                 <li>
@@ -131,9 +138,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -168,20 +175,20 @@
 
             <!-- CTAs  -->
             {% if module.cta_1.button_label %}
-            <li class="nav-item">
+            <li class="nav-item nav-btn">
                 <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
-                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
-                    module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {%
+                    if module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_1.button_label }}
                 </a>
             </li>
             {% endif %}
 
             {% if module.cta_2.button_label %}
-            <li class="nav-item">
+            <li class="nav-item nav-btn">
                 <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
-                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
-                    module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {%
+                    if module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_2.button_label }}
                 </a>
             </li>
@@ -197,8 +204,8 @@
                 <a {% set nav_href=item.menu_link.url.href %} {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS"
                     %} {% set nav_href="mailto:" + nav_href %} {% endif %} {% if item.menu_link.url.type is
                     equalto "CALL_TO_ACTION" %} href="{{ nav_href }}" {% else %} href="{{ nav_href|escape_url }}" {%
-                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                    item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
+                    endif %} {% if item.menu_link.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif
+                    %} {% if item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}" {% endif %}>
                     {% inline_text field="nav_item_name" value="{{ item.nav_item_name }}" %}
                 </a>
                 {% if item.submenu_exist_ %}
@@ -206,9 +213,11 @@
                     <div class="sub-nav-container">
                         <div class="sub-nav-white">
                             {% for left_group in item.left_side.menu_group %}
+                            {% if left_group.submenu_1_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_1_heading" value="{{ left_group.submenu_1_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul
                                 class="sub-nav-group {% if left_group.style == 'with_icons' %}with-icons{% else %}no-icons{% endif %}">
                                 {% for sub_item in left_group.submenu_1 %}
@@ -218,9 +227,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -240,7 +249,8 @@
                                         </div>
                                         {% endif %}
                                         <div class="menu-content">
-                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">{{sub_item.submenu_item_name }}</div>
+                                            <div class="menu-title {% if sub_item.add_new_tag %}new-tag{% endif %}">
+                                                {{sub_item.submenu_item_name }}</div>
                                             {% if left_group.style == 'with_icons' %}
                                             <span>{% inline_text field="mini_description" value="{{
                                                 sub_item.mini_description }}" %}</span>
@@ -258,10 +268,11 @@
                         {% if item.right_sub_menu_exist_ %}
                         <div class="sub-nav-grey">
                             {% for right_group in item.right_side.manu_group %}
-
+                            {% if right_group.submenu_1_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_1_heading" value="{{ right_group.submenu_1_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul
                                 class="sub-nav-group {% if right_group.style == 'with_icons' %}with-icons{% else %}simple-list with-icons{% endif %}">
                                 {% for sub_item in right_group.submenu_1 %}
@@ -271,9 +282,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -305,9 +316,11 @@
                                 {% endfor %}
                             </ul>
                             {% if right_group.submenu_2 %}
+                            {% if right_group.submenu_2_heading %}
                             <h3 class="mega-menu-heading">
                                 {% inline_text field="submenu_2_heading" value="{{ right_group.submenu_2_heading }}" %}
                             </h3>
+                            {% endif %}
                             <ul class="sub-nav-group with-icons">
                                 {% for sub_item in right_group.submenu_2 %}
                                 <li>
@@ -316,9 +329,9 @@
                                         sub_href="mailto:" + sub_href %} {% endif %} {% if sub_item.link_field.url.type
                                         is equalto "CALL_TO_ACTION" %} href="{{ sub_href }}" {% else %}
                                         href="{{ sub_href|escape_url }}" {% endif %} {% if
-                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self" {% endif %} {% if
-                                        sub_item.link_field.rel %} rel="{{ sub_item.link_field.rel|escape_attr }}" {%
-                                        endif %}>
+                                        sub_item.link_field.open_in_new_tab %} target="_blank" {% else %} target="_self"
+                                        {% endif %} {% if sub_item.link_field.rel %}
+                                        rel="{{ sub_item.link_field.rel|escape_attr }}" {% endif %}>
                                         {% if sub_item.icon.src %}
                                         {% set sizeAttrs = 'width="{{ sub_item.icon.width|escape_attr }}" height="{{
                                         sub_item.icon.height|escape_attr }}"' %}
@@ -353,20 +366,20 @@
 
             <!-- CTAs  -->
             {% if module.cta_1.button_label %}
-            <li class="nav-item">
+            <li class="nav-item nav-btn">
                 <a class="button dark-btn" href="{{ module.cta_1.link_field.url.href }}" {% if
-                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
-                    module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    module.cta_1.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {%
+                    if module.cta_1.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_1.button_label }}
                 </a>
             </li>
             {% endif %}
 
             {% if module.cta_2.button_label %}
-            <li class="nav-item">
+            <li class="nav-item nav-btn">
                 <a class="button light-btn" href="{{ module.cta_2.link_field.url.href }}" {% if
-                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {% if
-                    module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
+                    module.cta_2.link_field.open_in_new_tab %}target="_blank" {% else %} target="_self" {% endif %} {%
+                    if module.cta_2.link_field.no_follow %}rel="nofollow" {% endif %}>
                     {{ module.cta_2.button_label }}
                 </a>
             </li>
@@ -379,8 +392,7 @@
 
 
 
-<script
-    src="https://www.gravitee.io/hubfs/Spiralyze/1014/megamenu-custom.js"></script>
+<script src="https://www.gravitee.io/hubfs/Spiralyze/1014/megamenu-custom.js"></script>
 <!-- initialize a selector as an accessibleMegaMenu -->
 <script>
     $("#menu.non-mobile").accessibleMegaMenu({
