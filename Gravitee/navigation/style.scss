@@ -2,8 +2,16 @@
   header.header-spz {
     background: #000001 !important;
 
+    @media screen and (width < 1000.98px) {
+      background: transparent !important;
+    }
+
     .header__logo--main {
       padding-top: 8px;
+
+      @media (width < 1000.98px) {
+        padding-top: 0;
+      }
     }
 
     .header__container.content-wrapper {
@@ -391,13 +399,34 @@
               line-height: 22.4px;
               display: flex;
               align-items: center;
+              padding: 22px 16px;
 
-              svg {
-                top: 0 !important;
+              // svg {
+              //   top: 0 !important;
+              //   width: 20px !important;
+              //   margin-left: 13px !important;
+              // }
+
+              .m-default {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+              }
+
+              .m-active {
+                display: none;
               }
 
               &.active {
                 background: transparent !important;
+
+                .m-default {
+                  display: none;
+                }
+                .m-active {
+                  display: flex;
+                  margin-top: -2px;
+                }
               }
             }
 
@@ -418,10 +447,11 @@
                     font-weight: 600;
                     line-height: 140%;
                     display: flex;
-                    padding: 16px;
+                    padding: 24px 17px;
                     align-items: flex-start;
                     gap: 12px;
-                    border: 0.5px solid transparent;
+                    border-bottom: 0.5px solid #ff492c !important;
+                    margin: 0 !important;
 
                     & + .sub-nav {
                       background: #010101;
@@ -564,6 +594,11 @@
                       position: inherit;
                     }
 
+                    &::after {
+                      right: 2px;
+                      top: 18px;
+                    }
+
                     &.active:after {
                       content: "+";
                     }
@@ -638,7 +673,7 @@
                     }
 
                     &:hover {
-                      border-radius: 8px;
+                      // border-radius: 8px;
                       border-color: rgba(255, 73, 44, 0.5);
                       background: rgba(255, 73, 44, 0.2);
 
@@ -662,6 +697,7 @@
                 overflow: auto;
                 border-bottom: 1px solid rgba(255, 73, 44, 0.5);
                 background: #010101;
+                padding: 42px 10px 50px;
               }
             }
           }
@@ -676,6 +712,12 @@
   body {
     &:has(#menu-mobile.active) {
       overflow: hidden;
+
+      .body-wrapper {
+        header.header-spz {
+          background: #000001 !important;
+        }
+      }
     }
   }
 }
