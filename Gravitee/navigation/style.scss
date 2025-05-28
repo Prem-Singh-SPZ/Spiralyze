@@ -446,12 +446,15 @@
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 140%;
-                    display: flex;
-                    padding: 24px 17px;
-                    align-items: flex-start;
-                    gap: 12px;
-                    border-bottom: 0.5px solid #ff492c !important;
-                    margin: 0 !important;
+
+                    &[id] {
+                      display: flex;
+                      padding: 24px 17px;
+                      align-items: flex-start;
+                      gap: 12px;
+                      border-bottom: 0.5px solid #ff492c !important;
+                      margin: 0 !important;
+                    }
 
                     & + .sub-nav {
                       background: #010101;
@@ -685,6 +688,38 @@
                             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 7.13989C0.585786 7.13989 0.25 7.47568 0.25 7.88989C0.25 8.30411 0.585786 8.63989 1 8.63989L1 7.13989ZM13.5303 8.42022C13.8232 8.12733 13.8232 7.65246 13.5303 7.35956L8.75736 2.58659C8.46447 2.2937 7.98959 2.2937 7.6967 2.58659C7.40381 2.87949 7.40381 3.35436 7.6967 3.64725L11.9393 7.88989L7.6967 12.1325C7.40381 12.4254 7.40381 12.9003 7.6967 13.1932C7.98959 13.4861 8.46447 13.4861 8.75736 13.1932L13.5303 8.42022ZM1 7.88989L1 8.63989L13 8.63989L13 7.88989L13 7.13989L1 7.13989L1 7.88989Z" fill="%23FF492C"/></svg>')
                               no-repeat center center;
                           }
+                        }
+                      }
+                    }
+
+                    &.button {
+                      padding: 10px 20px;
+                      border-radius: 100px !important;
+                      color: #fff !important;
+                      text-align: center;
+                      font-family: Manrope, sans-serif !important;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 600 !important;
+                      line-height: 140%;
+                      width: 194px;
+
+                      &.dark-btn {
+                        border: 1px solid #fff !important;
+
+                        &:hover {
+                          border-color: #f09135 !important;
+                          color: #f09135 !important;
+                          background: transparent;
+                        }
+                      }
+
+                      &.light-btn {
+                        background: #ea3527;
+                        margin-left: auto !important;
+
+                        &:hover {
+                          background: #f09135;
                         }
                       }
                     }
