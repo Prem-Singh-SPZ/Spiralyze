@@ -73,8 +73,10 @@
                   }
                 }
 
-                @media (width < 1199.98px) {
-                  &:nth-last-child(2) {
+                &:nth-last-child(2) {
+                  padding-left: 83px;
+
+                  @media (width < 1199.98px) {
                     padding: 0;
                   }
                 }
@@ -96,7 +98,7 @@
                     width: 100%;
                     max-width: 1200px;
                     margin: 0 auto;
-                    padding: 54.5px 0 48px;
+                    padding: 64.5px 0 48px;
                     display: flex;
                     gap: 26px;
 
@@ -138,6 +140,10 @@
                           background-color: transparent;
                           //   flex: 0 0 32.19%;
                           flex: 0 0 48.5%;
+
+                          @media (width < 1199.98px) {
+                            max-width: 48%;
+                          }
 
                           > a {
                             display: flex;
@@ -228,7 +234,7 @@
                         }
 
                         &.no-right-menu {
-                          gap: 17.5px 60px;
+                          gap: 17.5px 20px;
                           margin-bottom: 30px;
 
                           @media (width < 1199.98px) {
@@ -241,7 +247,7 @@
 
                           li {
                             flex: 0 0 33.3%;
-                            max-width: 349px;
+                            max-width: 376px;
 
                             @media (width < 1199.98px) {
                               max-width: 31.9%;
@@ -263,6 +269,11 @@
                       padding: 32px;
                       align-self: flex-start;
 
+                      @media (width < 1199.98px) {
+                        margin: 0 16px 0 0;
+                        min-width: 300px;
+                      }
+
                       .mega-menu-heading {
                         color: #fff;
                         font-family: Manrope, sans-serif;
@@ -275,6 +286,19 @@
                         opacity: 1;
                         padding: 0;
                         margin-bottom: 32px;
+
+                        &:has(small) {
+                          margin-bottom: 16px;
+                          margin-top: -6px;
+
+                          small {
+                            text-transform: initial;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            letter-spacing: 0;
+                          }
+                        }
                       }
 
                       .sub-nav-group {
@@ -301,7 +325,7 @@
                             .menu-image {
                               margin-left: 8px;
 
-                              .menu-icon{
+                              .menu-icon {
                                 min-width: 18px;
                                 max-width: 18px;
                                 height: 18px;
@@ -352,10 +376,6 @@
                       }
                     }
                   }
-                }
-
-                &:nth-last-child(2) {
-                  padding-left: 83px;
                 }
               }
             }
