@@ -595,3 +595,10 @@
     background: #010101;
   }
 }
+
+@media (width < 1000.98px) {
+  html:has(#menu-mobile.active),
+  body:has(#menu-mobile.active) {
+    overflow: hidden;
+  }
+}

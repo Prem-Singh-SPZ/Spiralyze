@@ -670,3 +670,12 @@
     }
   }
 }
+
+@media (width < 1000.98px) {
+  html,
+  body {
+    &:has(#menu-mobile.active) {
+      overflow: hidden;
+    }
+  }
+}
