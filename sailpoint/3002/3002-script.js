@@ -475,11 +475,13 @@
             e.stopPropagation();
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
-             if (!document.querySelector('#footer-cta .mkto-wrap #mktoForm_1017 input')) {
+            if (!document.querySelector('#footer-cta .mkto-wrap #mktoForm_1017 input')) {
                 document.querySelector('#footer-cta .mkto-wrap #mktoForm_1017').innerHTML = '';
             }
             //refresh the page
-            window.location.reload();
+            if (document.querySelector('.spz_3002 .spz-form-container')) {
+                document.querySelector('.spz_3002 .spz-form-container').remove();
+            }
         }
 
         if (e.target.closest('#mktoForm_1018 .mktoButton')) {
