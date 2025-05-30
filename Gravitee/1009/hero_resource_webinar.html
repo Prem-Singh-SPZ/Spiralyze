@@ -53,7 +53,7 @@
                   <div class="eye-brow for-resource-and-upcoming-webinar">{{ module.hero_bullets.eyebrow_title }}</div>
                 {% endif %}
                  {% if module.event_date_and_time.datetime_field %}
-                    {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                    {% if module.event_date_and_time.datetime_field | datetimeformat('%y%m%d') < local_dt | datetimeformat('%y%m%d') %}
                       {% if module.hero_bullets.eyebrow_title_for_webinar_on_demand %}
                           <style>
                             .body-container-resources-post-spz .hero-section .hero-content .eye-brow.for-resource-and-upcoming-webinar {
@@ -73,8 +73,7 @@
               {% endif %}
               
              {% if module.show_date_and_time_tag %}
-              {{module.event_date_and_time.date_field | datetimeformat('%Y%m%d')}}
-                {% if module.event_date_and_time.date_field | datetimeformat('%Y%m%d') >= local_dt | datetimeformat('%Y%m%d') %}
+                {% if module.event_date_and_time.datetime_field | datetimeformat('%y%m%d') >= local_dt | datetimeformat('%y%m%d') %}
                 <div class="hero-webinar-date">
                   <div class="hero-webinar-date-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -94,6 +93,15 @@
                       {% if module.event_date_and_time.show_gmt_ %}
                         {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'GMT') }} /
                       {% endif %}
+                      {# New block for CET #}
+                      {% if module.event_date_and_time.show_cet_ %}
+                        {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'Europe/Berlin') }} /
+                      {% endif %}
+
+                      {# New block for IST #}
+                      {% if module.event_date_and_time.show_ist_ %}
+                        {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'Asia/Kolkata') }} /
+                      {% endif %}
                       {% if module.event_date_and_time.show_pst_ %}
                        {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'US/Pacific') }} /
                       {% endif %}
@@ -106,7 +114,7 @@
                 </div>
 
                   {% if module.event_date_and_time.datetime_field %}
-                    {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                    {% if module.event_date_and_time.datetime_field | datetimeformat('%y%m%d') < local_dt | datetimeformat('%y%m%d') %}
                         <style>
                           .body-container-resources-post-spz .hero-section .hero-content .hero-webinar-date {
                             display: none;
@@ -192,7 +200,7 @@
                         </div>
                        </div>
                         {% if module.event_date_and_time.datetime_field %}
-                          {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                          {% if module.event_date_and_time.datetime_field | datetimeformat('%y%m%d') < local_dt | datetimeformat('%y%m%d') %}
                             <style>
                               .body-container-resources-post-spz .hero-section .hero-right-section .form-overlay .for-resource-and-upcoming-webinar{
                                 display: none;
