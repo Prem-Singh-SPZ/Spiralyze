@@ -1,0 +1,223 @@
+{% require_css %}
+  <style>
+  @layer module {
+  {% scope_css %}
+    .hero-content .list-grp-wrapper .list-group .list-item::before {
+      background: url("{{ module.hero_bullets.bullet_icon.src }}");
+    }
+    
+    {% if module.background_image.src %}
+      .hero-section::before {
+        background-image: url("{{ module.background_image.src }}");
+      }
+    {% endif %}
+    
+  {% end_scope_css %}
+  }
+   
+    /* Hide Global header and footer     */
+    {% if module.hide_global_header_footer %}
+        body header,
+        body footer {
+          display: none;
+        }
+        body .body-container-wrapper {
+          padding-top: 0;
+        }
+    {% endif %}
+    
+  </style>
+{% end_require_css %}
+
+{% if module.header.brand_logo.src %}
+<section class="spz-header">
+    <div class="row-fluid-custom">
+        <!-- Brand logo -->
+        <div class="spz-header__brand">
+            <a href="{{ module.header.redirection_link }}">
+                <img src="{{ module.header.brand_logo.src|escape_url }}" alt="{{ module.header.brand_logo.alt|escape_attr }}" class="brand-logo">
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="hero-section">
+  <div class="row-fluid-custom">
+        <div class="hero-container">
+            <!-- Left Content -->
+            <div class="hero-content">
+
+              
+                {% if module.hero_bullets.eyebrow_title %}
+                  <div class="eye-brow for-resource-and-upcoming-webinar">{{ module.hero_bullets.eyebrow_title }}</div>
+                {% endif %}
+                 {% if module.event_date_and_time.datetime_field %}
+                    {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                      {% if module.hero_bullets.eyebrow_title_for_webinar_on_demand %}
+                          <style>
+                            .body-container-resources-post-spz .hero-section .hero-content .eye-brow.for-resource-and-upcoming-webinar {
+                              display: none;
+                            }
+                           </style>
+                        <div class="eye-brow for-on-demand-webinar">{{ module.hero_bullets.eyebrow_title_for_webinar_on_demand }}</div>
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+
+
+              <h1 class="hc-title">{{ content.name }}</h1>
+              
+              {% if module.hero_bullets.title %}
+                <h1 class="hc-title">{{ module.hero_bullets.title }}</h1>
+              {% endif %}
+              
+             {% if module.show_date_and_time_tag %}
+              {{module.event_date_and_time.date_field | datetimeformat('%Y%m%d')}}
+                {% if module.event_date_and_time.date_field | datetimeformat('%Y%m%d') >= local_dt | datetimeformat('%Y%m%d') %}
+                <div class="hero-webinar-date">
+                  <div class="hero-webinar-date-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M1.25 18.125C1.25 19.1602 2.08984 20 3.125 20H16.875C17.9102 20 18.75 19.1602 18.75 18.125V7.5H1.25V18.125ZM13.75 10.4688C13.75 10.2109 13.9609 10 14.2188 10H15.7812C16.0391 10 16.25 10.2109 16.25 10.4688V12.0312C16.25 12.2891 16.0391 12.5 15.7812 12.5H14.2188C13.9609 12.5 13.75 12.2891 13.75 12.0312V10.4688ZM13.75 15.4688C13.75 15.2109 13.9609 15 14.2188 15H15.7812C16.0391 15 16.25 15.2109 16.25 15.4688V17.0312C16.25 17.2891 16.0391 17.5 15.7812 17.5H14.2188C13.9609 17.5 13.75 17.2891 13.75 17.0312V15.4688ZM8.75 10.4688C8.75 10.2109 8.96094 10 9.21875 10H10.7812C11.0391 10 11.25 10.2109 11.25 10.4688V12.0312C11.25 12.2891 11.0391 12.5 10.7812 12.5H9.21875C8.96094 12.5 8.75 12.2891 8.75 12.0312V10.4688ZM8.75 15.4688C8.75 15.2109 8.96094 15 9.21875 15H10.7812C11.0391 15 11.25 15.2109 11.25 15.4688V17.0312C11.25 17.2891 11.0391 17.5 10.7812 17.5H9.21875C8.96094 17.5 8.75 17.2891 8.75 17.0312V15.4688ZM3.75 10.4688C3.75 10.2109 3.96094 10 4.21875 10H5.78125C6.03906 10 6.25 10.2109 6.25 10.4688V12.0312C6.25 12.2891 6.03906 12.5 5.78125 12.5H4.21875C3.96094 12.5 3.75 12.2891 3.75 12.0312V10.4688ZM3.75 15.4688C3.75 15.2109 3.96094 15 4.21875 15H5.78125C6.03906 15 6.25 15.2109 6.25 15.4688V17.0312C6.25 17.2891 6.03906 17.5 5.78125 17.5H4.21875C3.96094 17.5 3.75 17.2891 3.75 17.0312V15.4688ZM16.875 2.5H15V0.625C15 0.28125 14.7188 0 14.375 0H13.125C12.7812 0 12.5 0.28125 12.5 0.625V2.5H7.5V0.625C7.5 0.28125 7.21875 0 6.875 0H5.625C5.28125 0 5 0.28125 5 0.625V2.5H3.125C2.08984 2.5 1.25 3.33984 1.25 4.375V6.25H18.75V4.375C18.75 3.33984 17.9102 2.5 16.875 2.5Z"
+                        fill="#EA392D"></path>
+                    </svg>
+                    <span> {{ module.event_date_and_time.datetime_field|format_datetime('EEEE, dd MMMM ') }}</span>
+                  </div>
+                  <div class="hero-webinar-date-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M10 0.5C4.76 0.5 0.5 4.76 0.5 10C0.5 15.24 4.76 19.5 10 19.5C15.24 19.5 19.5 15.24 19.5 10C19.5 4.76 15.24 0.5 10 0.5ZM14.16 10.96H10C9.46 10.96 9.04 10.52 9.04 10V4.48C9.04 3.94 9.48 3.52 10 3.52C10.52 3.52 10.96 3.96 10.96 4.48V9.02H14.14C14.68 9.02 15.1 9.46 15.1 9.98C15.1 10.5 14.68 10.96 14.16 10.96Z"
+                        fill="#EA392D"></path>
+                    </svg>
+                    <span>
+                      {% if module.event_date_and_time.show_gmt_ %}
+                        {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'GMT') }} /
+                      {% endif %}
+                      {% if module.event_date_and_time.show_pst_ %}
+                       {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'US/Pacific') }} /
+                      {% endif %}
+                      {% if module.event_date_and_time.show_est_ %}
+                       {{ module.event_date_and_time.datetime_field|format_datetime('H a v', 'US/Eastern') }} /
+                      {% endif %}
+                      {{ module.event_date_and_time.datetime_field|format_datetime('h a v', 'Europe/London') }}
+                    </span>
+                  </div>
+                </div>
+
+                  {% if module.event_date_and_time.datetime_field %}
+                    {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                        <style>
+                          .body-container-resources-post-spz .hero-section .hero-content .hero-webinar-date {
+                            display: none;
+                          }
+                        </style>
+                      {% if module.event_date_and_time.replay_link.url.href %}
+                        {% set href=module.event_date_and_time.replay_link.url.href %} 
+                        {% if module.event_date_and_time.replay_link.url.type is equalto "EMAIL_ADDRESS" %} 
+                          {% set href="mailto:" + href %} 
+                        {% endif %} 
+                        <a href="{{ href }}" 
+                        {% if module.event_date_and_time.replay_link.open_in_new_tab %}
+                          target="_blank" 
+                        {% endif %} 
+                        {% if module.event_date_and_time.replay_link.rel %}
+                          rel="{{ module.event_date_and_time.replay_link.rel }}" 
+                        {% endif %}>
+                        View The Replay →
+                        </a>
+                    {% endif %}
+                    {% endif %}
+                  {% endif %}
+
+                {% endif %}
+              {% endif %}
+              
+              {#{% if module.hero_bullets.hero_subtitle %}
+                <div class="sub-title">{{ module.hero_bullets.hero_subtitle }}</div>
+              {% endif %}#}
+
+              {% if module.hero_bullets.show_bullet_items %}
+                <div class="list-grp-wrapper">
+                    <ul class="list-group">
+
+                      {% for item in module.hero_bullets.bullet_list %}
+                         <li class="list-item">
+                           <div class="ls-title">
+                            {% inline_text field="bullet_point" value="{{ item.bullet_point }}" %}
+                           </div>
+                         </li>
+                      {% endfor %}
+                    </ul>
+                </div>
+              {% endif %}
+              
+              <div class="exisitng-blog-content">
+                 {{ content.post_body }}
+              </div>
+            </div>
+            
+            <!-- Right Content -->
+            <div class="hero-right-section">
+              <div class="form-overlay">
+                <div class="form-wrapper-spz">
+                     <div class="for-resource-and-upcoming-webinar">
+                        <h2 class="form-title-spz">{{ module.form_section.form_title }}</h2>
+
+                        <!-- FORM HERE -->
+                        <div class="hs-form-spz">
+                            {% form
+                              form_to_use="{{ module.form_section.form_field.form_id }}"
+                              response_response_type="{{ module.form_section.form_field.response_type }}"
+                              response_message="{{ module.form_section.form_field.message }}"
+                              response_redirect_id="{{ module.form_section.form_field.redirect_id }}"
+                              response_redirect_url="{{module.form_section.form_field.redirect_url}}"
+                              gotowebinar_webinar_key="{{ module.form_section.form_field.gotowebinar_webinar_key }}"
+                            %}
+                            <div class="hero-form-bonus-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_26194_208)">
+                                      <path d="M5.89144 12.8674C5.89144 12.5352 5.66097 12.3372 5.25432 12.3372C5.08827 12.3372 4.97581 12.3535 4.91699 12.3692V13.4349C4.98664 13.4506 5.07226 13.4558 5.19027 13.4558C5.62372 13.4558 5.89144 13.2368 5.89144 12.8674Z" fill="#FF492C"></path>
+                                      <path d="M8.40846 12.3481C8.22635 12.3481 8.10867 12.3639 8.03906 12.3802V14.7403C8.10871 14.7567 8.22117 14.7567 8.32284 14.7567C9.06159 14.7619 9.5434 14.3552 9.5434 13.4936C9.54862 12.7443 9.10958 12.3481 8.40846 12.3481Z" fill="#FF492C"></path>
+                                      <path d="M13.0855 0H5.0527C3.87918 0 2.92406 0.95578 2.92406 2.12863V9.99996H2.71616C2.24252 9.99996 1.8584 10.3837 1.8584 10.8578V16.0597C1.8584 16.5337 2.24248 16.9175 2.71616 16.9175H2.92406V17.8713C2.92406 19.0455 3.87918 20 5.0527 20H16.0131C17.1859 20 18.1411 19.0454 18.1411 17.8713V5.03791L13.0855 0ZM4.10866 11.7965C4.36004 11.7541 4.71338 11.722 5.2112 11.722C5.71429 11.722 6.07286 11.8181 6.31379 12.011C6.54393 12.1927 6.69923 12.4928 6.69923 12.8459C6.69923 13.1989 6.58155 13.499 6.36742 13.7023C6.08891 13.9644 5.67704 14.0821 5.19523 14.0821C5.088 14.0821 4.99189 14.0768 4.91672 14.0664V15.3563H4.10866V11.7965ZM16.0131 18.6964H5.0527C4.59831 18.6964 4.22829 18.3263 4.22829 17.8713V16.9175H14.4457C14.9194 16.9175 15.3035 16.5337 15.3035 16.0597V10.8578C15.3035 10.3837 14.9194 9.99996 14.4457 9.99996H4.22829V2.12863C4.22829 1.67491 4.59835 1.30489 5.0527 1.30489L12.5978 1.29701V4.08595C12.5978 4.90057 13.2588 5.56216 14.074 5.56216L16.8061 5.55432L16.8368 17.8713C16.8368 18.3263 16.4675 18.6964 16.0131 18.6964ZM7.22028 15.34V11.7965C7.51999 11.7488 7.91062 11.722 8.32287 11.722C9.00798 11.722 9.45225 11.8449 9.80037 12.1071C10.175 12.3856 10.4103 12.8295 10.4103 13.4669C10.4103 14.1573 10.1589 14.6339 9.81078 14.928C9.43093 15.2438 8.85272 15.3935 8.14632 15.3935C7.72329 15.3935 7.42359 15.3667 7.22028 15.34ZM13.062 13.242V13.9056H11.7666V15.3563H10.9477V11.7488H13.1529V12.4176H11.7666V13.242H13.062Z" fill="#FF492C"></path>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_26194_208">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                                <span><strong>Bonus:</strong> Get webinar slides and a recording</span>
+                            </div>
+                        </div>
+                       </div>
+                        {% if module.event_date_and_time.datetime_field %}
+                          {% if module.event_date_and_time.datetime_field | datetimeformat('%Y%m%d') < local_dt | datetimeformat('%Y%m%d') %}
+                            <style>
+                              .body-container-resources-post-spz .hero-section .hero-right-section .form-overlay .for-resource-and-upcoming-webinar{
+                                display: none;
+                              }
+                            </style>
+                            <div class="for-on-demand-webinar">
+                              <h2 class="form-title-spz">{{ module.form_section_for_on_demand.form_title }}</h2>
+                              <!-- FORM HERE -->
+                                 <div class="hs-form-spz">
+                                  {% form
+                                    form_to_use="{{ module.form_section_for_on_demand.form_field.form_id }}"
+                                    response_response_type="{{ module.form_section_for_on_demand.form_field.response_type }}"
+                                    response_message="{{ module.form_section_for_on_demand.form_field.message }}"
+                                    response_redirect_id="{{ module.form_section_for_on_demand.form_field.redirect_id }}"
+                                    response_redirect_url="{{module.form_section_for_on_demand.form_field.redirect_url}}"
+                                    gotowebinar_webinar_key="{{ module.form_section_for_on_demand.form_field.gotowebinar_webinar_key }}"
+                                  %}
+                                 </div>
+                            </div>
+                          {% endif %}
+                        {% endif %}
+                  
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
