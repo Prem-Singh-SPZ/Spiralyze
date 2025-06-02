@@ -48,7 +48,7 @@
         if (!body.classList.contains('spz_9002')) {
           body.classList.add('spz_9002');
 
-          waitForElm('.spz_9002 .hero + .row > .row__inner .bg-gradient p.text-h3').then(() => {
+          waitForElm('.spz_9002 .hero + .row > .row__inner .bg-gradient p.heading-md').then(() => {
             pageModify();
           });
 
@@ -57,23 +57,23 @@
           });
 
           //the .spz-hero gets added to the page and removed after some time, so keep checking for it to add the form
-          let spzHeroInterval = setInterval(() => {
-            hiddenValue('spz_9002', 'spz_9002_variant');
-            setHiddenFieldValue();
-          }, 1000);
-          setTimeout(function () {
-            clearInterval(spzHeroInterval);
-          }, 10000);
+          // let spzHeroInterval = setInterval(() => {
+          hiddenValue('spz_9002', 'spz_9002_variant');
+          setHiddenFieldValue();
+          // }, 1000);
+          // setTimeout(function () {
+          //   clearInterval(spzHeroInterval);
+          // }, 10000);
         } else {
           if (body.classList.contains('spz_9002')) {
             hiddenValue('spz_9002', 'spz_9002_variant');
-            let callMultipleTimes = setInterval(() => {
-              setHiddenFieldValue();
-            }, 500);
+            // let callMultipleTimes = setInterval(() => {
+            setHiddenFieldValue();
+            // }, 500);
 
-            setTimeout(() => {
-              clearInterval(callMultipleTimes);
-            }, 10000);
+            // setTimeout(() => {
+            //   clearInterval(callMultipleTimes);
+            // }, 10000);
           }
         }
       }

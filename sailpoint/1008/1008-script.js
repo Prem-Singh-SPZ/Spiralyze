@@ -4,8 +4,8 @@
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-                if (!body.classList.contains('spz_1008')) {
-                    body.classList.add('spz_1008');
+                if (!body.classList.contains('SPZ-1008')) {
+                    body.classList.add('SPZ-1008');
 
                     const heroSelector = `footer`;
                     const position = "beforebegin";
@@ -33,7 +33,7 @@
                     };
                     const additionalSection = {
                         socialProofLogos: {
-                            socialProofHeading: "Trusted by 50% of the Fortune 500",
+                            socialProofHeading: "Trusted by 51% of the Fortune 500 and 26% of the Forbes Global 2000",
                             socialProofImages: [
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/1008/logo-1.webp", imgAlt: "AES" },
                                 { url: "//res.cloudinary.com/spiralyze/image/upload/v1742375541/sailpoint/1008/logo-2.svg", imgAlt: "GM" },
@@ -46,6 +46,120 @@
                             ]
                         },
                     }
+                    const template_triageData = [
+                      {
+                        questionSuperHeading: "Get a demo",
+                        questionHeading: "What products are you interested in?",
+                        questionSubHeading: "",
+                        type: "checkbox",
+                        answers: [
+                          {
+                            answerText: 'Lifecycle management',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/normal.svg'
+                          },
+                          {
+                            answerText: 'Compliance management',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276135.svg'
+                          },
+                          {
+                            answerText: 'Access<br /> modeling',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276136.svg'
+                          },
+                          {
+                            answerText: 'Analytics',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276137.svg'
+                          },
+                          {
+                            answerText: 'CIEM',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276138.svg'
+                          },
+                          {
+                            answerText: 'Machine identity security',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276139.svg'
+                          },
+                          {
+                            answerText: 'Data security',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276140.svg'
+                          },
+                          {
+                            answerText: 'Non-employee risk management',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276141.svg'
+                          },
+                          {
+                            answerText: 'Privileged task automation',
+                            answerImage: '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/frame_1171276134.svg'
+                          }
+                        ]
+                      },
+                      {
+                        questionSuperHeading: "Get a demo",
+                        questionHeading: "What is your industry?",
+                        questionSubHeading: "",
+                        type: "radio",
+                        answers: [
+                          {
+                            answerText: "Healthcare",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_09.svg"
+                          },
+                          {
+                            answerText: "Financial services",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_16.svg"
+                          },
+                          {
+                            answerText: "Government",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_02.svg"
+                          },
+                          {
+                            answerText: "Manufacturing",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_03.svg"
+                          },
+                          {
+                            answerText: "Higher education",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_11.svg"
+                          },
+                          {
+                            answerText: "Utilities",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_06.svg"
+                          },
+                          {
+                            answerText: "Oil & gas",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_05.svg"
+                          },
+                          {
+                            answerText: "Technology",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_08.svg"
+                          },
+                          {
+                            answerText: "Services",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_10.svg"
+                          },
+                          {
+                            answerText: "Leisure",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_12.svg"
+                          },
+                          {
+                            answerText: "Telecommunications",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_13.svg"
+                          },
+                          {
+                            answerText: "Retail",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_14.svg"
+                          },
+                          {
+                            answerText: "Transportation",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_07.svg"
+                          },
+                          {
+                            answerText: "Construction",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_15.svg"
+                          },
+                          {
+                            answerText: "Other",
+                            answerImage: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/sailpoint/1004/icon_04.svg"
+                          }
+                        ]
+                      }
+                    ]
 
                     function addBaseline(formData, whereToPut, formSelector, heroSelector, additionalSection) {
                         const formTemplate = `<section class="spz-hero">
@@ -57,10 +171,7 @@
                                 <img src="${formData.siteLogo}" alt="${formData.siteLogoAlt}" />
                             </a>` : ""}               
                         </div>                                          
-                        <div class="spz-form-section">
-                            ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
-                            <div class="the-form mkto-wrap"><div class="contact_us_submit_spz"><h3 class="text-center">Thank you!</h3><h4 class="text-center">A representative will reach out to you shortly.</h4></div></div>
-                        </div>
+                        <div class="spz-form-section"></div>
                         ${typeof additionalSection.socialProofLogos !== 'undefined' ? `<div class="social-proof-logos">
                             <div class="social-proof-heading">${additionalSection.socialProofLogos.socialProofHeading}</div>
                                 <div class="social-proof-images">
@@ -86,31 +197,22 @@
                         }).join("") : ""}
                       </div>
                     </div>
-                        <div class="content-footer"><div class="footer-links"><ul class="links-list"><a class="f-anchor" href="/legal/terms-of-use">Terms of Use</a><a class="f-anchor" href="/legal/cookie-notice">Cookie notice</a><a class="f-anchor" href="/legal/privacy">Privacy</a><a class="f-anchor" href="/legal">Legal</a><a class="f-anchor" target="_blank" href="https://go.sailpoint.com/Preference-Center.html">Email preferences</a><a class="f-anchor" href="/legal/security">Disclosure policy</a></ul></div><p class="copyright-text"> © 2025 SailPoint Technologies, Inc. All Rights Reserved. </p></div>
+                        <div class="content-footer"><div class="footer-links"><ul class="links-list"><a class="f-anchor" href="/legal/terms-of-use">Terms of Use</a><a class="f-anchor" href="/legal/cookie-notice">Cookie notice</a><a class="f-anchor" href="/legal/privacy">Privacy</a><a class="f-anchor" href="/legal">Legal</a><a class="f-anchor" target="_blank" href="https://go.sailpoint.com/Preference-Center.html">Email preferences</a><a class="f-anchor" href="/legal/security">Disclosure policy</a></ul></div><p class="copyright-text">© 2025 SailPoint Technologies, Inc. All Rights Reserved.</p></div>
                     </div>
                   </div>
                 </div>
               </section>`;
                         waitForElm(heroSelector).then(() => {
                             document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
-                        });
-                        let formLoaded = setInterval(() => {
-                            if (document.querySelector(".spz_1008 .spz-form-wrap .the-form") && document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
-                                clearInterval(formLoaded)
-                                document.querySelector(".spz_1008 .spz-form-wrap .the-form").appendChild(document.querySelector(formSelector));
-                                waitForElm('.spz_1008 .mkto-wrap + .disclaimer').then(() => {
-                                    document.querySelector(".spz_1008 .spz-form-wrap .the-form").insertAdjacentElement('afterend', document.querySelector('.spz_1008 .mkto-wrap + .disclaimer'));
-                                });
-                                formModify();
-                            }
+                            addTriage(template_triageData, formSelector);
                         });
                     }
 
-                    let spzHeroInterval = setInterval(() => {
+                    // let spzHeroInterval = setInterval(() => {
                         if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
                             addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
-                            removeSpecificCookieValue('SPZ_1008', 'SPZ_1008_truecontrol');
-                            hiddenValue('SPZ_1008', 'SPZ_1008_variant');
+                            removeSpecificCookieValue('SPZ-1008', 'SPZ_1008_truecontrol');
+                            hiddenValue('SPZ-1008', 'SPZ_1008_variant');
                             setHiddenFieldValue();
                         }
                         else {
@@ -120,51 +222,220 @@
                                 });
                             }
                         }
-                    }, 1000);
-                    setTimeout(function () {
-                        clearInterval(spzHeroInterval);
-                    }, 10000);
+                    // }, 1000);
+                    // setTimeout(function () {
+                    //     clearInterval(spzHeroInterval);
+                    // }, 10000);                    
 
+                    function addTriage(template_triageData, formSelector) {
+                      const triageTemplate = `<div class="spz-triage-wrap">
+                        <div class="questions-progress">
+                          ${template_triageData.length !== 0 && template_triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
+                          <div class="progress-item"></div>
+                        </div>
+                        <div class="questions-wrap">
+                          ${template_triageData.length !== 0 && template_triageData.map((item, index) => {
+                            return `<div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''} ${item.type == 'radio' ? 'type-radio' : 'type-checkbox'}">
+                              <div class="question-superheading">${item.questionSuperHeading}</div>
+                              <div class="question-heading">${item.questionHeading}</div>
+                              <div class="question-subheading">${item.questionSubHeading}</div>
+                              <div class="answers-wrap">
+                                ${item.answers.map((itemm, indexx) => {
+                                  return `<div class="answer-item">
+                                    <div class="${item.type == 'radio' ? 'answer-radio' : 'answer-checkbox'}"></div>
+                                    ${itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" alt="${itemm.answerText}" class="answer-image"/>` : ``}
+                                    <div class="answer-text">${itemm.answerText}</div>
+                                  </div>`}).join('')
+                                }
+                              </div>
+                              ${item.answers.length > 9 ? `<div class="spz-load-more">Load more <svg xmlns="http://www.w3.org/2000/svg" width="88" height="2" viewBox="0 0 88 2" fill="none"><path d="M0.333374 1H87.3334" stroke="#0071CE"/></svg></div>` : ``}
+                              <div class="next-question">Next</div>
+                            </div>`}).join('')
+                          }
+                          <div class="question-form spz-hidden spz-form-wrap">
+                            <div class="the-form mkto-wrap"><div class="form-heading">Get a demo</div>
+                              <div class="contact_us_submit_spz">
+                                <h3 class="text-center">Thank you!</h3>
+                                <h4 class="text-center">A representative will reach out to you shortly.</h4>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                  
+                      </div>`;
+                      document.querySelector('.SPZ-1008 .spz-hero .spz-form-section').innerHTML = triageTemplate;
+                      document.querySelectorAll('.type-checkbox .answer-item').forEach((item, index) => {
+                        item.addEventListener('click', (e) => {
+                          if (e.target.classList.contains('answer-item')) {
+                            e.target.classList.contains('checked') ? e.target.classList.remove('checked') : e.target.classList.add('checked')
+                          } else {
+                            e.target.parentElement.classList.contains('checked') ? e.target.parentElement.classList.remove('checked') : e.target.parentElement.classList.add('checked')
+                          }
+                        })
+                      });
+
+                      document.querySelectorAll('.type-radio .answer-item').forEach((ritem, index) => {
+                        ritem.addEventListener('click', (e) => {
+                          document.querySelectorAll('.type-radio .answer-item').forEach((item, index) => {
+                            item.classList.remove('checked')
+                          })
+                          e.target.classList.add('checked')
+                        });
+                      });
+                      
+                      document.querySelectorAll('.next-question').forEach((item, index) => {
+                        item.addEventListener('click', (e) => {
+                          item.parentElement.classList.add('spz-hidden')
+                          item.parentElement.nextElementSibling.classList.remove('spz-hidden')
+                          document.querySelector('.progress-item.active').nextElementSibling.classList.add('active')
+                          document.querySelector('.progress-item.active').classList.add('completed')
+                          document.querySelector('.progress-item.active').classList.remove('active')
+                          storeTriageData();
+                        })
+                      })
+
+                      if (!document.querySelector(formSelector)) {
+                        document.querySelector(".spz-form-wrap").insertAdjacentHTML("beforeend","<div style='color:red;'>Add proper form selector in code to load form</div>");
+                      } else {
+                        const formLoaded = setInterval(() => {
+                          if (document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
+                          clearInterval(formLoaded);
+                          document.querySelector('.question-form .the-form').appendChild(document.querySelector(formSelector))
+                          formModify();
+                          }
+                        });
+                      }
+
+                      document.querySelector('.spz-load-more').addEventListener('click', () => {
+                        document.querySelector('.question-2 .answers-wrap').classList.add('show-all');
+                      });
+
+                      function storeTriageData() {
+                        const selectedAnswers = [];
+                        const question1 = [];
+                        const question2 = [];
+
+                        document.querySelectorAll('.type-checkbox .answer-item.checked').forEach(item => {
+                          question1.push(item.querySelector('.answer-text').textContent);
+                        });
+                        document.querySelectorAll('.type-radio .answer-item.checked').forEach(item => {
+                          question2.push(item.querySelector('.answer-text').textContent);
+                        });
+                        selectedAnswers.push(question1);
+                        selectedAnswers.push(question2);
+                        sessionStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
+
+                        selectedAnswers.question1 = question1.join(',');
+                        selectedAnswers.question2 = question2.join(',');
+
+                        let int3Val = '';
+                        if (selectedAnswers.question1 === '' || selectedAnswers.question1 === undefined) {
+                          int3Val = `;` + selectedAnswers.question2;
+                        } else if (selectedAnswers.question2 === '' || selectedAnswers.question2 === undefined) {
+                          int3Val = selectedAnswers.question1 + `;`;
+                        } else {
+                          int3Val = `${selectedAnswers.question1};${selectedAnswers.question2}`;
+                        }
+
+                        document.querySelector('input[name="intellimize3"]').value = int3Val;
+                      }
+
+                      function loadTriageData() {
+                        const selectedAnswers = JSON.parse(sessionStorage.getItem('selectedAnswers'));
+                        if (selectedAnswers) {
+                          selectedAnswers.forEach((question, index) => {
+                            question.forEach(answer => {
+                              document.querySelectorAll('.answer-text').forEach(item => {
+                                if (item.textContent === answer) {
+                                  item.parentElement.classList.add('checked');
+                                }
+                              });
+                            });
+                          });
+                        }
+
+                        if (sessionStorage.getItem('formSubmitted') === 'true') {
+                          document.querySelector('.question-1').classList.add('spz-hidden');
+                          document.querySelector('.question-2').classList.add('spz-hidden');
+                          document.querySelector('.question-form').classList.remove('spz-hidden');
+                          document.querySelector('.progress-item.active').classList.remove('active');
+                          document.querySelector('.progress-item:last-child').classList.add('active');
+                        }
+                      }
+                      loadTriageData();
+
+                      function checkFormSubmitted() {
+                        const formObserver = new MutationObserver((mutations) => {
+                          mutations.forEach((mutation) => {
+                            if (mutation.removedNodes) {
+                              mutation.removedNodes.forEach((node) => {
+                                if (node.nodeName === 'FORM') {
+                                  document.querySelector('.question-1').classList.add('spz-hidden');
+                                  document.querySelector('.question-2').classList.add('spz-hidden');
+                                  document.querySelector('.question-form').classList.remove('spz-hidden');
+                                  sessionStorage.setItem('formSubmitted', 'true');
+                                }
+                              });
+                            }
+                          });
+                        });
+
+                        formObserver.observe(document.querySelector('.spz-form-wrap'), { childList: true, subtree: true });
+                      }
+
+                      checkFormSubmitted();
+
+                    }
+
+                    function progressiveForm(targetEl) {
+                      if (!document.body.classList.contains('form-expand')) {
+                        const el = targetEl;
+                        const fieldName = el.getAttribute('name');
+                        if (fieldName === 'Email') {
+                          const newemailValue = el.value.trim();
+                          const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                          if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
+                            el.closest('.mktoFieldWrap').classList.add('emailerror');
+                            checkEmail();
+                          } else {
+                            el.closest('.mktoFieldWrap').classList.remove('emailerror');
+                          }
+                        }
+
+                        const firstName = document.querySelector('input[name="FirstName"]').value.trim();
+                        const lastName = document.querySelector('input[name="LastName"]').value.trim();
+                        const emailValue = document.querySelector('input[name="Email"]').value.trim();
+                        const companyValue = document.querySelector('input[name="Phone"]').value.trim();
+                        const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                        if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
+                          if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
+                            document.body.classList.add('form-expand');
+                          }
+                        }
+                      }
+                    }
 
                     function formModify() {
-                        var form_fields = document.querySelectorAll('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow');
+                        // Add class in mktoFormRow using count
+                        var form_fields = document.querySelectorAll('.SPZ-1008 .spz-form-section form.mktoForm .mktoFormRow');
                         for (var i = 0; i < form_fields.length; i++) {
                             var dynamicClass = 'field-' + (i + 1);
                             form_fields[i].classList.add(dynamicClass);
                         }
 
+                        // Change Label Text
                         ['#LblCountry:Country', '#LblState:State', '#LblNumber_of_Employees__c:Number of employees'].forEach(item => {
                             const [id, text] = item.split(':');
-                            waitForElm(`.spz_1008 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
+                            waitForElm(`.SPZ-1008 .spz-form-section form.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
                                 label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
                             });
                         });
 
-                        // waitForElm('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-31 .mktoCheckboxList label').then(label => {
-                        //     label.textContent = "Uncheck to stop receiving SailPoint email communications.";
-                        // });
 
-                        //   var company_field = document.querySelector('.spz_1008 form.mktoForm .field-6');
-                        //   var lastName_field = document.querySelector('.spz_1008 form.mktoForm .field-4');
-                        //   company_field.after(lastName_field);
+                        // document.querySelector('.SPZ-1008 form.mktoForm #contactFormComments.mktoField').value = 'Get a demo';
 
-                        //   var phone_field = document.querySelector('.spz_1008 form.mktoForm .field-5');
-                        //   var job_field = document.querySelector('.spz_1008 form.mktoForm .field-7');
-                        //   job_field.after(phone_field);
-
-                        var employees_field = document.querySelector('.spz_1008 form.mktoForm .field-8');
-                        var state_field = document.querySelector('.spz_1008 form.mktoForm .field-10');
-                        state_field.after(employees_field);
-
-                        waitForElm('.spz_1008 form.mktoForm .disclaimer').then((elm) => {
-                            changePos();
-                        });
-
-                        document.querySelector('.spz_1008 form.mktoForm .field-11 .mktoField').value = 'Get live demo';
-
-                        waitForElm(`.spz_1008 .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
+                        waitForElm(`.SPZ-1008 .spz-form-section form.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
                             setTimeout(() => {
-                                document.querySelectorAll(`.spz_1008 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+                                document.querySelectorAll(`.SPZ-1008 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
                                     if (el && el.value && (el.value != '')) {
                                         el.closest('.mktoFieldWrap').classList.add('filled');
                                     }
@@ -172,16 +443,18 @@
                             }, 1000);
                         });
 
+                        // On input focus add class on closest parent field class
                         function focusFields() {
-                            const form = document.querySelector('.spz_1008 form.mktoForm');
-                            let emailFocusCount = 0;
+                            // Attach events using event delegation
+                            const form = document.querySelector('.SPZ-1008 form.mktoForm');
+
                             form.addEventListener('focus', function (event) {
                                 const el = event.target;
                                 if (el.classList.contains('mktoField')) {
                                     el.closest('.mktoFieldWrap').classList.add('active', 'typing');
                                     checkAllFields();
                                 }
-                                var email_field = document.querySelector('.spz_1008 .spz-form-section form.mktoForm input[name="Email"]');
+                                var email_field = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm input[name="Email"]');
                                 if (email_field.value.trim() === '') {
                                     email_field.closest('.mktoFieldWrap').classList.remove('emailerror');
                                 }
@@ -209,31 +482,7 @@
                             }, true);
 
                             form.addEventListener('keyup', function (event) {
-                                if (!document.body.classList.contains('form-expand')) {
-                                    const el = event.target;
-                                    const fieldName = el.getAttribute('name');
-
-                                    if (fieldName === 'Email') {
-                                        const newemailValue = el.value.trim();
-                                        const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                                        if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
-                                            el.closest('.mktoFieldWrap').classList.add('emailerror');
-                                        } else {
-                                            el.closest('.mktoFieldWrap').classList.remove('emailerror');
-                                        }
-                                    }
-
-                                    const firstName = document.querySelector('input[name="FirstName"]').value.trim();
-                                    const lastName = document.querySelector('input[name="LastName"]').value.trim();
-                                    const emailValue = document.querySelector('input[name="Email"]').value.trim();
-                                    const companyValue = document.querySelector('input[name="Phone"]').value.trim();
-                                    const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                                    if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
-                                        if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
-                                            document.body.classList.add('form-expand');
-                                        }
-                                    }
-                                }
+                                progressiveForm(event.target);
                             }, true);
 
                             form.addEventListener('blur', function (event) {
@@ -243,32 +492,7 @@
                                     checkAllFields();
                                 }
 
-                                if (!document.body.classList.contains('form-expand')) {
-                                    const el = event.target;
-                                    const fieldName = el.getAttribute('name');
-
-                                    if (fieldName === 'Email') {
-                                        const newemailValue = el.value.trim();
-                                        const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                                        if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
-                                            el.closest('.mktoFieldWrap').classList.add('emailerror');
-                                            checkEmail();
-                                        } else {
-                                            el.closest('.mktoFieldWrap').classList.remove('emailerror');
-                                        }
-                                    }
-
-                                    const firstName = document.querySelector('input[name="FirstName"]').value.trim();
-                                    const lastName = document.querySelector('input[name="LastName"]').value.trim();
-                                    const emailValue = document.querySelector('input[name="Email"]').value.trim();
-                                    const companyValue = document.querySelector('input[name="Phone"]').value.trim();
-                                    const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-                                    if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
-                                        if (firstName && lastName && companyValue && emailRegex.test(emailValue)) {
-                                            document.body.classList.add('form-expand');
-                                        }
-                                    }
-                                }
+                                progressiveForm(event.target);
                             }, true);
 
                             form.addEventListener('input', function (event) {
@@ -285,8 +509,9 @@
                                 }
                             });
 
+                            // Function to reapply functionality for dynamic fields
                             function reapplyStateFieldListeners() {
-                                const stateField = document.querySelector('.spz_1008 form.mktoForm .mktoFieldWrap .mktoField#State');
+                                const stateField = document.querySelector('.SPZ-1008 form.mktoForm .mktoFieldWrap .mktoField#State');
                                 if (stateField) {
                                     stateField.addEventListener('focus', function () {
                                         stateField.closest('.mktoFieldWrap').classList.add('active', 'typing');
@@ -305,10 +530,12 @@
                                 }
                             }
 
+                            // Reapply listeners whenever the state field is dynamically updated
                             const observer = new MutationObserver(() => {
                                 reapplyStateFieldListeners();
                             });
-                            const container = document.querySelector('.spz_1008 form.mktoForm');
+
+                            const container = document.querySelector('.SPZ-1008 form.mktoForm');
                             if (container) {
                                 observer.observe(container, { childList: true, subtree: true });
                             }
@@ -317,11 +544,12 @@
                         focusFields();
 
                         function checkAllFields() {
-                            const fields = document.querySelectorAll('.spz_1008 form.mktoForm .mktoField');
+                            const fields = document.querySelectorAll('.SPZ-1008 form.mktoForm .mktoField');
                             const timeBuffer = setInterval(() => {
                                 fields.forEach(field => {
                                     const fieldWrap = field.closest('.mktoFieldWrap');
                                     if (fieldWrap) {
+                                        // Check for error
                                         const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
                                         if (errorElement && errorElement.style.display !== 'none') {
                                             fieldWrap.classList.add('error');
@@ -329,6 +557,7 @@
                                             fieldWrap.classList.remove('error');
                                         }
 
+                                        // Check if the field is filled
                                         if (field.value && field.value.trim() !== '') {
                                             fieldWrap.classList.add('filled');
                                         } else {
@@ -336,7 +565,8 @@
                                         }
                                     }
                                 });
-                            }, 300);
+                            }, 200);
+
 
                             setTimeout(() => {
                                 clearInterval(timeBuffer);
@@ -344,28 +574,12 @@
                         }
 
                         document.querySelector('select#Country').addEventListener('change', () => {
-                            const stateRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-10');
-                            const countryRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-7');
-                            const employeeNumberRow = document.querySelector('.spz_1008 .spz-form-section form.mktoForm .mktoFormRow.field-8');
-
-                            changePos();
+                            const stateRow = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm .mktoFormRow.field-10');
+                            const countryRow = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm .mktoFormRow.field-7');
+                            const employeeNumberRow = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm .mktoFormRow.field-8');
 
                             const stateExists = document.querySelector('select#State');
                             stateExists ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.remove('hidden'), countryRow.classList.remove('spz-full')) : (stateRow.classList.add('hidden'), countryRow.classList.add('spz-full'));
-
-                            // document.querySelector('label#LblGlobal_Opt_out__c')
-                            // ? (optOutRow.querySelector('.mktoCheckboxList label').textContent = "Uncheck to stop receiving SailPoint email communications.", optOutRow.classList.remove('hidden'))
-                            // : optOutRow.classList.add('hidden');
-
-                            if (stateExists) {
-                                document.querySelector('select#State').addEventListener('change', () => {
-                                    changePos();
-                                });
-                            }
-                        });
-
-                        document.querySelector('select#State').addEventListener('change', () => {
-                            changePos();
                         });
 
                         MktoForms2.whenReady(function (form) {
@@ -374,22 +588,18 @@
                             });
                         });
 
-                        waitForElm('.spz_1008 .mkto-wrap.w-full #confirm #contact_us_submit').then(() => {
-                            document.body.classList.add('form-submit');
-                        });
-
                     }
                 } else {
-                    if (body.classList.contains('spz_1008')) {
-                        removeSpecificCookieValue('SPZ_1008', 'SPZ_1008_truecontrol');
-                        hiddenValue('SPZ_1008', 'SPZ_1008_variant');
-                        let callMultipleTimes = setInterval(() => {
+                    if (body.classList.contains('SPZ-1008')) {
+                        removeSpecificCookieValue('SPZ-1008', 'SPZ_1008_truecontrol');
+                        hiddenValue('SPZ-1008', 'SPZ_1008_variant');
+                        // let callMultipleTimes = setInterval(() => {
                             setHiddenFieldValue();
-                        }, 500);
+                        // }, 500);
 
-                        setTimeout(() => {
-                            clearInterval(callMultipleTimes);
-                        }, 10000);
+                        // setTimeout(() => {
+                        //     clearInterval(callMultipleTimes);
+                        // }, 10000);
                     }
                 }
             }
@@ -397,8 +607,8 @@
     }
 
     function changePos() {
-        const disclaimer_field = document.querySelector('.spz_1008 form.mktoForm .mktoCaptchaDisclaimer');
-        const button = document.querySelector('.spz_1008 form.mktoForm .mktoButtonRow');
+        const disclaimer_field = document.querySelector('.SPZ-1008 form.mktoForm .mktoCaptchaDisclaimer');
+        const button = document.querySelector('.SPZ-1008 form.mktoForm .mktoButtonRow');
 
         let checkPos = setInterval(() => {
             if (disclaimer_field && button) {
@@ -413,8 +623,8 @@
 
     function removeTest() {
         setTimeout(() => {
-            if (document.querySelector('.spz_1008')) {
-                document.body.classList.remove("spz_1008");
+            if (document.querySelector('.SPZ-1008')) {
+                document.body.classList.remove("SPZ-1008");
             }
             if (document.querySelector('.form-submit')) {
                 document.body.classList.remove("form-submit");
@@ -422,11 +632,25 @@
         }, 1000);
     }
 
+    function checkEmail() {
+        const emailField = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm input[name="Email"]');
+        const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+        if (emailField) {
+            if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
+                if (!emailField.parentElement.querySelector('.customError')) {
+                    if (emailField.closest('.mktoFieldWrap').querySelectorAll('.customError').length == 0) {
+                        emailField.insertAdjacentHTML('afterend', '<div class="mktoError_1 customError"><div class="mktoErrorMsg">Valid email required.</div></div>');
+                    }
+                }
+            }
+        }
+    }
+
     function removeSpecificCookieValue(targetName, targetValue) {
-        ['HiddenFieldName', 'HiddenFieldValue'].forEach((key, i) => {
-            var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
-            setCookie(key, values || '', 1);
-        });
+      ['HiddenFieldNameDemo', 'HiddenFieldValueDemo'].forEach((key, i) => {
+        var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+        setCookie(key, values || '', 1);
+      });
     }
 
     // Do not touch below hidden field code for any Experiment Start
@@ -490,7 +714,7 @@
     //click event listener
     document.addEventListener('click', function (e) {
         if (e.target.closest('.mktoForm .mktoButton')) {
-            const fields = document.querySelectorAll('.spz_1008 form.mktoForm .mktoField');
+            const fields = document.querySelectorAll('.SPZ-1008 form.mktoForm .mktoField');
             const timeBuffer = setInterval(() => {
                 fields.forEach(field => {
                     const fieldWrap = field.closest('.mktoFieldWrap');
@@ -544,7 +768,7 @@
                 }
             }
 
-            waitForElm('.spz_1008 .mktoForm .mktoError').then(function (elm) {
+            waitForElm('.SPZ-1008 .mktoForm .mktoError').then(function (elm) {
                 if (elm.parentNode.querySelector('#ValidMsgEmail')) {
                   const targetNode = elm.parentNode;
                   const config = { attributes: true, childList: true, subtree: true };
@@ -572,8 +796,8 @@
                 } else {
                   let counterA = 0;
                   const intervalIdA = setInterval(() => {
-                    if (document.querySelector('.spz_1008 .mktoForm .mktoError #ValidMsgEmail') !== null) {
-                      document.querySelector('.spz_1008 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+                    if (document.querySelector('.SPZ-1008 .mktoForm .mktoError #ValidMsgEmail') !== null) {
+                      document.querySelector('.SPZ-1008 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
                     }
                     counterA++;
                     if (counterA >= 10) {
@@ -593,7 +817,7 @@
     });
 
     function checkEmail() {
-        const emailField = document.querySelector('.spz_1008 .spz-form-section form.mktoForm input[name="Email"]');
+        const emailField = document.querySelector('.SPZ-1008 .spz-form-section form.mktoForm input[name="Email"]');
         const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
         if (emailField) {
             if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
