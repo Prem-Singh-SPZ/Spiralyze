@@ -436,13 +436,6 @@
                   border-bottom: 0.5px solid #ff492c;
                   display: block;
 
-                  &:nth-of-type(5) {
-                    display: initial !important;
-                    padding: 0 !important;
-                    float: none;
-                    width: 100%;
-                  }
-
                   a {
                     color: #fff;
                     font-family: Manrope, sans-serif;
@@ -455,7 +448,7 @@
 
                     &[id] {
                       display: flex;
-                      padding: 24px 17px;
+                      padding: 23.7px 16.5px;
                       align-items: flex-start;
                       gap: 12px;
                       border-bottom: none;
@@ -649,8 +642,8 @@
                     &.open:after {
                       content: "-";
                       font-size: 32px;
-                              right: 1px;
-        top: 15px;
+                      right: 1px;
+                      top: 15px;
                     }
 
                     .menu-content {
@@ -756,6 +749,43 @@
 
                         &:hover {
                           background: #f09135;
+                        }
+                      }
+                    }
+                  }
+
+                  &:nth-of-type(5) {
+                    display: initial !important;
+                    padding: 0 !important;
+                    float: none;
+                    width: 100%;
+
+                    a + .sub-nav .sub-nav-container {
+                      .sub-nav-grey {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 2rem;
+                        .sub-nav-group:nth-of-type(1) {
+                          column-count: 1;
+                          grid-column: 1;
+                          grid-row: 1;
+                        }
+
+                        .mega-menu-heading {
+                          grid-column: 2;
+                          grid-row: 1;
+                        }
+
+                        .sub-nav-group:nth-of-type(2) {
+                          grid-column: 2;
+                          grid-row: 1 / span 1;
+                          margin-top: 36px;
+                          column-count: 1;
+
+                          li a{
+                            gap: 0;
+                            align-items: center;
+                          }
                         }
                       }
                     }
