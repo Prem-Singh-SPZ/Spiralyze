@@ -445,6 +445,10 @@
                   border-bottom: 0.5px solid #ff492c;
                   display: block;
 
+                  &:has(> a.open) {
+                    background: #0d0b16;
+                  }
+
                   a {
                     color: #fff;
                     font-family: Manrope, sans-serif;
@@ -454,6 +458,11 @@
                     display: flex;
                     gap: 12px;
                     padding: 16px 12.5px 16px 16px;
+
+                    @media (width< 767.98px) {
+                      padding: 10px;
+                      gap: 13px;
+                    }
 
                     &[id] {
                       display: flex;
@@ -469,6 +478,11 @@
 
                       .sub-nav-container {
                         padding: 0 6px;
+
+                        @media (width< 767.98px) {
+                          padding: 0 1px;
+                        }
+
                         .sub-nav-white {
                           .mega-menu-heading {
                             color: #fff;
@@ -482,6 +496,10 @@
                             opacity: 1;
                             padding: 0;
                             margin-bottom: 25px;
+
+                            @media (width < 767.98px) {
+                              margin-top: -4px;
+                            }
                           }
 
                           .sub-nav-group {
@@ -492,6 +510,8 @@
 
                             @media (width < 767.98px) {
                               flex-direction: column;
+                              gap: 9.5px;
+                              margin-bottom: 22px;
                             }
 
                             &:last-child {
@@ -528,6 +548,11 @@
                           align-self: flex-start;
                           margin-top: 31px;
 
+                          @media (width < 767.98px) {
+                            margin-top: 24px;
+                            padding: 15px 20px 20px;
+                          }
+
                           .mega-menu-heading {
                             color: #fff;
                             font-family: Manrope, sans-serif;
@@ -540,6 +565,10 @@
                             opacity: 1;
                             padding: 0;
                             margin-bottom: 38px;
+
+                            @media (width < 767.98px) {
+                              margin-bottom: 30px;
+                            }
 
                             &:has(small) {
                               margin-bottom: 16px;
@@ -636,15 +665,24 @@
                       }
                     }
 
-                    &.open,
                     &.active {
                       background: transparent !important;
+                    }
+                    &.open {
+                      background: #0d0b16 !important;
+                      border-radius: 0;
                     }
 
                     &.open + .sub-nav.open {
                       display: block;
                       padding: 0 10px 34px;
                       position: inherit;
+                      background: #0d0b16;
+                      border-radius: 0;
+
+                      @media (width < 767.98px) {
+                        padding: 0 10px 30px;
+                      }
                     }
 
                     &::after {
@@ -677,6 +715,10 @@
                         position: relative;
                         display: flex;
                         align-items: center;
+
+                        @media (width< 767.98px) {
+                          font-size: 14px;
+                        }
 
                         &:after {
                           content: "";
@@ -774,7 +816,7 @@
                   }
 
                   &:nth-of-type(5) {
-                    display: initial !important;
+                    display: block !important;
                     padding: 0 !important;
                     float: none;
                     width: 100%;
