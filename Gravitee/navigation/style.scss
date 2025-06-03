@@ -28,7 +28,7 @@
             .nav-menu {
               .nav-item {
                 > a {
-                  padding: 10px 16.7px;
+                  padding: 10px 16.5px;
                   color: #fff;
                   font-family: Manrope, sans-serif;
                   font-size: 16px;
@@ -82,7 +82,7 @@
                 }
 
                 &:nth-last-child(2) {
-                  padding-left: 84px;
+                  // padding-left: 84px;
 
                   @media (width < 1199.98px) {
                     padding: 0;
@@ -274,7 +274,7 @@
                         #882b21 0%,
                         #120c16 100%
                       );
-                      padding: 32px;
+                      padding: 32px 32px 28px;
                       align-self: flex-start;
 
                       @media (width < 1199.98px) {
@@ -312,7 +312,7 @@
                       .sub-nav-group {
                         margin: 0;
                         width: 100%;
-                        margin-bottom: 32px;
+                        margin-bottom: 30px;
 
                         &:last-child {
                           margin-bottom: 0;
@@ -426,12 +426,21 @@
                 .m-active {
                   display: flex;
                   margin-top: -2px;
+
+                  @media (width < 767.98px) {
+                    margin-top: 1px;
+                  }
                 }
               }
             }
 
             nav#menu-mobile {
               .nav-menu {
+                @media (width < 576.98px) {
+                  display: flex;
+                  flex-direction: column;
+                }
+
                 .nav-item {
                   border-bottom: 0.5px solid #ff492c;
                   display: block;
@@ -448,7 +457,7 @@
 
                     &[id] {
                       display: flex;
-                      padding: 23.7px 16.5px;
+                      padding: 23.6px 16.5px;
                       align-items: flex-start;
                       gap: 12px;
                       border-bottom: none;
@@ -469,7 +478,7 @@
                             font-weight: 600 !important;
                             line-height: normal;
                             text-transform: uppercase;
-                            letter-spacing: 0;
+                            letter-spacing: 2.8px;
                             opacity: 1;
                             padding: 0;
                             margin-bottom: 25px;
@@ -556,6 +565,10 @@
                             display: block;
                             column-count: 2;
 
+                            @media (width < 576.98px) {
+                              column-count: 1;
+                            }
+
                             &:last-child {
                               margin-bottom: 0;
                             }
@@ -635,12 +648,13 @@
                     }
 
                     &::after {
-                      right: 2px;
-                      top: 18px;
+                      right: 3px;
+                      top: 17px;
                     }
 
                     &.active:after {
                       content: "+";
+                      font-weight: 300;
                     }
 
                     &.open:after {
@@ -648,6 +662,7 @@
                       font-size: 32px;
                       right: 1px;
                       top: 15px;
+                      font-weight: 300;
                     }
 
                     .menu-content {
@@ -809,10 +824,20 @@
                   &.nav-btn {
                     border: none;
 
-                    @media (width < 767.98px) {
+                    @media (width < 576.98px) {
                       width: 100%;
                       float: none;
-                      margin-top: 8px !important;
+                      padding: 0 !important;
+
+                      &:nth-last-child(2) {
+                        margin-top: 12px !important;
+                        order: 10;
+                      }
+
+                      &:last-child {
+                        margin-top: 35px !important;
+                        order: 9;
+                      }
 
                       a {
                         @media (width < 576.98px) {
@@ -831,6 +856,10 @@
                 background: #010101;
                 padding: 44px 10px 50px;
                 display: grid;
+
+                @media (width < 767.98px) {
+                  padding: 21px 10px 50px;
+                }
               }
             }
           }

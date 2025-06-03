@@ -26,7 +26,7 @@
           align-items: flex-start;
 }
 .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item > a {
-  padding: 10px 16.7px;
+  padding: 10px 16.5px;
   color: #fff;
   font-family: Manrope, sans-serif;
   font-size: 16px;
@@ -70,9 +70,6 @@
 }
 .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item > a.button.light-btn:hover {
   background: #f09135;
-}
-.body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item:nth-last-child(2) {
-  padding-left: 84px;
 }
 @media (width < 1199.98px) {
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item:nth-last-child(2) {
@@ -261,7 +258,7 @@
   border-radius: 8.368px;
   background: -webkit-gradient(linear, left top, left bottom, from(#882b21), to(#120c16));
   background: linear-gradient(180deg, #882b21 0%, #120c16 100%);
-  padding: 32px;
+  padding: 32px 32px 28px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -298,7 +295,7 @@
 .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item .sub-nav .sub-nav-container .sub-nav-grey .sub-nav-group {
   margin: 0;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu .nav-menu .nav-item .sub-nav .sub-nav-container .sub-nav-grey .sub-nav-group:last-child {
   margin-bottom: 0;
@@ -392,6 +389,24 @@
     display: flex;
     margin-top: -2px;
   }
+}
+@media (width < 1000.98px) and (width < 767.98px) {
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern a.menu-link.active .m-active {
+    margin-top: 1px;
+  }
+}
+@media (width < 1000.98px) and (width < 576.98px) {
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (width < 1000.98px) {
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item {
     border-bottom: 0.5px solid #ff492c;
     display: block;
@@ -412,7 +427,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 23.7px 16.5px;
+    padding: 23.6px 16.5px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -434,7 +449,7 @@
     font-weight: 600 !important;
     line-height: normal;
     text-transform: uppercase;
-    letter-spacing: 0;
+    letter-spacing: 2.8px;
     opacity: 1;
     padding: 0;
     margin-bottom: 25px;
@@ -520,6 +535,15 @@
        -moz-column-count: 2;
             column-count: 2;
   }
+}
+@media (width < 1000.98px) and (width < 576.98px) {
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a + .sub-nav .sub-nav-container .sub-nav-grey .sub-nav-group {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
+@media (width < 1000.98px) {
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a + .sub-nav .sub-nav-container .sub-nav-grey .sub-nav-group:last-child {
     margin-bottom: 0;
   }
@@ -579,17 +603,19 @@
     position: inherit;
   }
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a::after {
-    right: 2px;
-    top: 18px;
+    right: 3px;
+    top: 17px;
   }
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a.active:after {
     content: "+";
+    font-weight: 300;
   }
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a.open:after {
     content: "-";
     font-size: 32px;
     right: 1px;
     top: 15px;
+    font-weight: 300;
   }
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item a .menu-content .menu-title {
     color: #fff;
@@ -756,14 +782,26 @@
     border: none;
   }
 }
-@media (width < 1000.98px) and (width < 767.98px) {
+@media (width < 1000.98px) and (width < 576.98px) {
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item.nav-btn {
     width: 100%;
     float: none;
-    margin-top: 8px !important;
+    padding: 0 !important;
+  }
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item.nav-btn:nth-last-child(2) {
+    margin-top: 12px !important;
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item.nav-btn:last-child {
+    margin-top: 35px !important;
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
   }
 }
-@media (width < 1000.98px) and (width < 767.98px) and (width < 576.98px) {
+@media (width < 1000.98px) and (width < 576.98px) and (width < 576.98px) {
   .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile .nav-menu .nav-item.nav-btn a {
     width: 100%;
   }
@@ -777,6 +815,11 @@
     padding: 44px 10px 50px;
     display: -ms-grid;
     display: grid;
+  }
+}
+@media (width < 1000.98px) and (width < 767.98px) {
+  .body-wrapper header.header-spz .header__container.content-wrapper .header__column .pattern nav#menu-mobile.active {
+    padding: 21px 10px 50px;
   }
 }
 
