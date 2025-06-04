@@ -80,7 +80,7 @@
       else {
         if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
           if (i <= 12) {
-            form_fields[i].classList.add('hidden');
+            // form_fields[i].classList.add('hidden');
           }
         }
         else {
@@ -259,12 +259,16 @@
     }
 
     if (document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm select#Country')) {
+      const stateRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .row_Country + .mktoFormRow');
+      const optOutRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
+      const countryRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
       document.querySelector('select#Country').addEventListener('change', () => {
-        const stateRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .row_Country + .mktoFormRow');
-        const optOutRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .mktoFormRow.row_reasonforInquiry');
-        const countryRow = document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm .mktoFormRow.row_Country');
-
         document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.add('row_State'), countryRow.classList.remove('full-span-field')) : (stateRow.classList.remove('row_State'), countryRow.classList.add('full-span-field'));
+      });
+
+      waitForElm(".SPZ_7005_TC #mktoForm_1017.mktoForm select#State").then(() => {
+        document.querySelector('label#LblState').textContent = "State";
+        stateRow.classList.add('row_State');
       });
     }
 
