@@ -9,7 +9,7 @@
                     document.body.classList.add('spz_3004');
                     waitForElm('.spz_3004 .product-hero .row__inner .inner-row__inner .form-header .text-white').then(() => {
                         let keepChanges = setInterval(() => {
-                            if (document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt') && document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .text-h2.text-h1.text-cobalt').textContent !== 'Streamline identity and access management') {
+                            if (document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .heading-lg.text-h1.text-cobalt') && document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .heading-lg.text-h1.text-cobalt').textContent !== 'Streamline identity and access management') {
                                 heroSectionUpdate();
                                 accordionSection();
                             }
@@ -19,6 +19,7 @@
                             waitForElm('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row__inner .column:last-child .mkto-wrap.w-full.iron-theme #mktoForm_1018.mktoForm .mktoFieldWrap .mktoField').then(() => {
                                 if (!document.querySelector('.spz_3004 #page-container .page-transition .product-hero #mktoForm_1018.mktoForm .row_FirstName')) {
                                     formModify();
+                                    clearInterval(keepChanges);
                                 }
                             });
                             hiddenValue('SPZ_3004', 'SPZ_3004_variant');
@@ -323,8 +324,8 @@
             let demoBtn = document.querySelector('.spz_3004 #atlas .column.relative .column__inner .btn.btn--blue-alt');
             demoBtn.outerHTML = `<a class="btn btn--hotpink go-to-demo" href="javascript:;">Get a demo</a>`;
 
-            waitForElm('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').then(() => {
-                document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .vidyard-lightbox-thumbnail .vidyard-lightbox-image').outerHTML = `<picture>
+            waitForElm('.spz_3004 #atlas .column.relative .video-wrapper .video-wrapper__inner').then(() => {
+                document.querySelector('.spz_3004 #atlas .column.relative .video-wrapper .video-wrapper__inner').outerHTML = `<picture>
                     <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb.webp">
                     <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_tablet.webp">
                     <img class="vidyard-lightbox-image" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_mobile.webp" alt="Video Thumbnail">

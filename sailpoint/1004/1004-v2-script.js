@@ -291,12 +291,14 @@
                     //the .spz-hero gets added to the page and removed after some time, so keep checking for it to add the form
                     let spzHeroInterval = setInterval(() => {
                         if (document.querySelectorAll('.spz-hero').length == 0 && window.location.pathname === '/demo') {
+                            clearInterval(spzHeroInterval);
                             addBaseline(heroContent, position, formSelector, heroSelector, additionalSection);
                             hiddenValue('SPZ_1004', 'SPZ_1004_variant_2');
                             setHiddenFieldValue();
                         }
                         else {
                             if (window.location.pathname.indexOf("/demo") == -1 && document.querySelectorAll('.spz-hero').length > 0) {
+                                clearInterval(spzHeroInterval);
                                 document.querySelectorAll('.spz-hero').forEach(item => {
                                     item.remove();
                                 });
@@ -488,6 +490,7 @@
                         hiddenValue('SPZ_1004', 'SPZ_1004_variant_2');
                         let callMultipleTimes = setInterval(() => {
                             setHiddenFieldValue();
+                            clearInterval(callMultipleTimes);
                         }, 500);
 
                         setTimeout(() => {
@@ -603,18 +606,31 @@
     }
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1018 input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
-                var ExistingHiddenFieldValue = getCookie('HiddenFieldValueDemo');
-                //check if hidden field value is empty then only set the value else set the value with , seperated
-                if (intellimize1.value == '') {
-                    intellimize1.value = ExistingHiddenFieldValue;
-                }
-                else {
-                    if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
-                        intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
-                    }
+
+                var valueDemo = getCookie('HiddenFieldValueDemo') || '';
+                var value3002 = getCookie('HiddenFieldValue3002') || '';
+
+                var combinedValues = [valueDemo, value3002]
+                    .join(',')
+                    .split(',')
+                    .map(v => v.trim())
+                    .filter(v => v !== '')
+                    .filter((v, i, self) => self.indexOf(v) === i)
+                    .join(',');
+
+                if (intellimize1.value === '') {
+                    intellimize1.value = combinedValues;
+                } else {
+                    var currentValues = intellimize1.value.split(',').map(v => v.trim());
+                    combinedValues.split(',').forEach(function (val) {
+                        if (val && !currentValues.includes(val)) {
+                            currentValues.push(val);
+                        }
+                    });
+                    intellimize1.value = currentValues.join(',');
                 }
             }
         });
