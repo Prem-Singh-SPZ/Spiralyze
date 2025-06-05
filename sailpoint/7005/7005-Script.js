@@ -29,24 +29,16 @@
   };
 
   function updateBodyClass() {
-    if (document.body.classList.contains("form-expand")) {
-      document.body.classList.remove("form-expand");
-    }
+    setTimeout(() => {
+      if (document.body.classList.contains("form-expand")) {
+        document.body.classList.remove("form-expand");
+      }
+    }, 1000);
   }
-  const pushState = history.pushState;
-  const replaceState = history.replaceState;
-  function triggerUpdate() {
-    setTimeout(updateBodyClass, 0);
-  }
-  history.pushState = function () {
-    pushState.apply(history, arguments);
-    triggerUpdate();
-  };
-  history.replaceState = function () {
-    replaceState.apply(history, arguments);
-    triggerUpdate();
-  };
-  window.addEventListener('popstate', triggerUpdate);
+
+
+
+  const formParentSelector = '.mkto-wrap';
 
   function createTest() {
     let bodyLoaded = setInterval(function () {
@@ -55,7 +47,8 @@
         clearInterval(bodyLoaded);
         if (!document.body.classList.contains('SPZ_7005')) {
           document.body.classList.add('SPZ_7005');
-          waitForElm('.SPZ_7005 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+          waitForElm('#mktoForm_1017.mktoForm .mktoFormRow input', formParentSelector).then(() => {
+            console.log("SPZ_7005: SailPoint 7005 form loaded");
             // let spzFormInterval = setInterval(() => {
             if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
               // clearInterval(spzFormInterval);
@@ -88,7 +81,7 @@
 
   function formModify() {
     if (document.querySelector('.SPZ_7005 #page-container .flex.min-h-screen')) {
-      waitForElm('.SPZ_7005 .mkto-wrap.w-full .mktoFormRow input').then(() => {
+      waitForElm('#mktoForm_1017.mktoForm .mktoFormRow input', formParentSelector).then(() => {
         if (document.querySelectorAll('.spz-form-title').length == 0) {
           document.querySelector('.SPZ_7005 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><span>Contact us</span> <a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/></svg></a></div>`);
 
@@ -164,12 +157,12 @@
     // Change Label Text
     ['#LblCountry:Country', '#LblState:State', '#LblreasonforInquiry:Reason for inquiry'].forEach(item => {
       const [id, text] = item.split(':');
-      waitForElm(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
+      waitForElm(`#mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`, formParentSelector).then(label => {
         label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
       });
     });
 
-    waitForElm(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
+    waitForElm(`#mktoForm_1017.mktoForm .mktoFieldWrap select#Country`, formParentSelector).then((elm) => {
       setTimeout(() => {
         document.querySelectorAll(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
           if (el && el.value && (el.value != '')) {
@@ -338,7 +331,7 @@
         document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.add('row_State'), countryRow.classList.remove('full-span-field')) : (stateRow.classList.remove('row_State'), countryRow.classList.add('full-span-field'));
       });
 
-      waitForElm(".SPZ_7005 #mktoForm_1017.mktoForm select#State").then(() => {
+      waitForElm("#mktoForm_1017.mktoForm select#State", formParentSelector).then(() => {
         document.querySelector('label#LblState').textContent = "State";
         stateRow.classList.add('row_State');
       });
@@ -441,25 +434,27 @@
     }
   });
 
-  history.pushState = (function (f) {
-    return function pushState() {
-      var ret = f.apply(this, arguments);
-      window.dispatchEvent(new Event("pushstate"));
+
+  (function (history) {
+    const pushState = history.pushState;
+    const replaceState = history.replaceState;
+
+    history.pushState = function () {
+      const ret = pushState.apply(this, arguments);
       window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
-  })(history.pushState);
-  history.replaceState = (function (f) {
-    return function replaceState() {
-      var ret = f.apply(this, arguments);
-      window.dispatchEvent(new Event("replacestate"));
+
+    history.replaceState = function () {
+      const ret = replaceState.apply(this, arguments);
       window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
-  })(history.replaceState);
-  window.addEventListener("popstate", function () {
-    window.dispatchEvent(new Event("locationchange"));
-  });
+
+    window.addEventListener("popstate", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+  })(window.history);
 
 
   // List of URLs
@@ -492,6 +487,7 @@
 
 
   window.addEventListener("locationchange", function () {
+    updateBodyClass();
     url = location.href;
     urlCheck(url);
     if (document.querySelector('.SPZ_7005')) {
@@ -510,18 +506,32 @@
   }
 
   // Generic Code
-  function waitForElm(selector) {
+  function waitForElm(selector, containerSelector = 'body') {
     return new Promise(function (resolve) {
-      if (document.querySelector(selector)) {
-        return resolve(document.querySelector(selector));
+      const container = document.querySelector(containerSelector);
+      if (!container) {
+        console.warn(`waitForElementInContainer: Container "${containerSelector}" not found.`);
+        return;
       }
+
+      const initialElm = container.querySelector(selector);
+      if (initialElm) {
+        return resolve(initialElm);
+      }
+
       const observer = new MutationObserver(function (mutations) {
-        if (document.querySelector(selector)) {
-          resolve(document.querySelector(selector));
-          observer.disconnect();
+        const targetElm = container.querySelector(selector);
+        if (targetElm) {
+          resolve(targetElm);
+          observer.disconnect(); // This is the most important part
         }
       });
-      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+
+      // Observe the specific container, not the entire document
+      observer.observe(container, {
+        childList: true,
+        subtree: true
+      });
     });
   }
 

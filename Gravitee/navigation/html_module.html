@@ -60,7 +60,7 @@
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
                                         <div class="menu-image">
-                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                                 src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         </div>
                                         {% endif %}
@@ -115,7 +115,7 @@
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
                                         <div class="menu-image">
-                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                                 src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         </div>
                                         {% endif %}
@@ -161,7 +161,7 @@
                                         {% endif %}
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
-                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                        <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                             src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         {% endif %}
                                         <div class="menu-title">{{sub_item.submenu_item_name }}</div>
@@ -251,7 +251,7 @@
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
                                         <div class="menu-image">
-                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                                 src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         </div>
                                         {% endif %}
@@ -306,7 +306,7 @@
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
                                         <div class="menu-image">
-                                            <img alt="icon" class="menu-icon" aria-hidden="true"
+                                            <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                                 src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         </div>
                                         {% endif %}
@@ -352,7 +352,7 @@
                                         {% endif %}
                                         {% set loadingAttr = sub_item.icon.loading != 'disabled' ? 'loading="{{
                                         sub_item.icon.loading|escape_attr }}"' : '' %}
-                                        <img alt="icon" class="menu-icon" aria-hidden="true"
+                                        <img alt="{{sub_item.submenu_item_name }}" class="menu-icon" aria-hidden="true"
                                             src="{{ sub_item.icon.src|escape_url }}" {{ loadingAttr }}>
                                         {% endif %}
                                         <div class="menu-title">{{sub_item.submenu_item_name }}</div>
