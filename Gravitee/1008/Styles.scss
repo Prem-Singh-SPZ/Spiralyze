@@ -337,6 +337,10 @@
           padding: 0;
           margin: unset;
 
+          &.no-toc {
+            max-width: calc(100% - 80px);
+          }
+
           @media screen and (max-width: 1024.98px) {
             max-width: 100%;
           }
@@ -480,7 +484,7 @@
               @media (max-width: 767.98px) {
                 background: url("https://www.gravitee.io/hubfs/Spiralyze/1008/mobile_banner_bg.webp")
                   no-repeat bottom right;
-                padding: 24px ;
+                padding: 24px;
                 background-size: cover;
               }
 

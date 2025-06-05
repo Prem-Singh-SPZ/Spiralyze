@@ -1,9 +1,12 @@
 // document.addEventListener('DOMContentLoaded', function () {
 const mainContent = document.querySelector('.blog-post-body');
-const headings = mainContent ? mainContent.querySelectorAll('h1, h2, h3, h4, h5, h6') : [];
+const headings = mainContent ? mainContent.querySelectorAll('h2, h3') : [];
+
 const tableOfContents = document.querySelector('.blog-table-container');
 
-if (tableOfContents) {
+
+//check if there ia at least two headings in the main content
+if (tableOfContents && headings.length > 1) {
     // Create the list container
     const tocList = document.createElement('ul');
     tocList.classList.add('toc-list');
@@ -12,23 +15,26 @@ if (tableOfContents) {
     tableOfContents.appendChild(tocList);
 
     headings.forEach(function (heading, index) {
-        const listItem = document.createElement('li');
-        listItem.classList.add('toc-item');
+        //make sure that the heading is not empty
+        if (heading.textContent.trim()) {
+            const listItem = document.createElement('li');
+            listItem.classList.add('toc-item');
 
-        const link = document.createElement('a');
-        // link.href = '#section-' + (index + 1);
-        link.textContent = heading.textContent;
-        listItem.appendChild(link);
+            const link = document.createElement('a');
+            // link.href = '#section-' + (index + 1);
+            link.textContent = heading.textContent;
+            listItem.appendChild(link);
 
-        tocList.appendChild(listItem);
+            tocList.appendChild(listItem);
 
-        heading.id = 'section-' + (index + 1);
+            heading.id = 'section-' + (index + 1);
 
-        //instead of href method using scrollIntoView method to scroll to the section
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            heading.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
+            //instead of href method using scrollIntoView method to scroll to the section
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                heading.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
     });
 
     // Add CTA list item if it doesn't exist
@@ -51,8 +57,8 @@ if (tableOfContents) {
             const sectionBottom = sectionTop + heading.offsetHeight;
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                tocList.querySelectorAll('.toc-item').forEach(item => item.classList.remove('active'));
-                tocList.querySelectorAll('.toc-item')[index].classList.add('active');
+                tocList.querySelectorAll('.toc-item:not(toc-cta-item)').forEach(item => item.classList.remove('active'));
+                tocList.querySelectorAll('.toc-item:not(toc-cta-item)')[index].classList.add('active');
             }
         });
     });
@@ -64,8 +70,8 @@ if (tableOfContents) {
         const sectionBottom = sectionTop + heading.offsetHeight;
 
         if (initialScrollPosition >= sectionTop && initialScrollPosition < sectionBottom) {
-            tocList.querySelectorAll('.toc-item').forEach(item => item.classList.remove('active'));
-            tocList.querySelectorAll('.toc-item')[index].classList.add('active');
+            tocList.querySelectorAll('.toc-item:not(toc-cta-item)').forEach(item => item.classList.remove('active'));
+            tocList.querySelectorAll('.toc-item:not(toc-cta-item)')[index].classList.add('active');
         }
     });
 
@@ -84,6 +90,8 @@ if (tableOfContents) {
     });
 } else {
     console.error("The .blog-table-of-contents element was not found in the HTML.");
+    document.querySelector('.blog-post-container .blog-table-of-contents').style.display = 'none';
+    document.querySelector('.blog-post-container .blog-post-body').classList.add('no-toc');
 }
 
 waitForElm('#hs-web-interactives-top-anchor .hs-cta-embed__loaded').then(() => {
@@ -101,22 +109,15 @@ waitForElm('#hs-web-interactives-top-anchor .hs-cta-embed__loaded').then(() => {
     function updateAccordionPositions() {
         const navigationElements = document.querySelectorAll('.blog-post-wrapper .blog-table-of-contents .blog-table-container');
         const spzShareElements = document.querySelectorAll('.blog-post-wrapper .blog-sticky-nav .spz-sticky-share-buttons');
-
-        if (navigationElements.length === 0) {
-            console.warn('No navigation elements with class ".blog-table-container" found.');
-            return;
-        }
-
-        if (spzShareElements.length === 0) {
-            console.warn('No SPZ share elements with class ".blog-table-container" found.');
-            return;
-        }
-
         const headerOffset = getHeaderBottomOffset();
 
-        navigationElements.style.top = headerOffset + 'px';
-        spzShareElements.style.top = headerOffset + 'px';
+        if (navigationElements.length) {
+            navigationElements.style.top = headerOffset + 'px';
+        }
 
+        if (spzShareElements.length) {
+            spzShareElements.style.top = headerOffset + 'px';
+        }
     }
 
     updateAccordionPositions();
