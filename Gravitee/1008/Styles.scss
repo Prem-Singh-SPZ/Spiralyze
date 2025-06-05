@@ -471,17 +471,16 @@
               background-size: cover;
               margin: 40px 0;
 
-              @media (screen-width: 1024.98px) {
+              @media (max-width: 1024.98px) {
                 background: url("https://www.gravitee.io/hubfs/Spiralyze/1008/tablet_banner_bg.webp")
                   no-repeat bottom right;
-                padding: 16px;
                 background-size: cover;
               }
 
-              @media (screen-width: 767.98px) {
+              @media (max-width: 767.98px) {
                 background: url("https://www.gravitee.io/hubfs/Spiralyze/1008/mobile_banner_bg.webp")
                   no-repeat bottom right;
-                padding: 16px;
+                padding: 24px ;
                 background-size: cover;
               }
 
@@ -490,6 +489,11 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 24px;
+
+                @media (max-width: 767.98px) {
+                  flex-direction: column;
+                  text-align: center;
+                }
               }
 
               &__title {
@@ -501,6 +505,11 @@
                 line-height: 120%;
                 max-width: 400px;
                 margin: 0;
+
+                @media (max-width: 767.98px) {
+                  font-size: 24px !important;
+                  max-width: 100%;
+                }
               }
 
               &__button {
@@ -520,6 +529,10 @@
                 transition: background 0.3s ease;
                 text-decoration: none;
                 white-space: nowrap;
+
+                @media (max-width: 767.98px) {
+                  width: 100%;
+                }
 
                 &:hover {
                   background: #ea392d;
@@ -542,7 +555,9 @@
             > div:first-child {
               height: 48px;
               img {
-                width: 48px;
+                min-width: 48px;
+                max-width: 48px;
+                height: 100% !important;
               }
             }
 
