@@ -208,7 +208,7 @@
         }
 
         @media screen and (max-width: 767.98px) {
-          padding: 56px 20px;
+          padding: 56px 20px 46px;
           gap: 15px;
         }
 
@@ -640,8 +640,21 @@
           rgba(0, 0, 0, 0.03) 92.1%
         ),
         #f8f1ee;
+      padding: 80px 16px;
 
+      @media (max-width: 1239.98px) {
+        padding-right: 0;
+      }
+
+      @media (max-width: 1024.98px) {
+        padding: 56px 0 56px 60px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 56px 0 56px 20px;
+      }
       .content-wrapper {
+        padding: 0;
         .heading2 {
           color: #000;
           text-align: center;
@@ -654,6 +667,10 @@
           @media (max-width: 1024.98px) {
             text-align: left;
           }
+
+          @media (max-width: 767.98px) {
+            font-size: 32px !important;
+          }
         }
 
         .blog-related-posts__list {
@@ -661,7 +678,7 @@
           // flex-wrap: wrap;
           gap: 32px;
           justify-content: center;
-          overflow-x: auto;
+          overflow: auto;
           // Hide scrollbar for all browsers
           &::-webkit-scrollbar {
             display: none;
@@ -669,7 +686,7 @@
           -ms-overflow-style: none; /* IE and Edge */
           scrollbar-width: none; /* Firefox */
 
-          @media (max-width: 1024.98px) {
+          @media (max-width: 1239.98px) {
             justify-content: flex-start;
           }
 
@@ -684,7 +701,8 @@
           .blog-related-posts__post {
             background: transparent;
             padding: 0;
-            width: 378.67px;
+            max-width: 378.67px;
+            min-width: 378.67px;
             // width: 100%;
 
             // @media (max-width: 1024.98px) {
@@ -695,13 +713,19 @@
             //   max-width: 312px;
             // }
 
-            @media (max-width: 1024.98px) {
-              // max-width: 320px;
-              margin-bottom: 0;
+            @media (max-width: 1239.98px) {
+              &:last-child {
+                margin-right: 60px;
+              }
             }
 
             @media (max-width: 767.98px) {
-              width: 300px;
+              max-width: 300px;
+              min-width: 300px;
+
+              &:last-child {
+                margin-right: 20px;
+              }
             }
 
             .blog-related-posts__image {
