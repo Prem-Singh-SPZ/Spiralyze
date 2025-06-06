@@ -653,9 +653,13 @@
 
         .blog-related-posts__list {
           display: flex;
-          flex-wrap: wrap;
+          // flex-wrap: wrap;
           gap: 32px;
           justify-content: center;
+
+          @media (max-width: 1024.98px) {
+            justify-content: flex-start;
+          }
 
           @media (max-width: 1200.98px) {
             gap: 32px 24px;
@@ -673,6 +677,10 @@
             padding: 0;
             max-width: 378px;
             width: 100%;
+
+            @media (max-width: 1024.98px) {
+              min-width: 312px;
+            }
 
             @media (max-width: 1200.98px) {
               max-width: 312px;
