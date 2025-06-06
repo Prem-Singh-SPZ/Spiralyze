@@ -653,6 +653,11 @@
   line-height: 120%;
   margin-bottom: 48px;
 }
+@media (max-width: 1024.98px) {
+  #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .heading2 {
+    text-align: left;
+  }
+}
 #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,6 +666,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 1024.98px) {
   #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list {
@@ -672,21 +683,6 @@
 @media (max-width: 1200.98px) {
   #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list {
     gap: 32px 24px;
-  }
-}
-@media (max-width: 767.98px) {
-  #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list {
-    gap: 32px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 #main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list .blog-related-posts__post {
@@ -736,6 +732,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+#main-content.body-container-wrapper .body-container--blog-post-new .blog-related-posts .content-wrapper .blog-related-posts__list .blog-related-posts__post .blog-related-posts__title .blog-related-posts__title-link:hover {
+  color: #ea3527;
 }
 
 /*hero Css ends */
