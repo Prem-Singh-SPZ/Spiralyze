@@ -107,22 +107,24 @@ waitForElm('#hs-web-interactives-top-anchor .hs-cta-embed__loaded').then(() => {
     }
 
     function updateAccordionPositions() {
-        const navigationElements = document.querySelectorAll('.blog-post-wrapper .blog-table-of-contents .blog-table-container');
-        const spzShareElements = document.querySelectorAll('.blog-post-wrapper .blog-sticky-nav .spz-sticky-share-buttons');
-        const headerOffset = getHeaderBottomOffset();
+        const navigationElements = document.querySelector('.blog-post-wrapper .blog-table-of-contents .blog-table-container');
+        const spzShareElements = document.querySelector('.blog-post-wrapper .blog-sticky-nav .spz-sticky-share-buttons');
+        const headerOffset = getHeaderBottomOffset() + 16;
 
-        if (navigationElements.length) {
+        if (navigationElements) {
             navigationElements.style.top = headerOffset + 'px';
         }
 
-        if (spzShareElements.length) {
+        if (spzShareElements) {
             spzShareElements.style.top = headerOffset + 'px';
         }
     }
 
-    updateAccordionPositions();
-    window.addEventListener('DOMContentLoaded', updateAccordionPositions);
-    window.addEventListener('resize', updateAccordionPositions);
+    waitForElm('.blog-post-wrapper .blog-table-of-contents .blog-table-container').then(() => {
+        updateAccordionPositions();
+        window.addEventListener('DOMContentLoaded', updateAccordionPositions);
+        window.addEventListener('resize', updateAccordionPositions);
+    });
 
     waitForElm('body:not(.hs-web-interactives-top-banner-open)').then(() => {
         setTimeout(() => {
