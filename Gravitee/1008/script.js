@@ -1,6 +1,7 @@
 // document.addEventListener('DOMContentLoaded', function () {
 const mainContent = document.querySelector('.blog-post-body');
-const headings = mainContent ? mainContent.querySelectorAll('h2, h3') : [];
+//while selecting the headings, make sure that the direct child of parent element is selected
+const headings = mainContent ? mainContent.querySelectorAll('.hs_cos_wrapper > h2, .hs_cos_wrapper > h3') : [];
 
 const tableOfContents = document.querySelector('.blog-table-container');
 

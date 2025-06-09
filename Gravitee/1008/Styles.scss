@@ -342,7 +342,7 @@
           }
 
           @media screen and (max-width: 1024.98px) {
-            max-width: 100%;
+            max-width: 100% !important;
           }
 
           #hs_cos_wrapper_post_body {
@@ -384,23 +384,16 @@
               line-height: 150%;
               margin-bottom: 16px;
 
-              code {
-                border-radius: 5px;
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                background: rgba(0, 0, 0, 0.05);
-                padding: 1px 4px;
-                color: #000;
-                // font-family: "SF Mono";
-                font-size: 17px;
-                font-style: normal;
-                font-weight: 300;
+              strong {
+                font-family: Manrope;
+                font-size: 16px;
                 line-height: 150%;
-                white-space: normal;
-                word-break: break-all;
+                font-weight: 700;
+                color: #000;
               }
             }
 
-            strong {
+            > strong {
               font-family: Manrope;
               font-size: 16px;
               line-height: 150%;
@@ -408,6 +401,7 @@
               color: #000;
             }
 
+            h2[id*="section"],
             h3[id*="section"] {
               color: #000;
               font-family: Manrope;
@@ -417,6 +411,10 @@
               line-height: 120%;
               margin-top: 40px;
               margin-bottom: 24px;
+
+              &:first-child {
+                margin-top: 0;
+              }
             }
 
             h4 {
