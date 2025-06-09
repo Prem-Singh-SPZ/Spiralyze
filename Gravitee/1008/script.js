@@ -133,6 +133,12 @@ waitForElm('#hs-web-interactives-top-anchor .hs-cta-embed__loaded').then(() => {
     });
 });
 
+waitForElm('body .st-sticky-share-buttons.st-has-labels').then(() => {
+    if (document.querySelector('#main-content.body-container-wrapper .body-container--blog-post-new .blog-post-wrapper .blog-post-container .blog-sticky-nav')) {
+        document.querySelector('#main-content.body-container-wrapper .body-container--blog-post-new .blog-post-wrapper .blog-post-container .blog-sticky-nav').style.display = 'block';
+    }
+});
+
 //click event listener for the body
 document.body.addEventListener('click', function (event) {
     const target = event.target;
