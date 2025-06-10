@@ -354,6 +354,11 @@
             font-weight: 400;
             line-height: 150%;
 
+            *{
+              color: #000;
+              font-family: Manrope;
+            }
+
             h2 {
               color: #000;
               font-family: Manrope;
@@ -367,12 +372,41 @@
               }
             }
 
+            span:has(> a) {
+              color: #ff492c !important;
+              text-decoration: none !important;
+            }
+
             a {
-              color: #ff492c;
+              color: #ff492c !important;
               font-family: Manrope;
               font-size: 16px;
               font-weight: 400;
               line-height: 150%;
+              text-decoration: none !important;
+
+              span {
+                color: #ff492c !important;
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                text-decoration: none !important;
+              }
+
+              &:hover {
+                color: #ea3527 !important;
+                text-decoration: underline !important;
+              }
+
+              &.button{
+                color: #fff !important;
+
+                &:hover {
+                  color: #fff !important;
+                  text-decoration: none !important;
+                }
+              }
             }
 
             p {
@@ -391,6 +425,11 @@
                 font-weight: 700;
                 color: #000;
               }
+            }
+
+            code {
+              white-space: normal;
+              word-break: break-all;
             }
 
             > strong {
@@ -442,12 +481,32 @@
                 font-weight: 400;
                 line-height: 150%;
 
+                span:has(> a) {
+                  color: #ff492c !important;
+                  text-decoration: none !important;
+                }
+
                 a {
-                  color: #ff492c;
+                  color: #ff492c !important;
                   font-family: Manrope;
                   font-size: 16px;
                   font-weight: 400;
                   line-height: 150%;
+                  text-decoration: none !important;
+
+                  span {
+                    color: #ff492c !important;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    text-decoration: none !important;
+                  }
+
+                  &:hover {
+                    color: #ea3527 !important;
+                    text-decoration: underline !important;
+                  }
                 }
               }
             }
