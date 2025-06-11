@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Resources</h1>
+                <p class="hero__subtitle">Discover eBooks, whitepapers, case studies, and webinars.</p>
+            </div>
+        </section>
+
+        <section class="categories">
+            <nav class="categories__nav">
+                <ul class="categories__list">
+                    <li class="categories__item"><a href="#whitepapers" class="categories__link">Whitepapers</a></li>
+                    <li class="categories__item"><a href="#ebooks" class="categories__link">eBooks</a></li>
+                    <li class="categories__item"><a href="#casestudies"
+                            class="categories__link categories__link--active">Case Studies</a></li>
+                    <li class="categories__item"><a href="#webinars" class="categories__link">Webinars</a></li>
+                    <li class="categories__item"><a href="#all" class="categories__link">All</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="container">
+            <div class="filter-bar">
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown__button" id="industryFilterButton" type="button">
+                        <span class="filter-dropdown__icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16M4 18h7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="filter-dropdown__text">Industry</span>
+                        <span class="filter-dropdown__arrow"></span>
+                    </button>
+                    <ul class="filter-dropdown__menu" id="industryFilterMenu">
+                        <li class="filter-dropdown__item" data-value="all">All Industries</li>
+                        <li class="filter-dropdown__item" data-value="Transportation & Logistics">Transportation &
+                            Logistics</li>
+                        <li class="filter-dropdown__item" data-value="Manufacturing">Manufacturing</li>
+                        <li class="filter-dropdown__item" data-value="Financial Services & FinTech">Financial Services &
+                            FinTech</li>
+                        <li class="filter-dropdown__item" data-value="Healthcare">Healthcare</li>
+                        <li class="filter-dropdown__item" data-value="Government & Public Sector">Government & Public
+                            Sector</li>
+                        <li class="filter-dropdown__item" data-value="Education">Education</li>
+                        <li class="filter-dropdown__item" data-value="Retail & Consumer Goods">Retail & Consumer Goods
+                        </li>
+                        <li class="filter-dropdown__item" data-value="Technology & Software">Technology & Software</li>
+                        <li class="filter-dropdown__item" data-value="Sports & Entertainment">Sports & Entertainment
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown__button" id="sizeFilterButton" type="button">
+                        <span class="filter-dropdown__icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="filter-dropdown__text">Company Size</span>
+                        <span class="filter-dropdown__arrow"></span>
+                    </button>
+                    <ul class="filter-dropdown__menu" id="sizeFilterMenu">
+                        <li class="filter-dropdown__item" data-value="all">All Sizes</li>
+                        <li class="filter-dropdown__item" data-value="1-200">1-200 employees</li>
+                        <li class="filter-dropdown__item" data-value="201-1000">201-1,000 employees</li>
+                        <li class="filter-dropdown__item" data-value="1001+">1,001+ employees</li>
+                    </ul>
+                </div>
+
+                <div class="search-container">
+                    <form class="search-bar" id="searchForm" role="search">
+                        <input type="search" class="search-bar__input" id="searchInput"
+                            placeholder="Search by keyword...">
+                        <button type="reset" class="search-bar__clear" aria-label="Clear search">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button type="submit" class="search-bar__submit" aria-label="Submit search">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card-grid" id="cardGrid">
+                <a href="#" class="card card--featured" data-industry="Transportation & Logistics" data-size="1001+"
+                    data-title="Eurostar Improved their API Lifecycle Management with Gravitee gRPC support and Real-Time Insights">
+                    <div class="card__image-wrapper">
+                        <img src="https://assets-global.website-files.com/64788a2def485c22c0488a55/64788a2def485c22c0488f28_Eurostar-customer-story-banner-1.webp"
+                            alt="Eurostar train" class="card__image">
+                    </div>
+                    <div class="card__content">
+                        <p class="card-category">Transportation & Logistics</p>
+                        <h3 class="card__title">How Eurostar Improved their API Lifecycle Management with Gravitee gRPC
+                            support and Real-Time Insights</h3>
+                        <span class="card-link">Read Case Study <span class="card-link__arrow">→</span></span>
+                    </div>
+                </a>
+
+                <a href="#" class="card" data-industry="Transportation & Logistics" data-size="1001+"
+                    data-title="PostNL Reduced Costs and Improved API Management Automation with Gravitee">
+                    <div class="card__image-wrapper"><img src="https://placehold.co/600x400/e0a126/FFFFFF?text=PostNL"
+                            alt="PostNL" class="card__image"></div>
+                    <div class="card__content">
+                        <p class="card-category">Transportation & Logistics</p>
+                        <h3 class="card__title">How PostNL Reduced Costs and Improved API Management Automation with
+                            Gravitee</h3>
+                        <span class="card-link">Read Case Study <span class="card-link__arrow">→</span></span>
+                    </div>
+                </a>
+
+                <a href="#" class="card" data-industry="Manufacturing" data-size="1001+"
+                    data-title="Michelin Transformed their API Management and Security at Scale with Gravitee">
+                    <div class="card__image-wrapper"><img
+                            src="https://assets-global.website-files.com/64788a2def485c22c0488a55/64788a2def485c22c04891d4_Michelin-customer-story-banner.webp"
+                            alt="Michelin" class="card__image"></div>
+                    <div class="card__content">
+                        <p class="card-category">Manufacturing</p>
+                        <h3 class="card__title">How Michelin Transformed their API Management and Security at Scale with
+                            Gravitee</h3>
+                        <span class="card-link">Read Case Study <span class="card-link__arrow">→</span></span>
+                    </div>
+                </a>
+
+                <a href="#" class="card" data-industry="Technology & Software" data-size="1001+"
+                    data-title="Verint Transforms Global API Management with Gravitee's Scalable and Reliable Solution">
+                    <div class="card__image-wrapper"><img
+                            src="https://assets-global.website-files.com/64788a2def485c22c0488a55/64788a2def485c22c048924b_Verint-customer-story-banner.webp"
+                            alt="Verint" class="card__image"></div>
+                    <div class="card__content">
+                        <p class="card-category">Technology & Software</p>
+                        <h3 class="card__title">Verint Transforms Global API Management with Gravitee's Scalable and
+                            Reliable Solution</h3>
+                        <span class="card-link">Read Case Study <span class="card-link__arrow">→</span></span>
+                    </div>
+                </a>
+
+                <a href="#" class="card" data-industry="Sports & Entertainment" data-size="1001+"
+                    data-title="Global Sports Leader Scored with Gravitee's Kafka Integration">
+                    <div class="card__image-wrapper"><img
+                            src="https://assets-global.website-files.com/64788a2def485c22c0488a55/64788a2def485c22c0489063_SFL-customer-story-banner.webp"
+                            alt="Global Sports Leader" class="card__image"></div>
+                    <div class="card__content">
+                        <p class="card-category">Sports & Entertainment</p>
+                        <h3 class="card__title">How a Global Sports Leader Scored with Gravitee's Kafka Integration</h3>
+                        <span class="card-link">Read Case Study <span class="card-link__arrow">→</span></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="no-results-message" id="noResultsMessage">
+                <h3>No matching case studies found</h3>
+                <p>Please adjust your filters or clear your search term.</p>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
