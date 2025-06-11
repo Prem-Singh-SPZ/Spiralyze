@@ -1,8 +1,7 @@
-console.log('Hello, World!');
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
     // --- Element Selections ---
+    const filterBar = document.querySelector('.filter-bar'); // Get the main filter bar
     const industryFilter = {
         button: document.getElementById('industryFilterButton'),
         menu: document.getElementById('industryFilterMenu'),
@@ -16,13 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
         text: document.getElementById('sizeFilterButton').querySelector('.filter-dropdown__text'),
         items: document.querySelectorAll('#sizeFilterMenu .filter-dropdown__item')
     };
-
+    
     const searchInput = document.getElementById('searchInput');
     const searchClearBtn = document.querySelector('.search-bar__clear');
     const searchForm = document.getElementById('searchForm');
+    const searchSubmitBtn = document.querySelector('.search-bar__submit'); // Get the search icon button
 
     const cardGrid = document.getElementById('cardGrid');
-    const allCards = document.querySelectorAll('.card');
+    const allCards = document.querySelectorAll('#cardGrid .card');
     const noResultsMessage = document.getElementById('noResultsMessage');
 
     const activeFilters = {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         search: ''
     };
 
-    // --- Dropdown Logic ---
+    // --- Dropdown Logic (no changes here) ---
     function setupDropdown(filter) {
         filter.button.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -55,14 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     currentSelected.classList.remove('is-selected');
                 }
                 item.classList.add('is-selected');
-
-                // Update active filters
+                
                 if (filter === industryFilter) {
                     activeFilters.industry = item.dataset.value;
                 } else if (filter === sizeFilter) {
                     activeFilters.size = item.dataset.value;
                 }
-
+                
                 applyFilters();
             });
         });
@@ -71,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setupDropdown(industryFilter);
     setupDropdown(sizeFilter);
 
-    // Close dropdowns when clicking outside
     window.addEventListener('click', () => {
         [industryFilter, sizeFilter].forEach(f => {
             f.menu.classList.remove('is-open');
@@ -79,22 +77,44 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- Search Logic ---
+    // --- Updated Search Logic ---
+
+    // On tablet/mobile, this button opens the search view
+    searchSubmitBtn.addEventListener('click', (e) => {
+        // Only activate search mode if the input is not visible (i.e., on tablet/mobile)
+        if (window.getComputedStyle(searchInput).display === 'none') {
+            e.preventDefault(); // Prevent form submission
+            filterBar.classList.add('search-mode-active');
+            searchInput.focus();
+        }
+    });
+
     searchInput.addEventListener('input', () => {
         activeFilters.search = searchInput.value.toLowerCase().trim();
         searchClearBtn.classList.toggle('is-visible', searchInput.value.length > 0);
         applyFilters();
     });
 
-    searchForm.addEventListener('submit', (e) => e.preventDefault()); // Prevent form submission
-    searchForm.addEventListener('reset', () => { // Handles the clear button
+    searchForm.addEventListener('submit', (e) => e.preventDefault()); 
+    
+    // The reset button now also closes the search mode view on tablet/mobile
+    searchForm.addEventListener('reset', () => { 
         activeFilters.search = '';
         searchClearBtn.classList.remove('is-visible');
+        
+        // Deactivate search mode to show filters again
+        if (filterBar.classList.contains('search-mode-active')) {
+            filterBar.classList.remove('search-mode-active');
+        }
+        
         applyFilters();
-        searchInput.focus();
+        // Don't focus if we are closing the search bar on mobile
+        if (window.getComputedStyle(searchInput).display !== 'none') {
+            searchInput.focus();
+        }
     });
-
-    // --- Core Filtering Function ---
+    
+    // --- Core Filtering Function (no changes here) ---
     function applyFilters() {
         let visibleCardCount = 0;
 
@@ -104,17 +124,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const searchMatch = activeFilters.search === '' || card.dataset.title.toLowerCase().includes(activeFilters.search);
 
             if (industryMatch && sizeMatch && searchMatch) {
-                card.style.display = ''; // Use default display (flex)
+                card.style.display = '';
                 visibleCardCount++;
             } else {
                 card.style.display = 'none';
             }
         });
 
-        // Toggle no results message
         noResultsMessage.style.display = visibleCardCount === 0 ? 'block' : 'none';
-
-        // Ensure grid layout is preserved
         cardGrid.style.display = visibleCardCount === 0 ? 'block' : 'grid';
     }
 });
