@@ -425,22 +425,10 @@
     setTimeout(function () {
       clearInterval(spz_cro_Interval);
     }, 15000);
-
-    //click event listener
-    document.addEventListener('click', function (e) {
-      if (e.target.closest('.mktoForm .mktoButton')) {
-        //inject current time and date in EST timezone into .intellimize2 hidden field
-        var d = new Date();
-        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-        if (int2)
-          int2.value = n;
-      }
-    });
   }
 
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('.mktoForm .mktoButton')) {
+  waitForElm('.spz_8002_v1 #mktoForm_1016.mktoForm .mktoButton').then(() => {
+    document.querySelector('#mktoForm_1016.mktoForm .mktoButton').addEventListener('click', (event) => {
       const fields = document.querySelectorAll('.spz_8002_v1 form.mktoForm .mktoField');
       const timeBuffer = setInterval(() => {
         fields.forEach(field => {
@@ -535,10 +523,10 @@
       //inject current time and date in EST timezone into .intellimize2 hidden field
       var d = new Date();
       var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
       if (int2)
         int2.value = n;
-    }
+    });
   });
 
   function checkEmail() {

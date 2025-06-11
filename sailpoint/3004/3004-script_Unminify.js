@@ -208,6 +208,12 @@
                     </div>
                 </div>
             </div>`);
+
+            //on click of sp-logo-home, redirect to home page
+            document.querySelector('.spz_3004 .product-hero .row__inner .column.relative .column__inner .sp-logo-home').addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('a[href="/"]').click();
+            });
         }
     }
 
@@ -331,6 +337,15 @@
                     <img class="vidyard-lightbox-image" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/sailpoint/3004/video_thumb_mobile.webp" alt="Video Thumbnail">
                 </picture>`;
             });
+
+            //for all the .go-to-demo elements, add click event listener to scroll to form section
+            document.querySelectorAll('.spz_3004 .go-to-demo').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var formInner = document.querySelector('body.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row');
+                    formInner.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
         }
 
 
@@ -356,18 +371,18 @@
     }
 
     //click event listener
-    document.body.addEventListener('click', function (e) {
-        if (e.target.classList.contains('sp-logo-home')) {
-            e.preventDefault();
-            document.querySelector('a[href="/"]').click();
-        }
-        if (e.target.classList.contains('go-to-demo')) {
-            e.preventDefault();
-            // document.querySelector('a[href="/demo"]').click();
-            var formInner = document.querySelector('body.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row');
-            formInner.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+    // document.body.addEventListener('click', function (e) {
+    //     if (e.target.classList.contains('sp-logo-home')) {
+    //         e.preventDefault();
+    //         document.querySelector('a[href="/"]').click();
+    //     }
+    //     if (e.target.classList.contains('go-to-demo')) {
+    //         e.preventDefault();
+    //         // document.querySelector('a[href="/demo"]').click();
+    //         var formInner = document.querySelector('body.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row');
+    //         formInner.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // });
 
     function removeTest() {
         setTimeout(() => {
@@ -440,7 +455,6 @@
         });
     }
     // Do not touch below hidden field code for any Experiment over
-
     waitForElm('#mktoForm_1018 .mktoButton').then(function (elm) {
         elm.addEventListener("click", function (e) {
             waitForElm('.spz_3004 .mktoForm .mktoError').then(function (elm) {

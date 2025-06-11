@@ -29,16 +29,24 @@
   };
 
   function updateBodyClass() {
-    setTimeout(() => {
-      if (document.body.classList.contains("form-expand")) {
-        document.body.classList.remove("form-expand");
-      }
-    }, 1000);
+    if (document.body.classList.contains("form-expand")) {
+      document.body.classList.remove("form-expand");
+    }
   }
-
-
-
-  const formParentSelector = '.mkto-wrap';
+  const pushState = history.pushState;
+  const replaceState = history.replaceState;
+  function triggerUpdate() {
+    setTimeout(updateBodyClass, 0);
+  }
+  history.pushState = function () {
+    pushState.apply(history, arguments);
+    triggerUpdate();
+  };
+  history.replaceState = function () {
+    replaceState.apply(history, arguments);
+    triggerUpdate();
+  };
+  window.addEventListener('popstate', triggerUpdate);
 
   function createTest() {
     let bodyLoaded = setInterval(function () {
@@ -47,8 +55,7 @@
         clearInterval(bodyLoaded);
         if (!document.body.classList.contains('SPZ_7005')) {
           document.body.classList.add('SPZ_7005');
-          waitForElm('#mktoForm_1017.mktoForm .mktoFormRow input', formParentSelector).then(() => {
-            console.log("SPZ_7005: SailPoint 7005 form loaded");
+          waitForElm('.SPZ_7005 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
             // let spzFormInterval = setInterval(() => {
             if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
               // clearInterval(spzFormInterval);
@@ -76,12 +83,23 @@
       document.querySelectorAll('.SPZ_7005 #page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
         el.classList.add('spz-hero-cta');
       })
+
+      //on click of .spz-contact-us add class spz-show-modal to body and spz-no-scroll to html
+      document.querySelectorAll('.SPZ_7005 .spz-contact-us').forEach(function (el) {
+        el.addEventListener('click', function () {
+          document.body.classList.add('spz-show-modal');
+          document.querySelector('html').classList.add('spz-no-scroll');
+
+          removeSpecificCookieValue('SPZ_7005', 'SPZ_7005_truecontrol');
+          hiddenValue('SPZ_7005', 'SPZ_7005_variant');
+        });
+      });
     }
   }
 
   function formModify() {
     if (document.querySelector('.SPZ_7005 #page-container .flex.min-h-screen')) {
-      waitForElm('#mktoForm_1017.mktoForm .mktoFormRow input', formParentSelector).then(() => {
+      waitForElm('.SPZ_7005 .mkto-wrap.w-full .mktoFormRow input').then(() => {
         if (document.querySelectorAll('.spz-form-title').length == 0) {
           document.querySelector('.SPZ_7005 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><span>Contact us</span> <a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/></svg></a></div>`);
 
@@ -107,6 +125,15 @@
                 </div>
             </div>
             `);
+
+          // on click of .spz-close-modal remove class spz-show-modal from body and spz-no-scroll from html
+          document.querySelectorAll('.SPZ_7005 .spz-close-modal').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+              e.stopPropagation();
+              document.body.classList.remove('spz-show-modal');
+              document.querySelector('html').classList.remove('spz-no-scroll');
+            });
+          });
         }
 
         document.querySelector('.SPZ_7005 #mktoForm_1017.mktoForm').closest('.column.relative').classList.add('spz-form-column');
@@ -157,12 +184,12 @@
     // Change Label Text
     ['#LblCountry:Country', '#LblState:State', '#LblreasonforInquiry:Reason for inquiry'].forEach(item => {
       const [id, text] = item.split(':');
-      waitForElm(`#mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`, formParentSelector).then(label => {
+      waitForElm(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFieldWrap label.mktoLabel${id}`).then(label => {
         label.innerHTML = (label.querySelector('.mktoAsterix')?.outerHTML || '') + text;
       });
     });
 
-    waitForElm(`#mktoForm_1017.mktoForm .mktoFieldWrap select#Country`, formParentSelector).then((elm) => {
+    waitForElm(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFieldWrap select#Country`).then((elm) => {
       setTimeout(() => {
         document.querySelectorAll(`.SPZ_7005 #mktoForm_1017.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
           if (el && el.value && (el.value != '')) {
@@ -331,7 +358,7 @@
         document.querySelector('select#State') ? (document.querySelector('label#LblState').textContent = "State", stateRow.classList.add('row_State'), countryRow.classList.remove('full-span-field')) : (stateRow.classList.remove('row_State'), countryRow.classList.add('full-span-field'));
       });
 
-      waitForElm("#mktoForm_1017.mktoForm select#State", formParentSelector).then(() => {
+      waitForElm(".SPZ_7005 #mktoForm_1017.mktoForm select#State").then(() => {
         document.querySelector('label#LblState').textContent = "State";
         stateRow.classList.add('row_State');
       });
@@ -364,20 +391,20 @@
   }
 
   //click event listener
-  document.body.addEventListener('click', function (e) {
-    if (e.target.closest('.spz-contact-us')) {
-      document.body.classList.add('spz-show-modal');
-      document.querySelector('html').classList.add('spz-no-scroll');
+  // document.body.addEventListener('click', function (e) {
+  //   if (e.target.closest('.spz-contact-us')) {
+  //     document.body.classList.add('spz-show-modal');
+  //     document.querySelector('html').classList.add('spz-no-scroll');
 
-      removeSpecificCookieValue('SPZ_7005', 'SPZ_7005_truecontrol');
-      hiddenValue('SPZ_7005', 'SPZ_7005_variant');
-    }
-    if (e.target.closest('.spz-close-modal')) {
-      e.stopPropagation();
-      document.body.classList.remove('spz-show-modal');
-      document.querySelector('html').classList.remove('spz-no-scroll');
-    }
-  });
+  //     removeSpecificCookieValue('SPZ_7005', 'SPZ_7005_truecontrol');
+  //     hiddenValue('SPZ_7005', 'SPZ_7005_variant');
+  //   }
+  //   if (e.target.closest('.spz-close-modal')) {
+  //     e.stopPropagation();
+  //     document.body.classList.remove('spz-show-modal');
+  //     document.querySelector('html').classList.remove('spz-no-scroll');
+  //   }
+  // });
 
   function removeTest() {
     setTimeout(() => {
@@ -396,9 +423,8 @@
   }
 
   //click event listener
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('#mktoForm_1017 .mktoButton')) {
-
+  waitForElm('.SPZ_7005 #mktoForm_1017.mktoForm .mktoButton').then(() => {
+    document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
       if (!document.body.classList.contains('form-expand')) {
         var email_el = document.querySelector('.SPZ_7005 .mktoForm .row_Email .mktoFieldWrap .mktoField');
         if (email_el.closest('.mktoFieldWrap') !== null) {
@@ -427,34 +453,40 @@
             }
           }
         });
+
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
+        
       }, 200);
       setTimeout(() => {
         clearInterval(timeBuffer);
       }, 5000);
-    }
+    });
   });
 
-
-  (function (history) {
-    const pushState = history.pushState;
-    const replaceState = history.replaceState;
-
-    history.pushState = function () {
-      const ret = pushState.apply(this, arguments);
+  history.pushState = (function (f) {
+    return function pushState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("pushstate"));
       window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
-
-    history.replaceState = function () {
-      const ret = replaceState.apply(this, arguments);
+  })(history.pushState);
+  history.replaceState = (function (f) {
+    return function replaceState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("replacestate"));
       window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
-
-    window.addEventListener("popstate", function () {
-      window.dispatchEvent(new Event("locationchange"));
-    });
-  })(window.history);
+  })(history.replaceState);
+  window.addEventListener("popstate", function () {
+    window.dispatchEvent(new Event("locationchange"));
+  });
 
 
   // List of URLs
@@ -487,7 +519,6 @@
 
 
   window.addEventListener("locationchange", function () {
-    updateBodyClass();
     url = location.href;
     urlCheck(url);
     if (document.querySelector('.SPZ_7005')) {
@@ -506,32 +537,18 @@
   }
 
   // Generic Code
-  function waitForElm(selector, containerSelector = 'body') {
+  function waitForElm(selector) {
     return new Promise(function (resolve) {
-      const container = document.querySelector(containerSelector);
-      if (!container) {
-        console.warn(`waitForElementInContainer: Container "${containerSelector}" not found.`);
-        return;
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
       }
-
-      const initialElm = container.querySelector(selector);
-      if (initialElm) {
-        return resolve(initialElm);
-      }
-
       const observer = new MutationObserver(function (mutations) {
-        const targetElm = container.querySelector(selector);
-        if (targetElm) {
-          resolve(targetElm);
-          observer.disconnect(); // This is the most important part
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
         }
       });
-
-      // Observe the specific container, not the entire document
-      observer.observe(container, {
-        childList: true,
-        subtree: true
-      });
+      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
   }
 
@@ -597,17 +614,5 @@
       }
     });
   }
-
-  //click event listener
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('#mktoForm_1017 .mktoButton')) {
-      //inject current time and date in EST timezone into .intellimize2 hidden field
-      var d = new Date();
-      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-      if (int2)
-        int2.value = n;
-    }
-  });
   // Do not touch below hidden field code for any Experiment End
 })();

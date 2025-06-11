@@ -84,6 +84,11 @@
     document.querySelector('.spz_9002 .hero + .row').classList.add('spz-hero');
     if (document.querySelectorAll('.spz-logo').length == 0) {
       document.querySelector('.spz_9002 .hero + .row > .row__inner').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a class="logo-anchor" href="javascript:;"><img src="//res.cloudinary.com/spiralyze/image/upload/v1737104112/sailpoint/9001/logo__colored.svg" alt="SailPoint" class=""></a>`);
+
+      //on click of .logo-anchor, redirect to home page
+      document.querySelector('.spz-logo .logo-anchor').addEventListener('click', function () {
+        window.location.href = '/';
+      });
     }
 
     if (document.querySelectorAll('.spz-form-title').length == 0)
@@ -185,6 +190,17 @@
         <div class="int-sales-locations">
         </div>
     </div></div>`);
+
+      //onclick od .spz-tab-button add active class to the clicked button and remove it from others
+      document.querySelectorAll('.spz-tab-button').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.spz-tab-button').forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          const content = document.querySelector(`.spz-tab-content[data-content="${this.getAttribute('data-tab')}"]`);
+          document.querySelectorAll('.spz-tab-content').forEach(c => c.classList.remove('active'));
+          content.classList.add('active');
+        });
+      });
     }
 
 
@@ -361,26 +377,26 @@
     }
   }
 
-  window.addEventListener('click', function (e) {
-    if (e.target.classList.contains('logo-anchor')) {
-      this.document.querySelector('a[href="/"]').click();
-    }
+  // document.body.addEventListener('click', function (e) {
+  //   if (e.target.classList.contains('logo-anchor')) {
+  //     this.document.querySelector('a[href="/"]').click();
+  //   }
 
-    //create tabbing functionality for the tab buttons
-    if (e.target.classList.contains('spz-tab-button')) {
-      const tabButtons = document.querySelectorAll('.spz-tab-button');
-      const tabContents = document.querySelectorAll('.spz-tab-content');
-      tabButtons.forEach(button => {
-        button.classList.remove('active');
-      });
-      tabContents.forEach(content => {
-        content.classList.remove('active');
-      });
-      e.target.classList.add('active');
-      const content = document.querySelector(`.spz-tab-content[data-content="${e.target.getAttribute('data-tab')}"]`);
-      content.classList.add('active');
-    }
-  });
+  //   //create tabbing functionality for the tab buttons
+  //   if (e.target.classList.contains('spz-tab-button')) {
+  //     const tabButtons = document.querySelectorAll('.spz-tab-button');
+  //     const tabContents = document.querySelectorAll('.spz-tab-content');
+  //     tabButtons.forEach(button => {
+  //       button.classList.remove('active');
+  //     });
+  //     tabContents.forEach(content => {
+  //       content.classList.remove('active');
+  //     });
+  //     e.target.classList.add('active');
+  //     const content = document.querySelector(`.spz-tab-content[data-content="${e.target.getAttribute('data-tab')}"]`);
+  //     content.classList.add('active');
+  //   }
+  // });
 
   function removeTest() {
     setTimeout(() => {
@@ -452,8 +468,8 @@
     });
 
     //click event listener
-    document.addEventListener('click', function (e) {
-      if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+    waitForElm('.spz_9002 #mktoForm_1017.mktoForm .mktoButton').then(() => {
+      document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
         waitForElm('.spz_9002 #mktoForm_1017.mktoForm .mktoError').then(function (elm) {
           if (elm.parentNode.querySelector('#ValidMsgEmail')) {
             const targetNode = elm.parentNode;
@@ -496,10 +512,10 @@
         //inject current time and date in EST timezone into .intellimize2 hidden field
         var d = new Date();
         var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-        var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        var int2 = event.currentTarget.closest('.mktoForm').querySelector('input[name="intellimize2"]');
         if (int2)
           int2.value = n;
-      }
+      });
     });
   }
   // Do not touch below hidden field code for any Experiment over

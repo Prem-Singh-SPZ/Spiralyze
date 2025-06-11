@@ -51,25 +51,25 @@
                     waitForElm('.spz_3002 #mktoForm_1017.mktoForm .mktoCaptchaDisclaimer').then(() => {
                         let spzFormInterval = setInterval(() => {
                             if (document.querySelector('.spz_3002 .hero .hero__container .hero__content') && document.querySelectorAll('.spz-form-container').length == 0 && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
+                                clearInterval(spzFormInterval);
                                 document.querySelector('.spz_3002 #page-container .flex.min-h-screen').insertAdjacentHTML('beforeend', `<div class="spz-form-container"><div class="spz-form-inner"><div class="spz-form-content mkto-wrap"><div class="spz-form-title">Get live demo</div><div id="demo_submit" style="display: none;"><h3 style="text-align: center;">Thank you!</h3><h4 style="text-align: center;">A representative will reach out to you shortly.</h4></div><a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/>
-                                </svg></a><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div>`);
+                                </svg></a><div class="mkform_1018_wrap"><form id="mktoForm_1018" class="w-full mktoForm"></form></div></div></div></div>`);
 
                                 // loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
                             }
 
                             heroUpdate();
-                            waitForElm('.spz_3002 #mktoForm_1018.mktoForm input').then(() => {
-                                formModify();
-                                hiddenValue('SPZ_3002', 'SPZ_3002_variant');
-                            });
 
-                            if (document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow.row_Email').length == 0) {
-                                formModify();
-                                hiddenValue('SPZ_3002', 'SPZ_3002_variant');
-                                clearInterval(spzFormInterval);
+                            // waitForElm('.spz_3002 #mktoForm_1018.mktoForm input').then(() => {
+                            //     formModify();
+                            //     hiddenValue('SPZ_3002', 'SPZ_3002_variant');
+                            // });
 
-                            }
+                            // if (document.querySelectorAll('#mktoForm_1018.mktoForm .mktoFormRow.row_Email').length == 0) {
+                            //     formModify();
+                            //     hiddenValue('SPZ_3002', 'SPZ_3002_variant');
+                            // }
                         }, 500);
                         setTimeout(function () {
                             clearInterval(spzFormInterval);
@@ -88,7 +88,7 @@
 
     function heroUpdate() {
         if (document.querySelectorAll('.spz_3002 #page-container  a.redirect-to-demo').length == 0 && document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap') && document.querySelector('.spz_3002 #page-container .flex.min-h-screen')) {
-            document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap').insertAdjacentHTML('beforeend', `<div class="hero__short-desc">Book your live demo of SailPoint&#8217;s identity security software to see how organizations like yours have:</div><ul class="hero__list"><li>Reduced staff onboarding from 10 days to 4 hours</li><li>Cut manually provisioned support tickets by 40%</li><li>Slashed time to provision new hires from 14 hours to 2.5 minutes</li></ul><div class="spz-email">
+            document.querySelector('.spz_3002 .hero .hero__container .hero__content-wrap').insertAdjacentHTML('beforeend', `<div class="hero__short-desc">Book your live demo of SailPoint’s identity security software to see how organizations like yours have:</div><ul class="hero__list"><li>Reduced staff onboarding from 10 days to 4 hours</li><li>Cut manually provisioned support tickets by 40%</li><li>Slashed time to provision new hires from 14 hours to 2.5 minutes</li></ul><div class="spz-email">
 					 <div class="form-group-wrapper">
 							<div class="form-group-spz">
 								<input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
@@ -223,7 +223,7 @@
 
             setTimeout(() => {
                 document.querySelector('.spz_3002 #mktoForm_1018.mktoForm #Country').dispatchEvent(new Event('change'));
-            }, 500);
+            });
         }
 
         // Add class in mktoField using the name attribute
@@ -422,25 +422,47 @@
         }
     }
 
+    let formLoaded = false;
     function loadForm() {
         //setintervel to check the form is loaded or not
         var formInterval = setInterval(function () {
             if (document.querySelector('script[src*="/forms2/js/forms2.min.js"]') && window.MktoForms2) {
                 clearInterval(formInterval);
-                window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "1018");
+
+                if (MktoForms2.getForm(1018) && MktoForms2.getForm(1018).getId() === 1018) {
+
+                    window.MktoForms2.getForm(1018).render()
+                } else {
+
+                    window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "1018");
+                }
+
+                // 
+
+
+                // window.MktoForms2.render("//go.sailpoint.com", "626-LTO-177", "1018");
+
 
                 //check mktoforms2 library is loaded or not
                 if (typeof MktoForms2 !== 'undefined') {
                     MktoForms2.whenReady(function (form) {
+
                         form.onSuccess(function (values, followUpUrl) {
-                            document.body.classList.add('form-submit');
-                            form.getFormElem().hide();
-                            document.querySelector('.spz-form-container .spz-form-content .spz-form-title').style.display = 'none';
-                            document.getElementById('demo_submit').style.display = 'block';
+                            if (form.getId() === 1018) {
 
-                            //return false to prevent the submission handler from taking the lead to the follow up url.
+                                document.body.classList.add('form-submit');
+                                form.getFormElem().hide();
+                                document.querySelector('.spz-form-container .spz-form-content .spz-form-title').style.display = 'none';
+                                document.getElementById('demo_submit').style.display = 'block';
+                                document.querySelector('.mkform_1018_wrap').classList.add('mkto-form1018-submitted');
 
-                            return false;
+                                //return false to prevent the submission handler from taking the lead to the follow up url.
+
+                                return false;
+                            }
+                            if (form.getId() === 1017) {
+                                document.querySelector('.mkform_1017_wrap').classList.add('mkto-form1017-submitted');
+                            }
                         });
 
                         if (document.body.classList.contains('spz-form-loaded')) {
@@ -452,45 +474,107 @@
         }, 100);
     }
 
+    document.querySelector('#mktoForm_1017').parentElement.classList.add('mkform_1017_wrap');
+    hiddenValue('SPZ_3002', 'SPZ_3002_variant');
+
+
+    let isProcessing = false;
     //click event listener
-    document.body.addEventListener('click', function (e) {
-        if (e.target.closest('.redirect-to-demo')) {
-            if (!document.querySelector('.spz_3002 #mktoForm_1018.mktoForm input')) {
-                loadForm('626-LTO-177', 'validFormName', 'https://www.sailpoint.com/products/identity-security-cloud', 'jQuery37109196959211333955_1741019594770', '1741019594772');
+
+    waitForElm('.spz_3002 .redirect-to-demo').then(() => {
+        document.querySelector('.spz_3002 .redirect-to-demo').addEventListener('click', (event) => {
+            if (isProcessing) {
+                event.preventDefault(); // Prevent navigation
+                return;
             }
 
-            document.body.classList.add('spz-show-modal');
-            document.querySelector('html').classList.add('spz-no-scroll');
-            //take the value of .email-hero-spz and set it to the email field in the form
-            waitForElm('.spz_3002 #mktoForm_1018.mktoForm .row_Email input').then(() => {
-                var email = document.querySelector('.email-hero-spz');
-                var emailField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email input');
-                if (email && email.value && emailField) {
-                    emailField.value = email.value;
-                    emailField.closest('.mktoFieldWrap').classList.add('filled');
-                }
+            let myLink = document.querySelector('.redirect-to-demo');
+
+            isProcessing = true;
+
+            myLink.setAttribute('aria-disabled', 'true'); // For accessibility
+
+            // document.querySelector('#mktoForm_1018').innerHTML = '';
+
+            document.querySelector('.mkform_1018_wrap').innerHTML = '';
+            document.querySelector('.mkform_1018_wrap').insertAdjacentHTML('beforeend', `<form id="mktoForm_1018" class="w-full mktoForm"></form>`);
+
+
+            loadForm();
+            waitForElm('.spz_3002 #mktoForm_1018.mktoForm input').then(() => {
+                formModify();
+                hiddenValue('SPZ_3002', 'SPZ_3002_variant');
             });
-        }
-        if (e.target.closest('.spz-close-modal')) {
-            e.stopPropagation();
+
+            setTimeout(() => {
+
+                document.body.classList.add('spz-show-modal');
+                document.querySelector('html').classList.add('spz-no-scroll');
+                //take the value of .email-hero-spz and set it to the email field in the form
+                waitForElm('.spz_3002 #mktoForm_1018.mktoForm .row_Email input').then(() => {
+                    var email = document.querySelector('.email-hero-spz');
+                    var emailField = document.querySelector('.spz_3002 #mktoForm_1018.mktoForm .row_Email input');
+                    if (email && email.value && emailField) {
+                        emailField.value = email.value;
+                        emailField.closest('.mktoFieldWrap').classList.add('filled');
+                    }
+                });
+
+                isProcessing = false;
+                myLink.removeAttribute('aria-disabled');
+
+
+            }, 1000);
+        });
+    });
+
+    waitForElm('.spz_3002 .spz-close-modal').then(() => {
+        document.querySelector('.spz_3002 .spz-close-modal').addEventListener('click', (event) => {
+            event.stopPropagation();
             document.body.classList.remove('spz-show-modal');
             document.querySelector('html').classList.remove('spz-no-scroll');
-            if (!document.querySelector('#footer-cta .mkto-wrap #mktoForm_1017 input')) {
-                document.querySelector('#footer-cta .mkto-wrap #mktoForm_1017').innerHTML = '';
-            }
-            //refresh the page
-            if (document.querySelector('.spz_3002 .spz-form-container')) {
-                document.querySelector('.spz_3002 .spz-form-container').remove();
-            }
-        }
 
-        if (e.target.closest('#mktoForm_1018 .mktoButton')) {
+            // document.querySelector('#mktoForm_1017').innerHTML = '';
+
+            if (document.querySelectorAll('.mkform_1017_wrap #confirm #contact_us_submit').length == 0) {
+
+                document.querySelector('.mkform_1017_wrap #mktoForm_1017').remove();
+                document.querySelector('.mkform_1017_wrap').insertAdjacentHTML('beforeend', `<form id="mktoForm_1017" class="w-full mktoForm"></form>`);
+
+                if (MktoForms2.getForm(1017) && MktoForms2.getForm(1017).getId() === 1017) {
+                    window.MktoForms2.getForm(1017).render()
+                } else {
+                    window.MktoForms2.loadForm("//go.sailpoint.com", "626-LTO-177", "1017");
+                }
+            }
+
+            waitForElm('.spz_3002 #mktoForm_1017.mktoForm #Country').then(() => {
+
+                // select united states as default country
+                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm #Country').value = "United States";
+                document.querySelector('.spz_3002 #mktoForm_1017.mktoForm #Country option[value="United States"]').setAttribute('selected', 'selected');
+
+                setTimeout(() => {
+                    document.querySelector('.spz_3002 #mktoForm_1017.mktoForm #Country').dispatchEvent(new Event('change'));
+                });
+                hiddenValue('SPZ_3002', 'SPZ_3002_variant');
+
+            });
+
+
+        });
+    });
+
+    waitForElm('.spz_3002 #mktoForm_1018 .mktoButton').then(() => {
+        document.querySelector('.spz_3002 #mktoForm_1018 .mktoButton').addEventListener('click', (event) => {
+
             const fields = document.querySelectorAll('.spz_3002 form.mktoForm .mktoField');
             const timeBuffer = setInterval(() => {
                 fields.forEach(field => {
                     const fieldWrap = field.closest('.mktoFieldWrap');
                     if (fieldWrap) {
                         // Check for error
+
                         const errorElement = fieldWrap.querySelector('.mktoError');
                         if (errorElement && errorElement.style.display !== 'none') {
                             fieldWrap.classList.add('error');
@@ -512,8 +596,16 @@
             setTimeout(() => {
                 clearInterval(timeBuffer);
             }, 5000);
-        }
+
+            //inject current time and date in EST timezone into .intellimize2 hidden field
+            var d = new Date();
+            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+            var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+            if (int2)
+                int2.value = n;
+        });
     });
+
 
     function removeTest() {
         if (document.querySelector('.spz_3002 .spz-form-container')) {
@@ -604,16 +696,21 @@
         });
 
         //click event listener
-        document.addEventListener('click', function (e) {
-            if (e.target.closest('form.mktoForm .mktoButton')) {
-                //inject current time and date in EST timezone into .intellimize2 hidden field
-                var d = new Date();
-                var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-                var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-                if (int2)
-                    int2.value = n;
-            }
+
+        waitForElm('.spz_3002 .mktoForm .mktoButton').then(() => {
+            document.querySelector('.spz_3002 .mktoForm .mktoButton').addEventListener('click', (event) => {
+                if (event.target.closest('form.mktoForm .mktoButton')) {
+                    //inject current time and date in EST timezone into .intellimize2 hidden field
+                    var d = new Date();
+                    var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                    var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                    if (int2)
+                        int2.value = n;
+                }
+            });
         });
+
+
     }
     // Do not touch below hidden field code for any Experiment over
 

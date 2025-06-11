@@ -514,8 +514,8 @@
     }
 
     //click event listener
-    document.addEventListener('click', function (e) {
-        if (e.target.closest('.mktoForm .mktoButton')) {
+    waitForElm('.spz-1004-v2 #mktoForm_1018.mktoForm .mktoButton').then(() => {
+        document.querySelector('#mktoForm_1018.mktoForm .mktoButton').addEventListener('click', (event) => {
             const fields = document.querySelectorAll('.spz-1004-v2 form.mktoForm .mktoField');
             const timeBuffer = setInterval(() => {
                 fields.forEach(field => {
@@ -545,14 +545,13 @@
             }, 2000);
 
             progressiveForm(document.querySelector('input[name="Email"]'));
-
             //inject current time and date in EST timezone into .intellimize2 hidden field
             var d = new Date();
             var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+            var int2 = event.currentTarget.closest('.mktoForm').querySelector('input[name="intellimize2"]');
             if (int2)
                 int2.value = n;
-        }
+        });
     });
 
     function checkEmail() {

@@ -55,6 +55,16 @@
       document.querySelectorAll('.SPZ_7005_TC #page-container .hero--homepage .hero__buttons .btn').forEach(function (el) {
         el.classList.add('spz-hero-cta');
       })
+
+      // on click of .spz-contact-us add class spz-show-modal to body and spz-no-scroll to html
+      document.querySelectorAll('.SPZ_7005_TC .spz-contact-us').forEach(function (el) {
+        el.addEventListener('click', function () {
+          document.body.classList.add('spz-show-modal');
+          document.querySelector('html').classList.add('spz-no-scroll');
+          removeSpecificCookieValue('SPZ_7005_TC', 'SPZ_7005_variant');
+          hiddenValue('SPZ_7005_TC', 'SPZ_7005_truecontrol');
+        });
+      });
     }
   }
 
@@ -67,6 +77,13 @@
         document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm').closest('.column.relative').classList.add('spz-form-column');
         document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm').closest('.column.relative').classList.remove('relative');
         document.querySelector('.SPZ_7005_TC #mktoForm_1017.mktoForm').closest('section').classList.add('spz_form_section');
+
+        //onclick of .spz-close-modal remove class spz-show-modal from body and spz-no-scroll from html
+        document.querySelector('.SPZ_7005_TC .spz-close-modal').addEventListener('click', function (e) {
+          e.stopPropagation();
+          document.body.classList.remove('spz-show-modal');
+          document.querySelector('html').classList.remove('spz-no-scroll');
+        });
       });
     }
 
@@ -299,20 +316,20 @@
   }
 
   //click event listener
-  document.body.addEventListener('click', function (e) {
-    if (e.target.closest('.spz-contact-us')) {
-      document.body.classList.add('spz-show-modal');
-      document.querySelector('html').classList.add('spz-no-scroll');
+  // document.body.addEventListener('click', function (e) {
+  //   if (e.target.closest('.spz-contact-us')) {
+  //     document.body.classList.add('spz-show-modal');
+  //     document.querySelector('html').classList.add('spz-no-scroll');
 
-      removeSpecificCookieValue('SPZ_7005_TC', 'SPZ_7005_variant');
-      hiddenValue('SPZ_7005_TC', 'SPZ_7005_truecontrol');
-    }
-    if (e.target.closest('.spz-close-modal')) {
-      e.stopPropagation();
-      document.body.classList.remove('spz-show-modal');
-      document.querySelector('html').classList.remove('spz-no-scroll');
-    }
-  });
+  //     removeSpecificCookieValue('SPZ_7005_TC', 'SPZ_7005_variant');
+  //     hiddenValue('SPZ_7005_TC', 'SPZ_7005_truecontrol');
+  //   }
+  //   if (e.target.closest('.spz-close-modal')) {
+  //     e.stopPropagation();
+  //     document.body.classList.remove('spz-show-modal');
+  //     document.querySelector('html').classList.remove('spz-no-scroll');
+  //   }
+  // });
 
   function removeTest() {
     setTimeout(() => {
@@ -331,8 +348,8 @@
   }
 
   //click event listener
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('#mktoForm_1017 .mktoButton')) {
+  waitForElm('.SPZ_7005_TC #mktoForm_1017.mktoForm .mktoButton').then(() => {
+    document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
 
       if (!document.body.classList.contains('form-expand')) {
         var email_el = document.querySelector('.SPZ_7005_TC .mktoForm .row_Email .mktoFieldWrap .mktoField');
@@ -362,11 +379,19 @@
             }
           }
         });
+
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
+        
       }, 200);
       setTimeout(() => {
         clearInterval(timeBuffer);
       }, 5000);
-    }
+    });
   });
 
   history.pushState = (function (f) {
@@ -515,17 +540,5 @@
       }
     });
   }
-
-  //click event listener
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('#mktoForm_1017 .mktoButton')) {
-      //inject current time and date in EST timezone into .intellimize2 hidden field
-      var d = new Date();
-      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-      if (int2)
-        int2.value = n;
-    }
-  });
   // Do not touch below hidden field code for any Experiment End
 })();
