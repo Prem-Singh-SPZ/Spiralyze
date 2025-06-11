@@ -333,6 +333,108 @@
             }, 10000);
           }
         }
+
+        waitForElm('.spz_8002_v1 #mktoForm_1016.mktoForm .mktoButton').then(() => {
+          document.querySelector('#mktoForm_1016.mktoForm .mktoButton').addEventListener('click', (event) => {
+            const fields = document.querySelectorAll('.spz_8002_v1 form.mktoForm .mktoField');
+            const timeBuffer = setInterval(() => {
+              fields.forEach(field => {
+                const fieldWrap = field.closest('.mktoFieldWrap');
+                if (fieldWrap) {
+                  const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
+                  if (errorElement && errorElement.style.display !== 'none') {
+                    fieldWrap.classList.add('error');
+                  } else {
+                    fieldWrap.classList.remove('error');
+                  }
+
+                  if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                    fieldWrap.classList.add('filled');
+                  } else {
+                    fieldWrap.classList.remove('filled');
+                  }
+                }
+              });
+            }, 300);
+
+
+            setTimeout(() => {
+              clearInterval(timeBuffer);
+            }, 1000);
+
+            if (!document.body.classList.contains('form-expand')) {
+              const el = document.querySelector('input[name="Email"]');
+              const fieldName = el.getAttribute('name');
+              if (fieldName === 'Email') {
+                const newemailValue = el.value.trim();
+                const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+                if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
+                  el.closest('.mktoFieldWrap').classList.add('emailerror');
+                  checkEmail();
+                } else {
+                  el.closest('.mktoFieldWrap').classList.remove('emailerror');
+                }
+              }
+
+              const firstName = document.querySelector('input[name="FirstName"]').value.trim();
+              const lastName = document.querySelector('input[name="LastName"]').value.trim();
+              const emailValue = document.querySelector('input[name="Email"]').value.trim();
+              const phoneValue = document.querySelector('input[name="Phone"]').value.trim();
+              const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+              if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
+                if (firstName && lastName && phoneValue && emailRegex.test(emailValue)) {
+                  document.body.classList.add('form-expand');
+                }
+              }
+            }
+
+            waitForElm('.spz_8002_v1 .mktoForm .mktoError').then(function (elm) {
+              if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+                const targetNode = elm.parentNode;
+                const config = { attributes: true, childList: true, subtree: true };
+                const callback = (mutationList, observer) => {
+                  for (const mutation of mutationList) {
+                    if (mutation.type === "childList") {
+                      if (elm.parentNode === null && elm.style.display != 'none') {
+                        targetNode.classList.add('error');
+                      } else {
+                        elm.parentNode.classList.add('error');
+                      }
+                      observer.disconnect();
+                    } else if (mutation.type === "attributes") {
+                      if (elm.parentNode === null) {
+                        targetNode.classList.add('error');
+                      } else {
+                        elm.parentNode.classList.add('error');
+                      }
+                      observer.disconnect();
+                    }
+                  }
+                };
+                const observer = new MutationObserver(callback);
+                observer.observe(targetNode, config);
+              } else {
+                let counterA = 0;
+                const intervalIdA = setInterval(() => {
+                  if (document.querySelector('.spz_8002_v1 .mktoForm .mktoError #ValidMsgEmail') !== null) {
+                    document.querySelector('.spz_8002_v1 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+                  }
+                  counterA++;
+                  if (counterA >= 10) {
+                    clearInterval(intervalIdA);
+                  }
+                }, 500);
+              }
+            });
+
+            //inject current time and date in EST timezone into .intellimize2 hidden field
+            var d = new Date();
+            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+            var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+            if (int2)
+              int2.value = n;
+          });
+        });
       }
     });
   }
@@ -359,6 +461,9 @@
       }
       if (document.querySelector('.form-submit')) {
         document.body.classList.remove("form-submit");
+      }
+      if (document.querySelector('.spz-form-over-ui')) {
+        document.querySelector('.spz-form-over-ui').remove();
       }
     }, 1000);
   }
@@ -426,108 +531,6 @@
       clearInterval(spz_cro_Interval);
     }, 15000);
   }
-
-  waitForElm('.spz_8002_v1 #mktoForm_1016.mktoForm .mktoButton').then(() => {
-    document.querySelector('#mktoForm_1016.mktoForm .mktoButton').addEventListener('click', (event) => {
-      const fields = document.querySelectorAll('.spz_8002_v1 form.mktoForm .mktoField');
-      const timeBuffer = setInterval(() => {
-        fields.forEach(field => {
-          const fieldWrap = field.closest('.mktoFieldWrap');
-          if (fieldWrap) {
-            const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
-            if (errorElement && errorElement.style.display !== 'none') {
-              fieldWrap.classList.add('error');
-            } else {
-              fieldWrap.classList.remove('error');
-            }
-
-            if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
-              fieldWrap.classList.add('filled');
-            } else {
-              fieldWrap.classList.remove('filled');
-            }
-          }
-        });
-      }, 300);
-
-
-      setTimeout(() => {
-        clearInterval(timeBuffer);
-      }, 1000);
-
-      if (!document.body.classList.contains('form-expand')) {
-        const el = document.querySelector('input[name="Email"]');
-        const fieldName = el.getAttribute('name');
-        if (fieldName === 'Email') {
-          const newemailValue = el.value.trim();
-          const newemailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-          if (newemailValue == '' || !newemailRegex.test(newemailValue)) {
-            el.closest('.mktoFieldWrap').classList.add('emailerror');
-            checkEmail();
-          } else {
-            el.closest('.mktoFieldWrap').classList.remove('emailerror');
-          }
-        }
-
-        const firstName = document.querySelector('input[name="FirstName"]').value.trim();
-        const lastName = document.querySelector('input[name="LastName"]').value.trim();
-        const emailValue = document.querySelector('input[name="Email"]').value.trim();
-        const phoneValue = document.querySelector('input[name="Phone"]').value.trim();
-        const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
-        if (['FirstName', 'LastName', 'Email', 'Phone'].includes(fieldName)) {
-          if (firstName && lastName && phoneValue && emailRegex.test(emailValue)) {
-            document.body.classList.add('form-expand');
-          }
-        }
-      }
-
-      waitForElm('.spz_8002_v1 .mktoForm .mktoError').then(function (elm) {
-        if (elm.parentNode.querySelector('#ValidMsgEmail')) {
-          const targetNode = elm.parentNode;
-          const config = { attributes: true, childList: true, subtree: true };
-          const callback = (mutationList, observer) => {
-            for (const mutation of mutationList) {
-              if (mutation.type === "childList") {
-                if (elm.parentNode === null && elm.style.display != 'none') {
-                  targetNode.classList.add('error');
-                } else {
-                  elm.parentNode.classList.add('error');
-                }
-                observer.disconnect();
-              } else if (mutation.type === "attributes") {
-                if (elm.parentNode === null) {
-                  targetNode.classList.add('error');
-                } else {
-                  elm.parentNode.classList.add('error');
-                }
-                observer.disconnect();
-              }
-            }
-          };
-          const observer = new MutationObserver(callback);
-          observer.observe(targetNode, config);
-        } else {
-          let counterA = 0;
-          const intervalIdA = setInterval(() => {
-            if (document.querySelector('.spz_8002_v1 .mktoForm .mktoError #ValidMsgEmail') !== null) {
-              document.querySelector('.spz_8002_v1 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-            }
-            counterA++;
-            if (counterA >= 10) {
-              clearInterval(intervalIdA);
-            }
-          }, 500);
-        }
-      });
-
-      //inject current time and date in EST timezone into .intellimize2 hidden field
-      var d = new Date();
-      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-      var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-      if (int2)
-        int2.value = n;
-    });
-  });
 
   function checkEmail() {
     const emailField = document.querySelector('.spz_8002_v1 .spz-form-over-ui form.mktoForm input[name="Email"]');

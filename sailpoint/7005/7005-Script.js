@@ -376,6 +376,52 @@
         }
       });
     }
+
+    //click event listener
+    waitForElm('.SPZ_7005 #mktoForm_1017.mktoForm .mktoButton').then(() => {
+      document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
+        if (!document.body.classList.contains('form-expand')) {
+          var email_el = document.querySelector('.SPZ_7005 .mktoForm .row_Email .mktoFieldWrap .mktoField');
+          if (email_el.closest('.mktoFieldWrap') !== null) {
+            checkEmail();
+          }
+        }
+
+        const fields = document.querySelectorAll('.SPZ_7005 form.mktoForm .mktoField');
+        const timeBuffer = setInterval(() => {
+          fields.forEach(field => {
+            const fieldWrap = field.closest('.mktoFieldWrap');
+            if (fieldWrap) {
+              // Check for error
+              const errorElement = fieldWrap.querySelector('.mktoError');
+              if (errorElement && errorElement.style.display !== 'none') {
+                fieldWrap.classList.add('error');
+              } else {
+                fieldWrap.classList.remove('error');
+              }
+
+              // Check if the field is filled
+              if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                fieldWrap.classList.add('filled');
+              } else {
+                fieldWrap.classList.remove('filled');
+              }
+            }
+          });
+        }, 200);
+        setTimeout(() => {
+          clearInterval(timeBuffer);
+        }, 5000);
+
+
+        //inject current time and date in EST timezone into .intellimize2 hidden field
+        var d = new Date();
+        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+        var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+        if (int2)
+          int2.value = n;
+      });
+    });
   }
 
   function checkEmail() {
@@ -421,52 +467,6 @@
       }
     }, 200);
   }
-
-  //click event listener
-  waitForElm('.SPZ_7005 #mktoForm_1017.mktoForm .mktoButton').then(() => {
-    document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
-      if (!document.body.classList.contains('form-expand')) {
-        var email_el = document.querySelector('.SPZ_7005 .mktoForm .row_Email .mktoFieldWrap .mktoField');
-        if (email_el.closest('.mktoFieldWrap') !== null) {
-          checkEmail();
-        }
-      }
-
-      const fields = document.querySelectorAll('.SPZ_7005 form.mktoForm .mktoField');
-      const timeBuffer = setInterval(() => {
-        fields.forEach(field => {
-          const fieldWrap = field.closest('.mktoFieldWrap');
-          if (fieldWrap) {
-            // Check for error
-            const errorElement = fieldWrap.querySelector('.mktoError');
-            if (errorElement && errorElement.style.display !== 'none') {
-              fieldWrap.classList.add('error');
-            } else {
-              fieldWrap.classList.remove('error');
-            }
-
-            // Check if the field is filled
-            if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
-              fieldWrap.classList.add('filled');
-            } else {
-              fieldWrap.classList.remove('filled');
-            }
-          }
-        });
-
-        //inject current time and date in EST timezone into .intellimize2 hidden field
-        var d = new Date();
-        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-        var int2 = event.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-        if (int2)
-          int2.value = n;
-        
-      }, 200);
-      setTimeout(() => {
-        clearInterval(timeBuffer);
-      }, 5000);
-    });
-  });
 
   history.pushState = (function (f) {
     return function pushState() {

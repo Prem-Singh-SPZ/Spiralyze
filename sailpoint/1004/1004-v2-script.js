@@ -344,6 +344,7 @@
                             // Attach events using event delegation
                             const form = document.querySelector('.spz-1004-v2 form.mktoForm');
 
+                            if (!form) return;
                             form.addEventListener('focus', function (event) {
                                 const el = event.target;
                                 if (el.classList.contains('mktoField')) {
@@ -498,6 +499,47 @@
                         }, 10000);
                     }
                 }
+                
+                //click event listener
+                waitForElm('.spz-1004-v2 #mktoForm_1018.mktoForm .mktoButton').then(() => {
+                    document.querySelector('#mktoForm_1018.mktoForm .mktoButton').addEventListener('click', (event) => {
+                        const fields = document.querySelectorAll('.spz-1004-v2 form.mktoForm .mktoField');
+                        const timeBuffer = setInterval(() => {
+                            fields.forEach(field => {
+                                const fieldWrap = field.closest('.mktoFieldWrap');
+                                if (fieldWrap) {
+                                    // Check for error
+                                    const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
+                                    if (errorElement && errorElement.style.display !== 'none') {
+                                        fieldWrap.classList.add('error');
+                                    } else {
+                                        fieldWrap.classList.remove('error');
+                                    }
+
+                                    // Check if the field is filled
+                                    if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
+                                        fieldWrap.classList.add('filled');
+                                    } else {
+                                        fieldWrap.classList.remove('filled');
+                                    }
+                                }
+                            });
+                        }, 100);
+
+
+                        setTimeout(() => {
+                            clearInterval(timeBuffer);
+                        }, 2000);
+
+                        progressiveForm(document.querySelector('input[name="Email"]'));
+                        //inject current time and date in EST timezone into .intellimize2 hidden field
+                        var d = new Date();
+                        var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                        var int2 = event.currentTarget.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                        if (int2)
+                            int2.value = n;
+                    });
+                });
             }
         });
     }
@@ -512,47 +554,6 @@
             }
         }, 2000);
     }
-
-    //click event listener
-    waitForElm('.spz-1004-v2 #mktoForm_1018.mktoForm .mktoButton').then(() => {
-        document.querySelector('#mktoForm_1018.mktoForm .mktoButton').addEventListener('click', (event) => {
-            const fields = document.querySelectorAll('.spz-1004-v2 form.mktoForm .mktoField');
-            const timeBuffer = setInterval(() => {
-                fields.forEach(field => {
-                    const fieldWrap = field.closest('.mktoFieldWrap');
-                    if (fieldWrap) {
-                        // Check for error
-                        const errorElement = fieldWrap.querySelector('.mktoError:not(.customError)');
-                        if (errorElement && errorElement.style.display !== 'none') {
-                            fieldWrap.classList.add('error');
-                        } else {
-                            fieldWrap.classList.remove('error');
-                        }
-
-                        // Check if the field is filled
-                        if (field.value && field.value.trim() !== '' && field.type !== 'checkbox') {
-                            fieldWrap.classList.add('filled');
-                        } else {
-                            fieldWrap.classList.remove('filled');
-                        }
-                    }
-                });
-            }, 100);
-
-
-            setTimeout(() => {
-                clearInterval(timeBuffer);
-            }, 2000);
-
-            progressiveForm(document.querySelector('input[name="Email"]'));
-            //inject current time and date in EST timezone into .intellimize2 hidden field
-            var d = new Date();
-            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = event.currentTarget.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-            if (int2)
-                int2.value = n;
-        });
-    });
 
     function checkEmail() {
         const emailField = document.querySelector('.spz-1004-v2 .spz-form-section form.mktoForm input[name="Email"]');

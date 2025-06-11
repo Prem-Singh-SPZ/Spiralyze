@@ -180,6 +180,56 @@
                 document.querySelector('.spz_3004 #page-container .page-transition .product-hero .row__inner .inner-row .inner-row__inner .column:first-child .column__inner').style.display = 'none';
             });
         });
+
+        waitForElm('#mktoForm_1018 .mktoButton').then(function (elm) {
+            elm.addEventListener("click", function (e) {
+                waitForElm('.spz_3004 .mktoForm .mktoError').then(function (elm) {
+                    if (elm.querySelector('#ValidMsgEmail')) {
+                        const targetNode = elm.parentNode;
+                        const config = { attributes: true, childList: true, subtree: true };
+                        const callback = (mutationList, observer) => {
+                            for (const mutation of mutationList) {
+                                if (mutation.type === "childList") {
+                                    if (elm.parentNode === null && elm.style.display != 'none') {
+                                        // targetNode.classList.add('error');
+                                    } else {
+                                        // elm.parentNode.classList.add('error');
+                                    }
+                                    observer.disconnect();
+                                } else if (mutation.type === "attributes") {
+                                    if (elm.parentNode === null) {
+                                        // targetNode.classList.add('error');
+                                    } else {
+                                        // elm.parentNode.classList.add('error');
+                                    }
+                                    observer.disconnect();
+                                }
+                            }
+                        };
+                        const observer = new MutationObserver(callback);
+                        observer.observe(targetNode, config);
+                    } else {
+                        let counterA = 0;
+                        const intervalIdA = setInterval(() => {
+                            if (document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail') !== null) {
+                                // document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+                            }
+                            counterA++;
+                            if (counterA >= 10) {
+                                clearInterval(intervalIdA);
+                            }
+                        }, 500);
+                    }
+                });
+
+                //inject current time and date in EST timezone into .intellimize2 hidden field
+                var d = new Date();
+                var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+                var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+                if (int2)
+                    int2.value = n;
+            });
+        });
     }
 
     function heroSectionUpdate() {
@@ -455,55 +505,6 @@
         });
     }
     // Do not touch below hidden field code for any Experiment over
-    waitForElm('#mktoForm_1018 .mktoButton').then(function (elm) {
-        elm.addEventListener("click", function (e) {
-            waitForElm('.spz_3004 .mktoForm .mktoError').then(function (elm) {
-                if (elm.querySelector('#ValidMsgEmail')) {
-                    const targetNode = elm.parentNode;
-                    const config = { attributes: true, childList: true, subtree: true };
-                    const callback = (mutationList, observer) => {
-                        for (const mutation of mutationList) {
-                            if (mutation.type === "childList") {
-                                if (elm.parentNode === null && elm.style.display != 'none') {
-                                    // targetNode.classList.add('error');
-                                } else {
-                                    // elm.parentNode.classList.add('error');
-                                }
-                                observer.disconnect();
-                            } else if (mutation.type === "attributes") {
-                                if (elm.parentNode === null) {
-                                    // targetNode.classList.add('error');
-                                } else {
-                                    // elm.parentNode.classList.add('error');
-                                }
-                                observer.disconnect();
-                            }
-                        }
-                    };
-                    const observer = new MutationObserver(callback);
-                    observer.observe(targetNode, config);
-                } else {
-                    let counterA = 0;
-                    const intervalIdA = setInterval(() => {
-                        if (document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail') !== null) {
-                            // document.querySelector('.spz_3004 .mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-                        }
-                        counterA++;
-                        if (counterA >= 10) {
-                            clearInterval(intervalIdA);
-                        }
-                    }, 500);
-                }
-            });
-
-            //inject current time and date in EST timezone into .intellimize2 hidden field
-            var d = new Date();
-            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-            if (int2)
-                int2.value = n;
-        });
-    });
 
     history.pushState = (function (f) {
         return function pushState() {
