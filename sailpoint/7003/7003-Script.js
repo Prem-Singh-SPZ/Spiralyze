@@ -28,19 +28,19 @@
         if (!document.body.classList.contains('SPZ_7003')) {
           document.body.classList.add('SPZ_7003');
           waitForElm('.SPZ_7003 #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
-            let spzFormInterval = setInterval(() => {
-              if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
-                clearInterval(spzFormInterval);
-                addCta();
-                formModify();
-              }
-              else {
-                clearInterval(spzFormInterval);
-              }
-            }, 100);
-            setTimeout(function () {
-              clearInterval(spzFormInterval);
-            }, 5000);
+            // let spzFormInterval = setInterval(() => {
+            if (document.querySelectorAll('#mktoForm_1017.mktoForm .mktoFormRow.row_Email').length == 0 && document.querySelector('#mktoForm_1017.mktoForm .mktoFormRow input')) {
+              // clearInterval(spzFormInterval);
+              addCta();
+              formModify();
+            }
+            //   else {
+            //     clearInterval(spzFormInterval);
+            //   }
+            // }, 100);
+            // setTimeout(function () {
+            //   clearInterval(spzFormInterval);
+            // }, 5000);
           });
         }
       }
@@ -64,9 +64,9 @@
         if (document.querySelectorAll('.spz-form-title').length == 0)
           document.querySelector('.SPZ_7003 .mkto-wrap.w-full').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><span>Contact us</span> <a href="javascript:;" class="spz-close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M18 18L6 6" stroke="#415364" stroke-width="2" stroke-linecap="round"/></svg></a></div>`);
 
-          document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('.column.relative').classList.add('spz-form-column');
-          document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('.column.relative').classList.remove('relative');
-          document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('section').classList.add('spz_form_section');
+        document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('.column.relative').classList.add('spz-form-column');
+        document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('.column.relative').classList.remove('relative');
+        document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm').closest('section').classList.add('spz_form_section');
       });
     }
 
@@ -80,7 +80,7 @@
       else {
         if (!form_fields[i].querySelector('.mktoPlaceholderGlobal_Opt_in__c')) {
           if (i <= 12) {
-            form_fields[i].classList.add('hidden');
+            // form_fields[i].classList.add('hidden');
           }
         }
         else {
@@ -111,7 +111,7 @@
     function focusFields() {
       // Attach events using event delegation
       const form = document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm');
-      let emailFocusCount = 0; 
+      let emailFocusCount = 0;
       if (!form) return;
 
       form.addEventListener('focus', function (event) {
@@ -121,15 +121,15 @@
           checkAllFields(el);
         }
         var email_field = document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm input[name="Email"]');
-        if(email_field.value.trim() === '') {
+        if (email_field.value.trim() === '') {
           email_field.closest('.mktoFieldWrap').classList.remove('emailerror');
         }
-        if(el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
+        if (el.getAttribute('name') === 'Email' && !document.body.classList.contains('form-expand')) {
           var checkerrorcnt = 0;
-          var checkerrror = setInterval(function(){
-            if(el.closest('.mktoFieldWrap') !== null){
+          var checkerrror = setInterval(function () {
+            if (el.closest('.mktoFieldWrap') !== null) {
               clearInterval(checkerrror);
-              if(el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)') !== null && el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)').style.display != 'none'){
+              if (el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)') !== null && el.closest('.mktoFieldWrap').querySelector('.mktoError:not(.customError)').style.display != 'none') {
                 el.closest('.mktoFieldWrap').classList.add('emailerror');
                 checkEmail();
               }
@@ -137,10 +137,10 @@
             checkerrorcnt++;
           });
           emailFocusCount++;
-          if(emailFocusCount > 2){
+          if (emailFocusCount > 2) {
             emailFocusCount = 2;
           }
-          if(emailFocusCount === 2){
+          if (emailFocusCount === 2) {
             el.closest('.mktoFieldWrap').classList.add('emailerror');
             checkEmail();
           }
@@ -148,7 +148,7 @@
       }, true);
 
       form.addEventListener('keyup', function (event) {
-        if(!document.body.classList.contains('form-expand')){
+        if (!document.body.classList.contains('form-expand')) {
           const el = event.target;
           const fieldName = el.getAttribute('name');
 
@@ -172,7 +172,7 @@
               document.body.classList.add('form-expand');
             }
           }
-        } 
+        }
       }, true);
 
       form.addEventListener('blur', function (event) {
@@ -268,6 +268,15 @@
       });
     }
 
+    //waitfor state field to be available and aply row_State class
+    waitForElm('.SPZ_7003 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField#State').then(() => {
+      const stateField = document.querySelector('.SPZ_7003 #mktoForm_1017.mktoForm .mktoFieldWrap .mktoField#State');
+      if (stateField) {
+        stateField.closest('.mktoFormRow').classList.add('row_State');
+      }
+    });
+
+
     //check mktoforms2 library is loaded or not
     if (typeof MktoForms2 !== 'undefined') {
       MktoForms2.whenReady(function (form) {
@@ -287,7 +296,7 @@
     const emailRegex = /^[^\s@]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
     if (emailField) {
       if (emailField.value.trim() === '' || !emailRegex.test(emailField.value.trim())) {
-        if(!emailField.parentElement.querySelector('.customError')){
+        if (!emailField.parentElement.querySelector('.customError')) {
           emailField.insertAdjacentHTML('afterend', '<div class="customError"><div class="mktoErrorMsg">Must be valid email. example@yourdomain.com</div></div>');
         }
       }
@@ -299,7 +308,7 @@
     if (e.target.closest('.spz-contact-us')) {
       document.body.classList.add('spz-show-modal');
       document.querySelector('html').classList.add('spz-no-scroll');
-      
+
       removeSpecificCookieValue('SPZ_7003', 'SPZ_7003_truecontrol');
       hiddenValue('SPZ_7003', 'SPZ_7003_variant');
     }
@@ -332,7 +341,7 @@
 
       if (!document.body.classList.contains('form-expand')) {
         var email_el = document.querySelector('.SPZ_7003 .mktoForm .row_Email .mktoFieldWrap .mktoField');
-        if(email_el.closest('.mktoFieldWrap') !== null){
+        if (email_el.closest('.mktoFieldWrap') !== null) {
           checkEmail();
         }
       }
@@ -448,12 +457,12 @@
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
   }
-  
+
   // Do not touch below hidden field code for any Experiment Start
   function removeSpecificCookieValue(targetName, targetValue) {
     ['HiddenFieldNameContact', 'HiddenFieldValueContact'].forEach((key, i) => {
-        var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
-        setCookie(key, values || '', 1);
+      var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+      setCookie(key, values || '', 1);
     });
   }
 
@@ -462,11 +471,11 @@
     var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
 
     if (!ExistingHiddenFieldName) {
-        setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
-        setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-        setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-        setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -495,33 +504,33 @@
 
   function setHiddenFieldValue() {
     var spz_cro_Interval = setInterval(function () {
-        var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
-        if (intellimize1) {
-            clearInterval(spz_cro_Interval);
-            var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
-            //check if hidden field value is empty then only set the value else set the value with , seperated
-            if (intellimize1.value == '') {
-              intellimize1.value = ExistingHiddenFieldValue;
-            }
-            else {
-                if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
-                  intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
-                }
-            }
+      var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
+      if (intellimize1) {
+        clearInterval(spz_cro_Interval);
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+        //check if hidden field value is empty then only set the value else set the value with , seperated
+        if (intellimize1.value == '') {
+          intellimize1.value = ExistingHiddenFieldValue;
         }
+        else {
+          if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+            intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+          }
+        }
+      }
     });
   }
 
   //click event listener
-    document.addEventListener('click', function (e) {
-        if (e.target.closest('#mktoForm_1017 .mktoButton')) {
-            //inject current time and date in EST timezone into .intellimize2 hidden field
-            var d = new Date();
-            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-            if (int2)
-                int2.value = n;
-        }
+  waitForElm('.SPZ_7003 #mktoForm_1017.mktoForm .mktoButton').then(() => {
+    document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
+      //inject current time and date in EST timezone into .intellimize2 hidden field
+      var d = new Date();
+      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      if (int2)
+        int2.value = n;
     });
+  });
   // Do not touch below hidden field code for any Experiment End
 })();

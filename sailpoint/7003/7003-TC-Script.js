@@ -8,7 +8,8 @@
         clearInterval(bodyLoaded);
         if (!document.body.classList.contains('SPZ_7003_TC')) {
           document.body.classList.add('SPZ_7003_TC');
-
+          removeSpecificCookieValue('SPZ_7003', 'SPZ_7003_variant');
+          hiddenValue('SPZ_7003', 'SPZ_7003_truecontrol');
           //click event listener
           document.querySelector('.SPZ_7003_TC #page-container nav.navigation .navigation__items + div a.btn[href*="/contact-us"]').addEventListener('click', function (e) {
             sessionStorage.setItem('#7003_Contact', 'true');
@@ -135,12 +136,12 @@
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
   }
-  
+
   // Do not touch below hidden field code for any Experiment Start
   function removeSpecificCookieValue(targetName, targetValue) {
     ['HiddenFieldNameContact', 'HiddenFieldValueContact'].forEach((key, i) => {
-        var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
-        setCookie(key, values || '', 1);
+      var values = getCookie(key)?.split(',').filter(v => v !== (i ? targetValue : targetName)).join(',');
+      setCookie(key, values || '', 1);
     });
   }
 
@@ -149,11 +150,11 @@
     var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
 
     if (!ExistingHiddenFieldName) {
-        setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
-        setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', currentHiddenFieldValue, 1);
     } else if (ExistingHiddenFieldName && !ExistingHiddenFieldName.includes(currentHiddenFieldName) && !ExistingHiddenFieldValue.includes(currentHiddenFieldValue)) {
-        setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
-        setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
+      setCookie('HiddenFieldNameContact', ExistingHiddenFieldName + ',' + currentHiddenFieldName, 1);
+      setCookie('HiddenFieldValueContact', ExistingHiddenFieldValue + ',' + currentHiddenFieldValue, 1);
     }
 
     setHiddenFieldValue();
@@ -182,33 +183,33 @@
 
   function setHiddenFieldValue() {
     var spz_cro_Interval = setInterval(function () {
-        var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
-        if (intellimize1) {
-            clearInterval(spz_cro_Interval);
-            var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
-            //check if hidden field value is empty then only set the value else set the value with , seperated
-            if (intellimize1.value == '') {
-              intellimize1.value = ExistingHiddenFieldValue;
-            }
-            else {
-                if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
-                  intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
-                }
-            }
+      var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
+      if (intellimize1) {
+        clearInterval(spz_cro_Interval);
+        var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
+        //check if hidden field value is empty then only set the value else set the value with , seperated
+        if (intellimize1.value == '') {
+          intellimize1.value = ExistingHiddenFieldValue;
         }
+        else {
+          if (!intellimize1.value.includes(ExistingHiddenFieldValue)) {
+            intellimize1.value = intellimize1.value + ',' + ExistingHiddenFieldValue;
+          }
+        }
+      }
     });
   }
 
-   //click event listener
-    document.addEventListener('click', function (e) {
-        if (e.target.closest('#mktoForm_1017 .mktoButton')) {
-            //inject current time and date in EST timezone into .intellimize2 hidden field
-            var d = new Date();
-            var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
-            var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
-            if (int2)
-                int2.value = n;
-        }
+  //click event listener
+  waitForElm('.SPZ_7003_TC #mktoForm_1017.mktoForm .mktoButton').then(() => {
+    document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
+      //inject current time and date in EST timezone into .intellimize2 hidden field
+      var d = new Date();
+      var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
+      var int2 = e.target.closest('.mktoForm').querySelector('input[name="intellimize2"]');
+      if (int2)
+        int2.value = n;
     });
+  });
   // Do not touch below hidden field code for any Experiment End
 })();
