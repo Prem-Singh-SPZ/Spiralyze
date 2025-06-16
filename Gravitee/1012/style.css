@@ -153,6 +153,13 @@ body {
 
 .filter-dropdown {
   position: relative;
+  border: none !important;
+  color: inherit !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+.filter-dropdown:hover, .filter-dropdown:focus {
+  background: none !important;
 }
 .filter-dropdown__button {
   display: -webkit-box;
@@ -438,6 +445,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   min-height: 33px;
+  text-transform: capitalize;
 }
 .card__title {
   color: #000;
