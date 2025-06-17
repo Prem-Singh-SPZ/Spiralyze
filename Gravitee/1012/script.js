@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // --- Element Selections ---
     const filterBar = document.querySelector('.filter-bar'); // Get the main filter bar
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         text: document.getElementById('sizeFilterButton').querySelector('.filter-dropdown__text'),
         items: document.querySelectorAll('#sizeFilterMenu .filter-dropdown__item')
     };
-    
+
     const searchInput = document.getElementById('searchInput');
     const searchClearBtn = document.querySelector('.search-bar__clear');
     const searchForm = document.getElementById('searchForm');
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentSelected.classList.remove('is-selected');
                 }
                 item.classList.add('is-selected');
-                
+
                 if (filter === industryFilter) {
                     activeFilters.industry = item.dataset.value;
                 } else if (filter === sizeFilter) {
                     activeFilters.size = item.dataset.value;
                 }
-                
+
                 applyFilters();
             });
         });
@@ -95,33 +95,34 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFilters();
     });
 
-    searchForm.addEventListener('submit', (e) => e.preventDefault()); 
-    
+    searchForm.addEventListener('submit', (e) => e.preventDefault());
+
     // The reset button now also closes the search mode view on tablet/mobile
-    searchForm.addEventListener('reset', () => { 
+    searchForm.addEventListener('reset', () => {
         activeFilters.search = '';
         searchClearBtn.classList.remove('is-visible');
-        
+
         // Deactivate search mode to show filters again
         if (filterBar.classList.contains('search-mode-active')) {
             filterBar.classList.remove('search-mode-active');
         }
-        
+
         applyFilters();
         // Don't focus if we are closing the search bar on mobile
         if (window.getComputedStyle(searchInput).display !== 'none') {
             searchInput.focus();
         }
     });
-    
+
     // --- Core Filtering Function (no changes here) ---
     function applyFilters() {
         let visibleCardCount = 0;
 
         allCards.forEach(card => {
-            const industryMatch = activeFilters.industry === 'all' || card.dataset.industry === activeFilters.industry;
-            const sizeMatch = activeFilters.size === 'all' || card.dataset.size === activeFilters.size;
+            const industryMatch = activeFilters.industry === 'all' || card.dataset.industry === activeFilters.industry.toLowerCase();
+            const sizeMatch = activeFilters.size === 'all' || card.dataset.size === activeFilters.size.toLowerCase();
             const searchMatch = activeFilters.search === '' || card.dataset.title.toLowerCase().includes(activeFilters.search);
+
 
             if (industryMatch && sizeMatch && searchMatch) {
                 card.style.display = '';
