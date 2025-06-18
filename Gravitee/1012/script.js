@@ -167,10 +167,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Ensure searchInput and searchClearBtn exist
     if (searchInput && searchClearBtn) {
+        searchInput.addEventListener('focus', () => {
+            searchClearBtn.classList.add('is-visible');
+        });
         searchInput.addEventListener('input', () => {
             // Ensure searchInput.value is a string before calling methods
             activeFilters.search = (searchInput.value || '').toLowerCase().trim();
-            searchClearBtn.classList.toggle('is-visible', activeFilters.search.length > 0);
+            // searchClearBtn.classList.toggle('is-visible', activeFilters.search.length > 0);
             applyFilters();
         });
     } else {
@@ -202,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Don't focus if we are closing the search bar on mobile
             const searchInputStyle = window.getComputedStyle(searchInput);
             if (searchInputStyle && searchInputStyle.display !== 'none') {
-                searchInput.focus();
+                searchInput.blur();
             }
         });
     } else {
