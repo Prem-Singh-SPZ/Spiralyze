@@ -354,7 +354,7 @@
             font-weight: 400;
             line-height: 150%;
 
-            *{
+            * {
               color: #000;
               font-family: Manrope;
             }
@@ -399,7 +399,7 @@
                 text-decoration: underline !important;
               }
 
-              &.button{
+              &.button {
                 color: #fff !important;
 
                 &:hover {
@@ -598,6 +598,49 @@
                 &:hover {
                   background: #ea392d;
                 }
+              }
+            }
+
+            .accordion {
+              h2[id*="section"],
+              h3[id*="section"] {
+                margin: 0;
+                .accordion-trigger {
+                  background: transparent;
+                  padding: 0;
+                  outline: none;
+
+                  .accordion-title {
+                    color: #131312;
+                    font-family: Manrope, sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: normal;
+                    border: 0;
+                    border-top: 1px solid #131312;
+                    padding: 24px 16px 24px 0px;
+                    border-radius: 0;
+
+                    .accordion-icon {
+                      border-color: #131312;
+                      right: 4px;
+                    }
+                  }
+
+                  &[aria-expanded="true"], &:hover {
+                    .accordion-title {
+                      border-color: #ea3527;
+                      color: #ea3527;
+
+                      .accordion-icon {
+                        border-color: #ea3527;
+                      }
+                    }
+                  }
+                }
+              }
+              .accordion-panel {
+                padding: 0;
               }
             }
           }
