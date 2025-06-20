@@ -6,7 +6,7 @@
                 clearInterval(bodyLoaded);
                 if (!document.body.classList.contains('SPZ_7006_TC')) {
                     document.body.classList.add('SPZ_7006_TC');
-                    waitForElm('.SPZ_7006_TC #mktoForm_1017.mktoForm .mktoFormRow input').then(() => {
+                    waitForElm('.SPZ_7006_TC .mktoForm .mktoFormRow input').then(() => {
                         formModify();
 
                         removeSpecificCookieValue('SPZ_7006_TC', 'SPZ_7006_variant2');
@@ -21,8 +21,8 @@
 
     function formModify() {
         //click event listener
-        waitForElm('.SPZ_7006_TC #mktoForm_1017.mktoForm .mktoButton').then(() => {
-            document.querySelector('#mktoForm_1017.mktoForm .mktoButton').addEventListener('click', (event) => {
+        waitForElm('.SPZ_7006_TC .mktoForm .mktoButton').then(() => {
+            document.querySelector('.mktoForm .mktoButton').addEventListener('click', (event) => {
                 //inject current time and date in EST timezone into .intellimize2 hidden field
                 var d = new Date();
                 var n = d.toLocaleString('en-US', { timeZone: 'America/New_York' });
@@ -88,7 +88,8 @@
         "https://www.sailpoint.com/why-us",
         "https://www.sailpoint.com/why-us/diversity-inclusion-belonging",
         "https://www.sailpoint.com/why-us/leadership",
-        "https://www.sailpoint.com/why-us/welcoming-to-all"
+        "https://www.sailpoint.com/why-us/welcoming-to-all",
+        "https://www.sailpoint.com/demo/interactive"
     ];
 
 
@@ -172,7 +173,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm#mktoForm_1017 input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
