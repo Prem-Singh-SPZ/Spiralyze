@@ -240,26 +240,30 @@ let bodyLoaded = setInterval(function () {
                 return null;
             }
 
+            currentExperimentName = currentExperimentName.trim();
+
             var ExistingExperimentName = getCookie('ExperimentName');
             var ExistingExperimentValue = getCookie('ExperimentValue');
 
             if (!ExistingExperimentName) {
-
                 setCookie('ExperimentName', currentExperimentName, 1);
                 setCookie('ExperimentValue', currentExperimentValue, 1);
-
             } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
-
                 setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
                 setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
-
             } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
-
-                var existingNames = ExistingExperimentName.split(',');
+                var existingNames = ExistingExperimentName.split(',').map(name => name.trim());
                 var existingValues = ExistingExperimentValue.split(',');
 
                 var index = existingNames.indexOf(currentExperimentName);
-                existingValues[index] = currentExperimentValue;
+
+                if (index !== -1) {
+                    existingValues[index] = currentExperimentValue;
+                } else {
+                    console.warn(`Experiment name "${currentExperimentName}" was included as a substring but not found as an exact item. Appending.`);
+                    existingNames.push(currentExperimentName);
+                    existingValues.push(currentExperimentValue);
+                }
 
                 setCookie('ExperimentName', existingNames.join(','), 1);
                 setCookie('ExperimentValue', existingValues.join(','), 1);
