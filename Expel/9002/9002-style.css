@@ -211,7 +211,7 @@ body.spz_9002 .spz-form-section form.mktoForm .mktoGutter {
     display: none !important;
 }
 
-body.spz_9002 .spz-form-section form.mktoForm .mktoFormRow:not(.field-7) .mktoFormCol {
+body.spz_9002 .spz-form-section form.mktoForm .mktoFormRow:not(.field-9) .mktoFormCol {
     margin: 0 !important;
     min-height: 52px;
     margin-bottom: 12px !important;
@@ -243,7 +243,7 @@ body.spz_9002 .spz-form-section .mktoForm .mktoHtmlText {
     width: 100% !important;
 }
 
-body.spz_9002 .spz-form-section .mktoForm:not(.field-7) .mktoFormRow.field-8 .mktoFormCol {
+body.spz_9002 .spz-form-section .mktoForm:not(.field-9) .mktoFormRow.field-8 .mktoFormCol {
     margin-bottom: 0 !important;
 }
 
@@ -251,10 +251,10 @@ body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 {
     overflow: hidden;
 }
 
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-7),
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-7) .mktoFormCol,
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-7) .mktoFieldWrap,
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-7) .mktoField {
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9),
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoFormCol,
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoFieldWrap,
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField {
     width: 100% !important;
 }
 
@@ -313,7 +313,7 @@ body.spz_9002 .spz-form-section .mktoForm .mktoFormCol .mktoCheckboxList input::
     left: 3px;
 }
 
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-7) .mktoField {
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField {
     padding: 14px 16px;
     border-radius: 12px;
     border: 1px solid #B4B3B9;
@@ -412,6 +412,29 @@ body.spz_9002 .spz-form-section form.mktoForm .mktoFieldWrap.filled .mktoField {
 
 body.spz_9002 .spz-form-section form.mktoForm .mktoFieldWrap.error .mktoField {
     border-color: #E51B00 !important;
+}
+
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField label.mktoLabel {
+    overflow: hidden;
+    color: #747474;
+    text-overflow: ellipsis;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: auto !important;
+    top: unset;
+    left: unset;
+    margin-top: 16px;
+}
+
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList input[name="optin"]{
+    margin-top: 3px;
 }
 
 body.spz_9002 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {

@@ -45,14 +45,14 @@ let bodyLoaded = setInterval(function () {
                         const form = document.querySelector(template_formSelector);
                         if (form) {
                             document.querySelector('body.spz_9002 #page .site-main .spz-form-section .spz-form-wrapper .the-form').appendChild(form);
-                            formModify();
+                            waitForElm('body.spz_9002 .spz-form-section .the-form form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField').then(() => {
+                                formModify();
+                            });
                         }
                     }
                 });
 
                 function formModify() {
-                    console.log("Form Modified");
-
                     // Add class in mktoFormRow using count
                     var form_fields = document.querySelectorAll('body.spz_9002 .spz-form-section .mktoFormRow');
                     for (var i = 0; i < form_fields.length; i++) {
@@ -99,7 +99,9 @@ let bodyLoaded = setInterval(function () {
 
                     // Change Disclaimer Text
                     const infoHtmlText = document.querySelector('body.spz_9002 .spz-form-section .mktoFormRow.field-8 .mktoHtmlText');
-                    infoHtmlText.innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`
+                    waitForElm('body.spz_9002 .spz-form-section .mktoFormRow.field-8 .mktoHtmlText').then(() => {
+                        infoHtmlText.innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`
+                    });
 
                     // On input focus add class on closest parent field class
                     function focusFields() {
@@ -130,6 +132,7 @@ let bodyLoaded = setInterval(function () {
                             });
                         });
                     }
+
                     focusFields();
 
 
@@ -240,39 +243,43 @@ let bodyLoaded = setInterval(function () {
                 return null;
             }
 
-            currentExperimentName = currentExperimentName.trim();
+            // Sanitize inputs by trimming whitespace
+            const sanitizedExperimentName = currentExperimentName.trim();
+            const sanitizedExperimentValue = currentExperimentValue.trim();
 
             var ExistingExperimentName = getCookie('ExperimentName');
             var ExistingExperimentValue = getCookie('ExperimentValue');
 
-            if (!ExistingExperimentName) {
-                setCookie('ExperimentName', currentExperimentName, 1);
-                setCookie('ExperimentValue', currentExperimentValue, 1);
-            } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
-                setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
-                setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
-            } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
-                var existingNames = ExistingExperimentName.split(',').map(name => name.trim());
-                var existingValues = ExistingExperimentValue.split(',');
+            let existingNamesArray = [];
+            let existingValuesArray = [];
 
-                var index = existingNames.indexOf(currentExperimentName);
-
-                if (index !== -1) {
-                    existingValues[index] = currentExperimentValue;
-                } else {
-                    console.warn(`Experiment name "${currentExperimentName}" was included as a substring but not found as an exact item. Appending.`);
-                    existingNames.push(currentExperimentName);
-                    existingValues.push(currentExperimentValue);
-                }
-
-                setCookie('ExperimentName', existingNames.join(','), 1);
-                setCookie('ExperimentValue', existingValues.join(','), 1);
+            // Parse existing cookies, trimming each item
+            if (ExistingExperimentName) {
+                existingNamesArray = ExistingExperimentName.split(',').map(item => item.trim());
             }
+            if (ExistingExperimentValue) {
+                existingValuesArray = ExistingExperimentValue.split(',').map(item => item.trim());
+            }
+
+            // Check if the experiment already exists and get its index
+            const existingIndex = existingNamesArray.indexOf(sanitizedExperimentName);
+
+            if (existingIndex === -1) { // Experiment does NOT exist, add it
+                existingNamesArray.push(sanitizedExperimentName);
+                existingValuesArray.push(sanitizedExperimentValue);
+
+            } else { // Experiment DOES exist, update its value
+                existingValuesArray[existingIndex] = sanitizedExperimentValue;
+            }
+
+            // Update cookies with the new, cleaned arrays
+            setCookie('ExperimentName', existingNamesArray.join(','), 1);
+            setCookie('ExperimentValue', existingValuesArray.join(','), 1);
         }
         // Do not touch below hidden field code for any Experiment over (Set Hidden Filed Value)
 
         // Use this and change value according to the experiment
-        hiddenValue('#9002 | Expel | Solutions | Form In Modal', 'variant_#9002');
+        hiddenValue('#9003 | Expel | Solutions | SPZ Baseline Hero', 'truecontrol_#9003');
     }
 
     // Generic Code

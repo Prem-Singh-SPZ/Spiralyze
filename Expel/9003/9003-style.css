@@ -4,8 +4,12 @@
 }
 
 .SPZ-9003 .spz-hero-section {
-    padding-block: 76px 57px;
+    padding-block: 80px 90px;
     overflow: hidden;
+}
+
+.SPZ-9003 .icon-boxes.has-border.background-white, .SPZ-9003 .general-content-block.background-white{
+    padding-top: 90px;
 }
 
 .SPZ-9003 .spz-hero-section .spz-wrapper {
@@ -56,7 +60,7 @@
 }
 
 .SPZ-9003 .spz-hero-section .features-list {
-    margin-top: 34px;
+    margin-top: 32px;
 }
 
 .SPZ-9003 .spz-hero-section .features-list .feature-item {
@@ -157,7 +161,11 @@
 
 @media(max-width: 1023.98px) {
     .SPZ-9003 .spz-hero-section {
-        padding-block: 67px 25px;
+        padding-block: 67px 44px;
+    }
+
+    .SPZ-9003 .icon-boxes.has-border.background-white, .SPZ-9003 .general-content-block.background-white{
+        padding-top: 80px;
     }
 
     .SPZ-9003 .spz-hero-section .spz-wrapper {
@@ -177,7 +185,7 @@
     .SPZ-9003 .spz-hero-section .image-block {
         width: 100%;
         max-width: unset;
-        margin: 32px 0 0;
+        margin: 50px 0 0;
     }
 
     .SPZ-9003 .spz-hero-section .image-block img {
@@ -193,7 +201,7 @@
 
 @media(max-width: 767.98px) {
     .SPZ-9003 .spz-hero-section {
-        padding-block: 64px 25px;
+        padding-block: 64px 44px;
     }
 
     .SPZ-9003 .spz-hero-section .content-block {
@@ -234,4 +242,487 @@
     .SPZ-9003 .expel-main-flexible .overview-content-block {
         padding-top: 94px;
     }
+}
+
+/* #9002 Form css starts */
+body.SPZ-9003 .spz-form-section {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 76, 138, 0.7);
+    -webkit-backdrop-filter: blur(4.25px);
+    backdrop-filter: blur(4.25px);
+    overflow: hidden;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper {
+    position: absolute;
+    width: 550px;
+    height: auto;
+    padding: 40px 32px;
+    background: #fff;
+    border-radius: 16px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    display: none;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper #form-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 0;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper #form-close-btn:hover svg path {
+    fill: #000;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper p {
+    color: #131416;
+    text-align: center;
+    font-family: "proxima-nova";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper .ratings-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--Colors-Background-background-low-contrast, #F4F4F4);
+    padding: 8px 20px;
+    max-width: 292px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper .ratings-wrapper:first-child {
+    margin-right: 16px;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper .ratings-wrapper .stars-rating {
+    display: flex;
+    align-items: center;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper .ratings-wrapper .stars-rating span {
+    color: #031263;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 8px;
+}
+
+body.SPZ-9003 .spz-form-section .spz-form-wrapper #form-section {
+    display: block !important;
+}
+
+body.SPZ-9003 .spz-form-section.open {
+    display: flex !important;
+}
+
+@media screen and (max-width: 767.68px) {
+    body.SPZ-9003 .spz-form-section .spz-form-wrapper {
+        width: 91.5%;
+        padding: 32px 20px;
+    }
+
+    body.SPZ-9003 .spz-form-section .spz-form-wrapper p {
+        font-size: var(--Font-Size-xl, 24px);
+        font-style: normal;
+        font-weight: 800;
+        line-height: var(--Font-Size-2xl, 32px);
+    }
+
+    body.SPZ-9003 .spz-form-section .spz-form-wrapper .ratings-wrapper .stars-rating img {
+        width: 80px;
+    }
+
+    body.SPZ-9003 .spz-form-section .spz-form-wrapper #form-close-btn {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+body.SPZ-9003.modal-open {
+    overflow: hidden !important;
+    position: sticky !important;
+    width: 100% !important;
+}
+
+body.SPZ-9003 .spz-form-section .container-1440 {
+    padding: 0;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm {
+    width: 100% !important;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonRow {
+    width: 100%;
+    margin-top: 10px;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonWrap.mktoSimple {
+    margin-left: 0 !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+    border-radius: 72px;
+    border: none;
+    background: #1762E6;
+    width: 100%;
+    height: 48px;
+    padding: 8px 24px;
+    color: #FFF;
+    text-align: center;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
+    background: #0E4C8A;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoCaptchaDisclaimer {
+    color: #747474 !important;
+    text-align: center;
+    font-family: "proxima-nova" !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 22px;
+    max-width: 360px;
+    margin: 16px auto 0 !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoCaptchaDisclaimer a,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoHtmlText a {
+    color: #131416;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    padding: 0;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoCaptchaDisclaimer a:hover,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoHtmlText a:hover {
+    color: #0E4C8A;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoOffset,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoClear,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoGutter {
+    display: none !important;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFormRow:not(.field-9) .mktoFormCol {
+    margin: 0 !important;
+    min-height: 52px;
+    margin-bottom: 12px !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow .mktoCheckboxList {
+    display: flex !important;
+    align-items: start;
+    gap: 8px;
+    width: auto !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow .mktoCheckboxList label {
+    color: #747474 !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    margin-left: 0 !important;
+    width: 100%;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoHtmlText {
+    color: #747474 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 22px;
+    width: 100% !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm:not(.field-9) .mktoFormRow.field-8 .mktoFormCol {
+    margin-bottom: 0 !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-9 {
+    overflow: hidden;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9),
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoFormCol,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoFieldWrap,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField {
+    width: 100% !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-2,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-3,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-4,
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-5 {
+    width: calc(50% - 6px) !important;
+}
+
+@media screen and (max-width: 767.68px) {
+
+    body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-2,
+    body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-3,
+    body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-4,
+    body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-5 {
+        width: 100% !important;
+    }
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormCol .mktoCheckboxList input {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormCol .mktoCheckboxList input::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    top: 2px;
+    left: 0;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormCol .mktoCheckboxList input:checked::before {
+    background: #1762e6;
+    border-color: #1762e6;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormCol .mktoCheckboxList input::after {
+    position: absolute;
+    content: "";
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717664127/expel/2003/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    top: 5px;
+    left: 3px;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #B4B3B9;
+    background: #FFF;
+    height: 52px;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+    white-space: nowrap;
+    transition: all 0.35s ease-in-out;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap:has(select.mktoField) {
+    position: relative;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap:has(select.mktoField)::before {
+    top: 20px;
+    right: 16px;
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1728474658/expel/6003/icon.svg) !important;
+    background-repeat: no-repeat !important;
+    font-family: inherit;
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: 99;
+    pointer-events: none;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:hover,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:focus,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 52px #fff inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoRequiredField label.mktoLabel {
+    overflow: hidden;
+    color: #747474;
+    text-overflow: ellipsis;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 1px 60px 1px 6px;
+    background: #FFF;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    transition: all 0.3s ease-in-out;
+    width: auto !important;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoLabel,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.filled .mktoLabel {
+    top: -11px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 1px 6px;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoLabel {
+    color: #1762E6 !important;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.filled .mktoLabel {
+    color: #000 !important;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.error.active.typing .mktoLabel,
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.error.filled .mktoLabel {
+    color: #E51B00 !important;
+    padding: 1px 6px;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.active.typing .mktoField {
+    border-color: #1762E6;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.filled .mktoField {
+    border-color: #000;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap.error .mktoField {
+    border-color: #E51B00 !important;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField label.mktoLabel {
+    overflow: hidden;
+    color: #747474;
+    text-overflow: ellipsis;
+    font-family: "proxima-nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: auto !important;
+    top: unset;
+    left: unset;
+    margin-top: 16px;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList input[name="optin"]{
+    margin-top: 3px;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError {
+    position: relative;
+    right: initial !important;
+    bottom: initial !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+    display: none;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg {
+    max-width: unset;
+    background: transparent;
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1728474650/expel/6003/error.svg);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    box-shadow: none;
+    text-shadow: none;
+    margin: 0;
+    padding: 7px 0 7px 12px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    color: #e51b00;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding-left: 26px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap .mktoError .mktoErrorMsg span.mktoErrorDetail {
+    padding-left: 3px;
 }
