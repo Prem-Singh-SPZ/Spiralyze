@@ -150,6 +150,7 @@ body.spz_9002 .spz-form-section .mktoForm {
 body.spz_9002 .spz-form-section .mktoForm .mktoButtonRow {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 0 !important;
 }
 
 body.spz_9002 .spz-form-section .mktoForm .mktoButtonWrap.mktoSimple {
@@ -335,6 +336,10 @@ body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField 
     transition: all 0.35s ease-in-out;
 }
 
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) select.mktoField {
+    padding-right: 32px;
+}
+
 body.spz_9002 .spz-form-section form.mktoForm .mktoFieldWrap:has(select.mktoField) {
     position: relative;
 }
@@ -432,11 +437,12 @@ body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredFiel
     left: unset;
     margin-top: 16px;
 }
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList{
+
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList {
     width: fit-content !important;
 }
 
-body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList input[name="optin"]{
+body.spz_9002 .spz-form-section .mktoForm .mktoFormRow.field-9 .mktoRequiredField .mktoRadioList input[name="optin"] {
     margin-top: 3px;
 }
 

@@ -397,6 +397,7 @@ body.SPZ-9003 .spz-form-section .mktoForm {
 body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonRow {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 0 !important;
 }
 
 body.SPZ-9003 .spz-form-section .mktoForm .mktoButtonWrap.mktoSimple {
@@ -580,6 +581,10 @@ body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) .mktoField 
     overflow: hidden !important;
     white-space: nowrap;
     transition: all 0.35s ease-in-out;
+}
+
+body.SPZ-9003 .spz-form-section .mktoForm .mktoFormRow:not(.field-9) select.mktoField{
+    padding-right: 32px;
 }
 
 body.SPZ-9003 .spz-form-section form.mktoForm .mktoFieldWrap:has(select.mktoField) {
