@@ -365,7 +365,7 @@ let bodyLoaded = setInterval(function () {
                     document.querySelector('body.SPZ-9003').classList.toggle('modal-open');
                 }
 
-                document.querySelectorAll('body.SPZ-9003 #page .site-main .spz-hero-section .btn-blue, body.SPZ-9003 #page .site-main #cta-banner .blue-button-dark-bg').forEach(function (el) {
+                document.querySelectorAll('body.SPZ-9003 #page .site-main .spz-hero-section .btn-blue, body.SPZ-9003 #page .site-main #cta-banner .blue-button-dark-bg, body.SPZ-9003 #page .site-main #cta-banner .blue-button').forEach(function (el) {
                     el.addEventListener("click", function (e) {
                         e.preventDefault();
                         el.blur();
