@@ -104,7 +104,7 @@
     urlCheck(url);
 
     function urlCheck(url) {
-        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0 || window.location.origin == 'https://www.sailpoint.com') {
             createTest();
         } else {
             removeTest();
@@ -173,7 +173,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('#mktoForm_1017.mktoForm input[name="intellimize1"]') || document.querySelector('#mktoForm_1016.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');

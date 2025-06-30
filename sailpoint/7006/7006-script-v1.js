@@ -4,40 +4,46 @@
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-                if (location.href.includes('/demo/interactive')) {
-                    waitForElm('.mktoForm .mktoFormRow input').then(() => {
-                        removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_truecontrol');
-                        removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_variant2');
-                        hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
-                        formModify();
-                    });
-                }
-                else if (!document.body.classList.contains('SPZ_7006_V1')) {
-                    document.body.classList.add('SPZ_7006_V1');
-                    waitForElm('.SPZ_7006_V1 .mktoForm .mktoFormRow input').then(() => {
-                        addCta();
-                        formModify();
-                    });
-                }
+                document.body.classList.add('SPZ_7006_V1');
+                addCta();
+                waitForElm('.SPZ_7006_V1 .mktoForm .mktoFormRow input').then(() => {
+                    removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_truecontrol');
+                    removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_variant2');
+                    hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
+                    formModify();
+                });
             }
         });
     }
 
     function addCta() {
-        if (document.querySelectorAll('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a.spz-demo-interactive').length == 0 && document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
-            document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-demo-interactive spz-btn-desk" href="javascript:;">Take a product tour</a>`);
+        let checkCtaInterval = setInterval(function () {
+            if (document.querySelectorAll('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a.spz-demo-interactive').length == 0 && document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a[href="/demo"]')) {
+                document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a[href="/demo"]').insertAdjacentHTML('afterend', `<a class="btn btn--outline spz-demo-interactive spz-btn-desk" href="javascript:;">Take a product tour</a>`);
 
 
-            removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_truecontrol');
-            removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_variant2');
-            hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
+                removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_truecontrol');
+                removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_variant2');
+                hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
 
-            // Add click event listener to the new CTA
-            document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a.spz-demo-interactive').addEventListener('click', function (event) {
-                event.preventDefault();
-                document.querySelector('a[href="/demo/interactive"]').click();
-            });
-        }
+                // Add click event listener to the new CTA
+                document.querySelector('.SPZ_7006_V1 #page-container nav.navigation .desktop div.relative a.spz-demo-interactive').addEventListener('click', function (event) {
+                    event.preventDefault();
+                    if (document.querySelector('a[href="/demo/interactive"]')) {
+                        document.querySelector('a[href="/demo/interactive"]').click();
+                    }
+                    else {
+                        // If the link is not present, redirect to the demo page
+                        window.location.href = '/demo/interactive';
+                    }
+                });
+            }
+        }, 100);
+
+        // Clear the interval after 10 seconds to avoid infinite loop
+        setTimeout(() => {
+            clearInterval(checkCtaInterval);
+        }, 1000);
     }
 
     function formModify() {
@@ -56,16 +62,14 @@
     }
 
     function removeTest() {
-        setTimeout(() => {
-            if (document.querySelector('.SPZ_7006_V1')) {
-                document.body.classList.remove("SPZ_7006_V1");
-            }
-            if (document.querySelector('.spz-demo-interactive')) {
-                document.querySelectorAll('.spz-demo-interactive').forEach(function (el) {
-                    el.remove();
-                });
-            }
-        }, 200);
+        if (document.querySelector('.SPZ_7006_V1')) {
+            document.body.classList.remove("SPZ_7006_V1");
+        }
+        if (document.querySelector('.spz-demo-interactive')) {
+            document.querySelectorAll('.spz-demo-interactive').forEach(function (el) {
+                el.remove();
+            });
+        }
     }
 
     history.pushState = (function (f) {
@@ -130,7 +134,7 @@
     urlCheck(url);
 
     function urlCheck(url) {
-        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0 || window.location.origin == 'https://www.sailpoint.com') {
             createTest();
         } else {
             removeTest();
@@ -199,7 +203,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('#mktoForm_1017.mktoForm input[name="intellimize1"]') || document.querySelector('#mktoForm_1016.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');

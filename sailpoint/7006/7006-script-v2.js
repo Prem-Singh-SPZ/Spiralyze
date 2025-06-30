@@ -4,24 +4,15 @@
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-                if (location.href.includes('/demo/interactive')) {
-                    waitForElm('.mktoForm .mktoFormRow input').then(() => {
-                        removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_truecontrol');
-                        removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_variant1');
-                        hiddenValue('SPZ_7006_V2', 'SPZ_7006_variant2');
-                        formModify();
-                    });
-                }
-                else if (!document.body.classList.contains('SPZ_7006_V2')) {
-                    document.body.classList.add('SPZ_7006_V2');
-                    waitForElm('.SPZ_7006_V2 .mktoForm .mktoFormRow input').then(() => {
-                        formModify();
 
-                        removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_truecontrol');
-                        removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_variant1');
-                        hiddenValue('SPZ_7006_V2', 'SPZ_7006_variant2');
-                    });
-                }
+                document.body.classList.add('SPZ_7006_V2');
+                waitForElm('.SPZ_7006_V2 .mktoForm .mktoFormRow input').then(() => {
+                    formModify();
+
+                    removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_truecontrol');
+                    removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_variant1');
+                    hiddenValue('SPZ_7006_V2', 'SPZ_7006_variant2');
+                });
             }
         });
     }
@@ -112,7 +103,7 @@
     urlCheck(url);
 
     function urlCheck(url) {
-        if (urls.indexOf(window.location.href.split('?')[0]) >= 0) {
+        if (urls.indexOf(window.location.href.split('?')[0]) >= 0 || window.location.origin == 'https://www.sailpoint.com') {
             createTest();
         } else {
             removeTest();
@@ -181,7 +172,7 @@
 
     function setHiddenFieldValue() {
         var spz_cro_Interval = setInterval(function () {
-            var intellimize1 = document.querySelector('form.mktoForm input[name="intellimize1"]');
+            var intellimize1 = document.querySelector('#mktoForm_1017.mktoForm input[name="intellimize1"]') || document.querySelector('#mktoForm_1016.mktoForm input[name="intellimize1"]');
             if (intellimize1) {
                 clearInterval(spz_cro_Interval);
                 var ExistingHiddenFieldValue = getCookie('HiddenFieldValueContact');
