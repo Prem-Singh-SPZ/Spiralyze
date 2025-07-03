@@ -4,17 +4,35 @@
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-
                 document.body.classList.add('SPZ_7006_V2');
                 waitForElm('.SPZ_7006_V2 .mktoForm .mktoFormRow input').then(() => {
                     formModify();
-
                     removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_truecontrol');
                     removeSpecificCookieValue('SPZ_7006_V2', 'SPZ_7006_variant1');
-                    hiddenValue('SPZ_7006_V2', 'SPZ_7006_variant2');
+
+                    const currentPageBaseUrl = window.location.href.split('?')[0];
+                    const isDemoPage = currentPageBaseUrl === "https://www.sailpoint.com/demo/interactive";
+                    if (!isDemoPage) {
+                        setInternalSessionFlag();
+                    }
+                    const isDirectLandingOnDemoForSession = isDemoPage && !isInternalSession();
+
+                    if (!isDirectLandingOnDemoForSession) {
+                        hiddenValue('SPZ_7006_V2', 'SPZ_7006_variant2');
+                    }
                 });
             }
         });
+    }
+
+    // Function to set the session flag
+    function setInternalSessionFlag() {
+        sessionStorage.setItem('_spz_internal_session', 'true');
+    }
+
+    // Function to check the session flag (for direct landing detection)
+    function isInternalSession() {
+        return sessionStorage.getItem('_spz_internal_session') === 'true';
     }
 
 

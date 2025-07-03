@@ -9,11 +9,31 @@
                 waitForElm('.SPZ_7006_V1 .mktoForm .mktoFormRow input').then(() => {
                     removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_truecontrol');
                     removeSpecificCookieValue('SPZ_7006_V1', 'SPZ_7006_variant2');
-                    hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
                     formModify();
+
+                    const currentPageBaseUrl = window.location.href.split('?')[0];
+                    const isDemoPage = currentPageBaseUrl === "https://www.sailpoint.com/demo/interactive";
+                    if (!isDemoPage) {
+                        setInternalSessionFlag();
+                    }
+                    const isDirectLandingOnDemoForSession = isDemoPage && !isInternalSession();
+
+                    if (!isDirectLandingOnDemoForSession) {
+                        hiddenValue('SPZ_7006_V1', 'SPZ_7006_variant1');
+                    }
                 });
             }
         });
+    }
+
+    // Function to set the session flag
+    function setInternalSessionFlag() {
+        sessionStorage.setItem('_spz_internal_session', 'true');
+    }
+
+    // Function to check the session flag (for direct landing detection)
+    function isInternalSession() {
+        return sessionStorage.getItem('_spz_internal_session') === 'true';
     }
 
     function addCta() {
